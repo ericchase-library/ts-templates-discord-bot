@@ -17,7 +17,7 @@
     "lint": "biome lint --error-on-warnings --write .",
     "watch": "bun tools/dev.ts watch",
     "commands": "bun tools/dev.ts commands",
-    "start": "bun src/client.module.ts",
+    "start": "bun tools/dev.ts start",
     "start-js": "bun public/client.module.js"
   }
 }

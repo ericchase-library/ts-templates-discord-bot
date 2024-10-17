@@ -12,6 +12,7 @@ export const command_map = {
   build: new Path('tools/scripts/build.ts').path,
   dev: new Path('tools/scripts/dev.ts').path,
   format: new Path('tools/lib/format.ts').path,
+  start: new Path('tools/scripts/start.ts').path,
   watch: new Path('tools/scripts/watch.ts').path,
   // commands
   commands: new Path('tools/scripts/commands.ts').path,
