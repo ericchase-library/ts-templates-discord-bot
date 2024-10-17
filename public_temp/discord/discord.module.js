@@ -59110,7 +59110,6 @@ var require_src = __commonJS((exports) => {
 
 // src/discord/discord.module.ts
 var import_discord = __toESM(require_src(), 1);
-var export_SlashCommandOptionsOnlyBuilder = import_discord.SlashCommandOptionsOnlyBuilder;
 var export_SlashCommandBuilder = import_discord.SlashCommandBuilder;
 var export_Routes = import_discord.Routes;
 var export_REST = import_discord.REST;
@@ -59128,7 +59127,6 @@ var export_ApplicationCommand = import_discord.ApplicationCommand;
 var export_ActionRowBuilder = import_discord.ActionRowBuilder;
 
 export {
-  export_SlashCommandOptionsOnlyBuilder as SlashCommandOptionsOnlyBuilder,
   export_SlashCommandBuilder as SlashCommandBuilder,
   export_Routes as Routes,
   export_REST as REST,
