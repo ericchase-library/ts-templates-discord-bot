@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "discord.js": "^14.16.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.1.11",
+    "@types/chrome": "^0.0.278",
+    "@types/node": "^22.7.6",
+    "node-html-parser": "^6.1.13",
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "build": "bun tools/dev.ts build",
+    "dev": "bun tools/dev.ts",
+    "format": "bun tools/dev.ts format",
+    "lint": "biome lint --error-on-warnings --write .",
+    "watch": "bun tools/dev.ts watch",
+    "commands": "bun tools/dev.ts commands",
+    "start": "bun public/client.module.js"
+  }
+}
