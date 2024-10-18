@@ -247,7 +247,7 @@ for (const command of enabled_commands) {
 // src/client.module.ts
 import { Client, GatewayIntentBits } from "src/discord/discord.module.js";
 var client = new Client({ intents: [GatewayIntentBits.Guilds] });
-client.once("ready", () => {
+client.once("clientReady", () => {
   ConsoleLog("Bot is online.");
 });
 client.on("interactionCreate", async (interaction) => {
@@ -265,6 +265,7 @@ client.on("interactionCreate", async (interaction) => {
     }
   }
 });
+ConsoleLog("Attempting to log in.");
 client.login(getBotToken());
 function getUser(interaction) {
   if (interaction.isCommand()) {

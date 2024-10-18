@@ -1,14 +1,15 @@
 import { RunSync } from 'lib/ericchase/Platform/Bun/Child Process.js';
-import { out_dir } from 'tools/scripts/build.js';
+import { src_dir } from 'tools/scripts/build.js';
 
 switch (Bun.argv[2]) {
-  case 'register':
-    RunSync.Bun(out_dir.appendSegment('commands-register.module.js').path);
+  case 'ls':
+  case 'list':
+    RunSync.Bun(src_dir.appendSegment('commands-list.module.ts').path);
     break;
   case 'unregister':
-    RunSync.Bun(out_dir.appendSegment('commands-unregister.module.js').path);
+    RunSync.Bun(src_dir.appendSegment('commands-unregister.module.ts').path);
     break;
   default:
-    RunSync.Bun(out_dir.appendSegment('commands-list.module.js').path);
+    RunSync.Bun(src_dir.appendSegment('commands-register.module.ts').path);
     break;
 }

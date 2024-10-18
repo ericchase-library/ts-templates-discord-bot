@@ -91,9 +91,14 @@ import { REST, Routes } from "./discord/discord.module.js";
 var rest = new REST({ version: "10" }).setToken(getBotToken());
 async function getCommands() {
   try {
+    ConsoleLog(`Fetching global commands.`);
     const commands = await rest.get(Routes.applicationCommands(getClientID()));
-    for (const command of commands) {
-      ConsoleLog(`Command Name: ${command.name}, Command ID: ${command.id}`);
+    if (commands.length === 0) {
+      ConsoleLog(`No global commands registered.`);
+    } else {
+      for (const command of commands) {
+        ConsoleLog(`Command Name: ${command.name}, Command ID: ${command.id}`);
+      }
     }
   } catch (error) {
     ConsoleError("Failed to fetch commands:", error);

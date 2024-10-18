@@ -297,4 +297,5 @@ client.once("ready", async () => {
     client.destroy();
   }
 });
+ConsoleLog("Attempting to log in.");
 client.login(getBotToken());

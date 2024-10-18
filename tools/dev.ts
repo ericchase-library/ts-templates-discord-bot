@@ -17,9 +17,9 @@ export const command_map = {
   // commands
   commands: new Path('tools/scripts/commands.ts').path,
   // dev server
-  database: new Path('tools/scripts/database.ts').path,
-  db: new Path('tools/scripts/database.ts').path,
-  serve: new Path('tools/scripts/serve.ts').path,
+  // database: new Path('tools/scripts/database.ts').path,
+  // db: new Path('tools/scripts/database.ts').path,
+  // serve: new Path('tools/scripts/serve.ts').path,
 };
 
 if (Bun.argv[1] === __filename) {

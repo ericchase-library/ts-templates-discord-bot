@@ -22938,7 +22938,7 @@ var require_v107 = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
+  exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
   __exportStar(require_common5(), exports);
   exports.GatewayVersion = "10";
   var GatewayOpcodes;
@@ -22954,6 +22954,7 @@ var require_v107 = __commonJS((exports) => {
     GatewayOpcodes2[GatewayOpcodes2["InvalidSession"] = 9] = "InvalidSession";
     GatewayOpcodes2[GatewayOpcodes2["Hello"] = 10] = "Hello";
     GatewayOpcodes2[GatewayOpcodes2["HeartbeatAck"] = 11] = "HeartbeatAck";
+    GatewayOpcodes2[GatewayOpcodes2["RequestSoundboardSounds"] = 31] = "RequestSoundboardSounds";
   })(GatewayOpcodes || (exports.GatewayOpcodes = GatewayOpcodes = {}));
   var GatewayCloseCodes;
   (function(GatewayCloseCodes2) {
@@ -23000,10 +23001,18 @@ var require_v107 = __commonJS((exports) => {
   var GatewayDispatchEvents;
   (function(GatewayDispatchEvents2) {
     GatewayDispatchEvents2["ApplicationCommandPermissionsUpdate"] = "APPLICATION_COMMAND_PERMISSIONS_UPDATE";
+    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
+    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
+    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
+    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
     GatewayDispatchEvents2["ChannelCreate"] = "CHANNEL_CREATE";
     GatewayDispatchEvents2["ChannelDelete"] = "CHANNEL_DELETE";
     GatewayDispatchEvents2["ChannelPinsUpdate"] = "CHANNEL_PINS_UPDATE";
     GatewayDispatchEvents2["ChannelUpdate"] = "CHANNEL_UPDATE";
+    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
+    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
+    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
     GatewayDispatchEvents2["GuildBanAdd"] = "GUILD_BAN_ADD";
     GatewayDispatchEvents2["GuildBanRemove"] = "GUILD_BAN_REMOVE";
     GatewayDispatchEvents2["GuildCreate"] = "GUILD_CREATE";
@@ -23017,6 +23026,15 @@ var require_v107 = __commonJS((exports) => {
     GatewayDispatchEvents2["GuildRoleCreate"] = "GUILD_ROLE_CREATE";
     GatewayDispatchEvents2["GuildRoleDelete"] = "GUILD_ROLE_DELETE";
     GatewayDispatchEvents2["GuildRoleUpdate"] = "GUILD_ROLE_UPDATE";
+    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
+    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
+    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
+    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
+    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
+    GatewayDispatchEvents2["GuildSoundboardSoundCreate"] = "GUILD_SOUNDBOARD_SOUND_CREATE";
+    GatewayDispatchEvents2["GuildSoundboardSoundDelete"] = "GUILD_SOUNDBOARD_SOUND_DELETE";
+    GatewayDispatchEvents2["GuildSoundboardSoundsUpdate"] = "GUILD_SOUNDBOARD_SOUNDS_UPDATE";
+    GatewayDispatchEvents2["GuildSoundboardSoundUpdate"] = "GUILD_SOUNDBOARD_SOUND_UPDATE";
     GatewayDispatchEvents2["GuildStickersUpdate"] = "GUILD_STICKERS_UPDATE";
     GatewayDispatchEvents2["GuildUpdate"] = "GUILD_UPDATE";
     GatewayDispatchEvents2["IntegrationCreate"] = "INTEGRATION_CREATE";
@@ -23028,17 +23046,22 @@ var require_v107 = __commonJS((exports) => {
     GatewayDispatchEvents2["MessageCreate"] = "MESSAGE_CREATE";
     GatewayDispatchEvents2["MessageDelete"] = "MESSAGE_DELETE";
     GatewayDispatchEvents2["MessageDeleteBulk"] = "MESSAGE_DELETE_BULK";
+    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
+    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
     GatewayDispatchEvents2["MessageReactionAdd"] = "MESSAGE_REACTION_ADD";
     GatewayDispatchEvents2["MessageReactionRemove"] = "MESSAGE_REACTION_REMOVE";
     GatewayDispatchEvents2["MessageReactionRemoveAll"] = "MESSAGE_REACTION_REMOVE_ALL";
     GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
     GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
     GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
+    GatewayDispatchEvents2["Ready"] = "READY";
+    GatewayDispatchEvents2["Resumed"] = "RESUMED";
     GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
     GatewayDispatchEvents2["StageInstanceDelete"] = "STAGE_INSTANCE_DELETE";
     GatewayDispatchEvents2["StageInstanceUpdate"] = "STAGE_INSTANCE_UPDATE";
-    GatewayDispatchEvents2["Ready"] = "READY";
-    GatewayDispatchEvents2["Resumed"] = "RESUMED";
+    GatewayDispatchEvents2["SubscriptionCreate"] = "SUBSCRIPTION_CREATE";
+    GatewayDispatchEvents2["SubscriptionDelete"] = "SUBSCRIPTION_DELETE";
+    GatewayDispatchEvents2["SubscriptionUpdate"] = "SUBSCRIPTION_UPDATE";
     GatewayDispatchEvents2["ThreadCreate"] = "THREAD_CREATE";
     GatewayDispatchEvents2["ThreadDelete"] = "THREAD_DELETE";
     GatewayDispatchEvents2["ThreadListSync"] = "THREAD_LIST_SYNC";
@@ -23047,28 +23070,16 @@ var require_v107 = __commonJS((exports) => {
     GatewayDispatchEvents2["ThreadUpdate"] = "THREAD_UPDATE";
     GatewayDispatchEvents2["TypingStart"] = "TYPING_START";
     GatewayDispatchEvents2["UserUpdate"] = "USER_UPDATE";
+    GatewayDispatchEvents2["VoiceChannelEffectSend"] = "VOICE_CHANNEL_EFFECT_SEND";
     GatewayDispatchEvents2["VoiceServerUpdate"] = "VOICE_SERVER_UPDATE";
     GatewayDispatchEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
     GatewayDispatchEvents2["WebhooksUpdate"] = "WEBHOOKS_UPDATE";
-    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
-    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
-    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
-    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
-    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
-    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
-    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
-    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
-    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
-    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
-    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
-    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
-    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
-    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
-    GatewayDispatchEvents2["SubscriptionCreate"] = "SUBSCRIPTION_CREATE";
-    GatewayDispatchEvents2["SubscriptionUpdate"] = "SUBSCRIPTION_UPDATE";
-    GatewayDispatchEvents2["SubscriptionDelete"] = "SUBSCRIPTION_DELETE";
   })(GatewayDispatchEvents || (exports.GatewayDispatchEvents = GatewayDispatchEvents = {}));
+  var VoiceChannelEffectSendAnimationType;
+  (function(VoiceChannelEffectSendAnimationType2) {
+    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Premium"] = 0] = "Premium";
+    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Basic"] = 1] = "Basic";
+  })(VoiceChannelEffectSendAnimationType || (exports.VoiceChannelEffectSendAnimationType = VoiceChannelEffectSendAnimationType = {}));
 });
 
 // node_modules/discord-api-types/globals.js
@@ -23635,6 +23646,7 @@ var require_guild3 = __commonJS((exports) => {
     GuildFeature2["Verified"] = "VERIFIED";
     GuildFeature2["VIPRegions"] = "VIP_REGIONS";
     GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
+    GuildFeature2["Soundboard"] = "SOUNDBOARD";
   })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
   var GuildMemberFlags;
   (function(GuildMemberFlags2) {
@@ -24024,6 +24036,42 @@ var require_invite3 = __commonJS((exports) => {
   })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
 });
 
+// node_modules/discord-api-types/payloads/v10/monetization.js
+var require_monetization3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
+  var EntitlementType;
+  (function(EntitlementType2) {
+    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
+    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
+    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
+    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
+    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
+    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
+    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
+    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
+  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
+  var SKUFlags;
+  (function(SKUFlags2) {
+    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
+    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
+    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
+  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
+  var SKUType;
+  (function(SKUType2) {
+    SKUType2[SKUType2["Durable"] = 2] = "Durable";
+    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
+    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
+    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
+  })(SKUType || (exports.SKUType = SKUType = {}));
+  var SubscriptionStatus;
+  (function(SubscriptionStatus2) {
+    SubscriptionStatus2[SubscriptionStatus2["Active"] = 0] = "Active";
+    SubscriptionStatus2[SubscriptionStatus2["Ending"] = 1] = "Ending";
+    SubscriptionStatus2[SubscriptionStatus2["Inactive"] = 2] = "Inactive";
+  })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
+});
+
 // node_modules/discord-api-types/payloads/v10/oauth2.js
 var require_oauth23 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
@@ -24058,6 +24106,16 @@ var require_oauth23 = __commonJS((exports) => {
   })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
 });
 
+// node_modules/discord-api-types/payloads/v10/permissions.js
+var require_permissions4 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RoleFlags = undefined;
+  var RoleFlags;
+  (function(RoleFlags2) {
+    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
+  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
+});
+
 // node_modules/discord-api-types/payloads/v10/poll.js
 var require_poll3 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
@@ -24068,14 +24126,9 @@ var require_poll3 = __commonJS((exports) => {
   })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/permissions.js
-var require_permissions4 = __commonJS((exports) => {
+// node_modules/discord-api-types/payloads/v10/soundboard.js
+var require_soundboard = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RoleFlags = undefined;
-  var RoleFlags;
-  (function(RoleFlags2) {
-    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
-  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
 });
 
 // node_modules/discord-api-types/payloads/v10/stageInstance.js
@@ -24217,42 +24270,6 @@ var require_webhook3 = __commonJS((exports) => {
   })(WebhookType || (exports.WebhookType = WebhookType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/monetization.js
-var require_monetization3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
-  var EntitlementType;
-  (function(EntitlementType2) {
-    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
-    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
-    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
-    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
-    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
-    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
-    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
-    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
-  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
-  var SKUFlags;
-  (function(SKUFlags2) {
-    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
-    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
-    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
-  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
-  var SKUType;
-  (function(SKUType2) {
-    SKUType2[SKUType2["Durable"] = 2] = "Durable";
-    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
-    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
-    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
-  })(SKUType || (exports.SKUType = SKUType = {}));
-  var SubscriptionStatus;
-  (function(SubscriptionStatus2) {
-    SubscriptionStatus2[SubscriptionStatus2["Active"] = 0] = "Active";
-    SubscriptionStatus2[SubscriptionStatus2["Ending"] = 1] = "Ending";
-    SubscriptionStatus2[SubscriptionStatus2["Inactive"] = 2] = "Inactive";
-  })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
-});
-
 // node_modules/discord-api-types/payloads/v10/index.js
 var require_v108 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
@@ -24287,9 +24304,11 @@ var require_v108 = __commonJS((exports) => {
   __exportStar(require_guildScheduledEvent3(), exports);
   __exportStar(require_interactions3(), exports);
   __exportStar(require_invite3(), exports);
+  __exportStar(require_monetization3(), exports);
   __exportStar(require_oauth23(), exports);
-  __exportStar(require_poll3(), exports);
   __exportStar(require_permissions4(), exports);
+  __exportStar(require_poll3(), exports);
+  __exportStar(require_soundboard(), exports);
   __exportStar(require_stageInstance3(), exports);
   __exportStar(require_sticker3(), exports);
   __exportStar(require_teams2(), exports);
@@ -24297,7 +24316,6 @@ var require_v108 = __commonJS((exports) => {
   __exportStar(require_user5(), exports);
   __exportStar(require_voice3(), exports);
   __exportStar(require_webhook3(), exports);
-  __exportStar(require_monetization3(), exports);
 });
 
 // node_modules/discord-api-types/rest/common.js
@@ -24324,6 +24342,7 @@ var require_common7 = __commonJS((exports) => {
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhook"] = 10015] = "UnknownWebhook";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhookService"] = 10016] = "UnknownWebhookService";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSession"] = 10020] = "UnknownSession";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAsset"] = 10021] = "UnknownAsset";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBan"] = 10026] = "UnknownBan";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSKU"] = 10027] = "UnknownSKU";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreListing"] = 10028] = "UnknownStoreListing";
@@ -24471,6 +24490,8 @@ var require_common7 = __commonJS((exports) => {
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMonetizationEnabledToPerformThisAction"] = 50097] = "ServerNeedsMonetizationEnabledToPerformThisAction";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMoreBoostsToPerformThisAction"] = 50101] = "ServerNeedsMoreBoostsToPerformThisAction";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestBodyContainsInvalidJSON"] = 50109] = "RequestBodyContainsInvalidJSON";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileIsInvalid"] = 50110] = "ProvidedFileIsInvalid";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDurationExceedsMaximumLength"] = 50124] = "ProvidedFileDurationExceedsMaximumLength";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnerCannotBePendingMember"] = 50131] = "OwnerCannotBePendingMember";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnershipCannotBeMovedToABotUser"] = 50132] = "OwnershipCannotBeMovedToABotUser";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToResizeAssetBelowTheMinimumSize"] = 50138] = "FailedToResizeAssetBelowTheMinimumSize";
@@ -24616,6 +24637,17 @@ var require_invite4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
+// node_modules/discord-api-types/rest/v10/monetization.js
+var require_monetization4 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.EntitlementOwnerType = undefined;
+  var EntitlementOwnerType;
+  (function(EntitlementOwnerType2) {
+    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
+    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
+  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
+});
+
 // node_modules/discord-api-types/rest/v10/oauth2.js
 var require_oauth24 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
@@ -24623,6 +24655,11 @@ var require_oauth24 = __commonJS((exports) => {
 
 // node_modules/discord-api-types/rest/v10/poll.js
 var require_poll4 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/discord-api-types/rest/v10/soundboard.js
+var require_soundboard2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
@@ -24654,17 +24691,6 @@ var require_voice4 = __commonJS((exports) => {
 // node_modules/discord-api-types/rest/v10/webhook.js
 var require_webhook4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/monetization.js
-var require_monetization4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.EntitlementOwnerType = undefined;
-  var EntitlementOwnerType;
-  (function(EntitlementOwnerType2) {
-    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
-    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
-  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
 });
 
 // node_modules/discord-api-types/rest/v10/index.js
@@ -24702,15 +24728,16 @@ var require_v109 = __commonJS((exports) => {
   __exportStar(require_guildScheduledEvent4(), exports);
   __exportStar(require_interactions4(), exports);
   __exportStar(require_invite4(), exports);
+  __exportStar(require_monetization4(), exports);
   __exportStar(require_oauth24(), exports);
   __exportStar(require_poll4(), exports);
+  __exportStar(require_soundboard2(), exports);
   __exportStar(require_stageInstance4(), exports);
   __exportStar(require_sticker4(), exports);
   __exportStar(require_template4(), exports);
   __exportStar(require_user6(), exports);
   __exportStar(require_voice4(), exports);
   __exportStar(require_webhook4(), exports);
-  __exportStar(require_monetization4(), exports);
   exports.APIVersion = "10";
   exports.Routes = {
     applicationRoleConnectionMetadata(applicationId) {
@@ -25046,6 +25073,18 @@ var require_v109 = __commonJS((exports) => {
     },
     skuSubscription(skuId, subscriptionId) {
       return `/skus/${skuId}/subscriptions/${subscriptionId}`;
+    },
+    sendSoundboardSound(channelId) {
+      return `/channels/${channelId}/send-soundboard-sound`;
+    },
+    soundboardDefaultSounds() {
+      return "/soundboard-default-sounds";
+    },
+    guildSoundboardSounds(guildId) {
+      return `/guilds/${guildId}/soundboard-sounds`;
+    },
+    guildSoundboardSound(guildId, soundId) {
+      return `/guilds/${guildId}/soundboard-sounds/${soundId}`;
     }
   };
   exports.StickerPackApplicationId = "710982414301790216";
@@ -25123,6 +25162,9 @@ var require_v109 = __commonJS((exports) => {
     },
     guildMemberBanner(guildId, userId, guildMemberBanner, format) {
       return `/guilds/${guildId}/users/${userId}/banners/${guildMemberBanner}.${format}`;
+    },
+    soundboardSound(soundId) {
+      return `/soundboard-sounds/${soundId}`;
     }
   };
   exports.RouteBases = {
@@ -25429,15 +25471,7 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.TokenInvalid]: "An invalid token was provided.",
     [DjsErrorCodes.TokenMissing]: "Request to use token, but token was unavailable to the client.",
     [DjsErrorCodes.ApplicationCommandPermissionsTokenMissing]: "Editing application command permissions requires an OAuth2 bearer token, but none was provided.",
-    [DjsErrorCodes.WSCloseRequested]: "WebSocket closed due to user request.",
-    [DjsErrorCodes.WSConnectionExists]: "There is already an existing WebSocket connection.",
-    [DjsErrorCodes.WSNotOpen]: (data = "data") => `WebSocket not open to send ${data}`,
-    [DjsErrorCodes.ManagerDestroyed]: "Manager was destroyed.",
     [DjsErrorCodes.BitFieldInvalid]: (bit) => `Invalid bitfield flag or number: ${bit}.`,
-    [DjsErrorCodes.ShardingInvalid]: "Invalid shard settings were provided.",
-    [DjsErrorCodes.ShardingRequired]: "This session would have handled too many guilds - Sharding is required.",
-    [DjsErrorCodes.InvalidIntents]: "Invalid intent provided for WebSocket intents.",
-    [DjsErrorCodes.DisallowedIntents]: "Privileged intent provided is not enabled or whitelisted.",
     [DjsErrorCodes.ShardingNoShards]: "No shards have been spawned.",
     [DjsErrorCodes.ShardingInProcess]: "Shards are still being spawned.",
     [DjsErrorCodes.ShardingInvalidEvalBroadcast]: "Script to evaluate must be a function",
@@ -25453,29 +25487,17 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.ColorRange]: "Color must be within the range 0 - 16777215 (0xFFFFFF).",
     [DjsErrorCodes.ColorConvert]: (color) => `Unable to convert "${color}" to a number.`,
     [DjsErrorCodes.InviteOptionsMissingChannel]: "A valid guild channel must be provided when GuildScheduledEvent is EXTERNAL.",
-    [DjsErrorCodes.ButtonLabel]: "MessageButton label must be a string",
-    [DjsErrorCodes.ButtonURL]: "MessageButton URL must be a string",
-    [DjsErrorCodes.ButtonCustomId]: "MessageButton customId must be a string",
-    [DjsErrorCodes.SelectMenuCustomId]: "MessageSelectMenu customId must be a string",
-    [DjsErrorCodes.SelectMenuPlaceholder]: "MessageSelectMenu placeholder must be a string",
-    [DjsErrorCodes.SelectOptionLabel]: "MessageSelectOption label must be a string",
-    [DjsErrorCodes.SelectOptionValue]: "MessageSelectOption value must be a string",
-    [DjsErrorCodes.SelectOptionDescription]: "MessageSelectOption description must be a string",
     [DjsErrorCodes.InteractionCollectorError]: (reason) => `Collector received no interactions before ending with reason: ${reason}`,
     [DjsErrorCodes.FileNotFound]: (file) => `File could not be found: ${file}`,
-    [DjsErrorCodes.UserBannerNotFetched]: "You must fetch this user's banner before trying to generate its URL!",
     [DjsErrorCodes.UserNoDMChannel]: "No DM Channel exists!",
     [DjsErrorCodes.VoiceNotStageChannel]: "You are only allowed to do this in stage channels.",
     [DjsErrorCodes.VoiceStateNotOwn]: "You cannot self-deafen/mute/request to speak on VoiceStates that do not belong to the ClientUser.",
     [DjsErrorCodes.VoiceStateInvalidType]: (name) => `${name} must be a boolean.`,
     [DjsErrorCodes.ReqResourceType]: "The resource must be a string, Buffer or a valid file stream.",
-    [DjsErrorCodes.ImageFormat]: (format) => `Invalid image format: ${format}`,
-    [DjsErrorCodes.ImageSize]: (size) => `Invalid image size: ${size}`,
     [DjsErrorCodes.MessageBulkDeleteType]: "The messages must be an Array, Collection, or number.",
     [DjsErrorCodes.MessageContentType]: "Message content must be a string.",
     [DjsErrorCodes.MessageNonceRequired]: "Message nonce is required when enforceNonce is true.",
     [DjsErrorCodes.MessageNonceType]: "Message nonce must be an integer or a string.",
-    [DjsErrorCodes.SplitMaxLen]: "Chunk exceeds the max length and contains no split characters.",
     [DjsErrorCodes.BanResolveId]: (ban = false) => `Couldn't resolve the user id to ${ban ? "ban" : "unban"}.`,
     [DjsErrorCodes.FetchBanResolveId]: "Couldn't resolve the user id to fetch the ban.",
     [DjsErrorCodes.PruneDaysType]: "Days must be a number",
@@ -25492,7 +25514,7 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.FetchOwnerId]: (type) => `Couldn't resolve the ${type} ownerId to fetch the ${type} member.`,
     [DjsErrorCodes.InvalidType]: (name, expected, an = false) => `Supplied ${name} is not a${an ? "n" : ""} ${expected}.`,
     [DjsErrorCodes.InvalidElement]: (type, name, elem) => `Supplied ${type} ${name} includes an invalid element: ${elem}`,
-    [DjsErrorCodes.MessageThreadParent]: "The message was not sent in a guild text or news channel",
+    [DjsErrorCodes.MessageThreadParent]: "The message was not sent in a guild text or announcement channel",
     [DjsErrorCodes.MessageExistingThread]: "The message already has a thread",
     [DjsErrorCodes.ThreadInvitableType]: (type) => `Invitable cannot be edited on ${type}`,
     [DjsErrorCodes.WebhookMessage]: "The message was not sent by a webhook.",
@@ -25503,10 +25525,8 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.EmojiType]: "Emoji must be a string or GuildEmoji/ReactionEmoji",
     [DjsErrorCodes.EmojiManaged]: "Emoji is managed and has no Author.",
     [DjsErrorCodes.MissingManageGuildExpressionsPermission]: (guild) => `Client must have Manage Guild Expressions permission in guild ${guild} to see emoji authors.`,
-    [DjsErrorCodes.MissingManageEmojisAndStickersPermission]: (guild) => `Client must have Manage Emojis and Stickers permission in guild ${guild} to see emoji authors.`,
     [DjsErrorCodes.NotGuildSticker]: "Sticker is a standard (non-guild) sticker and has no author.",
     [DjsErrorCodes.ReactionResolveUser]: "Couldn't resolve the user id to remove from the reaction.",
-    [DjsErrorCodes.VanityURL]: "This guild does not have the vanity URL feature enabled.",
     [DjsErrorCodes.InviteResolveCode]: "Could not resolve the code to fetch the invite.",
     [DjsErrorCodes.InviteNotFound]: "Could not find the requested invite.",
     [DjsErrorCodes.DeleteGroupDMChannel]: "Bots don't have access to Group DM Channels and cannot delete them",
@@ -25516,7 +25536,6 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.GuildUncachedEntityResolve]: (type) => `Cannot resolve ${type} from an arbitrary guild, provide an id instead`,
     [DjsErrorCodes.InteractionAlreadyReplied]: "The reply to this interaction has already been sent or deferred.",
     [DjsErrorCodes.InteractionNotReplied]: "The reply to this interaction has not been sent or deferred.",
-    [DjsErrorCodes.InteractionEphemeralReplied]: "Ephemeral responses cannot be deleted.",
     [DjsErrorCodes.CommandInteractionOptionNotFound]: (name) => `Required option "${name}" not found.`,
     [DjsErrorCodes.CommandInteractionOptionType]: (name, type, expected) => `Option "${name}" is of type: ${type}; expected ${expected}.`,
     [DjsErrorCodes.CommandInteractionOptionEmpty]: (name, type) => `Required option "${name}" is of type: ${type}; expected a non-empty value.`,
@@ -25579,6 +25598,7048 @@ var require_errors2 = __commonJS((exports, module) => {
   module.exports = require_DJSError();
   module.exports.ErrorCodes = require_ErrorCodes();
   module.exports.Messages = require_Messages();
+});
+
+// node_modules/@discordjs/ws/node_modules/@discordjs/collection/dist/index.js
+var require_dist6 = __commonJS((exports, module) => {
+  var __defProp2 = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames2 = Object.getOwnPropertyNames;
+  var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+  var __name = (target, value) => __defProp2(target, "name", { value, configurable: true });
+  var __export = (target, all) => {
+    for (var name in all)
+      __defProp2(target, name, { get: all[name], enumerable: true });
+  };
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames2(from))
+        if (!__hasOwnProp2.call(to, key) && key !== except)
+          __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+    }
+    return to;
+  };
+  var __toCommonJS = (mod) => __copyProps(__defProp2({}, "__esModule", { value: true }), mod);
+  var src_exports = {};
+  __export(src_exports, {
+    Collection: () => Collection,
+    version: () => version
+  });
+  module.exports = __toCommonJS(src_exports);
+  var Collection = class _Collection extends Map {
+    static {
+      __name(this, "Collection");
+    }
+    ensure(key, defaultValueGenerator) {
+      if (this.has(key))
+        return this.get(key);
+      if (typeof defaultValueGenerator !== "function")
+        throw new TypeError(`${defaultValueGenerator} is not a function`);
+      const defaultValue = defaultValueGenerator(key, this);
+      this.set(key, defaultValue);
+      return defaultValue;
+    }
+    hasAll(...keys) {
+      return keys.every((key) => super.has(key));
+    }
+    hasAny(...keys) {
+      return keys.some((key) => super.has(key));
+    }
+    first(amount) {
+      if (amount === undefined)
+        return this.values().next().value;
+      if (amount < 0)
+        return this.last(amount * -1);
+      amount = Math.min(this.size, amount);
+      const iter = this.values();
+      return Array.from({ length: amount }, () => iter.next().value);
+    }
+    firstKey(amount) {
+      if (amount === undefined)
+        return this.keys().next().value;
+      if (amount < 0)
+        return this.lastKey(amount * -1);
+      amount = Math.min(this.size, amount);
+      const iter = this.keys();
+      return Array.from({ length: amount }, () => iter.next().value);
+    }
+    last(amount) {
+      const arr = [...this.values()];
+      if (amount === undefined)
+        return arr[arr.length - 1];
+      if (amount < 0)
+        return this.first(amount * -1);
+      if (!amount)
+        return [];
+      return arr.slice(-amount);
+    }
+    lastKey(amount) {
+      const arr = [...this.keys()];
+      if (amount === undefined)
+        return arr[arr.length - 1];
+      if (amount < 0)
+        return this.firstKey(amount * -1);
+      if (!amount)
+        return [];
+      return arr.slice(-amount);
+    }
+    at(index) {
+      index = Math.floor(index);
+      const arr = [...this.values()];
+      return arr.at(index);
+    }
+    keyAt(index) {
+      index = Math.floor(index);
+      const arr = [...this.keys()];
+      return arr.at(index);
+    }
+    random(amount) {
+      const arr = [...this.values()];
+      if (amount === undefined)
+        return arr[Math.floor(Math.random() * arr.length)];
+      if (!arr.length || !amount)
+        return [];
+      return Array.from({ length: Math.min(amount, arr.length) }, () => arr.splice(Math.floor(Math.random() * arr.length), 1)[0]);
+    }
+    randomKey(amount) {
+      const arr = [...this.keys()];
+      if (amount === undefined)
+        return arr[Math.floor(Math.random() * arr.length)];
+      if (!arr.length || !amount)
+        return [];
+      return Array.from({ length: Math.min(amount, arr.length) }, () => arr.splice(Math.floor(Math.random() * arr.length), 1)[0]);
+    }
+    reverse() {
+      const entries = [...this.entries()].reverse();
+      this.clear();
+      for (const [key, value] of entries)
+        this.set(key, value);
+      return this;
+    }
+    find(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      for (const [key, val] of this) {
+        if (fn(val, key, this))
+          return val;
+      }
+      return;
+    }
+    findKey(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      for (const [key, val] of this) {
+        if (fn(val, key, this))
+          return key;
+      }
+      return;
+    }
+    findLast(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      const entries = [...this.entries()];
+      for (let index = entries.length - 1;index >= 0; index--) {
+        const val = entries[index][1];
+        const key = entries[index][0];
+        if (fn(val, key, this))
+          return val;
+      }
+      return;
+    }
+    findLastKey(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      const entries = [...this.entries()];
+      for (let index = entries.length - 1;index >= 0; index--) {
+        const key = entries[index][0];
+        const val = entries[index][1];
+        if (fn(val, key, this))
+          return key;
+      }
+      return;
+    }
+    sweep(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      const previousSize = this.size;
+      for (const [key, val] of this) {
+        if (fn(val, key, this))
+          this.delete(key);
+      }
+      return previousSize - this.size;
+    }
+    filter(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      const results = new this.constructor[Symbol.species];
+      for (const [key, val] of this) {
+        if (fn(val, key, this))
+          results.set(key, val);
+      }
+      return results;
+    }
+    partition(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      const results = [
+        new this.constructor[Symbol.species],
+        new this.constructor[Symbol.species]
+      ];
+      for (const [key, val] of this) {
+        if (fn(val, key, this)) {
+          results[0].set(key, val);
+        } else {
+          results[1].set(key, val);
+        }
+      }
+      return results;
+    }
+    flatMap(fn, thisArg) {
+      const collections = this.map(fn, thisArg);
+      return new this.constructor[Symbol.species]().concat(...collections);
+    }
+    map(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      const iter = this.entries();
+      return Array.from({ length: this.size }, () => {
+        const [key, value] = iter.next().value;
+        return fn(value, key, this);
+      });
+    }
+    mapValues(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      const coll = new this.constructor[Symbol.species];
+      for (const [key, val] of this)
+        coll.set(key, fn(val, key, this));
+      return coll;
+    }
+    some(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      for (const [key, val] of this) {
+        if (fn(val, key, this))
+          return true;
+      }
+      return false;
+    }
+    every(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      for (const [key, val] of this) {
+        if (!fn(val, key, this))
+          return false;
+      }
+      return true;
+    }
+    reduce(fn, initialValue) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      let accumulator;
+      const iterator = this.entries();
+      if (initialValue === undefined) {
+        if (this.size === 0)
+          throw new TypeError("Reduce of empty collection with no initial value");
+        accumulator = iterator.next().value[1];
+      } else {
+        accumulator = initialValue;
+      }
+      for (const [key, value] of iterator) {
+        accumulator = fn(accumulator, value, key, this);
+      }
+      return accumulator;
+    }
+    reduceRight(fn, initialValue) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      const entries = [...this.entries()];
+      let accumulator;
+      let index;
+      if (initialValue === undefined) {
+        if (entries.length === 0)
+          throw new TypeError("Reduce of empty collection with no initial value");
+        accumulator = entries[entries.length - 1][1];
+        index = entries.length - 1;
+      } else {
+        accumulator = initialValue;
+        index = entries.length;
+      }
+      while (--index >= 0) {
+        const key = entries[index][0];
+        const val = entries[index][1];
+        accumulator = fn(accumulator, val, key, this);
+      }
+      return accumulator;
+    }
+    each(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      for (const [key, value] of this) {
+        fn(value, key, this);
+      }
+      return this;
+    }
+    tap(fn, thisArg) {
+      if (typeof fn !== "function")
+        throw new TypeError(`${fn} is not a function`);
+      if (thisArg !== undefined)
+        fn = fn.bind(thisArg);
+      fn(this);
+      return this;
+    }
+    clone() {
+      return new this.constructor[Symbol.species](this);
+    }
+    concat(...collections) {
+      const newColl = this.clone();
+      for (const coll of collections) {
+        for (const [key, val] of coll)
+          newColl.set(key, val);
+      }
+      return newColl;
+    }
+    equals(collection) {
+      if (!collection)
+        return false;
+      if (this === collection)
+        return true;
+      if (this.size !== collection.size)
+        return false;
+      for (const [key, value] of this) {
+        if (!collection.has(key) || value !== collection.get(key)) {
+          return false;
+        }
+      }
+      return true;
+    }
+    sort(compareFunction = _Collection.defaultSort) {
+      const entries = [...this.entries()];
+      entries.sort((a, b) => compareFunction(a[1], b[1], a[0], b[0]));
+      super.clear();
+      for (const [key, value] of entries) {
+        super.set(key, value);
+      }
+      return this;
+    }
+    intersection(other) {
+      const coll = new this.constructor[Symbol.species];
+      for (const [key, value] of this) {
+        if (other.has(key))
+          coll.set(key, value);
+      }
+      return coll;
+    }
+    union(other) {
+      const coll = new this.constructor[Symbol.species](this);
+      for (const [key, value] of other) {
+        if (!coll.has(key))
+          coll.set(key, value);
+      }
+      return coll;
+    }
+    difference(other) {
+      const coll = new this.constructor[Symbol.species];
+      for (const [key, value] of this) {
+        if (!other.has(key))
+          coll.set(key, value);
+      }
+      return coll;
+    }
+    symmetricDifference(other) {
+      const coll = new this.constructor[Symbol.species];
+      for (const [key, value] of this) {
+        if (!other.has(key))
+          coll.set(key, value);
+      }
+      for (const [key, value] of other) {
+        if (!this.has(key))
+          coll.set(key, value);
+      }
+      return coll;
+    }
+    merge(other, whenInSelf, whenInOther, whenInBoth) {
+      const coll = new this.constructor[Symbol.species];
+      const keys = /* @__PURE__ */ new Set([...this.keys(), ...other.keys()]);
+      for (const key of keys) {
+        const hasInSelf = this.has(key);
+        const hasInOther = other.has(key);
+        if (hasInSelf && hasInOther) {
+          const result = whenInBoth(this.get(key), other.get(key), key);
+          if (result.keep)
+            coll.set(key, result.value);
+        } else if (hasInSelf) {
+          const result = whenInSelf(this.get(key), key);
+          if (result.keep)
+            coll.set(key, result.value);
+        } else if (hasInOther) {
+          const result = whenInOther(other.get(key), key);
+          if (result.keep)
+            coll.set(key, result.value);
+        }
+      }
+      return coll;
+    }
+    toReversed() {
+      return new this.constructor[Symbol.species](this).reverse();
+    }
+    toSorted(compareFunction = _Collection.defaultSort) {
+      return new this.constructor[Symbol.species](this).sort((av, bv, ak, bk) => compareFunction(av, bv, ak, bk));
+    }
+    toJSON() {
+      return [...this.entries()];
+    }
+    static defaultSort(firstValue, secondValue) {
+      return Number(firstValue > secondValue) || Number(firstValue === secondValue) - 1;
+    }
+    static combineEntries(entries, combine) {
+      const coll = new _Collection;
+      for (const [key, value] of entries) {
+        if (coll.has(key)) {
+          coll.set(key, combine(coll.get(key), value, key));
+        } else {
+          coll.set(key, value);
+        }
+      }
+      return coll;
+    }
+  };
+  var version = "2.1.1";
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/gateway/common.js
+var require_common9 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/gateway/v10.js
+var require_v1013 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
+  __exportStar(require_common9(), exports);
+  exports.GatewayVersion = "10";
+  var GatewayOpcodes;
+  (function(GatewayOpcodes2) {
+    GatewayOpcodes2[GatewayOpcodes2["Dispatch"] = 0] = "Dispatch";
+    GatewayOpcodes2[GatewayOpcodes2["Heartbeat"] = 1] = "Heartbeat";
+    GatewayOpcodes2[GatewayOpcodes2["Identify"] = 2] = "Identify";
+    GatewayOpcodes2[GatewayOpcodes2["PresenceUpdate"] = 3] = "PresenceUpdate";
+    GatewayOpcodes2[GatewayOpcodes2["VoiceStateUpdate"] = 4] = "VoiceStateUpdate";
+    GatewayOpcodes2[GatewayOpcodes2["Resume"] = 6] = "Resume";
+    GatewayOpcodes2[GatewayOpcodes2["Reconnect"] = 7] = "Reconnect";
+    GatewayOpcodes2[GatewayOpcodes2["RequestGuildMembers"] = 8] = "RequestGuildMembers";
+    GatewayOpcodes2[GatewayOpcodes2["InvalidSession"] = 9] = "InvalidSession";
+    GatewayOpcodes2[GatewayOpcodes2["Hello"] = 10] = "Hello";
+    GatewayOpcodes2[GatewayOpcodes2["HeartbeatAck"] = 11] = "HeartbeatAck";
+  })(GatewayOpcodes || (exports.GatewayOpcodes = GatewayOpcodes = {}));
+  var GatewayCloseCodes;
+  (function(GatewayCloseCodes2) {
+    GatewayCloseCodes2[GatewayCloseCodes2["UnknownError"] = 4000] = "UnknownError";
+    GatewayCloseCodes2[GatewayCloseCodes2["UnknownOpcode"] = 4001] = "UnknownOpcode";
+    GatewayCloseCodes2[GatewayCloseCodes2["DecodeError"] = 4002] = "DecodeError";
+    GatewayCloseCodes2[GatewayCloseCodes2["NotAuthenticated"] = 4003] = "NotAuthenticated";
+    GatewayCloseCodes2[GatewayCloseCodes2["AuthenticationFailed"] = 4004] = "AuthenticationFailed";
+    GatewayCloseCodes2[GatewayCloseCodes2["AlreadyAuthenticated"] = 4005] = "AlreadyAuthenticated";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidSeq"] = 4007] = "InvalidSeq";
+    GatewayCloseCodes2[GatewayCloseCodes2["RateLimited"] = 4008] = "RateLimited";
+    GatewayCloseCodes2[GatewayCloseCodes2["SessionTimedOut"] = 4009] = "SessionTimedOut";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidShard"] = 4010] = "InvalidShard";
+    GatewayCloseCodes2[GatewayCloseCodes2["ShardingRequired"] = 4011] = "ShardingRequired";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidAPIVersion"] = 4012] = "InvalidAPIVersion";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidIntents"] = 4013] = "InvalidIntents";
+    GatewayCloseCodes2[GatewayCloseCodes2["DisallowedIntents"] = 4014] = "DisallowedIntents";
+  })(GatewayCloseCodes || (exports.GatewayCloseCodes = GatewayCloseCodes = {}));
+  var GatewayIntentBits;
+  (function(GatewayIntentBits2) {
+    GatewayIntentBits2[GatewayIntentBits2["Guilds"] = 1] = "Guilds";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMembers"] = 2] = "GuildMembers";
+    GatewayIntentBits2[GatewayIntentBits2["GuildModeration"] = 4] = "GuildModeration";
+    GatewayIntentBits2[GatewayIntentBits2["GuildBans"] = 4] = "GuildBans";
+    GatewayIntentBits2[GatewayIntentBits2["GuildEmojisAndStickers"] = 8] = "GuildEmojisAndStickers";
+    GatewayIntentBits2[GatewayIntentBits2["GuildIntegrations"] = 16] = "GuildIntegrations";
+    GatewayIntentBits2[GatewayIntentBits2["GuildWebhooks"] = 32] = "GuildWebhooks";
+    GatewayIntentBits2[GatewayIntentBits2["GuildInvites"] = 64] = "GuildInvites";
+    GatewayIntentBits2[GatewayIntentBits2["GuildVoiceStates"] = 128] = "GuildVoiceStates";
+    GatewayIntentBits2[GatewayIntentBits2["GuildPresences"] = 256] = "GuildPresences";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessages"] = 512] = "GuildMessages";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessageReactions"] = 1024] = "GuildMessageReactions";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessageTyping"] = 2048] = "GuildMessageTyping";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessages"] = 4096] = "DirectMessages";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessageReactions"] = 8192] = "DirectMessageReactions";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessageTyping"] = 16384] = "DirectMessageTyping";
+    GatewayIntentBits2[GatewayIntentBits2["MessageContent"] = 32768] = "MessageContent";
+    GatewayIntentBits2[GatewayIntentBits2["GuildScheduledEvents"] = 65536] = "GuildScheduledEvents";
+    GatewayIntentBits2[GatewayIntentBits2["AutoModerationConfiguration"] = 1048576] = "AutoModerationConfiguration";
+    GatewayIntentBits2[GatewayIntentBits2["AutoModerationExecution"] = 2097152] = "AutoModerationExecution";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessagePolls"] = 16777216] = "GuildMessagePolls";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessagePolls"] = 33554432] = "DirectMessagePolls";
+  })(GatewayIntentBits || (exports.GatewayIntentBits = GatewayIntentBits = {}));
+  var GatewayDispatchEvents;
+  (function(GatewayDispatchEvents2) {
+    GatewayDispatchEvents2["ApplicationCommandPermissionsUpdate"] = "APPLICATION_COMMAND_PERMISSIONS_UPDATE";
+    GatewayDispatchEvents2["ChannelCreate"] = "CHANNEL_CREATE";
+    GatewayDispatchEvents2["ChannelDelete"] = "CHANNEL_DELETE";
+    GatewayDispatchEvents2["ChannelPinsUpdate"] = "CHANNEL_PINS_UPDATE";
+    GatewayDispatchEvents2["ChannelUpdate"] = "CHANNEL_UPDATE";
+    GatewayDispatchEvents2["GuildBanAdd"] = "GUILD_BAN_ADD";
+    GatewayDispatchEvents2["GuildBanRemove"] = "GUILD_BAN_REMOVE";
+    GatewayDispatchEvents2["GuildCreate"] = "GUILD_CREATE";
+    GatewayDispatchEvents2["GuildDelete"] = "GUILD_DELETE";
+    GatewayDispatchEvents2["GuildEmojisUpdate"] = "GUILD_EMOJIS_UPDATE";
+    GatewayDispatchEvents2["GuildIntegrationsUpdate"] = "GUILD_INTEGRATIONS_UPDATE";
+    GatewayDispatchEvents2["GuildMemberAdd"] = "GUILD_MEMBER_ADD";
+    GatewayDispatchEvents2["GuildMemberRemove"] = "GUILD_MEMBER_REMOVE";
+    GatewayDispatchEvents2["GuildMembersChunk"] = "GUILD_MEMBERS_CHUNK";
+    GatewayDispatchEvents2["GuildMemberUpdate"] = "GUILD_MEMBER_UPDATE";
+    GatewayDispatchEvents2["GuildRoleCreate"] = "GUILD_ROLE_CREATE";
+    GatewayDispatchEvents2["GuildRoleDelete"] = "GUILD_ROLE_DELETE";
+    GatewayDispatchEvents2["GuildRoleUpdate"] = "GUILD_ROLE_UPDATE";
+    GatewayDispatchEvents2["GuildStickersUpdate"] = "GUILD_STICKERS_UPDATE";
+    GatewayDispatchEvents2["GuildUpdate"] = "GUILD_UPDATE";
+    GatewayDispatchEvents2["IntegrationCreate"] = "INTEGRATION_CREATE";
+    GatewayDispatchEvents2["IntegrationDelete"] = "INTEGRATION_DELETE";
+    GatewayDispatchEvents2["IntegrationUpdate"] = "INTEGRATION_UPDATE";
+    GatewayDispatchEvents2["InteractionCreate"] = "INTERACTION_CREATE";
+    GatewayDispatchEvents2["InviteCreate"] = "INVITE_CREATE";
+    GatewayDispatchEvents2["InviteDelete"] = "INVITE_DELETE";
+    GatewayDispatchEvents2["MessageCreate"] = "MESSAGE_CREATE";
+    GatewayDispatchEvents2["MessageDelete"] = "MESSAGE_DELETE";
+    GatewayDispatchEvents2["MessageDeleteBulk"] = "MESSAGE_DELETE_BULK";
+    GatewayDispatchEvents2["MessageReactionAdd"] = "MESSAGE_REACTION_ADD";
+    GatewayDispatchEvents2["MessageReactionRemove"] = "MESSAGE_REACTION_REMOVE";
+    GatewayDispatchEvents2["MessageReactionRemoveAll"] = "MESSAGE_REACTION_REMOVE_ALL";
+    GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
+    GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
+    GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
+    GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
+    GatewayDispatchEvents2["StageInstanceDelete"] = "STAGE_INSTANCE_DELETE";
+    GatewayDispatchEvents2["StageInstanceUpdate"] = "STAGE_INSTANCE_UPDATE";
+    GatewayDispatchEvents2["Ready"] = "READY";
+    GatewayDispatchEvents2["Resumed"] = "RESUMED";
+    GatewayDispatchEvents2["ThreadCreate"] = "THREAD_CREATE";
+    GatewayDispatchEvents2["ThreadDelete"] = "THREAD_DELETE";
+    GatewayDispatchEvents2["ThreadListSync"] = "THREAD_LIST_SYNC";
+    GatewayDispatchEvents2["ThreadMembersUpdate"] = "THREAD_MEMBERS_UPDATE";
+    GatewayDispatchEvents2["ThreadMemberUpdate"] = "THREAD_MEMBER_UPDATE";
+    GatewayDispatchEvents2["ThreadUpdate"] = "THREAD_UPDATE";
+    GatewayDispatchEvents2["TypingStart"] = "TYPING_START";
+    GatewayDispatchEvents2["UserUpdate"] = "USER_UPDATE";
+    GatewayDispatchEvents2["VoiceServerUpdate"] = "VOICE_SERVER_UPDATE";
+    GatewayDispatchEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
+    GatewayDispatchEvents2["WebhooksUpdate"] = "WEBHOOKS_UPDATE";
+    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
+    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
+    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
+    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
+    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
+    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
+    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
+    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
+    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
+    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
+    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
+    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
+    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
+    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
+  })(GatewayDispatchEvents || (exports.GatewayDispatchEvents = GatewayDispatchEvents = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/globals.js
+var require_globals3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.FormattingPatterns = undefined;
+  exports.FormattingPatterns = {
+    User: /<@(?<id>\d{17,20})>/,
+    UserWithNickname: /<@!(?<id>\d{17,20})>/,
+    UserWithOptionalNickname: /<@!?(?<id>\d{17,20})>/,
+    Channel: /<#(?<id>\d{17,20})>/,
+    Role: /<@&(?<id>\d{17,20})>/,
+    SlashCommand: /<\/(?<fullName>(?<name>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: (?<subcommandOrGroup>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?(?: (?<subcommand>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?):(?<id>\d{17,20})>/u,
+    Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRTdft]))?>/,
+    DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
+    StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/
+  };
+  Object.freeze(exports.FormattingPatterns);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/common.js
+var require_common10 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.PermissionFlagsBits = undefined;
+  exports.PermissionFlagsBits = {
+    CreateInstantInvite: 1n << 0n,
+    KickMembers: 1n << 1n,
+    BanMembers: 1n << 2n,
+    Administrator: 1n << 3n,
+    ManageChannels: 1n << 4n,
+    ManageGuild: 1n << 5n,
+    AddReactions: 1n << 6n,
+    ViewAuditLog: 1n << 7n,
+    PrioritySpeaker: 1n << 8n,
+    Stream: 1n << 9n,
+    ViewChannel: 1n << 10n,
+    SendMessages: 1n << 11n,
+    SendTTSMessages: 1n << 12n,
+    ManageMessages: 1n << 13n,
+    EmbedLinks: 1n << 14n,
+    AttachFiles: 1n << 15n,
+    ReadMessageHistory: 1n << 16n,
+    MentionEveryone: 1n << 17n,
+    UseExternalEmojis: 1n << 18n,
+    ViewGuildInsights: 1n << 19n,
+    Connect: 1n << 20n,
+    Speak: 1n << 21n,
+    MuteMembers: 1n << 22n,
+    DeafenMembers: 1n << 23n,
+    MoveMembers: 1n << 24n,
+    UseVAD: 1n << 25n,
+    ChangeNickname: 1n << 26n,
+    ManageNicknames: 1n << 27n,
+    ManageRoles: 1n << 28n,
+    ManageWebhooks: 1n << 29n,
+    ManageEmojisAndStickers: 1n << 30n,
+    ManageGuildExpressions: 1n << 30n,
+    UseApplicationCommands: 1n << 31n,
+    RequestToSpeak: 1n << 32n,
+    ManageEvents: 1n << 33n,
+    ManageThreads: 1n << 34n,
+    CreatePublicThreads: 1n << 35n,
+    CreatePrivateThreads: 1n << 36n,
+    UseExternalStickers: 1n << 37n,
+    SendMessagesInThreads: 1n << 38n,
+    UseEmbeddedActivities: 1n << 39n,
+    ModerateMembers: 1n << 40n,
+    ViewCreatorMonetizationAnalytics: 1n << 41n,
+    UseSoundboard: 1n << 42n,
+    CreateGuildExpressions: 1n << 43n,
+    CreateEvents: 1n << 44n,
+    UseExternalSounds: 1n << 45n,
+    SendVoiceMessages: 1n << 46n,
+    SendPolls: 1n << 49n,
+    UseExternalApps: 1n << 50n
+  };
+  Object.freeze(exports.PermissionFlagsBits);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/application.js
+var require_application5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
+  var ApplicationFlags;
+  (function(ApplicationFlags2) {
+    ApplicationFlags2[ApplicationFlags2["EmbeddedReleased"] = 2] = "EmbeddedReleased";
+    ApplicationFlags2[ApplicationFlags2["ManagedEmoji"] = 4] = "ManagedEmoji";
+    ApplicationFlags2[ApplicationFlags2["EmbeddedIAP"] = 8] = "EmbeddedIAP";
+    ApplicationFlags2[ApplicationFlags2["GroupDMCreate"] = 16] = "GroupDMCreate";
+    ApplicationFlags2[ApplicationFlags2["ApplicationAutoModerationRuleCreateBadge"] = 64] = "ApplicationAutoModerationRuleCreateBadge";
+    ApplicationFlags2[ApplicationFlags2["RPCHasConnected"] = 2048] = "RPCHasConnected";
+    ApplicationFlags2[ApplicationFlags2["GatewayPresence"] = 4096] = "GatewayPresence";
+    ApplicationFlags2[ApplicationFlags2["GatewayPresenceLimited"] = 8192] = "GatewayPresenceLimited";
+    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembers"] = 16384] = "GatewayGuildMembers";
+    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembersLimited"] = 32768] = "GatewayGuildMembersLimited";
+    ApplicationFlags2[ApplicationFlags2["VerificationPendingGuildLimit"] = 65536] = "VerificationPendingGuildLimit";
+    ApplicationFlags2[ApplicationFlags2["Embedded"] = 131072] = "Embedded";
+    ApplicationFlags2[ApplicationFlags2["GatewayMessageContent"] = 262144] = "GatewayMessageContent";
+    ApplicationFlags2[ApplicationFlags2["GatewayMessageContentLimited"] = 524288] = "GatewayMessageContentLimited";
+    ApplicationFlags2[ApplicationFlags2["EmbeddedFirstParty"] = 1048576] = "EmbeddedFirstParty";
+    ApplicationFlags2[ApplicationFlags2["ApplicationCommandBadge"] = 8388608] = "ApplicationCommandBadge";
+  })(ApplicationFlags || (exports.ApplicationFlags = ApplicationFlags = {}));
+  var ApplicationRoleConnectionMetadataType;
+  (function(ApplicationRoleConnectionMetadataType2) {
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerLessThanOrEqual"] = 1] = "IntegerLessThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerGreaterThanOrEqual"] = 2] = "IntegerGreaterThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerEqual"] = 3] = "IntegerEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerNotEqual"] = 4] = "IntegerNotEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeLessThanOrEqual"] = 5] = "DatetimeLessThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeGreaterThanOrEqual"] = 6] = "DatetimeGreaterThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanEqual"] = 7] = "BooleanEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanNotEqual"] = 8] = "BooleanNotEqual";
+  })(ApplicationRoleConnectionMetadataType || (exports.ApplicationRoleConnectionMetadataType = ApplicationRoleConnectionMetadataType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/auditLog.js
+var require_auditLog5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
+  var AuditLogEvent;
+  (function(AuditLogEvent2) {
+    AuditLogEvent2[AuditLogEvent2["GuildUpdate"] = 1] = "GuildUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelCreate"] = 10] = "ChannelCreate";
+    AuditLogEvent2[AuditLogEvent2["ChannelUpdate"] = 11] = "ChannelUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelDelete"] = 12] = "ChannelDelete";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteCreate"] = 13] = "ChannelOverwriteCreate";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteUpdate"] = 14] = "ChannelOverwriteUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteDelete"] = 15] = "ChannelOverwriteDelete";
+    AuditLogEvent2[AuditLogEvent2["MemberKick"] = 20] = "MemberKick";
+    AuditLogEvent2[AuditLogEvent2["MemberPrune"] = 21] = "MemberPrune";
+    AuditLogEvent2[AuditLogEvent2["MemberBanAdd"] = 22] = "MemberBanAdd";
+    AuditLogEvent2[AuditLogEvent2["MemberBanRemove"] = 23] = "MemberBanRemove";
+    AuditLogEvent2[AuditLogEvent2["MemberUpdate"] = 24] = "MemberUpdate";
+    AuditLogEvent2[AuditLogEvent2["MemberRoleUpdate"] = 25] = "MemberRoleUpdate";
+    AuditLogEvent2[AuditLogEvent2["MemberMove"] = 26] = "MemberMove";
+    AuditLogEvent2[AuditLogEvent2["MemberDisconnect"] = 27] = "MemberDisconnect";
+    AuditLogEvent2[AuditLogEvent2["BotAdd"] = 28] = "BotAdd";
+    AuditLogEvent2[AuditLogEvent2["RoleCreate"] = 30] = "RoleCreate";
+    AuditLogEvent2[AuditLogEvent2["RoleUpdate"] = 31] = "RoleUpdate";
+    AuditLogEvent2[AuditLogEvent2["RoleDelete"] = 32] = "RoleDelete";
+    AuditLogEvent2[AuditLogEvent2["InviteCreate"] = 40] = "InviteCreate";
+    AuditLogEvent2[AuditLogEvent2["InviteUpdate"] = 41] = "InviteUpdate";
+    AuditLogEvent2[AuditLogEvent2["InviteDelete"] = 42] = "InviteDelete";
+    AuditLogEvent2[AuditLogEvent2["WebhookCreate"] = 50] = "WebhookCreate";
+    AuditLogEvent2[AuditLogEvent2["WebhookUpdate"] = 51] = "WebhookUpdate";
+    AuditLogEvent2[AuditLogEvent2["WebhookDelete"] = 52] = "WebhookDelete";
+    AuditLogEvent2[AuditLogEvent2["EmojiCreate"] = 60] = "EmojiCreate";
+    AuditLogEvent2[AuditLogEvent2["EmojiUpdate"] = 61] = "EmojiUpdate";
+    AuditLogEvent2[AuditLogEvent2["EmojiDelete"] = 62] = "EmojiDelete";
+    AuditLogEvent2[AuditLogEvent2["MessageDelete"] = 72] = "MessageDelete";
+    AuditLogEvent2[AuditLogEvent2["MessageBulkDelete"] = 73] = "MessageBulkDelete";
+    AuditLogEvent2[AuditLogEvent2["MessagePin"] = 74] = "MessagePin";
+    AuditLogEvent2[AuditLogEvent2["MessageUnpin"] = 75] = "MessageUnpin";
+    AuditLogEvent2[AuditLogEvent2["IntegrationCreate"] = 80] = "IntegrationCreate";
+    AuditLogEvent2[AuditLogEvent2["IntegrationUpdate"] = 81] = "IntegrationUpdate";
+    AuditLogEvent2[AuditLogEvent2["IntegrationDelete"] = 82] = "IntegrationDelete";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceCreate"] = 83] = "StageInstanceCreate";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceUpdate"] = 84] = "StageInstanceUpdate";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceDelete"] = 85] = "StageInstanceDelete";
+    AuditLogEvent2[AuditLogEvent2["StickerCreate"] = 90] = "StickerCreate";
+    AuditLogEvent2[AuditLogEvent2["StickerUpdate"] = 91] = "StickerUpdate";
+    AuditLogEvent2[AuditLogEvent2["StickerDelete"] = 92] = "StickerDelete";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventCreate"] = 100] = "GuildScheduledEventCreate";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventUpdate"] = 101] = "GuildScheduledEventUpdate";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventDelete"] = 102] = "GuildScheduledEventDelete";
+    AuditLogEvent2[AuditLogEvent2["ThreadCreate"] = 110] = "ThreadCreate";
+    AuditLogEvent2[AuditLogEvent2["ThreadUpdate"] = 111] = "ThreadUpdate";
+    AuditLogEvent2[AuditLogEvent2["ThreadDelete"] = 112] = "ThreadDelete";
+    AuditLogEvent2[AuditLogEvent2["ApplicationCommandPermissionUpdate"] = 121] = "ApplicationCommandPermissionUpdate";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleCreate"] = 140] = "AutoModerationRuleCreate";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleUpdate"] = 141] = "AutoModerationRuleUpdate";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleDelete"] = 142] = "AutoModerationRuleDelete";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationBlockMessage"] = 143] = "AutoModerationBlockMessage";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationFlagToChannel"] = 144] = "AutoModerationFlagToChannel";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationUserCommunicationDisabled"] = 145] = "AutoModerationUserCommunicationDisabled";
+    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationRequestCreated"] = 150] = "CreatorMonetizationRequestCreated";
+    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationTermsAccepted"] = 151] = "CreatorMonetizationTermsAccepted";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptCreate"] = 163] = "OnboardingPromptCreate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptUpdate"] = 164] = "OnboardingPromptUpdate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptDelete"] = 165] = "OnboardingPromptDelete";
+    AuditLogEvent2[AuditLogEvent2["OnboardingCreate"] = 166] = "OnboardingCreate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingUpdate"] = 167] = "OnboardingUpdate";
+    AuditLogEvent2[AuditLogEvent2["HomeSettingsCreate"] = 190] = "HomeSettingsCreate";
+    AuditLogEvent2[AuditLogEvent2["HomeSettingsUpdate"] = 191] = "HomeSettingsUpdate";
+  })(AuditLogEvent || (exports.AuditLogEvent = AuditLogEvent = {}));
+  var AuditLogOptionsType;
+  (function(AuditLogOptionsType2) {
+    AuditLogOptionsType2["Role"] = "0";
+    AuditLogOptionsType2["Member"] = "1";
+  })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/autoModeration.js
+var require_autoModeration5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
+  var AutoModerationRuleTriggerType;
+  (function(AutoModerationRuleTriggerType2) {
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Keyword"] = 1] = "Keyword";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Spam"] = 3] = "Spam";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["KeywordPreset"] = 4] = "KeywordPreset";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MentionSpam"] = 5] = "MentionSpam";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MemberProfile"] = 6] = "MemberProfile";
+  })(AutoModerationRuleTriggerType || (exports.AutoModerationRuleTriggerType = AutoModerationRuleTriggerType = {}));
+  var AutoModerationRuleKeywordPresetType;
+  (function(AutoModerationRuleKeywordPresetType2) {
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Profanity"] = 1] = "Profanity";
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["SexualContent"] = 2] = "SexualContent";
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Slurs"] = 3] = "Slurs";
+  })(AutoModerationRuleKeywordPresetType || (exports.AutoModerationRuleKeywordPresetType = AutoModerationRuleKeywordPresetType = {}));
+  var AutoModerationRuleEventType;
+  (function(AutoModerationRuleEventType2) {
+    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MessageSend"] = 1] = "MessageSend";
+    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MemberUpdate"] = 2] = "MemberUpdate";
+  })(AutoModerationRuleEventType || (exports.AutoModerationRuleEventType = AutoModerationRuleEventType = {}));
+  var AutoModerationActionType;
+  (function(AutoModerationActionType2) {
+    AutoModerationActionType2[AutoModerationActionType2["BlockMessage"] = 1] = "BlockMessage";
+    AutoModerationActionType2[AutoModerationActionType2["SendAlertMessage"] = 2] = "SendAlertMessage";
+    AutoModerationActionType2[AutoModerationActionType2["Timeout"] = 3] = "Timeout";
+    AutoModerationActionType2[AutoModerationActionType2["BlockMemberInteraction"] = 4] = "BlockMemberInteraction";
+  })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/channel.js
+var require_channel7 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ChannelFlags = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
+  var SortOrderType;
+  (function(SortOrderType2) {
+    SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
+    SortOrderType2[SortOrderType2["CreationDate"] = 1] = "CreationDate";
+  })(SortOrderType || (exports.SortOrderType = SortOrderType = {}));
+  var ForumLayoutType;
+  (function(ForumLayoutType2) {
+    ForumLayoutType2[ForumLayoutType2["NotSet"] = 0] = "NotSet";
+    ForumLayoutType2[ForumLayoutType2["ListView"] = 1] = "ListView";
+    ForumLayoutType2[ForumLayoutType2["GalleryView"] = 2] = "GalleryView";
+  })(ForumLayoutType || (exports.ForumLayoutType = ForumLayoutType = {}));
+  var ChannelType;
+  (function(ChannelType2) {
+    ChannelType2[ChannelType2["GuildText"] = 0] = "GuildText";
+    ChannelType2[ChannelType2["DM"] = 1] = "DM";
+    ChannelType2[ChannelType2["GuildVoice"] = 2] = "GuildVoice";
+    ChannelType2[ChannelType2["GroupDM"] = 3] = "GroupDM";
+    ChannelType2[ChannelType2["GuildCategory"] = 4] = "GuildCategory";
+    ChannelType2[ChannelType2["GuildAnnouncement"] = 5] = "GuildAnnouncement";
+    ChannelType2[ChannelType2["AnnouncementThread"] = 10] = "AnnouncementThread";
+    ChannelType2[ChannelType2["PublicThread"] = 11] = "PublicThread";
+    ChannelType2[ChannelType2["PrivateThread"] = 12] = "PrivateThread";
+    ChannelType2[ChannelType2["GuildStageVoice"] = 13] = "GuildStageVoice";
+    ChannelType2[ChannelType2["GuildDirectory"] = 14] = "GuildDirectory";
+    ChannelType2[ChannelType2["GuildForum"] = 15] = "GuildForum";
+    ChannelType2[ChannelType2["GuildMedia"] = 16] = "GuildMedia";
+    ChannelType2[ChannelType2["GuildNews"] = 5] = "GuildNews";
+    ChannelType2[ChannelType2["GuildNewsThread"] = 10] = "GuildNewsThread";
+    ChannelType2[ChannelType2["GuildPublicThread"] = 11] = "GuildPublicThread";
+    ChannelType2[ChannelType2["GuildPrivateThread"] = 12] = "GuildPrivateThread";
+  })(ChannelType || (exports.ChannelType = ChannelType = {}));
+  var VideoQualityMode;
+  (function(VideoQualityMode2) {
+    VideoQualityMode2[VideoQualityMode2["Auto"] = 1] = "Auto";
+    VideoQualityMode2[VideoQualityMode2["Full"] = 2] = "Full";
+  })(VideoQualityMode || (exports.VideoQualityMode = VideoQualityMode = {}));
+  var MessageType;
+  (function(MessageType2) {
+    MessageType2[MessageType2["Default"] = 0] = "Default";
+    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
+    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
+    MessageType2[MessageType2["Call"] = 3] = "Call";
+    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
+    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
+    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
+    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
+    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
+    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
+    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
+    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
+    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
+    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
+    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
+    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
+    MessageType2[MessageType2["Reply"] = 19] = "Reply";
+    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
+    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
+    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
+    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
+    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
+    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
+    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
+    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
+    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
+    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
+    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
+    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
+    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
+    MessageType2[MessageType2["GuildIncidentAlertModeEnabled"] = 36] = "GuildIncidentAlertModeEnabled";
+    MessageType2[MessageType2["GuildIncidentAlertModeDisabled"] = 37] = "GuildIncidentAlertModeDisabled";
+    MessageType2[MessageType2["GuildIncidentReportRaid"] = 38] = "GuildIncidentReportRaid";
+    MessageType2[MessageType2["GuildIncidentReportFalseAlarm"] = 39] = "GuildIncidentReportFalseAlarm";
+  })(MessageType || (exports.MessageType = MessageType = {}));
+  var MessageActivityType;
+  (function(MessageActivityType2) {
+    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
+    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
+    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
+    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
+  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
+  var MessageReferenceType;
+  (function(MessageReferenceType2) {
+    MessageReferenceType2[MessageReferenceType2["Default"] = 0] = "Default";
+    MessageReferenceType2[MessageReferenceType2["Forward"] = 1] = "Forward";
+  })(MessageReferenceType || (exports.MessageReferenceType = MessageReferenceType = {}));
+  var MessageFlags;
+  (function(MessageFlags2) {
+    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
+    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
+    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
+    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
+    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
+    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
+    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
+    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
+    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
+    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
+    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
+    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
+  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
+  var OverwriteType;
+  (function(OverwriteType2) {
+    OverwriteType2[OverwriteType2["Role"] = 0] = "Role";
+    OverwriteType2[OverwriteType2["Member"] = 1] = "Member";
+  })(OverwriteType || (exports.OverwriteType = OverwriteType = {}));
+  var ThreadAutoArchiveDuration;
+  (function(ThreadAutoArchiveDuration2) {
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneHour"] = 60] = "OneHour";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneDay"] = 1440] = "OneDay";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["ThreeDays"] = 4320] = "ThreeDays";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneWeek"] = 10080] = "OneWeek";
+  })(ThreadAutoArchiveDuration || (exports.ThreadAutoArchiveDuration = ThreadAutoArchiveDuration = {}));
+  var ThreadMemberFlags;
+  (function(ThreadMemberFlags2) {
+    ThreadMemberFlags2[ThreadMemberFlags2["HasInteracted"] = 1] = "HasInteracted";
+    ThreadMemberFlags2[ThreadMemberFlags2["AllMessages"] = 2] = "AllMessages";
+    ThreadMemberFlags2[ThreadMemberFlags2["OnlyMentions"] = 4] = "OnlyMentions";
+    ThreadMemberFlags2[ThreadMemberFlags2["NoMessages"] = 8] = "NoMessages";
+  })(ThreadMemberFlags || (exports.ThreadMemberFlags = ThreadMemberFlags = {}));
+  var EmbedType;
+  (function(EmbedType2) {
+    EmbedType2["Rich"] = "rich";
+    EmbedType2["Image"] = "image";
+    EmbedType2["Video"] = "video";
+    EmbedType2["GIFV"] = "gifv";
+    EmbedType2["Article"] = "article";
+    EmbedType2["Link"] = "link";
+    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
+  })(EmbedType || (exports.EmbedType = EmbedType = {}));
+  var AttachmentFlags;
+  (function(AttachmentFlags2) {
+    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
+  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
+  var AllowedMentionsTypes;
+  (function(AllowedMentionsTypes2) {
+    AllowedMentionsTypes2["Everyone"] = "everyone";
+    AllowedMentionsTypes2["Role"] = "roles";
+    AllowedMentionsTypes2["User"] = "users";
+  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
+  var ComponentType;
+  (function(ComponentType2) {
+    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
+    ComponentType2[ComponentType2["Button"] = 2] = "Button";
+    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
+    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
+    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
+    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
+    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
+    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
+    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
+  })(ComponentType || (exports.ComponentType = ComponentType = {}));
+  var ButtonStyle;
+  (function(ButtonStyle2) {
+    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
+    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
+    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
+    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
+    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
+    ButtonStyle2[ButtonStyle2["Premium"] = 6] = "Premium";
+  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
+  var TextInputStyle;
+  (function(TextInputStyle2) {
+    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
+    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
+  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
+  var SelectMenuDefaultValueType;
+  (function(SelectMenuDefaultValueType2) {
+    SelectMenuDefaultValueType2["Channel"] = "channel";
+    SelectMenuDefaultValueType2["Role"] = "role";
+    SelectMenuDefaultValueType2["User"] = "user";
+  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
+  var ChannelFlags;
+  (function(ChannelFlags2) {
+    ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
+    ChannelFlags2[ChannelFlags2["Pinned"] = 2] = "Pinned";
+    ChannelFlags2[ChannelFlags2["ActiveChannelsRemoved"] = 4] = "ActiveChannelsRemoved";
+    ChannelFlags2[ChannelFlags2["RequireTag"] = 16] = "RequireTag";
+    ChannelFlags2[ChannelFlags2["IsSpam"] = 32] = "IsSpam";
+    ChannelFlags2[ChannelFlags2["IsGuildResourceChannel"] = 128] = "IsGuildResourceChannel";
+    ChannelFlags2[ChannelFlags2["ClydeAI"] = 256] = "ClydeAI";
+    ChannelFlags2[ChannelFlags2["IsScheduledForDeletion"] = 512] = "IsScheduledForDeletion";
+    ChannelFlags2[ChannelFlags2["HideMediaDownloadOptions"] = 32768] = "HideMediaDownloadOptions";
+  })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/emoji.js
+var require_emoji5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/gateway.js
+var require_gateway5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ActivityFlags = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
+  var PresenceUpdateStatus;
+  (function(PresenceUpdateStatus2) {
+    PresenceUpdateStatus2["Online"] = "online";
+    PresenceUpdateStatus2["DoNotDisturb"] = "dnd";
+    PresenceUpdateStatus2["Idle"] = "idle";
+    PresenceUpdateStatus2["Invisible"] = "invisible";
+    PresenceUpdateStatus2["Offline"] = "offline";
+  })(PresenceUpdateStatus || (exports.PresenceUpdateStatus = PresenceUpdateStatus = {}));
+  var ActivityPlatform;
+  (function(ActivityPlatform2) {
+    ActivityPlatform2["Desktop"] = "desktop";
+    ActivityPlatform2["Xbox"] = "xbox";
+    ActivityPlatform2["Samsung"] = "samsung";
+    ActivityPlatform2["IOS"] = "ios";
+    ActivityPlatform2["Android"] = "android";
+    ActivityPlatform2["Embedded"] = "embedded";
+    ActivityPlatform2["PS4"] = "ps4";
+    ActivityPlatform2["PS5"] = "ps5";
+  })(ActivityPlatform || (exports.ActivityPlatform = ActivityPlatform = {}));
+  var ActivityType;
+  (function(ActivityType2) {
+    ActivityType2[ActivityType2["Playing"] = 0] = "Playing";
+    ActivityType2[ActivityType2["Streaming"] = 1] = "Streaming";
+    ActivityType2[ActivityType2["Listening"] = 2] = "Listening";
+    ActivityType2[ActivityType2["Watching"] = 3] = "Watching";
+    ActivityType2[ActivityType2["Custom"] = 4] = "Custom";
+    ActivityType2[ActivityType2["Competing"] = 5] = "Competing";
+  })(ActivityType || (exports.ActivityType = ActivityType = {}));
+  var ActivityFlags;
+  (function(ActivityFlags2) {
+    ActivityFlags2[ActivityFlags2["Instance"] = 1] = "Instance";
+    ActivityFlags2[ActivityFlags2["Join"] = 2] = "Join";
+    ActivityFlags2[ActivityFlags2["Spectate"] = 4] = "Spectate";
+    ActivityFlags2[ActivityFlags2["JoinRequest"] = 8] = "JoinRequest";
+    ActivityFlags2[ActivityFlags2["Sync"] = 16] = "Sync";
+    ActivityFlags2[ActivityFlags2["Play"] = 32] = "Play";
+    ActivityFlags2[ActivityFlags2["PartyPrivacyFriends"] = 64] = "PartyPrivacyFriends";
+    ActivityFlags2[ActivityFlags2["PartyPrivacyVoiceChannel"] = 128] = "PartyPrivacyVoiceChannel";
+    ActivityFlags2[ActivityFlags2["Embedded"] = 256] = "Embedded";
+  })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guild.js
+var require_guild5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
+  var GuildDefaultMessageNotifications;
+  (function(GuildDefaultMessageNotifications2) {
+    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["AllMessages"] = 0] = "AllMessages";
+    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["OnlyMentions"] = 1] = "OnlyMentions";
+  })(GuildDefaultMessageNotifications || (exports.GuildDefaultMessageNotifications = GuildDefaultMessageNotifications = {}));
+  var GuildExplicitContentFilter;
+  (function(GuildExplicitContentFilter2) {
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["Disabled"] = 0] = "Disabled";
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["MembersWithoutRoles"] = 1] = "MembersWithoutRoles";
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["AllMembers"] = 2] = "AllMembers";
+  })(GuildExplicitContentFilter || (exports.GuildExplicitContentFilter = GuildExplicitContentFilter = {}));
+  var GuildMFALevel;
+  (function(GuildMFALevel2) {
+    GuildMFALevel2[GuildMFALevel2["None"] = 0] = "None";
+    GuildMFALevel2[GuildMFALevel2["Elevated"] = 1] = "Elevated";
+  })(GuildMFALevel || (exports.GuildMFALevel = GuildMFALevel = {}));
+  var GuildNSFWLevel;
+  (function(GuildNSFWLevel2) {
+    GuildNSFWLevel2[GuildNSFWLevel2["Default"] = 0] = "Default";
+    GuildNSFWLevel2[GuildNSFWLevel2["Explicit"] = 1] = "Explicit";
+    GuildNSFWLevel2[GuildNSFWLevel2["Safe"] = 2] = "Safe";
+    GuildNSFWLevel2[GuildNSFWLevel2["AgeRestricted"] = 3] = "AgeRestricted";
+  })(GuildNSFWLevel || (exports.GuildNSFWLevel = GuildNSFWLevel = {}));
+  var GuildVerificationLevel;
+  (function(GuildVerificationLevel2) {
+    GuildVerificationLevel2[GuildVerificationLevel2["None"] = 0] = "None";
+    GuildVerificationLevel2[GuildVerificationLevel2["Low"] = 1] = "Low";
+    GuildVerificationLevel2[GuildVerificationLevel2["Medium"] = 2] = "Medium";
+    GuildVerificationLevel2[GuildVerificationLevel2["High"] = 3] = "High";
+    GuildVerificationLevel2[GuildVerificationLevel2["VeryHigh"] = 4] = "VeryHigh";
+  })(GuildVerificationLevel || (exports.GuildVerificationLevel = GuildVerificationLevel = {}));
+  var GuildPremiumTier;
+  (function(GuildPremiumTier2) {
+    GuildPremiumTier2[GuildPremiumTier2["None"] = 0] = "None";
+    GuildPremiumTier2[GuildPremiumTier2["Tier1"] = 1] = "Tier1";
+    GuildPremiumTier2[GuildPremiumTier2["Tier2"] = 2] = "Tier2";
+    GuildPremiumTier2[GuildPremiumTier2["Tier3"] = 3] = "Tier3";
+  })(GuildPremiumTier || (exports.GuildPremiumTier = GuildPremiumTier = {}));
+  var GuildHubType;
+  (function(GuildHubType2) {
+    GuildHubType2[GuildHubType2["Default"] = 0] = "Default";
+    GuildHubType2[GuildHubType2["HighSchool"] = 1] = "HighSchool";
+    GuildHubType2[GuildHubType2["College"] = 2] = "College";
+  })(GuildHubType || (exports.GuildHubType = GuildHubType = {}));
+  var GuildSystemChannelFlags;
+  (function(GuildSystemChannelFlags2) {
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotifications"] = 1] = "SuppressJoinNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressPremiumSubscriptions"] = 2] = "SuppressPremiumSubscriptions";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressGuildReminderNotifications"] = 4] = "SuppressGuildReminderNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotificationReplies"] = 8] = "SuppressJoinNotificationReplies";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotifications"] = 16] = "SuppressRoleSubscriptionPurchaseNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotificationReplies"] = 32] = "SuppressRoleSubscriptionPurchaseNotificationReplies";
+  })(GuildSystemChannelFlags || (exports.GuildSystemChannelFlags = GuildSystemChannelFlags = {}));
+  var GuildFeature;
+  (function(GuildFeature2) {
+    GuildFeature2["AnimatedBanner"] = "ANIMATED_BANNER";
+    GuildFeature2["AnimatedIcon"] = "ANIMATED_ICON";
+    GuildFeature2["ApplicationCommandPermissionsV2"] = "APPLICATION_COMMAND_PERMISSIONS_V2";
+    GuildFeature2["AutoModeration"] = "AUTO_MODERATION";
+    GuildFeature2["Banner"] = "BANNER";
+    GuildFeature2["Community"] = "COMMUNITY";
+    GuildFeature2["CreatorMonetizableProvisional"] = "CREATOR_MONETIZABLE_PROVISIONAL";
+    GuildFeature2["CreatorStorePage"] = "CREATOR_STORE_PAGE";
+    GuildFeature2["DeveloperSupportServer"] = "DEVELOPER_SUPPORT_SERVER";
+    GuildFeature2["Discoverable"] = "DISCOVERABLE";
+    GuildFeature2["Featurable"] = "FEATURABLE";
+    GuildFeature2["HasDirectoryEntry"] = "HAS_DIRECTORY_ENTRY";
+    GuildFeature2["Hub"] = "HUB";
+    GuildFeature2["InvitesDisabled"] = "INVITES_DISABLED";
+    GuildFeature2["InviteSplash"] = "INVITE_SPLASH";
+    GuildFeature2["LinkedToHub"] = "LINKED_TO_HUB";
+    GuildFeature2["MemberVerificationGateEnabled"] = "MEMBER_VERIFICATION_GATE_ENABLED";
+    GuildFeature2["MonetizationEnabled"] = "MONETIZATION_ENABLED";
+    GuildFeature2["MoreStickers"] = "MORE_STICKERS";
+    GuildFeature2["News"] = "NEWS";
+    GuildFeature2["Partnered"] = "PARTNERED";
+    GuildFeature2["PreviewEnabled"] = "PREVIEW_ENABLED";
+    GuildFeature2["PrivateThreads"] = "PRIVATE_THREADS";
+    GuildFeature2["RaidAlertsDisabled"] = "RAID_ALERTS_DISABLED";
+    GuildFeature2["RelayEnabled"] = "RELAY_ENABLED";
+    GuildFeature2["RoleIcons"] = "ROLE_ICONS";
+    GuildFeature2["RoleSubscriptionsAvailableForPurchase"] = "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE";
+    GuildFeature2["RoleSubscriptionsEnabled"] = "ROLE_SUBSCRIPTIONS_ENABLED";
+    GuildFeature2["TicketedEventsEnabled"] = "TICKETED_EVENTS_ENABLED";
+    GuildFeature2["VanityURL"] = "VANITY_URL";
+    GuildFeature2["Verified"] = "VERIFIED";
+    GuildFeature2["VIPRegions"] = "VIP_REGIONS";
+    GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
+  })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
+  var GuildMemberFlags;
+  (function(GuildMemberFlags2) {
+    GuildMemberFlags2[GuildMemberFlags2["DidRejoin"] = 1] = "DidRejoin";
+    GuildMemberFlags2[GuildMemberFlags2["CompletedOnboarding"] = 2] = "CompletedOnboarding";
+    GuildMemberFlags2[GuildMemberFlags2["BypassesVerification"] = 4] = "BypassesVerification";
+    GuildMemberFlags2[GuildMemberFlags2["StartedOnboarding"] = 8] = "StartedOnboarding";
+    GuildMemberFlags2[GuildMemberFlags2["StartedHomeActions"] = 32] = "StartedHomeActions";
+    GuildMemberFlags2[GuildMemberFlags2["CompletedHomeActions"] = 64] = "CompletedHomeActions";
+    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedUsernameOrGuildNickname"] = 128] = "AutomodQuarantinedUsernameOrGuildNickname";
+    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedBio"] = 256] = "AutomodQuarantinedBio";
+  })(GuildMemberFlags || (exports.GuildMemberFlags = GuildMemberFlags = {}));
+  var IntegrationExpireBehavior;
+  (function(IntegrationExpireBehavior2) {
+    IntegrationExpireBehavior2[IntegrationExpireBehavior2["RemoveRole"] = 0] = "RemoveRole";
+    IntegrationExpireBehavior2[IntegrationExpireBehavior2["Kick"] = 1] = "Kick";
+  })(IntegrationExpireBehavior || (exports.IntegrationExpireBehavior = IntegrationExpireBehavior = {}));
+  var GuildWidgetStyle;
+  (function(GuildWidgetStyle2) {
+    GuildWidgetStyle2["Shield"] = "shield";
+    GuildWidgetStyle2["Banner1"] = "banner1";
+    GuildWidgetStyle2["Banner2"] = "banner2";
+    GuildWidgetStyle2["Banner3"] = "banner3";
+    GuildWidgetStyle2["Banner4"] = "banner4";
+  })(GuildWidgetStyle || (exports.GuildWidgetStyle = GuildWidgetStyle = {}));
+  var MembershipScreeningFieldType;
+  (function(MembershipScreeningFieldType2) {
+    MembershipScreeningFieldType2["Terms"] = "TERMS";
+  })(MembershipScreeningFieldType || (exports.MembershipScreeningFieldType = MembershipScreeningFieldType = {}));
+  var GuildOnboardingMode;
+  (function(GuildOnboardingMode2) {
+    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingDefault"] = 0] = "OnboardingDefault";
+    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingAdvanced"] = 1] = "OnboardingAdvanced";
+  })(GuildOnboardingMode || (exports.GuildOnboardingMode = GuildOnboardingMode = {}));
+  var GuildOnboardingPromptType;
+  (function(GuildOnboardingPromptType2) {
+    GuildOnboardingPromptType2[GuildOnboardingPromptType2["MultipleChoice"] = 0] = "MultipleChoice";
+    GuildOnboardingPromptType2[GuildOnboardingPromptType2["Dropdown"] = 1] = "Dropdown";
+  })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
+var require_guildScheduledEvent5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
+  var GuildScheduledEventRecurrenceRuleFrequency;
+  (function(GuildScheduledEventRecurrenceRuleFrequency2) {
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Yearly"] = 0] = "Yearly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Monthly"] = 1] = "Monthly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Weekly"] = 2] = "Weekly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Daily"] = 3] = "Daily";
+  })(GuildScheduledEventRecurrenceRuleFrequency || (exports.GuildScheduledEventRecurrenceRuleFrequency = GuildScheduledEventRecurrenceRuleFrequency = {}));
+  var GuildScheduledEventRecurrenceRuleWeekday;
+  (function(GuildScheduledEventRecurrenceRuleWeekday2) {
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Monday"] = 0] = "Monday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Tuesday"] = 1] = "Tuesday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Wednesday"] = 2] = "Wednesday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Thursday"] = 3] = "Thursday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Friday"] = 4] = "Friday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Saturday"] = 5] = "Saturday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Sunday"] = 6] = "Sunday";
+  })(GuildScheduledEventRecurrenceRuleWeekday || (exports.GuildScheduledEventRecurrenceRuleWeekday = GuildScheduledEventRecurrenceRuleWeekday = {}));
+  var GuildScheduledEventRecurrenceRuleMonth;
+  (function(GuildScheduledEventRecurrenceRuleMonth2) {
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["January"] = 1] = "January";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["February"] = 2] = "February";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["March"] = 3] = "March";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["April"] = 4] = "April";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["May"] = 5] = "May";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["June"] = 6] = "June";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["July"] = 7] = "July";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["August"] = 8] = "August";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["September"] = 9] = "September";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["October"] = 10] = "October";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["November"] = 11] = "November";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["December"] = 12] = "December";
+  })(GuildScheduledEventRecurrenceRuleMonth || (exports.GuildScheduledEventRecurrenceRuleMonth = GuildScheduledEventRecurrenceRuleMonth = {}));
+  var GuildScheduledEventEntityType;
+  (function(GuildScheduledEventEntityType2) {
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["StageInstance"] = 1] = "StageInstance";
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["Voice"] = 2] = "Voice";
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["External"] = 3] = "External";
+  })(GuildScheduledEventEntityType || (exports.GuildScheduledEventEntityType = GuildScheduledEventEntityType = {}));
+  var GuildScheduledEventStatus;
+  (function(GuildScheduledEventStatus2) {
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Scheduled"] = 1] = "Scheduled";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Active"] = 2] = "Active";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Completed"] = 3] = "Completed";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Canceled"] = 4] = "Canceled";
+  })(GuildScheduledEventStatus || (exports.GuildScheduledEventStatus = GuildScheduledEventStatus = {}));
+  var GuildScheduledEventPrivacyLevel;
+  (function(GuildScheduledEventPrivacyLevel2) {
+    GuildScheduledEventPrivacyLevel2[GuildScheduledEventPrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
+  })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/attachment.js
+var require_attachment3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/base.js
+var require_base5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/boolean.js
+var require_boolean3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/channel.js
+var require_channel8 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/integer.js
+var require_integer3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/mentionable.js
+var require_mentionable3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/number.js
+var require_number3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/role.js
+var require_role3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
+var require_shared3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ApplicationCommandOptionType = undefined;
+  var ApplicationCommandOptionType;
+  (function(ApplicationCommandOptionType2) {
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Subcommand"] = 1] = "Subcommand";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["SubcommandGroup"] = 2] = "SubcommandGroup";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["String"] = 3] = "String";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Integer"] = 4] = "Integer";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Boolean"] = 5] = "Boolean";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["User"] = 6] = "User";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Channel"] = 7] = "Channel";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Role"] = 8] = "Role";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Mentionable"] = 9] = "Mentionable";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Number"] = 10] = "Number";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Attachment"] = 11] = "Attachment";
+  })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/string.js
+var require_string3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommand.js
+var require_subcommand3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommandGroup.js
+var require_subcommandGroup3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/user.js
+var require_user7 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
+var require_chatInput3 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_attachment3(), exports);
+  __exportStar(require_base5(), exports);
+  __exportStar(require_boolean3(), exports);
+  __exportStar(require_channel8(), exports);
+  __exportStar(require_integer3(), exports);
+  __exportStar(require_mentionable3(), exports);
+  __exportStar(require_number3(), exports);
+  __exportStar(require_role3(), exports);
+  __exportStar(require_shared3(), exports);
+  __exportStar(require_string3(), exports);
+  __exportStar(require_subcommand3(), exports);
+  __exportStar(require_subcommandGroup3(), exports);
+  __exportStar(require_user7(), exports);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/contextMenu.js
+var require_contextMenu3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
+var require_permissions5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
+  var ApplicationCommandPermissionType;
+  (function(ApplicationCommandPermissionType2) {
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Role"] = 1] = "Role";
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["User"] = 2] = "User";
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Channel"] = 3] = "Channel";
+  })(ApplicationCommandPermissionType || (exports.ApplicationCommandPermissionType = ApplicationCommandPermissionType = {}));
+  exports.APIApplicationCommandPermissionsConstant = {
+    Everyone: (guildId) => String(guildId),
+    AllChannels: (guildId) => String(BigInt(guildId) - 1n)
+  };
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
+var require_applicationCommands3 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.InteractionContextType = exports.ApplicationIntegrationType = exports.ApplicationCommandType = undefined;
+  __exportStar(require_chatInput3(), exports);
+  __exportStar(require_contextMenu3(), exports);
+  __exportStar(require_permissions5(), exports);
+  var ApplicationCommandType;
+  (function(ApplicationCommandType2) {
+    ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
+    ApplicationCommandType2[ApplicationCommandType2["User"] = 2] = "User";
+    ApplicationCommandType2[ApplicationCommandType2["Message"] = 3] = "Message";
+  })(ApplicationCommandType || (exports.ApplicationCommandType = ApplicationCommandType = {}));
+  var ApplicationIntegrationType;
+  (function(ApplicationIntegrationType2) {
+    ApplicationIntegrationType2[ApplicationIntegrationType2["GuildInstall"] = 0] = "GuildInstall";
+    ApplicationIntegrationType2[ApplicationIntegrationType2["UserInstall"] = 1] = "UserInstall";
+  })(ApplicationIntegrationType || (exports.ApplicationIntegrationType = ApplicationIntegrationType = {}));
+  var InteractionContextType;
+  (function(InteractionContextType2) {
+    InteractionContextType2[InteractionContextType2["Guild"] = 0] = "Guild";
+    InteractionContextType2[InteractionContextType2["BotDM"] = 1] = "BotDM";
+    InteractionContextType2[InteractionContextType2["PrivateChannel"] = 2] = "PrivateChannel";
+  })(InteractionContextType || (exports.InteractionContextType = InteractionContextType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/autocomplete.js
+var require_autocomplete3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/base.js
+var require_base6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/messageComponents.js
+var require_messageComponents3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/modalSubmit.js
+var require_modalSubmit3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/ping.js
+var require_ping3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/responses.js
+var require_responses3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.InteractionResponseType = exports.InteractionType = undefined;
+  var InteractionType;
+  (function(InteractionType2) {
+    InteractionType2[InteractionType2["Ping"] = 1] = "Ping";
+    InteractionType2[InteractionType2["ApplicationCommand"] = 2] = "ApplicationCommand";
+    InteractionType2[InteractionType2["MessageComponent"] = 3] = "MessageComponent";
+    InteractionType2[InteractionType2["ApplicationCommandAutocomplete"] = 4] = "ApplicationCommandAutocomplete";
+    InteractionType2[InteractionType2["ModalSubmit"] = 5] = "ModalSubmit";
+  })(InteractionType || (exports.InteractionType = InteractionType = {}));
+  var InteractionResponseType;
+  (function(InteractionResponseType2) {
+    InteractionResponseType2[InteractionResponseType2["Pong"] = 1] = "Pong";
+    InteractionResponseType2[InteractionResponseType2["ChannelMessageWithSource"] = 4] = "ChannelMessageWithSource";
+    InteractionResponseType2[InteractionResponseType2["DeferredChannelMessageWithSource"] = 5] = "DeferredChannelMessageWithSource";
+    InteractionResponseType2[InteractionResponseType2["DeferredMessageUpdate"] = 6] = "DeferredMessageUpdate";
+    InteractionResponseType2[InteractionResponseType2["UpdateMessage"] = 7] = "UpdateMessage";
+    InteractionResponseType2[InteractionResponseType2["ApplicationCommandAutocompleteResult"] = 8] = "ApplicationCommandAutocompleteResult";
+    InteractionResponseType2[InteractionResponseType2["Modal"] = 9] = "Modal";
+    InteractionResponseType2[InteractionResponseType2["PremiumRequired"] = 10] = "PremiumRequired";
+  })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/interactions.js
+var require_interactions5 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_applicationCommands3(), exports);
+  __exportStar(require_autocomplete3(), exports);
+  __exportStar(require_base6(), exports);
+  __exportStar(require_messageComponents3(), exports);
+  __exportStar(require_modalSubmit3(), exports);
+  __exportStar(require_ping3(), exports);
+  __exportStar(require_responses3(), exports);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/invite.js
+var require_invite5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.InviteTargetType = exports.InviteType = undefined;
+  var InviteType;
+  (function(InviteType2) {
+    InviteType2[InviteType2["Guild"] = 0] = "Guild";
+    InviteType2[InviteType2["GroupDM"] = 1] = "GroupDM";
+    InviteType2[InviteType2["Friend"] = 2] = "Friend";
+  })(InviteType || (exports.InviteType = InviteType = {}));
+  var InviteTargetType;
+  (function(InviteTargetType2) {
+    InviteTargetType2[InviteTargetType2["Stream"] = 1] = "Stream";
+    InviteTargetType2[InviteTargetType2["EmbeddedApplication"] = 2] = "EmbeddedApplication";
+  })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/oauth2.js
+var require_oauth25 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.OAuth2Scopes = undefined;
+  var OAuth2Scopes;
+  (function(OAuth2Scopes2) {
+    OAuth2Scopes2["Bot"] = "bot";
+    OAuth2Scopes2["Connections"] = "connections";
+    OAuth2Scopes2["DMChannelsRead"] = "dm_channels.read";
+    OAuth2Scopes2["Email"] = "email";
+    OAuth2Scopes2["Identify"] = "identify";
+    OAuth2Scopes2["Guilds"] = "guilds";
+    OAuth2Scopes2["GuildsJoin"] = "guilds.join";
+    OAuth2Scopes2["GuildsMembersRead"] = "guilds.members.read";
+    OAuth2Scopes2["GroupDMJoins"] = "gdm.join";
+    OAuth2Scopes2["MessagesRead"] = "messages.read";
+    OAuth2Scopes2["RoleConnectionsWrite"] = "role_connections.write";
+    OAuth2Scopes2["RPC"] = "rpc";
+    OAuth2Scopes2["RPCNotificationsRead"] = "rpc.notifications.read";
+    OAuth2Scopes2["WebhookIncoming"] = "webhook.incoming";
+    OAuth2Scopes2["Voice"] = "voice";
+    OAuth2Scopes2["ApplicationsBuildsUpload"] = "applications.builds.upload";
+    OAuth2Scopes2["ApplicationsBuildsRead"] = "applications.builds.read";
+    OAuth2Scopes2["ApplicationsStoreUpdate"] = "applications.store.update";
+    OAuth2Scopes2["ApplicationsEntitlements"] = "applications.entitlements";
+    OAuth2Scopes2["RelationshipsRead"] = "relationships.read";
+    OAuth2Scopes2["ActivitiesRead"] = "activities.read";
+    OAuth2Scopes2["ActivitiesWrite"] = "activities.write";
+    OAuth2Scopes2["ApplicationsCommands"] = "applications.commands";
+    OAuth2Scopes2["ApplicationsCommandsUpdate"] = "applications.commands.update";
+    OAuth2Scopes2["ApplicationCommandsPermissionsUpdate"] = "applications.commands.permissions.update";
+  })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/poll.js
+var require_poll5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.PollLayoutType = undefined;
+  var PollLayoutType;
+  (function(PollLayoutType2) {
+    PollLayoutType2[PollLayoutType2["Default"] = 1] = "Default";
+  })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/permissions.js
+var require_permissions6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RoleFlags = undefined;
+  var RoleFlags;
+  (function(RoleFlags2) {
+    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
+  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/stageInstance.js
+var require_stageInstance5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.StageInstancePrivacyLevel = undefined;
+  var StageInstancePrivacyLevel;
+  (function(StageInstancePrivacyLevel2) {
+    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["Public"] = 1] = "Public";
+    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
+  })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/sticker.js
+var require_sticker5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.StickerFormatType = exports.StickerType = undefined;
+  var StickerType;
+  (function(StickerType2) {
+    StickerType2[StickerType2["Standard"] = 1] = "Standard";
+    StickerType2[StickerType2["Guild"] = 2] = "Guild";
+  })(StickerType || (exports.StickerType = StickerType = {}));
+  var StickerFormatType;
+  (function(StickerFormatType2) {
+    StickerFormatType2[StickerFormatType2["PNG"] = 1] = "PNG";
+    StickerFormatType2[StickerFormatType2["APNG"] = 2] = "APNG";
+    StickerFormatType2[StickerFormatType2["Lottie"] = 3] = "Lottie";
+    StickerFormatType2[StickerFormatType2["GIF"] = 4] = "GIF";
+  })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/teams.js
+var require_teams3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
+  var TeamMemberMembershipState;
+  (function(TeamMemberMembershipState2) {
+    TeamMemberMembershipState2[TeamMemberMembershipState2["Invited"] = 1] = "Invited";
+    TeamMemberMembershipState2[TeamMemberMembershipState2["Accepted"] = 2] = "Accepted";
+  })(TeamMemberMembershipState || (exports.TeamMemberMembershipState = TeamMemberMembershipState = {}));
+  var TeamMemberRole;
+  (function(TeamMemberRole2) {
+    TeamMemberRole2["Admin"] = "admin";
+    TeamMemberRole2["Developer"] = "developer";
+    TeamMemberRole2["ReadOnly"] = "read_only";
+  })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/template.js
+var require_template5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/user.js
+var require_user8 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
+  var UserFlags;
+  (function(UserFlags2) {
+    UserFlags2[UserFlags2["Staff"] = 1] = "Staff";
+    UserFlags2[UserFlags2["Partner"] = 2] = "Partner";
+    UserFlags2[UserFlags2["Hypesquad"] = 4] = "Hypesquad";
+    UserFlags2[UserFlags2["BugHunterLevel1"] = 8] = "BugHunterLevel1";
+    UserFlags2[UserFlags2["MFASMS"] = 16] = "MFASMS";
+    UserFlags2[UserFlags2["PremiumPromoDismissed"] = 32] = "PremiumPromoDismissed";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse1"] = 64] = "HypeSquadOnlineHouse1";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse2"] = 128] = "HypeSquadOnlineHouse2";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse3"] = 256] = "HypeSquadOnlineHouse3";
+    UserFlags2[UserFlags2["PremiumEarlySupporter"] = 512] = "PremiumEarlySupporter";
+    UserFlags2[UserFlags2["TeamPseudoUser"] = 1024] = "TeamPseudoUser";
+    UserFlags2[UserFlags2["HasUnreadUrgentMessages"] = 8192] = "HasUnreadUrgentMessages";
+    UserFlags2[UserFlags2["BugHunterLevel2"] = 16384] = "BugHunterLevel2";
+    UserFlags2[UserFlags2["VerifiedBot"] = 65536] = "VerifiedBot";
+    UserFlags2[UserFlags2["VerifiedDeveloper"] = 131072] = "VerifiedDeveloper";
+    UserFlags2[UserFlags2["CertifiedModerator"] = 262144] = "CertifiedModerator";
+    UserFlags2[UserFlags2["BotHTTPInteractions"] = 524288] = "BotHTTPInteractions";
+    UserFlags2[UserFlags2["Spammer"] = 1048576] = "Spammer";
+    UserFlags2[UserFlags2["DisablePremium"] = 2097152] = "DisablePremium";
+    UserFlags2[UserFlags2["ActiveDeveloper"] = 4194304] = "ActiveDeveloper";
+    UserFlags2[UserFlags2["Quarantined"] = 17592186044416] = "Quarantined";
+    UserFlags2[UserFlags2["Collaborator"] = 1125899906842624] = "Collaborator";
+    UserFlags2[UserFlags2["RestrictedCollaborator"] = 2251799813685248] = "RestrictedCollaborator";
+  })(UserFlags || (exports.UserFlags = UserFlags = {}));
+  var UserPremiumType;
+  (function(UserPremiumType2) {
+    UserPremiumType2[UserPremiumType2["None"] = 0] = "None";
+    UserPremiumType2[UserPremiumType2["NitroClassic"] = 1] = "NitroClassic";
+    UserPremiumType2[UserPremiumType2["Nitro"] = 2] = "Nitro";
+    UserPremiumType2[UserPremiumType2["NitroBasic"] = 3] = "NitroBasic";
+  })(UserPremiumType || (exports.UserPremiumType = UserPremiumType = {}));
+  var ConnectionService;
+  (function(ConnectionService2) {
+    ConnectionService2["BattleNet"] = "battlenet";
+    ConnectionService2["BungieNet"] = "bungie";
+    ConnectionService2["Domain"] = "domain";
+    ConnectionService2["eBay"] = "ebay";
+    ConnectionService2["EpicGames"] = "epicgames";
+    ConnectionService2["Facebook"] = "facebook";
+    ConnectionService2["GitHub"] = "github";
+    ConnectionService2["Instagram"] = "instagram";
+    ConnectionService2["LeagueOfLegends"] = "leagueoflegends";
+    ConnectionService2["PayPal"] = "paypal";
+    ConnectionService2["PlayStationNetwork"] = "playstation";
+    ConnectionService2["Reddit"] = "reddit";
+    ConnectionService2["RiotGames"] = "riotgames";
+    ConnectionService2["Roblox"] = "roblox";
+    ConnectionService2["Spotify"] = "spotify";
+    ConnectionService2["Skype"] = "skype";
+    ConnectionService2["Steam"] = "steam";
+    ConnectionService2["TikTok"] = "tiktok";
+    ConnectionService2["Twitch"] = "twitch";
+    ConnectionService2["X"] = "twitter";
+    ConnectionService2["Twitter"] = "twitter";
+    ConnectionService2["Xbox"] = "xbox";
+    ConnectionService2["YouTube"] = "youtube";
+  })(ConnectionService || (exports.ConnectionService = ConnectionService = {}));
+  var ConnectionVisibility;
+  (function(ConnectionVisibility2) {
+    ConnectionVisibility2[ConnectionVisibility2["None"] = 0] = "None";
+    ConnectionVisibility2[ConnectionVisibility2["Everyone"] = 1] = "Everyone";
+  })(ConnectionVisibility || (exports.ConnectionVisibility = ConnectionVisibility = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/voice.js
+var require_voice5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/webhook.js
+var require_webhook5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.WebhookType = undefined;
+  var WebhookType;
+  (function(WebhookType2) {
+    WebhookType2[WebhookType2["Incoming"] = 1] = "Incoming";
+    WebhookType2[WebhookType2["ChannelFollower"] = 2] = "ChannelFollower";
+    WebhookType2[WebhookType2["Application"] = 3] = "Application";
+  })(WebhookType || (exports.WebhookType = WebhookType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/monetization.js
+var require_monetization5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
+  var EntitlementType;
+  (function(EntitlementType2) {
+    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
+    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
+    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
+    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
+    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
+    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
+    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
+    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
+  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
+  var SKUFlags;
+  (function(SKUFlags2) {
+    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
+    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
+    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
+  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
+  var SKUType;
+  (function(SKUType2) {
+    SKUType2[SKUType2["Durable"] = 2] = "Durable";
+    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
+    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
+    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
+  })(SKUType || (exports.SKUType = SKUType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/index.js
+var require_v1014 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_common10(), exports);
+  __exportStar(require_application5(), exports);
+  __exportStar(require_auditLog5(), exports);
+  __exportStar(require_autoModeration5(), exports);
+  __exportStar(require_channel7(), exports);
+  __exportStar(require_emoji5(), exports);
+  __exportStar(require_gateway5(), exports);
+  __exportStar(require_guild5(), exports);
+  __exportStar(require_guildScheduledEvent5(), exports);
+  __exportStar(require_interactions5(), exports);
+  __exportStar(require_invite5(), exports);
+  __exportStar(require_oauth25(), exports);
+  __exportStar(require_poll5(), exports);
+  __exportStar(require_permissions6(), exports);
+  __exportStar(require_stageInstance5(), exports);
+  __exportStar(require_sticker5(), exports);
+  __exportStar(require_teams3(), exports);
+  __exportStar(require_template5(), exports);
+  __exportStar(require_user8(), exports);
+  __exportStar(require_voice5(), exports);
+  __exportStar(require_webhook5(), exports);
+  __exportStar(require_monetization5(), exports);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/common.js
+var require_common11 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.Locale = exports.RESTJSONErrorCodes = undefined;
+  var RESTJSONErrorCodes;
+  (function(RESTJSONErrorCodes2) {
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GeneralError"] = 0] = "GeneralError";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAccount"] = 10001] = "UnknownAccount";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplication"] = 10002] = "UnknownApplication";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownChannel"] = 10003] = "UnknownChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuild"] = 10004] = "UnknownGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownIntegration"] = 10005] = "UnknownIntegration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInvite"] = 10006] = "UnknownInvite";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMember"] = 10007] = "UnknownMember";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMessage"] = 10008] = "UnknownMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPermissionOverwrite"] = 10009] = "UnknownPermissionOverwrite";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownProvider"] = 10010] = "UnknownProvider";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRole"] = 10011] = "UnknownRole";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownToken"] = 10012] = "UnknownToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownUser"] = 10013] = "UnknownUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEmoji"] = 10014] = "UnknownEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhook"] = 10015] = "UnknownWebhook";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhookService"] = 10016] = "UnknownWebhookService";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSession"] = 10020] = "UnknownSession";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBan"] = 10026] = "UnknownBan";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSKU"] = 10027] = "UnknownSKU";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreListing"] = 10028] = "UnknownStoreListing";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEntitlement"] = 10029] = "UnknownEntitlement";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBuild"] = 10030] = "UnknownBuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownLobby"] = 10031] = "UnknownLobby";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBranch"] = 10032] = "UnknownBranch";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreDirectoryLayout"] = 10033] = "UnknownStoreDirectoryLayout";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRedistributable"] = 10036] = "UnknownRedistributable";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGiftCode"] = 10038] = "UnknownGiftCode";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStream"] = 10049] = "UnknownStream";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPremiumServerSubscribeCooldown"] = 10050] = "UnknownPremiumServerSubscribeCooldown";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildTemplate"] = 10057] = "UnknownGuildTemplate";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownDiscoverableServerCategory"] = 10059] = "UnknownDiscoverableServerCategory";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSticker"] = 10060] = "UnknownSticker";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStickerPack"] = 10061] = "UnknownStickerPack";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInteraction"] = 10062] = "UnknownInteraction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommand"] = 10063] = "UnknownApplicationCommand";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownVoiceState"] = 10065] = "UnknownVoiceState";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommandPermissions"] = 10066] = "UnknownApplicationCommandPermissions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStageInstance"] = 10067] = "UnknownStageInstance";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildMemberVerificationForm"] = 10068] = "UnknownGuildMemberVerificationForm";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildWelcomeScreen"] = 10069] = "UnknownGuildWelcomeScreen";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEvent"] = 10070] = "UnknownGuildScheduledEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEventUser"] = 10071] = "UnknownGuildScheduledEventUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownTag"] = 10087] = "UnknownTag";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BotsCannotUseThisEndpoint"] = 20001] = "BotsCannotUseThisEndpoint";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyBotsCanUseThisEndpoint"] = 20002] = "OnlyBotsCanUseThisEndpoint";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ExplicitContentCannotBeSentToTheDesiredRecipient"] = 20009] = "ExplicitContentCannotBeSentToTheDesiredRecipient";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NotAuthorizedToPerformThisActionOnThisApplication"] = 20012] = "NotAuthorizedToPerformThisActionOnThisApplication";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ActionCannotBePerformedDueToSlowmodeRateLimit"] = 20016] = "ActionCannotBePerformedDueToSlowmodeRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheMazeIsntMeantForYou"] = 20017] = "TheMazeIsntMeantForYou";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyTheOwnerOfThisAccountCanPerformThisAction"] = 20018] = "OnlyTheOwnerOfThisAccountCanPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnnouncementEditLimitExceeded"] = 20022] = "AnnouncementEditLimitExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnderMinimumAge"] = 20024] = "UnderMinimumAge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelSendRateLimit"] = 20028] = "ChannelSendRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerSendRateLimit"] = 20029] = "ServerSendRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords"] = 20031] = "StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildPremiumSubscriptionLevelTooLow"] = 20035] = "GuildPremiumSubscriptionLevelTooLow";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildsReached"] = 30001] = "MaximumNumberOfGuildsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfFriendsReached"] = 30002] = "MaximumNumberOfFriendsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinsReachedForTheChannel"] = 30003] = "MaximumNumberOfPinsReachedForTheChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfRecipientsReached"] = 30004] = "MaximumNumberOfRecipientsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildRolesReached"] = 30005] = "MaximumNumberOfGuildRolesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksReached"] = 30007] = "MaximumNumberOfWebhooksReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEmojisReached"] = 30008] = "MaximumNumberOfEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfReactionsReached"] = 30010] = "MaximumNumberOfReactionsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGroupDMsReached"] = 30011] = "MaximumNumberOfGroupDMsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildChannelsReached"] = 30013] = "MaximumNumberOfGuildChannelsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAttachmentsInAMessageReached"] = 30015] = "MaximumNumberOfAttachmentsInAMessageReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfInvitesReached"] = 30016] = "MaximumNumberOfInvitesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAnimatedEmojisReached"] = 30018] = "MaximumNumberOfAnimatedEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerMembersReached"] = 30019] = "MaximumNumberOfServerMembersReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerCategoriesReached"] = 30030] = "MaximumNumberOfServerCategoriesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildAlreadyHasTemplate"] = 30031] = "GuildAlreadyHasTemplate";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfApplicationCommandsReached"] = 30032] = "MaximumNumberOfApplicationCommandsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumThreadParticipantsReached"] = 30033] = "MaximumThreadParticipantsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumDailyApplicationCommandCreatesReached"] = 30034] = "MaximumDailyApplicationCommandCreatesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfNonGuildMemberBansHasBeenExceeded"] = 30035] = "MaximumNumberOfNonGuildMemberBansHasBeenExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfBanFetchesHasBeenReached"] = 30037] = "MaximumNumberOfBanFetchesHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfUncompletedGuildScheduledEventsReached"] = 30038] = "MaximumNumberOfUncompletedGuildScheduledEventsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfStickersReached"] = 30039] = "MaximumNumberOfStickersReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPruneRequestsHasBeenReached"] = 30040] = "MaximumNumberOfPruneRequestsHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached"] = 30042] = "MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEditsToMessagesOlderThanOneHourReached"] = 30046] = "MaximumNumberOfEditsToMessagesOlderThanOneHourReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinnedThreadsInForumHasBeenReached"] = 30047] = "MaximumNumberOfPinnedThreadsInForumHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfTagsInForumHasBeenReached"] = 30048] = "MaximumNumberOfTagsInForumHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BitrateIsTooHighForChannelOfThisType"] = 30052] = "BitrateIsTooHighForChannelOfThisType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPremiumEmojisReached"] = 30056] = "MaximumNumberOfPremiumEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksPerGuildReached"] = 30058] = "MaximumNumberOfWebhooksPerGuildReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfChannelPermissionOverwritesReached"] = 30060] = "MaximumNumberOfChannelPermissionOverwritesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheChannelsForThisGuildAreTooLarge"] = 30061] = "TheChannelsForThisGuildAreTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["Unauthorized"] = 40001] = "Unauthorized";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VerifyYourAccount"] = 40002] = "VerifyYourAccount";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OpeningDirectMessagesTooFast"] = 40003] = "OpeningDirectMessagesTooFast";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SendMessagesHasBeenTemporarilyDisabled"] = 40004] = "SendMessagesHasBeenTemporarilyDisabled";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestEntityTooLarge"] = 40005] = "RequestEntityTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FeatureTemporarilyDisabledServerSide"] = 40006] = "FeatureTemporarilyDisabledServerSide";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserBannedFromThisGuild"] = 40007] = "UserBannedFromThisGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ConnectionHasBeenRevoked"] = 40012] = "ConnectionHasBeenRevoked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TargetUserIsNotConnectedToVoice"] = 40032] = "TargetUserIsNotConnectedToVoice";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisMessageWasAlreadyCrossposted"] = 40033] = "ThisMessageWasAlreadyCrossposted";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationCommandWithThatNameAlreadyExists"] = 40041] = "ApplicationCommandWithThatNameAlreadyExists";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationInteractionFailedToSend"] = 40043] = "ApplicationInteractionFailedToSend";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAMessageInAForumChannel"] = 40058] = "CannotSendAMessageInAForumChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InteractionHasAlreadyBeenAcknowledged"] = 40060] = "InteractionHasAlreadyBeenAcknowledged";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagNamesMustBeUnique"] = 40061] = "TagNamesMustBeUnique";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServiceResourceIsBeingRateLimited"] = 40062] = "ServiceResourceIsBeingRateLimited";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThereAreNoTagsAvailableThatCanBeSetByNonModerators"] = 40066] = "ThereAreNoTagsAvailableThatCanBeSetByNonModerators";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagRequiredToCreateAForumPostInThisChannel"] = 40067] = "TagRequiredToCreateAForumPostInThisChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnEntitlementHasAlreadyBeenGrantedForThisResource"] = 40074] = "AnEntitlementHasAlreadyBeenGrantedForThisResource";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CloudflareIsBlockingYourRequest"] = 40333] = "CloudflareIsBlockingYourRequest";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingAccess"] = 50001] = "MissingAccess";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAccountType"] = 50002] = "InvalidAccountType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnDMChannel"] = 50003] = "CannotExecuteActionOnDMChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildWidgetDisabled"] = 50004] = "GuildWidgetDisabled";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditMessageAuthoredByAnotherUser"] = 50005] = "CannotEditMessageAuthoredByAnotherUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAnEmptyMessage"] = 50006] = "CannotSendAnEmptyMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesToThisUser"] = 50007] = "CannotSendMessagesToThisUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesInNonTextChannel"] = 50008] = "CannotSendMessagesInNonTextChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelVerificationLevelTooHighForYouToGainAccess"] = 50009] = "ChannelVerificationLevelTooHighForYouToGainAccess";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationDoesNotHaveBot"] = 50010] = "OAuth2ApplicationDoesNotHaveBot";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationLimitReached"] = 50011] = "OAuth2ApplicationLimitReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2State"] = 50012] = "InvalidOAuth2State";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingPermissions"] = 50013] = "MissingPermissions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidToken"] = 50014] = "InvalidToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoteWasTooLong"] = 50015] = "NoteWasTooLong";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedTooFewOrTooManyMessagesToDelete"] = 50016] = "ProvidedTooFewOrTooManyMessagesToDelete";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMFALevel"] = 50017] = "InvalidMFALevel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageCanOnlyBePinnedInTheChannelItWasSentIn"] = 50019] = "MessageCanOnlyBePinnedInTheChannelItWasSentIn";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteCodeInvalidOrTaken"] = 50020] = "InviteCodeInvalidOrTaken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnSystemMessage"] = 50021] = "CannotExecuteActionOnSystemMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnThisChannelType"] = 50024] = "CannotExecuteActionOnThisChannelType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2AccessToken"] = 50025] = "InvalidOAuth2AccessToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingRequiredOAuth2Scope"] = 50026] = "MissingRequiredOAuth2Scope";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidWebhookToken"] = 50027] = "InvalidWebhookToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRole"] = 50028] = "InvalidRole";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRecipients"] = 50033] = "InvalidRecipients";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OneOfTheMessagesProvidedWasTooOldForBulkDelete"] = 50034] = "OneOfTheMessagesProvidedWasTooOldForBulkDelete";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFormBodyOrContentType"] = 50035] = "InvalidFormBodyOrContentType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteAcceptedToGuildWithoutTheBotBeingIn"] = 50036] = "InviteAcceptedToGuildWithoutTheBotBeingIn";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActivityAction"] = 50039] = "InvalidActivityAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAPIVersion"] = 50041] = "InvalidAPIVersion";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FileUploadedExceedsMaximumSize"] = 50045] = "FileUploadedExceedsMaximumSize";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFileUploaded"] = 50046] = "InvalidFileUploaded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSelfRedeemThisGift"] = 50054] = "CannotSelfRedeemThisGift";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidGuild"] = 50055] = "InvalidGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidSKU"] = 50057] = "InvalidSKU";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRequestOrigin"] = 50067] = "InvalidRequestOrigin";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMessageType"] = 50068] = "InvalidMessageType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PaymentSourceRequiredToRedeemGift"] = 50070] = "PaymentSourceRequiredToRedeemGift";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotModifyASystemWebhook"] = 50073] = "CannotModifyASystemWebhook";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteChannelRequiredForCommunityGuilds"] = 50074] = "CannotDeleteChannelRequiredForCommunityGuilds";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditStickersWithinMessage"] = 50080] = "CannotEditStickersWithinMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidStickerSent"] = 50081] = "InvalidStickerSent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActionOnArchivedThread"] = 50083] = "InvalidActionOnArchivedThread";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidThreadNotificationSettings"] = 50084] = "InvalidThreadNotificationSettings";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ParameterEarlierThanCreation"] = 50085] = "ParameterEarlierThanCreation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CommunityServerChannelsMustBeTextChannels"] = 50086] = "CommunityServerChannelsMustBeTextChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor"] = 50091] = "TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNotAvailableInYourLocation"] = 50095] = "ServerNotAvailableInYourLocation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMonetizationEnabledToPerformThisAction"] = 50097] = "ServerNeedsMonetizationEnabledToPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMoreBoostsToPerformThisAction"] = 50101] = "ServerNeedsMoreBoostsToPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestBodyContainsInvalidJSON"] = 50109] = "RequestBodyContainsInvalidJSON";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnerCannotBePendingMember"] = 50131] = "OwnerCannotBePendingMember";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnershipCannotBeMovedToABotUser"] = 50132] = "OwnershipCannotBeMovedToABotUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToResizeAssetBelowTheMinimumSize"] = 50138] = "FailedToResizeAssetBelowTheMinimumSize";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji"] = 50144] = "CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotConvertBetweenPremiumEmojiAndNormalEmoji"] = 50145] = "CannotConvertBetweenPremiumEmojiAndNormalEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedFileNotFound"] = 50146] = "UploadedFileNotFound";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesDoNotSupportAdditionalContent"] = 50159] = "VoiceMessagesDoNotSupportAdditionalContent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveASingleAudioAttachment"] = 50160] = "VoiceMessagesMustHaveASingleAudioAttachment";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveSupportingMetadata"] = 50161] = "VoiceMessagesMustHaveSupportingMetadata";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesCannotBeEdited"] = 50162] = "VoiceMessagesCannotBeEdited";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteGuildSubscriptionIntegration"] = 50163] = "CannotDeleteGuildSubscriptionIntegration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCannotSendVoiceMessagesInThisChannel"] = 50173] = "YouCannotSendVoiceMessagesInThisChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheUserAccountMustFirstBeVerified"] = 50178] = "TheUserAccountMustFirstBeVerified";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouDoNotHavePermissionToSendThisSticker"] = 50600] = "YouDoNotHavePermissionToSendThisSticker";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TwoFactorAuthenticationIsRequired"] = 60003] = "TwoFactorAuthenticationIsRequired";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoUsersWithDiscordTagExist"] = 80004] = "NoUsersWithDiscordTagExist";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ReactionWasBlocked"] = 90001] = "ReactionWasBlocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserCannotUseBurstReactions"] = 90002] = "UserCannotUseBurstReactions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationNotYetAvailable"] = 110001] = "ApplicationNotYetAvailable";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["APIResourceOverloaded"] = 130000] = "APIResourceOverloaded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheStageIsAlreadyOpen"] = 150006] = "TheStageIsAlreadyOpen";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotReplyWithoutPermissionToReadMessageHistory"] = 160002] = "CannotReplyWithoutPermissionToReadMessageHistory";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadAlreadyCreatedForMessage"] = 160004] = "ThreadAlreadyCreatedForMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadLocked"] = 160005] = "ThreadLocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveThreads"] = 160006] = "MaximumActiveThreads";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveAnnouncementThreads"] = 160007] = "MaximumActiveAnnouncementThreads";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidJSONForUploadedLottieFile"] = 170001] = "InvalidJSONForUploadedLottieFile";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedLottiesCannotContainRasterizedImages"] = 170002] = "UploadedLottiesCannotContainRasterizedImages";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerMaximumFramerateExceeded"] = 170003] = "StickerMaximumFramerateExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFrameCountExceedsMaximumOf1000Frames"] = 170004] = "StickerFrameCountExceedsMaximumOf1000Frames";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["LottieAnimationMaximumDimensionsExceeded"] = 170005] = "LottieAnimationMaximumDimensionsExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFramerateIsTooSmallOrTooLarge"] = 170006] = "StickerFramerateIsTooSmallOrTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerAnimationDurationExceedsMaximumOf5Seconds"] = 170007] = "StickerAnimationDurationExceedsMaximumOf5Seconds";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateAFinishedEvent"] = 180000] = "CannotUpdateAFinishedEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToCreateStageNeededForStageEvent"] = 180002] = "FailedToCreateStageNeededForStageEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageWasBlockedByAutomaticModeration"] = 200000] = "MessageWasBlockedByAutomaticModeration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TitleWasBlockedByAutomaticModeration"] = 200001] = "TitleWasBlockedByAutomaticModeration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId"] = 220001] = "WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId"] = 220002] = "WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksCanOnlyCreateThreadsInForumChannels"] = 220003] = "WebhooksCanOnlyCreateThreadsInForumChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhookServicesCannotBeUsedInForumChannels"] = 220004] = "WebhookServicesCannotBeUsedInForumChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageBlockedByHarmfulLinksFilter"] = 240000] = "MessageBlockedByHarmfulLinksFilter";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEnableOnboardingRequirementsAreNotMet"] = 350000] = "CannotEnableOnboardingRequirementsAreNotMet";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateOnboardingWhileBelowRequirements"] = 350001] = "CannotUpdateOnboardingWhileBelowRequirements";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToBanUsers"] = 500000] = "FailedToBanUsers";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollVotingBlocked"] = 520000] = "PollVotingBlocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollExpired"] = 520001] = "PollExpired";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidChannelTypeForPollCreation"] = 520002] = "InvalidChannelTypeForPollCreation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditAPollMessage"] = 520003] = "CannotEditAPollMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUseAnEmojiIncludedWithThePoll"] = 520004] = "CannotUseAnEmojiIncludedWithThePoll";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExpireANonPollMessage"] = 520006] = "CannotExpireANonPollMessage";
+  })(RESTJSONErrorCodes || (exports.RESTJSONErrorCodes = RESTJSONErrorCodes = {}));
+  var Locale;
+  (function(Locale2) {
+    Locale2["Indonesian"] = "id";
+    Locale2["EnglishUS"] = "en-US";
+    Locale2["EnglishGB"] = "en-GB";
+    Locale2["Bulgarian"] = "bg";
+    Locale2["ChineseCN"] = "zh-CN";
+    Locale2["ChineseTW"] = "zh-TW";
+    Locale2["Croatian"] = "hr";
+    Locale2["Czech"] = "cs";
+    Locale2["Danish"] = "da";
+    Locale2["Dutch"] = "nl";
+    Locale2["Finnish"] = "fi";
+    Locale2["French"] = "fr";
+    Locale2["German"] = "de";
+    Locale2["Greek"] = "el";
+    Locale2["Hindi"] = "hi";
+    Locale2["Hungarian"] = "hu";
+    Locale2["Italian"] = "it";
+    Locale2["Japanese"] = "ja";
+    Locale2["Korean"] = "ko";
+    Locale2["Lithuanian"] = "lt";
+    Locale2["Norwegian"] = "no";
+    Locale2["Polish"] = "pl";
+    Locale2["PortugueseBR"] = "pt-BR";
+    Locale2["Romanian"] = "ro";
+    Locale2["Russian"] = "ru";
+    Locale2["SpanishES"] = "es-ES";
+    Locale2["SpanishLATAM"] = "es-419";
+    Locale2["Swedish"] = "sv-SE";
+    Locale2["Thai"] = "th";
+    Locale2["Turkish"] = "tr";
+    Locale2["Ukrainian"] = "uk";
+    Locale2["Vietnamese"] = "vi";
+  })(Locale || (exports.Locale = Locale = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/application.js
+var require_application6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/auditLog.js
+var require_auditLog6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/autoModeration.js
+var require_autoModeration6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/channel.js
+var require_channel9 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ReactionType = undefined;
+  var ReactionType;
+  (function(ReactionType2) {
+    ReactionType2[ReactionType2["Normal"] = 0] = "Normal";
+    ReactionType2[ReactionType2["Super"] = 1] = "Super";
+  })(ReactionType || (exports.ReactionType = ReactionType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/emoji.js
+var require_emoji6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/gateway.js
+var require_gateway6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/guild.js
+var require_guild6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/guildScheduledEvent.js
+var require_guildScheduledEvent6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/interactions.js
+var require_interactions6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/invite.js
+var require_invite6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/oauth2.js
+var require_oauth26 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/poll.js
+var require_poll6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/stageInstance.js
+var require_stageInstance6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/sticker.js
+var require_sticker6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/template.js
+var require_template6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/user.js
+var require_user9 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/voice.js
+var require_voice6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/webhook.js
+var require_webhook6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/monetization.js
+var require_monetization6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.EntitlementOwnerType = undefined;
+  var EntitlementOwnerType;
+  (function(EntitlementOwnerType2) {
+    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
+    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
+  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/index.js
+var require_v1015 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
+  __exportStar(require_common11(), exports);
+  __exportStar(require_application6(), exports);
+  __exportStar(require_auditLog6(), exports);
+  __exportStar(require_autoModeration6(), exports);
+  __exportStar(require_channel9(), exports);
+  __exportStar(require_emoji6(), exports);
+  __exportStar(require_gateway6(), exports);
+  __exportStar(require_guild6(), exports);
+  __exportStar(require_guildScheduledEvent6(), exports);
+  __exportStar(require_interactions6(), exports);
+  __exportStar(require_invite6(), exports);
+  __exportStar(require_oauth26(), exports);
+  __exportStar(require_poll6(), exports);
+  __exportStar(require_stageInstance6(), exports);
+  __exportStar(require_sticker6(), exports);
+  __exportStar(require_template6(), exports);
+  __exportStar(require_user9(), exports);
+  __exportStar(require_voice6(), exports);
+  __exportStar(require_webhook6(), exports);
+  __exportStar(require_monetization6(), exports);
+  exports.APIVersion = "10";
+  exports.Routes = {
+    applicationRoleConnectionMetadata(applicationId) {
+      return `/applications/${applicationId}/role-connections/metadata`;
+    },
+    guildAutoModerationRules(guildId) {
+      return `/guilds/${guildId}/auto-moderation/rules`;
+    },
+    guildAutoModerationRule(guildId, ruleId) {
+      return `/guilds/${guildId}/auto-moderation/rules/${ruleId}`;
+    },
+    guildAuditLog(guildId) {
+      return `/guilds/${guildId}/audit-logs`;
+    },
+    channel(channelId) {
+      return `/channels/${channelId}`;
+    },
+    channelMessages(channelId) {
+      return `/channels/${channelId}/messages`;
+    },
+    channelMessage(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}`;
+    },
+    channelMessageCrosspost(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}/crosspost`;
+    },
+    channelMessageOwnReaction(channelId, messageId, emoji) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/@me`;
+    },
+    channelMessageUserReaction(channelId, messageId, emoji, userId) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/${userId}`;
+    },
+    channelMessageReaction(channelId, messageId, emoji) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}`;
+    },
+    channelMessageAllReactions(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}/reactions`;
+    },
+    channelBulkDelete(channelId) {
+      return `/channels/${channelId}/messages/bulk-delete`;
+    },
+    channelPermission(channelId, overwriteId) {
+      return `/channels/${channelId}/permissions/${overwriteId}`;
+    },
+    channelInvites(channelId) {
+      return `/channels/${channelId}/invites`;
+    },
+    channelFollowers(channelId) {
+      return `/channels/${channelId}/followers`;
+    },
+    channelTyping(channelId) {
+      return `/channels/${channelId}/typing`;
+    },
+    channelPins(channelId) {
+      return `/channels/${channelId}/pins`;
+    },
+    channelPin(channelId, messageId) {
+      return `/channels/${channelId}/pins/${messageId}`;
+    },
+    channelRecipient(channelId, userId) {
+      return `/channels/${channelId}/recipients/${userId}`;
+    },
+    guildEmojis(guildId) {
+      return `/guilds/${guildId}/emojis`;
+    },
+    guildEmoji(guildId, emojiId) {
+      return `/guilds/${guildId}/emojis/${emojiId}`;
+    },
+    guilds() {
+      return "/guilds";
+    },
+    guild(guildId) {
+      return `/guilds/${guildId}`;
+    },
+    guildPreview(guildId) {
+      return `/guilds/${guildId}/preview`;
+    },
+    guildChannels(guildId) {
+      return `/guilds/${guildId}/channels`;
+    },
+    guildMember(guildId, userId = "@me") {
+      return `/guilds/${guildId}/members/${userId}`;
+    },
+    guildMembers(guildId) {
+      return `/guilds/${guildId}/members`;
+    },
+    guildMembersSearch(guildId) {
+      return `/guilds/${guildId}/members/search`;
+    },
+    guildCurrentMemberNickname(guildId) {
+      return `/guilds/${guildId}/members/@me/nick`;
+    },
+    guildMemberRole(guildId, memberId, roleId) {
+      return `/guilds/${guildId}/members/${memberId}/roles/${roleId}`;
+    },
+    guildMFA(guildId) {
+      return `/guilds/${guildId}/mfa`;
+    },
+    guildBans(guildId) {
+      return `/guilds/${guildId}/bans`;
+    },
+    guildBan(guildId, userId) {
+      return `/guilds/${guildId}/bans/${userId}`;
+    },
+    guildRoles(guildId) {
+      return `/guilds/${guildId}/roles`;
+    },
+    guildRole(guildId, roleId) {
+      return `/guilds/${guildId}/roles/${roleId}`;
+    },
+    guildPrune(guildId) {
+      return `/guilds/${guildId}/prune`;
+    },
+    guildVoiceRegions(guildId) {
+      return `/guilds/${guildId}/regions`;
+    },
+    guildInvites(guildId) {
+      return `/guilds/${guildId}/invites`;
+    },
+    guildIntegrations(guildId) {
+      return `/guilds/${guildId}/integrations`;
+    },
+    guildIntegration(guildId, integrationId) {
+      return `/guilds/${guildId}/integrations/${integrationId}`;
+    },
+    guildWidgetSettings(guildId) {
+      return `/guilds/${guildId}/widget`;
+    },
+    guildWidgetJSON(guildId) {
+      return `/guilds/${guildId}/widget.json`;
+    },
+    guildVanityUrl(guildId) {
+      return `/guilds/${guildId}/vanity-url`;
+    },
+    guildWidgetImage(guildId) {
+      return `/guilds/${guildId}/widget.png`;
+    },
+    invite(code) {
+      return `/invites/${code}`;
+    },
+    template(code) {
+      return `/guilds/templates/${code}`;
+    },
+    guildTemplates(guildId) {
+      return `/guilds/${guildId}/templates`;
+    },
+    guildTemplate(guildId, code) {
+      return `/guilds/${guildId}/templates/${code}`;
+    },
+    pollAnswerVoters(channelId, messageId, answerId) {
+      return `/channels/${channelId}/polls/${messageId}/answers/${answerId}`;
+    },
+    expirePoll(channelId, messageId) {
+      return `/channels/${channelId}/polls/${messageId}/expire`;
+    },
+    threads(parentId, messageId) {
+      const parts = ["", "channels", parentId];
+      if (messageId)
+        parts.push("messages", messageId);
+      parts.push("threads");
+      return parts.join("/");
+    },
+    guildActiveThreads(guildId) {
+      return `/guilds/${guildId}/threads/active`;
+    },
+    channelThreads(channelId, archivedStatus) {
+      return `/channels/${channelId}/threads/archived/${archivedStatus}`;
+    },
+    channelJoinedArchivedThreads(channelId) {
+      return `/channels/${channelId}/users/@me/threads/archived/private`;
+    },
+    threadMembers(threadId, userId) {
+      const parts = ["", "channels", threadId, "thread-members"];
+      if (userId)
+        parts.push(userId);
+      return parts.join("/");
+    },
+    user(userId = "@me") {
+      return `/users/${userId}`;
+    },
+    userApplicationRoleConnection(applicationId) {
+      return `/users/@me/applications/${applicationId}/role-connection`;
+    },
+    userGuilds() {
+      return `/users/@me/guilds`;
+    },
+    userGuildMember(guildId) {
+      return `/users/@me/guilds/${guildId}/member`;
+    },
+    userGuild(guildId) {
+      return `/users/@me/guilds/${guildId}`;
+    },
+    userChannels() {
+      return `/users/@me/channels`;
+    },
+    userConnections() {
+      return `/users/@me/connections`;
+    },
+    voiceRegions() {
+      return `/voice/regions`;
+    },
+    channelWebhooks(channelId) {
+      return `/channels/${channelId}/webhooks`;
+    },
+    guildWebhooks(guildId) {
+      return `/guilds/${guildId}/webhooks`;
+    },
+    webhook(webhookId, webhookToken) {
+      const parts = ["", "webhooks", webhookId];
+      if (webhookToken)
+        parts.push(webhookToken);
+      return parts.join("/");
+    },
+    webhookMessage(webhookId, webhookToken, messageId = "@original") {
+      return `/webhooks/${webhookId}/${webhookToken}/messages/${messageId}`;
+    },
+    webhookPlatform(webhookId, webhookToken, platform) {
+      return `/webhooks/${webhookId}/${webhookToken}/${platform}`;
+    },
+    gateway() {
+      return `/gateway`;
+    },
+    gatewayBot() {
+      return `/gateway/bot`;
+    },
+    oauth2CurrentApplication() {
+      return `/oauth2/applications/@me`;
+    },
+    oauth2CurrentAuthorization() {
+      return `/oauth2/@me`;
+    },
+    oauth2Authorization() {
+      return `/oauth2/authorize`;
+    },
+    oauth2TokenExchange() {
+      return `/oauth2/token`;
+    },
+    oauth2TokenRevocation() {
+      return `/oauth2/token/revoke`;
+    },
+    applicationCommands(applicationId) {
+      return `/applications/${applicationId}/commands`;
+    },
+    applicationCommand(applicationId, commandId) {
+      return `/applications/${applicationId}/commands/${commandId}`;
+    },
+    applicationGuildCommands(applicationId, guildId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands`;
+    },
+    applicationGuildCommand(applicationId, guildId, commandId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}`;
+    },
+    interactionCallback(interactionId, interactionToken) {
+      return `/interactions/${interactionId}/${interactionToken}/callback`;
+    },
+    guildMemberVerification(guildId) {
+      return `/guilds/${guildId}/member-verification`;
+    },
+    guildVoiceState(guildId, userId = "@me") {
+      return `/guilds/${guildId}/voice-states/${userId}`;
+    },
+    guildApplicationCommandsPermissions(applicationId, guildId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/permissions`;
+    },
+    applicationCommandPermissions(applicationId, guildId, commandId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}/permissions`;
+    },
+    guildWelcomeScreen(guildId) {
+      return `/guilds/${guildId}/welcome-screen`;
+    },
+    stageInstances() {
+      return `/stage-instances`;
+    },
+    stageInstance(channelId) {
+      return `/stage-instances/${channelId}`;
+    },
+    sticker(stickerId) {
+      return `/stickers/${stickerId}`;
+    },
+    stickerPacks() {
+      return "/sticker-packs";
+    },
+    stickerPack(packId) {
+      return `/sticker-packs/${packId}`;
+    },
+    nitroStickerPacks() {
+      return "/sticker-packs";
+    },
+    guildStickers(guildId) {
+      return `/guilds/${guildId}/stickers`;
+    },
+    guildSticker(guildId, stickerId) {
+      return `/guilds/${guildId}/stickers/${stickerId}`;
+    },
+    guildScheduledEvents(guildId) {
+      return `/guilds/${guildId}/scheduled-events`;
+    },
+    guildScheduledEvent(guildId, guildScheduledEventId) {
+      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}`;
+    },
+    guildScheduledEventUsers(guildId, guildScheduledEventId) {
+      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}/users`;
+    },
+    guildOnboarding(guildId) {
+      return `/guilds/${guildId}/onboarding`;
+    },
+    currentApplication() {
+      return "/applications/@me";
+    },
+    entitlements(applicationId) {
+      return `/applications/${applicationId}/entitlements`;
+    },
+    entitlement(applicationId, entitlementId) {
+      return `/applications/${applicationId}/entitlements/${entitlementId}`;
+    },
+    skus(applicationId) {
+      return `/applications/${applicationId}/skus`;
+    },
+    guildBulkBan(guildId) {
+      return `/guilds/${guildId}/bulk-ban`;
+    },
+    consumeEntitlement(applicationId, entitlementId) {
+      return `/applications/${applicationId}/entitlements/${entitlementId}/consume`;
+    },
+    applicationEmojis(applicationId) {
+      return `/applications/${applicationId}/emojis`;
+    },
+    applicationEmoji(applicationId, emojiId) {
+      return `/applications/${applicationId}/emojis/${emojiId}`;
+    }
+  };
+  exports.StickerPackApplicationId = "710982414301790216";
+  var ImageFormat;
+  (function(ImageFormat2) {
+    ImageFormat2["JPEG"] = "jpeg";
+    ImageFormat2["PNG"] = "png";
+    ImageFormat2["WebP"] = "webp";
+    ImageFormat2["GIF"] = "gif";
+    ImageFormat2["Lottie"] = "json";
+  })(ImageFormat || (exports.ImageFormat = ImageFormat = {}));
+  exports.CDNRoutes = {
+    emoji(emojiId, format) {
+      return `/emojis/${emojiId}.${format}`;
+    },
+    guildIcon(guildId, guildIcon, format) {
+      return `/icons/${guildId}/${guildIcon}.${format}`;
+    },
+    guildSplash(guildId, guildSplash, format) {
+      return `/splashes/${guildId}/${guildSplash}.${format}`;
+    },
+    guildDiscoverySplash(guildId, guildDiscoverySplash, format) {
+      return `/discovery-splashes/${guildId}/${guildDiscoverySplash}.${format}`;
+    },
+    guildBanner(guildId, guildBanner, format) {
+      return `/banners/${guildId}/${guildBanner}.${format}`;
+    },
+    userBanner(userId, userBanner, format) {
+      return `/banners/${userId}/${userBanner}.${format}`;
+    },
+    defaultUserAvatar(index) {
+      return `/embed/avatars/${index}.png`;
+    },
+    userAvatar(userId, userAvatar, format) {
+      return `/avatars/${userId}/${userAvatar}.${format}`;
+    },
+    guildMemberAvatar(guildId, userId, memberAvatar, format) {
+      return `/guilds/${guildId}/users/${userId}/avatars/${memberAvatar}.${format}`;
+    },
+    userAvatarDecoration(userId, userAvatarDecoration) {
+      return `/avatar-decorations/${userId}/${userAvatarDecoration}.png`;
+    },
+    avatarDecoration(avatarDecorationDataAsset) {
+      return `/avatar-decoration-presets/${avatarDecorationDataAsset}.png`;
+    },
+    applicationIcon(applicationId, applicationIcon, format) {
+      return `/app-icons/${applicationId}/${applicationIcon}.${format}`;
+    },
+    applicationCover(applicationId, applicationCoverImage, format) {
+      return `/app-icons/${applicationId}/${applicationCoverImage}.${format}`;
+    },
+    applicationAsset(applicationId, applicationAssetId, format) {
+      return `/app-assets/${applicationId}/${applicationAssetId}.${format}`;
+    },
+    achievementIcon(applicationId, achievementId, achievementIconHash, format) {
+      return `/app-assets/${applicationId}/achievements/${achievementId}/icons/${achievementIconHash}.${format}`;
+    },
+    stickerPackBanner(stickerPackBannerAssetId, format) {
+      return `/app-assets/${exports.StickerPackApplicationId}/store/${stickerPackBannerAssetId}.${format}`;
+    },
+    storePageAsset(applicationId, assetId, format = ImageFormat.PNG) {
+      return `/app-assets/${applicationId}/store/${assetId}.${format}`;
+    },
+    teamIcon(teamId, teamIcon, format) {
+      return `/team-icons/${teamId}/${teamIcon}.${format}`;
+    },
+    sticker(stickerId, format) {
+      return `/stickers/${stickerId}.${format}`;
+    },
+    roleIcon(roleId, roleIcon, format) {
+      return `/role-icons/${roleId}/${roleIcon}.${format}`;
+    },
+    guildScheduledEventCover(guildScheduledEventId, guildScheduledEventCoverImage, format) {
+      return `/guild-events/${guildScheduledEventId}/${guildScheduledEventCoverImage}.${format}`;
+    },
+    guildMemberBanner(guildId, userId, guildMemberBanner, format) {
+      return `/guilds/${guildId}/users/${userId}/banners/${guildMemberBanner}.${format}`;
+    }
+  };
+  exports.RouteBases = {
+    api: `https://discord.com/api/v${exports.APIVersion}`,
+    cdn: "https://cdn.discordapp.com",
+    media: "https://media.discordapp.net",
+    invite: "https://discord.gg",
+    template: "https://discord.new",
+    gift: "https://discord.gift",
+    scheduledEvent: "https://discord.com/events"
+  };
+  Object.freeze(exports.RouteBases);
+  exports.OAuth2Routes = {
+    authorizationURL: `${exports.RouteBases.api}${exports.Routes.oauth2Authorization()}`,
+    tokenURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenExchange()}`,
+    tokenRevocationURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenRevocation()}`
+  };
+  Object.freeze(exports.OAuth2Routes);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/common.js
+var require_common12 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RPCCloseEventCodes = exports.RPCErrorCodes = undefined;
+  var RPCErrorCodes;
+  (function(RPCErrorCodes2) {
+    RPCErrorCodes2[RPCErrorCodes2["UnknownError"] = 1000] = "UnknownError";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidPayload"] = 4000] = "InvalidPayload";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidCommand"] = 4002] = "InvalidCommand";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidGuild"] = 4003] = "InvalidGuild";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidEvent"] = 4004] = "InvalidEvent";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidChannel"] = 4005] = "InvalidChannel";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidPermissions"] = 4006] = "InvalidPermissions";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidClientId"] = 4007] = "InvalidClientId";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidOrigin"] = 4008] = "InvalidOrigin";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidToken"] = 4009] = "InvalidToken";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidUser"] = 4010] = "InvalidUser";
+    RPCErrorCodes2[RPCErrorCodes2["OAuth2Error"] = 5000] = "OAuth2Error";
+    RPCErrorCodes2[RPCErrorCodes2["SelectChannelTimedOut"] = 5001] = "SelectChannelTimedOut";
+    RPCErrorCodes2[RPCErrorCodes2["GetGuildTimedOut"] = 5002] = "GetGuildTimedOut";
+    RPCErrorCodes2[RPCErrorCodes2["SelectVoiceForceRequired"] = 5003] = "SelectVoiceForceRequired";
+    RPCErrorCodes2[RPCErrorCodes2["CaptureShortcutAlreadyListening"] = 5004] = "CaptureShortcutAlreadyListening";
+  })(RPCErrorCodes || (exports.RPCErrorCodes = RPCErrorCodes = {}));
+  var RPCCloseEventCodes;
+  (function(RPCCloseEventCodes2) {
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidClientId"] = 4000] = "InvalidClientId";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidOrigin"] = 4001] = "InvalidOrigin";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["RateLimited"] = 4002] = "RateLimited";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["TokenRevoked"] = 4003] = "TokenRevoked";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidVersion"] = 4004] = "InvalidVersion";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidEncoding"] = 4005] = "InvalidEncoding";
+  })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/v10.js
+var require_v1016 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_common12(), exports);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/utils/v10.js
+var require_v1017 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.isDMInteraction = isDMInteraction;
+  exports.isGuildInteraction = isGuildInteraction;
+  exports.isApplicationCommandDMInteraction = isApplicationCommandDMInteraction;
+  exports.isApplicationCommandGuildInteraction = isApplicationCommandGuildInteraction;
+  exports.isMessageComponentDMInteraction = isMessageComponentDMInteraction;
+  exports.isMessageComponentGuildInteraction = isMessageComponentGuildInteraction;
+  exports.isLinkButton = isLinkButton;
+  exports.isInteractionButton = isInteractionButton;
+  exports.isMessageComponentInteraction = isMessageComponentInteraction;
+  exports.isMessageComponentButtonInteraction = isMessageComponentButtonInteraction;
+  exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
+  exports.isChatInputApplicationCommandInteraction = isChatInputApplicationCommandInteraction;
+  exports.isContextMenuApplicationCommandInteraction = isContextMenuApplicationCommandInteraction;
+  var index_1 = require_v1014();
+  function isDMInteraction(interaction) {
+    return Reflect.has(interaction, "user");
+  }
+  function isGuildInteraction(interaction) {
+    return Reflect.has(interaction, "guild_id");
+  }
+  function isApplicationCommandDMInteraction(interaction) {
+    return isDMInteraction(interaction);
+  }
+  function isApplicationCommandGuildInteraction(interaction) {
+    return isGuildInteraction(interaction);
+  }
+  function isMessageComponentDMInteraction(interaction) {
+    return isDMInteraction(interaction);
+  }
+  function isMessageComponentGuildInteraction(interaction) {
+    return isGuildInteraction(interaction);
+  }
+  function isLinkButton(component) {
+    return component.style === index_1.ButtonStyle.Link;
+  }
+  function isInteractionButton(component) {
+    return component.style !== index_1.ButtonStyle.Link;
+  }
+  function isMessageComponentInteraction(interaction) {
+    return interaction.type === index_1.InteractionType.MessageComponent;
+  }
+  function isMessageComponentButtonInteraction(interaction) {
+    return interaction.data.component_type === index_1.ComponentType.Button;
+  }
+  function isMessageComponentSelectMenuInteraction(interaction) {
+    return [
+      index_1.ComponentType.StringSelect,
+      index_1.ComponentType.UserSelect,
+      index_1.ComponentType.RoleSelect,
+      index_1.ComponentType.MentionableSelect,
+      index_1.ComponentType.ChannelSelect
+    ].includes(interaction.data.component_type);
+  }
+  function isChatInputApplicationCommandInteraction(interaction) {
+    return interaction.data.type === index_1.ApplicationCommandType.ChatInput;
+  }
+  function isContextMenuApplicationCommandInteraction(interaction) {
+    return interaction.data.type === index_1.ApplicationCommandType.Message || interaction.data.type === index_1.ApplicationCommandType.User;
+  }
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/v10.js
+var require_v1018 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.Utils = undefined;
+  __exportStar(require_v1013(), exports);
+  __exportStar(require_globals3(), exports);
+  __exportStar(require_v1014(), exports);
+  __exportStar(require_v1015(), exports);
+  __exportStar(require_v1016(), exports);
+  exports.Utils = require_v1017();
+});
+
+// node_modules/ws/lib/constants.js
+var require_constants6 = __commonJS((exports, module) => {
+  var BINARY_TYPES = ["nodebuffer", "arraybuffer", "fragments"];
+  var hasBlob = typeof Blob !== "undefined";
+  if (hasBlob)
+    BINARY_TYPES.push("blob");
+  module.exports = {
+    BINARY_TYPES,
+    EMPTY_BUFFER: Buffer.alloc(0),
+    GUID: "258EAFA5-E914-47DA-95CA-C5AB0DC85B11",
+    hasBlob,
+    kForOnEventAttribute: Symbol("kIsForOnEventAttribute"),
+    kListener: Symbol("kListener"),
+    kStatusCode: Symbol("status-code"),
+    kWebSocket: Symbol("websocket"),
+    NOOP: () => {
+    }
+  };
+});
+
+// node_modules/ws/lib/buffer-util.js
+var require_buffer_util = __commonJS((exports, module) => {
+  var { EMPTY_BUFFER } = require_constants6();
+  var FastBuffer = Buffer[Symbol.species];
+  function concat(list, totalLength) {
+    if (list.length === 0)
+      return EMPTY_BUFFER;
+    if (list.length === 1)
+      return list[0];
+    const target = Buffer.allocUnsafe(totalLength);
+    let offset = 0;
+    for (let i = 0;i < list.length; i++) {
+      const buf = list[i];
+      target.set(buf, offset);
+      offset += buf.length;
+    }
+    if (offset < totalLength) {
+      return new FastBuffer(target.buffer, target.byteOffset, offset);
+    }
+    return target;
+  }
+  function _mask(source, mask, output, offset, length) {
+    for (let i = 0;i < length; i++) {
+      output[offset + i] = source[i] ^ mask[i & 3];
+    }
+  }
+  function _unmask(buffer, mask) {
+    for (let i = 0;i < buffer.length; i++) {
+      buffer[i] ^= mask[i & 3];
+    }
+  }
+  function toArrayBuffer(buf) {
+    if (buf.length === buf.buffer.byteLength) {
+      return buf.buffer;
+    }
+    return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.length);
+  }
+  function toBuffer(data) {
+    toBuffer.readOnly = true;
+    if (Buffer.isBuffer(data))
+      return data;
+    let buf;
+    if (data instanceof ArrayBuffer) {
+      buf = new FastBuffer(data);
+    } else if (ArrayBuffer.isView(data)) {
+      buf = new FastBuffer(data.buffer, data.byteOffset, data.byteLength);
+    } else {
+      buf = Buffer.from(data);
+      toBuffer.readOnly = false;
+    }
+    return buf;
+  }
+  module.exports = {
+    concat,
+    mask: _mask,
+    toArrayBuffer,
+    toBuffer,
+    unmask: _unmask
+  };
+  if (!process.env.WS_NO_BUFFER_UTIL) {
+    try {
+      const bufferUtil = (()=>{throw new Error(`Cannot require module "bufferutil"`);})();
+      module.exports.mask = function(source, mask, output, offset, length) {
+        if (length < 48)
+          _mask(source, mask, output, offset, length);
+        else
+          bufferUtil.mask(source, mask, output, offset, length);
+      };
+      module.exports.unmask = function(buffer, mask) {
+        if (buffer.length < 32)
+          _unmask(buffer, mask);
+        else
+          bufferUtil.unmask(buffer, mask);
+      };
+    } catch (e) {
+    }
+  }
+});
+
+// node_modules/ws/lib/limiter.js
+var require_limiter = __commonJS((exports, module) => {
+  var kDone = Symbol("kDone");
+  var kRun = Symbol("kRun");
+
+  class Limiter {
+    constructor(concurrency) {
+      this[kDone] = () => {
+        this.pending--;
+        this[kRun]();
+      };
+      this.concurrency = concurrency || Infinity;
+      this.jobs = [];
+      this.pending = 0;
+    }
+    add(job) {
+      this.jobs.push(job);
+      this[kRun]();
+    }
+    [kRun]() {
+      if (this.pending === this.concurrency)
+        return;
+      if (this.jobs.length) {
+        const job = this.jobs.shift();
+        this.pending++;
+        job(this[kDone]);
+      }
+    }
+  }
+  module.exports = Limiter;
+});
+
+// node_modules/ws/lib/permessage-deflate.js
+var require_permessage_deflate2 = __commonJS((exports, module) => {
+  var zlib = __require("zlib");
+  var bufferUtil = require_buffer_util();
+  var Limiter = require_limiter();
+  var { kStatusCode } = require_constants6();
+  var FastBuffer = Buffer[Symbol.species];
+  var TRAILER = Buffer.from([0, 0, 255, 255]);
+  var kPerMessageDeflate = Symbol("permessage-deflate");
+  var kTotalLength = Symbol("total-length");
+  var kCallback = Symbol("callback");
+  var kBuffers = Symbol("buffers");
+  var kError = Symbol("error");
+  var zlibLimiter;
+
+  class PerMessageDeflate {
+    constructor(options, isServer, maxPayload) {
+      this._maxPayload = maxPayload | 0;
+      this._options = options || {};
+      this._threshold = this._options.threshold !== undefined ? this._options.threshold : 1024;
+      this._isServer = !!isServer;
+      this._deflate = null;
+      this._inflate = null;
+      this.params = null;
+      if (!zlibLimiter) {
+        const concurrency = this._options.concurrencyLimit !== undefined ? this._options.concurrencyLimit : 10;
+        zlibLimiter = new Limiter(concurrency);
+      }
+    }
+    static get extensionName() {
+      return "permessage-deflate";
+    }
+    offer() {
+      const params = {};
+      if (this._options.serverNoContextTakeover) {
+        params.server_no_context_takeover = true;
+      }
+      if (this._options.clientNoContextTakeover) {
+        params.client_no_context_takeover = true;
+      }
+      if (this._options.serverMaxWindowBits) {
+        params.server_max_window_bits = this._options.serverMaxWindowBits;
+      }
+      if (this._options.clientMaxWindowBits) {
+        params.client_max_window_bits = this._options.clientMaxWindowBits;
+      } else if (this._options.clientMaxWindowBits == null) {
+        params.client_max_window_bits = true;
+      }
+      return params;
+    }
+    accept(configurations) {
+      configurations = this.normalizeParams(configurations);
+      this.params = this._isServer ? this.acceptAsServer(configurations) : this.acceptAsClient(configurations);
+      return this.params;
+    }
+    cleanup() {
+      if (this._inflate) {
+        this._inflate.close();
+        this._inflate = null;
+      }
+      if (this._deflate) {
+        const callback = this._deflate[kCallback];
+        this._deflate.close();
+        this._deflate = null;
+        if (callback) {
+          callback(new Error("The deflate stream was closed while data was being processed"));
+        }
+      }
+    }
+    acceptAsServer(offers) {
+      const opts = this._options;
+      const accepted = offers.find((params) => {
+        if (opts.serverNoContextTakeover === false && params.server_no_context_takeover || params.server_max_window_bits && (opts.serverMaxWindowBits === false || typeof opts.serverMaxWindowBits === "number" && opts.serverMaxWindowBits > params.server_max_window_bits) || typeof opts.clientMaxWindowBits === "number" && !params.client_max_window_bits) {
+          return false;
+        }
+        return true;
+      });
+      if (!accepted) {
+        throw new Error("None of the extension offers can be accepted");
+      }
+      if (opts.serverNoContextTakeover) {
+        accepted.server_no_context_takeover = true;
+      }
+      if (opts.clientNoContextTakeover) {
+        accepted.client_no_context_takeover = true;
+      }
+      if (typeof opts.serverMaxWindowBits === "number") {
+        accepted.server_max_window_bits = opts.serverMaxWindowBits;
+      }
+      if (typeof opts.clientMaxWindowBits === "number") {
+        accepted.client_max_window_bits = opts.clientMaxWindowBits;
+      } else if (accepted.client_max_window_bits === true || opts.clientMaxWindowBits === false) {
+        delete accepted.client_max_window_bits;
+      }
+      return accepted;
+    }
+    acceptAsClient(response) {
+      const params = response[0];
+      if (this._options.clientNoContextTakeover === false && params.client_no_context_takeover) {
+        throw new Error('Unexpected parameter "client_no_context_takeover"');
+      }
+      if (!params.client_max_window_bits) {
+        if (typeof this._options.clientMaxWindowBits === "number") {
+          params.client_max_window_bits = this._options.clientMaxWindowBits;
+        }
+      } else if (this._options.clientMaxWindowBits === false || typeof this._options.clientMaxWindowBits === "number" && params.client_max_window_bits > this._options.clientMaxWindowBits) {
+        throw new Error('Unexpected or invalid parameter "client_max_window_bits"');
+      }
+      return params;
+    }
+    normalizeParams(configurations) {
+      configurations.forEach((params) => {
+        Object.keys(params).forEach((key) => {
+          let value = params[key];
+          if (value.length > 1) {
+            throw new Error(`Parameter "${key}" must have only a single value`);
+          }
+          value = value[0];
+          if (key === "client_max_window_bits") {
+            if (value !== true) {
+              const num = +value;
+              if (!Number.isInteger(num) || num < 8 || num > 15) {
+                throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
+              }
+              value = num;
+            } else if (!this._isServer) {
+              throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
+            }
+          } else if (key === "server_max_window_bits") {
+            const num = +value;
+            if (!Number.isInteger(num) || num < 8 || num > 15) {
+              throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
+            }
+            value = num;
+          } else if (key === "client_no_context_takeover" || key === "server_no_context_takeover") {
+            if (value !== true) {
+              throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
+            }
+          } else {
+            throw new Error(`Unknown parameter "${key}"`);
+          }
+          params[key] = value;
+        });
+      });
+      return configurations;
+    }
+    decompress(data, fin, callback) {
+      zlibLimiter.add((done) => {
+        this._decompress(data, fin, (err, result) => {
+          done();
+          callback(err, result);
+        });
+      });
+    }
+    compress(data, fin, callback) {
+      zlibLimiter.add((done) => {
+        this._compress(data, fin, (err, result) => {
+          done();
+          callback(err, result);
+        });
+      });
+    }
+    _decompress(data, fin, callback) {
+      const endpoint = this._isServer ? "client" : "server";
+      if (!this._inflate) {
+        const key = `${endpoint}_max_window_bits`;
+        const windowBits = typeof this.params[key] !== "number" ? zlib.Z_DEFAULT_WINDOWBITS : this.params[key];
+        this._inflate = zlib.createInflateRaw({
+          ...this._options.zlibInflateOptions,
+          windowBits
+        });
+        this._inflate[kPerMessageDeflate] = this;
+        this._inflate[kTotalLength] = 0;
+        this._inflate[kBuffers] = [];
+        this._inflate.on("error", inflateOnError);
+        this._inflate.on("data", inflateOnData);
+      }
+      this._inflate[kCallback] = callback;
+      this._inflate.write(data);
+      if (fin)
+        this._inflate.write(TRAILER);
+      this._inflate.flush(() => {
+        const err = this._inflate[kError];
+        if (err) {
+          this._inflate.close();
+          this._inflate = null;
+          callback(err);
+          return;
+        }
+        const data2 = bufferUtil.concat(this._inflate[kBuffers], this._inflate[kTotalLength]);
+        if (this._inflate._readableState.endEmitted) {
+          this._inflate.close();
+          this._inflate = null;
+        } else {
+          this._inflate[kTotalLength] = 0;
+          this._inflate[kBuffers] = [];
+          if (fin && this.params[`${endpoint}_no_context_takeover`]) {
+            this._inflate.reset();
+          }
+        }
+        callback(null, data2);
+      });
+    }
+    _compress(data, fin, callback) {
+      const endpoint = this._isServer ? "server" : "client";
+      if (!this._deflate) {
+        const key = `${endpoint}_max_window_bits`;
+        const windowBits = typeof this.params[key] !== "number" ? zlib.Z_DEFAULT_WINDOWBITS : this.params[key];
+        this._deflate = zlib.createDeflateRaw({
+          ...this._options.zlibDeflateOptions,
+          windowBits
+        });
+        this._deflate[kTotalLength] = 0;
+        this._deflate[kBuffers] = [];
+        this._deflate.on("data", deflateOnData);
+      }
+      this._deflate[kCallback] = callback;
+      this._deflate.write(data);
+      this._deflate.flush(zlib.Z_SYNC_FLUSH, () => {
+        if (!this._deflate) {
+          return;
+        }
+        let data2 = bufferUtil.concat(this._deflate[kBuffers], this._deflate[kTotalLength]);
+        if (fin) {
+          data2 = new FastBuffer(data2.buffer, data2.byteOffset, data2.length - 4);
+        }
+        this._deflate[kCallback] = null;
+        this._deflate[kTotalLength] = 0;
+        this._deflate[kBuffers] = [];
+        if (fin && this.params[`${endpoint}_no_context_takeover`]) {
+          this._deflate.reset();
+        }
+        callback(null, data2);
+      });
+    }
+  }
+  module.exports = PerMessageDeflate;
+  function deflateOnData(chunk) {
+    this[kBuffers].push(chunk);
+    this[kTotalLength] += chunk.length;
+  }
+  function inflateOnData(chunk) {
+    this[kTotalLength] += chunk.length;
+    if (this[kPerMessageDeflate]._maxPayload < 1 || this[kTotalLength] <= this[kPerMessageDeflate]._maxPayload) {
+      this[kBuffers].push(chunk);
+      return;
+    }
+    this[kError] = new RangeError("Max payload size exceeded");
+    this[kError].code = "WS_ERR_UNSUPPORTED_MESSAGE_LENGTH";
+    this[kError][kStatusCode] = 1009;
+    this.removeListener("data", inflateOnData);
+    this.reset();
+  }
+  function inflateOnError(err) {
+    this[kPerMessageDeflate]._inflate = null;
+    err[kStatusCode] = 1007;
+    this[kCallback](err);
+  }
+});
+
+// node_modules/ws/lib/validation.js
+var require_validation = __commonJS((exports, module) => {
+  var { isUtf8 } = __require("buffer");
+  var { hasBlob } = require_constants6();
+  var tokenChars = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0
+  ];
+  function isValidStatusCode(code) {
+    return code >= 1000 && code <= 1014 && code !== 1004 && code !== 1005 && code !== 1006 || code >= 3000 && code <= 4999;
+  }
+  function _isValidUTF8(buf) {
+    const len = buf.length;
+    let i = 0;
+    while (i < len) {
+      if ((buf[i] & 128) === 0) {
+        i++;
+      } else if ((buf[i] & 224) === 192) {
+        if (i + 1 === len || (buf[i + 1] & 192) !== 128 || (buf[i] & 254) === 192) {
+          return false;
+        }
+        i += 2;
+      } else if ((buf[i] & 240) === 224) {
+        if (i + 2 >= len || (buf[i + 1] & 192) !== 128 || (buf[i + 2] & 192) !== 128 || buf[i] === 224 && (buf[i + 1] & 224) === 128 || buf[i] === 237 && (buf[i + 1] & 224) === 160) {
+          return false;
+        }
+        i += 3;
+      } else if ((buf[i] & 248) === 240) {
+        if (i + 3 >= len || (buf[i + 1] & 192) !== 128 || (buf[i + 2] & 192) !== 128 || (buf[i + 3] & 192) !== 128 || buf[i] === 240 && (buf[i + 1] & 240) === 128 || buf[i] === 244 && buf[i + 1] > 143 || buf[i] > 244) {
+          return false;
+        }
+        i += 4;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
+  function isBlob(value) {
+    return hasBlob && typeof value === "object" && typeof value.arrayBuffer === "function" && typeof value.type === "string" && typeof value.stream === "function" && (value[Symbol.toStringTag] === "Blob" || value[Symbol.toStringTag] === "File");
+  }
+  module.exports = {
+    isBlob,
+    isValidStatusCode,
+    isValidUTF8: _isValidUTF8,
+    tokenChars
+  };
+  if (isUtf8) {
+    module.exports.isValidUTF8 = function(buf) {
+      return buf.length < 24 ? _isValidUTF8(buf) : isUtf8(buf);
+    };
+  } else if (!process.env.WS_NO_UTF_8_VALIDATE) {
+    try {
+      const isValidUTF8 = (()=>{throw new Error(`Cannot require module "utf-8-validate"`);})();
+      module.exports.isValidUTF8 = function(buf) {
+        return buf.length < 32 ? _isValidUTF8(buf) : isValidUTF8(buf);
+      };
+    } catch (e) {
+    }
+  }
+});
+
+// node_modules/ws/lib/receiver.js
+var require_receiver2 = __commonJS((exports, module) => {
+  var { Writable } = __require("stream");
+  var PerMessageDeflate = require_permessage_deflate2();
+  var {
+    BINARY_TYPES,
+    EMPTY_BUFFER,
+    kStatusCode,
+    kWebSocket
+  } = require_constants6();
+  var { concat, toArrayBuffer, unmask } = require_buffer_util();
+  var { isValidStatusCode, isValidUTF8 } = require_validation();
+  var FastBuffer = Buffer[Symbol.species];
+  var GET_INFO = 0;
+  var GET_PAYLOAD_LENGTH_16 = 1;
+  var GET_PAYLOAD_LENGTH_64 = 2;
+  var GET_MASK = 3;
+  var GET_DATA = 4;
+  var INFLATING = 5;
+  var DEFER_EVENT = 6;
+
+  class Receiver extends Writable {
+    constructor(options = {}) {
+      super();
+      this._allowSynchronousEvents = options.allowSynchronousEvents !== undefined ? options.allowSynchronousEvents : true;
+      this._binaryType = options.binaryType || BINARY_TYPES[0];
+      this._extensions = options.extensions || {};
+      this._isServer = !!options.isServer;
+      this._maxPayload = options.maxPayload | 0;
+      this._skipUTF8Validation = !!options.skipUTF8Validation;
+      this[kWebSocket] = undefined;
+      this._bufferedBytes = 0;
+      this._buffers = [];
+      this._compressed = false;
+      this._payloadLength = 0;
+      this._mask = undefined;
+      this._fragmented = 0;
+      this._masked = false;
+      this._fin = false;
+      this._opcode = 0;
+      this._totalPayloadLength = 0;
+      this._messageLength = 0;
+      this._fragments = [];
+      this._errored = false;
+      this._loop = false;
+      this._state = GET_INFO;
+    }
+    _write(chunk, encoding, cb) {
+      if (this._opcode === 8 && this._state == GET_INFO)
+        return cb();
+      this._bufferedBytes += chunk.length;
+      this._buffers.push(chunk);
+      this.startLoop(cb);
+    }
+    consume(n) {
+      this._bufferedBytes -= n;
+      if (n === this._buffers[0].length)
+        return this._buffers.shift();
+      if (n < this._buffers[0].length) {
+        const buf = this._buffers[0];
+        this._buffers[0] = new FastBuffer(buf.buffer, buf.byteOffset + n, buf.length - n);
+        return new FastBuffer(buf.buffer, buf.byteOffset, n);
+      }
+      const dst = Buffer.allocUnsafe(n);
+      do {
+        const buf = this._buffers[0];
+        const offset = dst.length - n;
+        if (n >= buf.length) {
+          dst.set(this._buffers.shift(), offset);
+        } else {
+          dst.set(new Uint8Array(buf.buffer, buf.byteOffset, n), offset);
+          this._buffers[0] = new FastBuffer(buf.buffer, buf.byteOffset + n, buf.length - n);
+        }
+        n -= buf.length;
+      } while (n > 0);
+      return dst;
+    }
+    startLoop(cb) {
+      this._loop = true;
+      do {
+        switch (this._state) {
+          case GET_INFO:
+            this.getInfo(cb);
+            break;
+          case GET_PAYLOAD_LENGTH_16:
+            this.getPayloadLength16(cb);
+            break;
+          case GET_PAYLOAD_LENGTH_64:
+            this.getPayloadLength64(cb);
+            break;
+          case GET_MASK:
+            this.getMask();
+            break;
+          case GET_DATA:
+            this.getData(cb);
+            break;
+          case INFLATING:
+          case DEFER_EVENT:
+            this._loop = false;
+            return;
+        }
+      } while (this._loop);
+      if (!this._errored)
+        cb();
+    }
+    getInfo(cb) {
+      if (this._bufferedBytes < 2) {
+        this._loop = false;
+        return;
+      }
+      const buf = this.consume(2);
+      if ((buf[0] & 48) !== 0) {
+        const error = this.createError(RangeError, "RSV2 and RSV3 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_2_3");
+        cb(error);
+        return;
+      }
+      const compressed = (buf[0] & 64) === 64;
+      if (compressed && !this._extensions[PerMessageDeflate.extensionName]) {
+        const error = this.createError(RangeError, "RSV1 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_1");
+        cb(error);
+        return;
+      }
+      this._fin = (buf[0] & 128) === 128;
+      this._opcode = buf[0] & 15;
+      this._payloadLength = buf[1] & 127;
+      if (this._opcode === 0) {
+        if (compressed) {
+          const error = this.createError(RangeError, "RSV1 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_1");
+          cb(error);
+          return;
+        }
+        if (!this._fragmented) {
+          const error = this.createError(RangeError, "invalid opcode 0", true, 1002, "WS_ERR_INVALID_OPCODE");
+          cb(error);
+          return;
+        }
+        this._opcode = this._fragmented;
+      } else if (this._opcode === 1 || this._opcode === 2) {
+        if (this._fragmented) {
+          const error = this.createError(RangeError, `invalid opcode ${this._opcode}`, true, 1002, "WS_ERR_INVALID_OPCODE");
+          cb(error);
+          return;
+        }
+        this._compressed = compressed;
+      } else if (this._opcode > 7 && this._opcode < 11) {
+        if (!this._fin) {
+          const error = this.createError(RangeError, "FIN must be set", true, 1002, "WS_ERR_EXPECTED_FIN");
+          cb(error);
+          return;
+        }
+        if (compressed) {
+          const error = this.createError(RangeError, "RSV1 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_1");
+          cb(error);
+          return;
+        }
+        if (this._payloadLength > 125 || this._opcode === 8 && this._payloadLength === 1) {
+          const error = this.createError(RangeError, `invalid payload length ${this._payloadLength}`, true, 1002, "WS_ERR_INVALID_CONTROL_PAYLOAD_LENGTH");
+          cb(error);
+          return;
+        }
+      } else {
+        const error = this.createError(RangeError, `invalid opcode ${this._opcode}`, true, 1002, "WS_ERR_INVALID_OPCODE");
+        cb(error);
+        return;
+      }
+      if (!this._fin && !this._fragmented)
+        this._fragmented = this._opcode;
+      this._masked = (buf[1] & 128) === 128;
+      if (this._isServer) {
+        if (!this._masked) {
+          const error = this.createError(RangeError, "MASK must be set", true, 1002, "WS_ERR_EXPECTED_MASK");
+          cb(error);
+          return;
+        }
+      } else if (this._masked) {
+        const error = this.createError(RangeError, "MASK must be clear", true, 1002, "WS_ERR_UNEXPECTED_MASK");
+        cb(error);
+        return;
+      }
+      if (this._payloadLength === 126)
+        this._state = GET_PAYLOAD_LENGTH_16;
+      else if (this._payloadLength === 127)
+        this._state = GET_PAYLOAD_LENGTH_64;
+      else
+        this.haveLength(cb);
+    }
+    getPayloadLength16(cb) {
+      if (this._bufferedBytes < 2) {
+        this._loop = false;
+        return;
+      }
+      this._payloadLength = this.consume(2).readUInt16BE(0);
+      this.haveLength(cb);
+    }
+    getPayloadLength64(cb) {
+      if (this._bufferedBytes < 8) {
+        this._loop = false;
+        return;
+      }
+      const buf = this.consume(8);
+      const num = buf.readUInt32BE(0);
+      if (num > Math.pow(2, 53 - 32) - 1) {
+        const error = this.createError(RangeError, "Unsupported WebSocket frame: payload length > 2^53 - 1", false, 1009, "WS_ERR_UNSUPPORTED_DATA_PAYLOAD_LENGTH");
+        cb(error);
+        return;
+      }
+      this._payloadLength = num * Math.pow(2, 32) + buf.readUInt32BE(4);
+      this.haveLength(cb);
+    }
+    haveLength(cb) {
+      if (this._payloadLength && this._opcode < 8) {
+        this._totalPayloadLength += this._payloadLength;
+        if (this._totalPayloadLength > this._maxPayload && this._maxPayload > 0) {
+          const error = this.createError(RangeError, "Max payload size exceeded", false, 1009, "WS_ERR_UNSUPPORTED_MESSAGE_LENGTH");
+          cb(error);
+          return;
+        }
+      }
+      if (this._masked)
+        this._state = GET_MASK;
+      else
+        this._state = GET_DATA;
+    }
+    getMask() {
+      if (this._bufferedBytes < 4) {
+        this._loop = false;
+        return;
+      }
+      this._mask = this.consume(4);
+      this._state = GET_DATA;
+    }
+    getData(cb) {
+      let data = EMPTY_BUFFER;
+      if (this._payloadLength) {
+        if (this._bufferedBytes < this._payloadLength) {
+          this._loop = false;
+          return;
+        }
+        data = this.consume(this._payloadLength);
+        if (this._masked && (this._mask[0] | this._mask[1] | this._mask[2] | this._mask[3]) !== 0) {
+          unmask(data, this._mask);
+        }
+      }
+      if (this._opcode > 7) {
+        this.controlMessage(data, cb);
+        return;
+      }
+      if (this._compressed) {
+        this._state = INFLATING;
+        this.decompress(data, cb);
+        return;
+      }
+      if (data.length) {
+        this._messageLength = this._totalPayloadLength;
+        this._fragments.push(data);
+      }
+      this.dataMessage(cb);
+    }
+    decompress(data, cb) {
+      const perMessageDeflate = this._extensions[PerMessageDeflate.extensionName];
+      perMessageDeflate.decompress(data, this._fin, (err, buf) => {
+        if (err)
+          return cb(err);
+        if (buf.length) {
+          this._messageLength += buf.length;
+          if (this._messageLength > this._maxPayload && this._maxPayload > 0) {
+            const error = this.createError(RangeError, "Max payload size exceeded", false, 1009, "WS_ERR_UNSUPPORTED_MESSAGE_LENGTH");
+            cb(error);
+            return;
+          }
+          this._fragments.push(buf);
+        }
+        this.dataMessage(cb);
+        if (this._state === GET_INFO)
+          this.startLoop(cb);
+      });
+    }
+    dataMessage(cb) {
+      if (!this._fin) {
+        this._state = GET_INFO;
+        return;
+      }
+      const messageLength = this._messageLength;
+      const fragments = this._fragments;
+      this._totalPayloadLength = 0;
+      this._messageLength = 0;
+      this._fragmented = 0;
+      this._fragments = [];
+      if (this._opcode === 2) {
+        let data;
+        if (this._binaryType === "nodebuffer") {
+          data = concat(fragments, messageLength);
+        } else if (this._binaryType === "arraybuffer") {
+          data = toArrayBuffer(concat(fragments, messageLength));
+        } else if (this._binaryType === "blob") {
+          data = new Blob(fragments);
+        } else {
+          data = fragments;
+        }
+        if (this._allowSynchronousEvents) {
+          this.emit("message", data, true);
+          this._state = GET_INFO;
+        } else {
+          this._state = DEFER_EVENT;
+          setImmediate(() => {
+            this.emit("message", data, true);
+            this._state = GET_INFO;
+            this.startLoop(cb);
+          });
+        }
+      } else {
+        const buf = concat(fragments, messageLength);
+        if (!this._skipUTF8Validation && !isValidUTF8(buf)) {
+          const error = this.createError(Error, "invalid UTF-8 sequence", true, 1007, "WS_ERR_INVALID_UTF8");
+          cb(error);
+          return;
+        }
+        if (this._state === INFLATING || this._allowSynchronousEvents) {
+          this.emit("message", buf, false);
+          this._state = GET_INFO;
+        } else {
+          this._state = DEFER_EVENT;
+          setImmediate(() => {
+            this.emit("message", buf, false);
+            this._state = GET_INFO;
+            this.startLoop(cb);
+          });
+        }
+      }
+    }
+    controlMessage(data, cb) {
+      if (this._opcode === 8) {
+        if (data.length === 0) {
+          this._loop = false;
+          this.emit("conclude", 1005, EMPTY_BUFFER);
+          this.end();
+        } else {
+          const code = data.readUInt16BE(0);
+          if (!isValidStatusCode(code)) {
+            const error = this.createError(RangeError, `invalid status code ${code}`, true, 1002, "WS_ERR_INVALID_CLOSE_CODE");
+            cb(error);
+            return;
+          }
+          const buf = new FastBuffer(data.buffer, data.byteOffset + 2, data.length - 2);
+          if (!this._skipUTF8Validation && !isValidUTF8(buf)) {
+            const error = this.createError(Error, "invalid UTF-8 sequence", true, 1007, "WS_ERR_INVALID_UTF8");
+            cb(error);
+            return;
+          }
+          this._loop = false;
+          this.emit("conclude", code, buf);
+          this.end();
+        }
+        this._state = GET_INFO;
+        return;
+      }
+      if (this._allowSynchronousEvents) {
+        this.emit(this._opcode === 9 ? "ping" : "pong", data);
+        this._state = GET_INFO;
+      } else {
+        this._state = DEFER_EVENT;
+        setImmediate(() => {
+          this.emit(this._opcode === 9 ? "ping" : "pong", data);
+          this._state = GET_INFO;
+          this.startLoop(cb);
+        });
+      }
+    }
+    createError(ErrorCtor, message, prefix, statusCode, errorCode) {
+      this._loop = false;
+      this._errored = true;
+      const err = new ErrorCtor(prefix ? `Invalid WebSocket frame: ${message}` : message);
+      Error.captureStackTrace(err, this.createError);
+      err.code = errorCode;
+      err[kStatusCode] = statusCode;
+      return err;
+    }
+  }
+  module.exports = Receiver;
+});
+
+// node_modules/ws/lib/sender.js
+var require_sender2 = __commonJS((exports, module) => {
+  var { Duplex } = __require("stream");
+  var { randomFillSync } = __require("crypto");
+  var PerMessageDeflate = require_permessage_deflate2();
+  var { EMPTY_BUFFER, kWebSocket, NOOP } = require_constants6();
+  var { isBlob, isValidStatusCode } = require_validation();
+  var { mask: applyMask, toBuffer } = require_buffer_util();
+  var kByteLength = Symbol("kByteLength");
+  var maskBuffer = Buffer.alloc(4);
+  var RANDOM_POOL_SIZE = 8 * 1024;
+  var randomPool;
+  var randomPoolPointer = RANDOM_POOL_SIZE;
+  var DEFAULT = 0;
+  var DEFLATING = 1;
+  var GET_BLOB_DATA = 2;
+
+  class Sender {
+    constructor(socket, extensions, generateMask) {
+      this._extensions = extensions || {};
+      if (generateMask) {
+        this._generateMask = generateMask;
+        this._maskBuffer = Buffer.alloc(4);
+      }
+      this._socket = socket;
+      this._firstFragment = true;
+      this._compress = false;
+      this._bufferedBytes = 0;
+      this._queue = [];
+      this._state = DEFAULT;
+      this.onerror = NOOP;
+      this[kWebSocket] = undefined;
+    }
+    static frame(data, options) {
+      let mask;
+      let merge = false;
+      let offset = 2;
+      let skipMasking = false;
+      if (options.mask) {
+        mask = options.maskBuffer || maskBuffer;
+        if (options.generateMask) {
+          options.generateMask(mask);
+        } else {
+          if (randomPoolPointer === RANDOM_POOL_SIZE) {
+            if (randomPool === undefined) {
+              randomPool = Buffer.alloc(RANDOM_POOL_SIZE);
+            }
+            randomFillSync(randomPool, 0, RANDOM_POOL_SIZE);
+            randomPoolPointer = 0;
+          }
+          mask[0] = randomPool[randomPoolPointer++];
+          mask[1] = randomPool[randomPoolPointer++];
+          mask[2] = randomPool[randomPoolPointer++];
+          mask[3] = randomPool[randomPoolPointer++];
+        }
+        skipMasking = (mask[0] | mask[1] | mask[2] | mask[3]) === 0;
+        offset = 6;
+      }
+      let dataLength;
+      if (typeof data === "string") {
+        if ((!options.mask || skipMasking) && options[kByteLength] !== undefined) {
+          dataLength = options[kByteLength];
+        } else {
+          data = Buffer.from(data);
+          dataLength = data.length;
+        }
+      } else {
+        dataLength = data.length;
+        merge = options.mask && options.readOnly && !skipMasking;
+      }
+      let payloadLength = dataLength;
+      if (dataLength >= 65536) {
+        offset += 8;
+        payloadLength = 127;
+      } else if (dataLength > 125) {
+        offset += 2;
+        payloadLength = 126;
+      }
+      const target = Buffer.allocUnsafe(merge ? dataLength + offset : offset);
+      target[0] = options.fin ? options.opcode | 128 : options.opcode;
+      if (options.rsv1)
+        target[0] |= 64;
+      target[1] = payloadLength;
+      if (payloadLength === 126) {
+        target.writeUInt16BE(dataLength, 2);
+      } else if (payloadLength === 127) {
+        target[2] = target[3] = 0;
+        target.writeUIntBE(dataLength, 4, 6);
+      }
+      if (!options.mask)
+        return [target, data];
+      target[1] |= 128;
+      target[offset - 4] = mask[0];
+      target[offset - 3] = mask[1];
+      target[offset - 2] = mask[2];
+      target[offset - 1] = mask[3];
+      if (skipMasking)
+        return [target, data];
+      if (merge) {
+        applyMask(data, mask, target, offset, dataLength);
+        return [target];
+      }
+      applyMask(data, mask, data, 0, dataLength);
+      return [target, data];
+    }
+    close(code, data, mask, cb) {
+      let buf;
+      if (code === undefined) {
+        buf = EMPTY_BUFFER;
+      } else if (typeof code !== "number" || !isValidStatusCode(code)) {
+        throw new TypeError("First argument must be a valid error code number");
+      } else if (data === undefined || !data.length) {
+        buf = Buffer.allocUnsafe(2);
+        buf.writeUInt16BE(code, 0);
+      } else {
+        const length = Buffer.byteLength(data);
+        if (length > 123) {
+          throw new RangeError("The message must not be greater than 123 bytes");
+        }
+        buf = Buffer.allocUnsafe(2 + length);
+        buf.writeUInt16BE(code, 0);
+        if (typeof data === "string") {
+          buf.write(data, 2);
+        } else {
+          buf.set(data, 2);
+        }
+      }
+      const options = {
+        [kByteLength]: buf.length,
+        fin: true,
+        generateMask: this._generateMask,
+        mask,
+        maskBuffer: this._maskBuffer,
+        opcode: 8,
+        readOnly: false,
+        rsv1: false
+      };
+      if (this._state !== DEFAULT) {
+        this.enqueue([this.dispatch, buf, false, options, cb]);
+      } else {
+        this.sendFrame(Sender.frame(buf, options), cb);
+      }
+    }
+    ping(data, mask, cb) {
+      let byteLength;
+      let readOnly;
+      if (typeof data === "string") {
+        byteLength = Buffer.byteLength(data);
+        readOnly = false;
+      } else if (isBlob(data)) {
+        byteLength = data.size;
+        readOnly = false;
+      } else {
+        data = toBuffer(data);
+        byteLength = data.length;
+        readOnly = toBuffer.readOnly;
+      }
+      if (byteLength > 125) {
+        throw new RangeError("The data size must not be greater than 125 bytes");
+      }
+      const options = {
+        [kByteLength]: byteLength,
+        fin: true,
+        generateMask: this._generateMask,
+        mask,
+        maskBuffer: this._maskBuffer,
+        opcode: 9,
+        readOnly,
+        rsv1: false
+      };
+      if (isBlob(data)) {
+        if (this._state !== DEFAULT) {
+          this.enqueue([this.getBlobData, data, false, options, cb]);
+        } else {
+          this.getBlobData(data, false, options, cb);
+        }
+      } else if (this._state !== DEFAULT) {
+        this.enqueue([this.dispatch, data, false, options, cb]);
+      } else {
+        this.sendFrame(Sender.frame(data, options), cb);
+      }
+    }
+    pong(data, mask, cb) {
+      let byteLength;
+      let readOnly;
+      if (typeof data === "string") {
+        byteLength = Buffer.byteLength(data);
+        readOnly = false;
+      } else if (isBlob(data)) {
+        byteLength = data.size;
+        readOnly = false;
+      } else {
+        data = toBuffer(data);
+        byteLength = data.length;
+        readOnly = toBuffer.readOnly;
+      }
+      if (byteLength > 125) {
+        throw new RangeError("The data size must not be greater than 125 bytes");
+      }
+      const options = {
+        [kByteLength]: byteLength,
+        fin: true,
+        generateMask: this._generateMask,
+        mask,
+        maskBuffer: this._maskBuffer,
+        opcode: 10,
+        readOnly,
+        rsv1: false
+      };
+      if (isBlob(data)) {
+        if (this._state !== DEFAULT) {
+          this.enqueue([this.getBlobData, data, false, options, cb]);
+        } else {
+          this.getBlobData(data, false, options, cb);
+        }
+      } else if (this._state !== DEFAULT) {
+        this.enqueue([this.dispatch, data, false, options, cb]);
+      } else {
+        this.sendFrame(Sender.frame(data, options), cb);
+      }
+    }
+    send(data, options, cb) {
+      const perMessageDeflate = this._extensions[PerMessageDeflate.extensionName];
+      let opcode = options.binary ? 2 : 1;
+      let rsv1 = options.compress;
+      let byteLength;
+      let readOnly;
+      if (typeof data === "string") {
+        byteLength = Buffer.byteLength(data);
+        readOnly = false;
+      } else if (isBlob(data)) {
+        byteLength = data.size;
+        readOnly = false;
+      } else {
+        data = toBuffer(data);
+        byteLength = data.length;
+        readOnly = toBuffer.readOnly;
+      }
+      if (this._firstFragment) {
+        this._firstFragment = false;
+        if (rsv1 && perMessageDeflate && perMessageDeflate.params[perMessageDeflate._isServer ? "server_no_context_takeover" : "client_no_context_takeover"]) {
+          rsv1 = byteLength >= perMessageDeflate._threshold;
+        }
+        this._compress = rsv1;
+      } else {
+        rsv1 = false;
+        opcode = 0;
+      }
+      if (options.fin)
+        this._firstFragment = true;
+      const opts = {
+        [kByteLength]: byteLength,
+        fin: options.fin,
+        generateMask: this._generateMask,
+        mask: options.mask,
+        maskBuffer: this._maskBuffer,
+        opcode,
+        readOnly,
+        rsv1
+      };
+      if (isBlob(data)) {
+        if (this._state !== DEFAULT) {
+          this.enqueue([this.getBlobData, data, this._compress, opts, cb]);
+        } else {
+          this.getBlobData(data, this._compress, opts, cb);
+        }
+      } else if (this._state !== DEFAULT) {
+        this.enqueue([this.dispatch, data, this._compress, opts, cb]);
+      } else {
+        this.dispatch(data, this._compress, opts, cb);
+      }
+    }
+    getBlobData(blob, compress, options, cb) {
+      this._bufferedBytes += options[kByteLength];
+      this._state = GET_BLOB_DATA;
+      blob.arrayBuffer().then((arrayBuffer) => {
+        if (this._socket.destroyed) {
+          const err = new Error("The socket was closed while the blob was being read");
+          process.nextTick(callCallbacks, this, err, cb);
+          return;
+        }
+        this._bufferedBytes -= options[kByteLength];
+        const data = toBuffer(arrayBuffer);
+        if (!compress) {
+          this._state = DEFAULT;
+          this.sendFrame(Sender.frame(data, options), cb);
+          this.dequeue();
+        } else {
+          this.dispatch(data, compress, options, cb);
+        }
+      }).catch((err) => {
+        process.nextTick(onError, this, err, cb);
+      });
+    }
+    dispatch(data, compress, options, cb) {
+      if (!compress) {
+        this.sendFrame(Sender.frame(data, options), cb);
+        return;
+      }
+      const perMessageDeflate = this._extensions[PerMessageDeflate.extensionName];
+      this._bufferedBytes += options[kByteLength];
+      this._state = DEFLATING;
+      perMessageDeflate.compress(data, options.fin, (_, buf) => {
+        if (this._socket.destroyed) {
+          const err = new Error("The socket was closed while data was being compressed");
+          callCallbacks(this, err, cb);
+          return;
+        }
+        this._bufferedBytes -= options[kByteLength];
+        this._state = DEFAULT;
+        options.readOnly = false;
+        this.sendFrame(Sender.frame(buf, options), cb);
+        this.dequeue();
+      });
+    }
+    dequeue() {
+      while (this._state === DEFAULT && this._queue.length) {
+        const params = this._queue.shift();
+        this._bufferedBytes -= params[3][kByteLength];
+        Reflect.apply(params[0], this, params.slice(1));
+      }
+    }
+    enqueue(params) {
+      this._bufferedBytes += params[3][kByteLength];
+      this._queue.push(params);
+    }
+    sendFrame(list, cb) {
+      if (list.length === 2) {
+        this._socket.cork();
+        this._socket.write(list[0]);
+        this._socket.write(list[1], cb);
+        this._socket.uncork();
+      } else {
+        this._socket.write(list[0], cb);
+      }
+    }
+  }
+  module.exports = Sender;
+  function callCallbacks(sender, err, cb) {
+    if (typeof cb === "function")
+      cb(err);
+    for (let i = 0;i < sender._queue.length; i++) {
+      const params = sender._queue[i];
+      const callback = params[params.length - 1];
+      if (typeof callback === "function")
+        callback(err);
+    }
+  }
+  function onError(sender, err, cb) {
+    callCallbacks(sender, err, cb);
+    sender.onerror(err);
+  }
+});
+
+// node_modules/ws/lib/event-target.js
+var require_event_target = __commonJS((exports, module) => {
+  var { kForOnEventAttribute, kListener } = require_constants6();
+  var kCode = Symbol("kCode");
+  var kData = Symbol("kData");
+  var kError = Symbol("kError");
+  var kMessage = Symbol("kMessage");
+  var kReason = Symbol("kReason");
+  var kTarget = Symbol("kTarget");
+  var kType = Symbol("kType");
+  var kWasClean = Symbol("kWasClean");
+
+  class Event2 {
+    constructor(type) {
+      this[kTarget] = null;
+      this[kType] = type;
+    }
+    get target() {
+      return this[kTarget];
+    }
+    get type() {
+      return this[kType];
+    }
+  }
+  Object.defineProperty(Event2.prototype, "target", { enumerable: true });
+  Object.defineProperty(Event2.prototype, "type", { enumerable: true });
+
+  class CloseEvent extends Event2 {
+    constructor(type, options = {}) {
+      super(type);
+      this[kCode] = options.code === undefined ? 0 : options.code;
+      this[kReason] = options.reason === undefined ? "" : options.reason;
+      this[kWasClean] = options.wasClean === undefined ? false : options.wasClean;
+    }
+    get code() {
+      return this[kCode];
+    }
+    get reason() {
+      return this[kReason];
+    }
+    get wasClean() {
+      return this[kWasClean];
+    }
+  }
+  Object.defineProperty(CloseEvent.prototype, "code", { enumerable: true });
+  Object.defineProperty(CloseEvent.prototype, "reason", { enumerable: true });
+  Object.defineProperty(CloseEvent.prototype, "wasClean", { enumerable: true });
+
+  class ErrorEvent extends Event2 {
+    constructor(type, options = {}) {
+      super(type);
+      this[kError] = options.error === undefined ? null : options.error;
+      this[kMessage] = options.message === undefined ? "" : options.message;
+    }
+    get error() {
+      return this[kError];
+    }
+    get message() {
+      return this[kMessage];
+    }
+  }
+  Object.defineProperty(ErrorEvent.prototype, "error", { enumerable: true });
+  Object.defineProperty(ErrorEvent.prototype, "message", { enumerable: true });
+
+  class MessageEvent extends Event2 {
+    constructor(type, options = {}) {
+      super(type);
+      this[kData] = options.data === undefined ? null : options.data;
+    }
+    get data() {
+      return this[kData];
+    }
+  }
+  Object.defineProperty(MessageEvent.prototype, "data", { enumerable: true });
+  var EventTarget2 = {
+    addEventListener(type, handler, options = {}) {
+      for (const listener of this.listeners(type)) {
+        if (!options[kForOnEventAttribute] && listener[kListener] === handler && !listener[kForOnEventAttribute]) {
+          return;
+        }
+      }
+      let wrapper;
+      if (type === "message") {
+        wrapper = function onMessage(data, isBinary) {
+          const event = new MessageEvent("message", {
+            data: isBinary ? data : data.toString()
+          });
+          event[kTarget] = this;
+          callListener(handler, this, event);
+        };
+      } else if (type === "close") {
+        wrapper = function onClose(code, message) {
+          const event = new CloseEvent("close", {
+            code,
+            reason: message.toString(),
+            wasClean: this._closeFrameReceived && this._closeFrameSent
+          });
+          event[kTarget] = this;
+          callListener(handler, this, event);
+        };
+      } else if (type === "error") {
+        wrapper = function onError(error) {
+          const event = new ErrorEvent("error", {
+            error,
+            message: error.message
+          });
+          event[kTarget] = this;
+          callListener(handler, this, event);
+        };
+      } else if (type === "open") {
+        wrapper = function onOpen() {
+          const event = new Event2("open");
+          event[kTarget] = this;
+          callListener(handler, this, event);
+        };
+      } else {
+        return;
+      }
+      wrapper[kForOnEventAttribute] = !!options[kForOnEventAttribute];
+      wrapper[kListener] = handler;
+      if (options.once) {
+        this.once(type, wrapper);
+      } else {
+        this.on(type, wrapper);
+      }
+    },
+    removeEventListener(type, handler) {
+      for (const listener of this.listeners(type)) {
+        if (listener[kListener] === handler && !listener[kForOnEventAttribute]) {
+          this.removeListener(type, listener);
+          break;
+        }
+      }
+    }
+  };
+  module.exports = {
+    CloseEvent,
+    ErrorEvent,
+    Event: Event2,
+    EventTarget: EventTarget2,
+    MessageEvent
+  };
+  function callListener(listener, thisArg, event) {
+    if (typeof listener === "object" && listener.handleEvent) {
+      listener.handleEvent.call(listener, event);
+    } else {
+      listener.call(thisArg, event);
+    }
+  }
+});
+
+// node_modules/ws/lib/extension.js
+var require_extension = __commonJS((exports, module) => {
+  var { tokenChars } = require_validation();
+  function push(dest, name, elem) {
+    if (dest[name] === undefined)
+      dest[name] = [elem];
+    else
+      dest[name].push(elem);
+  }
+  function parse(header) {
+    const offers = Object.create(null);
+    let params = Object.create(null);
+    let mustUnescape = false;
+    let isEscaping = false;
+    let inQuotes = false;
+    let extensionName;
+    let paramName;
+    let start = -1;
+    let code = -1;
+    let end = -1;
+    let i = 0;
+    for (;i < header.length; i++) {
+      code = header.charCodeAt(i);
+      if (extensionName === undefined) {
+        if (end === -1 && tokenChars[code] === 1) {
+          if (start === -1)
+            start = i;
+        } else if (i !== 0 && (code === 32 || code === 9)) {
+          if (end === -1 && start !== -1)
+            end = i;
+        } else if (code === 59 || code === 44) {
+          if (start === -1) {
+            throw new SyntaxError(`Unexpected character at index ${i}`);
+          }
+          if (end === -1)
+            end = i;
+          const name = header.slice(start, end);
+          if (code === 44) {
+            push(offers, name, params);
+            params = Object.create(null);
+          } else {
+            extensionName = name;
+          }
+          start = end = -1;
+        } else {
+          throw new SyntaxError(`Unexpected character at index ${i}`);
+        }
+      } else if (paramName === undefined) {
+        if (end === -1 && tokenChars[code] === 1) {
+          if (start === -1)
+            start = i;
+        } else if (code === 32 || code === 9) {
+          if (end === -1 && start !== -1)
+            end = i;
+        } else if (code === 59 || code === 44) {
+          if (start === -1) {
+            throw new SyntaxError(`Unexpected character at index ${i}`);
+          }
+          if (end === -1)
+            end = i;
+          push(params, header.slice(start, end), true);
+          if (code === 44) {
+            push(offers, extensionName, params);
+            params = Object.create(null);
+            extensionName = undefined;
+          }
+          start = end = -1;
+        } else if (code === 61 && start !== -1 && end === -1) {
+          paramName = header.slice(start, i);
+          start = end = -1;
+        } else {
+          throw new SyntaxError(`Unexpected character at index ${i}`);
+        }
+      } else {
+        if (isEscaping) {
+          if (tokenChars[code] !== 1) {
+            throw new SyntaxError(`Unexpected character at index ${i}`);
+          }
+          if (start === -1)
+            start = i;
+          else if (!mustUnescape)
+            mustUnescape = true;
+          isEscaping = false;
+        } else if (inQuotes) {
+          if (tokenChars[code] === 1) {
+            if (start === -1)
+              start = i;
+          } else if (code === 34 && start !== -1) {
+            inQuotes = false;
+            end = i;
+          } else if (code === 92) {
+            isEscaping = true;
+          } else {
+            throw new SyntaxError(`Unexpected character at index ${i}`);
+          }
+        } else if (code === 34 && header.charCodeAt(i - 1) === 61) {
+          inQuotes = true;
+        } else if (end === -1 && tokenChars[code] === 1) {
+          if (start === -1)
+            start = i;
+        } else if (start !== -1 && (code === 32 || code === 9)) {
+          if (end === -1)
+            end = i;
+        } else if (code === 59 || code === 44) {
+          if (start === -1) {
+            throw new SyntaxError(`Unexpected character at index ${i}`);
+          }
+          if (end === -1)
+            end = i;
+          let value = header.slice(start, end);
+          if (mustUnescape) {
+            value = value.replace(/\\/g, "");
+            mustUnescape = false;
+          }
+          push(params, paramName, value);
+          if (code === 44) {
+            push(offers, extensionName, params);
+            params = Object.create(null);
+            extensionName = undefined;
+          }
+          paramName = undefined;
+          start = end = -1;
+        } else {
+          throw new SyntaxError(`Unexpected character at index ${i}`);
+        }
+      }
+    }
+    if (start === -1 || inQuotes || code === 32 || code === 9) {
+      throw new SyntaxError("Unexpected end of input");
+    }
+    if (end === -1)
+      end = i;
+    const token = header.slice(start, end);
+    if (extensionName === undefined) {
+      push(offers, token, params);
+    } else {
+      if (paramName === undefined) {
+        push(params, token, true);
+      } else if (mustUnescape) {
+        push(params, paramName, token.replace(/\\/g, ""));
+      } else {
+        push(params, paramName, token);
+      }
+      push(offers, extensionName, params);
+    }
+    return offers;
+  }
+  function format(extensions) {
+    return Object.keys(extensions).map((extension) => {
+      let configurations = extensions[extension];
+      if (!Array.isArray(configurations))
+        configurations = [configurations];
+      return configurations.map((params) => {
+        return [extension].concat(Object.keys(params).map((k) => {
+          let values = params[k];
+          if (!Array.isArray(values))
+            values = [values];
+          return values.map((v) => v === true ? k : `${k}=${v}`).join("; ");
+        })).join("; ");
+      }).join(", ");
+    }).join(", ");
+  }
+  module.exports = { format, parse };
+});
+
+// node_modules/ws/lib/websocket.js
+var require_websocket2 = __commonJS((exports, module) => {
+  var EventEmitter = __require("events");
+  var https = __require("https");
+  var http = __require("http");
+  var net = __require("net");
+  var tls = __require("tls");
+  var { randomBytes, createHash } = __require("crypto");
+  var { Duplex, Readable } = __require("stream");
+  var { URL: URL2 } = __require("url");
+  var PerMessageDeflate = require_permessage_deflate2();
+  var Receiver = require_receiver2();
+  var Sender = require_sender2();
+  var { isBlob } = require_validation();
+  var {
+    BINARY_TYPES,
+    EMPTY_BUFFER,
+    GUID,
+    kForOnEventAttribute,
+    kListener,
+    kStatusCode,
+    kWebSocket,
+    NOOP
+  } = require_constants6();
+  var {
+    EventTarget: { addEventListener, removeEventListener }
+  } = require_event_target();
+  var { format, parse } = require_extension();
+  var { toBuffer } = require_buffer_util();
+  var closeTimeout = 30 * 1000;
+  var kAborted = Symbol("kAborted");
+  var protocolVersions = [8, 13];
+  var readyStates = ["CONNECTING", "OPEN", "CLOSING", "CLOSED"];
+  var subprotocolRegex = /^[!#$%&'*+\-.0-9A-Z^_`|a-z~]+$/;
+
+  class WebSocket extends EventEmitter {
+    constructor(address, protocols, options) {
+      super();
+      this._binaryType = BINARY_TYPES[0];
+      this._closeCode = 1006;
+      this._closeFrameReceived = false;
+      this._closeFrameSent = false;
+      this._closeMessage = EMPTY_BUFFER;
+      this._closeTimer = null;
+      this._errorEmitted = false;
+      this._extensions = {};
+      this._paused = false;
+      this._protocol = "";
+      this._readyState = WebSocket.CONNECTING;
+      this._receiver = null;
+      this._sender = null;
+      this._socket = null;
+      if (address !== null) {
+        this._bufferedAmount = 0;
+        this._isServer = false;
+        this._redirects = 0;
+        if (protocols === undefined) {
+          protocols = [];
+        } else if (!Array.isArray(protocols)) {
+          if (typeof protocols === "object" && protocols !== null) {
+            options = protocols;
+            protocols = [];
+          } else {
+            protocols = [protocols];
+          }
+        }
+        initAsClient(this, address, protocols, options);
+      } else {
+        this._autoPong = options.autoPong;
+        this._isServer = true;
+      }
+    }
+    get binaryType() {
+      return this._binaryType;
+    }
+    set binaryType(type) {
+      if (!BINARY_TYPES.includes(type))
+        return;
+      this._binaryType = type;
+      if (this._receiver)
+        this._receiver._binaryType = type;
+    }
+    get bufferedAmount() {
+      if (!this._socket)
+        return this._bufferedAmount;
+      return this._socket._writableState.length + this._sender._bufferedBytes;
+    }
+    get extensions() {
+      return Object.keys(this._extensions).join();
+    }
+    get isPaused() {
+      return this._paused;
+    }
+    get onclose() {
+      return null;
+    }
+    get onerror() {
+      return null;
+    }
+    get onopen() {
+      return null;
+    }
+    get onmessage() {
+      return null;
+    }
+    get protocol() {
+      return this._protocol;
+    }
+    get readyState() {
+      return this._readyState;
+    }
+    get url() {
+      return this._url;
+    }
+    setSocket(socket, head, options) {
+      const receiver = new Receiver({
+        allowSynchronousEvents: options.allowSynchronousEvents,
+        binaryType: this.binaryType,
+        extensions: this._extensions,
+        isServer: this._isServer,
+        maxPayload: options.maxPayload,
+        skipUTF8Validation: options.skipUTF8Validation
+      });
+      const sender = new Sender(socket, this._extensions, options.generateMask);
+      this._receiver = receiver;
+      this._sender = sender;
+      this._socket = socket;
+      receiver[kWebSocket] = this;
+      sender[kWebSocket] = this;
+      socket[kWebSocket] = this;
+      receiver.on("conclude", receiverOnConclude);
+      receiver.on("drain", receiverOnDrain);
+      receiver.on("error", receiverOnError);
+      receiver.on("message", receiverOnMessage);
+      receiver.on("ping", receiverOnPing);
+      receiver.on("pong", receiverOnPong);
+      sender.onerror = senderOnError;
+      if (socket.setTimeout)
+        socket.setTimeout(0);
+      if (socket.setNoDelay)
+        socket.setNoDelay();
+      if (head.length > 0)
+        socket.unshift(head);
+      socket.on("close", socketOnClose);
+      socket.on("data", socketOnData);
+      socket.on("end", socketOnEnd);
+      socket.on("error", socketOnError);
+      this._readyState = WebSocket.OPEN;
+      this.emit("open");
+    }
+    emitClose() {
+      if (!this._socket) {
+        this._readyState = WebSocket.CLOSED;
+        this.emit("close", this._closeCode, this._closeMessage);
+        return;
+      }
+      if (this._extensions[PerMessageDeflate.extensionName]) {
+        this._extensions[PerMessageDeflate.extensionName].cleanup();
+      }
+      this._receiver.removeAllListeners();
+      this._readyState = WebSocket.CLOSED;
+      this.emit("close", this._closeCode, this._closeMessage);
+    }
+    close(code, data) {
+      if (this.readyState === WebSocket.CLOSED)
+        return;
+      if (this.readyState === WebSocket.CONNECTING) {
+        const msg = "WebSocket was closed before the connection was established";
+        abortHandshake(this, this._req, msg);
+        return;
+      }
+      if (this.readyState === WebSocket.CLOSING) {
+        if (this._closeFrameSent && (this._closeFrameReceived || this._receiver._writableState.errorEmitted)) {
+          this._socket.end();
+        }
+        return;
+      }
+      this._readyState = WebSocket.CLOSING;
+      this._sender.close(code, data, !this._isServer, (err) => {
+        if (err)
+          return;
+        this._closeFrameSent = true;
+        if (this._closeFrameReceived || this._receiver._writableState.errorEmitted) {
+          this._socket.end();
+        }
+      });
+      setCloseTimer(this);
+    }
+    pause() {
+      if (this.readyState === WebSocket.CONNECTING || this.readyState === WebSocket.CLOSED) {
+        return;
+      }
+      this._paused = true;
+      this._socket.pause();
+    }
+    ping(data, mask, cb) {
+      if (this.readyState === WebSocket.CONNECTING) {
+        throw new Error("WebSocket is not open: readyState 0 (CONNECTING)");
+      }
+      if (typeof data === "function") {
+        cb = data;
+        data = mask = undefined;
+      } else if (typeof mask === "function") {
+        cb = mask;
+        mask = undefined;
+      }
+      if (typeof data === "number")
+        data = data.toString();
+      if (this.readyState !== WebSocket.OPEN) {
+        sendAfterClose(this, data, cb);
+        return;
+      }
+      if (mask === undefined)
+        mask = !this._isServer;
+      this._sender.ping(data || EMPTY_BUFFER, mask, cb);
+    }
+    pong(data, mask, cb) {
+      if (this.readyState === WebSocket.CONNECTING) {
+        throw new Error("WebSocket is not open: readyState 0 (CONNECTING)");
+      }
+      if (typeof data === "function") {
+        cb = data;
+        data = mask = undefined;
+      } else if (typeof mask === "function") {
+        cb = mask;
+        mask = undefined;
+      }
+      if (typeof data === "number")
+        data = data.toString();
+      if (this.readyState !== WebSocket.OPEN) {
+        sendAfterClose(this, data, cb);
+        return;
+      }
+      if (mask === undefined)
+        mask = !this._isServer;
+      this._sender.pong(data || EMPTY_BUFFER, mask, cb);
+    }
+    resume() {
+      if (this.readyState === WebSocket.CONNECTING || this.readyState === WebSocket.CLOSED) {
+        return;
+      }
+      this._paused = false;
+      if (!this._receiver._writableState.needDrain)
+        this._socket.resume();
+    }
+    send(data, options, cb) {
+      if (this.readyState === WebSocket.CONNECTING) {
+        throw new Error("WebSocket is not open: readyState 0 (CONNECTING)");
+      }
+      if (typeof options === "function") {
+        cb = options;
+        options = {};
+      }
+      if (typeof data === "number")
+        data = data.toString();
+      if (this.readyState !== WebSocket.OPEN) {
+        sendAfterClose(this, data, cb);
+        return;
+      }
+      const opts = {
+        binary: typeof data !== "string",
+        mask: !this._isServer,
+        compress: true,
+        fin: true,
+        ...options
+      };
+      if (!this._extensions[PerMessageDeflate.extensionName]) {
+        opts.compress = false;
+      }
+      this._sender.send(data || EMPTY_BUFFER, opts, cb);
+    }
+    terminate() {
+      if (this.readyState === WebSocket.CLOSED)
+        return;
+      if (this.readyState === WebSocket.CONNECTING) {
+        const msg = "WebSocket was closed before the connection was established";
+        abortHandshake(this, this._req, msg);
+        return;
+      }
+      if (this._socket) {
+        this._readyState = WebSocket.CLOSING;
+        this._socket.destroy();
+      }
+    }
+  }
+  Object.defineProperty(WebSocket, "CONNECTING", {
+    enumerable: true,
+    value: readyStates.indexOf("CONNECTING")
+  });
+  Object.defineProperty(WebSocket.prototype, "CONNECTING", {
+    enumerable: true,
+    value: readyStates.indexOf("CONNECTING")
+  });
+  Object.defineProperty(WebSocket, "OPEN", {
+    enumerable: true,
+    value: readyStates.indexOf("OPEN")
+  });
+  Object.defineProperty(WebSocket.prototype, "OPEN", {
+    enumerable: true,
+    value: readyStates.indexOf("OPEN")
+  });
+  Object.defineProperty(WebSocket, "CLOSING", {
+    enumerable: true,
+    value: readyStates.indexOf("CLOSING")
+  });
+  Object.defineProperty(WebSocket.prototype, "CLOSING", {
+    enumerable: true,
+    value: readyStates.indexOf("CLOSING")
+  });
+  Object.defineProperty(WebSocket, "CLOSED", {
+    enumerable: true,
+    value: readyStates.indexOf("CLOSED")
+  });
+  Object.defineProperty(WebSocket.prototype, "CLOSED", {
+    enumerable: true,
+    value: readyStates.indexOf("CLOSED")
+  });
+  [
+    "binaryType",
+    "bufferedAmount",
+    "extensions",
+    "isPaused",
+    "protocol",
+    "readyState",
+    "url"
+  ].forEach((property) => {
+    Object.defineProperty(WebSocket.prototype, property, { enumerable: true });
+  });
+  ["open", "error", "close", "message"].forEach((method) => {
+    Object.defineProperty(WebSocket.prototype, `on${method}`, {
+      enumerable: true,
+      get() {
+        for (const listener of this.listeners(method)) {
+          if (listener[kForOnEventAttribute])
+            return listener[kListener];
+        }
+        return null;
+      },
+      set(handler) {
+        for (const listener of this.listeners(method)) {
+          if (listener[kForOnEventAttribute]) {
+            this.removeListener(method, listener);
+            break;
+          }
+        }
+        if (typeof handler !== "function")
+          return;
+        this.addEventListener(method, handler, {
+          [kForOnEventAttribute]: true
+        });
+      }
+    });
+  });
+  WebSocket.prototype.addEventListener = addEventListener;
+  WebSocket.prototype.removeEventListener = removeEventListener;
+  module.exports = WebSocket;
+  function initAsClient(websocket, address, protocols, options) {
+    const opts = {
+      allowSynchronousEvents: true,
+      autoPong: true,
+      protocolVersion: protocolVersions[1],
+      maxPayload: 100 * 1024 * 1024,
+      skipUTF8Validation: false,
+      perMessageDeflate: true,
+      followRedirects: false,
+      maxRedirects: 10,
+      ...options,
+      socketPath: undefined,
+      hostname: undefined,
+      protocol: undefined,
+      timeout: undefined,
+      method: "GET",
+      host: undefined,
+      path: undefined,
+      port: undefined
+    };
+    websocket._autoPong = opts.autoPong;
+    if (!protocolVersions.includes(opts.protocolVersion)) {
+      throw new RangeError(`Unsupported protocol version: ${opts.protocolVersion} ` + `(supported versions: ${protocolVersions.join(", ")})`);
+    }
+    let parsedUrl;
+    if (address instanceof URL2) {
+      parsedUrl = address;
+    } else {
+      try {
+        parsedUrl = new URL2(address);
+      } catch (e) {
+        throw new SyntaxError(`Invalid URL: ${address}`);
+      }
+    }
+    if (parsedUrl.protocol === "http:") {
+      parsedUrl.protocol = "ws:";
+    } else if (parsedUrl.protocol === "https:") {
+      parsedUrl.protocol = "wss:";
+    }
+    websocket._url = parsedUrl.href;
+    const isSecure = parsedUrl.protocol === "wss:";
+    const isIpcUrl = parsedUrl.protocol === "ws+unix:";
+    let invalidUrlMessage;
+    if (parsedUrl.protocol !== "ws:" && !isSecure && !isIpcUrl) {
+      invalidUrlMessage = 'The URL\'s protocol must be one of "ws:", "wss:", ' + '"http:", "https", or "ws+unix:"';
+    } else if (isIpcUrl && !parsedUrl.pathname) {
+      invalidUrlMessage = "The URL's pathname is empty";
+    } else if (parsedUrl.hash) {
+      invalidUrlMessage = "The URL contains a fragment identifier";
+    }
+    if (invalidUrlMessage) {
+      const err = new SyntaxError(invalidUrlMessage);
+      if (websocket._redirects === 0) {
+        throw err;
+      } else {
+        emitErrorAndClose(websocket, err);
+        return;
+      }
+    }
+    const defaultPort = isSecure ? 443 : 80;
+    const key = randomBytes(16).toString("base64");
+    const request = isSecure ? https.request : http.request;
+    const protocolSet = new Set;
+    let perMessageDeflate;
+    opts.createConnection = opts.createConnection || (isSecure ? tlsConnect : netConnect);
+    opts.defaultPort = opts.defaultPort || defaultPort;
+    opts.port = parsedUrl.port || defaultPort;
+    opts.host = parsedUrl.hostname.startsWith("[") ? parsedUrl.hostname.slice(1, -1) : parsedUrl.hostname;
+    opts.headers = {
+      ...opts.headers,
+      "Sec-WebSocket-Version": opts.protocolVersion,
+      "Sec-WebSocket-Key": key,
+      Connection: "Upgrade",
+      Upgrade: "websocket"
+    };
+    opts.path = parsedUrl.pathname + parsedUrl.search;
+    opts.timeout = opts.handshakeTimeout;
+    if (opts.perMessageDeflate) {
+      perMessageDeflate = new PerMessageDeflate(opts.perMessageDeflate !== true ? opts.perMessageDeflate : {}, false, opts.maxPayload);
+      opts.headers["Sec-WebSocket-Extensions"] = format({
+        [PerMessageDeflate.extensionName]: perMessageDeflate.offer()
+      });
+    }
+    if (protocols.length) {
+      for (const protocol of protocols) {
+        if (typeof protocol !== "string" || !subprotocolRegex.test(protocol) || protocolSet.has(protocol)) {
+          throw new SyntaxError("An invalid or duplicated subprotocol was specified");
+        }
+        protocolSet.add(protocol);
+      }
+      opts.headers["Sec-WebSocket-Protocol"] = protocols.join(",");
+    }
+    if (opts.origin) {
+      if (opts.protocolVersion < 13) {
+        opts.headers["Sec-WebSocket-Origin"] = opts.origin;
+      } else {
+        opts.headers.Origin = opts.origin;
+      }
+    }
+    if (parsedUrl.username || parsedUrl.password) {
+      opts.auth = `${parsedUrl.username}:${parsedUrl.password}`;
+    }
+    if (isIpcUrl) {
+      const parts = opts.path.split(":");
+      opts.socketPath = parts[0];
+      opts.path = parts[1];
+    }
+    let req;
+    if (opts.followRedirects) {
+      if (websocket._redirects === 0) {
+        websocket._originalIpc = isIpcUrl;
+        websocket._originalSecure = isSecure;
+        websocket._originalHostOrSocketPath = isIpcUrl ? opts.socketPath : parsedUrl.host;
+        const headers = options && options.headers;
+        options = { ...options, headers: {} };
+        if (headers) {
+          for (const [key2, value] of Object.entries(headers)) {
+            options.headers[key2.toLowerCase()] = value;
+          }
+        }
+      } else if (websocket.listenerCount("redirect") === 0) {
+        const isSameHost = isIpcUrl ? websocket._originalIpc ? opts.socketPath === websocket._originalHostOrSocketPath : false : websocket._originalIpc ? false : parsedUrl.host === websocket._originalHostOrSocketPath;
+        if (!isSameHost || websocket._originalSecure && !isSecure) {
+          delete opts.headers.authorization;
+          delete opts.headers.cookie;
+          if (!isSameHost)
+            delete opts.headers.host;
+          opts.auth = undefined;
+        }
+      }
+      if (opts.auth && !options.headers.authorization) {
+        options.headers.authorization = "Basic " + Buffer.from(opts.auth).toString("base64");
+      }
+      req = websocket._req = request(opts);
+      if (websocket._redirects) {
+        websocket.emit("redirect", websocket.url, req);
+      }
+    } else {
+      req = websocket._req = request(opts);
+    }
+    if (opts.timeout) {
+      req.on("timeout", () => {
+        abortHandshake(websocket, req, "Opening handshake has timed out");
+      });
+    }
+    req.on("error", (err) => {
+      if (req === null || req[kAborted])
+        return;
+      req = websocket._req = null;
+      emitErrorAndClose(websocket, err);
+    });
+    req.on("response", (res) => {
+      const location = res.headers.location;
+      const statusCode = res.statusCode;
+      if (location && opts.followRedirects && statusCode >= 300 && statusCode < 400) {
+        if (++websocket._redirects > opts.maxRedirects) {
+          abortHandshake(websocket, req, "Maximum redirects exceeded");
+          return;
+        }
+        req.abort();
+        let addr;
+        try {
+          addr = new URL2(location, address);
+        } catch (e) {
+          const err = new SyntaxError(`Invalid URL: ${location}`);
+          emitErrorAndClose(websocket, err);
+          return;
+        }
+        initAsClient(websocket, addr, protocols, options);
+      } else if (!websocket.emit("unexpected-response", req, res)) {
+        abortHandshake(websocket, req, `Unexpected server response: ${res.statusCode}`);
+      }
+    });
+    req.on("upgrade", (res, socket, head) => {
+      websocket.emit("upgrade", res);
+      if (websocket.readyState !== WebSocket.CONNECTING)
+        return;
+      req = websocket._req = null;
+      const upgrade = res.headers.upgrade;
+      if (upgrade === undefined || upgrade.toLowerCase() !== "websocket") {
+        abortHandshake(websocket, socket, "Invalid Upgrade header");
+        return;
+      }
+      const digest = createHash("sha1").update(key + GUID).digest("base64");
+      if (res.headers["sec-websocket-accept"] !== digest) {
+        abortHandshake(websocket, socket, "Invalid Sec-WebSocket-Accept header");
+        return;
+      }
+      const serverProt = res.headers["sec-websocket-protocol"];
+      let protError;
+      if (serverProt !== undefined) {
+        if (!protocolSet.size) {
+          protError = "Server sent a subprotocol but none was requested";
+        } else if (!protocolSet.has(serverProt)) {
+          protError = "Server sent an invalid subprotocol";
+        }
+      } else if (protocolSet.size) {
+        protError = "Server sent no subprotocol";
+      }
+      if (protError) {
+        abortHandshake(websocket, socket, protError);
+        return;
+      }
+      if (serverProt)
+        websocket._protocol = serverProt;
+      const secWebSocketExtensions = res.headers["sec-websocket-extensions"];
+      if (secWebSocketExtensions !== undefined) {
+        if (!perMessageDeflate) {
+          const message = "Server sent a Sec-WebSocket-Extensions header but no extension " + "was requested";
+          abortHandshake(websocket, socket, message);
+          return;
+        }
+        let extensions;
+        try {
+          extensions = parse(secWebSocketExtensions);
+        } catch (err) {
+          const message = "Invalid Sec-WebSocket-Extensions header";
+          abortHandshake(websocket, socket, message);
+          return;
+        }
+        const extensionNames = Object.keys(extensions);
+        if (extensionNames.length !== 1 || extensionNames[0] !== PerMessageDeflate.extensionName) {
+          const message = "Server indicated an extension that was not requested";
+          abortHandshake(websocket, socket, message);
+          return;
+        }
+        try {
+          perMessageDeflate.accept(extensions[PerMessageDeflate.extensionName]);
+        } catch (err) {
+          const message = "Invalid Sec-WebSocket-Extensions header";
+          abortHandshake(websocket, socket, message);
+          return;
+        }
+        websocket._extensions[PerMessageDeflate.extensionName] = perMessageDeflate;
+      }
+      websocket.setSocket(socket, head, {
+        allowSynchronousEvents: opts.allowSynchronousEvents,
+        generateMask: opts.generateMask,
+        maxPayload: opts.maxPayload,
+        skipUTF8Validation: opts.skipUTF8Validation
+      });
+    });
+    if (opts.finishRequest) {
+      opts.finishRequest(req, websocket);
+    } else {
+      req.end();
+    }
+  }
+  function emitErrorAndClose(websocket, err) {
+    websocket._readyState = WebSocket.CLOSING;
+    websocket._errorEmitted = true;
+    websocket.emit("error", err);
+    websocket.emitClose();
+  }
+  function netConnect(options) {
+    options.path = options.socketPath;
+    return net.connect(options);
+  }
+  function tlsConnect(options) {
+    options.path = undefined;
+    if (!options.servername && options.servername !== "") {
+      options.servername = net.isIP(options.host) ? "" : options.host;
+    }
+    return tls.connect(options);
+  }
+  function abortHandshake(websocket, stream, message) {
+    websocket._readyState = WebSocket.CLOSING;
+    const err = new Error(message);
+    Error.captureStackTrace(err, abortHandshake);
+    if (stream.setHeader) {
+      stream[kAborted] = true;
+      stream.abort();
+      if (stream.socket && !stream.socket.destroyed) {
+        stream.socket.destroy();
+      }
+      process.nextTick(emitErrorAndClose, websocket, err);
+    } else {
+      stream.destroy(err);
+      stream.once("error", websocket.emit.bind(websocket, "error"));
+      stream.once("close", websocket.emitClose.bind(websocket));
+    }
+  }
+  function sendAfterClose(websocket, data, cb) {
+    if (data) {
+      const length = isBlob(data) ? data.size : toBuffer(data).length;
+      if (websocket._socket)
+        websocket._sender._bufferedBytes += length;
+      else
+        websocket._bufferedAmount += length;
+    }
+    if (cb) {
+      const err = new Error(`WebSocket is not open: readyState ${websocket.readyState} ` + `(${readyStates[websocket.readyState]})`);
+      process.nextTick(cb, err);
+    }
+  }
+  function receiverOnConclude(code, reason) {
+    const websocket = this[kWebSocket];
+    websocket._closeFrameReceived = true;
+    websocket._closeMessage = reason;
+    websocket._closeCode = code;
+    if (websocket._socket[kWebSocket] === undefined)
+      return;
+    websocket._socket.removeListener("data", socketOnData);
+    process.nextTick(resume, websocket._socket);
+    if (code === 1005)
+      websocket.close();
+    else
+      websocket.close(code, reason);
+  }
+  function receiverOnDrain() {
+    const websocket = this[kWebSocket];
+    if (!websocket.isPaused)
+      websocket._socket.resume();
+  }
+  function receiverOnError(err) {
+    const websocket = this[kWebSocket];
+    if (websocket._socket[kWebSocket] !== undefined) {
+      websocket._socket.removeListener("data", socketOnData);
+      process.nextTick(resume, websocket._socket);
+      websocket.close(err[kStatusCode]);
+    }
+    if (!websocket._errorEmitted) {
+      websocket._errorEmitted = true;
+      websocket.emit("error", err);
+    }
+  }
+  function receiverOnFinish() {
+    this[kWebSocket].emitClose();
+  }
+  function receiverOnMessage(data, isBinary) {
+    this[kWebSocket].emit("message", data, isBinary);
+  }
+  function receiverOnPing(data) {
+    const websocket = this[kWebSocket];
+    if (websocket._autoPong)
+      websocket.pong(data, !this._isServer, NOOP);
+    websocket.emit("ping", data);
+  }
+  function receiverOnPong(data) {
+    this[kWebSocket].emit("pong", data);
+  }
+  function resume(stream) {
+    stream.resume();
+  }
+  function senderOnError(err) {
+    const websocket = this[kWebSocket];
+    if (websocket.readyState === WebSocket.CLOSED)
+      return;
+    if (websocket.readyState === WebSocket.OPEN) {
+      websocket._readyState = WebSocket.CLOSING;
+      setCloseTimer(websocket);
+    }
+    this._socket.end();
+    if (!websocket._errorEmitted) {
+      websocket._errorEmitted = true;
+      websocket.emit("error", err);
+    }
+  }
+  function setCloseTimer(websocket) {
+    websocket._closeTimer = setTimeout(websocket._socket.destroy.bind(websocket._socket), closeTimeout);
+  }
+  function socketOnClose() {
+    const websocket = this[kWebSocket];
+    this.removeListener("close", socketOnClose);
+    this.removeListener("data", socketOnData);
+    this.removeListener("end", socketOnEnd);
+    websocket._readyState = WebSocket.CLOSING;
+    let chunk;
+    if (!this._readableState.endEmitted && !websocket._closeFrameReceived && !websocket._receiver._writableState.errorEmitted && (chunk = websocket._socket.read()) !== null) {
+      websocket._receiver.write(chunk);
+    }
+    websocket._receiver.end();
+    this[kWebSocket] = undefined;
+    clearTimeout(websocket._closeTimer);
+    if (websocket._receiver._writableState.finished || websocket._receiver._writableState.errorEmitted) {
+      websocket.emitClose();
+    } else {
+      websocket._receiver.on("error", receiverOnFinish);
+      websocket._receiver.on("finish", receiverOnFinish);
+    }
+  }
+  function socketOnData(chunk) {
+    if (!this[kWebSocket]._receiver.write(chunk)) {
+      this.pause();
+    }
+  }
+  function socketOnEnd() {
+    const websocket = this[kWebSocket];
+    websocket._readyState = WebSocket.CLOSING;
+    websocket._receiver.end();
+    this.end();
+  }
+  function socketOnError() {
+    const websocket = this[kWebSocket];
+    this.removeListener("error", socketOnError);
+    this.on("error", NOOP);
+    if (websocket) {
+      websocket._readyState = WebSocket.CLOSING;
+      this.destroy();
+    }
+  }
+});
+
+// node_modules/ws/lib/stream.js
+var require_stream = __commonJS((exports, module) => {
+  var { Duplex } = __require("stream");
+  function emitClose(stream) {
+    stream.emit("close");
+  }
+  function duplexOnEnd() {
+    if (!this.destroyed && this._writableState.finished) {
+      this.destroy();
+    }
+  }
+  function duplexOnError(err) {
+    this.removeListener("error", duplexOnError);
+    this.destroy();
+    if (this.listenerCount("error") === 0) {
+      this.emit("error", err);
+    }
+  }
+  function createWebSocketStream(ws, options) {
+    let terminateOnDestroy = true;
+    const duplex = new Duplex({
+      ...options,
+      autoDestroy: false,
+      emitClose: false,
+      objectMode: false,
+      writableObjectMode: false
+    });
+    ws.on("message", function message(msg, isBinary) {
+      const data = !isBinary && duplex._readableState.objectMode ? msg.toString() : msg;
+      if (!duplex.push(data))
+        ws.pause();
+    });
+    ws.once("error", function error(err) {
+      if (duplex.destroyed)
+        return;
+      terminateOnDestroy = false;
+      duplex.destroy(err);
+    });
+    ws.once("close", function close() {
+      if (duplex.destroyed)
+        return;
+      duplex.push(null);
+    });
+    duplex._destroy = function(err, callback) {
+      if (ws.readyState === ws.CLOSED) {
+        callback(err);
+        process.nextTick(emitClose, duplex);
+        return;
+      }
+      let called = false;
+      ws.once("error", function error(err2) {
+        called = true;
+        callback(err2);
+      });
+      ws.once("close", function close() {
+        if (!called)
+          callback(err);
+        process.nextTick(emitClose, duplex);
+      });
+      if (terminateOnDestroy)
+        ws.terminate();
+    };
+    duplex._final = function(callback) {
+      if (ws.readyState === ws.CONNECTING) {
+        ws.once("open", function open() {
+          duplex._final(callback);
+        });
+        return;
+      }
+      if (ws._socket === null)
+        return;
+      if (ws._socket._writableState.finished) {
+        callback();
+        if (duplex._readableState.endEmitted)
+          duplex.destroy();
+      } else {
+        ws._socket.once("finish", function finish() {
+          callback();
+        });
+        ws.close();
+      }
+    };
+    duplex._read = function() {
+      if (ws.isPaused)
+        ws.resume();
+    };
+    duplex._write = function(chunk, encoding, callback) {
+      if (ws.readyState === ws.CONNECTING) {
+        ws.once("open", function open() {
+          duplex._write(chunk, encoding, callback);
+        });
+        return;
+      }
+      ws.send(chunk, callback);
+    };
+    duplex.on("end", duplexOnEnd);
+    duplex.on("error", duplexOnError);
+    return duplex;
+  }
+  module.exports = createWebSocketStream;
+});
+
+// node_modules/ws/lib/subprotocol.js
+var require_subprotocol = __commonJS((exports, module) => {
+  var { tokenChars } = require_validation();
+  function parse(header) {
+    const protocols = new Set;
+    let start = -1;
+    let end = -1;
+    let i = 0;
+    for (i;i < header.length; i++) {
+      const code = header.charCodeAt(i);
+      if (end === -1 && tokenChars[code] === 1) {
+        if (start === -1)
+          start = i;
+      } else if (i !== 0 && (code === 32 || code === 9)) {
+        if (end === -1 && start !== -1)
+          end = i;
+      } else if (code === 44) {
+        if (start === -1) {
+          throw new SyntaxError(`Unexpected character at index ${i}`);
+        }
+        if (end === -1)
+          end = i;
+        const protocol2 = header.slice(start, end);
+        if (protocols.has(protocol2)) {
+          throw new SyntaxError(`The "${protocol2}" subprotocol is duplicated`);
+        }
+        protocols.add(protocol2);
+        start = end = -1;
+      } else {
+        throw new SyntaxError(`Unexpected character at index ${i}`);
+      }
+    }
+    if (start === -1 || end !== -1) {
+      throw new SyntaxError("Unexpected end of input");
+    }
+    const protocol = header.slice(start, i);
+    if (protocols.has(protocol)) {
+      throw new SyntaxError(`The "${protocol}" subprotocol is duplicated`);
+    }
+    protocols.add(protocol);
+    return protocols;
+  }
+  module.exports = { parse };
+});
+
+// node_modules/ws/lib/websocket-server.js
+var require_websocket_server = __commonJS((exports, module) => {
+  var EventEmitter = __require("events");
+  var http = __require("http");
+  var { Duplex } = __require("stream");
+  var { createHash } = __require("crypto");
+  var extension = require_extension();
+  var PerMessageDeflate = require_permessage_deflate2();
+  var subprotocol = require_subprotocol();
+  var WebSocket = require_websocket2();
+  var { GUID, kWebSocket } = require_constants6();
+  var keyRegex = /^[+/0-9A-Za-z]{22}==$/;
+  var RUNNING = 0;
+  var CLOSING = 1;
+  var CLOSED = 2;
+
+  class WebSocketServer extends EventEmitter {
+    constructor(options, callback) {
+      super();
+      options = {
+        allowSynchronousEvents: true,
+        autoPong: true,
+        maxPayload: 100 * 1024 * 1024,
+        skipUTF8Validation: false,
+        perMessageDeflate: false,
+        handleProtocols: null,
+        clientTracking: true,
+        verifyClient: null,
+        noServer: false,
+        backlog: null,
+        server: null,
+        host: null,
+        path: null,
+        port: null,
+        WebSocket,
+        ...options
+      };
+      if (options.port == null && !options.server && !options.noServer || options.port != null && (options.server || options.noServer) || options.server && options.noServer) {
+        throw new TypeError('One and only one of the "port", "server", or "noServer" options ' + "must be specified");
+      }
+      if (options.port != null) {
+        this._server = http.createServer((req, res) => {
+          const body = http.STATUS_CODES[426];
+          res.writeHead(426, {
+            "Content-Length": body.length,
+            "Content-Type": "text/plain"
+          });
+          res.end(body);
+        });
+        this._server.listen(options.port, options.host, options.backlog, callback);
+      } else if (options.server) {
+        this._server = options.server;
+      }
+      if (this._server) {
+        const emitConnection = this.emit.bind(this, "connection");
+        this._removeListeners = addListeners(this._server, {
+          listening: this.emit.bind(this, "listening"),
+          error: this.emit.bind(this, "error"),
+          upgrade: (req, socket, head) => {
+            this.handleUpgrade(req, socket, head, emitConnection);
+          }
+        });
+      }
+      if (options.perMessageDeflate === true)
+        options.perMessageDeflate = {};
+      if (options.clientTracking) {
+        this.clients = new Set;
+        this._shouldEmitClose = false;
+      }
+      this.options = options;
+      this._state = RUNNING;
+    }
+    address() {
+      if (this.options.noServer) {
+        throw new Error('The server is operating in "noServer" mode');
+      }
+      if (!this._server)
+        return null;
+      return this._server.address();
+    }
+    close(cb) {
+      if (this._state === CLOSED) {
+        if (cb) {
+          this.once("close", () => {
+            cb(new Error("The server is not running"));
+          });
+        }
+        process.nextTick(emitClose, this);
+        return;
+      }
+      if (cb)
+        this.once("close", cb);
+      if (this._state === CLOSING)
+        return;
+      this._state = CLOSING;
+      if (this.options.noServer || this.options.server) {
+        if (this._server) {
+          this._removeListeners();
+          this._removeListeners = this._server = null;
+        }
+        if (this.clients) {
+          if (!this.clients.size) {
+            process.nextTick(emitClose, this);
+          } else {
+            this._shouldEmitClose = true;
+          }
+        } else {
+          process.nextTick(emitClose, this);
+        }
+      } else {
+        const server = this._server;
+        this._removeListeners();
+        this._removeListeners = this._server = null;
+        server.close(() => {
+          emitClose(this);
+        });
+      }
+    }
+    shouldHandle(req) {
+      if (this.options.path) {
+        const index = req.url.indexOf("?");
+        const pathname = index !== -1 ? req.url.slice(0, index) : req.url;
+        if (pathname !== this.options.path)
+          return false;
+      }
+      return true;
+    }
+    handleUpgrade(req, socket, head, cb) {
+      socket.on("error", socketOnError);
+      const key = req.headers["sec-websocket-key"];
+      const upgrade = req.headers.upgrade;
+      const version = +req.headers["sec-websocket-version"];
+      if (req.method !== "GET") {
+        const message = "Invalid HTTP method";
+        abortHandshakeOrEmitwsClientError(this, req, socket, 405, message);
+        return;
+      }
+      if (upgrade === undefined || upgrade.toLowerCase() !== "websocket") {
+        const message = "Invalid Upgrade header";
+        abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
+        return;
+      }
+      if (key === undefined || !keyRegex.test(key)) {
+        const message = "Missing or invalid Sec-WebSocket-Key header";
+        abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
+        return;
+      }
+      if (version !== 8 && version !== 13) {
+        const message = "Missing or invalid Sec-WebSocket-Version header";
+        abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
+        return;
+      }
+      if (!this.shouldHandle(req)) {
+        abortHandshake(socket, 400);
+        return;
+      }
+      const secWebSocketProtocol = req.headers["sec-websocket-protocol"];
+      let protocols = new Set;
+      if (secWebSocketProtocol !== undefined) {
+        try {
+          protocols = subprotocol.parse(secWebSocketProtocol);
+        } catch (err) {
+          const message = "Invalid Sec-WebSocket-Protocol header";
+          abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
+          return;
+        }
+      }
+      const secWebSocketExtensions = req.headers["sec-websocket-extensions"];
+      const extensions = {};
+      if (this.options.perMessageDeflate && secWebSocketExtensions !== undefined) {
+        const perMessageDeflate = new PerMessageDeflate(this.options.perMessageDeflate, true, this.options.maxPayload);
+        try {
+          const offers = extension.parse(secWebSocketExtensions);
+          if (offers[PerMessageDeflate.extensionName]) {
+            perMessageDeflate.accept(offers[PerMessageDeflate.extensionName]);
+            extensions[PerMessageDeflate.extensionName] = perMessageDeflate;
+          }
+        } catch (err) {
+          const message = "Invalid or unacceptable Sec-WebSocket-Extensions header";
+          abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
+          return;
+        }
+      }
+      if (this.options.verifyClient) {
+        const info = {
+          origin: req.headers[`${version === 8 ? "sec-websocket-origin" : "origin"}`],
+          secure: !!(req.socket.authorized || req.socket.encrypted),
+          req
+        };
+        if (this.options.verifyClient.length === 2) {
+          this.options.verifyClient(info, (verified, code, message, headers) => {
+            if (!verified) {
+              return abortHandshake(socket, code || 401, message, headers);
+            }
+            this.completeUpgrade(extensions, key, protocols, req, socket, head, cb);
+          });
+          return;
+        }
+        if (!this.options.verifyClient(info))
+          return abortHandshake(socket, 401);
+      }
+      this.completeUpgrade(extensions, key, protocols, req, socket, head, cb);
+    }
+    completeUpgrade(extensions, key, protocols, req, socket, head, cb) {
+      if (!socket.readable || !socket.writable)
+        return socket.destroy();
+      if (socket[kWebSocket]) {
+        throw new Error("server.handleUpgrade() was called more than once with the same " + "socket, possibly due to a misconfiguration");
+      }
+      if (this._state > RUNNING)
+        return abortHandshake(socket, 503);
+      const digest = createHash("sha1").update(key + GUID).digest("base64");
+      const headers = [
+        "HTTP/1.1 101 Switching Protocols",
+        "Upgrade: websocket",
+        "Connection: Upgrade",
+        `Sec-WebSocket-Accept: ${digest}`
+      ];
+      const ws = new this.options.WebSocket(null, undefined, this.options);
+      if (protocols.size) {
+        const protocol = this.options.handleProtocols ? this.options.handleProtocols(protocols, req) : protocols.values().next().value;
+        if (protocol) {
+          headers.push(`Sec-WebSocket-Protocol: ${protocol}`);
+          ws._protocol = protocol;
+        }
+      }
+      if (extensions[PerMessageDeflate.extensionName]) {
+        const params = extensions[PerMessageDeflate.extensionName].params;
+        const value = extension.format({
+          [PerMessageDeflate.extensionName]: [params]
+        });
+        headers.push(`Sec-WebSocket-Extensions: ${value}`);
+        ws._extensions = extensions;
+      }
+      this.emit("headers", headers, req);
+      socket.write(headers.concat("\r\n").join("\r\n"));
+      socket.removeListener("error", socketOnError);
+      ws.setSocket(socket, head, {
+        allowSynchronousEvents: this.options.allowSynchronousEvents,
+        maxPayload: this.options.maxPayload,
+        skipUTF8Validation: this.options.skipUTF8Validation
+      });
+      if (this.clients) {
+        this.clients.add(ws);
+        ws.on("close", () => {
+          this.clients.delete(ws);
+          if (this._shouldEmitClose && !this.clients.size) {
+            process.nextTick(emitClose, this);
+          }
+        });
+      }
+      cb(ws, req);
+    }
+  }
+  module.exports = WebSocketServer;
+  function addListeners(server, map) {
+    for (const event of Object.keys(map))
+      server.on(event, map[event]);
+    return function removeListeners() {
+      for (const event of Object.keys(map)) {
+        server.removeListener(event, map[event]);
+      }
+    };
+  }
+  function emitClose(server) {
+    server._state = CLOSED;
+    server.emit("close");
+  }
+  function socketOnError() {
+    this.destroy();
+  }
+  function abortHandshake(socket, code, message, headers) {
+    message = message || http.STATUS_CODES[code];
+    headers = {
+      Connection: "close",
+      "Content-Type": "text/html",
+      "Content-Length": Buffer.byteLength(message),
+      ...headers
+    };
+    socket.once("finish", socket.destroy);
+    socket.end(`HTTP/1.1 ${code} ${http.STATUS_CODES[code]}\r\n` + Object.keys(headers).map((h) => `${h}: ${headers[h]}`).join("\r\n") + "\r\n\r\n" + message);
+  }
+  function abortHandshakeOrEmitwsClientError(server, req, socket, code, message) {
+    if (server.listenerCount("wsClientError")) {
+      const err = new Error(message);
+      Error.captureStackTrace(err, abortHandshakeOrEmitwsClientError);
+      server.emit("wsClientError", err, socket, req);
+    } else {
+      abortHandshake(socket, code, message);
+    }
+  }
+});
+
+// node_modules/ws/index.js
+var require_ws = __commonJS((exports, module) => {
+  var WebSocket = require_websocket2();
+  WebSocket.createWebSocketStream = require_stream();
+  WebSocket.Server = require_websocket_server();
+  WebSocket.Receiver = require_receiver2();
+  WebSocket.Sender = require_sender2();
+  WebSocket.WebSocket = WebSocket;
+  WebSocket.WebSocketServer = WebSocket.Server;
+  module.exports = WebSocket;
+});
+
+// node_modules/@discordjs/ws/dist/index.js
+var require_dist7 = __commonJS((exports, module) => {
+  var __dirname = "C:\\Code\\Base\\Javascript-Typescript\\Templates\\Discord Bot\\node_modules\\@discordjs\\ws\\dist";
+  var __create2 = Object.create;
+  var __defProp2 = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames2 = Object.getOwnPropertyNames;
+  var __getProtoOf2 = Object.getPrototypeOf;
+  var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+  var __name = (target, value) => __defProp2(target, "name", { value, configurable: true });
+  var __export = (target, all) => {
+    for (var name in all)
+      __defProp2(target, name, { get: all[name], enumerable: true });
+  };
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames2(from))
+        if (!__hasOwnProp2.call(to, key) && key !== except)
+          __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+    }
+    return to;
+  };
+  var __toESM2 = (mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target, mod));
+  var __toCommonJS = (mod) => __copyProps(__defProp2({}, "__esModule", { value: true }), mod);
+  var src_exports = {};
+  __export(src_exports, {
+    CloseCodes: () => CloseCodes,
+    CompressionMethod: () => CompressionMethod,
+    CompressionParameterMap: () => CompressionParameterMap,
+    DefaultDeviceProperty: () => DefaultDeviceProperty,
+    DefaultWebSocketManagerOptions: () => DefaultWebSocketManagerOptions,
+    Encoding: () => Encoding,
+    ImportantGatewayOpcodes: () => ImportantGatewayOpcodes,
+    SimpleContextFetchingStrategy: () => SimpleContextFetchingStrategy,
+    SimpleIdentifyThrottler: () => SimpleIdentifyThrottler,
+    SimpleShardingStrategy: () => SimpleShardingStrategy,
+    WebSocketManager: () => WebSocketManager,
+    WebSocketShard: () => WebSocketShard,
+    WebSocketShardDestroyRecovery: () => WebSocketShardDestroyRecovery,
+    WebSocketShardEvents: () => WebSocketShardEvents,
+    WebSocketShardStatus: () => WebSocketShardStatus,
+    WorkerBootstrapper: () => WorkerBootstrapper,
+    WorkerContextFetchingStrategy: () => WorkerContextFetchingStrategy,
+    WorkerReceivePayloadOp: () => WorkerReceivePayloadOp,
+    WorkerSendPayloadOp: () => WorkerSendPayloadOp,
+    WorkerShardingStrategy: () => WorkerShardingStrategy,
+    getInitialSendRateLimitState: () => getInitialSendRateLimitState,
+    managerToFetchingStrategyOptions: () => managerToFetchingStrategyOptions,
+    version: () => version
+  });
+  module.exports = __toCommonJS(src_exports);
+  async function managerToFetchingStrategyOptions(manager) {
+    const {
+      buildIdentifyThrottler,
+      buildStrategy,
+      retrieveSessionInfo,
+      updateSessionInfo,
+      shardCount,
+      shardIds,
+      rest,
+      ...managerOptions
+    } = manager.options;
+    return {
+      ...managerOptions,
+      token: manager.token,
+      gatewayInformation: await manager.fetchGatewayInformation(),
+      shardCount: await manager.getShardCount()
+    };
+  }
+  __name(managerToFetchingStrategyOptions, "managerToFetchingStrategyOptions");
+  var SimpleContextFetchingStrategy = class _SimpleContextFetchingStrategy {
+    constructor(manager, options) {
+      this.manager = manager;
+      this.options = options;
+    }
+    static {
+      __name(this, "SimpleContextFetchingStrategy");
+    }
+    static throttlerCache = /* @__PURE__ */ new WeakMap;
+    static async ensureThrottler(manager) {
+      const throttler = _SimpleContextFetchingStrategy.throttlerCache.get(manager);
+      if (throttler) {
+        return throttler;
+      }
+      const newThrottler = await manager.options.buildIdentifyThrottler(manager);
+      _SimpleContextFetchingStrategy.throttlerCache.set(manager, newThrottler);
+      return newThrottler;
+    }
+    async retrieveSessionInfo(shardId) {
+      return this.manager.options.retrieveSessionInfo(shardId);
+    }
+    updateSessionInfo(shardId, sessionInfo) {
+      return this.manager.options.updateSessionInfo(shardId, sessionInfo);
+    }
+    async waitForIdentify(shardId, signal) {
+      const throttler = await _SimpleContextFetchingStrategy.ensureThrottler(this.manager);
+      await throttler.waitForIdentify(shardId, signal);
+    }
+  };
+  var import_node_worker_threads2 = __require("worker_threads");
+  var import_collection2 = require_dist6();
+  var import_node_events = __require("events");
+  var import_node_path = __require("path");
+  var import_node_worker_threads = __require("worker_threads");
+  var import_collection = require_dist6();
+  var WorkerSendPayloadOp = /* @__PURE__ */ ((WorkerSendPayloadOp2) => {
+    WorkerSendPayloadOp2[WorkerSendPayloadOp2["Connect"] = 0] = "Connect";
+    WorkerSendPayloadOp2[WorkerSendPayloadOp2["Destroy"] = 1] = "Destroy";
+    WorkerSendPayloadOp2[WorkerSendPayloadOp2["Send"] = 2] = "Send";
+    WorkerSendPayloadOp2[WorkerSendPayloadOp2["SessionInfoResponse"] = 3] = "SessionInfoResponse";
+    WorkerSendPayloadOp2[WorkerSendPayloadOp2["ShardIdentifyResponse"] = 4] = "ShardIdentifyResponse";
+    WorkerSendPayloadOp2[WorkerSendPayloadOp2["FetchStatus"] = 5] = "FetchStatus";
+    return WorkerSendPayloadOp2;
+  })(WorkerSendPayloadOp || {});
+  var WorkerReceivePayloadOp = /* @__PURE__ */ ((WorkerReceivePayloadOp2) => {
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["Connected"] = 0] = "Connected";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["Destroyed"] = 1] = "Destroyed";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["Event"] = 2] = "Event";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["RetrieveSessionInfo"] = 3] = "RetrieveSessionInfo";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["UpdateSessionInfo"] = 4] = "UpdateSessionInfo";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["WaitForIdentify"] = 5] = "WaitForIdentify";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["FetchStatusResponse"] = 6] = "FetchStatusResponse";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["WorkerReady"] = 7] = "WorkerReady";
+    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["CancelIdentify"] = 8] = "CancelIdentify";
+    return WorkerReceivePayloadOp2;
+  })(WorkerReceivePayloadOp || {});
+  var WorkerShardingStrategy = class {
+    static {
+      __name(this, "WorkerShardingStrategy");
+    }
+    manager;
+    options;
+    #workers = [];
+    #workerByShardId = new import_collection.Collection;
+    connectPromises = new import_collection.Collection;
+    destroyPromises = new import_collection.Collection;
+    fetchStatusPromises = new import_collection.Collection;
+    waitForIdentifyControllers = new import_collection.Collection;
+    throttler;
+    constructor(manager, options) {
+      this.manager = manager;
+      this.options = options;
+    }
+    async spawn(shardIds) {
+      const shardsPerWorker = this.options.shardsPerWorker === "all" ? shardIds.length : this.options.shardsPerWorker;
+      const strategyOptions = await managerToFetchingStrategyOptions(this.manager);
+      const loops = Math.ceil(shardIds.length / shardsPerWorker);
+      const promises = [];
+      for (let idx = 0;idx < loops; idx++) {
+        const slice = shardIds.slice(idx * shardsPerWorker, (idx + 1) * shardsPerWorker);
+        const workerData2 = {
+          ...strategyOptions,
+          shardIds: slice
+        };
+        promises.push(this.setupWorker(workerData2));
+      }
+      await Promise.all(promises);
+    }
+    async connect() {
+      const promises = [];
+      for (const [shardId, worker] of this.#workerByShardId.entries()) {
+        const payload = {
+          op: 0,
+          shardId
+        };
+        const promise = new Promise((resolve2) => this.connectPromises.set(shardId, resolve2));
+        worker.postMessage(payload);
+        promises.push(promise);
+      }
+      await Promise.all(promises);
+    }
+    async destroy(options = {}) {
+      const promises = [];
+      for (const [shardId, worker] of this.#workerByShardId.entries()) {
+        const payload = {
+          op: 1,
+          shardId,
+          options
+        };
+        promises.push(new Promise((resolve2) => this.destroyPromises.set(shardId, resolve2)).then(async () => worker.terminate()));
+        worker.postMessage(payload);
+      }
+      this.#workers = [];
+      this.#workerByShardId.clear();
+      await Promise.all(promises);
+    }
+    send(shardId, data) {
+      const worker = this.#workerByShardId.get(shardId);
+      if (!worker) {
+        throw new Error(`No worker found for shard ${shardId}`);
+      }
+      const payload = {
+        op: 2,
+        shardId,
+        payload: data
+      };
+      worker.postMessage(payload);
+    }
+    async fetchStatus() {
+      const statuses = new import_collection.Collection;
+      for (const [shardId, worker] of this.#workerByShardId.entries()) {
+        const nonce = Math.random();
+        const payload = {
+          op: 5,
+          shardId,
+          nonce
+        };
+        const promise = new Promise((resolve2) => this.fetchStatusPromises.set(nonce, resolve2));
+        worker.postMessage(payload);
+        const status = await promise;
+        statuses.set(shardId, status);
+      }
+      return statuses;
+    }
+    async setupWorker(workerData2) {
+      const worker = new import_node_worker_threads.Worker(this.resolveWorkerPath(), { workerData: workerData2 });
+      await (0, import_node_events.once)(worker, "online");
+      await this.waitForWorkerReady(worker);
+      worker.on("error", (err) => {
+        throw err;
+      }).on("messageerror", (err) => {
+        throw err;
+      }).on("message", async (payload) => {
+        if ("op" in payload) {
+          await this.onMessage(worker, payload);
+        } else {
+          await this.options.unknownPayloadHandler?.(payload);
+        }
+      });
+      this.#workers.push(worker);
+      for (const shardId of workerData2.shardIds) {
+        this.#workerByShardId.set(shardId, worker);
+      }
+    }
+    resolveWorkerPath() {
+      const path = this.options.workerPath;
+      if (!path) {
+        return (0, import_node_path.join)(__dirname, "defaultWorker.js");
+      }
+      if ((0, import_node_path.isAbsolute)(path)) {
+        return path;
+      }
+      if (/^\.\.?[/\\]/.test(path)) {
+        return (0, import_node_path.resolve)(path);
+      }
+      try {
+        return __require.resolve(path);
+      } catch {
+        return (0, import_node_path.resolve)(path);
+      }
+    }
+    async waitForWorkerReady(worker) {
+      return new Promise((resolve2) => {
+        const handler = /* @__PURE__ */ __name((payload) => {
+          if (payload.op === 7) {
+            resolve2();
+            worker.off("message", handler);
+          }
+        }, "handler");
+        worker.on("message", handler);
+      });
+    }
+    async onMessage(worker, payload) {
+      switch (payload.op) {
+        case 0: {
+          this.connectPromises.get(payload.shardId)?.();
+          this.connectPromises.delete(payload.shardId);
+          break;
+        }
+        case 1: {
+          this.destroyPromises.get(payload.shardId)?.();
+          this.destroyPromises.delete(payload.shardId);
+          break;
+        }
+        case 2: {
+          this.manager.emit(payload.event, ...payload.data, payload.shardId);
+          break;
+        }
+        case 3: {
+          const session = await this.manager.options.retrieveSessionInfo(payload.shardId);
+          const response = {
+            op: 3,
+            nonce: payload.nonce,
+            session
+          };
+          worker.postMessage(response);
+          break;
+        }
+        case 4: {
+          await this.manager.options.updateSessionInfo(payload.shardId, payload.session);
+          break;
+        }
+        case 5: {
+          const throttler = await this.ensureThrottler();
+          try {
+            const controller = new AbortController;
+            this.waitForIdentifyControllers.set(payload.nonce, controller);
+            await throttler.waitForIdentify(payload.shardId, controller.signal);
+          } catch {
+            return;
+          }
+          const response = {
+            op: 4,
+            nonce: payload.nonce,
+            ok: true
+          };
+          worker.postMessage(response);
+          break;
+        }
+        case 6: {
+          this.fetchStatusPromises.get(payload.nonce)?.(payload.status);
+          this.fetchStatusPromises.delete(payload.nonce);
+          break;
+        }
+        case 7: {
+          break;
+        }
+        case 8: {
+          this.waitForIdentifyControllers.get(payload.nonce)?.abort();
+          this.waitForIdentifyControllers.delete(payload.nonce);
+          const response = {
+            op: 4,
+            nonce: payload.nonce,
+            ok: false
+          };
+          worker.postMessage(response);
+          break;
+        }
+        default: {
+          await this.options.unknownPayloadHandler?.(payload);
+          break;
+        }
+      }
+    }
+    async ensureThrottler() {
+      this.throttler ??= await this.manager.options.buildIdentifyThrottler(this.manager);
+      return this.throttler;
+    }
+  };
+  var WorkerContextFetchingStrategy = class {
+    constructor(options) {
+      this.options = options;
+      if (import_node_worker_threads2.isMainThread) {
+        throw new Error("Cannot instantiate WorkerContextFetchingStrategy on the main thread");
+      }
+      import_node_worker_threads2.parentPort.on("message", (payload) => {
+        if (payload.op === 3) {
+          this.sessionPromises.get(payload.nonce)?.(payload.session);
+          this.sessionPromises.delete(payload.nonce);
+        }
+        if (payload.op === 4) {
+          const promise = this.waitForIdentifyPromises.get(payload.nonce);
+          if (payload.ok) {
+            promise?.resolve();
+          } else {
+            promise?.reject(promise.signal.reason);
+          }
+          this.waitForIdentifyPromises.delete(payload.nonce);
+        }
+      });
+    }
+    static {
+      __name(this, "WorkerContextFetchingStrategy");
+    }
+    sessionPromises = new import_collection2.Collection;
+    waitForIdentifyPromises = new import_collection2.Collection;
+    async retrieveSessionInfo(shardId) {
+      const nonce = Math.random();
+      const payload = {
+        op: 3,
+        shardId,
+        nonce
+      };
+      const promise = new Promise((resolve2) => this.sessionPromises.set(nonce, resolve2));
+      import_node_worker_threads2.parentPort.postMessage(payload);
+      return promise;
+    }
+    updateSessionInfo(shardId, sessionInfo) {
+      const payload = {
+        op: 4,
+        shardId,
+        session: sessionInfo
+      };
+      import_node_worker_threads2.parentPort.postMessage(payload);
+    }
+    async waitForIdentify(shardId, signal) {
+      const nonce = Math.random();
+      const payload = {
+        op: 5,
+        nonce,
+        shardId
+      };
+      const promise = new Promise((resolve2, reject) => this.waitForIdentifyPromises.set(nonce, { signal, resolve: resolve2, reject }));
+      import_node_worker_threads2.parentPort.postMessage(payload);
+      const listener = /* @__PURE__ */ __name(() => {
+        const payload2 = {
+          op: 8,
+          nonce
+        };
+        import_node_worker_threads2.parentPort.postMessage(payload2);
+      }, "listener");
+      signal.addEventListener("abort", listener);
+      try {
+        await promise;
+      } finally {
+        signal.removeEventListener("abort", listener);
+      }
+    }
+  };
+  var import_collection6 = require_dist6();
+  var import_node_buffer = __require("buffer");
+  var import_node_events2 = __require("events");
+  var import_node_timers = __require("timers");
+  var import_promises2 = __require("timers/promises");
+  var import_node_url = __require("url");
+  var import_node_util = __require("util");
+  var import_collection5 = require_dist6();
+  var import_util2 = require_dist();
+  var import_async_queue2 = require_cjs2();
+  var import_async_event_emitter = require_dist3();
+  var import_v102 = require_v1018();
+  var import_ws = require_ws();
+  var import_node_process = __toESM2(__require("process"));
+  var import_collection4 = require_dist6();
+  var import_util = require_dist();
+  var import_v10 = require_v1018();
+  var import_promises = __require("timers/promises");
+  var import_collection3 = require_dist6();
+  var import_async_queue = require_cjs2();
+  var SimpleIdentifyThrottler = class {
+    constructor(maxConcurrency) {
+      this.maxConcurrency = maxConcurrency;
+    }
+    static {
+      __name(this, "SimpleIdentifyThrottler");
+    }
+    states = new import_collection3.Collection;
+    async waitForIdentify(shardId, signal) {
+      const key = shardId % this.maxConcurrency;
+      const state = this.states.ensure(key, () => {
+        return {
+          queue: new import_async_queue.AsyncQueue,
+          resetsAt: Number.POSITIVE_INFINITY
+        };
+      });
+      await state.queue.wait({ signal });
+      try {
+        const diff = state.resetsAt - Date.now();
+        if (diff <= 5000) {
+          const time = diff + Math.random() * 1500;
+          await (0, import_promises.setTimeout)(time);
+        }
+        state.resetsAt = Date.now() + 5000;
+      } finally {
+        state.queue.shift();
+      }
+    }
+  };
+  var Encoding = /* @__PURE__ */ ((Encoding2) => {
+    Encoding2["JSON"] = "json";
+    return Encoding2;
+  })(Encoding || {});
+  var CompressionMethod = /* @__PURE__ */ ((CompressionMethod2) => {
+    CompressionMethod2[CompressionMethod2["ZlibNative"] = 0] = "ZlibNative";
+    CompressionMethod2[CompressionMethod2["ZlibSync"] = 1] = "ZlibSync";
+    return CompressionMethod2;
+  })(CompressionMethod || {});
+  var DefaultDeviceProperty = `@discordjs/ws 2.0.0`;
+  var getDefaultSessionStore = (0, import_util.lazy)(() => new import_collection4.Collection);
+  var CompressionParameterMap = {
+    [0]: "zlib-stream",
+    [1]: "zlib-stream"
+  };
+  var DefaultWebSocketManagerOptions = {
+    async buildIdentifyThrottler(manager) {
+      const info = await manager.fetchGatewayInformation();
+      return new SimpleIdentifyThrottler(info.session_start_limit.max_concurrency);
+    },
+    buildStrategy: /* @__PURE__ */ __name((manager) => new SimpleShardingStrategy(manager), "buildStrategy"),
+    shardCount: null,
+    shardIds: null,
+    largeThreshold: null,
+    initialPresence: null,
+    identifyProperties: {
+      browser: DefaultDeviceProperty,
+      device: DefaultDeviceProperty,
+      os: import_node_process.default.platform
+    },
+    version: import_v10.APIVersion,
+    encoding: "json",
+    compression: null,
+    useIdentifyCompression: false,
+    retrieveSessionInfo(shardId) {
+      const store = getDefaultSessionStore();
+      return store.get(shardId) ?? null;
+    },
+    updateSessionInfo(shardId, info) {
+      const store = getDefaultSessionStore();
+      if (info) {
+        store.set(shardId, info);
+      } else {
+        store.delete(shardId);
+      }
+    },
+    handshakeTimeout: 30000,
+    helloTimeout: 60000,
+    readyTimeout: 15000
+  };
+  var ImportantGatewayOpcodes = /* @__PURE__ */ new Set([
+    import_v10.GatewayOpcodes.Heartbeat,
+    import_v10.GatewayOpcodes.Identify,
+    import_v10.GatewayOpcodes.Resume
+  ]);
+  function getInitialSendRateLimitState() {
+    return {
+      sent: 0,
+      resetAt: Date.now() + 60000
+    };
+  }
+  __name(getInitialSendRateLimitState, "getInitialSendRateLimitState");
+  var getZlibSync = (0, import_util2.lazy)(async () => import("zlib-sync").then((mod) => mod.default).catch(() => null));
+  var getNativeZlib = (0, import_util2.lazy)(async () => import("zlib").then((mod) => mod).catch(() => null));
+  var WebSocketShardEvents = /* @__PURE__ */ ((WebSocketShardEvents2) => {
+    WebSocketShardEvents2["Closed"] = "closed";
+    WebSocketShardEvents2["Debug"] = "debug";
+    WebSocketShardEvents2["Dispatch"] = "dispatch";
+    WebSocketShardEvents2["Error"] = "error";
+    WebSocketShardEvents2["HeartbeatComplete"] = "heartbeat";
+    WebSocketShardEvents2["Hello"] = "hello";
+    WebSocketShardEvents2["Ready"] = "ready";
+    WebSocketShardEvents2["Resumed"] = "resumed";
+    WebSocketShardEvents2["SocketError"] = "socketError";
+    return WebSocketShardEvents2;
+  })(WebSocketShardEvents || {});
+  var WebSocketShardStatus = /* @__PURE__ */ ((WebSocketShardStatus2) => {
+    WebSocketShardStatus2[WebSocketShardStatus2["Idle"] = 0] = "Idle";
+    WebSocketShardStatus2[WebSocketShardStatus2["Connecting"] = 1] = "Connecting";
+    WebSocketShardStatus2[WebSocketShardStatus2["Resuming"] = 2] = "Resuming";
+    WebSocketShardStatus2[WebSocketShardStatus2["Ready"] = 3] = "Ready";
+    return WebSocketShardStatus2;
+  })(WebSocketShardStatus || {});
+  var WebSocketShardDestroyRecovery = /* @__PURE__ */ ((WebSocketShardDestroyRecovery2) => {
+    WebSocketShardDestroyRecovery2[WebSocketShardDestroyRecovery2["Reconnect"] = 0] = "Reconnect";
+    WebSocketShardDestroyRecovery2[WebSocketShardDestroyRecovery2["Resume"] = 1] = "Resume";
+    return WebSocketShardDestroyRecovery2;
+  })(WebSocketShardDestroyRecovery || {});
+  var CloseCodes = /* @__PURE__ */ ((CloseCodes2) => {
+    CloseCodes2[CloseCodes2["Normal"] = 1000] = "Normal";
+    CloseCodes2[CloseCodes2["Resuming"] = 4200] = "Resuming";
+    return CloseCodes2;
+  })(CloseCodes || {});
+  var WebSocketConstructor = (0, import_util2.shouldUseGlobalFetchAndWebSocket)() ? globalThis.WebSocket : import_ws.WebSocket;
+  var WebSocketShard = class extends import_async_event_emitter.AsyncEventEmitter {
+    static {
+      __name(this, "WebSocketShard");
+    }
+    connection = null;
+    nativeInflate = null;
+    zLibSyncInflate = null;
+    inflateBuffer = [];
+    textDecoder = new import_node_util.TextDecoder;
+    replayedEvents = 0;
+    isAck = true;
+    sendRateLimitState = getInitialSendRateLimitState();
+    initialHeartbeatTimeoutController = null;
+    heartbeatInterval = null;
+    lastHeartbeatAt = -1;
+    initialConnectResolved = false;
+    failedToConnectDueToNetworkError = false;
+    sendQueue = new import_async_queue2.AsyncQueue;
+    timeoutAbortControllers = new import_collection5.Collection;
+    strategy;
+    id;
+    #status = 0;
+    identifyCompressionEnabled = false;
+    get transportCompressionEnabled() {
+      return this.strategy.options.compression !== null && (this.nativeInflate ?? this.zLibSyncInflate) !== null;
+    }
+    get status() {
+      return this.#status;
+    }
+    constructor(strategy, id) {
+      super();
+      this.strategy = strategy;
+      this.id = id;
+    }
+    async connect() {
+      const controller = new AbortController;
+      let promise;
+      if (!this.initialConnectResolved) {
+        promise = Promise.race([
+          (0, import_node_events2.once)(this, "ready", { signal: controller.signal }),
+          (0, import_node_events2.once)(this, "resumed", { signal: controller.signal })
+        ]);
+      }
+      this.internalConnect();
+      try {
+        await promise;
+      } catch ({ error }) {
+        throw error;
+      } finally {
+        controller.abort();
+      }
+      this.initialConnectResolved = true;
+    }
+    async internalConnect() {
+      if (this.#status !== 0) {
+        throw new Error("Tried to connect a shard that wasn't idle");
+      }
+      const { version: version2, encoding, compression, useIdentifyCompression } = this.strategy.options;
+      this.identifyCompressionEnabled = useIdentifyCompression;
+      const params = new import_node_url.URLSearchParams({ v: version2, encoding });
+      if (compression !== null) {
+        if (useIdentifyCompression) {
+          console.warn("WebSocketShard: transport compression is enabled, disabling identify compression");
+          this.identifyCompressionEnabled = false;
+        }
+        params.append("compress", CompressionParameterMap[compression]);
+        switch (compression) {
+          case 0: {
+            const zlib = await getNativeZlib();
+            if (zlib) {
+              this.inflateBuffer = [];
+              const inflate = zlib.createInflate({
+                chunkSize: 65535,
+                flush: zlib.constants.Z_SYNC_FLUSH
+              });
+              inflate.on("data", (chunk) => {
+                this.inflateBuffer.push(chunk);
+              });
+              inflate.on("error", (error) => {
+                this.emit("error", error);
+              });
+              this.nativeInflate = inflate;
+            } else {
+              console.warn("WebSocketShard: Compression is set to native but node:zlib is not available.");
+              params.delete("compress");
+            }
+            break;
+          }
+          case 1: {
+            const zlib = await getZlibSync();
+            if (zlib) {
+              this.zLibSyncInflate = new zlib.Inflate({
+                chunkSize: 65535,
+                to: "string"
+              });
+            } else {
+              console.warn("WebSocketShard: Compression is set to zlib-sync, but it is not installed.");
+              params.delete("compress");
+            }
+            break;
+          }
+        }
+      }
+      if (this.identifyCompressionEnabled) {
+        const zlib = await getNativeZlib();
+        if (!zlib) {
+          console.warn("WebSocketShard: Identify compression is enabled, but node:zlib is not available.");
+          this.identifyCompressionEnabled = false;
+        }
+      }
+      const session = await this.strategy.retrieveSessionInfo(this.id);
+      const url = `${session?.resumeURL ?? this.strategy.options.gatewayInformation.url}?${params.toString()}`;
+      this.debug([`Connecting to ${url}`]);
+      const connection = new WebSocketConstructor(url, [], {
+        handshakeTimeout: this.strategy.options.handshakeTimeout ?? undefined
+      });
+      connection.binaryType = "arraybuffer";
+      connection.onmessage = (event) => {
+        this.onMessage(event.data, event.data instanceof ArrayBuffer);
+      };
+      connection.onerror = (event) => {
+        this.onError(event.error);
+      };
+      connection.onclose = (event) => {
+        this.onClose(event.code);
+      };
+      connection.onopen = () => {
+        this.sendRateLimitState = getInitialSendRateLimitState();
+      };
+      this.connection = connection;
+      this.#status = 1;
+      const { ok } = await this.waitForEvent("hello", this.strategy.options.helloTimeout);
+      if (!ok) {
+        return;
+      }
+      if (session?.shardCount === this.strategy.options.shardCount) {
+        await this.resume(session);
+      } else {
+        await this.identify();
+      }
+    }
+    async destroy(options = {}) {
+      if (this.#status === 0) {
+        this.debug(["Tried to destroy a shard that was idle"]);
+        return;
+      }
+      if (!options.code) {
+        options.code = options.recover === 1 ? 4200 : 1000;
+      }
+      this.debug([
+        "Destroying shard",
+        `Reason: ${options.reason ?? "none"}`,
+        `Code: ${options.code}`,
+        `Recover: ${options.recover === undefined ? "none" : WebSocketShardDestroyRecovery[options.recover]}`
+      ]);
+      this.isAck = true;
+      if (this.heartbeatInterval) {
+        (0, import_node_timers.clearInterval)(this.heartbeatInterval);
+      }
+      if (this.initialHeartbeatTimeoutController) {
+        this.initialHeartbeatTimeoutController.abort();
+        this.initialHeartbeatTimeoutController = null;
+      }
+      this.lastHeartbeatAt = -1;
+      for (const controller of this.timeoutAbortControllers.values()) {
+        controller.abort();
+      }
+      this.timeoutAbortControllers.clear();
+      this.failedToConnectDueToNetworkError = false;
+      if (options.recover !== 1) {
+        await this.strategy.updateSessionInfo(this.id, null);
+      }
+      if (this.connection) {
+        this.connection.onmessage = null;
+        this.connection.onclose = null;
+        const shouldClose = this.connection.readyState === import_ws.WebSocket.OPEN;
+        this.debug([
+          "Connection status during destroy",
+          `Needs closing: ${shouldClose}`,
+          `Ready state: ${this.connection.readyState}`
+        ]);
+        if (shouldClose) {
+          let outerResolve;
+          const promise = new Promise((resolve2) => {
+            outerResolve = resolve2;
+          });
+          this.connection.onclose = outerResolve;
+          this.connection.close(options.code, options.reason);
+          await promise;
+          this.emit("closed", options.code);
+        }
+        this.connection.onerror = null;
+      } else {
+        this.debug(["Destroying a shard that has no connection; please open an issue on GitHub"]);
+      }
+      this.#status = 0;
+      if (options.recover !== undefined) {
+        await (0, import_promises2.setTimeout)(500);
+        return this.internalConnect();
+      }
+    }
+    async waitForEvent(event, timeoutDuration) {
+      this.debug([`Waiting for event ${event} ${timeoutDuration ? `for ${timeoutDuration}ms` : "indefinitely"}`]);
+      const timeoutController = new AbortController;
+      const timeout = timeoutDuration ? (0, import_node_timers.setTimeout)(() => timeoutController.abort(), timeoutDuration).unref() : null;
+      this.timeoutAbortControllers.set(event, timeoutController);
+      const closeController = new AbortController;
+      try {
+        const closed = await Promise.race([
+          (0, import_node_events2.once)(this, event, { signal: timeoutController.signal }).then(() => false),
+          (0, import_node_events2.once)(this, "closed", { signal: closeController.signal }).then(() => true)
+        ]);
+        return { ok: !closed };
+      } catch {
+        this.destroy({
+          code: 1000,
+          reason: "Something timed out or went wrong while waiting for an event",
+          recover: 0
+        });
+        return { ok: false };
+      } finally {
+        if (timeout) {
+          (0, import_node_timers.clearTimeout)(timeout);
+        }
+        this.timeoutAbortControllers.delete(event);
+        if (!closeController.signal.aborted) {
+          closeController.abort();
+        }
+      }
+    }
+    async send(payload) {
+      if (!this.connection) {
+        throw new Error("WebSocketShard wasn't connected");
+      }
+      if (ImportantGatewayOpcodes.has(payload.op)) {
+        this.connection.send(JSON.stringify(payload));
+        return;
+      }
+      if (this.#status !== 3 && !ImportantGatewayOpcodes.has(payload.op)) {
+        this.debug(["Tried to send a non-crucial payload before the shard was ready, waiting"]);
+        try {
+          await (0, import_node_events2.once)(this, "ready");
+        } catch {
+          return this.send(payload);
+        }
+      }
+      await this.sendQueue.wait();
+      const now = Date.now();
+      if (now >= this.sendRateLimitState.resetAt) {
+        this.sendRateLimitState = getInitialSendRateLimitState();
+      }
+      if (this.sendRateLimitState.sent + 1 >= 115) {
+        const sleepFor = this.sendRateLimitState.resetAt - now + Math.random() * 1500;
+        this.debug([`Was about to hit the send rate limit, sleeping for ${sleepFor}ms`]);
+        const controller = new AbortController;
+        const interrupted = await Promise.race([
+          (0, import_promises2.setTimeout)(sleepFor).then(() => false),
+          (0, import_node_events2.once)(this, "closed", { signal: controller.signal }).then(() => true)
+        ]);
+        if (interrupted) {
+          this.debug(["Connection closed while waiting for the send rate limit to reset, re-queueing payload"]);
+          this.sendQueue.shift();
+          return this.send(payload);
+        }
+        controller.abort();
+      }
+      this.sendRateLimitState.sent++;
+      this.sendQueue.shift();
+      this.connection.send(JSON.stringify(payload));
+    }
+    async identify() {
+      this.debug(["Waiting for identify throttle"]);
+      const controller = new AbortController;
+      const closeHandler = /* @__PURE__ */ __name(() => {
+        controller.abort();
+      }, "closeHandler");
+      this.on("closed", closeHandler);
+      try {
+        await this.strategy.waitForIdentify(this.id, controller.signal);
+      } catch {
+        if (controller.signal.aborted) {
+          this.debug(["Was waiting for an identify, but the shard closed in the meantime"]);
+          return;
+        }
+        this.debug([
+          "IContextFetchingStrategy#waitForIdentify threw an unknown error.",
+          "If you're using a custom strategy, this is probably nothing to worry about.",
+          "If you're not, please open an issue on GitHub."
+        ]);
+        await this.destroy({
+          reason: "Identify throttling logic failed",
+          recover: 1
+        });
+      } finally {
+        this.off("closed", closeHandler);
+      }
+      this.debug([
+        "Identifying",
+        `shard id: ${this.id.toString()}`,
+        `shard count: ${this.strategy.options.shardCount}`,
+        `intents: ${this.strategy.options.intents}`,
+        `compression: ${this.transportCompressionEnabled ? CompressionParameterMap[this.strategy.options.compression] : this.identifyCompressionEnabled ? "identify" : "none"}`
+      ]);
+      const data = {
+        token: this.strategy.options.token,
+        properties: this.strategy.options.identifyProperties,
+        intents: this.strategy.options.intents,
+        compress: this.identifyCompressionEnabled,
+        shard: [this.id, this.strategy.options.shardCount]
+      };
+      if (this.strategy.options.largeThreshold) {
+        data.large_threshold = this.strategy.options.largeThreshold;
+      }
+      if (this.strategy.options.initialPresence) {
+        data.presence = this.strategy.options.initialPresence;
+      }
+      await this.send({
+        op: import_v102.GatewayOpcodes.Identify,
+        d: data
+      });
+      await this.waitForEvent("ready", this.strategy.options.readyTimeout);
+    }
+    async resume(session) {
+      this.debug([
+        "Resuming session",
+        `resume url: ${session.resumeURL}`,
+        `sequence: ${session.sequence}`,
+        `shard id: ${this.id.toString()}`
+      ]);
+      this.#status = 2;
+      this.replayedEvents = 0;
+      return this.send({
+        op: import_v102.GatewayOpcodes.Resume,
+        d: {
+          token: this.strategy.options.token,
+          seq: session.sequence,
+          session_id: session.sessionId
+        }
+      });
+    }
+    async heartbeat(requested = false) {
+      if (!this.isAck && !requested) {
+        return this.destroy({ reason: "Zombie connection", recover: 1 });
+      }
+      const session = await this.strategy.retrieveSessionInfo(this.id);
+      await this.send({
+        op: import_v102.GatewayOpcodes.Heartbeat,
+        d: session?.sequence ?? null
+      });
+      this.lastHeartbeatAt = Date.now();
+      this.isAck = false;
+    }
+    parseInflateResult(result) {
+      if (!result) {
+        return null;
+      }
+      return JSON.parse(typeof result === "string" ? result : this.textDecoder.decode(result));
+    }
+    async unpackMessage(data, isBinary) {
+      if (!isBinary) {
+        try {
+          return JSON.parse(data);
+        } catch {
+          return null;
+        }
+      }
+      const decompressable = new Uint8Array(data);
+      if (this.identifyCompressionEnabled) {
+        return new Promise(async (resolve2, reject) => {
+          const zlib = await getNativeZlib();
+          zlib.inflate(decompressable, { chunkSize: 65535 }, (err, result) => {
+            if (err) {
+              reject(err);
+              return;
+            }
+            resolve2(JSON.parse(this.textDecoder.decode(result)));
+          });
+        });
+      }
+      if (this.transportCompressionEnabled) {
+        const flush = decompressable.length >= 4 && decompressable.at(-4) === 0 && decompressable.at(-3) === 0 && decompressable.at(-2) === 255 && decompressable.at(-1) === 255;
+        if (this.nativeInflate) {
+          const doneWriting = new Promise((resolve2) => {
+            this.nativeInflate.write(decompressable, "binary", (error) => {
+              if (error) {
+                this.emit("error", error);
+              }
+              resolve2();
+            });
+          });
+          if (!flush) {
+            return null;
+          }
+          await doneWriting;
+          const result = this.parseInflateResult(import_node_buffer.Buffer.concat(this.inflateBuffer));
+          this.inflateBuffer = [];
+          return result;
+        } else if (this.zLibSyncInflate) {
+          const zLibSync = await getZlibSync();
+          this.zLibSyncInflate.push(import_node_buffer.Buffer.from(decompressable), flush ? zLibSync.Z_SYNC_FLUSH : zLibSync.Z_NO_FLUSH);
+          if (this.zLibSyncInflate.err) {
+            this.emit("error", new Error(`${this.zLibSyncInflate.err}${this.zLibSyncInflate.msg ? `: ${this.zLibSyncInflate.msg}` : ""}`));
+          }
+          if (!flush) {
+            return null;
+          }
+          const { result } = this.zLibSyncInflate;
+          return this.parseInflateResult(result);
+        }
+      }
+      this.debug([
+        "Received a message we were unable to decompress",
+        `isBinary: ${isBinary.toString()}`,
+        `identifyCompressionEnabled: ${this.identifyCompressionEnabled.toString()}`,
+        `inflate: ${this.transportCompressionEnabled ? CompressionMethod[this.strategy.options.compression] : "none"}`
+      ]);
+      return null;
+    }
+    async onMessage(data, isBinary) {
+      const payload = await this.unpackMessage(data, isBinary);
+      if (!payload) {
+        return;
+      }
+      switch (payload.op) {
+        case import_v102.GatewayOpcodes.Dispatch: {
+          if (this.#status === 2) {
+            this.replayedEvents++;
+          }
+          switch (payload.t) {
+            case import_v102.GatewayDispatchEvents.Ready: {
+              this.#status = 3;
+              const session2 = {
+                sequence: payload.s,
+                sessionId: payload.d.session_id,
+                shardId: this.id,
+                shardCount: this.strategy.options.shardCount,
+                resumeURL: payload.d.resume_gateway_url
+              };
+              await this.strategy.updateSessionInfo(this.id, session2);
+              this.emit("ready", payload.d);
+              break;
+            }
+            case import_v102.GatewayDispatchEvents.Resumed: {
+              this.#status = 3;
+              this.debug([`Resumed and replayed ${this.replayedEvents} events`]);
+              this.emit("resumed");
+              break;
+            }
+            default: {
+              break;
+            }
+          }
+          const session = await this.strategy.retrieveSessionInfo(this.id);
+          if (session) {
+            if (payload.s > session.sequence) {
+              await this.strategy.updateSessionInfo(this.id, { ...session, sequence: payload.s });
+            }
+          } else {
+            this.debug([
+              `Received a ${payload.t} event but no session is available. Session information cannot be re-constructed in this state without a full reconnect`
+            ]);
+          }
+          this.emit("dispatch", payload);
+          break;
+        }
+        case import_v102.GatewayOpcodes.Heartbeat: {
+          await this.heartbeat(true);
+          break;
+        }
+        case import_v102.GatewayOpcodes.Reconnect: {
+          await this.destroy({
+            reason: "Told to reconnect by Discord",
+            recover: 1
+          });
+          break;
+        }
+        case import_v102.GatewayOpcodes.InvalidSession: {
+          this.debug([`Invalid session; will attempt to resume: ${payload.d.toString()}`]);
+          const session = await this.strategy.retrieveSessionInfo(this.id);
+          if (payload.d && session) {
+            await this.resume(session);
+          } else {
+            await this.destroy({
+              reason: "Invalid session",
+              recover: 0
+            });
+          }
+          break;
+        }
+        case import_v102.GatewayOpcodes.Hello: {
+          this.emit("hello");
+          const jitter = Math.random();
+          const firstWait = Math.floor(payload.d.heartbeat_interval * jitter);
+          this.debug([`Preparing first heartbeat of the connection with a jitter of ${jitter}; waiting ${firstWait}ms`]);
+          try {
+            const controller = new AbortController;
+            this.initialHeartbeatTimeoutController = controller;
+            await (0, import_promises2.setTimeout)(firstWait, undefined, { signal: controller.signal });
+          } catch {
+            this.debug(["Cancelled initial heartbeat due to #destroy being called"]);
+            return;
+          } finally {
+            this.initialHeartbeatTimeoutController = null;
+          }
+          await this.heartbeat();
+          this.debug([`First heartbeat sent, starting to beat every ${payload.d.heartbeat_interval}ms`]);
+          this.heartbeatInterval = (0, import_node_timers.setInterval)(() => void this.heartbeat(), payload.d.heartbeat_interval);
+          break;
+        }
+        case import_v102.GatewayOpcodes.HeartbeatAck: {
+          this.isAck = true;
+          const ackAt = Date.now();
+          this.emit("heartbeat", {
+            ackAt,
+            heartbeatAt: this.lastHeartbeatAt,
+            latency: ackAt - this.lastHeartbeatAt
+          });
+          break;
+        }
+      }
+    }
+    onError(error) {
+      this.emit("socketError", error);
+      this.failedToConnectDueToNetworkError = true;
+    }
+    async onClose(code) {
+      this.emit("closed", code);
+      switch (code) {
+        case 1000: {
+          return this.destroy({
+            code,
+            reason: "Got disconnected by Discord",
+            recover: 0
+          });
+        }
+        case 4200: {
+          break;
+        }
+        case import_v102.GatewayCloseCodes.UnknownError: {
+          this.debug([`An unknown error occurred: ${code}`]);
+          return this.destroy({ code, recover: 1 });
+        }
+        case import_v102.GatewayCloseCodes.UnknownOpcode: {
+          this.debug(["An invalid opcode was sent to Discord."]);
+          return this.destroy({ code, recover: 1 });
+        }
+        case import_v102.GatewayCloseCodes.DecodeError: {
+          this.debug(["An invalid payload was sent to Discord."]);
+          return this.destroy({ code, recover: 1 });
+        }
+        case import_v102.GatewayCloseCodes.NotAuthenticated: {
+          this.debug(["A request was somehow sent before the identify/resume payload."]);
+          return this.destroy({ code, recover: 0 });
+        }
+        case import_v102.GatewayCloseCodes.AuthenticationFailed: {
+          this.emit("error", new Error("Authentication failed"));
+          return this.destroy({ code });
+        }
+        case import_v102.GatewayCloseCodes.AlreadyAuthenticated: {
+          this.debug(["More than one auth payload was sent."]);
+          return this.destroy({ code, recover: 0 });
+        }
+        case import_v102.GatewayCloseCodes.InvalidSeq: {
+          this.debug(["An invalid sequence was sent."]);
+          return this.destroy({ code, recover: 0 });
+        }
+        case import_v102.GatewayCloseCodes.RateLimited: {
+          this.debug(["The WebSocket rate limit has been hit, this should never happen"]);
+          return this.destroy({ code, recover: 0 });
+        }
+        case import_v102.GatewayCloseCodes.SessionTimedOut: {
+          this.debug(["Session timed out."]);
+          return this.destroy({ code, recover: 1 });
+        }
+        case import_v102.GatewayCloseCodes.InvalidShard: {
+          this.emit("error", new Error("Invalid shard"));
+          return this.destroy({ code });
+        }
+        case import_v102.GatewayCloseCodes.ShardingRequired: {
+          this.emit("error", new Error("Sharding is required"));
+          return this.destroy({ code });
+        }
+        case import_v102.GatewayCloseCodes.InvalidAPIVersion: {
+          this.emit("error", new Error("Used an invalid API version"));
+          return this.destroy({ code });
+        }
+        case import_v102.GatewayCloseCodes.InvalidIntents: {
+          this.emit("error", new Error("Used invalid intents"));
+          return this.destroy({ code });
+        }
+        case import_v102.GatewayCloseCodes.DisallowedIntents: {
+          this.emit("error", new Error("Used disallowed intents"));
+          return this.destroy({ code });
+        }
+        default: {
+          this.debug([
+            `The gateway closed with an unexpected code ${code}, attempting to ${this.failedToConnectDueToNetworkError ? "reconnect" : "resume"}.`
+          ]);
+          return this.destroy({
+            code,
+            recover: this.failedToConnectDueToNetworkError ? 0 : 1
+          });
+        }
+      }
+    }
+    debug(messages) {
+      this.emit("debug", messages.join("\n	"));
+    }
+  };
+  var SimpleShardingStrategy = class {
+    static {
+      __name(this, "SimpleShardingStrategy");
+    }
+    manager;
+    shards = new import_collection6.Collection;
+    constructor(manager) {
+      this.manager = manager;
+    }
+    async spawn(shardIds) {
+      const strategyOptions = await managerToFetchingStrategyOptions(this.manager);
+      for (const shardId of shardIds) {
+        const strategy = new SimpleContextFetchingStrategy(this.manager, strategyOptions);
+        const shard = new WebSocketShard(strategy, shardId);
+        for (const event of Object.values(WebSocketShardEvents)) {
+          shard.on(event, (...args) => this.manager.emit(event, ...args, shardId));
+        }
+        this.shards.set(shardId, shard);
+      }
+    }
+    async connect() {
+      const promises = [];
+      for (const shard of this.shards.values()) {
+        promises.push(shard.connect());
+      }
+      await Promise.all(promises);
+    }
+    async destroy(options) {
+      const promises = [];
+      for (const shard of this.shards.values()) {
+        promises.push(shard.destroy(options));
+      }
+      await Promise.all(promises);
+      this.shards.clear();
+    }
+    async send(shardId, payload) {
+      const shard = this.shards.get(shardId);
+      if (!shard) {
+        throw new RangeError(`Shard ${shardId} not found`);
+      }
+      return shard.send(payload);
+    }
+    async fetchStatus() {
+      return this.shards.mapValues((shard) => shard.status);
+    }
+  };
+  var import_node_worker_threads3 = __require("worker_threads");
+  var import_collection7 = require_dist6();
+  var WorkerBootstrapper = class {
+    static {
+      __name(this, "WorkerBootstrapper");
+    }
+    data = import_node_worker_threads3.workerData;
+    shards = new import_collection7.Collection;
+    constructor() {
+      if (import_node_worker_threads3.isMainThread) {
+        throw new Error("Expected WorkerBootstrap to not be used within the main thread");
+      }
+    }
+    async connect(shardId) {
+      const shard = this.shards.get(shardId);
+      if (!shard) {
+        throw new RangeError(`Shard ${shardId} does not exist`);
+      }
+      await shard.connect();
+    }
+    async destroy(shardId, options) {
+      const shard = this.shards.get(shardId);
+      if (!shard) {
+        throw new RangeError(`Shard ${shardId} does not exist`);
+      }
+      await shard.destroy(options);
+    }
+    setupThreadEvents() {
+      import_node_worker_threads3.parentPort.on("messageerror", (err) => {
+        throw err;
+      }).on("message", async (payload) => {
+        switch (payload.op) {
+          case 0: {
+            await this.connect(payload.shardId);
+            const response = {
+              op: 0,
+              shardId: payload.shardId
+            };
+            import_node_worker_threads3.parentPort.postMessage(response);
+            break;
+          }
+          case 1: {
+            await this.destroy(payload.shardId, payload.options);
+            const response = {
+              op: 1,
+              shardId: payload.shardId
+            };
+            import_node_worker_threads3.parentPort.postMessage(response);
+            break;
+          }
+          case 2: {
+            const shard = this.shards.get(payload.shardId);
+            if (!shard) {
+              throw new RangeError(`Shard ${payload.shardId} does not exist`);
+            }
+            await shard.send(payload.payload);
+            break;
+          }
+          case 3: {
+            break;
+          }
+          case 4: {
+            break;
+          }
+          case 5: {
+            const shard = this.shards.get(payload.shardId);
+            if (!shard) {
+              throw new Error(`Shard ${payload.shardId} does not exist`);
+            }
+            const response = {
+              op: 6,
+              status: shard.status,
+              nonce: payload.nonce
+            };
+            import_node_worker_threads3.parentPort.postMessage(response);
+            break;
+          }
+        }
+      });
+    }
+    async bootstrap(options = {}) {
+      for (const shardId of this.data.shardIds) {
+        const shard = new WebSocketShard(new WorkerContextFetchingStrategy(this.data), shardId);
+        for (const event of options.forwardEvents ?? Object.values(WebSocketShardEvents)) {
+          shard.on(event, (...args) => {
+            const payload = {
+              op: 2,
+              event,
+              data: args,
+              shardId
+            };
+            import_node_worker_threads3.parentPort.postMessage(payload);
+          });
+        }
+        await options.shardCallback?.(shard);
+        this.shards.set(shardId, shard);
+      }
+      this.setupThreadEvents();
+      const message = {
+        op: 7
+      };
+      import_node_worker_threads3.parentPort.postMessage(message);
+    }
+  };
+  var import_util3 = require_dist();
+  var import_util4 = require_dist();
+  var import_async_event_emitter2 = require_dist3();
+  var import_v103 = require_v1018();
+  (0, import_util4.polyfillDispose)();
+  var WebSocketManager = class extends import_async_event_emitter2.AsyncEventEmitter {
+    static {
+      __name(this, "WebSocketManager");
+    }
+    #token = null;
+    options;
+    gatewayInformation = null;
+    shardIds = null;
+    strategy;
+    get token() {
+      if (!this.#token) {
+        throw new Error("Token has not been set");
+      }
+      return this.#token;
+    }
+    constructor(options) {
+      super();
+      this.options = { ...DefaultWebSocketManagerOptions, ...options };
+      this.strategy = this.options.buildStrategy(this);
+      this.#token = options.token ?? null;
+    }
+    async fetchGatewayInformation(force = false) {
+      if (this.gatewayInformation) {
+        if (this.gatewayInformation.expiresAt <= Date.now()) {
+          this.gatewayInformation = null;
+        } else if (!force) {
+          return this.gatewayInformation.data;
+        }
+      }
+      const data = await this.options.rest.get(import_v103.Routes.gatewayBot());
+      this.gatewayInformation = { data, expiresAt: Date.now() + (data.session_start_limit.reset_after || 5000) };
+      return this.gatewayInformation.data;
+    }
+    async updateShardCount(shardCount) {
+      await this.strategy.destroy({ reason: "User is adjusting their shards" });
+      this.options.shardCount = shardCount;
+      const shardIds = await this.getShardIds(true);
+      await this.strategy.spawn(shardIds);
+      return this;
+    }
+    async getShardCount() {
+      if (this.options.shardCount) {
+        return this.options.shardCount;
+      }
+      const shardIds = await this.getShardIds();
+      return Math.max(...shardIds) + 1;
+    }
+    async getShardIds(force = false) {
+      if (this.shardIds && !force) {
+        return this.shardIds;
+      }
+      let shardIds;
+      if (this.options.shardIds) {
+        if (Array.isArray(this.options.shardIds)) {
+          shardIds = this.options.shardIds;
+        } else {
+          const { start, end } = this.options.shardIds;
+          shardIds = [...(0, import_util3.range)({ start, end: end + 1 })];
+        }
+      } else {
+        const data = await this.fetchGatewayInformation();
+        shardIds = [...(0, import_util3.range)(this.options.shardCount ?? data.shards)];
+      }
+      this.shardIds = shardIds;
+      return shardIds;
+    }
+    async connect() {
+      const shardCount = await this.getShardCount();
+      await this.updateShardCount(shardCount);
+      const shardIds = await this.getShardIds();
+      const data = await this.fetchGatewayInformation();
+      if (data.session_start_limit.remaining < shardIds.length) {
+        throw new Error(`Not enough sessions remaining to spawn ${shardIds.length} shards; only ${data.session_start_limit.remaining} remaining; resets at ${new Date(Date.now() + data.session_start_limit.reset_after).toISOString()}`);
+      }
+      await this.strategy.connect();
+    }
+    setToken(token) {
+      if (this.#token) {
+        throw new Error("Token has already been set");
+      }
+      this.#token = token;
+    }
+    destroy(options) {
+      return this.strategy.destroy(options);
+    }
+    send(shardId, payload) {
+      return this.strategy.send(shardId, payload);
+    }
+    fetchStatus() {
+      return this.strategy.fetchStatus();
+    }
+    async[Symbol.asyncDispose]() {
+      await this.destroy();
+    }
+  };
+  var version = "2.0.0";
 });
 
 // node_modules/lodash.snakecase/index.js
@@ -25936,7 +32997,26 @@ var require_Transformers = __commonJS((exports, module) => {
       triggeringInteractionMetadata: messageInteractionMetadata.triggering_interaction_metadata ? _transformAPIMessageInteractionMetadata(client, messageInteractionMetadata.triggering_interaction_metadata) : null
     };
   }
-  module.exports = { toSnakeCase, _transformAPIAutoModerationAction, _transformAPIMessageInteractionMetadata };
+  function _transformGuildScheduledEventRecurrenceRule(recurrenceRule) {
+    return {
+      start: new Date(recurrenceRule.startAt).toISOString(),
+      end: recurrenceRule.endAt != null ? new Date(recurrenceRule.endAt).toISOString() : recurrenceRule.endAt,
+      frequency: recurrenceRule.frequency,
+      interval: recurrenceRule.interval,
+      by_weekday: recurrenceRule.byWeekday,
+      by_n_weekday: recurrenceRule.byNWeekday,
+      by_month: recurrenceRule.byMonth,
+      by_month_day: recurrenceRule.byMonthDay,
+      by_year_day: recurrenceRule.byYearDay,
+      count: recurrenceRule.count
+    };
+  }
+  module.exports = {
+    toSnakeCase,
+    _transformAPIAutoModerationAction,
+    _transformAPIMessageInteractionMetadata,
+    _transformGuildScheduledEventRecurrenceRule
+  };
 });
 
 // node_modules/discord.js/package.json
@@ -25944,7 +33024,7 @@ var require_package = __commonJS((exports, module) => {
   module.exports = {
     $schema: "https://json.schemastore.org/package.json",
     name: "discord.js",
-    version: "14.16.3",
+    version: "15.0.0-dev.1729080291-62fb9de9c",
     description: "A powerful library for interacting with the Discord API",
     main: "./src/index.js",
     types: "./typings/index.d.ts",
@@ -25997,16 +33077,16 @@ var require_package = __commonJS((exports, module) => {
     dependencies: {
       "@discordjs/builders": "^1.9.0",
       "@discordjs/collection": "1.5.3",
-      "@discordjs/ws": "1.1.1",
       "@sapphire/snowflake": "3.5.3",
-      "discord-api-types": "0.37.100",
+      "discord-api-types": "^0.37.101",
       "fast-deep-equal": "3.1.3",
       "lodash.snakecase": "4.1.1",
       tslib: "^2.6.3",
       undici: "6.19.8",
-      "@discordjs/formatters": "^0.5.0",
       "@discordjs/rest": "^2.4.0",
-      "@discordjs/util": "^1.1.1"
+      "@discordjs/formatters": "^0.5.0",
+      "@discordjs/util": "^1.1.1",
+      "@discordjs/ws": "^2.0.0"
     },
     devDependencies: {
       "@favware/cliff-jumper": "^4.1.0",
@@ -26023,8 +33103,8 @@ var require_package = __commonJS((exports, module) => {
       tslint: "6.1.3",
       turbo: "^2.0.14",
       typescript: "~5.5.4",
-      "@discordjs/api-extractor": "^7.38.1",
       "@discordjs/docgen": "^0.12.1",
+      "@discordjs/api-extractor": "^7.38.1",
       "@discordjs/scripts": "^0.1.0"
     },
     engines: {
@@ -26049,7 +33129,7 @@ var require_package = __commonJS((exports, module) => {
 });
 
 // node_modules/@discordjs/collection/dist/index.js
-var require_dist6 = __commonJS((exports, module) => {
+var require_dist8 = __commonJS((exports, module) => {
   var __defProp2 = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
   var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -26422,7 +33502,7 @@ var require_dist6 = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/LimitedCollection.js
 var require_LimitedCollection = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
 
   class LimitedCollection extends Collection {
@@ -26465,6 +33545,7 @@ var require_LimitedCollection = __commonJS((exports, module) => {
 // node_modules/discord.js/src/util/Options.js
 var require_Options = __commonJS((exports, module) => {
   var { DefaultRestOptions, DefaultUserAgentAppendix } = require_dist5();
+  var { DefaultWebSocketManagerOptions } = require_dist7();
   var { toSnakeCase } = require_Transformers();
   var { version } = require_package();
 
@@ -26474,15 +33555,14 @@ var require_Options = __commonJS((exports, module) => {
       return {
         closeTimeout: 5000,
         waitGuildTimeout: 15000,
-        shardCount: 1,
         makeCache: this.cacheWithLimits(this.DefaultMakeCacheSettings),
         partials: [],
         failIfNotExists: true,
         enforceNonce: false,
-        presence: {},
         sweepers: this.DefaultSweeperSettings,
         ws: {
-          large_threshold: 50,
+          ...DefaultWebSocketManagerOptions,
+          largeThreshold: 50,
           version: 10
         },
         rest: {
@@ -26493,7 +33573,7 @@ var require_Options = __commonJS((exports, module) => {
       };
     }
     static cacheWithLimits(settings = {}) {
-      const { Collection } = require_dist6();
+      const { Collection } = require_dist8();
       const LimitedCollection = require_LimitedCollection();
       return (managerType, _, manager) => {
         const setting = settings[manager.name] ?? settings[managerType.name];
@@ -26514,7 +33594,7 @@ var require_Options = __commonJS((exports, module) => {
       };
     }
     static cacheEverything() {
-      const { Collection } = require_dist6();
+      const { Collection } = require_dist8();
       return () => new Collection;
     }
     static get DefaultMakeCacheSettings() {
@@ -26746,7 +33826,7 @@ var require_Attachment = __commonJS((exports, module) => {
 });
 
 // node_modules/@discordjs/formatters/dist/index.js
-var require_dist7 = __commonJS((exports, module) => {
+var require_dist9 = __commonJS((exports, module) => {
   var __defProp2 = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
   var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -27224,29 +34304,6 @@ var require_Constants = __commonJS((exports) => {
     MessageType.ChannelIconChange,
     MessageType.ThreadStarterMessage
   ];
-  exports.DeletableMessageTypes = [
-    MessageType.AutoModerationAction,
-    MessageType.ChannelFollowAdd,
-    MessageType.ChannelPinnedMessage,
-    MessageType.ChatInputCommand,
-    MessageType.ContextMenuCommand,
-    MessageType.Default,
-    MessageType.GuildBoost,
-    MessageType.GuildBoostTier1,
-    MessageType.GuildBoostTier2,
-    MessageType.GuildBoostTier3,
-    MessageType.GuildInviteReminder,
-    MessageType.InteractionPremiumUpsell,
-    MessageType.Reply,
-    MessageType.RoleSubscriptionPurchase,
-    MessageType.StageEnd,
-    MessageType.StageRaiseHand,
-    MessageType.StageSpeaker,
-    MessageType.StageStart,
-    MessageType.StageTopic,
-    MessageType.ThreadCreated,
-    MessageType.UserJoin
-  ];
   exports.StickerFormatExtensionMap = {
     [StickerFormatType.PNG]: ImageFormat.PNG,
     [StickerFormatType.APNG]: ImageFormat.PNG,
@@ -27257,7 +34314,7 @@ var require_Constants = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/BaseChannel.js
 var require_BaseChannel = __commonJS((exports) => {
-  var { channelLink, channelMention } = require_dist7();
+  var { channelLink, channelMention } = require_dist9();
   var { DiscordSnowflake } = require_cjs();
   var { ChannelType, Routes } = require_v1012();
   var Base = require_Base();
@@ -27455,7 +34512,7 @@ var require_RoleFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Role.js
 var require_Role = __commonJS((exports) => {
-  var { roleMention } = require_dist7();
+  var { roleMention } = require_dist9();
   var { DiscordSnowflake } = require_cjs();
   var { PermissionFlagsBits } = require_v1012();
   var Base = require_Base();
@@ -27699,7 +34756,7 @@ var require_PermissionOverwrites = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/PermissionOverwriteManager.js
 var require_PermissionOverwriteManager = __commonJS((exports, module) => {
   var process2 = __require("node:process");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { OverwriteType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
@@ -28017,7 +35074,7 @@ var require_SKU = __commonJS((exports) => {
 // node_modules/discord.js/src/util/Util.js
 var require_Util = __commonJS((exports, module) => {
   var { parse } = __require("node:path");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { ChannelType, RouteBases, Routes } = require_v1012();
   var { fetch: fetch2 } = require_undici();
   var Colors = require_Colors();
@@ -28481,7 +35538,7 @@ var require_Events = __commonJS((exports, module) => {
     ChannelDelete: "channelDelete",
     ChannelPinsUpdate: "channelPinsUpdate",
     ChannelUpdate: "channelUpdate",
-    ClientReady: "ready",
+    ClientReady: "clientReady",
     Debug: "debug",
     EntitlementCreate: "entitlementCreate",
     EntitlementUpdate: "entitlementUpdate",
@@ -28530,12 +35587,6 @@ var require_Events = __commonJS((exports, module) => {
     MessageReactionRemoveEmoji: "messageReactionRemoveEmoji",
     MessageUpdate: "messageUpdate",
     PresenceUpdate: "presenceUpdate",
-    Raw: "raw",
-    ShardDisconnect: "shardDisconnect",
-    ShardError: "shardError",
-    ShardReady: "shardReady",
-    ShardReconnecting: "shardReconnecting",
-    ShardResume: "shardResume",
     StageInstanceCreate: "stageInstanceCreate",
     StageInstanceDelete: "stageInstanceDelete",
     StageInstanceUpdate: "stageInstanceUpdate",
@@ -28550,7 +35601,7 @@ var require_Events = __commonJS((exports, module) => {
     VoiceServerUpdate: "voiceServerUpdate",
     VoiceStateUpdate: "voiceStateUpdate",
     Warn: "warn",
-    WebhooksUpdate: "webhookUpdate"
+    WebhooksUpdate: "webhooksUpdate"
   };
 });
 
@@ -28767,7 +35818,7 @@ var require_CategoryChannel = __commonJS((exports, module) => {
 var require_Collector = __commonJS((exports, module) => {
   var EventEmitter = __require("node:events");
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
   var { flatten } = require_Util();
 
@@ -28917,7 +35968,7 @@ var require_Collector = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/InteractionCollector.js
 var require_InteractionCollector = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Collector = require_Collector();
   var Events = require_Events();
 
@@ -33015,12 +40066,12 @@ ${pairsBlock}`;
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/gateway/common.js
-var require_common9 = __commonJS((exports) => {
+var require_common13 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/gateway/v10.js
-var require_v1013 = __commonJS((exports) => {
+var require_v1019 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -33043,7 +40094,7 @@ var require_v1013 = __commonJS((exports) => {
   };
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
-  __exportStar(require_common9(), exports);
+  __exportStar(require_common13(), exports);
   exports.GatewayVersion = "10";
   var GatewayOpcodes;
   (function(GatewayOpcodes2) {
@@ -33173,7 +40224,7 @@ var require_v1013 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/globals.js
-var require_globals3 = __commonJS((exports) => {
+var require_globals4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.FormattingPatterns = undefined;
   exports.FormattingPatterns = {
@@ -33194,7 +40245,7 @@ var require_globals3 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/common.js
-var require_common10 = __commonJS((exports) => {
+var require_common14 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.PermissionFlagsBits = undefined;
   exports.PermissionFlagsBits = {
@@ -33253,7 +40304,7 @@ var require_common10 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/application.js
-var require_application5 = __commonJS((exports) => {
+var require_application7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
   var ApplicationFlags;
@@ -33289,7 +40340,7 @@ var require_application5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/auditLog.js
-var require_auditLog5 = __commonJS((exports) => {
+var require_auditLog7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
   var AuditLogEvent;
@@ -33366,7 +40417,7 @@ var require_auditLog5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/autoModeration.js
-var require_autoModeration5 = __commonJS((exports) => {
+var require_autoModeration7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
   var AutoModerationRuleTriggerType;
@@ -33398,7 +40449,7 @@ var require_autoModeration5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/channel.js
-var require_channel7 = __commonJS((exports) => {
+var require_channel10 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ChannelFlags = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
   var SortOrderType;
@@ -33589,12 +40640,12 @@ var require_channel7 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/emoji.js
-var require_emoji5 = __commonJS((exports) => {
+var require_emoji7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/gateway.js
-var require_gateway5 = __commonJS((exports) => {
+var require_gateway7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ActivityFlags = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
   var PresenceUpdateStatus;
@@ -33640,7 +40691,7 @@ var require_gateway5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/guild.js
-var require_guild5 = __commonJS((exports) => {
+var require_guild7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
   var GuildDefaultMessageNotifications;
@@ -33773,7 +40824,7 @@ var require_guild5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
-var require_guildScheduledEvent5 = __commonJS((exports) => {
+var require_guildScheduledEvent7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
   var GuildScheduledEventRecurrenceRuleFrequency;
@@ -33828,47 +40879,47 @@ var require_guildScheduledEvent5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/attachment.js
-var require_attachment3 = __commonJS((exports) => {
+var require_attachment4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/base.js
-var require_base5 = __commonJS((exports) => {
+var require_base7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/boolean.js
-var require_boolean3 = __commonJS((exports) => {
+var require_boolean4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/channel.js
-var require_channel8 = __commonJS((exports) => {
+var require_channel11 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/integer.js
-var require_integer3 = __commonJS((exports) => {
+var require_integer4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/mentionable.js
-var require_mentionable3 = __commonJS((exports) => {
+var require_mentionable4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/number.js
-var require_number3 = __commonJS((exports) => {
+var require_number4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/role.js
-var require_role3 = __commonJS((exports) => {
+var require_role4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
-var require_shared3 = __commonJS((exports) => {
+var require_shared4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ApplicationCommandOptionType = undefined;
   var ApplicationCommandOptionType;
@@ -33888,27 +40939,27 @@ var require_shared3 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/string.js
-var require_string3 = __commonJS((exports) => {
+var require_string4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommand.js
-var require_subcommand3 = __commonJS((exports) => {
+var require_subcommand4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommandGroup.js
-var require_subcommandGroup3 = __commonJS((exports) => {
+var require_subcommandGroup4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/user.js
-var require_user7 = __commonJS((exports) => {
+var require_user10 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
-var require_chatInput3 = __commonJS((exports) => {
+var require_chatInput4 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -33930,28 +40981,28 @@ var require_chatInput3 = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_attachment3(), exports);
-  __exportStar(require_base5(), exports);
-  __exportStar(require_boolean3(), exports);
-  __exportStar(require_channel8(), exports);
-  __exportStar(require_integer3(), exports);
-  __exportStar(require_mentionable3(), exports);
-  __exportStar(require_number3(), exports);
-  __exportStar(require_role3(), exports);
-  __exportStar(require_shared3(), exports);
-  __exportStar(require_string3(), exports);
-  __exportStar(require_subcommand3(), exports);
-  __exportStar(require_subcommandGroup3(), exports);
-  __exportStar(require_user7(), exports);
+  __exportStar(require_attachment4(), exports);
+  __exportStar(require_base7(), exports);
+  __exportStar(require_boolean4(), exports);
+  __exportStar(require_channel11(), exports);
+  __exportStar(require_integer4(), exports);
+  __exportStar(require_mentionable4(), exports);
+  __exportStar(require_number4(), exports);
+  __exportStar(require_role4(), exports);
+  __exportStar(require_shared4(), exports);
+  __exportStar(require_string4(), exports);
+  __exportStar(require_subcommand4(), exports);
+  __exportStar(require_subcommandGroup4(), exports);
+  __exportStar(require_user10(), exports);
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/contextMenu.js
-var require_contextMenu3 = __commonJS((exports) => {
+var require_contextMenu4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
-var require_permissions5 = __commonJS((exports) => {
+var require_permissions7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
   var ApplicationCommandPermissionType;
@@ -33967,7 +41018,7 @@ var require_permissions5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
-var require_applicationCommands3 = __commonJS((exports) => {
+var require_applicationCommands4 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -33990,9 +41041,9 @@ var require_applicationCommands3 = __commonJS((exports) => {
   };
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.InteractionContextType = exports.ApplicationIntegrationType = exports.ApplicationCommandType = undefined;
-  __exportStar(require_chatInput3(), exports);
-  __exportStar(require_contextMenu3(), exports);
-  __exportStar(require_permissions5(), exports);
+  __exportStar(require_chatInput4(), exports);
+  __exportStar(require_contextMenu4(), exports);
+  __exportStar(require_permissions7(), exports);
   var ApplicationCommandType;
   (function(ApplicationCommandType2) {
     ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
@@ -34013,32 +41064,32 @@ var require_applicationCommands3 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/autocomplete.js
-var require_autocomplete3 = __commonJS((exports) => {
+var require_autocomplete4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/base.js
-var require_base6 = __commonJS((exports) => {
+var require_base8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/messageComponents.js
-var require_messageComponents3 = __commonJS((exports) => {
+var require_messageComponents4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/modalSubmit.js
-var require_modalSubmit3 = __commonJS((exports) => {
+var require_modalSubmit4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/ping.js
-var require_ping3 = __commonJS((exports) => {
+var require_ping4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/_interactions/responses.js
-var require_responses3 = __commonJS((exports) => {
+var require_responses4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.InteractionResponseType = exports.InteractionType = undefined;
   var InteractionType;
@@ -34063,7 +41114,7 @@ var require_responses3 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/interactions.js
-var require_interactions5 = __commonJS((exports) => {
+var require_interactions7 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -34085,17 +41136,17 @@ var require_interactions5 = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_applicationCommands3(), exports);
-  __exportStar(require_autocomplete3(), exports);
-  __exportStar(require_base6(), exports);
-  __exportStar(require_messageComponents3(), exports);
-  __exportStar(require_modalSubmit3(), exports);
-  __exportStar(require_ping3(), exports);
-  __exportStar(require_responses3(), exports);
+  __exportStar(require_applicationCommands4(), exports);
+  __exportStar(require_autocomplete4(), exports);
+  __exportStar(require_base8(), exports);
+  __exportStar(require_messageComponents4(), exports);
+  __exportStar(require_modalSubmit4(), exports);
+  __exportStar(require_ping4(), exports);
+  __exportStar(require_responses4(), exports);
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/invite.js
-var require_invite5 = __commonJS((exports) => {
+var require_invite7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.InviteTargetType = exports.InviteType = undefined;
   var InviteType;
@@ -34112,7 +41163,7 @@ var require_invite5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/oauth2.js
-var require_oauth25 = __commonJS((exports) => {
+var require_oauth27 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.OAuth2Scopes = undefined;
   var OAuth2Scopes;
@@ -34146,7 +41197,7 @@ var require_oauth25 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/poll.js
-var require_poll5 = __commonJS((exports) => {
+var require_poll7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.PollLayoutType = undefined;
   var PollLayoutType;
@@ -34156,7 +41207,7 @@ var require_poll5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/permissions.js
-var require_permissions6 = __commonJS((exports) => {
+var require_permissions8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.RoleFlags = undefined;
   var RoleFlags;
@@ -34166,7 +41217,7 @@ var require_permissions6 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/stageInstance.js
-var require_stageInstance5 = __commonJS((exports) => {
+var require_stageInstance7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.StageInstancePrivacyLevel = undefined;
   var StageInstancePrivacyLevel;
@@ -34177,7 +41228,7 @@ var require_stageInstance5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/sticker.js
-var require_sticker5 = __commonJS((exports) => {
+var require_sticker7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.StickerFormatType = exports.StickerType = undefined;
   var StickerType;
@@ -34195,7 +41246,7 @@ var require_sticker5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/teams.js
-var require_teams3 = __commonJS((exports) => {
+var require_teams4 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
   var TeamMemberMembershipState;
@@ -34212,12 +41263,12 @@ var require_teams3 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/template.js
-var require_template5 = __commonJS((exports) => {
+var require_template7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/user.js
-var require_user8 = __commonJS((exports) => {
+var require_user11 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
   var UserFlags;
@@ -34287,12 +41338,12 @@ var require_user8 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/voice.js
-var require_voice5 = __commonJS((exports) => {
+var require_voice7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/webhook.js
-var require_webhook5 = __commonJS((exports) => {
+var require_webhook7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.WebhookType = undefined;
   var WebhookType;
@@ -34304,7 +41355,7 @@ var require_webhook5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/monetization.js
-var require_monetization5 = __commonJS((exports) => {
+var require_monetization7 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
   var EntitlementType;
@@ -34334,7 +41385,7 @@ var require_monetization5 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/payloads/v10/index.js
-var require_v1014 = __commonJS((exports) => {
+var require_v1020 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -34356,32 +41407,32 @@ var require_v1014 = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common10(), exports);
-  __exportStar(require_application5(), exports);
-  __exportStar(require_auditLog5(), exports);
-  __exportStar(require_autoModeration5(), exports);
-  __exportStar(require_channel7(), exports);
-  __exportStar(require_emoji5(), exports);
-  __exportStar(require_gateway5(), exports);
-  __exportStar(require_guild5(), exports);
-  __exportStar(require_guildScheduledEvent5(), exports);
-  __exportStar(require_interactions5(), exports);
-  __exportStar(require_invite5(), exports);
-  __exportStar(require_oauth25(), exports);
-  __exportStar(require_poll5(), exports);
-  __exportStar(require_permissions6(), exports);
-  __exportStar(require_stageInstance5(), exports);
-  __exportStar(require_sticker5(), exports);
-  __exportStar(require_teams3(), exports);
-  __exportStar(require_template5(), exports);
-  __exportStar(require_user8(), exports);
-  __exportStar(require_voice5(), exports);
-  __exportStar(require_webhook5(), exports);
-  __exportStar(require_monetization5(), exports);
+  __exportStar(require_common14(), exports);
+  __exportStar(require_application7(), exports);
+  __exportStar(require_auditLog7(), exports);
+  __exportStar(require_autoModeration7(), exports);
+  __exportStar(require_channel10(), exports);
+  __exportStar(require_emoji7(), exports);
+  __exportStar(require_gateway7(), exports);
+  __exportStar(require_guild7(), exports);
+  __exportStar(require_guildScheduledEvent7(), exports);
+  __exportStar(require_interactions7(), exports);
+  __exportStar(require_invite7(), exports);
+  __exportStar(require_oauth27(), exports);
+  __exportStar(require_poll7(), exports);
+  __exportStar(require_permissions8(), exports);
+  __exportStar(require_stageInstance7(), exports);
+  __exportStar(require_sticker7(), exports);
+  __exportStar(require_teams4(), exports);
+  __exportStar(require_template7(), exports);
+  __exportStar(require_user11(), exports);
+  __exportStar(require_voice7(), exports);
+  __exportStar(require_webhook7(), exports);
+  __exportStar(require_monetization7(), exports);
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/common.js
-var require_common11 = __commonJS((exports) => {
+var require_common15 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.Locale = exports.RESTJSONErrorCodes = undefined;
   var RESTJSONErrorCodes;
@@ -34638,22 +41689,22 @@ var require_common11 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/application.js
-var require_application6 = __commonJS((exports) => {
+var require_application8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/auditLog.js
-var require_auditLog6 = __commonJS((exports) => {
+var require_auditLog8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/autoModeration.js
-var require_autoModeration6 = __commonJS((exports) => {
+var require_autoModeration8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/channel.js
-var require_channel9 = __commonJS((exports) => {
+var require_channel12 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ReactionType = undefined;
   var ReactionType;
@@ -34664,77 +41715,77 @@ var require_channel9 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/emoji.js
-var require_emoji6 = __commonJS((exports) => {
+var require_emoji8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/gateway.js
-var require_gateway6 = __commonJS((exports) => {
+var require_gateway8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/guild.js
-var require_guild6 = __commonJS((exports) => {
+var require_guild8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/guildScheduledEvent.js
-var require_guildScheduledEvent6 = __commonJS((exports) => {
+var require_guildScheduledEvent8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/interactions.js
-var require_interactions6 = __commonJS((exports) => {
+var require_interactions8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/invite.js
-var require_invite6 = __commonJS((exports) => {
+var require_invite8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/oauth2.js
-var require_oauth26 = __commonJS((exports) => {
+var require_oauth28 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/poll.js
-var require_poll6 = __commonJS((exports) => {
+var require_poll8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/stageInstance.js
-var require_stageInstance6 = __commonJS((exports) => {
+var require_stageInstance8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/sticker.js
-var require_sticker6 = __commonJS((exports) => {
+var require_sticker8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/template.js
-var require_template6 = __commonJS((exports) => {
+var require_template8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/user.js
-var require_user9 = __commonJS((exports) => {
+var require_user12 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/voice.js
-var require_voice6 = __commonJS((exports) => {
+var require_voice8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/webhook.js
-var require_webhook6 = __commonJS((exports) => {
+var require_webhook8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/monetization.js
-var require_monetization6 = __commonJS((exports) => {
+var require_monetization8 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.EntitlementOwnerType = undefined;
   var EntitlementOwnerType;
@@ -34745,7 +41796,7 @@ var require_monetization6 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rest/v10/index.js
-var require_v1015 = __commonJS((exports) => {
+var require_v1021 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -34768,26 +41819,26 @@ var require_v1015 = __commonJS((exports) => {
   };
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
-  __exportStar(require_common11(), exports);
-  __exportStar(require_application6(), exports);
-  __exportStar(require_auditLog6(), exports);
-  __exportStar(require_autoModeration6(), exports);
-  __exportStar(require_channel9(), exports);
-  __exportStar(require_emoji6(), exports);
-  __exportStar(require_gateway6(), exports);
-  __exportStar(require_guild6(), exports);
-  __exportStar(require_guildScheduledEvent6(), exports);
-  __exportStar(require_interactions6(), exports);
-  __exportStar(require_invite6(), exports);
-  __exportStar(require_oauth26(), exports);
-  __exportStar(require_poll6(), exports);
-  __exportStar(require_stageInstance6(), exports);
-  __exportStar(require_sticker6(), exports);
-  __exportStar(require_template6(), exports);
-  __exportStar(require_user9(), exports);
-  __exportStar(require_voice6(), exports);
-  __exportStar(require_webhook6(), exports);
-  __exportStar(require_monetization6(), exports);
+  __exportStar(require_common15(), exports);
+  __exportStar(require_application8(), exports);
+  __exportStar(require_auditLog8(), exports);
+  __exportStar(require_autoModeration8(), exports);
+  __exportStar(require_channel12(), exports);
+  __exportStar(require_emoji8(), exports);
+  __exportStar(require_gateway8(), exports);
+  __exportStar(require_guild8(), exports);
+  __exportStar(require_guildScheduledEvent8(), exports);
+  __exportStar(require_interactions8(), exports);
+  __exportStar(require_invite8(), exports);
+  __exportStar(require_oauth28(), exports);
+  __exportStar(require_poll8(), exports);
+  __exportStar(require_stageInstance8(), exports);
+  __exportStar(require_sticker8(), exports);
+  __exportStar(require_template8(), exports);
+  __exportStar(require_user12(), exports);
+  __exportStar(require_voice8(), exports);
+  __exportStar(require_webhook8(), exports);
+  __exportStar(require_monetization8(), exports);
   exports.APIVersion = "10";
   exports.Routes = {
     applicationRoleConnectionMetadata(applicationId) {
@@ -35215,7 +42266,7 @@ var require_v1015 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rpc/common.js
-var require_common12 = __commonJS((exports) => {
+var require_common16 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.RPCCloseEventCodes = exports.RPCErrorCodes = undefined;
   var RPCErrorCodes;
@@ -35249,7 +42300,7 @@ var require_common12 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/rpc/v10.js
-var require_v1016 = __commonJS((exports) => {
+var require_v1022 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -35271,11 +42322,11 @@ var require_v1016 = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common12(), exports);
+  __exportStar(require_common16(), exports);
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/utils/v10.js
-var require_v1017 = __commonJS((exports) => {
+var require_v1023 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.isDMInteraction = isDMInteraction;
   exports.isGuildInteraction = isGuildInteraction;
@@ -35290,7 +42341,7 @@ var require_v1017 = __commonJS((exports) => {
   exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
   exports.isChatInputApplicationCommandInteraction = isChatInputApplicationCommandInteraction;
   exports.isContextMenuApplicationCommandInteraction = isContextMenuApplicationCommandInteraction;
-  var index_1 = require_v1014();
+  var index_1 = require_v1020();
   function isDMInteraction(interaction) {
     return Reflect.has(interaction, "user");
   }
@@ -35339,7 +42390,7 @@ var require_v1017 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/node_modules/discord-api-types/v10.js
-var require_v1018 = __commonJS((exports) => {
+var require_v1024 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
       k2 = k;
@@ -35362,12 +42413,12 @@ var require_v1018 = __commonJS((exports) => {
   };
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.Utils = undefined;
-  __exportStar(require_v1013(), exports);
-  __exportStar(require_globals3(), exports);
-  __exportStar(require_v1014(), exports);
-  __exportStar(require_v1015(), exports);
-  __exportStar(require_v1016(), exports);
-  exports.Utils = require_v1017();
+  __exportStar(require_v1019(), exports);
+  __exportStar(require_globals4(), exports);
+  __exportStar(require_v1020(), exports);
+  __exportStar(require_v1021(), exports);
+  __exportStar(require_v1022(), exports);
+  exports.Utils = require_v1023();
 });
 
 // node_modules/fast-deep-equal/index.js
@@ -35787,7 +42838,7 @@ var require_cjs4 = __commonJS((exports) => {
 });
 
 // node_modules/@discordjs/builders/dist/index.js
-var require_dist8 = __commonJS((exports, module) => {
+var require_dist10 = __commonJS((exports, module) => {
   var __create2 = Object.create;
   var __defProp2 = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -36045,7 +43096,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data };
     }
   };
-  __reExport(src_exports, require_dist7(), module.exports);
+  __reExport(src_exports, require_dist9(), module.exports);
   var Assertions_exports2 = {};
   __export(Assertions_exports2, {
     buttonLabelValidator: () => buttonLabelValidator,
@@ -36068,7 +43119,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredSelectMenuParameters: () => validateRequiredSelectMenuParameters
   });
   var import_shapeshift2 = require_cjs3();
-  var import_v10 = require_v1018();
+  var import_v10 = require_v1024();
   var StringSelectMenuOptionBuilder = class {
     constructor(data = {}) {
       this.data = data;
@@ -36168,7 +43219,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   }
   __name(validateRequiredButtonParameters, "validateRequiredButtonParameters");
-  var import_v1011 = require_v1018();
+  var import_v1011 = require_v1024();
   var ComponentBuilder = class {
     static {
       __name(this, "ComponentBuilder");
@@ -36178,8 +43229,8 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data = data;
     }
   };
-  var import_v1010 = require_v1018();
-  var import_v102 = require_v1018();
+  var import_v1010 = require_v1024();
+  var import_v102 = require_v1024();
   var ButtonBuilder = class extends ComponentBuilder {
     static {
       __name(this, "ButtonBuilder");
@@ -36222,7 +43273,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v103 = require_v1018();
+  var import_v103 = require_v1024();
   var BaseSelectMenuBuilder = class extends ComponentBuilder {
     static {
       __name(this, "BaseSelectMenuBuilder");
@@ -36299,7 +43350,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v104 = require_v1018();
+  var import_v104 = require_v1024();
   var MentionableSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "MentionableSelectMenuBuilder");
@@ -36341,7 +43392,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v105 = require_v1018();
+  var import_v105 = require_v1024();
   var RoleSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "RoleSelectMenuBuilder");
@@ -36369,7 +43420,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v106 = require_v1018();
+  var import_v106 = require_v1024();
   var StringSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "StringSelectMenuBuilder");
@@ -36405,7 +43456,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v107 = require_v1018();
+  var import_v107 = require_v1024();
   var UserSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "UserSelectMenuBuilder");
@@ -36434,7 +43485,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_util = require_dist();
-  var import_v109 = require_v1018();
+  var import_v109 = require_v1024();
   var import_fast_deep_equal = __toESM2(require_fast_deep_equal());
   var Assertions_exports3 = {};
   __export(Assertions_exports3, {
@@ -36448,7 +43499,7 @@ var require_dist8 = __commonJS((exports, module) => {
     valueValidator: () => valueValidator
   });
   var import_shapeshift3 = require_cjs3();
-  var import_v108 = require_v1018();
+  var import_v108 = require_v1024();
   var textInputStyleValidator = import_shapeshift3.s.nativeEnum(import_v108.TextInputStyle);
   var minLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(0).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
   var maxLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(1).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
@@ -36633,7 +43684,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredParameters: () => validateRequiredParameters3
   });
   var import_shapeshift5 = require_cjs3();
-  var import_v1012 = require_v1018();
+  var import_v1012 = require_v1024();
   var namePredicate = import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
   function validateName(name) {
     namePredicate.parse(name);
@@ -36771,7 +43822,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1013 = require_v1018();
+  var import_v1013 = require_v1024();
   var SharedSlashCommand = class {
     static {
       __name(this, "SharedSlashCommand");
@@ -36826,7 +43877,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1014 = require_v1018();
+  var import_v1014 = require_v1024();
   var ApplicationCommandOptionBase = class extends SharedNameAndDescription {
     static {
       __name(this, "ApplicationCommandOptionBase");
@@ -36854,7 +43905,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this };
     }
   };
-  var import_v1015 = require_v1018();
+  var import_v1015 = require_v1024();
   var SlashCommandBooleanOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandBooleanOption");
@@ -36865,10 +43916,10 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this };
     }
   };
-  var import_v1017 = require_v1018();
+  var import_v1017 = require_v1024();
   var import_ts_mixer = require_cjs4();
   var import_shapeshift6 = require_cjs3();
-  var import_v1016 = require_v1018();
+  var import_v1016 = require_v1024();
   var allowedChannelTypes = [
     import_v1016.ChannelType.GuildText,
     import_v1016.ChannelType.GuildVoice,
@@ -36907,7 +43958,7 @@ var require_dist8 = __commonJS((exports, module) => {
     (0, import_ts_mixer.mix)(ApplicationCommandOptionChannelTypesMixin)
   ], SlashCommandChannelOption);
   var import_shapeshift9 = require_cjs3();
-  var import_v1019 = require_v1018();
+  var import_v1019 = require_v1024();
   var import_ts_mixer2 = require_cjs4();
   var ApplicationCommandNumericOptionMinMaxValueMixin = class {
     static {
@@ -36934,7 +43985,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_shapeshift8 = require_cjs3();
-  var import_v1018 = require_v1018();
+  var import_v1018 = require_v1024();
   var stringPredicate = import_shapeshift8.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
   var numberPredicate = import_shapeshift8.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
   var choicesPredicate = import_shapeshift8.s.object({
@@ -37004,7 +44055,7 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandIntegerOption = __decorateClass([
     (0, import_ts_mixer2.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandIntegerOption);
-  var import_v1020 = require_v1018();
+  var import_v1020 = require_v1024();
   var SlashCommandMentionableOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandMentionableOption");
@@ -37016,7 +44067,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_shapeshift10 = require_cjs3();
-  var import_v1021 = require_v1018();
+  var import_v1021 = require_v1024();
   var import_ts_mixer3 = require_cjs4();
   var numberValidator2 = import_shapeshift10.s.number();
   var SlashCommandNumberOption = class extends ApplicationCommandOptionBase {
@@ -37043,7 +44094,7 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandNumberOption = __decorateClass([
     (0, import_ts_mixer3.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandNumberOption);
-  var import_v1022 = require_v1018();
+  var import_v1022 = require_v1024();
   var SlashCommandRoleOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandRoleOption");
@@ -37055,7 +44106,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_shapeshift11 = require_cjs3();
-  var import_v1023 = require_v1018();
+  var import_v1023 = require_v1024();
   var import_ts_mixer4 = require_cjs4();
   var minLengthValidator2 = import_shapeshift11.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
   var maxLengthValidator2 = import_shapeshift11.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
@@ -37085,7 +44136,7 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandStringOption = __decorateClass([
     (0, import_ts_mixer4.mix)(ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandStringOption);
-  var import_v1024 = require_v1018();
+  var import_v1024 = require_v1024();
   var SlashCommandUserOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandUserOption");
@@ -37137,7 +44188,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1025 = require_v1018();
+  var import_v1025 = require_v1024();
   var import_ts_mixer5 = require_cjs4();
   var SlashCommandSubcommandGroupBuilder = class {
     name = undefined;
@@ -37238,7 +44289,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateType: () => validateType
   });
   var import_shapeshift12 = require_cjs3();
-  var import_v1026 = require_v1018();
+  var import_v1026 = require_v1024();
   var namePredicate2 = import_shapeshift12.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^( *[\p{P}\p{L}\p{N}\p{sc=Devanagari}\p{sc=Thai}]+ *)+$/u).setValidationEnabled(isValidationEnabled);
   var typePredicate = import_shapeshift12.s.union([import_shapeshift12.s.literal(import_v1026.ApplicationCommandType.User), import_shapeshift12.s.literal(import_v1026.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
   var booleanPredicate3 = import_shapeshift12.s.boolean();
@@ -37382,8 +44433,6 @@ var require_Component = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ActionRow.js
 var require_ActionRow = __commonJS((exports, module) => {
-  var { deprecate } = __require("node:util");
-  var { isJSONEncodable } = require_dist();
   var Component = require_Component();
   var { createComponent } = require_Components();
 
@@ -37392,7 +44441,6 @@ var require_ActionRow = __commonJS((exports, module) => {
       super(data);
       this.components = components.map((component) => createComponent(component));
     }
-    static from = deprecate((other) => new this(isJSONEncodable(other) ? other.toJSON() : other), "ActionRow.from() is deprecated. Use ActionRowBuilder.from() instead.");
     toJSON() {
       return { ...this.data, components: this.components.map((component) => component.toJSON()) };
     }
@@ -37402,7 +44450,7 @@ var require_ActionRow = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ButtonBuilder.js
 var require_ButtonBuilder = __commonJS((exports, module) => {
-  var { ButtonBuilder: BuildersButton } = require_dist8();
+  var { ButtonBuilder: BuildersButton } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
   var { resolvePartialEmoji } = require_Util();
@@ -37453,7 +44501,7 @@ var require_ButtonComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ChannelSelectMenuBuilder.js
 var require_ChannelSelectMenuBuilder = __commonJS((exports, module) => {
-  var { ChannelSelectMenuBuilder: BuildersChannelSelectMenu } = require_dist8();
+  var { ChannelSelectMenuBuilder: BuildersChannelSelectMenu } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
 
@@ -37506,7 +44554,7 @@ var require_ChannelSelectMenuComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/MentionableSelectMenuBuilder.js
 var require_MentionableSelectMenuBuilder = __commonJS((exports, module) => {
-  var { MentionableSelectMenuBuilder: BuildersMentionableSelectMenu } = require_dist8();
+  var { MentionableSelectMenuBuilder: BuildersMentionableSelectMenu } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
 
@@ -37532,7 +44580,7 @@ var require_MentionableSelectMenuComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/RoleSelectMenuBuilder.js
 var require_RoleSelectMenuBuilder = __commonJS((exports, module) => {
-  var { RoleSelectMenuBuilder: BuildersRoleSelectMenu } = require_dist8();
+  var { RoleSelectMenuBuilder: BuildersRoleSelectMenu } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
 
@@ -37558,7 +44606,7 @@ var require_RoleSelectMenuComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/StringSelectMenuBuilder.js
 var require_StringSelectMenuBuilder = __commonJS((exports, module) => {
-  var { SelectMenuBuilder: BuildersSelectMenu, normalizeArray } = require_dist8();
+  var { SelectMenuBuilder: BuildersSelectMenu, normalizeArray } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
   var { resolvePartialEmoji } = require_Util();
@@ -37613,7 +44661,7 @@ var require_StringSelectMenuComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/TextInputBuilder.js
 var require_TextInputBuilder = __commonJS((exports, module) => {
-  var { TextInputBuilder: BuildersTextInput } = require_dist8();
+  var { TextInputBuilder: BuildersTextInput } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
 
@@ -37645,7 +44693,7 @@ var require_TextInputComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/UserSelectMenuBuilder.js
 var require_UserSelectMenuBuilder = __commonJS((exports, module) => {
-  var { UserSelectMenuBuilder: BuildersUserSelectMenu } = require_dist8();
+  var { UserSelectMenuBuilder: BuildersUserSelectMenu } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
 
@@ -37671,7 +44719,7 @@ var require_UserSelectMenuComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/Components.js
 var require_Components = __commonJS((exports, module) => {
-  var { ComponentBuilder } = require_dist8();
+  var { ComponentBuilder } = require_dist10();
   var { ComponentType } = require_v1012();
   function createComponent(data) {
     if (data instanceof Component) {
@@ -37745,7 +44793,7 @@ var require_Components = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ActionRowBuilder.js
 var require_ActionRowBuilder = __commonJS((exports, module) => {
-  var { ActionRowBuilder: BuildersActionRow } = require_dist8();
+  var { ActionRowBuilder: BuildersActionRow } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { createComponentBuilder } = require_Components();
   var { toSnakeCase } = require_Transformers();
@@ -37854,6 +44902,28 @@ var require_GuildScheduledEvent = __commonJS((exports) => {
         this.image = data.image;
       } else {
         this.image ??= null;
+      }
+      if ("recurrence_rule" in data) {
+        this.recurrenceRule = data.recurrence_rule && {
+          startTimestamp: Date.parse(data.recurrence_rule.start),
+          get startAt() {
+            return new Date(this.startTimestamp);
+          },
+          endTimestamp: data.recurrence_rule.end && Date.parse(data.recurrence_rule.end),
+          get endAt() {
+            return this.endTimestamp && new Date(this.endTimestamp);
+          },
+          frequency: data.recurrence_rule.frequency,
+          interval: data.recurrence_rule.interval,
+          byWeekday: data.recurrence_rule.by_weekday,
+          byNWeekday: data.recurrence_rule.by_n_weekday,
+          byMonth: data.recurrence_rule.by_month,
+          byMonthDay: data.recurrence_rule.by_month_day,
+          byYearDay: data.recurrence_rule.by_year_day,
+          count: data.recurrence_rule.count
+        };
+      } else {
+        this.recurrenceRule ??= null;
       }
     }
     get partial() {
@@ -38042,45 +45112,6 @@ var require_IntegrationApplication = __commonJS((exports, module) => {
   module.exports = IntegrationApplication;
 });
 
-// node_modules/discord.js/src/structures/InviteStageInstance.js
-var require_InviteStageInstance = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var Base = require_Base();
-
-  class InviteStageInstance extends Base {
-    constructor(client, data, channelId, guildId) {
-      super(client);
-      this.channelId = channelId;
-      this.guildId = guildId;
-      this.members = new Collection;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("topic" in data) {
-        this.topic = data.topic;
-      }
-      if ("participant_count" in data) {
-        this.participantCount = data.participant_count;
-      }
-      if ("speaker_count" in data) {
-        this.speakerCount = data.speaker_count;
-      }
-      this.members.clear();
-      for (const rawMember of data.members) {
-        const member = this.guild.members._add(rawMember);
-        this.members.set(member.id, member);
-      }
-    }
-    get channel() {
-      return this.client.channels.resolve(this.channelId);
-    }
-    get guild() {
-      return this.client.guilds.resolve(this.guildId);
-    }
-  }
-  module.exports = InviteStageInstance;
-});
-
 // node_modules/discord.js/src/structures/BaseGuild.js
 var require_BaseGuild = __commonJS((exports, module) => {
   var { makeURLSearchParams } = require_dist5();
@@ -38176,11 +45207,9 @@ var require_AnonymousGuild = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Emoji.js
 var require_Emoji = __commonJS((exports) => {
-  var process2 = __require("node:process");
-  var { formatEmoji } = require_dist7();
+  var { formatEmoji } = require_dist9();
   var { DiscordSnowflake } = require_cjs();
   var Base = require_Base();
-  var deprecationEmittedForURL = false;
 
   class Emoji extends Base {
     constructor(client, emoji) {
@@ -38196,13 +45225,6 @@ var require_Emoji = __commonJS((exports) => {
     }
     imageURL(options) {
       return this.id && this.client.rest.cdn.emoji(this.id, options);
-    }
-    get url() {
-      if (!deprecationEmittedForURL) {
-        process2.emitWarning("The Emoji#url getter is deprecated. Use Emoji#imageURL() instead.", "DeprecationWarning");
-        deprecationEmittedForURL = true;
-      }
-      return this.imageURL({ extension: this.animated ? "gif" : "png" });
     }
     get createdTimestamp() {
       return this.id && DiscordSnowflake.timestampFrom(this.id);
@@ -38254,7 +45276,7 @@ var require_WelcomeChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/WelcomeScreen.js
 var require_WelcomeScreen = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { GuildFeature } = require_v1012();
   var Base = require_Base();
   var WelcomeChannel = require_WelcomeChannel();
@@ -38297,7 +45319,6 @@ var require_Invite = __commonJS((exports, module) => {
   var Base = require_Base();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
   var IntegrationApplication = require_IntegrationApplication();
-  var InviteStageInstance = require_InviteStageInstance();
   var { DiscordjsError, ErrorCodes } = require_errors2();
 
   class Invite extends Base {
@@ -38386,11 +45407,6 @@ var require_Invite = __commonJS((exports, module) => {
         this._expiresTimestamp = data.expires_at && Date.parse(data.expires_at);
       } else {
         this._expiresTimestamp ??= null;
-      }
-      if ("stage_instance" in data) {
-        this.stageInstance = new InviteStageInstance(this.client, data.stage_instance, this.channel.id, this.guild.id);
-      } else {
-        this.stageInstance ??= null;
       }
       if ("guild_scheduled_event" in data) {
         this.guildScheduledEvent = new GuildScheduledEvent(this.client, data.guild_scheduled_event);
@@ -38625,8 +45641,7 @@ var require_MessageFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/BaseInteraction.js
 var require_BaseInteraction = __commonJS((exports, module) => {
-  var { deprecate } = __require("node:util");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { DiscordSnowflake } = require_cjs();
   var { InteractionType, ApplicationCommandType, ComponentType } = require_v1012();
   var Base = require_Base();
@@ -38701,9 +45716,6 @@ var require_BaseInteraction = __commonJS((exports, module) => {
     isButton() {
       return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.Button;
     }
-    isSelectMenu() {
-      return this.isStringSelectMenu();
-    }
     isAnySelectMenu() {
       return this.type === InteractionType.MessageComponent && SelectMenuTypes.includes(this.componentType);
     }
@@ -38726,7 +45738,6 @@ var require_BaseInteraction = __commonJS((exports, module) => {
       return ![InteractionType.Ping, InteractionType.ApplicationCommandAutocomplete].includes(this.type);
     }
   }
-  BaseInteraction.prototype.isSelectMenu = deprecate(BaseInteraction.prototype.isSelectMenu, "BaseInteraction#isSelectMenu() is deprecated. Use BaseInteraction#isStringSelectMenu() instead.");
   module.exports = BaseInteraction;
 });
 
@@ -38756,9 +45767,6 @@ var require_TeamMember = __commonJS((exports, module) => {
       this._patch(data);
     }
     _patch(data) {
-      if ("permissions" in data) {
-        this.permissions = data.permissions;
-      }
       if ("membership_state" in data) {
         this.membershipState = data.membership_state;
       }
@@ -38781,7 +45789,7 @@ var require_TeamMember = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Team.js
 var require_Team = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { DiscordSnowflake } = require_cjs();
   var Base = require_Base();
   var TeamMember = require_TeamMember();
@@ -38836,7 +45844,7 @@ var require_Team = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ApplicationCommandPermissionsManager.js
 var require_ApplicationCommandPermissionsManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { ApplicationCommandPermissionType, RESTJSONErrorCodes, Routes } = require_v1012();
   var BaseManager = require_BaseManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors2();
@@ -39245,7 +46253,7 @@ var require_ApplicationCommand = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ApplicationCommandManager.js
 var require_ApplicationCommandManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { isJSONEncodable } = require_dist();
   var { Routes } = require_v1012();
@@ -39403,7 +46411,7 @@ var require_ApplicationEmoji = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ApplicationEmojiManager.js
 var require_ApplicationEmojiManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
@@ -39557,7 +46565,7 @@ var require_Entitlement = __commonJS((exports) => {
 
 // node_modules/discord.js/src/managers/EntitlementManager.js
 var require_EntitlementManager = __commonJS((exports) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { Routes, EntitlementOwnerType } = require_v1012();
   var CachedManager = require_CachedManager();
@@ -39630,7 +46638,7 @@ var require_ApplicationFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ClientApplication.js
 var require_ClientApplication = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes } = require_v1012();
   var { ApplicationRoleConnectionMetadata } = require_ApplicationRoleConnectionMetadata();
   var { SKU } = require_SKU();
@@ -39803,7 +46811,7 @@ var require_ClientApplication = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Embed.js
 var require_Embed = __commonJS((exports, module) => {
-  var { embedLength } = require_dist8();
+  var { embedLength } = require_dist10();
   var isEqual = require_fast_deep_equal();
 
   class Embed {
@@ -39901,7 +46909,7 @@ var require_Embed = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/MessageMentions.js
 var require_MessageMentions = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { FormattingPatterns } = require_v1012();
   var { flatten } = require_Util();
 
@@ -40084,7 +47092,7 @@ var require_PollAnswer = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/Poll.js
 var require_Poll = __commonJS((exports) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Base = require_Base();
   var { PollAnswer } = require_PollAnswer();
   var { DiscordjsError } = require_DJSError();
@@ -40129,7 +47137,7 @@ var require_Poll = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/ReactionCollector.js
 var require_ReactionCollector = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Collector = require_Collector();
   var Events = require_Events();
 
@@ -40380,7 +47388,7 @@ var require_BaseGuildEmoji = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildEmojiRoleManager.js
 var require_GuildEmojiRoleManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var DataManager = require_DataManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
   var { Role } = require_Role();
@@ -40531,7 +47539,7 @@ var require_UserFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/User.js
 var require_User = __commonJS((exports, module) => {
-  var { userMention } = require_dist7();
+  var { userMention } = require_dist9();
   var { calculateUserDefaultAvatarIndex } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
   var Base = require_Base();
@@ -40591,11 +47599,6 @@ var require_User = __commonJS((exports, module) => {
       if ("public_flags" in data) {
         this.flags = new UserFlagsBitField(data.public_flags);
       }
-      if ("avatar_decoration" in data) {
-        this.avatarDecoration = data.avatar_decoration;
-      } else {
-        this.avatarDecoration ??= null;
-      }
       if (data.avatar_decoration_data) {
         this.avatarDecorationData = {
           asset: data.avatar_decoration_data.asset,
@@ -40617,11 +47620,8 @@ var require_User = __commonJS((exports, module) => {
     avatarURL(options = {}) {
       return this.avatar && this.client.rest.cdn.avatar(this.id, this.avatar, options);
     }
-    avatarDecorationURL(options = {}) {
-      if (this.avatarDecorationData) {
-        return this.client.rest.cdn.avatarDecoration(this.avatarDecorationData.asset);
-      }
-      return this.avatarDecoration && this.client.rest.cdn.avatarDecoration(this.id, this.avatarDecoration, options);
+    avatarDecorationURL() {
+      return this.avatarDecorationData ? this.client.rest.cdn.avatarDecoration(this.avatarDecorationData.asset) : null;
     }
     get defaultAvatarURL() {
       const index = this.discriminator === "0" ? calculateUserDefaultAvatarIndex(this.id) : this.discriminator % 5;
@@ -40654,13 +47654,10 @@ var require_User = __commonJS((exports, module) => {
       return this.client.users.deleteDM(this.id);
     }
     equals(user) {
-      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.globalName && this.avatar === user.avatar && this.flags?.bitfield === user.flags?.bitfield && this.banner === user.banner && this.accentColor === user.accentColor && this.avatarDecoration === user.avatarDecoration && this.avatarDecorationData?.asset === user.avatarDecorationData?.asset && this.avatarDecorationData?.skuId === user.avatarDecorationData?.skuId;
+      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.globalName && this.avatar === user.avatar && this.flags?.bitfield === user.flags?.bitfield && this.banner === user.banner && this.accentColor === user.accentColor && this.avatarDecorationData?.asset === user.avatarDecorationData?.asset && this.avatarDecorationData?.skuId === user.avatarDecorationData?.skuId;
     }
     _equals(user) {
-      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.global_name && this.avatar === user.avatar && this.flags?.bitfield === user.public_flags && ("banner" in user ? this.banner === user.banner : true) && ("accent_color" in user ? this.accentColor === user.accent_color : true) && ("avatar_decoration" in user ? this.avatarDecoration === user.avatar_decoration : true) && ("avatar_decoration_data" in user ? this.avatarDecorationData?.asset === user.avatar_decoration_data?.asset && this.avatarDecorationData?.skuId === user.avatar_decoration_data?.sku_id : true);
-    }
-    fetchFlags(force = false) {
-      return this.client.users.fetchFlags(this.id, { force });
+      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.global_name && this.avatar === user.avatar && this.flags?.bitfield === user.public_flags && ("banner" in user ? this.banner === user.banner : true) && ("accent_color" in user ? this.accentColor === user.accent_color : true) && ("avatar_decoration_data" in user ? this.avatarDecorationData?.asset === user.avatar_decoration_data?.asset && this.avatarDecorationData?.skuId === user.avatar_decoration_data?.sku_id : true);
     }
     fetch(force = true) {
       return this.client.users.fetch(this.id, { force });
@@ -40687,7 +47684,7 @@ var require_User = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ReactionUserManager.js
 var require_ReactionUserManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { ReactionType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
@@ -40727,6 +47724,7 @@ var require_ReactionUserManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/MessageReaction.js
 var require_MessageReaction = __commonJS((exports, module) => {
   var { Routes } = require_v1012();
+  var ApplicationEmoji = require_ApplicationEmoji();
   var GuildEmoji = require_GuildEmoji();
   var ReactionEmoji = require_ReactionEmoji();
   var ReactionUserManager = require_ReactionUserManager();
@@ -40769,7 +47767,15 @@ var require_MessageReaction = __commonJS((exports, module) => {
     get emoji() {
       if (this._emoji instanceof GuildEmoji)
         return this._emoji;
+      if (this._emoji instanceof ApplicationEmoji)
+        return this._emoji;
       if (this._emoji.id) {
+        const applicationEmojis = this.message.client.application.emojis.cache;
+        if (applicationEmojis.has(this._emoji.id)) {
+          const emoji = applicationEmojis.get(this._emoji.id);
+          this._emoji = emoji;
+          return emoji;
+        }
         const emojis = this.message.client.emojis.cache;
         if (emojis.has(this._emoji.id)) {
           const emoji = emojis.get(this._emoji.id);
@@ -40861,8 +47867,8 @@ var require_ReactionManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Message.js
 var require_Message = __commonJS((exports) => {
-  var { Collection } = require_dist6();
-  var { messageLink } = require_dist7();
+  var { Collection } = require_dist8();
+  var { messageLink } = require_dist9();
   var { DiscordSnowflake } = require_cjs();
   var {
     InteractionType,
@@ -41037,7 +48043,8 @@ var require_Message = __commonJS((exports) => {
         this.reference = {
           channelId: data.message_reference.channel_id,
           guildId: data.message_reference.guild_id,
-          messageId: data.message_reference.message_id
+          messageId: data.message_reference.message_id,
+          type: data.message_reference.type
         };
       } else {
         this.reference ??= null;
@@ -41064,6 +48071,20 @@ var require_Message = __commonJS((exports) => {
         this.poll = new Poll(this.client, data.poll, this);
       } else {
         this.poll ??= null;
+      }
+      if (data.message_snapshots) {
+        this.messageSnapshots = data.message_snapshots.reduce((coll, snapshot) => {
+          const channel = this.client.channels.resolve(this.reference.channelId);
+          const snapshotData = {
+            ...snapshot.message,
+            id: this.reference.messageId,
+            channel_id: this.reference.channelId,
+            guild_id: this.reference.guildId
+          };
+          return coll.set(this.reference.messageId, channel ? channel.messages._add(snapshotData) : new this.constructor(this.client, snapshotData));
+        }, new Collection);
+      } else {
+        this.messageSnapshots ??= new Collection;
       }
       if (data.call) {
         this.call = {
@@ -41712,7 +48733,7 @@ var require_VoiceState = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildMemberRoleManager.js
 var require_GuildMemberRoleManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes } = require_v1012();
   var DataManager = require_DataManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
@@ -42022,7 +49043,7 @@ var require_GuildMember = __commonJS((exports) => {
 
 // node_modules/discord.js/src/managers/MessageManager.js
 var require_MessageManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
@@ -42362,7 +49383,7 @@ var require_GuildMessageManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js
 var require_TextBasedChannel = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { DiscordSnowflake } = require_cjs();
   var { InteractionType, Routes } = require_v1012();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors2();
@@ -42503,7 +49524,7 @@ var require_DMMessageManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/DMChannel.js
 var require_DMChannel = __commonJS((exports, module) => {
-  var { userMention } = require_dist7();
+  var { userMention } = require_dist9();
   var { ChannelType } = require_v1012();
   var { BaseChannel } = require_BaseChannel();
   var TextBasedChannel = require_TextBasedChannel();
@@ -42761,8 +49782,8 @@ var require_ThreadMember = __commonJS((exports, module) => {
     get manageable() {
       return !this.thread.archived && this.thread.editable;
     }
-    async remove(reason) {
-      await this.thread.members.remove(this.id, reason);
+    async remove() {
+      await this.thread.members.remove(this.id);
       return this;
     }
   }
@@ -42771,7 +49792,7 @@ var require_ThreadMember = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ThreadMemberManager.js
 var require_ThreadMemberManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
@@ -42816,18 +49837,18 @@ var require_ThreadMemberManager = __commonJS((exports, module) => {
       const userResolvable = this.client.users.resolveId(member);
       return this.cache.has(userResolvable) ? userResolvable : null;
     }
-    async add(member, reason) {
+    async add(member) {
       const id = member === "@me" ? member : this.client.users.resolveId(member);
       if (!id)
         throw new DiscordjsTypeError(ErrorCodes.InvalidType, "member", "UserResolvable");
-      await this.client.rest.put(Routes.threadMembers(this.thread.id, id), { reason });
+      await this.client.rest.put(Routes.threadMembers(this.thread.id, id));
       return id;
     }
-    async remove(member, reason) {
+    async remove(member) {
       const id = member === "@me" ? member : this.client.users.resolveId(member);
       if (!id)
         throw new DiscordjsTypeError(ErrorCodes.InvalidType, "member", "UserResolvable");
-      await this.client.rest.delete(Routes.threadMembers(this.thread.id, id), { reason });
+      await this.client.rest.delete(Routes.threadMembers(this.thread.id, id));
       return id;
     }
     fetch(options) {
@@ -42862,9 +49883,8 @@ var require_ThreadMemberManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ThreadChannel.js
 var require_ThreadChannel = __commonJS((exports, module) => {
-  var { DiscordAPIError } = require_dist5();
   var { lazy } = require_dist();
-  var { RESTJSONErrorCodes, ChannelFlags, ChannelType, PermissionFlagsBits, Routes } = require_v1012();
+  var { ChannelFlags, ChannelType, PermissionFlagsBits, Routes } = require_v1012();
   var { BaseChannel } = require_BaseChannel();
   var getThreadOnlyChannel = lazy(() => require_ThreadOnlyChannel());
   var TextBasedChannel = require_TextBasedChannel();
@@ -42991,12 +50011,7 @@ var require_ThreadChannel = __commonJS((exports, module) => {
       if (!this.ownerId) {
         throw new DiscordjsError(ErrorCodes.FetchOwnerId, "thread");
       }
-      const member = await this.members._fetchSingle({ ...options, member: this.ownerId }).catch((error) => {
-        if (error instanceof DiscordAPIError && error.code === RESTJSONErrorCodes.UnknownMember) {
-          return null;
-        }
-        throw error;
-      });
+      const member = await this.members._fetchSingle({ ...options, member: this.ownerId });
       return member;
     }
     async fetchStarterMessage(options) {
@@ -43114,7 +50129,7 @@ var require_ThreadChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ThreadManager.js
 var require_ThreadManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
@@ -43329,13 +50344,13 @@ var require_BaseGuildTextChannel = __commonJS((exports, module) => {
   module.exports = BaseGuildTextChannel;
 });
 
-// node_modules/discord.js/src/structures/NewsChannel.js
-var require_NewsChannel = __commonJS((exports, module) => {
+// node_modules/discord.js/src/structures/AnnouncementChannel.js
+var require_AnnouncementChannel = __commonJS((exports, module) => {
   var { Routes } = require_v1012();
   var BaseGuildTextChannel = require_BaseGuildTextChannel();
   var { DiscordjsError, ErrorCodes } = require_errors2();
 
-  class NewsChannel extends BaseGuildTextChannel {
+  class AnnouncementChannel extends BaseGuildTextChannel {
     async addFollower(channel, reason) {
       const channelId = this.guild.channels.resolveId(channel);
       if (!channelId)
@@ -43344,12 +50359,12 @@ var require_NewsChannel = __commonJS((exports, module) => {
       return this;
     }
   }
-  module.exports = NewsChannel;
+  module.exports = AnnouncementChannel;
 });
 
 // node_modules/discord.js/src/structures/BaseGuildVoiceChannel.js
 var require_BaseGuildVoiceChannel = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { PermissionFlagsBits } = require_v1012();
   var GuildChannel = require_GuildChannel();
   var TextBasedChannel = require_TextBasedChannel();
@@ -43614,7 +50629,7 @@ var require_Channels = __commonJS((exports, module) => {
   var { ChannelType } = require_v1012();
   var getCategoryChannel = lazy(() => require_CategoryChannel());
   var getDMChannel = lazy(() => require_DMChannel());
-  var getNewsChannel = lazy(() => require_NewsChannel());
+  var getAnnouncementChannel = lazy(() => require_AnnouncementChannel());
   var getStageChannel = lazy(() => require_StageChannel());
   var getTextChannel = lazy(() => require_TextChannel());
   var getThreadChannel = lazy(() => require_ThreadChannel());
@@ -43648,7 +50663,7 @@ var require_Channels = __commonJS((exports, module) => {
             break;
           }
           case ChannelType.GuildAnnouncement: {
-            channel = new (getNewsChannel())(guild, data, client);
+            channel = new (getAnnouncementChannel())(guild, data, client);
             break;
           }
           case ChannelType.GuildStageVoice: {
@@ -43809,7 +50824,7 @@ var require_EntitlementUpdate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/AutoModerationRule.js
 var require_AutoModerationRule = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Base = require_Base();
   var { _transformAPIAutoModerationAction } = require_Transformers();
 
@@ -43900,7 +50915,7 @@ var require_AutoModerationRule = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/GuildOnboardingPromptOption.js
 var require_GuildOnboardingPromptOption = __commonJS((exports) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Base = require_Base();
   var { Emoji } = require_Emoji();
 
@@ -43930,7 +50945,7 @@ var require_GuildOnboardingPromptOption = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/GuildOnboardingPrompt.js
 var require_GuildOnboardingPrompt = __commonJS((exports) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Base = require_Base();
   var { GuildOnboardingPromptOption } = require_GuildOnboardingPromptOption();
 
@@ -44072,11 +51087,6 @@ var require_StageInstance = __commonJS((exports) => {
       }
       if ("privacy_level" in data) {
         this.privacyLevel = data.privacy_level;
-      }
-      if ("discoverable_disabled" in data) {
-        this.discoverableDisabled = data.discoverable_disabled;
-      } else {
-        this.discoverableDisabled ??= null;
       }
       if ("guild_scheduled_event_id" in data) {
         this.guildScheduledEventId = data.guild_scheduled_event_id;
@@ -44645,30 +51655,13 @@ var require_GuildIntegrationsUpdate = __commonJS((exports, module) => {
   module.exports = GuildIntegrationsUpdate;
 });
 
-// node_modules/discord.js/src/util/Status.js
-var require_Status = __commonJS((exports, module) => {
-  var { createEnum } = require_Enums();
-  module.exports = createEnum([
-    "Ready",
-    "Connecting",
-    "Reconnecting",
-    "Idle",
-    "Nearly",
-    "Disconnected",
-    "WaitingForGuilds",
-    "Identifying",
-    "Resuming"
-  ]);
-});
-
 // node_modules/discord.js/src/client/actions/GuildMemberRemove.js
 var require_GuildMemberRemove = __commonJS((exports, module) => {
   var Action = require_Action();
   var Events = require_Events();
-  var Status = require_Status();
 
   class GuildMemberRemoveAction extends Action {
-    handle(data, shard) {
+    handle(data) {
       const client = this.client;
       const guild = client.guilds.cache.get(data.guild_id);
       let member = null;
@@ -44677,8 +51670,7 @@ var require_GuildMemberRemove = __commonJS((exports, module) => {
         guild.memberCount--;
         if (member) {
           guild.members.cache.delete(member.id);
-          if (shard.status === Status.Ready)
-            client.emit(Events.GuildMemberRemove, member);
+          client.emit(Events.GuildMemberRemove, member);
         }
         guild.presences.cache.delete(data.user.id);
         guild.voiceStates.cache.delete(data.user.id);
@@ -44693,10 +51685,9 @@ var require_GuildMemberRemove = __commonJS((exports, module) => {
 var require_GuildMemberUpdate = __commonJS((exports, module) => {
   var Action = require_Action();
   var Events = require_Events();
-  var Status = require_Status();
 
   class GuildMemberUpdateAction extends Action {
-    handle(data, shard) {
+    handle(data) {
       const { client } = this;
       if (data.user.username) {
         const user = client.users.cache.get(data.user.id);
@@ -44711,7 +51702,7 @@ var require_GuildMemberUpdate = __commonJS((exports, module) => {
         const member = this.getMember({ user: data.user }, guild);
         if (member) {
           const old = member._update(data);
-          if (shard.status === Status.Ready && !member.equals(old))
+          if (!member.equals(old))
             client.emit(Events.GuildMemberUpdate, old, member);
         } else {
           const newMember = guild.members._add(data);
@@ -45134,11 +52125,11 @@ var require_CommandInteractionOptionResolver = __commonJS((exports, module) => {
       const option = this._getTypedOption(name, ["_MESSAGE"], ["message"], required);
       return option?.message ?? null;
     }
-    getFocused(getFull = false) {
+    getFocused() {
       const focusedOption = this._hoistedOptions.find((option) => option.focused);
       if (!focusedOption)
         throw new DiscordjsTypeError(ErrorCodes.AutocompleteInteractionOptionNoFocusedOption);
-      return getFull ? focusedOption : focusedOption.value;
+      return focusedOption;
     }
   }
   module.exports = CommandInteractionOptionResolver;
@@ -45240,7 +52231,6 @@ var require_InteractionResponse = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/interfaces/InteractionResponses.js
 var require_InteractionResponses = __commonJS((exports, module) => {
-  var { deprecate } = __require("node:util");
   var { isJSONEncodable } = require_dist();
   var { InteractionResponseType, MessageFlags, Routes, InteractionType } = require_v1012();
   var { DiscordjsError, ErrorCodes } = require_errors2();
@@ -45349,17 +52339,6 @@ var require_InteractionResponses = __commonJS((exports, module) => {
       });
       this.replied = true;
     }
-    async sendPremiumRequired() {
-      if (this.deferred || this.replied)
-        throw new DiscordjsError(ErrorCodes.InteractionAlreadyReplied);
-      await this.client.rest.post(Routes.interactionCallback(this.id, this.token), {
-        body: {
-          type: InteractionResponseType.PremiumRequired
-        },
-        auth: false
-      });
-      this.replied = true;
-    }
     awaitModalSubmit(options) {
       if (typeof options.time !== "number")
         throw new DiscordjsError(ErrorCodes.InvalidType, "time", "number");
@@ -45386,7 +52365,6 @@ var require_InteractionResponses = __commonJS((exports, module) => {
         "deferUpdate",
         "update",
         "showModal",
-        "sendPremiumRequired",
         "awaitModalSubmit"
       ];
       for (const prop of props) {
@@ -45396,7 +52374,6 @@ var require_InteractionResponses = __commonJS((exports, module) => {
       }
     }
   }
-  InteractionResponses.prototype.sendPremiumRequired = deprecate(InteractionResponses.prototype.sendPremiumRequired, "InteractionResponses#sendPremiumRequired() is deprecated. Sending a premium-style button is the new Discord behaviour.");
   module.exports = InteractionResponses;
 });
 
@@ -45440,8 +52417,6 @@ var require_MessageComponentInteraction = __commonJS((exports, module) => {
     }
     showModal() {
     }
-    sendPremiumRequired() {
-    }
     awaitModalSubmit() {
     }
   }
@@ -45460,7 +52435,7 @@ var require_ButtonInteraction = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ChannelSelectMenuInteraction.js
 var require_ChannelSelectMenuInteraction = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var MessageComponentInteraction = require_MessageComponentInteraction();
 
   class ChannelSelectMenuInteraction extends MessageComponentInteraction {
@@ -45542,8 +52517,6 @@ var require_CommandInteraction = __commonJS((exports, module) => {
     }
     showModal() {
     }
-    sendPremiumRequired() {
-    }
     awaitModalSubmit() {
     }
   }
@@ -45577,7 +52550,7 @@ var require_ChatInputCommandInteraction = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/MentionableSelectMenuInteraction.js
 var require_MentionableSelectMenuInteraction = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var MessageComponentInteraction = require_MessageComponentInteraction();
   var Events = require_Events();
 
@@ -45663,7 +52636,7 @@ var require_MessageContextMenuCommandInteraction = __commonJS((exports, module) 
 
 // node_modules/discord.js/src/structures/ModalSubmitFields.js
 var require_ModalSubmitFields = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { ComponentType } = require_v1012();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
 
@@ -45745,8 +52718,6 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
     }
     update() {
     }
-    sendPremiumRequired() {
-    }
   }
   InteractionResponses.applyToClass(ModalSubmitInteraction, "showModal");
   module.exports = ModalSubmitInteraction;
@@ -45754,7 +52725,7 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/RoleSelectMenuInteraction.js
 var require_RoleSelectMenuInteraction = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var MessageComponentInteraction = require_MessageComponentInteraction();
 
   class RoleSelectMenuInteraction extends MessageComponentInteraction {
@@ -45801,7 +52772,7 @@ var require_UserContextMenuCommandInteraction = __commonJS((exports, module) => 
 
 // node_modules/discord.js/src/structures/UserSelectMenuInteraction.js
 var require_UserSelectMenuInteraction = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var MessageComponentInteraction = require_MessageComponentInteraction();
   var Events = require_Events();
 
@@ -46020,7 +52991,7 @@ var require_MessageDelete = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/MessageDeleteBulk.js
 var require_MessageDeleteBulk = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Action = require_Action();
   var Events = require_Events();
 
@@ -46398,7 +53369,7 @@ var require_ThreadDelete = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/ThreadListSync.js
 var require_ThreadListSync = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Action = require_Action();
   var Events = require_Events();
 
@@ -46471,7 +53442,7 @@ var require_ThreadMemberUpdate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/ThreadMembersUpdate.js
 var require_ThreadMembersUpdate = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Action = require_Action();
   var Events = require_Events();
 
@@ -46616,9 +53587,8 @@ var require_VoiceStateUpdate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/WebhooksUpdate.js
 var require_WebhooksUpdate = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
   var Action = require_Action();
-  var deprecationEmitted = false;
+  var Events = require_Events();
 
   class WebhooksUpdate extends Action {
     handle(data) {
@@ -46626,11 +53596,7 @@ var require_WebhooksUpdate = __commonJS((exports, module) => {
       const channel = client.channels.cache.get(data.channel_id);
       if (!channel)
         return;
-      client.emit("webhooksUpdate", channel);
-      if (client.emit("webhookUpdate", channel) && !deprecationEmitted) {
-        deprecationEmitted = true;
-        process2.emitWarning("The webhookUpdate event is deprecated. Use webhooksUpdate instead.", "DeprecationWarning");
-      }
+      client.emit(Events.WebhooksUpdate, channel);
     }
   }
   module.exports = WebhooksUpdate;
@@ -46717,16 +53683,18 @@ var require_ActionsManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/voice/ClientVoiceManager.js
 var require_ClientVoiceManager = __commonJS((exports, module) => {
-  var Events = require_Events();
+  var { WebSocketShardEvents, CloseCodes } = require_dist7();
 
   class ClientVoiceManager {
     constructor(client) {
       Object.defineProperty(this, "client", { value: client });
       this.adapters = new Map;
-      client.on(Events.ShardDisconnect, (_, shardId) => {
-        for (const [guildId, adapter] of this.adapters.entries()) {
-          if (client.guilds.cache.get(guildId)?.shardId === shardId) {
-            adapter.destroy();
+      client.ws.on(WebSocketShardEvents.Closed, (code, shardId) => {
+        if (code === CloseCodes.Normal) {
+          for (const [guildId, adapter] of this.adapters.entries()) {
+            if (client.guilds.cache.get(guildId)?.shardId === shardId) {
+              adapter.destroy();
+            }
           }
         }
       });
@@ -46741,6999 +53709,6 @@ var require_ClientVoiceManager = __commonJS((exports, module) => {
     }
   }
   module.exports = ClientVoiceManager;
-});
-
-// node_modules/@discordjs/ws/node_modules/@discordjs/collection/dist/index.js
-var require_dist9 = __commonJS((exports, module) => {
-  var __defProp2 = Object.defineProperty;
-  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-  var __getOwnPropNames2 = Object.getOwnPropertyNames;
-  var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-  var __name = (target, value) => __defProp2(target, "name", { value, configurable: true });
-  var __export = (target, all) => {
-    for (var name in all)
-      __defProp2(target, name, { get: all[name], enumerable: true });
-  };
-  var __copyProps = (to, from, except, desc) => {
-    if (from && typeof from === "object" || typeof from === "function") {
-      for (let key of __getOwnPropNames2(from))
-        if (!__hasOwnProp2.call(to, key) && key !== except)
-          __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-    }
-    return to;
-  };
-  var __toCommonJS = (mod) => __copyProps(__defProp2({}, "__esModule", { value: true }), mod);
-  var src_exports = {};
-  __export(src_exports, {
-    Collection: () => Collection,
-    version: () => version
-  });
-  module.exports = __toCommonJS(src_exports);
-  var Collection = class _Collection extends Map {
-    static {
-      __name(this, "Collection");
-    }
-    ensure(key, defaultValueGenerator) {
-      if (this.has(key))
-        return this.get(key);
-      if (typeof defaultValueGenerator !== "function")
-        throw new TypeError(`${defaultValueGenerator} is not a function`);
-      const defaultValue = defaultValueGenerator(key, this);
-      this.set(key, defaultValue);
-      return defaultValue;
-    }
-    hasAll(...keys) {
-      return keys.every((key) => super.has(key));
-    }
-    hasAny(...keys) {
-      return keys.some((key) => super.has(key));
-    }
-    first(amount) {
-      if (amount === undefined)
-        return this.values().next().value;
-      if (amount < 0)
-        return this.last(amount * -1);
-      amount = Math.min(this.size, amount);
-      const iter = this.values();
-      return Array.from({ length: amount }, () => iter.next().value);
-    }
-    firstKey(amount) {
-      if (amount === undefined)
-        return this.keys().next().value;
-      if (amount < 0)
-        return this.lastKey(amount * -1);
-      amount = Math.min(this.size, amount);
-      const iter = this.keys();
-      return Array.from({ length: amount }, () => iter.next().value);
-    }
-    last(amount) {
-      const arr = [...this.values()];
-      if (amount === undefined)
-        return arr[arr.length - 1];
-      if (amount < 0)
-        return this.first(amount * -1);
-      if (!amount)
-        return [];
-      return arr.slice(-amount);
-    }
-    lastKey(amount) {
-      const arr = [...this.keys()];
-      if (amount === undefined)
-        return arr[arr.length - 1];
-      if (amount < 0)
-        return this.firstKey(amount * -1);
-      if (!amount)
-        return [];
-      return arr.slice(-amount);
-    }
-    at(index) {
-      index = Math.floor(index);
-      const arr = [...this.values()];
-      return arr.at(index);
-    }
-    keyAt(index) {
-      index = Math.floor(index);
-      const arr = [...this.keys()];
-      return arr.at(index);
-    }
-    random(amount) {
-      const arr = [...this.values()];
-      if (amount === undefined)
-        return arr[Math.floor(Math.random() * arr.length)];
-      if (!arr.length || !amount)
-        return [];
-      return Array.from({ length: Math.min(amount, arr.length) }, () => arr.splice(Math.floor(Math.random() * arr.length), 1)[0]);
-    }
-    randomKey(amount) {
-      const arr = [...this.keys()];
-      if (amount === undefined)
-        return arr[Math.floor(Math.random() * arr.length)];
-      if (!arr.length || !amount)
-        return [];
-      return Array.from({ length: Math.min(amount, arr.length) }, () => arr.splice(Math.floor(Math.random() * arr.length), 1)[0]);
-    }
-    reverse() {
-      const entries = [...this.entries()].reverse();
-      this.clear();
-      for (const [key, value] of entries)
-        this.set(key, value);
-      return this;
-    }
-    find(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      for (const [key, val] of this) {
-        if (fn(val, key, this))
-          return val;
-      }
-      return;
-    }
-    findKey(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      for (const [key, val] of this) {
-        if (fn(val, key, this))
-          return key;
-      }
-      return;
-    }
-    findLast(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      const entries = [...this.entries()];
-      for (let index = entries.length - 1;index >= 0; index--) {
-        const val = entries[index][1];
-        const key = entries[index][0];
-        if (fn(val, key, this))
-          return val;
-      }
-      return;
-    }
-    findLastKey(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      const entries = [...this.entries()];
-      for (let index = entries.length - 1;index >= 0; index--) {
-        const key = entries[index][0];
-        const val = entries[index][1];
-        if (fn(val, key, this))
-          return key;
-      }
-      return;
-    }
-    sweep(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      const previousSize = this.size;
-      for (const [key, val] of this) {
-        if (fn(val, key, this))
-          this.delete(key);
-      }
-      return previousSize - this.size;
-    }
-    filter(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      const results = new this.constructor[Symbol.species];
-      for (const [key, val] of this) {
-        if (fn(val, key, this))
-          results.set(key, val);
-      }
-      return results;
-    }
-    partition(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      const results = [
-        new this.constructor[Symbol.species],
-        new this.constructor[Symbol.species]
-      ];
-      for (const [key, val] of this) {
-        if (fn(val, key, this)) {
-          results[0].set(key, val);
-        } else {
-          results[1].set(key, val);
-        }
-      }
-      return results;
-    }
-    flatMap(fn, thisArg) {
-      const collections = this.map(fn, thisArg);
-      return new this.constructor[Symbol.species]().concat(...collections);
-    }
-    map(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      const iter = this.entries();
-      return Array.from({ length: this.size }, () => {
-        const [key, value] = iter.next().value;
-        return fn(value, key, this);
-      });
-    }
-    mapValues(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      const coll = new this.constructor[Symbol.species];
-      for (const [key, val] of this)
-        coll.set(key, fn(val, key, this));
-      return coll;
-    }
-    some(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      for (const [key, val] of this) {
-        if (fn(val, key, this))
-          return true;
-      }
-      return false;
-    }
-    every(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      for (const [key, val] of this) {
-        if (!fn(val, key, this))
-          return false;
-      }
-      return true;
-    }
-    reduce(fn, initialValue) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      let accumulator;
-      const iterator = this.entries();
-      if (initialValue === undefined) {
-        if (this.size === 0)
-          throw new TypeError("Reduce of empty collection with no initial value");
-        accumulator = iterator.next().value[1];
-      } else {
-        accumulator = initialValue;
-      }
-      for (const [key, value] of iterator) {
-        accumulator = fn(accumulator, value, key, this);
-      }
-      return accumulator;
-    }
-    reduceRight(fn, initialValue) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      const entries = [...this.entries()];
-      let accumulator;
-      let index;
-      if (initialValue === undefined) {
-        if (entries.length === 0)
-          throw new TypeError("Reduce of empty collection with no initial value");
-        accumulator = entries[entries.length - 1][1];
-        index = entries.length - 1;
-      } else {
-        accumulator = initialValue;
-        index = entries.length;
-      }
-      while (--index >= 0) {
-        const key = entries[index][0];
-        const val = entries[index][1];
-        accumulator = fn(accumulator, val, key, this);
-      }
-      return accumulator;
-    }
-    each(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      for (const [key, value] of this) {
-        fn(value, key, this);
-      }
-      return this;
-    }
-    tap(fn, thisArg) {
-      if (typeof fn !== "function")
-        throw new TypeError(`${fn} is not a function`);
-      if (thisArg !== undefined)
-        fn = fn.bind(thisArg);
-      fn(this);
-      return this;
-    }
-    clone() {
-      return new this.constructor[Symbol.species](this);
-    }
-    concat(...collections) {
-      const newColl = this.clone();
-      for (const coll of collections) {
-        for (const [key, val] of coll)
-          newColl.set(key, val);
-      }
-      return newColl;
-    }
-    equals(collection) {
-      if (!collection)
-        return false;
-      if (this === collection)
-        return true;
-      if (this.size !== collection.size)
-        return false;
-      for (const [key, value] of this) {
-        if (!collection.has(key) || value !== collection.get(key)) {
-          return false;
-        }
-      }
-      return true;
-    }
-    sort(compareFunction = _Collection.defaultSort) {
-      const entries = [...this.entries()];
-      entries.sort((a, b) => compareFunction(a[1], b[1], a[0], b[0]));
-      super.clear();
-      for (const [key, value] of entries) {
-        super.set(key, value);
-      }
-      return this;
-    }
-    intersection(other) {
-      const coll = new this.constructor[Symbol.species];
-      for (const [key, value] of this) {
-        if (other.has(key))
-          coll.set(key, value);
-      }
-      return coll;
-    }
-    union(other) {
-      const coll = new this.constructor[Symbol.species](this);
-      for (const [key, value] of other) {
-        if (!coll.has(key))
-          coll.set(key, value);
-      }
-      return coll;
-    }
-    difference(other) {
-      const coll = new this.constructor[Symbol.species];
-      for (const [key, value] of this) {
-        if (!other.has(key))
-          coll.set(key, value);
-      }
-      return coll;
-    }
-    symmetricDifference(other) {
-      const coll = new this.constructor[Symbol.species];
-      for (const [key, value] of this) {
-        if (!other.has(key))
-          coll.set(key, value);
-      }
-      for (const [key, value] of other) {
-        if (!this.has(key))
-          coll.set(key, value);
-      }
-      return coll;
-    }
-    merge(other, whenInSelf, whenInOther, whenInBoth) {
-      const coll = new this.constructor[Symbol.species];
-      const keys = /* @__PURE__ */ new Set([...this.keys(), ...other.keys()]);
-      for (const key of keys) {
-        const hasInSelf = this.has(key);
-        const hasInOther = other.has(key);
-        if (hasInSelf && hasInOther) {
-          const result = whenInBoth(this.get(key), other.get(key), key);
-          if (result.keep)
-            coll.set(key, result.value);
-        } else if (hasInSelf) {
-          const result = whenInSelf(this.get(key), key);
-          if (result.keep)
-            coll.set(key, result.value);
-        } else if (hasInOther) {
-          const result = whenInOther(other.get(key), key);
-          if (result.keep)
-            coll.set(key, result.value);
-        }
-      }
-      return coll;
-    }
-    toReversed() {
-      return new this.constructor[Symbol.species](this).reverse();
-    }
-    toSorted(compareFunction = _Collection.defaultSort) {
-      return new this.constructor[Symbol.species](this).sort((av, bv, ak, bk) => compareFunction(av, bv, ak, bk));
-    }
-    toJSON() {
-      return [...this.entries()];
-    }
-    static defaultSort(firstValue, secondValue) {
-      return Number(firstValue > secondValue) || Number(firstValue === secondValue) - 1;
-    }
-    static combineEntries(entries, combine) {
-      const coll = new _Collection;
-      for (const [key, value] of entries) {
-        if (coll.has(key)) {
-          coll.set(key, combine(coll.get(key), value, key));
-        } else {
-          coll.set(key, value);
-        }
-      }
-      return coll;
-    }
-  };
-  var version = "2.1.1";
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/gateway/common.js
-var require_common13 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/gateway/v10.js
-var require_v1019 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
-  __exportStar(require_common13(), exports);
-  exports.GatewayVersion = "10";
-  var GatewayOpcodes;
-  (function(GatewayOpcodes2) {
-    GatewayOpcodes2[GatewayOpcodes2["Dispatch"] = 0] = "Dispatch";
-    GatewayOpcodes2[GatewayOpcodes2["Heartbeat"] = 1] = "Heartbeat";
-    GatewayOpcodes2[GatewayOpcodes2["Identify"] = 2] = "Identify";
-    GatewayOpcodes2[GatewayOpcodes2["PresenceUpdate"] = 3] = "PresenceUpdate";
-    GatewayOpcodes2[GatewayOpcodes2["VoiceStateUpdate"] = 4] = "VoiceStateUpdate";
-    GatewayOpcodes2[GatewayOpcodes2["Resume"] = 6] = "Resume";
-    GatewayOpcodes2[GatewayOpcodes2["Reconnect"] = 7] = "Reconnect";
-    GatewayOpcodes2[GatewayOpcodes2["RequestGuildMembers"] = 8] = "RequestGuildMembers";
-    GatewayOpcodes2[GatewayOpcodes2["InvalidSession"] = 9] = "InvalidSession";
-    GatewayOpcodes2[GatewayOpcodes2["Hello"] = 10] = "Hello";
-    GatewayOpcodes2[GatewayOpcodes2["HeartbeatAck"] = 11] = "HeartbeatAck";
-  })(GatewayOpcodes || (exports.GatewayOpcodes = GatewayOpcodes = {}));
-  var GatewayCloseCodes;
-  (function(GatewayCloseCodes2) {
-    GatewayCloseCodes2[GatewayCloseCodes2["UnknownError"] = 4000] = "UnknownError";
-    GatewayCloseCodes2[GatewayCloseCodes2["UnknownOpcode"] = 4001] = "UnknownOpcode";
-    GatewayCloseCodes2[GatewayCloseCodes2["DecodeError"] = 4002] = "DecodeError";
-    GatewayCloseCodes2[GatewayCloseCodes2["NotAuthenticated"] = 4003] = "NotAuthenticated";
-    GatewayCloseCodes2[GatewayCloseCodes2["AuthenticationFailed"] = 4004] = "AuthenticationFailed";
-    GatewayCloseCodes2[GatewayCloseCodes2["AlreadyAuthenticated"] = 4005] = "AlreadyAuthenticated";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidSeq"] = 4007] = "InvalidSeq";
-    GatewayCloseCodes2[GatewayCloseCodes2["RateLimited"] = 4008] = "RateLimited";
-    GatewayCloseCodes2[GatewayCloseCodes2["SessionTimedOut"] = 4009] = "SessionTimedOut";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidShard"] = 4010] = "InvalidShard";
-    GatewayCloseCodes2[GatewayCloseCodes2["ShardingRequired"] = 4011] = "ShardingRequired";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidAPIVersion"] = 4012] = "InvalidAPIVersion";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidIntents"] = 4013] = "InvalidIntents";
-    GatewayCloseCodes2[GatewayCloseCodes2["DisallowedIntents"] = 4014] = "DisallowedIntents";
-  })(GatewayCloseCodes || (exports.GatewayCloseCodes = GatewayCloseCodes = {}));
-  var GatewayIntentBits;
-  (function(GatewayIntentBits2) {
-    GatewayIntentBits2[GatewayIntentBits2["Guilds"] = 1] = "Guilds";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMembers"] = 2] = "GuildMembers";
-    GatewayIntentBits2[GatewayIntentBits2["GuildModeration"] = 4] = "GuildModeration";
-    GatewayIntentBits2[GatewayIntentBits2["GuildBans"] = 4] = "GuildBans";
-    GatewayIntentBits2[GatewayIntentBits2["GuildEmojisAndStickers"] = 8] = "GuildEmojisAndStickers";
-    GatewayIntentBits2[GatewayIntentBits2["GuildIntegrations"] = 16] = "GuildIntegrations";
-    GatewayIntentBits2[GatewayIntentBits2["GuildWebhooks"] = 32] = "GuildWebhooks";
-    GatewayIntentBits2[GatewayIntentBits2["GuildInvites"] = 64] = "GuildInvites";
-    GatewayIntentBits2[GatewayIntentBits2["GuildVoiceStates"] = 128] = "GuildVoiceStates";
-    GatewayIntentBits2[GatewayIntentBits2["GuildPresences"] = 256] = "GuildPresences";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessages"] = 512] = "GuildMessages";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessageReactions"] = 1024] = "GuildMessageReactions";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessageTyping"] = 2048] = "GuildMessageTyping";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessages"] = 4096] = "DirectMessages";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessageReactions"] = 8192] = "DirectMessageReactions";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessageTyping"] = 16384] = "DirectMessageTyping";
-    GatewayIntentBits2[GatewayIntentBits2["MessageContent"] = 32768] = "MessageContent";
-    GatewayIntentBits2[GatewayIntentBits2["GuildScheduledEvents"] = 65536] = "GuildScheduledEvents";
-    GatewayIntentBits2[GatewayIntentBits2["AutoModerationConfiguration"] = 1048576] = "AutoModerationConfiguration";
-    GatewayIntentBits2[GatewayIntentBits2["AutoModerationExecution"] = 2097152] = "AutoModerationExecution";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessagePolls"] = 16777216] = "GuildMessagePolls";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessagePolls"] = 33554432] = "DirectMessagePolls";
-  })(GatewayIntentBits || (exports.GatewayIntentBits = GatewayIntentBits = {}));
-  var GatewayDispatchEvents;
-  (function(GatewayDispatchEvents2) {
-    GatewayDispatchEvents2["ApplicationCommandPermissionsUpdate"] = "APPLICATION_COMMAND_PERMISSIONS_UPDATE";
-    GatewayDispatchEvents2["ChannelCreate"] = "CHANNEL_CREATE";
-    GatewayDispatchEvents2["ChannelDelete"] = "CHANNEL_DELETE";
-    GatewayDispatchEvents2["ChannelPinsUpdate"] = "CHANNEL_PINS_UPDATE";
-    GatewayDispatchEvents2["ChannelUpdate"] = "CHANNEL_UPDATE";
-    GatewayDispatchEvents2["GuildBanAdd"] = "GUILD_BAN_ADD";
-    GatewayDispatchEvents2["GuildBanRemove"] = "GUILD_BAN_REMOVE";
-    GatewayDispatchEvents2["GuildCreate"] = "GUILD_CREATE";
-    GatewayDispatchEvents2["GuildDelete"] = "GUILD_DELETE";
-    GatewayDispatchEvents2["GuildEmojisUpdate"] = "GUILD_EMOJIS_UPDATE";
-    GatewayDispatchEvents2["GuildIntegrationsUpdate"] = "GUILD_INTEGRATIONS_UPDATE";
-    GatewayDispatchEvents2["GuildMemberAdd"] = "GUILD_MEMBER_ADD";
-    GatewayDispatchEvents2["GuildMemberRemove"] = "GUILD_MEMBER_REMOVE";
-    GatewayDispatchEvents2["GuildMembersChunk"] = "GUILD_MEMBERS_CHUNK";
-    GatewayDispatchEvents2["GuildMemberUpdate"] = "GUILD_MEMBER_UPDATE";
-    GatewayDispatchEvents2["GuildRoleCreate"] = "GUILD_ROLE_CREATE";
-    GatewayDispatchEvents2["GuildRoleDelete"] = "GUILD_ROLE_DELETE";
-    GatewayDispatchEvents2["GuildRoleUpdate"] = "GUILD_ROLE_UPDATE";
-    GatewayDispatchEvents2["GuildStickersUpdate"] = "GUILD_STICKERS_UPDATE";
-    GatewayDispatchEvents2["GuildUpdate"] = "GUILD_UPDATE";
-    GatewayDispatchEvents2["IntegrationCreate"] = "INTEGRATION_CREATE";
-    GatewayDispatchEvents2["IntegrationDelete"] = "INTEGRATION_DELETE";
-    GatewayDispatchEvents2["IntegrationUpdate"] = "INTEGRATION_UPDATE";
-    GatewayDispatchEvents2["InteractionCreate"] = "INTERACTION_CREATE";
-    GatewayDispatchEvents2["InviteCreate"] = "INVITE_CREATE";
-    GatewayDispatchEvents2["InviteDelete"] = "INVITE_DELETE";
-    GatewayDispatchEvents2["MessageCreate"] = "MESSAGE_CREATE";
-    GatewayDispatchEvents2["MessageDelete"] = "MESSAGE_DELETE";
-    GatewayDispatchEvents2["MessageDeleteBulk"] = "MESSAGE_DELETE_BULK";
-    GatewayDispatchEvents2["MessageReactionAdd"] = "MESSAGE_REACTION_ADD";
-    GatewayDispatchEvents2["MessageReactionRemove"] = "MESSAGE_REACTION_REMOVE";
-    GatewayDispatchEvents2["MessageReactionRemoveAll"] = "MESSAGE_REACTION_REMOVE_ALL";
-    GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
-    GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
-    GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
-    GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
-    GatewayDispatchEvents2["StageInstanceDelete"] = "STAGE_INSTANCE_DELETE";
-    GatewayDispatchEvents2["StageInstanceUpdate"] = "STAGE_INSTANCE_UPDATE";
-    GatewayDispatchEvents2["Ready"] = "READY";
-    GatewayDispatchEvents2["Resumed"] = "RESUMED";
-    GatewayDispatchEvents2["ThreadCreate"] = "THREAD_CREATE";
-    GatewayDispatchEvents2["ThreadDelete"] = "THREAD_DELETE";
-    GatewayDispatchEvents2["ThreadListSync"] = "THREAD_LIST_SYNC";
-    GatewayDispatchEvents2["ThreadMembersUpdate"] = "THREAD_MEMBERS_UPDATE";
-    GatewayDispatchEvents2["ThreadMemberUpdate"] = "THREAD_MEMBER_UPDATE";
-    GatewayDispatchEvents2["ThreadUpdate"] = "THREAD_UPDATE";
-    GatewayDispatchEvents2["TypingStart"] = "TYPING_START";
-    GatewayDispatchEvents2["UserUpdate"] = "USER_UPDATE";
-    GatewayDispatchEvents2["VoiceServerUpdate"] = "VOICE_SERVER_UPDATE";
-    GatewayDispatchEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
-    GatewayDispatchEvents2["WebhooksUpdate"] = "WEBHOOKS_UPDATE";
-    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
-    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
-    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
-    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
-    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
-    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
-    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
-    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
-    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
-    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
-    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
-    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
-    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
-    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
-  })(GatewayDispatchEvents || (exports.GatewayDispatchEvents = GatewayDispatchEvents = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/globals.js
-var require_globals4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.FormattingPatterns = undefined;
-  exports.FormattingPatterns = {
-    User: /<@(?<id>\d{17,20})>/,
-    UserWithNickname: /<@!(?<id>\d{17,20})>/,
-    UserWithOptionalNickname: /<@!?(?<id>\d{17,20})>/,
-    Channel: /<#(?<id>\d{17,20})>/,
-    Role: /<@&(?<id>\d{17,20})>/,
-    SlashCommand: /<\/(?<fullName>(?<name>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: (?<subcommandOrGroup>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?(?: (?<subcommand>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?):(?<id>\d{17,20})>/u,
-    Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRTdft]))?>/,
-    DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
-    StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/
-  };
-  Object.freeze(exports.FormattingPatterns);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/common.js
-var require_common14 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.PermissionFlagsBits = undefined;
-  exports.PermissionFlagsBits = {
-    CreateInstantInvite: 1n << 0n,
-    KickMembers: 1n << 1n,
-    BanMembers: 1n << 2n,
-    Administrator: 1n << 3n,
-    ManageChannels: 1n << 4n,
-    ManageGuild: 1n << 5n,
-    AddReactions: 1n << 6n,
-    ViewAuditLog: 1n << 7n,
-    PrioritySpeaker: 1n << 8n,
-    Stream: 1n << 9n,
-    ViewChannel: 1n << 10n,
-    SendMessages: 1n << 11n,
-    SendTTSMessages: 1n << 12n,
-    ManageMessages: 1n << 13n,
-    EmbedLinks: 1n << 14n,
-    AttachFiles: 1n << 15n,
-    ReadMessageHistory: 1n << 16n,
-    MentionEveryone: 1n << 17n,
-    UseExternalEmojis: 1n << 18n,
-    ViewGuildInsights: 1n << 19n,
-    Connect: 1n << 20n,
-    Speak: 1n << 21n,
-    MuteMembers: 1n << 22n,
-    DeafenMembers: 1n << 23n,
-    MoveMembers: 1n << 24n,
-    UseVAD: 1n << 25n,
-    ChangeNickname: 1n << 26n,
-    ManageNicknames: 1n << 27n,
-    ManageRoles: 1n << 28n,
-    ManageWebhooks: 1n << 29n,
-    ManageEmojisAndStickers: 1n << 30n,
-    ManageGuildExpressions: 1n << 30n,
-    UseApplicationCommands: 1n << 31n,
-    RequestToSpeak: 1n << 32n,
-    ManageEvents: 1n << 33n,
-    ManageThreads: 1n << 34n,
-    CreatePublicThreads: 1n << 35n,
-    CreatePrivateThreads: 1n << 36n,
-    UseExternalStickers: 1n << 37n,
-    SendMessagesInThreads: 1n << 38n,
-    UseEmbeddedActivities: 1n << 39n,
-    ModerateMembers: 1n << 40n,
-    ViewCreatorMonetizationAnalytics: 1n << 41n,
-    UseSoundboard: 1n << 42n,
-    CreateGuildExpressions: 1n << 43n,
-    CreateEvents: 1n << 44n,
-    UseExternalSounds: 1n << 45n,
-    SendVoiceMessages: 1n << 46n,
-    SendPolls: 1n << 49n
-  };
-  Object.freeze(exports.PermissionFlagsBits);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/application.js
-var require_application7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
-  var ApplicationFlags;
-  (function(ApplicationFlags2) {
-    ApplicationFlags2[ApplicationFlags2["EmbeddedReleased"] = 2] = "EmbeddedReleased";
-    ApplicationFlags2[ApplicationFlags2["ManagedEmoji"] = 4] = "ManagedEmoji";
-    ApplicationFlags2[ApplicationFlags2["EmbeddedIAP"] = 8] = "EmbeddedIAP";
-    ApplicationFlags2[ApplicationFlags2["GroupDMCreate"] = 16] = "GroupDMCreate";
-    ApplicationFlags2[ApplicationFlags2["ApplicationAutoModerationRuleCreateBadge"] = 64] = "ApplicationAutoModerationRuleCreateBadge";
-    ApplicationFlags2[ApplicationFlags2["RPCHasConnected"] = 2048] = "RPCHasConnected";
-    ApplicationFlags2[ApplicationFlags2["GatewayPresence"] = 4096] = "GatewayPresence";
-    ApplicationFlags2[ApplicationFlags2["GatewayPresenceLimited"] = 8192] = "GatewayPresenceLimited";
-    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembers"] = 16384] = "GatewayGuildMembers";
-    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembersLimited"] = 32768] = "GatewayGuildMembersLimited";
-    ApplicationFlags2[ApplicationFlags2["VerificationPendingGuildLimit"] = 65536] = "VerificationPendingGuildLimit";
-    ApplicationFlags2[ApplicationFlags2["Embedded"] = 131072] = "Embedded";
-    ApplicationFlags2[ApplicationFlags2["GatewayMessageContent"] = 262144] = "GatewayMessageContent";
-    ApplicationFlags2[ApplicationFlags2["GatewayMessageContentLimited"] = 524288] = "GatewayMessageContentLimited";
-    ApplicationFlags2[ApplicationFlags2["EmbeddedFirstParty"] = 1048576] = "EmbeddedFirstParty";
-    ApplicationFlags2[ApplicationFlags2["ApplicationCommandBadge"] = 8388608] = "ApplicationCommandBadge";
-  })(ApplicationFlags || (exports.ApplicationFlags = ApplicationFlags = {}));
-  var ApplicationRoleConnectionMetadataType;
-  (function(ApplicationRoleConnectionMetadataType2) {
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerLessThanOrEqual"] = 1] = "IntegerLessThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerGreaterThanOrEqual"] = 2] = "IntegerGreaterThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerEqual"] = 3] = "IntegerEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerNotEqual"] = 4] = "IntegerNotEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeLessThanOrEqual"] = 5] = "DatetimeLessThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeGreaterThanOrEqual"] = 6] = "DatetimeGreaterThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanEqual"] = 7] = "BooleanEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanNotEqual"] = 8] = "BooleanNotEqual";
-  })(ApplicationRoleConnectionMetadataType || (exports.ApplicationRoleConnectionMetadataType = ApplicationRoleConnectionMetadataType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/auditLog.js
-var require_auditLog7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
-  var AuditLogEvent;
-  (function(AuditLogEvent2) {
-    AuditLogEvent2[AuditLogEvent2["GuildUpdate"] = 1] = "GuildUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelCreate"] = 10] = "ChannelCreate";
-    AuditLogEvent2[AuditLogEvent2["ChannelUpdate"] = 11] = "ChannelUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelDelete"] = 12] = "ChannelDelete";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteCreate"] = 13] = "ChannelOverwriteCreate";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteUpdate"] = 14] = "ChannelOverwriteUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteDelete"] = 15] = "ChannelOverwriteDelete";
-    AuditLogEvent2[AuditLogEvent2["MemberKick"] = 20] = "MemberKick";
-    AuditLogEvent2[AuditLogEvent2["MemberPrune"] = 21] = "MemberPrune";
-    AuditLogEvent2[AuditLogEvent2["MemberBanAdd"] = 22] = "MemberBanAdd";
-    AuditLogEvent2[AuditLogEvent2["MemberBanRemove"] = 23] = "MemberBanRemove";
-    AuditLogEvent2[AuditLogEvent2["MemberUpdate"] = 24] = "MemberUpdate";
-    AuditLogEvent2[AuditLogEvent2["MemberRoleUpdate"] = 25] = "MemberRoleUpdate";
-    AuditLogEvent2[AuditLogEvent2["MemberMove"] = 26] = "MemberMove";
-    AuditLogEvent2[AuditLogEvent2["MemberDisconnect"] = 27] = "MemberDisconnect";
-    AuditLogEvent2[AuditLogEvent2["BotAdd"] = 28] = "BotAdd";
-    AuditLogEvent2[AuditLogEvent2["RoleCreate"] = 30] = "RoleCreate";
-    AuditLogEvent2[AuditLogEvent2["RoleUpdate"] = 31] = "RoleUpdate";
-    AuditLogEvent2[AuditLogEvent2["RoleDelete"] = 32] = "RoleDelete";
-    AuditLogEvent2[AuditLogEvent2["InviteCreate"] = 40] = "InviteCreate";
-    AuditLogEvent2[AuditLogEvent2["InviteUpdate"] = 41] = "InviteUpdate";
-    AuditLogEvent2[AuditLogEvent2["InviteDelete"] = 42] = "InviteDelete";
-    AuditLogEvent2[AuditLogEvent2["WebhookCreate"] = 50] = "WebhookCreate";
-    AuditLogEvent2[AuditLogEvent2["WebhookUpdate"] = 51] = "WebhookUpdate";
-    AuditLogEvent2[AuditLogEvent2["WebhookDelete"] = 52] = "WebhookDelete";
-    AuditLogEvent2[AuditLogEvent2["EmojiCreate"] = 60] = "EmojiCreate";
-    AuditLogEvent2[AuditLogEvent2["EmojiUpdate"] = 61] = "EmojiUpdate";
-    AuditLogEvent2[AuditLogEvent2["EmojiDelete"] = 62] = "EmojiDelete";
-    AuditLogEvent2[AuditLogEvent2["MessageDelete"] = 72] = "MessageDelete";
-    AuditLogEvent2[AuditLogEvent2["MessageBulkDelete"] = 73] = "MessageBulkDelete";
-    AuditLogEvent2[AuditLogEvent2["MessagePin"] = 74] = "MessagePin";
-    AuditLogEvent2[AuditLogEvent2["MessageUnpin"] = 75] = "MessageUnpin";
-    AuditLogEvent2[AuditLogEvent2["IntegrationCreate"] = 80] = "IntegrationCreate";
-    AuditLogEvent2[AuditLogEvent2["IntegrationUpdate"] = 81] = "IntegrationUpdate";
-    AuditLogEvent2[AuditLogEvent2["IntegrationDelete"] = 82] = "IntegrationDelete";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceCreate"] = 83] = "StageInstanceCreate";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceUpdate"] = 84] = "StageInstanceUpdate";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceDelete"] = 85] = "StageInstanceDelete";
-    AuditLogEvent2[AuditLogEvent2["StickerCreate"] = 90] = "StickerCreate";
-    AuditLogEvent2[AuditLogEvent2["StickerUpdate"] = 91] = "StickerUpdate";
-    AuditLogEvent2[AuditLogEvent2["StickerDelete"] = 92] = "StickerDelete";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventCreate"] = 100] = "GuildScheduledEventCreate";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventUpdate"] = 101] = "GuildScheduledEventUpdate";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventDelete"] = 102] = "GuildScheduledEventDelete";
-    AuditLogEvent2[AuditLogEvent2["ThreadCreate"] = 110] = "ThreadCreate";
-    AuditLogEvent2[AuditLogEvent2["ThreadUpdate"] = 111] = "ThreadUpdate";
-    AuditLogEvent2[AuditLogEvent2["ThreadDelete"] = 112] = "ThreadDelete";
-    AuditLogEvent2[AuditLogEvent2["ApplicationCommandPermissionUpdate"] = 121] = "ApplicationCommandPermissionUpdate";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleCreate"] = 140] = "AutoModerationRuleCreate";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleUpdate"] = 141] = "AutoModerationRuleUpdate";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleDelete"] = 142] = "AutoModerationRuleDelete";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationBlockMessage"] = 143] = "AutoModerationBlockMessage";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationFlagToChannel"] = 144] = "AutoModerationFlagToChannel";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationUserCommunicationDisabled"] = 145] = "AutoModerationUserCommunicationDisabled";
-    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationRequestCreated"] = 150] = "CreatorMonetizationRequestCreated";
-    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationTermsAccepted"] = 151] = "CreatorMonetizationTermsAccepted";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptCreate"] = 163] = "OnboardingPromptCreate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptUpdate"] = 164] = "OnboardingPromptUpdate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptDelete"] = 165] = "OnboardingPromptDelete";
-    AuditLogEvent2[AuditLogEvent2["OnboardingCreate"] = 166] = "OnboardingCreate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingUpdate"] = 167] = "OnboardingUpdate";
-  })(AuditLogEvent || (exports.AuditLogEvent = AuditLogEvent = {}));
-  var AuditLogOptionsType;
-  (function(AuditLogOptionsType2) {
-    AuditLogOptionsType2["Role"] = "0";
-    AuditLogOptionsType2["Member"] = "1";
-  })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/autoModeration.js
-var require_autoModeration7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
-  var AutoModerationRuleTriggerType;
-  (function(AutoModerationRuleTriggerType2) {
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Keyword"] = 1] = "Keyword";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Spam"] = 3] = "Spam";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["KeywordPreset"] = 4] = "KeywordPreset";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MentionSpam"] = 5] = "MentionSpam";
-  })(AutoModerationRuleTriggerType || (exports.AutoModerationRuleTriggerType = AutoModerationRuleTriggerType = {}));
-  var AutoModerationRuleKeywordPresetType;
-  (function(AutoModerationRuleKeywordPresetType2) {
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Profanity"] = 1] = "Profanity";
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["SexualContent"] = 2] = "SexualContent";
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Slurs"] = 3] = "Slurs";
-  })(AutoModerationRuleKeywordPresetType || (exports.AutoModerationRuleKeywordPresetType = AutoModerationRuleKeywordPresetType = {}));
-  var AutoModerationRuleEventType;
-  (function(AutoModerationRuleEventType2) {
-    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MessageSend"] = 1] = "MessageSend";
-  })(AutoModerationRuleEventType || (exports.AutoModerationRuleEventType = AutoModerationRuleEventType = {}));
-  var AutoModerationActionType;
-  (function(AutoModerationActionType2) {
-    AutoModerationActionType2[AutoModerationActionType2["BlockMessage"] = 1] = "BlockMessage";
-    AutoModerationActionType2[AutoModerationActionType2["SendAlertMessage"] = 2] = "SendAlertMessage";
-    AutoModerationActionType2[AutoModerationActionType2["Timeout"] = 3] = "Timeout";
-  })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/channel.js
-var require_channel10 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ChannelFlags = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.MessageFlags = exports.MessageActivityType = exports.MessageType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
-  var SortOrderType;
-  (function(SortOrderType2) {
-    SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
-    SortOrderType2[SortOrderType2["CreationDate"] = 1] = "CreationDate";
-  })(SortOrderType || (exports.SortOrderType = SortOrderType = {}));
-  var ForumLayoutType;
-  (function(ForumLayoutType2) {
-    ForumLayoutType2[ForumLayoutType2["NotSet"] = 0] = "NotSet";
-    ForumLayoutType2[ForumLayoutType2["ListView"] = 1] = "ListView";
-    ForumLayoutType2[ForumLayoutType2["GalleryView"] = 2] = "GalleryView";
-  })(ForumLayoutType || (exports.ForumLayoutType = ForumLayoutType = {}));
-  var ChannelType;
-  (function(ChannelType2) {
-    ChannelType2[ChannelType2["GuildText"] = 0] = "GuildText";
-    ChannelType2[ChannelType2["DM"] = 1] = "DM";
-    ChannelType2[ChannelType2["GuildVoice"] = 2] = "GuildVoice";
-    ChannelType2[ChannelType2["GroupDM"] = 3] = "GroupDM";
-    ChannelType2[ChannelType2["GuildCategory"] = 4] = "GuildCategory";
-    ChannelType2[ChannelType2["GuildAnnouncement"] = 5] = "GuildAnnouncement";
-    ChannelType2[ChannelType2["AnnouncementThread"] = 10] = "AnnouncementThread";
-    ChannelType2[ChannelType2["PublicThread"] = 11] = "PublicThread";
-    ChannelType2[ChannelType2["PrivateThread"] = 12] = "PrivateThread";
-    ChannelType2[ChannelType2["GuildStageVoice"] = 13] = "GuildStageVoice";
-    ChannelType2[ChannelType2["GuildDirectory"] = 14] = "GuildDirectory";
-    ChannelType2[ChannelType2["GuildForum"] = 15] = "GuildForum";
-    ChannelType2[ChannelType2["GuildMedia"] = 16] = "GuildMedia";
-    ChannelType2[ChannelType2["GuildNews"] = 5] = "GuildNews";
-    ChannelType2[ChannelType2["GuildNewsThread"] = 10] = "GuildNewsThread";
-    ChannelType2[ChannelType2["GuildPublicThread"] = 11] = "GuildPublicThread";
-    ChannelType2[ChannelType2["GuildPrivateThread"] = 12] = "GuildPrivateThread";
-  })(ChannelType || (exports.ChannelType = ChannelType = {}));
-  var VideoQualityMode;
-  (function(VideoQualityMode2) {
-    VideoQualityMode2[VideoQualityMode2["Auto"] = 1] = "Auto";
-    VideoQualityMode2[VideoQualityMode2["Full"] = 2] = "Full";
-  })(VideoQualityMode || (exports.VideoQualityMode = VideoQualityMode = {}));
-  var MessageType;
-  (function(MessageType2) {
-    MessageType2[MessageType2["Default"] = 0] = "Default";
-    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
-    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
-    MessageType2[MessageType2["Call"] = 3] = "Call";
-    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
-    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
-    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
-    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
-    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
-    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
-    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
-    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
-    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
-    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
-    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
-    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
-    MessageType2[MessageType2["Reply"] = 19] = "Reply";
-    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
-    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
-    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
-    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
-    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
-    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
-    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
-    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
-    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
-    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
-    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
-    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
-    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
-  })(MessageType || (exports.MessageType = MessageType = {}));
-  var MessageActivityType;
-  (function(MessageActivityType2) {
-    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
-    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
-    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
-    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
-  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
-  var MessageFlags;
-  (function(MessageFlags2) {
-    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
-    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
-    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
-    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
-    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
-    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
-    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
-    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
-    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
-    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
-    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
-    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
-  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
-  var OverwriteType;
-  (function(OverwriteType2) {
-    OverwriteType2[OverwriteType2["Role"] = 0] = "Role";
-    OverwriteType2[OverwriteType2["Member"] = 1] = "Member";
-  })(OverwriteType || (exports.OverwriteType = OverwriteType = {}));
-  var ThreadAutoArchiveDuration;
-  (function(ThreadAutoArchiveDuration2) {
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneHour"] = 60] = "OneHour";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneDay"] = 1440] = "OneDay";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["ThreeDays"] = 4320] = "ThreeDays";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneWeek"] = 10080] = "OneWeek";
-  })(ThreadAutoArchiveDuration || (exports.ThreadAutoArchiveDuration = ThreadAutoArchiveDuration = {}));
-  var ThreadMemberFlags;
-  (function(ThreadMemberFlags2) {
-    ThreadMemberFlags2[ThreadMemberFlags2["HasInteracted"] = 1] = "HasInteracted";
-    ThreadMemberFlags2[ThreadMemberFlags2["AllMessages"] = 2] = "AllMessages";
-    ThreadMemberFlags2[ThreadMemberFlags2["OnlyMentions"] = 4] = "OnlyMentions";
-    ThreadMemberFlags2[ThreadMemberFlags2["NoMessages"] = 8] = "NoMessages";
-  })(ThreadMemberFlags || (exports.ThreadMemberFlags = ThreadMemberFlags = {}));
-  var EmbedType;
-  (function(EmbedType2) {
-    EmbedType2["Rich"] = "rich";
-    EmbedType2["Image"] = "image";
-    EmbedType2["Video"] = "video";
-    EmbedType2["GIFV"] = "gifv";
-    EmbedType2["Article"] = "article";
-    EmbedType2["Link"] = "link";
-    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
-  })(EmbedType || (exports.EmbedType = EmbedType = {}));
-  var AttachmentFlags;
-  (function(AttachmentFlags2) {
-    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
-  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
-  var AllowedMentionsTypes;
-  (function(AllowedMentionsTypes2) {
-    AllowedMentionsTypes2["Everyone"] = "everyone";
-    AllowedMentionsTypes2["Role"] = "roles";
-    AllowedMentionsTypes2["User"] = "users";
-  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
-  var ComponentType;
-  (function(ComponentType2) {
-    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
-    ComponentType2[ComponentType2["Button"] = 2] = "Button";
-    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
-    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
-    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
-    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
-    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
-    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
-    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
-  })(ComponentType || (exports.ComponentType = ComponentType = {}));
-  var ButtonStyle;
-  (function(ButtonStyle2) {
-    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
-    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
-    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
-    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
-    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
-  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
-  var TextInputStyle;
-  (function(TextInputStyle2) {
-    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
-    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
-  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
-  var SelectMenuDefaultValueType;
-  (function(SelectMenuDefaultValueType2) {
-    SelectMenuDefaultValueType2["Channel"] = "channel";
-    SelectMenuDefaultValueType2["Role"] = "role";
-    SelectMenuDefaultValueType2["User"] = "user";
-  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
-  var ChannelFlags;
-  (function(ChannelFlags2) {
-    ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
-    ChannelFlags2[ChannelFlags2["Pinned"] = 2] = "Pinned";
-    ChannelFlags2[ChannelFlags2["ActiveChannelsRemoved"] = 4] = "ActiveChannelsRemoved";
-    ChannelFlags2[ChannelFlags2["RequireTag"] = 16] = "RequireTag";
-    ChannelFlags2[ChannelFlags2["IsSpam"] = 32] = "IsSpam";
-    ChannelFlags2[ChannelFlags2["IsGuildResourceChannel"] = 128] = "IsGuildResourceChannel";
-    ChannelFlags2[ChannelFlags2["ClydeAI"] = 256] = "ClydeAI";
-    ChannelFlags2[ChannelFlags2["IsScheduledForDeletion"] = 512] = "IsScheduledForDeletion";
-    ChannelFlags2[ChannelFlags2["HideMediaDownloadOptions"] = 32768] = "HideMediaDownloadOptions";
-  })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/emoji.js
-var require_emoji7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/gateway.js
-var require_gateway7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ActivityFlags = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
-  var PresenceUpdateStatus;
-  (function(PresenceUpdateStatus2) {
-    PresenceUpdateStatus2["Online"] = "online";
-    PresenceUpdateStatus2["DoNotDisturb"] = "dnd";
-    PresenceUpdateStatus2["Idle"] = "idle";
-    PresenceUpdateStatus2["Invisible"] = "invisible";
-    PresenceUpdateStatus2["Offline"] = "offline";
-  })(PresenceUpdateStatus || (exports.PresenceUpdateStatus = PresenceUpdateStatus = {}));
-  var ActivityPlatform;
-  (function(ActivityPlatform2) {
-    ActivityPlatform2["Desktop"] = "desktop";
-    ActivityPlatform2["Xbox"] = "xbox";
-    ActivityPlatform2["Samsung"] = "samsung";
-    ActivityPlatform2["IOS"] = "ios";
-    ActivityPlatform2["Android"] = "android";
-    ActivityPlatform2["Embedded"] = "embedded";
-    ActivityPlatform2["PS4"] = "ps4";
-    ActivityPlatform2["PS5"] = "ps5";
-  })(ActivityPlatform || (exports.ActivityPlatform = ActivityPlatform = {}));
-  var ActivityType;
-  (function(ActivityType2) {
-    ActivityType2[ActivityType2["Playing"] = 0] = "Playing";
-    ActivityType2[ActivityType2["Streaming"] = 1] = "Streaming";
-    ActivityType2[ActivityType2["Listening"] = 2] = "Listening";
-    ActivityType2[ActivityType2["Watching"] = 3] = "Watching";
-    ActivityType2[ActivityType2["Custom"] = 4] = "Custom";
-    ActivityType2[ActivityType2["Competing"] = 5] = "Competing";
-  })(ActivityType || (exports.ActivityType = ActivityType = {}));
-  var ActivityFlags;
-  (function(ActivityFlags2) {
-    ActivityFlags2[ActivityFlags2["Instance"] = 1] = "Instance";
-    ActivityFlags2[ActivityFlags2["Join"] = 2] = "Join";
-    ActivityFlags2[ActivityFlags2["Spectate"] = 4] = "Spectate";
-    ActivityFlags2[ActivityFlags2["JoinRequest"] = 8] = "JoinRequest";
-    ActivityFlags2[ActivityFlags2["Sync"] = 16] = "Sync";
-    ActivityFlags2[ActivityFlags2["Play"] = 32] = "Play";
-    ActivityFlags2[ActivityFlags2["PartyPrivacyFriends"] = 64] = "PartyPrivacyFriends";
-    ActivityFlags2[ActivityFlags2["PartyPrivacyVoiceChannel"] = 128] = "PartyPrivacyVoiceChannel";
-    ActivityFlags2[ActivityFlags2["Embedded"] = 256] = "Embedded";
-  })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guild.js
-var require_guild7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
-  var GuildDefaultMessageNotifications;
-  (function(GuildDefaultMessageNotifications2) {
-    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["AllMessages"] = 0] = "AllMessages";
-    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["OnlyMentions"] = 1] = "OnlyMentions";
-  })(GuildDefaultMessageNotifications || (exports.GuildDefaultMessageNotifications = GuildDefaultMessageNotifications = {}));
-  var GuildExplicitContentFilter;
-  (function(GuildExplicitContentFilter2) {
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["Disabled"] = 0] = "Disabled";
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["MembersWithoutRoles"] = 1] = "MembersWithoutRoles";
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["AllMembers"] = 2] = "AllMembers";
-  })(GuildExplicitContentFilter || (exports.GuildExplicitContentFilter = GuildExplicitContentFilter = {}));
-  var GuildMFALevel;
-  (function(GuildMFALevel2) {
-    GuildMFALevel2[GuildMFALevel2["None"] = 0] = "None";
-    GuildMFALevel2[GuildMFALevel2["Elevated"] = 1] = "Elevated";
-  })(GuildMFALevel || (exports.GuildMFALevel = GuildMFALevel = {}));
-  var GuildNSFWLevel;
-  (function(GuildNSFWLevel2) {
-    GuildNSFWLevel2[GuildNSFWLevel2["Default"] = 0] = "Default";
-    GuildNSFWLevel2[GuildNSFWLevel2["Explicit"] = 1] = "Explicit";
-    GuildNSFWLevel2[GuildNSFWLevel2["Safe"] = 2] = "Safe";
-    GuildNSFWLevel2[GuildNSFWLevel2["AgeRestricted"] = 3] = "AgeRestricted";
-  })(GuildNSFWLevel || (exports.GuildNSFWLevel = GuildNSFWLevel = {}));
-  var GuildVerificationLevel;
-  (function(GuildVerificationLevel2) {
-    GuildVerificationLevel2[GuildVerificationLevel2["None"] = 0] = "None";
-    GuildVerificationLevel2[GuildVerificationLevel2["Low"] = 1] = "Low";
-    GuildVerificationLevel2[GuildVerificationLevel2["Medium"] = 2] = "Medium";
-    GuildVerificationLevel2[GuildVerificationLevel2["High"] = 3] = "High";
-    GuildVerificationLevel2[GuildVerificationLevel2["VeryHigh"] = 4] = "VeryHigh";
-  })(GuildVerificationLevel || (exports.GuildVerificationLevel = GuildVerificationLevel = {}));
-  var GuildPremiumTier;
-  (function(GuildPremiumTier2) {
-    GuildPremiumTier2[GuildPremiumTier2["None"] = 0] = "None";
-    GuildPremiumTier2[GuildPremiumTier2["Tier1"] = 1] = "Tier1";
-    GuildPremiumTier2[GuildPremiumTier2["Tier2"] = 2] = "Tier2";
-    GuildPremiumTier2[GuildPremiumTier2["Tier3"] = 3] = "Tier3";
-  })(GuildPremiumTier || (exports.GuildPremiumTier = GuildPremiumTier = {}));
-  var GuildHubType;
-  (function(GuildHubType2) {
-    GuildHubType2[GuildHubType2["Default"] = 0] = "Default";
-    GuildHubType2[GuildHubType2["HighSchool"] = 1] = "HighSchool";
-    GuildHubType2[GuildHubType2["College"] = 2] = "College";
-  })(GuildHubType || (exports.GuildHubType = GuildHubType = {}));
-  var GuildSystemChannelFlags;
-  (function(GuildSystemChannelFlags2) {
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotifications"] = 1] = "SuppressJoinNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressPremiumSubscriptions"] = 2] = "SuppressPremiumSubscriptions";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressGuildReminderNotifications"] = 4] = "SuppressGuildReminderNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotificationReplies"] = 8] = "SuppressJoinNotificationReplies";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotifications"] = 16] = "SuppressRoleSubscriptionPurchaseNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotificationReplies"] = 32] = "SuppressRoleSubscriptionPurchaseNotificationReplies";
-  })(GuildSystemChannelFlags || (exports.GuildSystemChannelFlags = GuildSystemChannelFlags = {}));
-  var GuildFeature;
-  (function(GuildFeature2) {
-    GuildFeature2["AnimatedBanner"] = "ANIMATED_BANNER";
-    GuildFeature2["AnimatedIcon"] = "ANIMATED_ICON";
-    GuildFeature2["ApplicationCommandPermissionsV2"] = "APPLICATION_COMMAND_PERMISSIONS_V2";
-    GuildFeature2["AutoModeration"] = "AUTO_MODERATION";
-    GuildFeature2["Banner"] = "BANNER";
-    GuildFeature2["Community"] = "COMMUNITY";
-    GuildFeature2["CreatorMonetizableProvisional"] = "CREATOR_MONETIZABLE_PROVISIONAL";
-    GuildFeature2["CreatorStorePage"] = "CREATOR_STORE_PAGE";
-    GuildFeature2["DeveloperSupportServer"] = "DEVELOPER_SUPPORT_SERVER";
-    GuildFeature2["Discoverable"] = "DISCOVERABLE";
-    GuildFeature2["Featurable"] = "FEATURABLE";
-    GuildFeature2["HasDirectoryEntry"] = "HAS_DIRECTORY_ENTRY";
-    GuildFeature2["Hub"] = "HUB";
-    GuildFeature2["InvitesDisabled"] = "INVITES_DISABLED";
-    GuildFeature2["InviteSplash"] = "INVITE_SPLASH";
-    GuildFeature2["LinkedToHub"] = "LINKED_TO_HUB";
-    GuildFeature2["MemberVerificationGateEnabled"] = "MEMBER_VERIFICATION_GATE_ENABLED";
-    GuildFeature2["MonetizationEnabled"] = "MONETIZATION_ENABLED";
-    GuildFeature2["MoreStickers"] = "MORE_STICKERS";
-    GuildFeature2["News"] = "NEWS";
-    GuildFeature2["Partnered"] = "PARTNERED";
-    GuildFeature2["PreviewEnabled"] = "PREVIEW_ENABLED";
-    GuildFeature2["PrivateThreads"] = "PRIVATE_THREADS";
-    GuildFeature2["RaidAlertsDisabled"] = "RAID_ALERTS_DISABLED";
-    GuildFeature2["RelayEnabled"] = "RELAY_ENABLED";
-    GuildFeature2["RoleIcons"] = "ROLE_ICONS";
-    GuildFeature2["RoleSubscriptionsAvailableForPurchase"] = "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE";
-    GuildFeature2["RoleSubscriptionsEnabled"] = "ROLE_SUBSCRIPTIONS_ENABLED";
-    GuildFeature2["TicketedEventsEnabled"] = "TICKETED_EVENTS_ENABLED";
-    GuildFeature2["VanityURL"] = "VANITY_URL";
-    GuildFeature2["Verified"] = "VERIFIED";
-    GuildFeature2["VIPRegions"] = "VIP_REGIONS";
-    GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
-  })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
-  var GuildMemberFlags;
-  (function(GuildMemberFlags2) {
-    GuildMemberFlags2[GuildMemberFlags2["DidRejoin"] = 1] = "DidRejoin";
-    GuildMemberFlags2[GuildMemberFlags2["CompletedOnboarding"] = 2] = "CompletedOnboarding";
-    GuildMemberFlags2[GuildMemberFlags2["BypassesVerification"] = 4] = "BypassesVerification";
-    GuildMemberFlags2[GuildMemberFlags2["StartedOnboarding"] = 8] = "StartedOnboarding";
-    GuildMemberFlags2[GuildMemberFlags2["StartedHomeActions"] = 32] = "StartedHomeActions";
-    GuildMemberFlags2[GuildMemberFlags2["CompletedHomeActions"] = 64] = "CompletedHomeActions";
-    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedUsernameOrGuildNickname"] = 128] = "AutomodQuarantinedUsernameOrGuildNickname";
-    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedBio"] = 256] = "AutomodQuarantinedBio";
-  })(GuildMemberFlags || (exports.GuildMemberFlags = GuildMemberFlags = {}));
-  var IntegrationExpireBehavior;
-  (function(IntegrationExpireBehavior2) {
-    IntegrationExpireBehavior2[IntegrationExpireBehavior2["RemoveRole"] = 0] = "RemoveRole";
-    IntegrationExpireBehavior2[IntegrationExpireBehavior2["Kick"] = 1] = "Kick";
-  })(IntegrationExpireBehavior || (exports.IntegrationExpireBehavior = IntegrationExpireBehavior = {}));
-  var GuildWidgetStyle;
-  (function(GuildWidgetStyle2) {
-    GuildWidgetStyle2["Shield"] = "shield";
-    GuildWidgetStyle2["Banner1"] = "banner1";
-    GuildWidgetStyle2["Banner2"] = "banner2";
-    GuildWidgetStyle2["Banner3"] = "banner3";
-    GuildWidgetStyle2["Banner4"] = "banner4";
-  })(GuildWidgetStyle || (exports.GuildWidgetStyle = GuildWidgetStyle = {}));
-  var MembershipScreeningFieldType;
-  (function(MembershipScreeningFieldType2) {
-    MembershipScreeningFieldType2["Terms"] = "TERMS";
-  })(MembershipScreeningFieldType || (exports.MembershipScreeningFieldType = MembershipScreeningFieldType = {}));
-  var GuildOnboardingMode;
-  (function(GuildOnboardingMode2) {
-    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingDefault"] = 0] = "OnboardingDefault";
-    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingAdvanced"] = 1] = "OnboardingAdvanced";
-  })(GuildOnboardingMode || (exports.GuildOnboardingMode = GuildOnboardingMode = {}));
-  var GuildOnboardingPromptType;
-  (function(GuildOnboardingPromptType2) {
-    GuildOnboardingPromptType2[GuildOnboardingPromptType2["MultipleChoice"] = 0] = "MultipleChoice";
-    GuildOnboardingPromptType2[GuildOnboardingPromptType2["Dropdown"] = 1] = "Dropdown";
-  })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
-var require_guildScheduledEvent7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = undefined;
-  var GuildScheduledEventEntityType;
-  (function(GuildScheduledEventEntityType2) {
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["StageInstance"] = 1] = "StageInstance";
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["Voice"] = 2] = "Voice";
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["External"] = 3] = "External";
-  })(GuildScheduledEventEntityType || (exports.GuildScheduledEventEntityType = GuildScheduledEventEntityType = {}));
-  var GuildScheduledEventStatus;
-  (function(GuildScheduledEventStatus2) {
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Scheduled"] = 1] = "Scheduled";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Active"] = 2] = "Active";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Completed"] = 3] = "Completed";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Canceled"] = 4] = "Canceled";
-  })(GuildScheduledEventStatus || (exports.GuildScheduledEventStatus = GuildScheduledEventStatus = {}));
-  var GuildScheduledEventPrivacyLevel;
-  (function(GuildScheduledEventPrivacyLevel2) {
-    GuildScheduledEventPrivacyLevel2[GuildScheduledEventPrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
-  })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/attachment.js
-var require_attachment4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/base.js
-var require_base7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/boolean.js
-var require_boolean4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/channel.js
-var require_channel11 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/integer.js
-var require_integer4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/mentionable.js
-var require_mentionable4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/number.js
-var require_number4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/role.js
-var require_role4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
-var require_shared4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ApplicationCommandOptionType = undefined;
-  var ApplicationCommandOptionType;
-  (function(ApplicationCommandOptionType2) {
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Subcommand"] = 1] = "Subcommand";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["SubcommandGroup"] = 2] = "SubcommandGroup";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["String"] = 3] = "String";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Integer"] = 4] = "Integer";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Boolean"] = 5] = "Boolean";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["User"] = 6] = "User";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Channel"] = 7] = "Channel";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Role"] = 8] = "Role";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Mentionable"] = 9] = "Mentionable";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Number"] = 10] = "Number";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Attachment"] = 11] = "Attachment";
-  })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/string.js
-var require_string4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommand.js
-var require_subcommand4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommandGroup.js
-var require_subcommandGroup4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/user.js
-var require_user10 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
-var require_chatInput4 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_attachment4(), exports);
-  __exportStar(require_base7(), exports);
-  __exportStar(require_boolean4(), exports);
-  __exportStar(require_channel11(), exports);
-  __exportStar(require_integer4(), exports);
-  __exportStar(require_mentionable4(), exports);
-  __exportStar(require_number4(), exports);
-  __exportStar(require_role4(), exports);
-  __exportStar(require_shared4(), exports);
-  __exportStar(require_string4(), exports);
-  __exportStar(require_subcommand4(), exports);
-  __exportStar(require_subcommandGroup4(), exports);
-  __exportStar(require_user10(), exports);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/contextMenu.js
-var require_contextMenu4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
-var require_permissions7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
-  var ApplicationCommandPermissionType;
-  (function(ApplicationCommandPermissionType2) {
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Role"] = 1] = "Role";
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["User"] = 2] = "User";
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Channel"] = 3] = "Channel";
-  })(ApplicationCommandPermissionType || (exports.ApplicationCommandPermissionType = ApplicationCommandPermissionType = {}));
-  exports.APIApplicationCommandPermissionsConstant = {
-    Everyone: (guildId) => String(guildId),
-    AllChannels: (guildId) => String(BigInt(guildId) - 1n)
-  };
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
-var require_applicationCommands4 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ApplicationCommandType = undefined;
-  __exportStar(require_chatInput4(), exports);
-  __exportStar(require_contextMenu4(), exports);
-  __exportStar(require_permissions7(), exports);
-  var ApplicationCommandType;
-  (function(ApplicationCommandType2) {
-    ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
-    ApplicationCommandType2[ApplicationCommandType2["User"] = 2] = "User";
-    ApplicationCommandType2[ApplicationCommandType2["Message"] = 3] = "Message";
-  })(ApplicationCommandType || (exports.ApplicationCommandType = ApplicationCommandType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/autocomplete.js
-var require_autocomplete4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/base.js
-var require_base8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/messageComponents.js
-var require_messageComponents4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/modalSubmit.js
-var require_modalSubmit4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/ping.js
-var require_ping4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/responses.js
-var require_responses4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.InteractionResponseType = exports.InteractionType = undefined;
-  var InteractionType;
-  (function(InteractionType2) {
-    InteractionType2[InteractionType2["Ping"] = 1] = "Ping";
-    InteractionType2[InteractionType2["ApplicationCommand"] = 2] = "ApplicationCommand";
-    InteractionType2[InteractionType2["MessageComponent"] = 3] = "MessageComponent";
-    InteractionType2[InteractionType2["ApplicationCommandAutocomplete"] = 4] = "ApplicationCommandAutocomplete";
-    InteractionType2[InteractionType2["ModalSubmit"] = 5] = "ModalSubmit";
-  })(InteractionType || (exports.InteractionType = InteractionType = {}));
-  var InteractionResponseType;
-  (function(InteractionResponseType2) {
-    InteractionResponseType2[InteractionResponseType2["Pong"] = 1] = "Pong";
-    InteractionResponseType2[InteractionResponseType2["ChannelMessageWithSource"] = 4] = "ChannelMessageWithSource";
-    InteractionResponseType2[InteractionResponseType2["DeferredChannelMessageWithSource"] = 5] = "DeferredChannelMessageWithSource";
-    InteractionResponseType2[InteractionResponseType2["DeferredMessageUpdate"] = 6] = "DeferredMessageUpdate";
-    InteractionResponseType2[InteractionResponseType2["UpdateMessage"] = 7] = "UpdateMessage";
-    InteractionResponseType2[InteractionResponseType2["ApplicationCommandAutocompleteResult"] = 8] = "ApplicationCommandAutocompleteResult";
-    InteractionResponseType2[InteractionResponseType2["Modal"] = 9] = "Modal";
-    InteractionResponseType2[InteractionResponseType2["PremiumRequired"] = 10] = "PremiumRequired";
-  })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/interactions.js
-var require_interactions7 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_applicationCommands4(), exports);
-  __exportStar(require_autocomplete4(), exports);
-  __exportStar(require_base8(), exports);
-  __exportStar(require_messageComponents4(), exports);
-  __exportStar(require_modalSubmit4(), exports);
-  __exportStar(require_ping4(), exports);
-  __exportStar(require_responses4(), exports);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/invite.js
-var require_invite7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.InviteTargetType = exports.InviteType = undefined;
-  var InviteType;
-  (function(InviteType2) {
-    InviteType2[InviteType2["Guild"] = 0] = "Guild";
-    InviteType2[InviteType2["GroupDM"] = 1] = "GroupDM";
-    InviteType2[InviteType2["Friend"] = 2] = "Friend";
-  })(InviteType || (exports.InviteType = InviteType = {}));
-  var InviteTargetType;
-  (function(InviteTargetType2) {
-    InviteTargetType2[InviteTargetType2["Stream"] = 1] = "Stream";
-    InviteTargetType2[InviteTargetType2["EmbeddedApplication"] = 2] = "EmbeddedApplication";
-  })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/oauth2.js
-var require_oauth27 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.OAuth2Scopes = undefined;
-  var OAuth2Scopes;
-  (function(OAuth2Scopes2) {
-    OAuth2Scopes2["Bot"] = "bot";
-    OAuth2Scopes2["Connections"] = "connections";
-    OAuth2Scopes2["DMChannelsRead"] = "dm_channels.read";
-    OAuth2Scopes2["Email"] = "email";
-    OAuth2Scopes2["Identify"] = "identify";
-    OAuth2Scopes2["Guilds"] = "guilds";
-    OAuth2Scopes2["GuildsJoin"] = "guilds.join";
-    OAuth2Scopes2["GuildsMembersRead"] = "guilds.members.read";
-    OAuth2Scopes2["GroupDMJoins"] = "gdm.join";
-    OAuth2Scopes2["MessagesRead"] = "messages.read";
-    OAuth2Scopes2["RoleConnectionsWrite"] = "role_connections.write";
-    OAuth2Scopes2["RPC"] = "rpc";
-    OAuth2Scopes2["RPCNotificationsRead"] = "rpc.notifications.read";
-    OAuth2Scopes2["WebhookIncoming"] = "webhook.incoming";
-    OAuth2Scopes2["Voice"] = "voice";
-    OAuth2Scopes2["ApplicationsBuildsUpload"] = "applications.builds.upload";
-    OAuth2Scopes2["ApplicationsBuildsRead"] = "applications.builds.read";
-    OAuth2Scopes2["ApplicationsStoreUpdate"] = "applications.store.update";
-    OAuth2Scopes2["ApplicationsEntitlements"] = "applications.entitlements";
-    OAuth2Scopes2["RelationshipsRead"] = "relationships.read";
-    OAuth2Scopes2["ActivitiesRead"] = "activities.read";
-    OAuth2Scopes2["ActivitiesWrite"] = "activities.write";
-    OAuth2Scopes2["ApplicationsCommands"] = "applications.commands";
-    OAuth2Scopes2["ApplicationsCommandsUpdate"] = "applications.commands.update";
-    OAuth2Scopes2["ApplicationCommandsPermissionsUpdate"] = "applications.commands.permissions.update";
-  })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/poll.js
-var require_poll7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.PollLayoutType = undefined;
-  var PollLayoutType;
-  (function(PollLayoutType2) {
-    PollLayoutType2[PollLayoutType2["Default"] = 1] = "Default";
-  })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/permissions.js
-var require_permissions8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RoleFlags = undefined;
-  var RoleFlags;
-  (function(RoleFlags2) {
-    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
-  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/stageInstance.js
-var require_stageInstance7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.StageInstancePrivacyLevel = undefined;
-  var StageInstancePrivacyLevel;
-  (function(StageInstancePrivacyLevel2) {
-    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["Public"] = 1] = "Public";
-    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
-  })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/sticker.js
-var require_sticker7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.StickerFormatType = exports.StickerType = undefined;
-  var StickerType;
-  (function(StickerType2) {
-    StickerType2[StickerType2["Standard"] = 1] = "Standard";
-    StickerType2[StickerType2["Guild"] = 2] = "Guild";
-  })(StickerType || (exports.StickerType = StickerType = {}));
-  var StickerFormatType;
-  (function(StickerFormatType2) {
-    StickerFormatType2[StickerFormatType2["PNG"] = 1] = "PNG";
-    StickerFormatType2[StickerFormatType2["APNG"] = 2] = "APNG";
-    StickerFormatType2[StickerFormatType2["Lottie"] = 3] = "Lottie";
-    StickerFormatType2[StickerFormatType2["GIF"] = 4] = "GIF";
-  })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/teams.js
-var require_teams4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
-  var TeamMemberMembershipState;
-  (function(TeamMemberMembershipState2) {
-    TeamMemberMembershipState2[TeamMemberMembershipState2["Invited"] = 1] = "Invited";
-    TeamMemberMembershipState2[TeamMemberMembershipState2["Accepted"] = 2] = "Accepted";
-  })(TeamMemberMembershipState || (exports.TeamMemberMembershipState = TeamMemberMembershipState = {}));
-  var TeamMemberRole;
-  (function(TeamMemberRole2) {
-    TeamMemberRole2["Admin"] = "admin";
-    TeamMemberRole2["Developer"] = "developer";
-    TeamMemberRole2["ReadOnly"] = "read_only";
-  })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/template.js
-var require_template7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/user.js
-var require_user11 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
-  var UserFlags;
-  (function(UserFlags2) {
-    UserFlags2[UserFlags2["Staff"] = 1] = "Staff";
-    UserFlags2[UserFlags2["Partner"] = 2] = "Partner";
-    UserFlags2[UserFlags2["Hypesquad"] = 4] = "Hypesquad";
-    UserFlags2[UserFlags2["BugHunterLevel1"] = 8] = "BugHunterLevel1";
-    UserFlags2[UserFlags2["MFASMS"] = 16] = "MFASMS";
-    UserFlags2[UserFlags2["PremiumPromoDismissed"] = 32] = "PremiumPromoDismissed";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse1"] = 64] = "HypeSquadOnlineHouse1";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse2"] = 128] = "HypeSquadOnlineHouse2";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse3"] = 256] = "HypeSquadOnlineHouse3";
-    UserFlags2[UserFlags2["PremiumEarlySupporter"] = 512] = "PremiumEarlySupporter";
-    UserFlags2[UserFlags2["TeamPseudoUser"] = 1024] = "TeamPseudoUser";
-    UserFlags2[UserFlags2["HasUnreadUrgentMessages"] = 8192] = "HasUnreadUrgentMessages";
-    UserFlags2[UserFlags2["BugHunterLevel2"] = 16384] = "BugHunterLevel2";
-    UserFlags2[UserFlags2["VerifiedBot"] = 65536] = "VerifiedBot";
-    UserFlags2[UserFlags2["VerifiedDeveloper"] = 131072] = "VerifiedDeveloper";
-    UserFlags2[UserFlags2["CertifiedModerator"] = 262144] = "CertifiedModerator";
-    UserFlags2[UserFlags2["BotHTTPInteractions"] = 524288] = "BotHTTPInteractions";
-    UserFlags2[UserFlags2["Spammer"] = 1048576] = "Spammer";
-    UserFlags2[UserFlags2["DisablePremium"] = 2097152] = "DisablePremium";
-    UserFlags2[UserFlags2["ActiveDeveloper"] = 4194304] = "ActiveDeveloper";
-    UserFlags2[UserFlags2["Quarantined"] = 17592186044416] = "Quarantined";
-    UserFlags2[UserFlags2["Collaborator"] = 1125899906842624] = "Collaborator";
-    UserFlags2[UserFlags2["RestrictedCollaborator"] = 2251799813685248] = "RestrictedCollaborator";
-  })(UserFlags || (exports.UserFlags = UserFlags = {}));
-  var UserPremiumType;
-  (function(UserPremiumType2) {
-    UserPremiumType2[UserPremiumType2["None"] = 0] = "None";
-    UserPremiumType2[UserPremiumType2["NitroClassic"] = 1] = "NitroClassic";
-    UserPremiumType2[UserPremiumType2["Nitro"] = 2] = "Nitro";
-    UserPremiumType2[UserPremiumType2["NitroBasic"] = 3] = "NitroBasic";
-  })(UserPremiumType || (exports.UserPremiumType = UserPremiumType = {}));
-  var ConnectionService;
-  (function(ConnectionService2) {
-    ConnectionService2["BattleNet"] = "battlenet";
-    ConnectionService2["BungieNet"] = "bungie";
-    ConnectionService2["Domain"] = "domain";
-    ConnectionService2["eBay"] = "ebay";
-    ConnectionService2["EpicGames"] = "epicgames";
-    ConnectionService2["Facebook"] = "facebook";
-    ConnectionService2["GitHub"] = "github";
-    ConnectionService2["Instagram"] = "instagram";
-    ConnectionService2["LeagueOfLegends"] = "leagueoflegends";
-    ConnectionService2["PayPal"] = "paypal";
-    ConnectionService2["PlayStationNetwork"] = "playstation";
-    ConnectionService2["Reddit"] = "reddit";
-    ConnectionService2["RiotGames"] = "riotgames";
-    ConnectionService2["Spotify"] = "spotify";
-    ConnectionService2["Skype"] = "skype";
-    ConnectionService2["Steam"] = "steam";
-    ConnectionService2["TikTok"] = "tiktok";
-    ConnectionService2["Twitch"] = "twitch";
-    ConnectionService2["X"] = "twitter";
-    ConnectionService2["Twitter"] = "twitter";
-    ConnectionService2["Xbox"] = "xbox";
-    ConnectionService2["YouTube"] = "youtube";
-  })(ConnectionService || (exports.ConnectionService = ConnectionService = {}));
-  var ConnectionVisibility;
-  (function(ConnectionVisibility2) {
-    ConnectionVisibility2[ConnectionVisibility2["None"] = 0] = "None";
-    ConnectionVisibility2[ConnectionVisibility2["Everyone"] = 1] = "Everyone";
-  })(ConnectionVisibility || (exports.ConnectionVisibility = ConnectionVisibility = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/voice.js
-var require_voice7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/webhook.js
-var require_webhook7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.WebhookType = undefined;
-  var WebhookType;
-  (function(WebhookType2) {
-    WebhookType2[WebhookType2["Incoming"] = 1] = "Incoming";
-    WebhookType2[WebhookType2["ChannelFollower"] = 2] = "ChannelFollower";
-    WebhookType2[WebhookType2["Application"] = 3] = "Application";
-  })(WebhookType || (exports.WebhookType = WebhookType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/monetization.js
-var require_monetization7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
-  var EntitlementType;
-  (function(EntitlementType2) {
-    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
-    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
-    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
-    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
-    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
-    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
-    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
-    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
-  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
-  var SKUFlags;
-  (function(SKUFlags2) {
-    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
-    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
-    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
-  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
-  var SKUType;
-  (function(SKUType2) {
-    SKUType2[SKUType2["Durable"] = 2] = "Durable";
-    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
-    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
-    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
-  })(SKUType || (exports.SKUType = SKUType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/index.js
-var require_v1020 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common14(), exports);
-  __exportStar(require_application7(), exports);
-  __exportStar(require_auditLog7(), exports);
-  __exportStar(require_autoModeration7(), exports);
-  __exportStar(require_channel10(), exports);
-  __exportStar(require_emoji7(), exports);
-  __exportStar(require_gateway7(), exports);
-  __exportStar(require_guild7(), exports);
-  __exportStar(require_guildScheduledEvent7(), exports);
-  __exportStar(require_interactions7(), exports);
-  __exportStar(require_invite7(), exports);
-  __exportStar(require_oauth27(), exports);
-  __exportStar(require_poll7(), exports);
-  __exportStar(require_permissions8(), exports);
-  __exportStar(require_stageInstance7(), exports);
-  __exportStar(require_sticker7(), exports);
-  __exportStar(require_teams4(), exports);
-  __exportStar(require_template7(), exports);
-  __exportStar(require_user11(), exports);
-  __exportStar(require_voice7(), exports);
-  __exportStar(require_webhook7(), exports);
-  __exportStar(require_monetization7(), exports);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/common.js
-var require_common15 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.Locale = exports.RESTJSONErrorCodes = undefined;
-  var RESTJSONErrorCodes;
-  (function(RESTJSONErrorCodes2) {
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GeneralError"] = 0] = "GeneralError";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAccount"] = 10001] = "UnknownAccount";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplication"] = 10002] = "UnknownApplication";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownChannel"] = 10003] = "UnknownChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuild"] = 10004] = "UnknownGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownIntegration"] = 10005] = "UnknownIntegration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInvite"] = 10006] = "UnknownInvite";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMember"] = 10007] = "UnknownMember";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMessage"] = 10008] = "UnknownMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPermissionOverwrite"] = 10009] = "UnknownPermissionOverwrite";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownProvider"] = 10010] = "UnknownProvider";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRole"] = 10011] = "UnknownRole";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownToken"] = 10012] = "UnknownToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownUser"] = 10013] = "UnknownUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEmoji"] = 10014] = "UnknownEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhook"] = 10015] = "UnknownWebhook";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhookService"] = 10016] = "UnknownWebhookService";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSession"] = 10020] = "UnknownSession";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBan"] = 10026] = "UnknownBan";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSKU"] = 10027] = "UnknownSKU";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreListing"] = 10028] = "UnknownStoreListing";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEntitlement"] = 10029] = "UnknownEntitlement";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBuild"] = 10030] = "UnknownBuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownLobby"] = 10031] = "UnknownLobby";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBranch"] = 10032] = "UnknownBranch";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreDirectoryLayout"] = 10033] = "UnknownStoreDirectoryLayout";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRedistributable"] = 10036] = "UnknownRedistributable";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGiftCode"] = 10038] = "UnknownGiftCode";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStream"] = 10049] = "UnknownStream";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPremiumServerSubscribeCooldown"] = 10050] = "UnknownPremiumServerSubscribeCooldown";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildTemplate"] = 10057] = "UnknownGuildTemplate";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownDiscoverableServerCategory"] = 10059] = "UnknownDiscoverableServerCategory";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSticker"] = 10060] = "UnknownSticker";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInteraction"] = 10062] = "UnknownInteraction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommand"] = 10063] = "UnknownApplicationCommand";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownVoiceState"] = 10065] = "UnknownVoiceState";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommandPermissions"] = 10066] = "UnknownApplicationCommandPermissions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStageInstance"] = 10067] = "UnknownStageInstance";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildMemberVerificationForm"] = 10068] = "UnknownGuildMemberVerificationForm";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildWelcomeScreen"] = 10069] = "UnknownGuildWelcomeScreen";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEvent"] = 10070] = "UnknownGuildScheduledEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEventUser"] = 10071] = "UnknownGuildScheduledEventUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownTag"] = 10087] = "UnknownTag";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BotsCannotUseThisEndpoint"] = 20001] = "BotsCannotUseThisEndpoint";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyBotsCanUseThisEndpoint"] = 20002] = "OnlyBotsCanUseThisEndpoint";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ExplicitContentCannotBeSentToTheDesiredRecipient"] = 20009] = "ExplicitContentCannotBeSentToTheDesiredRecipient";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NotAuthorizedToPerformThisActionOnThisApplication"] = 20012] = "NotAuthorizedToPerformThisActionOnThisApplication";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ActionCannotBePerformedDueToSlowmodeRateLimit"] = 20016] = "ActionCannotBePerformedDueToSlowmodeRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheMazeIsntMeantForYou"] = 20017] = "TheMazeIsntMeantForYou";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyTheOwnerOfThisAccountCanPerformThisAction"] = 20018] = "OnlyTheOwnerOfThisAccountCanPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnnouncementEditLimitExceeded"] = 20022] = "AnnouncementEditLimitExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnderMinimumAge"] = 20024] = "UnderMinimumAge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelSendRateLimit"] = 20028] = "ChannelSendRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerSendRateLimit"] = 20029] = "ServerSendRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords"] = 20031] = "StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildPremiumSubscriptionLevelTooLow"] = 20035] = "GuildPremiumSubscriptionLevelTooLow";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildsReached"] = 30001] = "MaximumNumberOfGuildsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfFriendsReached"] = 30002] = "MaximumNumberOfFriendsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinsReachedForTheChannel"] = 30003] = "MaximumNumberOfPinsReachedForTheChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfRecipientsReached"] = 30004] = "MaximumNumberOfRecipientsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildRolesReached"] = 30005] = "MaximumNumberOfGuildRolesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksReached"] = 30007] = "MaximumNumberOfWebhooksReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEmojisReached"] = 30008] = "MaximumNumberOfEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfReactionsReached"] = 30010] = "MaximumNumberOfReactionsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGroupDMsReached"] = 30011] = "MaximumNumberOfGroupDMsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildChannelsReached"] = 30013] = "MaximumNumberOfGuildChannelsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAttachmentsInAMessageReached"] = 30015] = "MaximumNumberOfAttachmentsInAMessageReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfInvitesReached"] = 30016] = "MaximumNumberOfInvitesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAnimatedEmojisReached"] = 30018] = "MaximumNumberOfAnimatedEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerMembersReached"] = 30019] = "MaximumNumberOfServerMembersReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerCategoriesReached"] = 30030] = "MaximumNumberOfServerCategoriesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildAlreadyHasTemplate"] = 30031] = "GuildAlreadyHasTemplate";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfApplicationCommandsReached"] = 30032] = "MaximumNumberOfApplicationCommandsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumThreadParticipantsReached"] = 30033] = "MaximumThreadParticipantsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumDailyApplicationCommandCreatesReached"] = 30034] = "MaximumDailyApplicationCommandCreatesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfNonGuildMemberBansHasBeenExceeded"] = 30035] = "MaximumNumberOfNonGuildMemberBansHasBeenExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfBanFetchesHasBeenReached"] = 30037] = "MaximumNumberOfBanFetchesHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfUncompletedGuildScheduledEventsReached"] = 30038] = "MaximumNumberOfUncompletedGuildScheduledEventsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfStickersReached"] = 30039] = "MaximumNumberOfStickersReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPruneRequestsHasBeenReached"] = 30040] = "MaximumNumberOfPruneRequestsHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached"] = 30042] = "MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEditsToMessagesOlderThanOneHourReached"] = 30046] = "MaximumNumberOfEditsToMessagesOlderThanOneHourReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinnedThreadsInForumHasBeenReached"] = 30047] = "MaximumNumberOfPinnedThreadsInForumHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfTagsInForumHasBeenReached"] = 30048] = "MaximumNumberOfTagsInForumHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BitrateIsTooHighForChannelOfThisType"] = 30052] = "BitrateIsTooHighForChannelOfThisType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPremiumEmojisReached"] = 30056] = "MaximumNumberOfPremiumEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksPerGuildReached"] = 30058] = "MaximumNumberOfWebhooksPerGuildReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfChannelPermissionOverwritesReached"] = 30060] = "MaximumNumberOfChannelPermissionOverwritesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheChannelsForThisGuildAreTooLarge"] = 30061] = "TheChannelsForThisGuildAreTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["Unauthorized"] = 40001] = "Unauthorized";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VerifyYourAccount"] = 40002] = "VerifyYourAccount";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OpeningDirectMessagesTooFast"] = 40003] = "OpeningDirectMessagesTooFast";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SendMessagesHasBeenTemporarilyDisabled"] = 40004] = "SendMessagesHasBeenTemporarilyDisabled";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestEntityTooLarge"] = 40005] = "RequestEntityTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FeatureTemporarilyDisabledServerSide"] = 40006] = "FeatureTemporarilyDisabledServerSide";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserBannedFromThisGuild"] = 40007] = "UserBannedFromThisGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ConnectionHasBeenRevoked"] = 40012] = "ConnectionHasBeenRevoked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TargetUserIsNotConnectedToVoice"] = 40032] = "TargetUserIsNotConnectedToVoice";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisMessageWasAlreadyCrossposted"] = 40033] = "ThisMessageWasAlreadyCrossposted";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationCommandWithThatNameAlreadyExists"] = 40041] = "ApplicationCommandWithThatNameAlreadyExists";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationInteractionFailedToSend"] = 40043] = "ApplicationInteractionFailedToSend";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAMessageInAForumChannel"] = 40058] = "CannotSendAMessageInAForumChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InteractionHasAlreadyBeenAcknowledged"] = 40060] = "InteractionHasAlreadyBeenAcknowledged";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagNamesMustBeUnique"] = 40061] = "TagNamesMustBeUnique";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServiceResourceIsBeingRateLimited"] = 40062] = "ServiceResourceIsBeingRateLimited";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThereAreNoTagsAvailableThatCanBeSetByNonModerators"] = 40066] = "ThereAreNoTagsAvailableThatCanBeSetByNonModerators";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagRequiredToCreateAForumPostInThisChannel"] = 40067] = "TagRequiredToCreateAForumPostInThisChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnEntitlementHasAlreadyBeenGrantedForThisResource"] = 40074] = "AnEntitlementHasAlreadyBeenGrantedForThisResource";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingAccess"] = 50001] = "MissingAccess";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAccountType"] = 50002] = "InvalidAccountType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnDMChannel"] = 50003] = "CannotExecuteActionOnDMChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildWidgetDisabled"] = 50004] = "GuildWidgetDisabled";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditMessageAuthoredByAnotherUser"] = 50005] = "CannotEditMessageAuthoredByAnotherUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAnEmptyMessage"] = 50006] = "CannotSendAnEmptyMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesToThisUser"] = 50007] = "CannotSendMessagesToThisUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesInNonTextChannel"] = 50008] = "CannotSendMessagesInNonTextChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelVerificationLevelTooHighForYouToGainAccess"] = 50009] = "ChannelVerificationLevelTooHighForYouToGainAccess";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationDoesNotHaveBot"] = 50010] = "OAuth2ApplicationDoesNotHaveBot";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationLimitReached"] = 50011] = "OAuth2ApplicationLimitReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2State"] = 50012] = "InvalidOAuth2State";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingPermissions"] = 50013] = "MissingPermissions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidToken"] = 50014] = "InvalidToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoteWasTooLong"] = 50015] = "NoteWasTooLong";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedTooFewOrTooManyMessagesToDelete"] = 50016] = "ProvidedTooFewOrTooManyMessagesToDelete";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMFALevel"] = 50017] = "InvalidMFALevel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageCanOnlyBePinnedInTheChannelItWasSentIn"] = 50019] = "MessageCanOnlyBePinnedInTheChannelItWasSentIn";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteCodeInvalidOrTaken"] = 50020] = "InviteCodeInvalidOrTaken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnSystemMessage"] = 50021] = "CannotExecuteActionOnSystemMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnThisChannelType"] = 50024] = "CannotExecuteActionOnThisChannelType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2AccessToken"] = 50025] = "InvalidOAuth2AccessToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingRequiredOAuth2Scope"] = 50026] = "MissingRequiredOAuth2Scope";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidWebhookToken"] = 50027] = "InvalidWebhookToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRole"] = 50028] = "InvalidRole";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRecipients"] = 50033] = "InvalidRecipients";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OneOfTheMessagesProvidedWasTooOldForBulkDelete"] = 50034] = "OneOfTheMessagesProvidedWasTooOldForBulkDelete";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFormBodyOrContentType"] = 50035] = "InvalidFormBodyOrContentType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteAcceptedToGuildWithoutTheBotBeingIn"] = 50036] = "InviteAcceptedToGuildWithoutTheBotBeingIn";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActivityAction"] = 50039] = "InvalidActivityAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAPIVersion"] = 50041] = "InvalidAPIVersion";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FileUploadedExceedsMaximumSize"] = 50045] = "FileUploadedExceedsMaximumSize";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFileUploaded"] = 50046] = "InvalidFileUploaded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSelfRedeemThisGift"] = 50054] = "CannotSelfRedeemThisGift";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidGuild"] = 50055] = "InvalidGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidSKU"] = 50057] = "InvalidSKU";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRequestOrigin"] = 50067] = "InvalidRequestOrigin";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMessageType"] = 50068] = "InvalidMessageType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PaymentSourceRequiredToRedeemGift"] = 50070] = "PaymentSourceRequiredToRedeemGift";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotModifyASystemWebhook"] = 50073] = "CannotModifyASystemWebhook";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteChannelRequiredForCommunityGuilds"] = 50074] = "CannotDeleteChannelRequiredForCommunityGuilds";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditStickersWithinMessage"] = 50080] = "CannotEditStickersWithinMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidStickerSent"] = 50081] = "InvalidStickerSent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActionOnArchivedThread"] = 50083] = "InvalidActionOnArchivedThread";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidThreadNotificationSettings"] = 50084] = "InvalidThreadNotificationSettings";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ParameterEarlierThanCreation"] = 50085] = "ParameterEarlierThanCreation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CommunityServerChannelsMustBeTextChannels"] = 50086] = "CommunityServerChannelsMustBeTextChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor"] = 50091] = "TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNotAvailableInYourLocation"] = 50095] = "ServerNotAvailableInYourLocation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMonetizationEnabledToPerformThisAction"] = 50097] = "ServerNeedsMonetizationEnabledToPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMoreBoostsToPerformThisAction"] = 50101] = "ServerNeedsMoreBoostsToPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestBodyContainsInvalidJSON"] = 50109] = "RequestBodyContainsInvalidJSON";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnerCannotBePendingMember"] = 50131] = "OwnerCannotBePendingMember";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnershipCannotBeMovedToABotUser"] = 50132] = "OwnershipCannotBeMovedToABotUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToResizeAssetBelowTheMinimumSize"] = 50138] = "FailedToResizeAssetBelowTheMinimumSize";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji"] = 50144] = "CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotConvertBetweenPremiumEmojiAndNormalEmoji"] = 50145] = "CannotConvertBetweenPremiumEmojiAndNormalEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedFileNotFound"] = 50146] = "UploadedFileNotFound";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesDoNotSupportAdditionalContent"] = 50159] = "VoiceMessagesDoNotSupportAdditionalContent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveASingleAudioAttachment"] = 50160] = "VoiceMessagesMustHaveASingleAudioAttachment";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveSupportingMetadata"] = 50161] = "VoiceMessagesMustHaveSupportingMetadata";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesCannotBeEdited"] = 50162] = "VoiceMessagesCannotBeEdited";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteGuildSubscriptionIntegration"] = 50163] = "CannotDeleteGuildSubscriptionIntegration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCannotSendVoiceMessagesInThisChannel"] = 50173] = "YouCannotSendVoiceMessagesInThisChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheUserAccountMustFirstBeVerified"] = 50178] = "TheUserAccountMustFirstBeVerified";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouDoNotHavePermissionToSendThisSticker"] = 50600] = "YouDoNotHavePermissionToSendThisSticker";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TwoFactorAuthenticationIsRequired"] = 60003] = "TwoFactorAuthenticationIsRequired";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoUsersWithDiscordTagExist"] = 80004] = "NoUsersWithDiscordTagExist";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ReactionWasBlocked"] = 90001] = "ReactionWasBlocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserCannotUseBurstReactions"] = 90002] = "UserCannotUseBurstReactions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationNotYetAvailable"] = 110001] = "ApplicationNotYetAvailable";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["APIResourceOverloaded"] = 130000] = "APIResourceOverloaded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheStageIsAlreadyOpen"] = 150006] = "TheStageIsAlreadyOpen";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotReplyWithoutPermissionToReadMessageHistory"] = 160002] = "CannotReplyWithoutPermissionToReadMessageHistory";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadAlreadyCreatedForMessage"] = 160004] = "ThreadAlreadyCreatedForMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadLocked"] = 160005] = "ThreadLocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveThreads"] = 160006] = "MaximumActiveThreads";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveAnnouncementThreads"] = 160007] = "MaximumActiveAnnouncementThreads";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidJSONForUploadedLottieFile"] = 170001] = "InvalidJSONForUploadedLottieFile";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedLottiesCannotContainRasterizedImages"] = 170002] = "UploadedLottiesCannotContainRasterizedImages";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerMaximumFramerateExceeded"] = 170003] = "StickerMaximumFramerateExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFrameCountExceedsMaximumOf1000Frames"] = 170004] = "StickerFrameCountExceedsMaximumOf1000Frames";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["LottieAnimationMaximumDimensionsExceeded"] = 170005] = "LottieAnimationMaximumDimensionsExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFramerateIsTooSmallOrTooLarge"] = 170006] = "StickerFramerateIsTooSmallOrTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerAnimationDurationExceedsMaximumOf5Seconds"] = 170007] = "StickerAnimationDurationExceedsMaximumOf5Seconds";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateAFinishedEvent"] = 180000] = "CannotUpdateAFinishedEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToCreateStageNeededForStageEvent"] = 180002] = "FailedToCreateStageNeededForStageEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageWasBlockedByAutomaticModeration"] = 200000] = "MessageWasBlockedByAutomaticModeration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TitleWasBlockedByAutomaticModeration"] = 200001] = "TitleWasBlockedByAutomaticModeration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId"] = 220001] = "WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId"] = 220002] = "WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksCanOnlyCreateThreadsInForumChannels"] = 220003] = "WebhooksCanOnlyCreateThreadsInForumChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhookServicesCannotBeUsedInForumChannels"] = 220004] = "WebhookServicesCannotBeUsedInForumChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageBlockedByHarmfulLinksFilter"] = 240000] = "MessageBlockedByHarmfulLinksFilter";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEnableOnboardingRequirementsAreNotMet"] = 350000] = "CannotEnableOnboardingRequirementsAreNotMet";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateOnboardingWhileBelowRequirements"] = 350001] = "CannotUpdateOnboardingWhileBelowRequirements";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToBanUsers"] = 500000] = "FailedToBanUsers";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollVotingBlocked"] = 520000] = "PollVotingBlocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollExpired"] = 520001] = "PollExpired";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidChannelTypeForPollCreation"] = 520002] = "InvalidChannelTypeForPollCreation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditAPollMessage"] = 520003] = "CannotEditAPollMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUseAnEmojiIncludedWithThePoll"] = 520004] = "CannotUseAnEmojiIncludedWithThePoll";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExpireANonPollMessage"] = 520006] = "CannotExpireANonPollMessage";
-  })(RESTJSONErrorCodes || (exports.RESTJSONErrorCodes = RESTJSONErrorCodes = {}));
-  var Locale;
-  (function(Locale2) {
-    Locale2["Indonesian"] = "id";
-    Locale2["EnglishUS"] = "en-US";
-    Locale2["EnglishGB"] = "en-GB";
-    Locale2["Bulgarian"] = "bg";
-    Locale2["ChineseCN"] = "zh-CN";
-    Locale2["ChineseTW"] = "zh-TW";
-    Locale2["Croatian"] = "hr";
-    Locale2["Czech"] = "cs";
-    Locale2["Danish"] = "da";
-    Locale2["Dutch"] = "nl";
-    Locale2["Finnish"] = "fi";
-    Locale2["French"] = "fr";
-    Locale2["German"] = "de";
-    Locale2["Greek"] = "el";
-    Locale2["Hindi"] = "hi";
-    Locale2["Hungarian"] = "hu";
-    Locale2["Italian"] = "it";
-    Locale2["Japanese"] = "ja";
-    Locale2["Korean"] = "ko";
-    Locale2["Lithuanian"] = "lt";
-    Locale2["Norwegian"] = "no";
-    Locale2["Polish"] = "pl";
-    Locale2["PortugueseBR"] = "pt-BR";
-    Locale2["Romanian"] = "ro";
-    Locale2["Russian"] = "ru";
-    Locale2["SpanishES"] = "es-ES";
-    Locale2["SpanishLATAM"] = "es-419";
-    Locale2["Swedish"] = "sv-SE";
-    Locale2["Thai"] = "th";
-    Locale2["Turkish"] = "tr";
-    Locale2["Ukrainian"] = "uk";
-    Locale2["Vietnamese"] = "vi";
-  })(Locale || (exports.Locale = Locale = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/application.js
-var require_application8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/auditLog.js
-var require_auditLog8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/autoModeration.js
-var require_autoModeration8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/channel.js
-var require_channel12 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/emoji.js
-var require_emoji8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/gateway.js
-var require_gateway8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/guild.js
-var require_guild8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/guildScheduledEvent.js
-var require_guildScheduledEvent8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/interactions.js
-var require_interactions8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/invite.js
-var require_invite8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/oauth2.js
-var require_oauth28 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/poll.js
-var require_poll8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/stageInstance.js
-var require_stageInstance8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/sticker.js
-var require_sticker8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/template.js
-var require_template8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/user.js
-var require_user12 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/voice.js
-var require_voice8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/webhook.js
-var require_webhook8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/monetization.js
-var require_monetization8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.EntitlementOwnerType = undefined;
-  var EntitlementOwnerType;
-  (function(EntitlementOwnerType2) {
-    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
-    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
-  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/index.js
-var require_v1021 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
-  __exportStar(require_common15(), exports);
-  __exportStar(require_application8(), exports);
-  __exportStar(require_auditLog8(), exports);
-  __exportStar(require_autoModeration8(), exports);
-  __exportStar(require_channel12(), exports);
-  __exportStar(require_emoji8(), exports);
-  __exportStar(require_gateway8(), exports);
-  __exportStar(require_guild8(), exports);
-  __exportStar(require_guildScheduledEvent8(), exports);
-  __exportStar(require_interactions8(), exports);
-  __exportStar(require_invite8(), exports);
-  __exportStar(require_oauth28(), exports);
-  __exportStar(require_poll8(), exports);
-  __exportStar(require_stageInstance8(), exports);
-  __exportStar(require_sticker8(), exports);
-  __exportStar(require_template8(), exports);
-  __exportStar(require_user12(), exports);
-  __exportStar(require_voice8(), exports);
-  __exportStar(require_webhook8(), exports);
-  __exportStar(require_monetization8(), exports);
-  exports.APIVersion = "10";
-  exports.Routes = {
-    applicationRoleConnectionMetadata(applicationId) {
-      return `/applications/${applicationId}/role-connections/metadata`;
-    },
-    guildAutoModerationRules(guildId) {
-      return `/guilds/${guildId}/auto-moderation/rules`;
-    },
-    guildAutoModerationRule(guildId, ruleId) {
-      return `/guilds/${guildId}/auto-moderation/rules/${ruleId}`;
-    },
-    guildAuditLog(guildId) {
-      return `/guilds/${guildId}/audit-logs`;
-    },
-    channel(channelId) {
-      return `/channels/${channelId}`;
-    },
-    channelMessages(channelId) {
-      return `/channels/${channelId}/messages`;
-    },
-    channelMessage(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}`;
-    },
-    channelMessageCrosspost(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}/crosspost`;
-    },
-    channelMessageOwnReaction(channelId, messageId, emoji) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/@me`;
-    },
-    channelMessageUserReaction(channelId, messageId, emoji, userId) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/${userId}`;
-    },
-    channelMessageReaction(channelId, messageId, emoji) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}`;
-    },
-    channelMessageAllReactions(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}/reactions`;
-    },
-    channelBulkDelete(channelId) {
-      return `/channels/${channelId}/messages/bulk-delete`;
-    },
-    channelPermission(channelId, overwriteId) {
-      return `/channels/${channelId}/permissions/${overwriteId}`;
-    },
-    channelInvites(channelId) {
-      return `/channels/${channelId}/invites`;
-    },
-    channelFollowers(channelId) {
-      return `/channels/${channelId}/followers`;
-    },
-    channelTyping(channelId) {
-      return `/channels/${channelId}/typing`;
-    },
-    channelPins(channelId) {
-      return `/channels/${channelId}/pins`;
-    },
-    channelPin(channelId, messageId) {
-      return `/channels/${channelId}/pins/${messageId}`;
-    },
-    channelRecipient(channelId, userId) {
-      return `/channels/${channelId}/recipients/${userId}`;
-    },
-    guildEmojis(guildId) {
-      return `/guilds/${guildId}/emojis`;
-    },
-    guildEmoji(guildId, emojiId) {
-      return `/guilds/${guildId}/emojis/${emojiId}`;
-    },
-    guilds() {
-      return "/guilds";
-    },
-    guild(guildId) {
-      return `/guilds/${guildId}`;
-    },
-    guildPreview(guildId) {
-      return `/guilds/${guildId}/preview`;
-    },
-    guildChannels(guildId) {
-      return `/guilds/${guildId}/channels`;
-    },
-    guildMember(guildId, userId = "@me") {
-      return `/guilds/${guildId}/members/${userId}`;
-    },
-    guildMembers(guildId) {
-      return `/guilds/${guildId}/members`;
-    },
-    guildMembersSearch(guildId) {
-      return `/guilds/${guildId}/members/search`;
-    },
-    guildCurrentMemberNickname(guildId) {
-      return `/guilds/${guildId}/members/@me/nick`;
-    },
-    guildMemberRole(guildId, memberId, roleId) {
-      return `/guilds/${guildId}/members/${memberId}/roles/${roleId}`;
-    },
-    guildMFA(guildId) {
-      return `/guilds/${guildId}/mfa`;
-    },
-    guildBans(guildId) {
-      return `/guilds/${guildId}/bans`;
-    },
-    guildBan(guildId, userId) {
-      return `/guilds/${guildId}/bans/${userId}`;
-    },
-    guildRoles(guildId) {
-      return `/guilds/${guildId}/roles`;
-    },
-    guildRole(guildId, roleId) {
-      return `/guilds/${guildId}/roles/${roleId}`;
-    },
-    guildPrune(guildId) {
-      return `/guilds/${guildId}/prune`;
-    },
-    guildVoiceRegions(guildId) {
-      return `/guilds/${guildId}/regions`;
-    },
-    guildInvites(guildId) {
-      return `/guilds/${guildId}/invites`;
-    },
-    guildIntegrations(guildId) {
-      return `/guilds/${guildId}/integrations`;
-    },
-    guildIntegration(guildId, integrationId) {
-      return `/guilds/${guildId}/integrations/${integrationId}`;
-    },
-    guildWidgetSettings(guildId) {
-      return `/guilds/${guildId}/widget`;
-    },
-    guildWidgetJSON(guildId) {
-      return `/guilds/${guildId}/widget.json`;
-    },
-    guildVanityUrl(guildId) {
-      return `/guilds/${guildId}/vanity-url`;
-    },
-    guildWidgetImage(guildId) {
-      return `/guilds/${guildId}/widget.png`;
-    },
-    invite(code) {
-      return `/invites/${code}`;
-    },
-    template(code) {
-      return `/guilds/templates/${code}`;
-    },
-    guildTemplates(guildId) {
-      return `/guilds/${guildId}/templates`;
-    },
-    guildTemplate(guildId, code) {
-      return `/guilds/${guildId}/templates/${code}`;
-    },
-    pollAnswerVoters(channelId, messageId, answerId) {
-      return `/channels/${channelId}/polls/${messageId}/answers/${answerId}`;
-    },
-    expirePoll(channelId, messageId) {
-      return `/channels/${channelId}/polls/${messageId}/expire`;
-    },
-    threads(parentId, messageId) {
-      const parts = ["", "channels", parentId];
-      if (messageId)
-        parts.push("messages", messageId);
-      parts.push("threads");
-      return parts.join("/");
-    },
-    guildActiveThreads(guildId) {
-      return `/guilds/${guildId}/threads/active`;
-    },
-    channelThreads(channelId, archivedStatus) {
-      return `/channels/${channelId}/threads/archived/${archivedStatus}`;
-    },
-    channelJoinedArchivedThreads(channelId) {
-      return `/channels/${channelId}/users/@me/threads/archived/private`;
-    },
-    threadMembers(threadId, userId) {
-      const parts = ["", "channels", threadId, "thread-members"];
-      if (userId)
-        parts.push(userId);
-      return parts.join("/");
-    },
-    user(userId = "@me") {
-      return `/users/${userId}`;
-    },
-    userApplicationRoleConnection(applicationId) {
-      return `/users/@me/applications/${applicationId}/role-connection`;
-    },
-    userGuilds() {
-      return `/users/@me/guilds`;
-    },
-    userGuildMember(guildId) {
-      return `/users/@me/guilds/${guildId}/member`;
-    },
-    userGuild(guildId) {
-      return `/users/@me/guilds/${guildId}`;
-    },
-    userChannels() {
-      return `/users/@me/channels`;
-    },
-    userConnections() {
-      return `/users/@me/connections`;
-    },
-    voiceRegions() {
-      return `/voice/regions`;
-    },
-    channelWebhooks(channelId) {
-      return `/channels/${channelId}/webhooks`;
-    },
-    guildWebhooks(guildId) {
-      return `/guilds/${guildId}/webhooks`;
-    },
-    webhook(webhookId, webhookToken) {
-      const parts = ["", "webhooks", webhookId];
-      if (webhookToken)
-        parts.push(webhookToken);
-      return parts.join("/");
-    },
-    webhookMessage(webhookId, webhookToken, messageId = "@original") {
-      return `/webhooks/${webhookId}/${webhookToken}/messages/${messageId}`;
-    },
-    webhookPlatform(webhookId, webhookToken, platform) {
-      return `/webhooks/${webhookId}/${webhookToken}/${platform}`;
-    },
-    gateway() {
-      return `/gateway`;
-    },
-    gatewayBot() {
-      return `/gateway/bot`;
-    },
-    oauth2CurrentApplication() {
-      return `/oauth2/applications/@me`;
-    },
-    oauth2CurrentAuthorization() {
-      return `/oauth2/@me`;
-    },
-    oauth2Authorization() {
-      return `/oauth2/authorize`;
-    },
-    oauth2TokenExchange() {
-      return `/oauth2/token`;
-    },
-    oauth2TokenRevocation() {
-      return `/oauth2/token/revoke`;
-    },
-    applicationCommands(applicationId) {
-      return `/applications/${applicationId}/commands`;
-    },
-    applicationCommand(applicationId, commandId) {
-      return `/applications/${applicationId}/commands/${commandId}`;
-    },
-    applicationGuildCommands(applicationId, guildId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands`;
-    },
-    applicationGuildCommand(applicationId, guildId, commandId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}`;
-    },
-    interactionCallback(interactionId, interactionToken) {
-      return `/interactions/${interactionId}/${interactionToken}/callback`;
-    },
-    guildMemberVerification(guildId) {
-      return `/guilds/${guildId}/member-verification`;
-    },
-    guildVoiceState(guildId, userId = "@me") {
-      return `/guilds/${guildId}/voice-states/${userId}`;
-    },
-    guildApplicationCommandsPermissions(applicationId, guildId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/permissions`;
-    },
-    applicationCommandPermissions(applicationId, guildId, commandId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}/permissions`;
-    },
-    guildWelcomeScreen(guildId) {
-      return `/guilds/${guildId}/welcome-screen`;
-    },
-    stageInstances() {
-      return `/stage-instances`;
-    },
-    stageInstance(channelId) {
-      return `/stage-instances/${channelId}`;
-    },
-    sticker(stickerId) {
-      return `/stickers/${stickerId}`;
-    },
-    stickerPacks() {
-      return "/sticker-packs";
-    },
-    nitroStickerPacks() {
-      return "/sticker-packs";
-    },
-    guildStickers(guildId) {
-      return `/guilds/${guildId}/stickers`;
-    },
-    guildSticker(guildId, stickerId) {
-      return `/guilds/${guildId}/stickers/${stickerId}`;
-    },
-    guildScheduledEvents(guildId) {
-      return `/guilds/${guildId}/scheduled-events`;
-    },
-    guildScheduledEvent(guildId, guildScheduledEventId) {
-      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}`;
-    },
-    guildScheduledEventUsers(guildId, guildScheduledEventId) {
-      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}/users`;
-    },
-    guildOnboarding(guildId) {
-      return `/guilds/${guildId}/onboarding`;
-    },
-    currentApplication() {
-      return "/applications/@me";
-    },
-    entitlements(applicationId) {
-      return `/applications/${applicationId}/entitlements`;
-    },
-    entitlement(applicationId, entitlementId) {
-      return `/applications/${applicationId}/entitlements/${entitlementId}`;
-    },
-    skus(applicationId) {
-      return `/applications/${applicationId}/skus`;
-    },
-    guildBulkBan(guildId) {
-      return `/guilds/${guildId}/bulk-ban`;
-    },
-    consumeEntitlement(applicationId, entitlementId) {
-      return `/applications/${applicationId}/entitlements/${entitlementId}/consume`;
-    }
-  };
-  exports.StickerPackApplicationId = "710982414301790216";
-  var ImageFormat;
-  (function(ImageFormat2) {
-    ImageFormat2["JPEG"] = "jpeg";
-    ImageFormat2["PNG"] = "png";
-    ImageFormat2["WebP"] = "webp";
-    ImageFormat2["GIF"] = "gif";
-    ImageFormat2["Lottie"] = "json";
-  })(ImageFormat || (exports.ImageFormat = ImageFormat = {}));
-  exports.CDNRoutes = {
-    emoji(emojiId, format) {
-      return `/emojis/${emojiId}.${format}`;
-    },
-    guildIcon(guildId, guildIcon, format) {
-      return `icons/${guildId}/${guildIcon}.${format}`;
-    },
-    guildSplash(guildId, guildSplash, format) {
-      return `/splashes/${guildId}/${guildSplash}.${format}`;
-    },
-    guildDiscoverySplash(guildId, guildDiscoverySplash, format) {
-      return `/discovery-splashes/${guildId}/${guildDiscoverySplash}.${format}`;
-    },
-    guildBanner(guildId, guildBanner, format) {
-      return `/banners/${guildId}/${guildBanner}.${format}`;
-    },
-    userBanner(userId, userBanner, format) {
-      return `/banners/${userId}/${userBanner}.${format}`;
-    },
-    defaultUserAvatar(index) {
-      return `/embed/avatars/${index}.png`;
-    },
-    userAvatar(userId, userAvatar, format) {
-      return `/avatars/${userId}/${userAvatar}.${format}`;
-    },
-    guildMemberAvatar(guildId, userId, memberAvatar, format) {
-      return `/guilds/${guildId}/users/${userId}/avatars/${memberAvatar}.${format}`;
-    },
-    userAvatarDecoration(userId, userAvatarDecoration) {
-      return `/avatar-decorations/${userId}/${userAvatarDecoration}.png`;
-    },
-    applicationIcon(applicationId, applicationIcon, format) {
-      return `/app-icons/${applicationId}/${applicationIcon}.${format}`;
-    },
-    applicationCover(applicationId, applicationCoverImage, format) {
-      return `/app-icons/${applicationId}/${applicationCoverImage}.${format}`;
-    },
-    applicationAsset(applicationId, applicationAssetId, format) {
-      return `/app-assets/${applicationId}/${applicationAssetId}.${format}`;
-    },
-    achievementIcon(applicationId, achievementId, achievementIconHash, format) {
-      return `/app-assets/${applicationId}/achievements/${achievementId}/icons/${achievementIconHash}.${format}`;
-    },
-    stickerPackBanner(stickerPackBannerAssetId, format) {
-      return `/app-assets/${exports.StickerPackApplicationId}/store/${stickerPackBannerAssetId}.${format}`;
-    },
-    storePageAsset(applicationId, assetId, format = ImageFormat.PNG) {
-      return `/app-assets/${applicationId}/store/${assetId}.${format}`;
-    },
-    teamIcon(teamId, teamIcon, format) {
-      return `/team-icons/${teamId}/${teamIcon}.${format}`;
-    },
-    sticker(stickerId, format) {
-      return `/stickers/${stickerId}.${format}`;
-    },
-    roleIcon(roleId, roleIcon, format) {
-      return `/role-icons/${roleId}/${roleIcon}.${format}`;
-    },
-    guildScheduledEventCover(guildScheduledEventId, guildScheduledEventCoverImage, format) {
-      return `/guild-events/${guildScheduledEventId}/${guildScheduledEventCoverImage}.${format}`;
-    },
-    guildMemberBanner(guildId, userId, guildMemberBanner, format) {
-      return `/guilds/${guildId}/users/${userId}/banners/${guildMemberBanner}.${format}`;
-    }
-  };
-  exports.RouteBases = {
-    api: `https://discord.com/api/v${exports.APIVersion}`,
-    cdn: "https://cdn.discordapp.com",
-    invite: "https://discord.gg",
-    template: "https://discord.new",
-    gift: "https://discord.gift",
-    scheduledEvent: "https://discord.com/events"
-  };
-  Object.freeze(exports.RouteBases);
-  exports.OAuth2Routes = {
-    authorizationURL: `${exports.RouteBases.api}${exports.Routes.oauth2Authorization()}`,
-    tokenURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenExchange()}`,
-    tokenRevocationURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenRevocation()}`
-  };
-  Object.freeze(exports.OAuth2Routes);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/common.js
-var require_common16 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RPCCloseEventCodes = exports.RPCErrorCodes = undefined;
-  var RPCErrorCodes;
-  (function(RPCErrorCodes2) {
-    RPCErrorCodes2[RPCErrorCodes2["UnknownError"] = 1000] = "UnknownError";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidPayload"] = 4000] = "InvalidPayload";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidCommand"] = 4002] = "InvalidCommand";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidGuild"] = 4003] = "InvalidGuild";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidEvent"] = 4004] = "InvalidEvent";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidChannel"] = 4005] = "InvalidChannel";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidPermissions"] = 4006] = "InvalidPermissions";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidClientId"] = 4007] = "InvalidClientId";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidOrigin"] = 4008] = "InvalidOrigin";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidToken"] = 4009] = "InvalidToken";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidUser"] = 4010] = "InvalidUser";
-    RPCErrorCodes2[RPCErrorCodes2["OAuth2Error"] = 5000] = "OAuth2Error";
-    RPCErrorCodes2[RPCErrorCodes2["SelectChannelTimedOut"] = 5001] = "SelectChannelTimedOut";
-    RPCErrorCodes2[RPCErrorCodes2["GetGuildTimedOut"] = 5002] = "GetGuildTimedOut";
-    RPCErrorCodes2[RPCErrorCodes2["SelectVoiceForceRequired"] = 5003] = "SelectVoiceForceRequired";
-    RPCErrorCodes2[RPCErrorCodes2["CaptureShortcutAlreadyListening"] = 5004] = "CaptureShortcutAlreadyListening";
-  })(RPCErrorCodes || (exports.RPCErrorCodes = RPCErrorCodes = {}));
-  var RPCCloseEventCodes;
-  (function(RPCCloseEventCodes2) {
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidClientId"] = 4000] = "InvalidClientId";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidOrigin"] = 4001] = "InvalidOrigin";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["RateLimited"] = 4002] = "RateLimited";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["TokenRevoked"] = 4003] = "TokenRevoked";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidVersion"] = 4004] = "InvalidVersion";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidEncoding"] = 4005] = "InvalidEncoding";
-  })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/v10.js
-var require_v1022 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common16(), exports);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/utils/v10.js
-var require_v1023 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.isContextMenuApplicationCommandInteraction = exports.isChatInputApplicationCommandInteraction = exports.isMessageComponentSelectMenuInteraction = exports.isMessageComponentButtonInteraction = exports.isMessageComponentInteraction = exports.isInteractionButton = exports.isLinkButton = exports.isMessageComponentGuildInteraction = exports.isMessageComponentDMInteraction = exports.isApplicationCommandGuildInteraction = exports.isApplicationCommandDMInteraction = exports.isGuildInteraction = exports.isDMInteraction = undefined;
-  var index_1 = require_v1020();
-  function isDMInteraction(interaction) {
-    return Reflect.has(interaction, "user");
-  }
-  exports.isDMInteraction = isDMInteraction;
-  function isGuildInteraction(interaction) {
-    return Reflect.has(interaction, "guild_id");
-  }
-  exports.isGuildInteraction = isGuildInteraction;
-  function isApplicationCommandDMInteraction(interaction) {
-    return isDMInteraction(interaction);
-  }
-  exports.isApplicationCommandDMInteraction = isApplicationCommandDMInteraction;
-  function isApplicationCommandGuildInteraction(interaction) {
-    return isGuildInteraction(interaction);
-  }
-  exports.isApplicationCommandGuildInteraction = isApplicationCommandGuildInteraction;
-  function isMessageComponentDMInteraction(interaction) {
-    return isDMInteraction(interaction);
-  }
-  exports.isMessageComponentDMInteraction = isMessageComponentDMInteraction;
-  function isMessageComponentGuildInteraction(interaction) {
-    return isGuildInteraction(interaction);
-  }
-  exports.isMessageComponentGuildInteraction = isMessageComponentGuildInteraction;
-  function isLinkButton(component) {
-    return component.style === index_1.ButtonStyle.Link;
-  }
-  exports.isLinkButton = isLinkButton;
-  function isInteractionButton(component) {
-    return component.style !== index_1.ButtonStyle.Link;
-  }
-  exports.isInteractionButton = isInteractionButton;
-  function isMessageComponentInteraction(interaction) {
-    return interaction.type === index_1.InteractionType.MessageComponent;
-  }
-  exports.isMessageComponentInteraction = isMessageComponentInteraction;
-  function isMessageComponentButtonInteraction(interaction) {
-    return interaction.data.component_type === index_1.ComponentType.Button;
-  }
-  exports.isMessageComponentButtonInteraction = isMessageComponentButtonInteraction;
-  function isMessageComponentSelectMenuInteraction(interaction) {
-    return [
-      index_1.ComponentType.StringSelect,
-      index_1.ComponentType.UserSelect,
-      index_1.ComponentType.RoleSelect,
-      index_1.ComponentType.MentionableSelect,
-      index_1.ComponentType.ChannelSelect
-    ].includes(interaction.data.component_type);
-  }
-  exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
-  function isChatInputApplicationCommandInteraction(interaction) {
-    return interaction.data.type === index_1.ApplicationCommandType.ChatInput;
-  }
-  exports.isChatInputApplicationCommandInteraction = isChatInputApplicationCommandInteraction;
-  function isContextMenuApplicationCommandInteraction(interaction) {
-    return interaction.data.type === index_1.ApplicationCommandType.Message || interaction.data.type === index_1.ApplicationCommandType.User;
-  }
-  exports.isContextMenuApplicationCommandInteraction = isContextMenuApplicationCommandInteraction;
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/v10.js
-var require_v1024 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.Utils = undefined;
-  __exportStar(require_v1019(), exports);
-  __exportStar(require_globals4(), exports);
-  __exportStar(require_v1020(), exports);
-  __exportStar(require_v1021(), exports);
-  __exportStar(require_v1022(), exports);
-  exports.Utils = require_v1023();
-});
-
-// node_modules/ws/lib/constants.js
-var require_constants6 = __commonJS((exports, module) => {
-  var BINARY_TYPES = ["nodebuffer", "arraybuffer", "fragments"];
-  var hasBlob = typeof Blob !== "undefined";
-  if (hasBlob)
-    BINARY_TYPES.push("blob");
-  module.exports = {
-    BINARY_TYPES,
-    EMPTY_BUFFER: Buffer.alloc(0),
-    GUID: "258EAFA5-E914-47DA-95CA-C5AB0DC85B11",
-    hasBlob,
-    kForOnEventAttribute: Symbol("kIsForOnEventAttribute"),
-    kListener: Symbol("kListener"),
-    kStatusCode: Symbol("status-code"),
-    kWebSocket: Symbol("websocket"),
-    NOOP: () => {
-    }
-  };
-});
-
-// node_modules/ws/lib/buffer-util.js
-var require_buffer_util = __commonJS((exports, module) => {
-  var { EMPTY_BUFFER } = require_constants6();
-  var FastBuffer = Buffer[Symbol.species];
-  function concat(list, totalLength) {
-    if (list.length === 0)
-      return EMPTY_BUFFER;
-    if (list.length === 1)
-      return list[0];
-    const target = Buffer.allocUnsafe(totalLength);
-    let offset = 0;
-    for (let i = 0;i < list.length; i++) {
-      const buf = list[i];
-      target.set(buf, offset);
-      offset += buf.length;
-    }
-    if (offset < totalLength) {
-      return new FastBuffer(target.buffer, target.byteOffset, offset);
-    }
-    return target;
-  }
-  function _mask(source, mask, output, offset, length) {
-    for (let i = 0;i < length; i++) {
-      output[offset + i] = source[i] ^ mask[i & 3];
-    }
-  }
-  function _unmask(buffer, mask) {
-    for (let i = 0;i < buffer.length; i++) {
-      buffer[i] ^= mask[i & 3];
-    }
-  }
-  function toArrayBuffer(buf) {
-    if (buf.length === buf.buffer.byteLength) {
-      return buf.buffer;
-    }
-    return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.length);
-  }
-  function toBuffer(data) {
-    toBuffer.readOnly = true;
-    if (Buffer.isBuffer(data))
-      return data;
-    let buf;
-    if (data instanceof ArrayBuffer) {
-      buf = new FastBuffer(data);
-    } else if (ArrayBuffer.isView(data)) {
-      buf = new FastBuffer(data.buffer, data.byteOffset, data.byteLength);
-    } else {
-      buf = Buffer.from(data);
-      toBuffer.readOnly = false;
-    }
-    return buf;
-  }
-  module.exports = {
-    concat,
-    mask: _mask,
-    toArrayBuffer,
-    toBuffer,
-    unmask: _unmask
-  };
-  if (!process.env.WS_NO_BUFFER_UTIL) {
-    try {
-      const bufferUtil = (()=>{throw new Error(`Cannot require module "bufferutil"`);})();
-      module.exports.mask = function(source, mask, output, offset, length) {
-        if (length < 48)
-          _mask(source, mask, output, offset, length);
-        else
-          bufferUtil.mask(source, mask, output, offset, length);
-      };
-      module.exports.unmask = function(buffer, mask) {
-        if (buffer.length < 32)
-          _unmask(buffer, mask);
-        else
-          bufferUtil.unmask(buffer, mask);
-      };
-    } catch (e) {
-    }
-  }
-});
-
-// node_modules/ws/lib/limiter.js
-var require_limiter = __commonJS((exports, module) => {
-  var kDone = Symbol("kDone");
-  var kRun = Symbol("kRun");
-
-  class Limiter {
-    constructor(concurrency) {
-      this[kDone] = () => {
-        this.pending--;
-        this[kRun]();
-      };
-      this.concurrency = concurrency || Infinity;
-      this.jobs = [];
-      this.pending = 0;
-    }
-    add(job) {
-      this.jobs.push(job);
-      this[kRun]();
-    }
-    [kRun]() {
-      if (this.pending === this.concurrency)
-        return;
-      if (this.jobs.length) {
-        const job = this.jobs.shift();
-        this.pending++;
-        job(this[kDone]);
-      }
-    }
-  }
-  module.exports = Limiter;
-});
-
-// node_modules/ws/lib/permessage-deflate.js
-var require_permessage_deflate2 = __commonJS((exports, module) => {
-  var zlib = __require("zlib");
-  var bufferUtil = require_buffer_util();
-  var Limiter = require_limiter();
-  var { kStatusCode } = require_constants6();
-  var FastBuffer = Buffer[Symbol.species];
-  var TRAILER = Buffer.from([0, 0, 255, 255]);
-  var kPerMessageDeflate = Symbol("permessage-deflate");
-  var kTotalLength = Symbol("total-length");
-  var kCallback = Symbol("callback");
-  var kBuffers = Symbol("buffers");
-  var kError = Symbol("error");
-  var zlibLimiter;
-
-  class PerMessageDeflate {
-    constructor(options, isServer, maxPayload) {
-      this._maxPayload = maxPayload | 0;
-      this._options = options || {};
-      this._threshold = this._options.threshold !== undefined ? this._options.threshold : 1024;
-      this._isServer = !!isServer;
-      this._deflate = null;
-      this._inflate = null;
-      this.params = null;
-      if (!zlibLimiter) {
-        const concurrency = this._options.concurrencyLimit !== undefined ? this._options.concurrencyLimit : 10;
-        zlibLimiter = new Limiter(concurrency);
-      }
-    }
-    static get extensionName() {
-      return "permessage-deflate";
-    }
-    offer() {
-      const params = {};
-      if (this._options.serverNoContextTakeover) {
-        params.server_no_context_takeover = true;
-      }
-      if (this._options.clientNoContextTakeover) {
-        params.client_no_context_takeover = true;
-      }
-      if (this._options.serverMaxWindowBits) {
-        params.server_max_window_bits = this._options.serverMaxWindowBits;
-      }
-      if (this._options.clientMaxWindowBits) {
-        params.client_max_window_bits = this._options.clientMaxWindowBits;
-      } else if (this._options.clientMaxWindowBits == null) {
-        params.client_max_window_bits = true;
-      }
-      return params;
-    }
-    accept(configurations) {
-      configurations = this.normalizeParams(configurations);
-      this.params = this._isServer ? this.acceptAsServer(configurations) : this.acceptAsClient(configurations);
-      return this.params;
-    }
-    cleanup() {
-      if (this._inflate) {
-        this._inflate.close();
-        this._inflate = null;
-      }
-      if (this._deflate) {
-        const callback = this._deflate[kCallback];
-        this._deflate.close();
-        this._deflate = null;
-        if (callback) {
-          callback(new Error("The deflate stream was closed while data was being processed"));
-        }
-      }
-    }
-    acceptAsServer(offers) {
-      const opts = this._options;
-      const accepted = offers.find((params) => {
-        if (opts.serverNoContextTakeover === false && params.server_no_context_takeover || params.server_max_window_bits && (opts.serverMaxWindowBits === false || typeof opts.serverMaxWindowBits === "number" && opts.serverMaxWindowBits > params.server_max_window_bits) || typeof opts.clientMaxWindowBits === "number" && !params.client_max_window_bits) {
-          return false;
-        }
-        return true;
-      });
-      if (!accepted) {
-        throw new Error("None of the extension offers can be accepted");
-      }
-      if (opts.serverNoContextTakeover) {
-        accepted.server_no_context_takeover = true;
-      }
-      if (opts.clientNoContextTakeover) {
-        accepted.client_no_context_takeover = true;
-      }
-      if (typeof opts.serverMaxWindowBits === "number") {
-        accepted.server_max_window_bits = opts.serverMaxWindowBits;
-      }
-      if (typeof opts.clientMaxWindowBits === "number") {
-        accepted.client_max_window_bits = opts.clientMaxWindowBits;
-      } else if (accepted.client_max_window_bits === true || opts.clientMaxWindowBits === false) {
-        delete accepted.client_max_window_bits;
-      }
-      return accepted;
-    }
-    acceptAsClient(response) {
-      const params = response[0];
-      if (this._options.clientNoContextTakeover === false && params.client_no_context_takeover) {
-        throw new Error('Unexpected parameter "client_no_context_takeover"');
-      }
-      if (!params.client_max_window_bits) {
-        if (typeof this._options.clientMaxWindowBits === "number") {
-          params.client_max_window_bits = this._options.clientMaxWindowBits;
-        }
-      } else if (this._options.clientMaxWindowBits === false || typeof this._options.clientMaxWindowBits === "number" && params.client_max_window_bits > this._options.clientMaxWindowBits) {
-        throw new Error('Unexpected or invalid parameter "client_max_window_bits"');
-      }
-      return params;
-    }
-    normalizeParams(configurations) {
-      configurations.forEach((params) => {
-        Object.keys(params).forEach((key) => {
-          let value = params[key];
-          if (value.length > 1) {
-            throw new Error(`Parameter "${key}" must have only a single value`);
-          }
-          value = value[0];
-          if (key === "client_max_window_bits") {
-            if (value !== true) {
-              const num = +value;
-              if (!Number.isInteger(num) || num < 8 || num > 15) {
-                throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
-              }
-              value = num;
-            } else if (!this._isServer) {
-              throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
-            }
-          } else if (key === "server_max_window_bits") {
-            const num = +value;
-            if (!Number.isInteger(num) || num < 8 || num > 15) {
-              throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
-            }
-            value = num;
-          } else if (key === "client_no_context_takeover" || key === "server_no_context_takeover") {
-            if (value !== true) {
-              throw new TypeError(`Invalid value for parameter "${key}": ${value}`);
-            }
-          } else {
-            throw new Error(`Unknown parameter "${key}"`);
-          }
-          params[key] = value;
-        });
-      });
-      return configurations;
-    }
-    decompress(data, fin, callback) {
-      zlibLimiter.add((done) => {
-        this._decompress(data, fin, (err, result) => {
-          done();
-          callback(err, result);
-        });
-      });
-    }
-    compress(data, fin, callback) {
-      zlibLimiter.add((done) => {
-        this._compress(data, fin, (err, result) => {
-          done();
-          callback(err, result);
-        });
-      });
-    }
-    _decompress(data, fin, callback) {
-      const endpoint = this._isServer ? "client" : "server";
-      if (!this._inflate) {
-        const key = `${endpoint}_max_window_bits`;
-        const windowBits = typeof this.params[key] !== "number" ? zlib.Z_DEFAULT_WINDOWBITS : this.params[key];
-        this._inflate = zlib.createInflateRaw({
-          ...this._options.zlibInflateOptions,
-          windowBits
-        });
-        this._inflate[kPerMessageDeflate] = this;
-        this._inflate[kTotalLength] = 0;
-        this._inflate[kBuffers] = [];
-        this._inflate.on("error", inflateOnError);
-        this._inflate.on("data", inflateOnData);
-      }
-      this._inflate[kCallback] = callback;
-      this._inflate.write(data);
-      if (fin)
-        this._inflate.write(TRAILER);
-      this._inflate.flush(() => {
-        const err = this._inflate[kError];
-        if (err) {
-          this._inflate.close();
-          this._inflate = null;
-          callback(err);
-          return;
-        }
-        const data2 = bufferUtil.concat(this._inflate[kBuffers], this._inflate[kTotalLength]);
-        if (this._inflate._readableState.endEmitted) {
-          this._inflate.close();
-          this._inflate = null;
-        } else {
-          this._inflate[kTotalLength] = 0;
-          this._inflate[kBuffers] = [];
-          if (fin && this.params[`${endpoint}_no_context_takeover`]) {
-            this._inflate.reset();
-          }
-        }
-        callback(null, data2);
-      });
-    }
-    _compress(data, fin, callback) {
-      const endpoint = this._isServer ? "server" : "client";
-      if (!this._deflate) {
-        const key = `${endpoint}_max_window_bits`;
-        const windowBits = typeof this.params[key] !== "number" ? zlib.Z_DEFAULT_WINDOWBITS : this.params[key];
-        this._deflate = zlib.createDeflateRaw({
-          ...this._options.zlibDeflateOptions,
-          windowBits
-        });
-        this._deflate[kTotalLength] = 0;
-        this._deflate[kBuffers] = [];
-        this._deflate.on("data", deflateOnData);
-      }
-      this._deflate[kCallback] = callback;
-      this._deflate.write(data);
-      this._deflate.flush(zlib.Z_SYNC_FLUSH, () => {
-        if (!this._deflate) {
-          return;
-        }
-        let data2 = bufferUtil.concat(this._deflate[kBuffers], this._deflate[kTotalLength]);
-        if (fin) {
-          data2 = new FastBuffer(data2.buffer, data2.byteOffset, data2.length - 4);
-        }
-        this._deflate[kCallback] = null;
-        this._deflate[kTotalLength] = 0;
-        this._deflate[kBuffers] = [];
-        if (fin && this.params[`${endpoint}_no_context_takeover`]) {
-          this._deflate.reset();
-        }
-        callback(null, data2);
-      });
-    }
-  }
-  module.exports = PerMessageDeflate;
-  function deflateOnData(chunk) {
-    this[kBuffers].push(chunk);
-    this[kTotalLength] += chunk.length;
-  }
-  function inflateOnData(chunk) {
-    this[kTotalLength] += chunk.length;
-    if (this[kPerMessageDeflate]._maxPayload < 1 || this[kTotalLength] <= this[kPerMessageDeflate]._maxPayload) {
-      this[kBuffers].push(chunk);
-      return;
-    }
-    this[kError] = new RangeError("Max payload size exceeded");
-    this[kError].code = "WS_ERR_UNSUPPORTED_MESSAGE_LENGTH";
-    this[kError][kStatusCode] = 1009;
-    this.removeListener("data", inflateOnData);
-    this.reset();
-  }
-  function inflateOnError(err) {
-    this[kPerMessageDeflate]._inflate = null;
-    err[kStatusCode] = 1007;
-    this[kCallback](err);
-  }
-});
-
-// node_modules/ws/lib/validation.js
-var require_validation = __commonJS((exports, module) => {
-  var { isUtf8 } = __require("buffer");
-  var { hasBlob } = require_constants6();
-  var tokenChars = [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
-    0,
-    1,
-    1,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0,
-    1,
-    0,
-    1,
-    0
-  ];
-  function isValidStatusCode(code) {
-    return code >= 1000 && code <= 1014 && code !== 1004 && code !== 1005 && code !== 1006 || code >= 3000 && code <= 4999;
-  }
-  function _isValidUTF8(buf) {
-    const len = buf.length;
-    let i = 0;
-    while (i < len) {
-      if ((buf[i] & 128) === 0) {
-        i++;
-      } else if ((buf[i] & 224) === 192) {
-        if (i + 1 === len || (buf[i + 1] & 192) !== 128 || (buf[i] & 254) === 192) {
-          return false;
-        }
-        i += 2;
-      } else if ((buf[i] & 240) === 224) {
-        if (i + 2 >= len || (buf[i + 1] & 192) !== 128 || (buf[i + 2] & 192) !== 128 || buf[i] === 224 && (buf[i + 1] & 224) === 128 || buf[i] === 237 && (buf[i + 1] & 224) === 160) {
-          return false;
-        }
-        i += 3;
-      } else if ((buf[i] & 248) === 240) {
-        if (i + 3 >= len || (buf[i + 1] & 192) !== 128 || (buf[i + 2] & 192) !== 128 || (buf[i + 3] & 192) !== 128 || buf[i] === 240 && (buf[i + 1] & 240) === 128 || buf[i] === 244 && buf[i + 1] > 143 || buf[i] > 244) {
-          return false;
-        }
-        i += 4;
-      } else {
-        return false;
-      }
-    }
-    return true;
-  }
-  function isBlob(value) {
-    return hasBlob && typeof value === "object" && typeof value.arrayBuffer === "function" && typeof value.type === "string" && typeof value.stream === "function" && (value[Symbol.toStringTag] === "Blob" || value[Symbol.toStringTag] === "File");
-  }
-  module.exports = {
-    isBlob,
-    isValidStatusCode,
-    isValidUTF8: _isValidUTF8,
-    tokenChars
-  };
-  if (isUtf8) {
-    module.exports.isValidUTF8 = function(buf) {
-      return buf.length < 24 ? _isValidUTF8(buf) : isUtf8(buf);
-    };
-  } else if (!process.env.WS_NO_UTF_8_VALIDATE) {
-    try {
-      const isValidUTF8 = (()=>{throw new Error(`Cannot require module "utf-8-validate"`);})();
-      module.exports.isValidUTF8 = function(buf) {
-        return buf.length < 32 ? _isValidUTF8(buf) : isValidUTF8(buf);
-      };
-    } catch (e) {
-    }
-  }
-});
-
-// node_modules/ws/lib/receiver.js
-var require_receiver2 = __commonJS((exports, module) => {
-  var { Writable } = __require("stream");
-  var PerMessageDeflate = require_permessage_deflate2();
-  var {
-    BINARY_TYPES,
-    EMPTY_BUFFER,
-    kStatusCode,
-    kWebSocket
-  } = require_constants6();
-  var { concat, toArrayBuffer, unmask } = require_buffer_util();
-  var { isValidStatusCode, isValidUTF8 } = require_validation();
-  var FastBuffer = Buffer[Symbol.species];
-  var GET_INFO = 0;
-  var GET_PAYLOAD_LENGTH_16 = 1;
-  var GET_PAYLOAD_LENGTH_64 = 2;
-  var GET_MASK = 3;
-  var GET_DATA = 4;
-  var INFLATING = 5;
-  var DEFER_EVENT = 6;
-
-  class Receiver extends Writable {
-    constructor(options = {}) {
-      super();
-      this._allowSynchronousEvents = options.allowSynchronousEvents !== undefined ? options.allowSynchronousEvents : true;
-      this._binaryType = options.binaryType || BINARY_TYPES[0];
-      this._extensions = options.extensions || {};
-      this._isServer = !!options.isServer;
-      this._maxPayload = options.maxPayload | 0;
-      this._skipUTF8Validation = !!options.skipUTF8Validation;
-      this[kWebSocket] = undefined;
-      this._bufferedBytes = 0;
-      this._buffers = [];
-      this._compressed = false;
-      this._payloadLength = 0;
-      this._mask = undefined;
-      this._fragmented = 0;
-      this._masked = false;
-      this._fin = false;
-      this._opcode = 0;
-      this._totalPayloadLength = 0;
-      this._messageLength = 0;
-      this._fragments = [];
-      this._errored = false;
-      this._loop = false;
-      this._state = GET_INFO;
-    }
-    _write(chunk, encoding, cb) {
-      if (this._opcode === 8 && this._state == GET_INFO)
-        return cb();
-      this._bufferedBytes += chunk.length;
-      this._buffers.push(chunk);
-      this.startLoop(cb);
-    }
-    consume(n) {
-      this._bufferedBytes -= n;
-      if (n === this._buffers[0].length)
-        return this._buffers.shift();
-      if (n < this._buffers[0].length) {
-        const buf = this._buffers[0];
-        this._buffers[0] = new FastBuffer(buf.buffer, buf.byteOffset + n, buf.length - n);
-        return new FastBuffer(buf.buffer, buf.byteOffset, n);
-      }
-      const dst = Buffer.allocUnsafe(n);
-      do {
-        const buf = this._buffers[0];
-        const offset = dst.length - n;
-        if (n >= buf.length) {
-          dst.set(this._buffers.shift(), offset);
-        } else {
-          dst.set(new Uint8Array(buf.buffer, buf.byteOffset, n), offset);
-          this._buffers[0] = new FastBuffer(buf.buffer, buf.byteOffset + n, buf.length - n);
-        }
-        n -= buf.length;
-      } while (n > 0);
-      return dst;
-    }
-    startLoop(cb) {
-      this._loop = true;
-      do {
-        switch (this._state) {
-          case GET_INFO:
-            this.getInfo(cb);
-            break;
-          case GET_PAYLOAD_LENGTH_16:
-            this.getPayloadLength16(cb);
-            break;
-          case GET_PAYLOAD_LENGTH_64:
-            this.getPayloadLength64(cb);
-            break;
-          case GET_MASK:
-            this.getMask();
-            break;
-          case GET_DATA:
-            this.getData(cb);
-            break;
-          case INFLATING:
-          case DEFER_EVENT:
-            this._loop = false;
-            return;
-        }
-      } while (this._loop);
-      if (!this._errored)
-        cb();
-    }
-    getInfo(cb) {
-      if (this._bufferedBytes < 2) {
-        this._loop = false;
-        return;
-      }
-      const buf = this.consume(2);
-      if ((buf[0] & 48) !== 0) {
-        const error = this.createError(RangeError, "RSV2 and RSV3 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_2_3");
-        cb(error);
-        return;
-      }
-      const compressed = (buf[0] & 64) === 64;
-      if (compressed && !this._extensions[PerMessageDeflate.extensionName]) {
-        const error = this.createError(RangeError, "RSV1 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_1");
-        cb(error);
-        return;
-      }
-      this._fin = (buf[0] & 128) === 128;
-      this._opcode = buf[0] & 15;
-      this._payloadLength = buf[1] & 127;
-      if (this._opcode === 0) {
-        if (compressed) {
-          const error = this.createError(RangeError, "RSV1 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_1");
-          cb(error);
-          return;
-        }
-        if (!this._fragmented) {
-          const error = this.createError(RangeError, "invalid opcode 0", true, 1002, "WS_ERR_INVALID_OPCODE");
-          cb(error);
-          return;
-        }
-        this._opcode = this._fragmented;
-      } else if (this._opcode === 1 || this._opcode === 2) {
-        if (this._fragmented) {
-          const error = this.createError(RangeError, `invalid opcode ${this._opcode}`, true, 1002, "WS_ERR_INVALID_OPCODE");
-          cb(error);
-          return;
-        }
-        this._compressed = compressed;
-      } else if (this._opcode > 7 && this._opcode < 11) {
-        if (!this._fin) {
-          const error = this.createError(RangeError, "FIN must be set", true, 1002, "WS_ERR_EXPECTED_FIN");
-          cb(error);
-          return;
-        }
-        if (compressed) {
-          const error = this.createError(RangeError, "RSV1 must be clear", true, 1002, "WS_ERR_UNEXPECTED_RSV_1");
-          cb(error);
-          return;
-        }
-        if (this._payloadLength > 125 || this._opcode === 8 && this._payloadLength === 1) {
-          const error = this.createError(RangeError, `invalid payload length ${this._payloadLength}`, true, 1002, "WS_ERR_INVALID_CONTROL_PAYLOAD_LENGTH");
-          cb(error);
-          return;
-        }
-      } else {
-        const error = this.createError(RangeError, `invalid opcode ${this._opcode}`, true, 1002, "WS_ERR_INVALID_OPCODE");
-        cb(error);
-        return;
-      }
-      if (!this._fin && !this._fragmented)
-        this._fragmented = this._opcode;
-      this._masked = (buf[1] & 128) === 128;
-      if (this._isServer) {
-        if (!this._masked) {
-          const error = this.createError(RangeError, "MASK must be set", true, 1002, "WS_ERR_EXPECTED_MASK");
-          cb(error);
-          return;
-        }
-      } else if (this._masked) {
-        const error = this.createError(RangeError, "MASK must be clear", true, 1002, "WS_ERR_UNEXPECTED_MASK");
-        cb(error);
-        return;
-      }
-      if (this._payloadLength === 126)
-        this._state = GET_PAYLOAD_LENGTH_16;
-      else if (this._payloadLength === 127)
-        this._state = GET_PAYLOAD_LENGTH_64;
-      else
-        this.haveLength(cb);
-    }
-    getPayloadLength16(cb) {
-      if (this._bufferedBytes < 2) {
-        this._loop = false;
-        return;
-      }
-      this._payloadLength = this.consume(2).readUInt16BE(0);
-      this.haveLength(cb);
-    }
-    getPayloadLength64(cb) {
-      if (this._bufferedBytes < 8) {
-        this._loop = false;
-        return;
-      }
-      const buf = this.consume(8);
-      const num = buf.readUInt32BE(0);
-      if (num > Math.pow(2, 53 - 32) - 1) {
-        const error = this.createError(RangeError, "Unsupported WebSocket frame: payload length > 2^53 - 1", false, 1009, "WS_ERR_UNSUPPORTED_DATA_PAYLOAD_LENGTH");
-        cb(error);
-        return;
-      }
-      this._payloadLength = num * Math.pow(2, 32) + buf.readUInt32BE(4);
-      this.haveLength(cb);
-    }
-    haveLength(cb) {
-      if (this._payloadLength && this._opcode < 8) {
-        this._totalPayloadLength += this._payloadLength;
-        if (this._totalPayloadLength > this._maxPayload && this._maxPayload > 0) {
-          const error = this.createError(RangeError, "Max payload size exceeded", false, 1009, "WS_ERR_UNSUPPORTED_MESSAGE_LENGTH");
-          cb(error);
-          return;
-        }
-      }
-      if (this._masked)
-        this._state = GET_MASK;
-      else
-        this._state = GET_DATA;
-    }
-    getMask() {
-      if (this._bufferedBytes < 4) {
-        this._loop = false;
-        return;
-      }
-      this._mask = this.consume(4);
-      this._state = GET_DATA;
-    }
-    getData(cb) {
-      let data = EMPTY_BUFFER;
-      if (this._payloadLength) {
-        if (this._bufferedBytes < this._payloadLength) {
-          this._loop = false;
-          return;
-        }
-        data = this.consume(this._payloadLength);
-        if (this._masked && (this._mask[0] | this._mask[1] | this._mask[2] | this._mask[3]) !== 0) {
-          unmask(data, this._mask);
-        }
-      }
-      if (this._opcode > 7) {
-        this.controlMessage(data, cb);
-        return;
-      }
-      if (this._compressed) {
-        this._state = INFLATING;
-        this.decompress(data, cb);
-        return;
-      }
-      if (data.length) {
-        this._messageLength = this._totalPayloadLength;
-        this._fragments.push(data);
-      }
-      this.dataMessage(cb);
-    }
-    decompress(data, cb) {
-      const perMessageDeflate = this._extensions[PerMessageDeflate.extensionName];
-      perMessageDeflate.decompress(data, this._fin, (err, buf) => {
-        if (err)
-          return cb(err);
-        if (buf.length) {
-          this._messageLength += buf.length;
-          if (this._messageLength > this._maxPayload && this._maxPayload > 0) {
-            const error = this.createError(RangeError, "Max payload size exceeded", false, 1009, "WS_ERR_UNSUPPORTED_MESSAGE_LENGTH");
-            cb(error);
-            return;
-          }
-          this._fragments.push(buf);
-        }
-        this.dataMessage(cb);
-        if (this._state === GET_INFO)
-          this.startLoop(cb);
-      });
-    }
-    dataMessage(cb) {
-      if (!this._fin) {
-        this._state = GET_INFO;
-        return;
-      }
-      const messageLength = this._messageLength;
-      const fragments = this._fragments;
-      this._totalPayloadLength = 0;
-      this._messageLength = 0;
-      this._fragmented = 0;
-      this._fragments = [];
-      if (this._opcode === 2) {
-        let data;
-        if (this._binaryType === "nodebuffer") {
-          data = concat(fragments, messageLength);
-        } else if (this._binaryType === "arraybuffer") {
-          data = toArrayBuffer(concat(fragments, messageLength));
-        } else if (this._binaryType === "blob") {
-          data = new Blob(fragments);
-        } else {
-          data = fragments;
-        }
-        if (this._allowSynchronousEvents) {
-          this.emit("message", data, true);
-          this._state = GET_INFO;
-        } else {
-          this._state = DEFER_EVENT;
-          setImmediate(() => {
-            this.emit("message", data, true);
-            this._state = GET_INFO;
-            this.startLoop(cb);
-          });
-        }
-      } else {
-        const buf = concat(fragments, messageLength);
-        if (!this._skipUTF8Validation && !isValidUTF8(buf)) {
-          const error = this.createError(Error, "invalid UTF-8 sequence", true, 1007, "WS_ERR_INVALID_UTF8");
-          cb(error);
-          return;
-        }
-        if (this._state === INFLATING || this._allowSynchronousEvents) {
-          this.emit("message", buf, false);
-          this._state = GET_INFO;
-        } else {
-          this._state = DEFER_EVENT;
-          setImmediate(() => {
-            this.emit("message", buf, false);
-            this._state = GET_INFO;
-            this.startLoop(cb);
-          });
-        }
-      }
-    }
-    controlMessage(data, cb) {
-      if (this._opcode === 8) {
-        if (data.length === 0) {
-          this._loop = false;
-          this.emit("conclude", 1005, EMPTY_BUFFER);
-          this.end();
-        } else {
-          const code = data.readUInt16BE(0);
-          if (!isValidStatusCode(code)) {
-            const error = this.createError(RangeError, `invalid status code ${code}`, true, 1002, "WS_ERR_INVALID_CLOSE_CODE");
-            cb(error);
-            return;
-          }
-          const buf = new FastBuffer(data.buffer, data.byteOffset + 2, data.length - 2);
-          if (!this._skipUTF8Validation && !isValidUTF8(buf)) {
-            const error = this.createError(Error, "invalid UTF-8 sequence", true, 1007, "WS_ERR_INVALID_UTF8");
-            cb(error);
-            return;
-          }
-          this._loop = false;
-          this.emit("conclude", code, buf);
-          this.end();
-        }
-        this._state = GET_INFO;
-        return;
-      }
-      if (this._allowSynchronousEvents) {
-        this.emit(this._opcode === 9 ? "ping" : "pong", data);
-        this._state = GET_INFO;
-      } else {
-        this._state = DEFER_EVENT;
-        setImmediate(() => {
-          this.emit(this._opcode === 9 ? "ping" : "pong", data);
-          this._state = GET_INFO;
-          this.startLoop(cb);
-        });
-      }
-    }
-    createError(ErrorCtor, message, prefix, statusCode, errorCode) {
-      this._loop = false;
-      this._errored = true;
-      const err = new ErrorCtor(prefix ? `Invalid WebSocket frame: ${message}` : message);
-      Error.captureStackTrace(err, this.createError);
-      err.code = errorCode;
-      err[kStatusCode] = statusCode;
-      return err;
-    }
-  }
-  module.exports = Receiver;
-});
-
-// node_modules/ws/lib/sender.js
-var require_sender2 = __commonJS((exports, module) => {
-  var { Duplex } = __require("stream");
-  var { randomFillSync } = __require("crypto");
-  var PerMessageDeflate = require_permessage_deflate2();
-  var { EMPTY_BUFFER, kWebSocket, NOOP } = require_constants6();
-  var { isBlob, isValidStatusCode } = require_validation();
-  var { mask: applyMask, toBuffer } = require_buffer_util();
-  var kByteLength = Symbol("kByteLength");
-  var maskBuffer = Buffer.alloc(4);
-  var RANDOM_POOL_SIZE = 8 * 1024;
-  var randomPool;
-  var randomPoolPointer = RANDOM_POOL_SIZE;
-  var DEFAULT = 0;
-  var DEFLATING = 1;
-  var GET_BLOB_DATA = 2;
-
-  class Sender {
-    constructor(socket, extensions, generateMask) {
-      this._extensions = extensions || {};
-      if (generateMask) {
-        this._generateMask = generateMask;
-        this._maskBuffer = Buffer.alloc(4);
-      }
-      this._socket = socket;
-      this._firstFragment = true;
-      this._compress = false;
-      this._bufferedBytes = 0;
-      this._queue = [];
-      this._state = DEFAULT;
-      this.onerror = NOOP;
-      this[kWebSocket] = undefined;
-    }
-    static frame(data, options) {
-      let mask;
-      let merge = false;
-      let offset = 2;
-      let skipMasking = false;
-      if (options.mask) {
-        mask = options.maskBuffer || maskBuffer;
-        if (options.generateMask) {
-          options.generateMask(mask);
-        } else {
-          if (randomPoolPointer === RANDOM_POOL_SIZE) {
-            if (randomPool === undefined) {
-              randomPool = Buffer.alloc(RANDOM_POOL_SIZE);
-            }
-            randomFillSync(randomPool, 0, RANDOM_POOL_SIZE);
-            randomPoolPointer = 0;
-          }
-          mask[0] = randomPool[randomPoolPointer++];
-          mask[1] = randomPool[randomPoolPointer++];
-          mask[2] = randomPool[randomPoolPointer++];
-          mask[3] = randomPool[randomPoolPointer++];
-        }
-        skipMasking = (mask[0] | mask[1] | mask[2] | mask[3]) === 0;
-        offset = 6;
-      }
-      let dataLength;
-      if (typeof data === "string") {
-        if ((!options.mask || skipMasking) && options[kByteLength] !== undefined) {
-          dataLength = options[kByteLength];
-        } else {
-          data = Buffer.from(data);
-          dataLength = data.length;
-        }
-      } else {
-        dataLength = data.length;
-        merge = options.mask && options.readOnly && !skipMasking;
-      }
-      let payloadLength = dataLength;
-      if (dataLength >= 65536) {
-        offset += 8;
-        payloadLength = 127;
-      } else if (dataLength > 125) {
-        offset += 2;
-        payloadLength = 126;
-      }
-      const target = Buffer.allocUnsafe(merge ? dataLength + offset : offset);
-      target[0] = options.fin ? options.opcode | 128 : options.opcode;
-      if (options.rsv1)
-        target[0] |= 64;
-      target[1] = payloadLength;
-      if (payloadLength === 126) {
-        target.writeUInt16BE(dataLength, 2);
-      } else if (payloadLength === 127) {
-        target[2] = target[3] = 0;
-        target.writeUIntBE(dataLength, 4, 6);
-      }
-      if (!options.mask)
-        return [target, data];
-      target[1] |= 128;
-      target[offset - 4] = mask[0];
-      target[offset - 3] = mask[1];
-      target[offset - 2] = mask[2];
-      target[offset - 1] = mask[3];
-      if (skipMasking)
-        return [target, data];
-      if (merge) {
-        applyMask(data, mask, target, offset, dataLength);
-        return [target];
-      }
-      applyMask(data, mask, data, 0, dataLength);
-      return [target, data];
-    }
-    close(code, data, mask, cb) {
-      let buf;
-      if (code === undefined) {
-        buf = EMPTY_BUFFER;
-      } else if (typeof code !== "number" || !isValidStatusCode(code)) {
-        throw new TypeError("First argument must be a valid error code number");
-      } else if (data === undefined || !data.length) {
-        buf = Buffer.allocUnsafe(2);
-        buf.writeUInt16BE(code, 0);
-      } else {
-        const length = Buffer.byteLength(data);
-        if (length > 123) {
-          throw new RangeError("The message must not be greater than 123 bytes");
-        }
-        buf = Buffer.allocUnsafe(2 + length);
-        buf.writeUInt16BE(code, 0);
-        if (typeof data === "string") {
-          buf.write(data, 2);
-        } else {
-          buf.set(data, 2);
-        }
-      }
-      const options = {
-        [kByteLength]: buf.length,
-        fin: true,
-        generateMask: this._generateMask,
-        mask,
-        maskBuffer: this._maskBuffer,
-        opcode: 8,
-        readOnly: false,
-        rsv1: false
-      };
-      if (this._state !== DEFAULT) {
-        this.enqueue([this.dispatch, buf, false, options, cb]);
-      } else {
-        this.sendFrame(Sender.frame(buf, options), cb);
-      }
-    }
-    ping(data, mask, cb) {
-      let byteLength;
-      let readOnly;
-      if (typeof data === "string") {
-        byteLength = Buffer.byteLength(data);
-        readOnly = false;
-      } else if (isBlob(data)) {
-        byteLength = data.size;
-        readOnly = false;
-      } else {
-        data = toBuffer(data);
-        byteLength = data.length;
-        readOnly = toBuffer.readOnly;
-      }
-      if (byteLength > 125) {
-        throw new RangeError("The data size must not be greater than 125 bytes");
-      }
-      const options = {
-        [kByteLength]: byteLength,
-        fin: true,
-        generateMask: this._generateMask,
-        mask,
-        maskBuffer: this._maskBuffer,
-        opcode: 9,
-        readOnly,
-        rsv1: false
-      };
-      if (isBlob(data)) {
-        if (this._state !== DEFAULT) {
-          this.enqueue([this.getBlobData, data, false, options, cb]);
-        } else {
-          this.getBlobData(data, false, options, cb);
-        }
-      } else if (this._state !== DEFAULT) {
-        this.enqueue([this.dispatch, data, false, options, cb]);
-      } else {
-        this.sendFrame(Sender.frame(data, options), cb);
-      }
-    }
-    pong(data, mask, cb) {
-      let byteLength;
-      let readOnly;
-      if (typeof data === "string") {
-        byteLength = Buffer.byteLength(data);
-        readOnly = false;
-      } else if (isBlob(data)) {
-        byteLength = data.size;
-        readOnly = false;
-      } else {
-        data = toBuffer(data);
-        byteLength = data.length;
-        readOnly = toBuffer.readOnly;
-      }
-      if (byteLength > 125) {
-        throw new RangeError("The data size must not be greater than 125 bytes");
-      }
-      const options = {
-        [kByteLength]: byteLength,
-        fin: true,
-        generateMask: this._generateMask,
-        mask,
-        maskBuffer: this._maskBuffer,
-        opcode: 10,
-        readOnly,
-        rsv1: false
-      };
-      if (isBlob(data)) {
-        if (this._state !== DEFAULT) {
-          this.enqueue([this.getBlobData, data, false, options, cb]);
-        } else {
-          this.getBlobData(data, false, options, cb);
-        }
-      } else if (this._state !== DEFAULT) {
-        this.enqueue([this.dispatch, data, false, options, cb]);
-      } else {
-        this.sendFrame(Sender.frame(data, options), cb);
-      }
-    }
-    send(data, options, cb) {
-      const perMessageDeflate = this._extensions[PerMessageDeflate.extensionName];
-      let opcode = options.binary ? 2 : 1;
-      let rsv1 = options.compress;
-      let byteLength;
-      let readOnly;
-      if (typeof data === "string") {
-        byteLength = Buffer.byteLength(data);
-        readOnly = false;
-      } else if (isBlob(data)) {
-        byteLength = data.size;
-        readOnly = false;
-      } else {
-        data = toBuffer(data);
-        byteLength = data.length;
-        readOnly = toBuffer.readOnly;
-      }
-      if (this._firstFragment) {
-        this._firstFragment = false;
-        if (rsv1 && perMessageDeflate && perMessageDeflate.params[perMessageDeflate._isServer ? "server_no_context_takeover" : "client_no_context_takeover"]) {
-          rsv1 = byteLength >= perMessageDeflate._threshold;
-        }
-        this._compress = rsv1;
-      } else {
-        rsv1 = false;
-        opcode = 0;
-      }
-      if (options.fin)
-        this._firstFragment = true;
-      const opts = {
-        [kByteLength]: byteLength,
-        fin: options.fin,
-        generateMask: this._generateMask,
-        mask: options.mask,
-        maskBuffer: this._maskBuffer,
-        opcode,
-        readOnly,
-        rsv1
-      };
-      if (isBlob(data)) {
-        if (this._state !== DEFAULT) {
-          this.enqueue([this.getBlobData, data, this._compress, opts, cb]);
-        } else {
-          this.getBlobData(data, this._compress, opts, cb);
-        }
-      } else if (this._state !== DEFAULT) {
-        this.enqueue([this.dispatch, data, this._compress, opts, cb]);
-      } else {
-        this.dispatch(data, this._compress, opts, cb);
-      }
-    }
-    getBlobData(blob, compress, options, cb) {
-      this._bufferedBytes += options[kByteLength];
-      this._state = GET_BLOB_DATA;
-      blob.arrayBuffer().then((arrayBuffer) => {
-        if (this._socket.destroyed) {
-          const err = new Error("The socket was closed while the blob was being read");
-          process.nextTick(callCallbacks, this, err, cb);
-          return;
-        }
-        this._bufferedBytes -= options[kByteLength];
-        const data = toBuffer(arrayBuffer);
-        if (!compress) {
-          this._state = DEFAULT;
-          this.sendFrame(Sender.frame(data, options), cb);
-          this.dequeue();
-        } else {
-          this.dispatch(data, compress, options, cb);
-        }
-      }).catch((err) => {
-        process.nextTick(onError, this, err, cb);
-      });
-    }
-    dispatch(data, compress, options, cb) {
-      if (!compress) {
-        this.sendFrame(Sender.frame(data, options), cb);
-        return;
-      }
-      const perMessageDeflate = this._extensions[PerMessageDeflate.extensionName];
-      this._bufferedBytes += options[kByteLength];
-      this._state = DEFLATING;
-      perMessageDeflate.compress(data, options.fin, (_, buf) => {
-        if (this._socket.destroyed) {
-          const err = new Error("The socket was closed while data was being compressed");
-          callCallbacks(this, err, cb);
-          return;
-        }
-        this._bufferedBytes -= options[kByteLength];
-        this._state = DEFAULT;
-        options.readOnly = false;
-        this.sendFrame(Sender.frame(buf, options), cb);
-        this.dequeue();
-      });
-    }
-    dequeue() {
-      while (this._state === DEFAULT && this._queue.length) {
-        const params = this._queue.shift();
-        this._bufferedBytes -= params[3][kByteLength];
-        Reflect.apply(params[0], this, params.slice(1));
-      }
-    }
-    enqueue(params) {
-      this._bufferedBytes += params[3][kByteLength];
-      this._queue.push(params);
-    }
-    sendFrame(list, cb) {
-      if (list.length === 2) {
-        this._socket.cork();
-        this._socket.write(list[0]);
-        this._socket.write(list[1], cb);
-        this._socket.uncork();
-      } else {
-        this._socket.write(list[0], cb);
-      }
-    }
-  }
-  module.exports = Sender;
-  function callCallbacks(sender, err, cb) {
-    if (typeof cb === "function")
-      cb(err);
-    for (let i = 0;i < sender._queue.length; i++) {
-      const params = sender._queue[i];
-      const callback = params[params.length - 1];
-      if (typeof callback === "function")
-        callback(err);
-    }
-  }
-  function onError(sender, err, cb) {
-    callCallbacks(sender, err, cb);
-    sender.onerror(err);
-  }
-});
-
-// node_modules/ws/lib/event-target.js
-var require_event_target = __commonJS((exports, module) => {
-  var { kForOnEventAttribute, kListener } = require_constants6();
-  var kCode = Symbol("kCode");
-  var kData = Symbol("kData");
-  var kError = Symbol("kError");
-  var kMessage = Symbol("kMessage");
-  var kReason = Symbol("kReason");
-  var kTarget = Symbol("kTarget");
-  var kType = Symbol("kType");
-  var kWasClean = Symbol("kWasClean");
-
-  class Event2 {
-    constructor(type) {
-      this[kTarget] = null;
-      this[kType] = type;
-    }
-    get target() {
-      return this[kTarget];
-    }
-    get type() {
-      return this[kType];
-    }
-  }
-  Object.defineProperty(Event2.prototype, "target", { enumerable: true });
-  Object.defineProperty(Event2.prototype, "type", { enumerable: true });
-
-  class CloseEvent extends Event2 {
-    constructor(type, options = {}) {
-      super(type);
-      this[kCode] = options.code === undefined ? 0 : options.code;
-      this[kReason] = options.reason === undefined ? "" : options.reason;
-      this[kWasClean] = options.wasClean === undefined ? false : options.wasClean;
-    }
-    get code() {
-      return this[kCode];
-    }
-    get reason() {
-      return this[kReason];
-    }
-    get wasClean() {
-      return this[kWasClean];
-    }
-  }
-  Object.defineProperty(CloseEvent.prototype, "code", { enumerable: true });
-  Object.defineProperty(CloseEvent.prototype, "reason", { enumerable: true });
-  Object.defineProperty(CloseEvent.prototype, "wasClean", { enumerable: true });
-
-  class ErrorEvent extends Event2 {
-    constructor(type, options = {}) {
-      super(type);
-      this[kError] = options.error === undefined ? null : options.error;
-      this[kMessage] = options.message === undefined ? "" : options.message;
-    }
-    get error() {
-      return this[kError];
-    }
-    get message() {
-      return this[kMessage];
-    }
-  }
-  Object.defineProperty(ErrorEvent.prototype, "error", { enumerable: true });
-  Object.defineProperty(ErrorEvent.prototype, "message", { enumerable: true });
-
-  class MessageEvent extends Event2 {
-    constructor(type, options = {}) {
-      super(type);
-      this[kData] = options.data === undefined ? null : options.data;
-    }
-    get data() {
-      return this[kData];
-    }
-  }
-  Object.defineProperty(MessageEvent.prototype, "data", { enumerable: true });
-  var EventTarget2 = {
-    addEventListener(type, handler, options = {}) {
-      for (const listener of this.listeners(type)) {
-        if (!options[kForOnEventAttribute] && listener[kListener] === handler && !listener[kForOnEventAttribute]) {
-          return;
-        }
-      }
-      let wrapper;
-      if (type === "message") {
-        wrapper = function onMessage(data, isBinary) {
-          const event = new MessageEvent("message", {
-            data: isBinary ? data : data.toString()
-          });
-          event[kTarget] = this;
-          callListener(handler, this, event);
-        };
-      } else if (type === "close") {
-        wrapper = function onClose(code, message) {
-          const event = new CloseEvent("close", {
-            code,
-            reason: message.toString(),
-            wasClean: this._closeFrameReceived && this._closeFrameSent
-          });
-          event[kTarget] = this;
-          callListener(handler, this, event);
-        };
-      } else if (type === "error") {
-        wrapper = function onError(error) {
-          const event = new ErrorEvent("error", {
-            error,
-            message: error.message
-          });
-          event[kTarget] = this;
-          callListener(handler, this, event);
-        };
-      } else if (type === "open") {
-        wrapper = function onOpen() {
-          const event = new Event2("open");
-          event[kTarget] = this;
-          callListener(handler, this, event);
-        };
-      } else {
-        return;
-      }
-      wrapper[kForOnEventAttribute] = !!options[kForOnEventAttribute];
-      wrapper[kListener] = handler;
-      if (options.once) {
-        this.once(type, wrapper);
-      } else {
-        this.on(type, wrapper);
-      }
-    },
-    removeEventListener(type, handler) {
-      for (const listener of this.listeners(type)) {
-        if (listener[kListener] === handler && !listener[kForOnEventAttribute]) {
-          this.removeListener(type, listener);
-          break;
-        }
-      }
-    }
-  };
-  module.exports = {
-    CloseEvent,
-    ErrorEvent,
-    Event: Event2,
-    EventTarget: EventTarget2,
-    MessageEvent
-  };
-  function callListener(listener, thisArg, event) {
-    if (typeof listener === "object" && listener.handleEvent) {
-      listener.handleEvent.call(listener, event);
-    } else {
-      listener.call(thisArg, event);
-    }
-  }
-});
-
-// node_modules/ws/lib/extension.js
-var require_extension = __commonJS((exports, module) => {
-  var { tokenChars } = require_validation();
-  function push(dest, name, elem) {
-    if (dest[name] === undefined)
-      dest[name] = [elem];
-    else
-      dest[name].push(elem);
-  }
-  function parse(header) {
-    const offers = Object.create(null);
-    let params = Object.create(null);
-    let mustUnescape = false;
-    let isEscaping = false;
-    let inQuotes = false;
-    let extensionName;
-    let paramName;
-    let start = -1;
-    let code = -1;
-    let end = -1;
-    let i = 0;
-    for (;i < header.length; i++) {
-      code = header.charCodeAt(i);
-      if (extensionName === undefined) {
-        if (end === -1 && tokenChars[code] === 1) {
-          if (start === -1)
-            start = i;
-        } else if (i !== 0 && (code === 32 || code === 9)) {
-          if (end === -1 && start !== -1)
-            end = i;
-        } else if (code === 59 || code === 44) {
-          if (start === -1) {
-            throw new SyntaxError(`Unexpected character at index ${i}`);
-          }
-          if (end === -1)
-            end = i;
-          const name = header.slice(start, end);
-          if (code === 44) {
-            push(offers, name, params);
-            params = Object.create(null);
-          } else {
-            extensionName = name;
-          }
-          start = end = -1;
-        } else {
-          throw new SyntaxError(`Unexpected character at index ${i}`);
-        }
-      } else if (paramName === undefined) {
-        if (end === -1 && tokenChars[code] === 1) {
-          if (start === -1)
-            start = i;
-        } else if (code === 32 || code === 9) {
-          if (end === -1 && start !== -1)
-            end = i;
-        } else if (code === 59 || code === 44) {
-          if (start === -1) {
-            throw new SyntaxError(`Unexpected character at index ${i}`);
-          }
-          if (end === -1)
-            end = i;
-          push(params, header.slice(start, end), true);
-          if (code === 44) {
-            push(offers, extensionName, params);
-            params = Object.create(null);
-            extensionName = undefined;
-          }
-          start = end = -1;
-        } else if (code === 61 && start !== -1 && end === -1) {
-          paramName = header.slice(start, i);
-          start = end = -1;
-        } else {
-          throw new SyntaxError(`Unexpected character at index ${i}`);
-        }
-      } else {
-        if (isEscaping) {
-          if (tokenChars[code] !== 1) {
-            throw new SyntaxError(`Unexpected character at index ${i}`);
-          }
-          if (start === -1)
-            start = i;
-          else if (!mustUnescape)
-            mustUnescape = true;
-          isEscaping = false;
-        } else if (inQuotes) {
-          if (tokenChars[code] === 1) {
-            if (start === -1)
-              start = i;
-          } else if (code === 34 && start !== -1) {
-            inQuotes = false;
-            end = i;
-          } else if (code === 92) {
-            isEscaping = true;
-          } else {
-            throw new SyntaxError(`Unexpected character at index ${i}`);
-          }
-        } else if (code === 34 && header.charCodeAt(i - 1) === 61) {
-          inQuotes = true;
-        } else if (end === -1 && tokenChars[code] === 1) {
-          if (start === -1)
-            start = i;
-        } else if (start !== -1 && (code === 32 || code === 9)) {
-          if (end === -1)
-            end = i;
-        } else if (code === 59 || code === 44) {
-          if (start === -1) {
-            throw new SyntaxError(`Unexpected character at index ${i}`);
-          }
-          if (end === -1)
-            end = i;
-          let value = header.slice(start, end);
-          if (mustUnescape) {
-            value = value.replace(/\\/g, "");
-            mustUnescape = false;
-          }
-          push(params, paramName, value);
-          if (code === 44) {
-            push(offers, extensionName, params);
-            params = Object.create(null);
-            extensionName = undefined;
-          }
-          paramName = undefined;
-          start = end = -1;
-        } else {
-          throw new SyntaxError(`Unexpected character at index ${i}`);
-        }
-      }
-    }
-    if (start === -1 || inQuotes || code === 32 || code === 9) {
-      throw new SyntaxError("Unexpected end of input");
-    }
-    if (end === -1)
-      end = i;
-    const token = header.slice(start, end);
-    if (extensionName === undefined) {
-      push(offers, token, params);
-    } else {
-      if (paramName === undefined) {
-        push(params, token, true);
-      } else if (mustUnescape) {
-        push(params, paramName, token.replace(/\\/g, ""));
-      } else {
-        push(params, paramName, token);
-      }
-      push(offers, extensionName, params);
-    }
-    return offers;
-  }
-  function format(extensions) {
-    return Object.keys(extensions).map((extension) => {
-      let configurations = extensions[extension];
-      if (!Array.isArray(configurations))
-        configurations = [configurations];
-      return configurations.map((params) => {
-        return [extension].concat(Object.keys(params).map((k) => {
-          let values = params[k];
-          if (!Array.isArray(values))
-            values = [values];
-          return values.map((v) => v === true ? k : `${k}=${v}`).join("; ");
-        })).join("; ");
-      }).join(", ");
-    }).join(", ");
-  }
-  module.exports = { format, parse };
-});
-
-// node_modules/ws/lib/websocket.js
-var require_websocket2 = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
-  var https = __require("https");
-  var http = __require("http");
-  var net = __require("net");
-  var tls = __require("tls");
-  var { randomBytes, createHash } = __require("crypto");
-  var { Duplex, Readable } = __require("stream");
-  var { URL: URL2 } = __require("url");
-  var PerMessageDeflate = require_permessage_deflate2();
-  var Receiver = require_receiver2();
-  var Sender = require_sender2();
-  var { isBlob } = require_validation();
-  var {
-    BINARY_TYPES,
-    EMPTY_BUFFER,
-    GUID,
-    kForOnEventAttribute,
-    kListener,
-    kStatusCode,
-    kWebSocket,
-    NOOP
-  } = require_constants6();
-  var {
-    EventTarget: { addEventListener, removeEventListener }
-  } = require_event_target();
-  var { format, parse } = require_extension();
-  var { toBuffer } = require_buffer_util();
-  var closeTimeout = 30 * 1000;
-  var kAborted = Symbol("kAborted");
-  var protocolVersions = [8, 13];
-  var readyStates = ["CONNECTING", "OPEN", "CLOSING", "CLOSED"];
-  var subprotocolRegex = /^[!#$%&'*+\-.0-9A-Z^_`|a-z~]+$/;
-
-  class WebSocket extends EventEmitter {
-    constructor(address, protocols, options) {
-      super();
-      this._binaryType = BINARY_TYPES[0];
-      this._closeCode = 1006;
-      this._closeFrameReceived = false;
-      this._closeFrameSent = false;
-      this._closeMessage = EMPTY_BUFFER;
-      this._closeTimer = null;
-      this._errorEmitted = false;
-      this._extensions = {};
-      this._paused = false;
-      this._protocol = "";
-      this._readyState = WebSocket.CONNECTING;
-      this._receiver = null;
-      this._sender = null;
-      this._socket = null;
-      if (address !== null) {
-        this._bufferedAmount = 0;
-        this._isServer = false;
-        this._redirects = 0;
-        if (protocols === undefined) {
-          protocols = [];
-        } else if (!Array.isArray(protocols)) {
-          if (typeof protocols === "object" && protocols !== null) {
-            options = protocols;
-            protocols = [];
-          } else {
-            protocols = [protocols];
-          }
-        }
-        initAsClient(this, address, protocols, options);
-      } else {
-        this._autoPong = options.autoPong;
-        this._isServer = true;
-      }
-    }
-    get binaryType() {
-      return this._binaryType;
-    }
-    set binaryType(type) {
-      if (!BINARY_TYPES.includes(type))
-        return;
-      this._binaryType = type;
-      if (this._receiver)
-        this._receiver._binaryType = type;
-    }
-    get bufferedAmount() {
-      if (!this._socket)
-        return this._bufferedAmount;
-      return this._socket._writableState.length + this._sender._bufferedBytes;
-    }
-    get extensions() {
-      return Object.keys(this._extensions).join();
-    }
-    get isPaused() {
-      return this._paused;
-    }
-    get onclose() {
-      return null;
-    }
-    get onerror() {
-      return null;
-    }
-    get onopen() {
-      return null;
-    }
-    get onmessage() {
-      return null;
-    }
-    get protocol() {
-      return this._protocol;
-    }
-    get readyState() {
-      return this._readyState;
-    }
-    get url() {
-      return this._url;
-    }
-    setSocket(socket, head, options) {
-      const receiver = new Receiver({
-        allowSynchronousEvents: options.allowSynchronousEvents,
-        binaryType: this.binaryType,
-        extensions: this._extensions,
-        isServer: this._isServer,
-        maxPayload: options.maxPayload,
-        skipUTF8Validation: options.skipUTF8Validation
-      });
-      const sender = new Sender(socket, this._extensions, options.generateMask);
-      this._receiver = receiver;
-      this._sender = sender;
-      this._socket = socket;
-      receiver[kWebSocket] = this;
-      sender[kWebSocket] = this;
-      socket[kWebSocket] = this;
-      receiver.on("conclude", receiverOnConclude);
-      receiver.on("drain", receiverOnDrain);
-      receiver.on("error", receiverOnError);
-      receiver.on("message", receiverOnMessage);
-      receiver.on("ping", receiverOnPing);
-      receiver.on("pong", receiverOnPong);
-      sender.onerror = senderOnError;
-      if (socket.setTimeout)
-        socket.setTimeout(0);
-      if (socket.setNoDelay)
-        socket.setNoDelay();
-      if (head.length > 0)
-        socket.unshift(head);
-      socket.on("close", socketOnClose);
-      socket.on("data", socketOnData);
-      socket.on("end", socketOnEnd);
-      socket.on("error", socketOnError);
-      this._readyState = WebSocket.OPEN;
-      this.emit("open");
-    }
-    emitClose() {
-      if (!this._socket) {
-        this._readyState = WebSocket.CLOSED;
-        this.emit("close", this._closeCode, this._closeMessage);
-        return;
-      }
-      if (this._extensions[PerMessageDeflate.extensionName]) {
-        this._extensions[PerMessageDeflate.extensionName].cleanup();
-      }
-      this._receiver.removeAllListeners();
-      this._readyState = WebSocket.CLOSED;
-      this.emit("close", this._closeCode, this._closeMessage);
-    }
-    close(code, data) {
-      if (this.readyState === WebSocket.CLOSED)
-        return;
-      if (this.readyState === WebSocket.CONNECTING) {
-        const msg = "WebSocket was closed before the connection was established";
-        abortHandshake(this, this._req, msg);
-        return;
-      }
-      if (this.readyState === WebSocket.CLOSING) {
-        if (this._closeFrameSent && (this._closeFrameReceived || this._receiver._writableState.errorEmitted)) {
-          this._socket.end();
-        }
-        return;
-      }
-      this._readyState = WebSocket.CLOSING;
-      this._sender.close(code, data, !this._isServer, (err) => {
-        if (err)
-          return;
-        this._closeFrameSent = true;
-        if (this._closeFrameReceived || this._receiver._writableState.errorEmitted) {
-          this._socket.end();
-        }
-      });
-      setCloseTimer(this);
-    }
-    pause() {
-      if (this.readyState === WebSocket.CONNECTING || this.readyState === WebSocket.CLOSED) {
-        return;
-      }
-      this._paused = true;
-      this._socket.pause();
-    }
-    ping(data, mask, cb) {
-      if (this.readyState === WebSocket.CONNECTING) {
-        throw new Error("WebSocket is not open: readyState 0 (CONNECTING)");
-      }
-      if (typeof data === "function") {
-        cb = data;
-        data = mask = undefined;
-      } else if (typeof mask === "function") {
-        cb = mask;
-        mask = undefined;
-      }
-      if (typeof data === "number")
-        data = data.toString();
-      if (this.readyState !== WebSocket.OPEN) {
-        sendAfterClose(this, data, cb);
-        return;
-      }
-      if (mask === undefined)
-        mask = !this._isServer;
-      this._sender.ping(data || EMPTY_BUFFER, mask, cb);
-    }
-    pong(data, mask, cb) {
-      if (this.readyState === WebSocket.CONNECTING) {
-        throw new Error("WebSocket is not open: readyState 0 (CONNECTING)");
-      }
-      if (typeof data === "function") {
-        cb = data;
-        data = mask = undefined;
-      } else if (typeof mask === "function") {
-        cb = mask;
-        mask = undefined;
-      }
-      if (typeof data === "number")
-        data = data.toString();
-      if (this.readyState !== WebSocket.OPEN) {
-        sendAfterClose(this, data, cb);
-        return;
-      }
-      if (mask === undefined)
-        mask = !this._isServer;
-      this._sender.pong(data || EMPTY_BUFFER, mask, cb);
-    }
-    resume() {
-      if (this.readyState === WebSocket.CONNECTING || this.readyState === WebSocket.CLOSED) {
-        return;
-      }
-      this._paused = false;
-      if (!this._receiver._writableState.needDrain)
-        this._socket.resume();
-    }
-    send(data, options, cb) {
-      if (this.readyState === WebSocket.CONNECTING) {
-        throw new Error("WebSocket is not open: readyState 0 (CONNECTING)");
-      }
-      if (typeof options === "function") {
-        cb = options;
-        options = {};
-      }
-      if (typeof data === "number")
-        data = data.toString();
-      if (this.readyState !== WebSocket.OPEN) {
-        sendAfterClose(this, data, cb);
-        return;
-      }
-      const opts = {
-        binary: typeof data !== "string",
-        mask: !this._isServer,
-        compress: true,
-        fin: true,
-        ...options
-      };
-      if (!this._extensions[PerMessageDeflate.extensionName]) {
-        opts.compress = false;
-      }
-      this._sender.send(data || EMPTY_BUFFER, opts, cb);
-    }
-    terminate() {
-      if (this.readyState === WebSocket.CLOSED)
-        return;
-      if (this.readyState === WebSocket.CONNECTING) {
-        const msg = "WebSocket was closed before the connection was established";
-        abortHandshake(this, this._req, msg);
-        return;
-      }
-      if (this._socket) {
-        this._readyState = WebSocket.CLOSING;
-        this._socket.destroy();
-      }
-    }
-  }
-  Object.defineProperty(WebSocket, "CONNECTING", {
-    enumerable: true,
-    value: readyStates.indexOf("CONNECTING")
-  });
-  Object.defineProperty(WebSocket.prototype, "CONNECTING", {
-    enumerable: true,
-    value: readyStates.indexOf("CONNECTING")
-  });
-  Object.defineProperty(WebSocket, "OPEN", {
-    enumerable: true,
-    value: readyStates.indexOf("OPEN")
-  });
-  Object.defineProperty(WebSocket.prototype, "OPEN", {
-    enumerable: true,
-    value: readyStates.indexOf("OPEN")
-  });
-  Object.defineProperty(WebSocket, "CLOSING", {
-    enumerable: true,
-    value: readyStates.indexOf("CLOSING")
-  });
-  Object.defineProperty(WebSocket.prototype, "CLOSING", {
-    enumerable: true,
-    value: readyStates.indexOf("CLOSING")
-  });
-  Object.defineProperty(WebSocket, "CLOSED", {
-    enumerable: true,
-    value: readyStates.indexOf("CLOSED")
-  });
-  Object.defineProperty(WebSocket.prototype, "CLOSED", {
-    enumerable: true,
-    value: readyStates.indexOf("CLOSED")
-  });
-  [
-    "binaryType",
-    "bufferedAmount",
-    "extensions",
-    "isPaused",
-    "protocol",
-    "readyState",
-    "url"
-  ].forEach((property) => {
-    Object.defineProperty(WebSocket.prototype, property, { enumerable: true });
-  });
-  ["open", "error", "close", "message"].forEach((method) => {
-    Object.defineProperty(WebSocket.prototype, `on${method}`, {
-      enumerable: true,
-      get() {
-        for (const listener of this.listeners(method)) {
-          if (listener[kForOnEventAttribute])
-            return listener[kListener];
-        }
-        return null;
-      },
-      set(handler) {
-        for (const listener of this.listeners(method)) {
-          if (listener[kForOnEventAttribute]) {
-            this.removeListener(method, listener);
-            break;
-          }
-        }
-        if (typeof handler !== "function")
-          return;
-        this.addEventListener(method, handler, {
-          [kForOnEventAttribute]: true
-        });
-      }
-    });
-  });
-  WebSocket.prototype.addEventListener = addEventListener;
-  WebSocket.prototype.removeEventListener = removeEventListener;
-  module.exports = WebSocket;
-  function initAsClient(websocket, address, protocols, options) {
-    const opts = {
-      allowSynchronousEvents: true,
-      autoPong: true,
-      protocolVersion: protocolVersions[1],
-      maxPayload: 100 * 1024 * 1024,
-      skipUTF8Validation: false,
-      perMessageDeflate: true,
-      followRedirects: false,
-      maxRedirects: 10,
-      ...options,
-      socketPath: undefined,
-      hostname: undefined,
-      protocol: undefined,
-      timeout: undefined,
-      method: "GET",
-      host: undefined,
-      path: undefined,
-      port: undefined
-    };
-    websocket._autoPong = opts.autoPong;
-    if (!protocolVersions.includes(opts.protocolVersion)) {
-      throw new RangeError(`Unsupported protocol version: ${opts.protocolVersion} ` + `(supported versions: ${protocolVersions.join(", ")})`);
-    }
-    let parsedUrl;
-    if (address instanceof URL2) {
-      parsedUrl = address;
-    } else {
-      try {
-        parsedUrl = new URL2(address);
-      } catch (e) {
-        throw new SyntaxError(`Invalid URL: ${address}`);
-      }
-    }
-    if (parsedUrl.protocol === "http:") {
-      parsedUrl.protocol = "ws:";
-    } else if (parsedUrl.protocol === "https:") {
-      parsedUrl.protocol = "wss:";
-    }
-    websocket._url = parsedUrl.href;
-    const isSecure = parsedUrl.protocol === "wss:";
-    const isIpcUrl = parsedUrl.protocol === "ws+unix:";
-    let invalidUrlMessage;
-    if (parsedUrl.protocol !== "ws:" && !isSecure && !isIpcUrl) {
-      invalidUrlMessage = 'The URL\'s protocol must be one of "ws:", "wss:", ' + '"http:", "https", or "ws+unix:"';
-    } else if (isIpcUrl && !parsedUrl.pathname) {
-      invalidUrlMessage = "The URL's pathname is empty";
-    } else if (parsedUrl.hash) {
-      invalidUrlMessage = "The URL contains a fragment identifier";
-    }
-    if (invalidUrlMessage) {
-      const err = new SyntaxError(invalidUrlMessage);
-      if (websocket._redirects === 0) {
-        throw err;
-      } else {
-        emitErrorAndClose(websocket, err);
-        return;
-      }
-    }
-    const defaultPort = isSecure ? 443 : 80;
-    const key = randomBytes(16).toString("base64");
-    const request = isSecure ? https.request : http.request;
-    const protocolSet = new Set;
-    let perMessageDeflate;
-    opts.createConnection = opts.createConnection || (isSecure ? tlsConnect : netConnect);
-    opts.defaultPort = opts.defaultPort || defaultPort;
-    opts.port = parsedUrl.port || defaultPort;
-    opts.host = parsedUrl.hostname.startsWith("[") ? parsedUrl.hostname.slice(1, -1) : parsedUrl.hostname;
-    opts.headers = {
-      ...opts.headers,
-      "Sec-WebSocket-Version": opts.protocolVersion,
-      "Sec-WebSocket-Key": key,
-      Connection: "Upgrade",
-      Upgrade: "websocket"
-    };
-    opts.path = parsedUrl.pathname + parsedUrl.search;
-    opts.timeout = opts.handshakeTimeout;
-    if (opts.perMessageDeflate) {
-      perMessageDeflate = new PerMessageDeflate(opts.perMessageDeflate !== true ? opts.perMessageDeflate : {}, false, opts.maxPayload);
-      opts.headers["Sec-WebSocket-Extensions"] = format({
-        [PerMessageDeflate.extensionName]: perMessageDeflate.offer()
-      });
-    }
-    if (protocols.length) {
-      for (const protocol of protocols) {
-        if (typeof protocol !== "string" || !subprotocolRegex.test(protocol) || protocolSet.has(protocol)) {
-          throw new SyntaxError("An invalid or duplicated subprotocol was specified");
-        }
-        protocolSet.add(protocol);
-      }
-      opts.headers["Sec-WebSocket-Protocol"] = protocols.join(",");
-    }
-    if (opts.origin) {
-      if (opts.protocolVersion < 13) {
-        opts.headers["Sec-WebSocket-Origin"] = opts.origin;
-      } else {
-        opts.headers.Origin = opts.origin;
-      }
-    }
-    if (parsedUrl.username || parsedUrl.password) {
-      opts.auth = `${parsedUrl.username}:${parsedUrl.password}`;
-    }
-    if (isIpcUrl) {
-      const parts = opts.path.split(":");
-      opts.socketPath = parts[0];
-      opts.path = parts[1];
-    }
-    let req;
-    if (opts.followRedirects) {
-      if (websocket._redirects === 0) {
-        websocket._originalIpc = isIpcUrl;
-        websocket._originalSecure = isSecure;
-        websocket._originalHostOrSocketPath = isIpcUrl ? opts.socketPath : parsedUrl.host;
-        const headers = options && options.headers;
-        options = { ...options, headers: {} };
-        if (headers) {
-          for (const [key2, value] of Object.entries(headers)) {
-            options.headers[key2.toLowerCase()] = value;
-          }
-        }
-      } else if (websocket.listenerCount("redirect") === 0) {
-        const isSameHost = isIpcUrl ? websocket._originalIpc ? opts.socketPath === websocket._originalHostOrSocketPath : false : websocket._originalIpc ? false : parsedUrl.host === websocket._originalHostOrSocketPath;
-        if (!isSameHost || websocket._originalSecure && !isSecure) {
-          delete opts.headers.authorization;
-          delete opts.headers.cookie;
-          if (!isSameHost)
-            delete opts.headers.host;
-          opts.auth = undefined;
-        }
-      }
-      if (opts.auth && !options.headers.authorization) {
-        options.headers.authorization = "Basic " + Buffer.from(opts.auth).toString("base64");
-      }
-      req = websocket._req = request(opts);
-      if (websocket._redirects) {
-        websocket.emit("redirect", websocket.url, req);
-      }
-    } else {
-      req = websocket._req = request(opts);
-    }
-    if (opts.timeout) {
-      req.on("timeout", () => {
-        abortHandshake(websocket, req, "Opening handshake has timed out");
-      });
-    }
-    req.on("error", (err) => {
-      if (req === null || req[kAborted])
-        return;
-      req = websocket._req = null;
-      emitErrorAndClose(websocket, err);
-    });
-    req.on("response", (res) => {
-      const location = res.headers.location;
-      const statusCode = res.statusCode;
-      if (location && opts.followRedirects && statusCode >= 300 && statusCode < 400) {
-        if (++websocket._redirects > opts.maxRedirects) {
-          abortHandshake(websocket, req, "Maximum redirects exceeded");
-          return;
-        }
-        req.abort();
-        let addr;
-        try {
-          addr = new URL2(location, address);
-        } catch (e) {
-          const err = new SyntaxError(`Invalid URL: ${location}`);
-          emitErrorAndClose(websocket, err);
-          return;
-        }
-        initAsClient(websocket, addr, protocols, options);
-      } else if (!websocket.emit("unexpected-response", req, res)) {
-        abortHandshake(websocket, req, `Unexpected server response: ${res.statusCode}`);
-      }
-    });
-    req.on("upgrade", (res, socket, head) => {
-      websocket.emit("upgrade", res);
-      if (websocket.readyState !== WebSocket.CONNECTING)
-        return;
-      req = websocket._req = null;
-      const upgrade = res.headers.upgrade;
-      if (upgrade === undefined || upgrade.toLowerCase() !== "websocket") {
-        abortHandshake(websocket, socket, "Invalid Upgrade header");
-        return;
-      }
-      const digest = createHash("sha1").update(key + GUID).digest("base64");
-      if (res.headers["sec-websocket-accept"] !== digest) {
-        abortHandshake(websocket, socket, "Invalid Sec-WebSocket-Accept header");
-        return;
-      }
-      const serverProt = res.headers["sec-websocket-protocol"];
-      let protError;
-      if (serverProt !== undefined) {
-        if (!protocolSet.size) {
-          protError = "Server sent a subprotocol but none was requested";
-        } else if (!protocolSet.has(serverProt)) {
-          protError = "Server sent an invalid subprotocol";
-        }
-      } else if (protocolSet.size) {
-        protError = "Server sent no subprotocol";
-      }
-      if (protError) {
-        abortHandshake(websocket, socket, protError);
-        return;
-      }
-      if (serverProt)
-        websocket._protocol = serverProt;
-      const secWebSocketExtensions = res.headers["sec-websocket-extensions"];
-      if (secWebSocketExtensions !== undefined) {
-        if (!perMessageDeflate) {
-          const message = "Server sent a Sec-WebSocket-Extensions header but no extension " + "was requested";
-          abortHandshake(websocket, socket, message);
-          return;
-        }
-        let extensions;
-        try {
-          extensions = parse(secWebSocketExtensions);
-        } catch (err) {
-          const message = "Invalid Sec-WebSocket-Extensions header";
-          abortHandshake(websocket, socket, message);
-          return;
-        }
-        const extensionNames = Object.keys(extensions);
-        if (extensionNames.length !== 1 || extensionNames[0] !== PerMessageDeflate.extensionName) {
-          const message = "Server indicated an extension that was not requested";
-          abortHandshake(websocket, socket, message);
-          return;
-        }
-        try {
-          perMessageDeflate.accept(extensions[PerMessageDeflate.extensionName]);
-        } catch (err) {
-          const message = "Invalid Sec-WebSocket-Extensions header";
-          abortHandshake(websocket, socket, message);
-          return;
-        }
-        websocket._extensions[PerMessageDeflate.extensionName] = perMessageDeflate;
-      }
-      websocket.setSocket(socket, head, {
-        allowSynchronousEvents: opts.allowSynchronousEvents,
-        generateMask: opts.generateMask,
-        maxPayload: opts.maxPayload,
-        skipUTF8Validation: opts.skipUTF8Validation
-      });
-    });
-    if (opts.finishRequest) {
-      opts.finishRequest(req, websocket);
-    } else {
-      req.end();
-    }
-  }
-  function emitErrorAndClose(websocket, err) {
-    websocket._readyState = WebSocket.CLOSING;
-    websocket._errorEmitted = true;
-    websocket.emit("error", err);
-    websocket.emitClose();
-  }
-  function netConnect(options) {
-    options.path = options.socketPath;
-    return net.connect(options);
-  }
-  function tlsConnect(options) {
-    options.path = undefined;
-    if (!options.servername && options.servername !== "") {
-      options.servername = net.isIP(options.host) ? "" : options.host;
-    }
-    return tls.connect(options);
-  }
-  function abortHandshake(websocket, stream, message) {
-    websocket._readyState = WebSocket.CLOSING;
-    const err = new Error(message);
-    Error.captureStackTrace(err, abortHandshake);
-    if (stream.setHeader) {
-      stream[kAborted] = true;
-      stream.abort();
-      if (stream.socket && !stream.socket.destroyed) {
-        stream.socket.destroy();
-      }
-      process.nextTick(emitErrorAndClose, websocket, err);
-    } else {
-      stream.destroy(err);
-      stream.once("error", websocket.emit.bind(websocket, "error"));
-      stream.once("close", websocket.emitClose.bind(websocket));
-    }
-  }
-  function sendAfterClose(websocket, data, cb) {
-    if (data) {
-      const length = isBlob(data) ? data.size : toBuffer(data).length;
-      if (websocket._socket)
-        websocket._sender._bufferedBytes += length;
-      else
-        websocket._bufferedAmount += length;
-    }
-    if (cb) {
-      const err = new Error(`WebSocket is not open: readyState ${websocket.readyState} ` + `(${readyStates[websocket.readyState]})`);
-      process.nextTick(cb, err);
-    }
-  }
-  function receiverOnConclude(code, reason) {
-    const websocket = this[kWebSocket];
-    websocket._closeFrameReceived = true;
-    websocket._closeMessage = reason;
-    websocket._closeCode = code;
-    if (websocket._socket[kWebSocket] === undefined)
-      return;
-    websocket._socket.removeListener("data", socketOnData);
-    process.nextTick(resume, websocket._socket);
-    if (code === 1005)
-      websocket.close();
-    else
-      websocket.close(code, reason);
-  }
-  function receiverOnDrain() {
-    const websocket = this[kWebSocket];
-    if (!websocket.isPaused)
-      websocket._socket.resume();
-  }
-  function receiverOnError(err) {
-    const websocket = this[kWebSocket];
-    if (websocket._socket[kWebSocket] !== undefined) {
-      websocket._socket.removeListener("data", socketOnData);
-      process.nextTick(resume, websocket._socket);
-      websocket.close(err[kStatusCode]);
-    }
-    if (!websocket._errorEmitted) {
-      websocket._errorEmitted = true;
-      websocket.emit("error", err);
-    }
-  }
-  function receiverOnFinish() {
-    this[kWebSocket].emitClose();
-  }
-  function receiverOnMessage(data, isBinary) {
-    this[kWebSocket].emit("message", data, isBinary);
-  }
-  function receiverOnPing(data) {
-    const websocket = this[kWebSocket];
-    if (websocket._autoPong)
-      websocket.pong(data, !this._isServer, NOOP);
-    websocket.emit("ping", data);
-  }
-  function receiverOnPong(data) {
-    this[kWebSocket].emit("pong", data);
-  }
-  function resume(stream) {
-    stream.resume();
-  }
-  function senderOnError(err) {
-    const websocket = this[kWebSocket];
-    if (websocket.readyState === WebSocket.CLOSED)
-      return;
-    if (websocket.readyState === WebSocket.OPEN) {
-      websocket._readyState = WebSocket.CLOSING;
-      setCloseTimer(websocket);
-    }
-    this._socket.end();
-    if (!websocket._errorEmitted) {
-      websocket._errorEmitted = true;
-      websocket.emit("error", err);
-    }
-  }
-  function setCloseTimer(websocket) {
-    websocket._closeTimer = setTimeout(websocket._socket.destroy.bind(websocket._socket), closeTimeout);
-  }
-  function socketOnClose() {
-    const websocket = this[kWebSocket];
-    this.removeListener("close", socketOnClose);
-    this.removeListener("data", socketOnData);
-    this.removeListener("end", socketOnEnd);
-    websocket._readyState = WebSocket.CLOSING;
-    let chunk;
-    if (!this._readableState.endEmitted && !websocket._closeFrameReceived && !websocket._receiver._writableState.errorEmitted && (chunk = websocket._socket.read()) !== null) {
-      websocket._receiver.write(chunk);
-    }
-    websocket._receiver.end();
-    this[kWebSocket] = undefined;
-    clearTimeout(websocket._closeTimer);
-    if (websocket._receiver._writableState.finished || websocket._receiver._writableState.errorEmitted) {
-      websocket.emitClose();
-    } else {
-      websocket._receiver.on("error", receiverOnFinish);
-      websocket._receiver.on("finish", receiverOnFinish);
-    }
-  }
-  function socketOnData(chunk) {
-    if (!this[kWebSocket]._receiver.write(chunk)) {
-      this.pause();
-    }
-  }
-  function socketOnEnd() {
-    const websocket = this[kWebSocket];
-    websocket._readyState = WebSocket.CLOSING;
-    websocket._receiver.end();
-    this.end();
-  }
-  function socketOnError() {
-    const websocket = this[kWebSocket];
-    this.removeListener("error", socketOnError);
-    this.on("error", NOOP);
-    if (websocket) {
-      websocket._readyState = WebSocket.CLOSING;
-      this.destroy();
-    }
-  }
-});
-
-// node_modules/ws/lib/stream.js
-var require_stream = __commonJS((exports, module) => {
-  var { Duplex } = __require("stream");
-  function emitClose(stream) {
-    stream.emit("close");
-  }
-  function duplexOnEnd() {
-    if (!this.destroyed && this._writableState.finished) {
-      this.destroy();
-    }
-  }
-  function duplexOnError(err) {
-    this.removeListener("error", duplexOnError);
-    this.destroy();
-    if (this.listenerCount("error") === 0) {
-      this.emit("error", err);
-    }
-  }
-  function createWebSocketStream(ws, options) {
-    let terminateOnDestroy = true;
-    const duplex = new Duplex({
-      ...options,
-      autoDestroy: false,
-      emitClose: false,
-      objectMode: false,
-      writableObjectMode: false
-    });
-    ws.on("message", function message(msg, isBinary) {
-      const data = !isBinary && duplex._readableState.objectMode ? msg.toString() : msg;
-      if (!duplex.push(data))
-        ws.pause();
-    });
-    ws.once("error", function error(err) {
-      if (duplex.destroyed)
-        return;
-      terminateOnDestroy = false;
-      duplex.destroy(err);
-    });
-    ws.once("close", function close() {
-      if (duplex.destroyed)
-        return;
-      duplex.push(null);
-    });
-    duplex._destroy = function(err, callback) {
-      if (ws.readyState === ws.CLOSED) {
-        callback(err);
-        process.nextTick(emitClose, duplex);
-        return;
-      }
-      let called = false;
-      ws.once("error", function error(err2) {
-        called = true;
-        callback(err2);
-      });
-      ws.once("close", function close() {
-        if (!called)
-          callback(err);
-        process.nextTick(emitClose, duplex);
-      });
-      if (terminateOnDestroy)
-        ws.terminate();
-    };
-    duplex._final = function(callback) {
-      if (ws.readyState === ws.CONNECTING) {
-        ws.once("open", function open() {
-          duplex._final(callback);
-        });
-        return;
-      }
-      if (ws._socket === null)
-        return;
-      if (ws._socket._writableState.finished) {
-        callback();
-        if (duplex._readableState.endEmitted)
-          duplex.destroy();
-      } else {
-        ws._socket.once("finish", function finish() {
-          callback();
-        });
-        ws.close();
-      }
-    };
-    duplex._read = function() {
-      if (ws.isPaused)
-        ws.resume();
-    };
-    duplex._write = function(chunk, encoding, callback) {
-      if (ws.readyState === ws.CONNECTING) {
-        ws.once("open", function open() {
-          duplex._write(chunk, encoding, callback);
-        });
-        return;
-      }
-      ws.send(chunk, callback);
-    };
-    duplex.on("end", duplexOnEnd);
-    duplex.on("error", duplexOnError);
-    return duplex;
-  }
-  module.exports = createWebSocketStream;
-});
-
-// node_modules/ws/lib/subprotocol.js
-var require_subprotocol = __commonJS((exports, module) => {
-  var { tokenChars } = require_validation();
-  function parse(header) {
-    const protocols = new Set;
-    let start = -1;
-    let end = -1;
-    let i = 0;
-    for (i;i < header.length; i++) {
-      const code = header.charCodeAt(i);
-      if (end === -1 && tokenChars[code] === 1) {
-        if (start === -1)
-          start = i;
-      } else if (i !== 0 && (code === 32 || code === 9)) {
-        if (end === -1 && start !== -1)
-          end = i;
-      } else if (code === 44) {
-        if (start === -1) {
-          throw new SyntaxError(`Unexpected character at index ${i}`);
-        }
-        if (end === -1)
-          end = i;
-        const protocol2 = header.slice(start, end);
-        if (protocols.has(protocol2)) {
-          throw new SyntaxError(`The "${protocol2}" subprotocol is duplicated`);
-        }
-        protocols.add(protocol2);
-        start = end = -1;
-      } else {
-        throw new SyntaxError(`Unexpected character at index ${i}`);
-      }
-    }
-    if (start === -1 || end !== -1) {
-      throw new SyntaxError("Unexpected end of input");
-    }
-    const protocol = header.slice(start, i);
-    if (protocols.has(protocol)) {
-      throw new SyntaxError(`The "${protocol}" subprotocol is duplicated`);
-    }
-    protocols.add(protocol);
-    return protocols;
-  }
-  module.exports = { parse };
-});
-
-// node_modules/ws/lib/websocket-server.js
-var require_websocket_server = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
-  var http = __require("http");
-  var { Duplex } = __require("stream");
-  var { createHash } = __require("crypto");
-  var extension = require_extension();
-  var PerMessageDeflate = require_permessage_deflate2();
-  var subprotocol = require_subprotocol();
-  var WebSocket = require_websocket2();
-  var { GUID, kWebSocket } = require_constants6();
-  var keyRegex = /^[+/0-9A-Za-z]{22}==$/;
-  var RUNNING = 0;
-  var CLOSING = 1;
-  var CLOSED = 2;
-
-  class WebSocketServer extends EventEmitter {
-    constructor(options, callback) {
-      super();
-      options = {
-        allowSynchronousEvents: true,
-        autoPong: true,
-        maxPayload: 100 * 1024 * 1024,
-        skipUTF8Validation: false,
-        perMessageDeflate: false,
-        handleProtocols: null,
-        clientTracking: true,
-        verifyClient: null,
-        noServer: false,
-        backlog: null,
-        server: null,
-        host: null,
-        path: null,
-        port: null,
-        WebSocket,
-        ...options
-      };
-      if (options.port == null && !options.server && !options.noServer || options.port != null && (options.server || options.noServer) || options.server && options.noServer) {
-        throw new TypeError('One and only one of the "port", "server", or "noServer" options ' + "must be specified");
-      }
-      if (options.port != null) {
-        this._server = http.createServer((req, res) => {
-          const body = http.STATUS_CODES[426];
-          res.writeHead(426, {
-            "Content-Length": body.length,
-            "Content-Type": "text/plain"
-          });
-          res.end(body);
-        });
-        this._server.listen(options.port, options.host, options.backlog, callback);
-      } else if (options.server) {
-        this._server = options.server;
-      }
-      if (this._server) {
-        const emitConnection = this.emit.bind(this, "connection");
-        this._removeListeners = addListeners(this._server, {
-          listening: this.emit.bind(this, "listening"),
-          error: this.emit.bind(this, "error"),
-          upgrade: (req, socket, head) => {
-            this.handleUpgrade(req, socket, head, emitConnection);
-          }
-        });
-      }
-      if (options.perMessageDeflate === true)
-        options.perMessageDeflate = {};
-      if (options.clientTracking) {
-        this.clients = new Set;
-        this._shouldEmitClose = false;
-      }
-      this.options = options;
-      this._state = RUNNING;
-    }
-    address() {
-      if (this.options.noServer) {
-        throw new Error('The server is operating in "noServer" mode');
-      }
-      if (!this._server)
-        return null;
-      return this._server.address();
-    }
-    close(cb) {
-      if (this._state === CLOSED) {
-        if (cb) {
-          this.once("close", () => {
-            cb(new Error("The server is not running"));
-          });
-        }
-        process.nextTick(emitClose, this);
-        return;
-      }
-      if (cb)
-        this.once("close", cb);
-      if (this._state === CLOSING)
-        return;
-      this._state = CLOSING;
-      if (this.options.noServer || this.options.server) {
-        if (this._server) {
-          this._removeListeners();
-          this._removeListeners = this._server = null;
-        }
-        if (this.clients) {
-          if (!this.clients.size) {
-            process.nextTick(emitClose, this);
-          } else {
-            this._shouldEmitClose = true;
-          }
-        } else {
-          process.nextTick(emitClose, this);
-        }
-      } else {
-        const server = this._server;
-        this._removeListeners();
-        this._removeListeners = this._server = null;
-        server.close(() => {
-          emitClose(this);
-        });
-      }
-    }
-    shouldHandle(req) {
-      if (this.options.path) {
-        const index = req.url.indexOf("?");
-        const pathname = index !== -1 ? req.url.slice(0, index) : req.url;
-        if (pathname !== this.options.path)
-          return false;
-      }
-      return true;
-    }
-    handleUpgrade(req, socket, head, cb) {
-      socket.on("error", socketOnError);
-      const key = req.headers["sec-websocket-key"];
-      const upgrade = req.headers.upgrade;
-      const version = +req.headers["sec-websocket-version"];
-      if (req.method !== "GET") {
-        const message = "Invalid HTTP method";
-        abortHandshakeOrEmitwsClientError(this, req, socket, 405, message);
-        return;
-      }
-      if (upgrade === undefined || upgrade.toLowerCase() !== "websocket") {
-        const message = "Invalid Upgrade header";
-        abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
-        return;
-      }
-      if (key === undefined || !keyRegex.test(key)) {
-        const message = "Missing or invalid Sec-WebSocket-Key header";
-        abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
-        return;
-      }
-      if (version !== 8 && version !== 13) {
-        const message = "Missing or invalid Sec-WebSocket-Version header";
-        abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
-        return;
-      }
-      if (!this.shouldHandle(req)) {
-        abortHandshake(socket, 400);
-        return;
-      }
-      const secWebSocketProtocol = req.headers["sec-websocket-protocol"];
-      let protocols = new Set;
-      if (secWebSocketProtocol !== undefined) {
-        try {
-          protocols = subprotocol.parse(secWebSocketProtocol);
-        } catch (err) {
-          const message = "Invalid Sec-WebSocket-Protocol header";
-          abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
-          return;
-        }
-      }
-      const secWebSocketExtensions = req.headers["sec-websocket-extensions"];
-      const extensions = {};
-      if (this.options.perMessageDeflate && secWebSocketExtensions !== undefined) {
-        const perMessageDeflate = new PerMessageDeflate(this.options.perMessageDeflate, true, this.options.maxPayload);
-        try {
-          const offers = extension.parse(secWebSocketExtensions);
-          if (offers[PerMessageDeflate.extensionName]) {
-            perMessageDeflate.accept(offers[PerMessageDeflate.extensionName]);
-            extensions[PerMessageDeflate.extensionName] = perMessageDeflate;
-          }
-        } catch (err) {
-          const message = "Invalid or unacceptable Sec-WebSocket-Extensions header";
-          abortHandshakeOrEmitwsClientError(this, req, socket, 400, message);
-          return;
-        }
-      }
-      if (this.options.verifyClient) {
-        const info = {
-          origin: req.headers[`${version === 8 ? "sec-websocket-origin" : "origin"}`],
-          secure: !!(req.socket.authorized || req.socket.encrypted),
-          req
-        };
-        if (this.options.verifyClient.length === 2) {
-          this.options.verifyClient(info, (verified, code, message, headers) => {
-            if (!verified) {
-              return abortHandshake(socket, code || 401, message, headers);
-            }
-            this.completeUpgrade(extensions, key, protocols, req, socket, head, cb);
-          });
-          return;
-        }
-        if (!this.options.verifyClient(info))
-          return abortHandshake(socket, 401);
-      }
-      this.completeUpgrade(extensions, key, protocols, req, socket, head, cb);
-    }
-    completeUpgrade(extensions, key, protocols, req, socket, head, cb) {
-      if (!socket.readable || !socket.writable)
-        return socket.destroy();
-      if (socket[kWebSocket]) {
-        throw new Error("server.handleUpgrade() was called more than once with the same " + "socket, possibly due to a misconfiguration");
-      }
-      if (this._state > RUNNING)
-        return abortHandshake(socket, 503);
-      const digest = createHash("sha1").update(key + GUID).digest("base64");
-      const headers = [
-        "HTTP/1.1 101 Switching Protocols",
-        "Upgrade: websocket",
-        "Connection: Upgrade",
-        `Sec-WebSocket-Accept: ${digest}`
-      ];
-      const ws = new this.options.WebSocket(null, undefined, this.options);
-      if (protocols.size) {
-        const protocol = this.options.handleProtocols ? this.options.handleProtocols(protocols, req) : protocols.values().next().value;
-        if (protocol) {
-          headers.push(`Sec-WebSocket-Protocol: ${protocol}`);
-          ws._protocol = protocol;
-        }
-      }
-      if (extensions[PerMessageDeflate.extensionName]) {
-        const params = extensions[PerMessageDeflate.extensionName].params;
-        const value = extension.format({
-          [PerMessageDeflate.extensionName]: [params]
-        });
-        headers.push(`Sec-WebSocket-Extensions: ${value}`);
-        ws._extensions = extensions;
-      }
-      this.emit("headers", headers, req);
-      socket.write(headers.concat("\r\n").join("\r\n"));
-      socket.removeListener("error", socketOnError);
-      ws.setSocket(socket, head, {
-        allowSynchronousEvents: this.options.allowSynchronousEvents,
-        maxPayload: this.options.maxPayload,
-        skipUTF8Validation: this.options.skipUTF8Validation
-      });
-      if (this.clients) {
-        this.clients.add(ws);
-        ws.on("close", () => {
-          this.clients.delete(ws);
-          if (this._shouldEmitClose && !this.clients.size) {
-            process.nextTick(emitClose, this);
-          }
-        });
-      }
-      cb(ws, req);
-    }
-  }
-  module.exports = WebSocketServer;
-  function addListeners(server, map) {
-    for (const event of Object.keys(map))
-      server.on(event, map[event]);
-    return function removeListeners() {
-      for (const event of Object.keys(map)) {
-        server.removeListener(event, map[event]);
-      }
-    };
-  }
-  function emitClose(server) {
-    server._state = CLOSED;
-    server.emit("close");
-  }
-  function socketOnError() {
-    this.destroy();
-  }
-  function abortHandshake(socket, code, message, headers) {
-    message = message || http.STATUS_CODES[code];
-    headers = {
-      Connection: "close",
-      "Content-Type": "text/html",
-      "Content-Length": Buffer.byteLength(message),
-      ...headers
-    };
-    socket.once("finish", socket.destroy);
-    socket.end(`HTTP/1.1 ${code} ${http.STATUS_CODES[code]}\r\n` + Object.keys(headers).map((h) => `${h}: ${headers[h]}`).join("\r\n") + "\r\n\r\n" + message);
-  }
-  function abortHandshakeOrEmitwsClientError(server, req, socket, code, message) {
-    if (server.listenerCount("wsClientError")) {
-      const err = new Error(message);
-      Error.captureStackTrace(err, abortHandshakeOrEmitwsClientError);
-      server.emit("wsClientError", err, socket, req);
-    } else {
-      abortHandshake(socket, code, message);
-    }
-  }
-});
-
-// node_modules/ws/index.js
-var require_ws = __commonJS((exports, module) => {
-  var WebSocket = require_websocket2();
-  WebSocket.createWebSocketStream = require_stream();
-  WebSocket.Server = require_websocket_server();
-  WebSocket.Receiver = require_receiver2();
-  WebSocket.Sender = require_sender2();
-  WebSocket.WebSocket = WebSocket;
-  WebSocket.WebSocketServer = WebSocket.Server;
-  module.exports = WebSocket;
-});
-
-// node_modules/@discordjs/ws/dist/index.js
-var require_dist10 = __commonJS((exports, module) => {
-  var __dirname = "C:\\Code\\Base\\Javascript-Typescript\\Templates\\Discord Bot\\node_modules\\@discordjs\\ws\\dist";
-  var __create2 = Object.create;
-  var __defProp2 = Object.defineProperty;
-  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-  var __getOwnPropNames2 = Object.getOwnPropertyNames;
-  var __getProtoOf2 = Object.getPrototypeOf;
-  var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-  var __name = (target, value) => __defProp2(target, "name", { value, configurable: true });
-  var __export = (target, all) => {
-    for (var name in all)
-      __defProp2(target, name, { get: all[name], enumerable: true });
-  };
-  var __copyProps = (to, from, except, desc) => {
-    if (from && typeof from === "object" || typeof from === "function") {
-      for (let key of __getOwnPropNames2(from))
-        if (!__hasOwnProp2.call(to, key) && key !== except)
-          __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-    }
-    return to;
-  };
-  var __toESM2 = (mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target, mod));
-  var __toCommonJS = (mod) => __copyProps(__defProp2({}, "__esModule", { value: true }), mod);
-  var src_exports = {};
-  __export(src_exports, {
-    CloseCodes: () => CloseCodes,
-    CompressionMethod: () => CompressionMethod,
-    DefaultDeviceProperty: () => DefaultDeviceProperty,
-    DefaultWebSocketManagerOptions: () => DefaultWebSocketManagerOptions,
-    Encoding: () => Encoding,
-    ImportantGatewayOpcodes: () => ImportantGatewayOpcodes,
-    SimpleContextFetchingStrategy: () => SimpleContextFetchingStrategy,
-    SimpleIdentifyThrottler: () => SimpleIdentifyThrottler,
-    SimpleShardingStrategy: () => SimpleShardingStrategy,
-    WebSocketManager: () => WebSocketManager,
-    WebSocketShard: () => WebSocketShard,
-    WebSocketShardDestroyRecovery: () => WebSocketShardDestroyRecovery,
-    WebSocketShardEvents: () => WebSocketShardEvents,
-    WebSocketShardStatus: () => WebSocketShardStatus,
-    WorkerBootstrapper: () => WorkerBootstrapper,
-    WorkerContextFetchingStrategy: () => WorkerContextFetchingStrategy,
-    WorkerReceivePayloadOp: () => WorkerReceivePayloadOp,
-    WorkerSendPayloadOp: () => WorkerSendPayloadOp,
-    WorkerShardingStrategy: () => WorkerShardingStrategy,
-    getInitialSendRateLimitState: () => getInitialSendRateLimitState,
-    managerToFetchingStrategyOptions: () => managerToFetchingStrategyOptions,
-    version: () => version
-  });
-  module.exports = __toCommonJS(src_exports);
-  async function managerToFetchingStrategyOptions(manager) {
-    const {
-      buildIdentifyThrottler,
-      buildStrategy,
-      retrieveSessionInfo,
-      updateSessionInfo,
-      shardCount,
-      shardIds,
-      rest,
-      ...managerOptions
-    } = manager.options;
-    return {
-      ...managerOptions,
-      gatewayInformation: await manager.fetchGatewayInformation(),
-      shardCount: await manager.getShardCount()
-    };
-  }
-  __name(managerToFetchingStrategyOptions, "managerToFetchingStrategyOptions");
-  var SimpleContextFetchingStrategy = class _SimpleContextFetchingStrategy {
-    constructor(manager, options) {
-      this.manager = manager;
-      this.options = options;
-    }
-    static {
-      __name(this, "SimpleContextFetchingStrategy");
-    }
-    static throttlerCache = /* @__PURE__ */ new WeakMap;
-    static async ensureThrottler(manager) {
-      const throttler = _SimpleContextFetchingStrategy.throttlerCache.get(manager);
-      if (throttler) {
-        return throttler;
-      }
-      const newThrottler = await manager.options.buildIdentifyThrottler(manager);
-      _SimpleContextFetchingStrategy.throttlerCache.set(manager, newThrottler);
-      return newThrottler;
-    }
-    async retrieveSessionInfo(shardId) {
-      return this.manager.options.retrieveSessionInfo(shardId);
-    }
-    updateSessionInfo(shardId, sessionInfo) {
-      return this.manager.options.updateSessionInfo(shardId, sessionInfo);
-    }
-    async waitForIdentify(shardId, signal) {
-      const throttler = await _SimpleContextFetchingStrategy.ensureThrottler(this.manager);
-      await throttler.waitForIdentify(shardId, signal);
-    }
-  };
-  var import_node_worker_threads2 = __require("worker_threads");
-  var import_collection2 = require_dist9();
-  var import_node_events = __require("events");
-  var import_node_path = __require("path");
-  var import_node_worker_threads = __require("worker_threads");
-  var import_collection = require_dist9();
-  var WorkerSendPayloadOp = /* @__PURE__ */ ((WorkerSendPayloadOp2) => {
-    WorkerSendPayloadOp2[WorkerSendPayloadOp2["Connect"] = 0] = "Connect";
-    WorkerSendPayloadOp2[WorkerSendPayloadOp2["Destroy"] = 1] = "Destroy";
-    WorkerSendPayloadOp2[WorkerSendPayloadOp2["Send"] = 2] = "Send";
-    WorkerSendPayloadOp2[WorkerSendPayloadOp2["SessionInfoResponse"] = 3] = "SessionInfoResponse";
-    WorkerSendPayloadOp2[WorkerSendPayloadOp2["ShardIdentifyResponse"] = 4] = "ShardIdentifyResponse";
-    WorkerSendPayloadOp2[WorkerSendPayloadOp2["FetchStatus"] = 5] = "FetchStatus";
-    return WorkerSendPayloadOp2;
-  })(WorkerSendPayloadOp || {});
-  var WorkerReceivePayloadOp = /* @__PURE__ */ ((WorkerReceivePayloadOp2) => {
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["Connected"] = 0] = "Connected";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["Destroyed"] = 1] = "Destroyed";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["Event"] = 2] = "Event";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["RetrieveSessionInfo"] = 3] = "RetrieveSessionInfo";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["UpdateSessionInfo"] = 4] = "UpdateSessionInfo";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["WaitForIdentify"] = 5] = "WaitForIdentify";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["FetchStatusResponse"] = 6] = "FetchStatusResponse";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["WorkerReady"] = 7] = "WorkerReady";
-    WorkerReceivePayloadOp2[WorkerReceivePayloadOp2["CancelIdentify"] = 8] = "CancelIdentify";
-    return WorkerReceivePayloadOp2;
-  })(WorkerReceivePayloadOp || {});
-  var WorkerShardingStrategy = class {
-    static {
-      __name(this, "WorkerShardingStrategy");
-    }
-    manager;
-    options;
-    #workers = [];
-    #workerByShardId = new import_collection.Collection;
-    connectPromises = new import_collection.Collection;
-    destroyPromises = new import_collection.Collection;
-    fetchStatusPromises = new import_collection.Collection;
-    waitForIdentifyControllers = new import_collection.Collection;
-    throttler;
-    constructor(manager, options) {
-      this.manager = manager;
-      this.options = options;
-    }
-    async spawn(shardIds) {
-      const shardsPerWorker = this.options.shardsPerWorker === "all" ? shardIds.length : this.options.shardsPerWorker;
-      const strategyOptions = await managerToFetchingStrategyOptions(this.manager);
-      const loops = Math.ceil(shardIds.length / shardsPerWorker);
-      const promises = [];
-      for (let idx = 0;idx < loops; idx++) {
-        const slice = shardIds.slice(idx * shardsPerWorker, (idx + 1) * shardsPerWorker);
-        const workerData2 = {
-          ...strategyOptions,
-          shardIds: slice
-        };
-        promises.push(this.setupWorker(workerData2));
-      }
-      await Promise.all(promises);
-    }
-    async connect() {
-      const promises = [];
-      for (const [shardId, worker] of this.#workerByShardId.entries()) {
-        const payload = {
-          op: 0,
-          shardId
-        };
-        const promise = new Promise((resolve2) => this.connectPromises.set(shardId, resolve2));
-        worker.postMessage(payload);
-        promises.push(promise);
-      }
-      await Promise.all(promises);
-    }
-    async destroy(options = {}) {
-      const promises = [];
-      for (const [shardId, worker] of this.#workerByShardId.entries()) {
-        const payload = {
-          op: 1,
-          shardId,
-          options
-        };
-        promises.push(new Promise((resolve2) => this.destroyPromises.set(shardId, resolve2)).then(async () => worker.terminate()));
-        worker.postMessage(payload);
-      }
-      this.#workers = [];
-      this.#workerByShardId.clear();
-      await Promise.all(promises);
-    }
-    send(shardId, data) {
-      const worker = this.#workerByShardId.get(shardId);
-      if (!worker) {
-        throw new Error(`No worker found for shard ${shardId}`);
-      }
-      const payload = {
-        op: 2,
-        shardId,
-        payload: data
-      };
-      worker.postMessage(payload);
-    }
-    async fetchStatus() {
-      const statuses = new import_collection.Collection;
-      for (const [shardId, worker] of this.#workerByShardId.entries()) {
-        const nonce = Math.random();
-        const payload = {
-          op: 5,
-          shardId,
-          nonce
-        };
-        const promise = new Promise((resolve2) => this.fetchStatusPromises.set(nonce, resolve2));
-        worker.postMessage(payload);
-        const status = await promise;
-        statuses.set(shardId, status);
-      }
-      return statuses;
-    }
-    async setupWorker(workerData2) {
-      const worker = new import_node_worker_threads.Worker(this.resolveWorkerPath(), { workerData: workerData2 });
-      await (0, import_node_events.once)(worker, "online");
-      await this.waitForWorkerReady(worker);
-      worker.on("error", (err) => {
-        throw err;
-      }).on("messageerror", (err) => {
-        throw err;
-      }).on("message", async (payload) => {
-        if ("op" in payload) {
-          await this.onMessage(worker, payload);
-        } else {
-          await this.options.unknownPayloadHandler?.(payload);
-        }
-      });
-      this.#workers.push(worker);
-      for (const shardId of workerData2.shardIds) {
-        this.#workerByShardId.set(shardId, worker);
-      }
-    }
-    resolveWorkerPath() {
-      const path = this.options.workerPath;
-      if (!path) {
-        return (0, import_node_path.join)(__dirname, "defaultWorker.js");
-      }
-      if ((0, import_node_path.isAbsolute)(path)) {
-        return path;
-      }
-      if (/^\.\.?[/\\]/.test(path)) {
-        return (0, import_node_path.resolve)(path);
-      }
-      try {
-        return __require.resolve(path);
-      } catch {
-        return (0, import_node_path.resolve)(path);
-      }
-    }
-    async waitForWorkerReady(worker) {
-      return new Promise((resolve2) => {
-        const handler = /* @__PURE__ */ __name((payload) => {
-          if (payload.op === 7) {
-            resolve2();
-            worker.off("message", handler);
-          }
-        }, "handler");
-        worker.on("message", handler);
-      });
-    }
-    async onMessage(worker, payload) {
-      switch (payload.op) {
-        case 0: {
-          this.connectPromises.get(payload.shardId)?.();
-          this.connectPromises.delete(payload.shardId);
-          break;
-        }
-        case 1: {
-          this.destroyPromises.get(payload.shardId)?.();
-          this.destroyPromises.delete(payload.shardId);
-          break;
-        }
-        case 2: {
-          this.manager.emit(payload.event, { ...payload.data, shardId: payload.shardId });
-          break;
-        }
-        case 3: {
-          const session = await this.manager.options.retrieveSessionInfo(payload.shardId);
-          const response = {
-            op: 3,
-            nonce: payload.nonce,
-            session
-          };
-          worker.postMessage(response);
-          break;
-        }
-        case 4: {
-          await this.manager.options.updateSessionInfo(payload.shardId, payload.session);
-          break;
-        }
-        case 5: {
-          const throttler = await this.ensureThrottler();
-          try {
-            const controller = new AbortController;
-            this.waitForIdentifyControllers.set(payload.nonce, controller);
-            await throttler.waitForIdentify(payload.shardId, controller.signal);
-          } catch {
-            return;
-          }
-          const response = {
-            op: 4,
-            nonce: payload.nonce,
-            ok: true
-          };
-          worker.postMessage(response);
-          break;
-        }
-        case 6: {
-          this.fetchStatusPromises.get(payload.nonce)?.(payload.status);
-          this.fetchStatusPromises.delete(payload.nonce);
-          break;
-        }
-        case 7: {
-          break;
-        }
-        case 8: {
-          this.waitForIdentifyControllers.get(payload.nonce)?.abort();
-          this.waitForIdentifyControllers.delete(payload.nonce);
-          const response = {
-            op: 4,
-            nonce: payload.nonce,
-            ok: false
-          };
-          worker.postMessage(response);
-          break;
-        }
-        default: {
-          await this.options.unknownPayloadHandler?.(payload);
-          break;
-        }
-      }
-    }
-    async ensureThrottler() {
-      this.throttler ??= await this.manager.options.buildIdentifyThrottler(this.manager);
-      return this.throttler;
-    }
-  };
-  var WorkerContextFetchingStrategy = class {
-    constructor(options) {
-      this.options = options;
-      if (import_node_worker_threads2.isMainThread) {
-        throw new Error("Cannot instantiate WorkerContextFetchingStrategy on the main thread");
-      }
-      import_node_worker_threads2.parentPort.on("message", (payload) => {
-        if (payload.op === 3) {
-          this.sessionPromises.get(payload.nonce)?.(payload.session);
-          this.sessionPromises.delete(payload.nonce);
-        }
-        if (payload.op === 4) {
-          const promise = this.waitForIdentifyPromises.get(payload.nonce);
-          if (payload.ok) {
-            promise?.resolve();
-          } else {
-            promise?.reject(promise.signal.reason);
-          }
-          this.waitForIdentifyPromises.delete(payload.nonce);
-        }
-      });
-    }
-    static {
-      __name(this, "WorkerContextFetchingStrategy");
-    }
-    sessionPromises = new import_collection2.Collection;
-    waitForIdentifyPromises = new import_collection2.Collection;
-    async retrieveSessionInfo(shardId) {
-      const nonce = Math.random();
-      const payload = {
-        op: 3,
-        shardId,
-        nonce
-      };
-      const promise = new Promise((resolve2) => this.sessionPromises.set(nonce, resolve2));
-      import_node_worker_threads2.parentPort.postMessage(payload);
-      return promise;
-    }
-    updateSessionInfo(shardId, sessionInfo) {
-      const payload = {
-        op: 4,
-        shardId,
-        session: sessionInfo
-      };
-      import_node_worker_threads2.parentPort.postMessage(payload);
-    }
-    async waitForIdentify(shardId, signal) {
-      const nonce = Math.random();
-      const payload = {
-        op: 5,
-        nonce,
-        shardId
-      };
-      const promise = new Promise((resolve2, reject) => this.waitForIdentifyPromises.set(nonce, { signal, resolve: resolve2, reject }));
-      import_node_worker_threads2.parentPort.postMessage(payload);
-      const listener = /* @__PURE__ */ __name(() => {
-        const payload2 = {
-          op: 8,
-          nonce
-        };
-        import_node_worker_threads2.parentPort.postMessage(payload2);
-      }, "listener");
-      signal.addEventListener("abort", listener);
-      try {
-        await promise;
-      } finally {
-        signal.removeEventListener("abort", listener);
-      }
-    }
-  };
-  var import_collection6 = require_dist9();
-  var import_node_buffer = __require("buffer");
-  var import_node_events2 = __require("events");
-  var import_node_timers = __require("timers");
-  var import_promises2 = __require("timers/promises");
-  var import_node_url = __require("url");
-  var import_node_util = __require("util");
-  var import_node_zlib = __require("zlib");
-  var import_collection5 = require_dist9();
-  var import_util2 = require_dist();
-  var import_async_queue2 = require_cjs2();
-  var import_async_event_emitter = require_dist3();
-  var import_v102 = require_v1024();
-  var import_ws = require_ws();
-  var import_node_process = __toESM2(__require("process"));
-  var import_collection4 = require_dist9();
-  var import_util = require_dist();
-  var import_v10 = require_v1024();
-  var import_promises = __require("timers/promises");
-  var import_collection3 = require_dist9();
-  var import_async_queue = require_cjs2();
-  var SimpleIdentifyThrottler = class {
-    constructor(maxConcurrency) {
-      this.maxConcurrency = maxConcurrency;
-    }
-    static {
-      __name(this, "SimpleIdentifyThrottler");
-    }
-    states = new import_collection3.Collection;
-    async waitForIdentify(shardId, signal) {
-      const key = shardId % this.maxConcurrency;
-      const state = this.states.ensure(key, () => {
-        return {
-          queue: new import_async_queue.AsyncQueue,
-          resetsAt: Number.POSITIVE_INFINITY
-        };
-      });
-      await state.queue.wait({ signal });
-      try {
-        const diff = state.resetsAt - Date.now();
-        if (diff <= 5000) {
-          const time = diff + Math.random() * 1500;
-          await (0, import_promises.setTimeout)(time);
-        }
-        state.resetsAt = Date.now() + 5000;
-      } finally {
-        state.queue.shift();
-      }
-    }
-  };
-  var Encoding = /* @__PURE__ */ ((Encoding2) => {
-    Encoding2["JSON"] = "json";
-    return Encoding2;
-  })(Encoding || {});
-  var CompressionMethod = /* @__PURE__ */ ((CompressionMethod2) => {
-    CompressionMethod2["ZlibStream"] = "zlib-stream";
-    return CompressionMethod2;
-  })(CompressionMethod || {});
-  var DefaultDeviceProperty = `@discordjs/ws 1.1.1`;
-  var getDefaultSessionStore = (0, import_util.lazy)(() => new import_collection4.Collection);
-  var DefaultWebSocketManagerOptions = {
-    async buildIdentifyThrottler(manager) {
-      const info = await manager.fetchGatewayInformation();
-      return new SimpleIdentifyThrottler(info.session_start_limit.max_concurrency);
-    },
-    buildStrategy: (manager) => new SimpleShardingStrategy(manager),
-    shardCount: null,
-    shardIds: null,
-    largeThreshold: null,
-    initialPresence: null,
-    identifyProperties: {
-      browser: DefaultDeviceProperty,
-      device: DefaultDeviceProperty,
-      os: import_node_process.default.platform
-    },
-    version: import_v10.APIVersion,
-    encoding: "json",
-    compression: null,
-    retrieveSessionInfo(shardId) {
-      const store = getDefaultSessionStore();
-      return store.get(shardId) ?? null;
-    },
-    updateSessionInfo(shardId, info) {
-      const store = getDefaultSessionStore();
-      if (info) {
-        store.set(shardId, info);
-      } else {
-        store.delete(shardId);
-      }
-    },
-    handshakeTimeout: 30000,
-    helloTimeout: 60000,
-    readyTimeout: 15000
-  };
-  var ImportantGatewayOpcodes = /* @__PURE__ */ new Set([
-    import_v10.GatewayOpcodes.Heartbeat,
-    import_v10.GatewayOpcodes.Identify,
-    import_v10.GatewayOpcodes.Resume
-  ]);
-  function getInitialSendRateLimitState() {
-    return {
-      sent: 0,
-      resetAt: Date.now() + 60000
-    };
-  }
-  __name(getInitialSendRateLimitState, "getInitialSendRateLimitState");
-  var getZlibSync = (0, import_util2.lazy)(async () => import("zlib-sync").then((mod) => mod.default).catch(() => null));
-  var WebSocketShardEvents = /* @__PURE__ */ ((WebSocketShardEvents2) => {
-    WebSocketShardEvents2["Closed"] = "closed";
-    WebSocketShardEvents2["Debug"] = "debug";
-    WebSocketShardEvents2["Dispatch"] = "dispatch";
-    WebSocketShardEvents2["Error"] = "error";
-    WebSocketShardEvents2["HeartbeatComplete"] = "heartbeat";
-    WebSocketShardEvents2["Hello"] = "hello";
-    WebSocketShardEvents2["Ready"] = "ready";
-    WebSocketShardEvents2["Resumed"] = "resumed";
-    return WebSocketShardEvents2;
-  })(WebSocketShardEvents || {});
-  var WebSocketShardStatus = /* @__PURE__ */ ((WebSocketShardStatus2) => {
-    WebSocketShardStatus2[WebSocketShardStatus2["Idle"] = 0] = "Idle";
-    WebSocketShardStatus2[WebSocketShardStatus2["Connecting"] = 1] = "Connecting";
-    WebSocketShardStatus2[WebSocketShardStatus2["Resuming"] = 2] = "Resuming";
-    WebSocketShardStatus2[WebSocketShardStatus2["Ready"] = 3] = "Ready";
-    return WebSocketShardStatus2;
-  })(WebSocketShardStatus || {});
-  var WebSocketShardDestroyRecovery = /* @__PURE__ */ ((WebSocketShardDestroyRecovery2) => {
-    WebSocketShardDestroyRecovery2[WebSocketShardDestroyRecovery2["Reconnect"] = 0] = "Reconnect";
-    WebSocketShardDestroyRecovery2[WebSocketShardDestroyRecovery2["Resume"] = 1] = "Resume";
-    return WebSocketShardDestroyRecovery2;
-  })(WebSocketShardDestroyRecovery || {});
-  var CloseCodes = /* @__PURE__ */ ((CloseCodes2) => {
-    CloseCodes2[CloseCodes2["Normal"] = 1000] = "Normal";
-    CloseCodes2[CloseCodes2["Resuming"] = 4200] = "Resuming";
-    return CloseCodes2;
-  })(CloseCodes || {});
-  var WebSocketConstructor = (0, import_util2.shouldUseGlobalFetchAndWebSocket)() ? globalThis.WebSocket : import_ws.WebSocket;
-  var WebSocketShard = class extends import_async_event_emitter.AsyncEventEmitter {
-    static {
-      __name(this, "WebSocketShard");
-    }
-    connection = null;
-    useIdentifyCompress = false;
-    inflate = null;
-    textDecoder = new import_node_util.TextDecoder;
-    replayedEvents = 0;
-    isAck = true;
-    sendRateLimitState = getInitialSendRateLimitState();
-    initialHeartbeatTimeoutController = null;
-    heartbeatInterval = null;
-    lastHeartbeatAt = -1;
-    initialConnectResolved = false;
-    failedToConnectDueToNetworkError = false;
-    sendQueue = new import_async_queue2.AsyncQueue;
-    timeoutAbortControllers = new import_collection5.Collection;
-    strategy;
-    id;
-    #status = 0;
-    get status() {
-      return this.#status;
-    }
-    constructor(strategy, id) {
-      super();
-      this.strategy = strategy;
-      this.id = id;
-    }
-    async connect() {
-      const controller = new AbortController;
-      let promise;
-      if (!this.initialConnectResolved) {
-        promise = Promise.race([
-          (0, import_node_events2.once)(this, "ready", { signal: controller.signal }),
-          (0, import_node_events2.once)(this, "resumed", { signal: controller.signal })
-        ]);
-      }
-      this.internalConnect();
-      try {
-        await promise;
-      } catch ({ error }) {
-        throw error;
-      } finally {
-        controller.abort();
-      }
-      this.initialConnectResolved = true;
-    }
-    async internalConnect() {
-      if (this.#status !== 0) {
-        throw new Error("Tried to connect a shard that wasn't idle");
-      }
-      const { version: version2, encoding, compression } = this.strategy.options;
-      const params = new import_node_url.URLSearchParams({ v: version2, encoding });
-      if (compression) {
-        const zlib = await getZlibSync();
-        if (zlib) {
-          params.append("compress", compression);
-          this.inflate = new zlib.Inflate({
-            chunkSize: 65535,
-            to: "string"
-          });
-        } else if (!this.useIdentifyCompress) {
-          this.useIdentifyCompress = true;
-          console.warn("WebSocketShard: Compression is enabled but zlib-sync is not installed, falling back to identify compress");
-        }
-      }
-      const session = await this.strategy.retrieveSessionInfo(this.id);
-      const url = `${session?.resumeURL ?? this.strategy.options.gatewayInformation.url}?${params.toString()}`;
-      this.debug([`Connecting to ${url}`]);
-      const connection = new WebSocketConstructor(url, [], {
-        handshakeTimeout: this.strategy.options.handshakeTimeout ?? undefined
-      });
-      connection.binaryType = "arraybuffer";
-      connection.onmessage = (event) => {
-        this.onMessage(event.data, event.data instanceof ArrayBuffer);
-      };
-      connection.onerror = (event) => {
-        this.onError(event.error);
-      };
-      connection.onclose = (event) => {
-        this.onClose(event.code);
-      };
-      connection.onopen = () => {
-        this.sendRateLimitState = getInitialSendRateLimitState();
-      };
-      this.connection = connection;
-      this.#status = 1;
-      const { ok } = await this.waitForEvent("hello", this.strategy.options.helloTimeout);
-      if (!ok) {
-        return;
-      }
-      if (session?.shardCount === this.strategy.options.shardCount) {
-        await this.resume(session);
-      } else {
-        await this.identify();
-      }
-    }
-    async destroy(options = {}) {
-      if (this.#status === 0) {
-        this.debug(["Tried to destroy a shard that was idle"]);
-        return;
-      }
-      if (!options.code) {
-        options.code = options.recover === 1 ? 4200 : 1000;
-      }
-      this.debug([
-        "Destroying shard",
-        `Reason: ${options.reason ?? "none"}`,
-        `Code: ${options.code}`,
-        `Recover: ${options.recover === undefined ? "none" : WebSocketShardDestroyRecovery[options.recover]}`
-      ]);
-      this.isAck = true;
-      if (this.heartbeatInterval) {
-        (0, import_node_timers.clearInterval)(this.heartbeatInterval);
-      }
-      if (this.initialHeartbeatTimeoutController) {
-        this.initialHeartbeatTimeoutController.abort();
-        this.initialHeartbeatTimeoutController = null;
-      }
-      this.lastHeartbeatAt = -1;
-      for (const controller of this.timeoutAbortControllers.values()) {
-        controller.abort();
-      }
-      this.timeoutAbortControllers.clear();
-      this.failedToConnectDueToNetworkError = false;
-      if (options.recover !== 1) {
-        await this.strategy.updateSessionInfo(this.id, null);
-      }
-      if (this.connection) {
-        this.connection.onmessage = null;
-        this.connection.onclose = null;
-        const shouldClose = this.connection.readyState === import_ws.WebSocket.OPEN;
-        this.debug([
-          "Connection status during destroy",
-          `Needs closing: ${shouldClose}`,
-          `Ready state: ${this.connection.readyState}`
-        ]);
-        if (shouldClose) {
-          let outerResolve;
-          const promise = new Promise((resolve2) => {
-            outerResolve = resolve2;
-          });
-          this.connection.onclose = outerResolve;
-          this.connection.close(options.code, options.reason);
-          await promise;
-          this.emit("closed", { code: options.code });
-        }
-        this.connection.onerror = null;
-      } else {
-        this.debug(["Destroying a shard that has no connection; please open an issue on GitHub"]);
-      }
-      this.#status = 0;
-      if (options.recover !== undefined) {
-        await (0, import_promises2.setTimeout)(500);
-        return this.internalConnect();
-      }
-    }
-    async waitForEvent(event, timeoutDuration) {
-      this.debug([`Waiting for event ${event} ${timeoutDuration ? `for ${timeoutDuration}ms` : "indefinitely"}`]);
-      const timeoutController = new AbortController;
-      const timeout = timeoutDuration ? (0, import_node_timers.setTimeout)(() => timeoutController.abort(), timeoutDuration).unref() : null;
-      this.timeoutAbortControllers.set(event, timeoutController);
-      const closeController = new AbortController;
-      try {
-        const closed = await Promise.race([
-          (0, import_node_events2.once)(this, event, { signal: timeoutController.signal }).then(() => false),
-          (0, import_node_events2.once)(this, "closed", { signal: closeController.signal }).then(() => true)
-        ]);
-        return { ok: !closed };
-      } catch {
-        this.destroy({
-          code: 1000,
-          reason: "Something timed out or went wrong while waiting for an event",
-          recover: 0
-        });
-        return { ok: false };
-      } finally {
-        if (timeout) {
-          (0, import_node_timers.clearTimeout)(timeout);
-        }
-        this.timeoutAbortControllers.delete(event);
-        if (!closeController.signal.aborted) {
-          closeController.abort();
-        }
-      }
-    }
-    async send(payload) {
-      if (!this.connection) {
-        throw new Error("WebSocketShard wasn't connected");
-      }
-      if (ImportantGatewayOpcodes.has(payload.op)) {
-        this.connection.send(JSON.stringify(payload));
-        return;
-      }
-      if (this.#status !== 3 && !ImportantGatewayOpcodes.has(payload.op)) {
-        this.debug(["Tried to send a non-crucial payload before the shard was ready, waiting"]);
-        try {
-          await (0, import_node_events2.once)(this, "ready");
-        } catch {
-          return this.send(payload);
-        }
-      }
-      await this.sendQueue.wait();
-      const now = Date.now();
-      if (now >= this.sendRateLimitState.resetAt) {
-        this.sendRateLimitState = getInitialSendRateLimitState();
-      }
-      if (this.sendRateLimitState.sent + 1 >= 115) {
-        const sleepFor = this.sendRateLimitState.resetAt - now + Math.random() * 1500;
-        this.debug([`Was about to hit the send rate limit, sleeping for ${sleepFor}ms`]);
-        const controller = new AbortController;
-        const interrupted = await Promise.race([
-          (0, import_promises2.setTimeout)(sleepFor).then(() => false),
-          (0, import_node_events2.once)(this, "closed", { signal: controller.signal }).then(() => true)
-        ]);
-        if (interrupted) {
-          this.debug(["Connection closed while waiting for the send rate limit to reset, re-queueing payload"]);
-          this.sendQueue.shift();
-          return this.send(payload);
-        }
-        controller.abort();
-      }
-      this.sendRateLimitState.sent++;
-      this.sendQueue.shift();
-      this.connection.send(JSON.stringify(payload));
-    }
-    async identify() {
-      this.debug(["Waiting for identify throttle"]);
-      const controller = new AbortController;
-      const closeHandler = /* @__PURE__ */ __name(() => {
-        controller.abort();
-      }, "closeHandler");
-      this.on("closed", closeHandler);
-      try {
-        await this.strategy.waitForIdentify(this.id, controller.signal);
-      } catch {
-        if (controller.signal.aborted) {
-          this.debug(["Was waiting for an identify, but the shard closed in the meantime"]);
-          return;
-        }
-        this.debug([
-          "IContextFetchingStrategy#waitForIdentify threw an unknown error.",
-          "If you're using a custom strategy, this is probably nothing to worry about.",
-          "If you're not, please open an issue on GitHub."
-        ]);
-        await this.destroy({
-          reason: "Identify throttling logic failed",
-          recover: 1
-        });
-      } finally {
-        this.off("closed", closeHandler);
-      }
-      this.debug([
-        "Identifying",
-        `shard id: ${this.id.toString()}`,
-        `shard count: ${this.strategy.options.shardCount}`,
-        `intents: ${this.strategy.options.intents}`,
-        `compression: ${this.inflate ? "zlib-stream" : this.useIdentifyCompress ? "identify" : "none"}`
-      ]);
-      const d = {
-        token: this.strategy.options.token,
-        properties: this.strategy.options.identifyProperties,
-        intents: this.strategy.options.intents,
-        compress: this.useIdentifyCompress,
-        shard: [this.id, this.strategy.options.shardCount]
-      };
-      if (this.strategy.options.largeThreshold) {
-        d.large_threshold = this.strategy.options.largeThreshold;
-      }
-      if (this.strategy.options.initialPresence) {
-        d.presence = this.strategy.options.initialPresence;
-      }
-      await this.send({
-        op: import_v102.GatewayOpcodes.Identify,
-        d
-      });
-      await this.waitForEvent("ready", this.strategy.options.readyTimeout);
-    }
-    async resume(session) {
-      this.debug([
-        "Resuming session",
-        `resume url: ${session.resumeURL}`,
-        `sequence: ${session.sequence}`,
-        `shard id: ${this.id.toString()}`
-      ]);
-      this.#status = 2;
-      this.replayedEvents = 0;
-      return this.send({
-        op: import_v102.GatewayOpcodes.Resume,
-        d: {
-          token: this.strategy.options.token,
-          seq: session.sequence,
-          session_id: session.sessionId
-        }
-      });
-    }
-    async heartbeat(requested = false) {
-      if (!this.isAck && !requested) {
-        return this.destroy({ reason: "Zombie connection", recover: 1 });
-      }
-      const session = await this.strategy.retrieveSessionInfo(this.id);
-      await this.send({
-        op: import_v102.GatewayOpcodes.Heartbeat,
-        d: session?.sequence ?? null
-      });
-      this.lastHeartbeatAt = Date.now();
-      this.isAck = false;
-    }
-    async unpackMessage(data, isBinary) {
-      if (!isBinary) {
-        try {
-          return JSON.parse(data);
-        } catch {
-          return null;
-        }
-      }
-      const decompressable = new Uint8Array(data);
-      if (this.useIdentifyCompress) {
-        return new Promise((resolve2, reject) => {
-          (0, import_node_zlib.inflate)(decompressable, { chunkSize: 65535 }, (err, result) => {
-            if (err) {
-              reject(err);
-              return;
-            }
-            resolve2(JSON.parse(this.textDecoder.decode(result)));
-          });
-        });
-      }
-      if (this.inflate) {
-        const l = decompressable.length;
-        const flush = l >= 4 && decompressable[l - 4] === 0 && decompressable[l - 3] === 0 && decompressable[l - 2] === 255 && decompressable[l - 1] === 255;
-        const zlib = await getZlibSync();
-        this.inflate.push(import_node_buffer.Buffer.from(decompressable), flush ? zlib.Z_SYNC_FLUSH : zlib.Z_NO_FLUSH);
-        if (this.inflate.err) {
-          this.emit("error", {
-            error: new Error(`${this.inflate.err}${this.inflate.msg ? `: ${this.inflate.msg}` : ""}`)
-          });
-        }
-        if (!flush) {
-          return null;
-        }
-        const { result } = this.inflate;
-        if (!result) {
-          return null;
-        }
-        return JSON.parse(typeof result === "string" ? result : this.textDecoder.decode(result));
-      }
-      this.debug([
-        "Received a message we were unable to decompress",
-        `isBinary: ${isBinary.toString()}`,
-        `useIdentifyCompress: ${this.useIdentifyCompress.toString()}`,
-        `inflate: ${Boolean(this.inflate).toString()}`
-      ]);
-      return null;
-    }
-    async onMessage(data, isBinary) {
-      const payload = await this.unpackMessage(data, isBinary);
-      if (!payload) {
-        return;
-      }
-      switch (payload.op) {
-        case import_v102.GatewayOpcodes.Dispatch: {
-          if (this.#status === 2) {
-            this.replayedEvents++;
-          }
-          switch (payload.t) {
-            case import_v102.GatewayDispatchEvents.Ready: {
-              this.#status = 3;
-              const session2 = {
-                sequence: payload.s,
-                sessionId: payload.d.session_id,
-                shardId: this.id,
-                shardCount: this.strategy.options.shardCount,
-                resumeURL: payload.d.resume_gateway_url
-              };
-              await this.strategy.updateSessionInfo(this.id, session2);
-              this.emit("ready", { data: payload.d });
-              break;
-            }
-            case import_v102.GatewayDispatchEvents.Resumed: {
-              this.#status = 3;
-              this.debug([`Resumed and replayed ${this.replayedEvents} events`]);
-              this.emit("resumed");
-              break;
-            }
-            default: {
-              break;
-            }
-          }
-          const session = await this.strategy.retrieveSessionInfo(this.id);
-          if (session) {
-            if (payload.s > session.sequence) {
-              await this.strategy.updateSessionInfo(this.id, { ...session, sequence: payload.s });
-            }
-          } else {
-            this.debug([
-              `Received a ${payload.t} event but no session is available. Session information cannot be re-constructed in this state without a full reconnect`
-            ]);
-          }
-          this.emit("dispatch", { data: payload });
-          break;
-        }
-        case import_v102.GatewayOpcodes.Heartbeat: {
-          await this.heartbeat(true);
-          break;
-        }
-        case import_v102.GatewayOpcodes.Reconnect: {
-          await this.destroy({
-            reason: "Told to reconnect by Discord",
-            recover: 1
-          });
-          break;
-        }
-        case import_v102.GatewayOpcodes.InvalidSession: {
-          this.debug([`Invalid session; will attempt to resume: ${payload.d.toString()}`]);
-          const session = await this.strategy.retrieveSessionInfo(this.id);
-          if (payload.d && session) {
-            await this.resume(session);
-          } else {
-            await this.destroy({
-              reason: "Invalid session",
-              recover: 0
-            });
-          }
-          break;
-        }
-        case import_v102.GatewayOpcodes.Hello: {
-          this.emit("hello");
-          const jitter = Math.random();
-          const firstWait = Math.floor(payload.d.heartbeat_interval * jitter);
-          this.debug([`Preparing first heartbeat of the connection with a jitter of ${jitter}; waiting ${firstWait}ms`]);
-          try {
-            const controller = new AbortController;
-            this.initialHeartbeatTimeoutController = controller;
-            await (0, import_promises2.setTimeout)(firstWait, undefined, { signal: controller.signal });
-          } catch {
-            this.debug(["Cancelled initial heartbeat due to #destroy being called"]);
-            return;
-          } finally {
-            this.initialHeartbeatTimeoutController = null;
-          }
-          await this.heartbeat();
-          this.debug([`First heartbeat sent, starting to beat every ${payload.d.heartbeat_interval}ms`]);
-          this.heartbeatInterval = (0, import_node_timers.setInterval)(() => void this.heartbeat(), payload.d.heartbeat_interval);
-          break;
-        }
-        case import_v102.GatewayOpcodes.HeartbeatAck: {
-          this.isAck = true;
-          const ackAt = Date.now();
-          this.emit("heartbeat", {
-            ackAt,
-            heartbeatAt: this.lastHeartbeatAt,
-            latency: ackAt - this.lastHeartbeatAt
-          });
-          break;
-        }
-      }
-    }
-    onError(error) {
-      if ("code" in error && ["ECONNRESET", "ECONNREFUSED"].includes(error.code)) {
-        this.debug(["Failed to connect to the gateway URL specified due to a network error"]);
-        this.failedToConnectDueToNetworkError = true;
-        return;
-      }
-      this.emit("error", { error });
-    }
-    async onClose(code) {
-      this.emit("closed", { code });
-      switch (code) {
-        case 1000: {
-          return this.destroy({
-            code,
-            reason: "Got disconnected by Discord",
-            recover: 0
-          });
-        }
-        case 4200: {
-          break;
-        }
-        case import_v102.GatewayCloseCodes.UnknownError: {
-          this.debug([`An unknown error occurred: ${code}`]);
-          return this.destroy({ code, recover: 1 });
-        }
-        case import_v102.GatewayCloseCodes.UnknownOpcode: {
-          this.debug(["An invalid opcode was sent to Discord."]);
-          return this.destroy({ code, recover: 1 });
-        }
-        case import_v102.GatewayCloseCodes.DecodeError: {
-          this.debug(["An invalid payload was sent to Discord."]);
-          return this.destroy({ code, recover: 1 });
-        }
-        case import_v102.GatewayCloseCodes.NotAuthenticated: {
-          this.debug(["A request was somehow sent before the identify/resume payload."]);
-          return this.destroy({ code, recover: 0 });
-        }
-        case import_v102.GatewayCloseCodes.AuthenticationFailed: {
-          this.emit("error", {
-            error: new Error("Authentication failed")
-          });
-          return this.destroy({ code });
-        }
-        case import_v102.GatewayCloseCodes.AlreadyAuthenticated: {
-          this.debug(["More than one auth payload was sent."]);
-          return this.destroy({ code, recover: 0 });
-        }
-        case import_v102.GatewayCloseCodes.InvalidSeq: {
-          this.debug(["An invalid sequence was sent."]);
-          return this.destroy({ code, recover: 0 });
-        }
-        case import_v102.GatewayCloseCodes.RateLimited: {
-          this.debug(["The WebSocket rate limit has been hit, this should never happen"]);
-          return this.destroy({ code, recover: 0 });
-        }
-        case import_v102.GatewayCloseCodes.SessionTimedOut: {
-          this.debug(["Session timed out."]);
-          return this.destroy({ code, recover: 1 });
-        }
-        case import_v102.GatewayCloseCodes.InvalidShard: {
-          this.emit("error", {
-            error: new Error("Invalid shard")
-          });
-          return this.destroy({ code });
-        }
-        case import_v102.GatewayCloseCodes.ShardingRequired: {
-          this.emit("error", {
-            error: new Error("Sharding is required")
-          });
-          return this.destroy({ code });
-        }
-        case import_v102.GatewayCloseCodes.InvalidAPIVersion: {
-          this.emit("error", {
-            error: new Error("Used an invalid API version")
-          });
-          return this.destroy({ code });
-        }
-        case import_v102.GatewayCloseCodes.InvalidIntents: {
-          this.emit("error", {
-            error: new Error("Used invalid intents")
-          });
-          return this.destroy({ code });
-        }
-        case import_v102.GatewayCloseCodes.DisallowedIntents: {
-          this.emit("error", {
-            error: new Error("Used disallowed intents")
-          });
-          return this.destroy({ code });
-        }
-        default: {
-          this.debug([
-            `The gateway closed with an unexpected code ${code}, attempting to ${this.failedToConnectDueToNetworkError ? "reconnect" : "resume"}.`
-          ]);
-          return this.destroy({
-            code,
-            recover: this.failedToConnectDueToNetworkError ? 0 : 1
-          });
-        }
-      }
-    }
-    debug(messages) {
-      const message = `${messages[0]}${messages.length > 1 ? `
-${messages.slice(1).map((m) => `	${m}`).join("\n")}` : ""}`;
-      this.emit("debug", { message });
-    }
-  };
-  var SimpleShardingStrategy = class {
-    static {
-      __name(this, "SimpleShardingStrategy");
-    }
-    manager;
-    shards = new import_collection6.Collection;
-    constructor(manager) {
-      this.manager = manager;
-    }
-    async spawn(shardIds) {
-      const strategyOptions = await managerToFetchingStrategyOptions(this.manager);
-      for (const shardId of shardIds) {
-        const strategy = new SimpleContextFetchingStrategy(this.manager, strategyOptions);
-        const shard = new WebSocketShard(strategy, shardId);
-        for (const event of Object.values(WebSocketShardEvents)) {
-          shard.on(event, (payload) => this.manager.emit(event, { ...payload, shardId }));
-        }
-        this.shards.set(shardId, shard);
-      }
-    }
-    async connect() {
-      const promises = [];
-      for (const shard of this.shards.values()) {
-        promises.push(shard.connect());
-      }
-      await Promise.all(promises);
-    }
-    async destroy(options) {
-      const promises = [];
-      for (const shard of this.shards.values()) {
-        promises.push(shard.destroy(options));
-      }
-      await Promise.all(promises);
-      this.shards.clear();
-    }
-    async send(shardId, payload) {
-      const shard = this.shards.get(shardId);
-      if (!shard) {
-        throw new RangeError(`Shard ${shardId} not found`);
-      }
-      return shard.send(payload);
-    }
-    async fetchStatus() {
-      return this.shards.mapValues((shard) => shard.status);
-    }
-  };
-  var import_node_worker_threads3 = __require("worker_threads");
-  var import_collection7 = require_dist9();
-  var WorkerBootstrapper = class {
-    static {
-      __name(this, "WorkerBootstrapper");
-    }
-    data = import_node_worker_threads3.workerData;
-    shards = new import_collection7.Collection;
-    constructor() {
-      if (import_node_worker_threads3.isMainThread) {
-        throw new Error("Expected WorkerBootstrap to not be used within the main thread");
-      }
-    }
-    async connect(shardId) {
-      const shard = this.shards.get(shardId);
-      if (!shard) {
-        throw new RangeError(`Shard ${shardId} does not exist`);
-      }
-      await shard.connect();
-    }
-    async destroy(shardId, options) {
-      const shard = this.shards.get(shardId);
-      if (!shard) {
-        throw new RangeError(`Shard ${shardId} does not exist`);
-      }
-      await shard.destroy(options);
-    }
-    setupThreadEvents() {
-      import_node_worker_threads3.parentPort.on("messageerror", (err) => {
-        throw err;
-      }).on("message", async (payload) => {
-        switch (payload.op) {
-          case 0: {
-            await this.connect(payload.shardId);
-            const response = {
-              op: 0,
-              shardId: payload.shardId
-            };
-            import_node_worker_threads3.parentPort.postMessage(response);
-            break;
-          }
-          case 1: {
-            await this.destroy(payload.shardId, payload.options);
-            const response = {
-              op: 1,
-              shardId: payload.shardId
-            };
-            import_node_worker_threads3.parentPort.postMessage(response);
-            break;
-          }
-          case 2: {
-            const shard = this.shards.get(payload.shardId);
-            if (!shard) {
-              throw new RangeError(`Shard ${payload.shardId} does not exist`);
-            }
-            await shard.send(payload.payload);
-            break;
-          }
-          case 3: {
-            break;
-          }
-          case 4: {
-            break;
-          }
-          case 5: {
-            const shard = this.shards.get(payload.shardId);
-            if (!shard) {
-              throw new Error(`Shard ${payload.shardId} does not exist`);
-            }
-            const response = {
-              op: 6,
-              status: shard.status,
-              nonce: payload.nonce
-            };
-            import_node_worker_threads3.parentPort.postMessage(response);
-            break;
-          }
-        }
-      });
-    }
-    async bootstrap(options = {}) {
-      for (const shardId of this.data.shardIds) {
-        const shard = new WebSocketShard(new WorkerContextFetchingStrategy(this.data), shardId);
-        for (const event of options.forwardEvents ?? Object.values(WebSocketShardEvents)) {
-          shard.on(event, (data) => {
-            const payload = {
-              op: 2,
-              event,
-              data,
-              shardId
-            };
-            import_node_worker_threads3.parentPort.postMessage(payload);
-          });
-        }
-        await options.shardCallback?.(shard);
-        this.shards.set(shardId, shard);
-      }
-      this.setupThreadEvents();
-      const message = {
-        op: 7
-      };
-      import_node_worker_threads3.parentPort.postMessage(message);
-    }
-  };
-  var import_util3 = require_dist();
-  var import_util4 = require_dist();
-  var import_async_event_emitter2 = require_dist3();
-  var import_v103 = require_v1024();
-  (0, import_util4.polyfillDispose)();
-  var WebSocketManager = class extends import_async_event_emitter2.AsyncEventEmitter {
-    static {
-      __name(this, "WebSocketManager");
-    }
-    options;
-    gatewayInformation = null;
-    shardIds = null;
-    strategy;
-    constructor(options) {
-      super();
-      this.options = { ...DefaultWebSocketManagerOptions, ...options };
-      this.strategy = this.options.buildStrategy(this);
-    }
-    async fetchGatewayInformation(force = false) {
-      if (this.gatewayInformation) {
-        if (this.gatewayInformation.expiresAt <= Date.now()) {
-          this.gatewayInformation = null;
-        } else if (!force) {
-          return this.gatewayInformation.data;
-        }
-      }
-      const data = await this.options.rest.get(import_v103.Routes.gatewayBot());
-      this.gatewayInformation = { data, expiresAt: Date.now() + (data.session_start_limit.reset_after || 5000) };
-      return this.gatewayInformation.data;
-    }
-    async updateShardCount(shardCount) {
-      await this.strategy.destroy({ reason: "User is adjusting their shards" });
-      this.options.shardCount = shardCount;
-      const shardIds = await this.getShardIds(true);
-      await this.strategy.spawn(shardIds);
-      return this;
-    }
-    async getShardCount() {
-      if (this.options.shardCount) {
-        return this.options.shardCount;
-      }
-      const shardIds = await this.getShardIds();
-      return Math.max(...shardIds) + 1;
-    }
-    async getShardIds(force = false) {
-      if (this.shardIds && !force) {
-        return this.shardIds;
-      }
-      let shardIds;
-      if (this.options.shardIds) {
-        if (Array.isArray(this.options.shardIds)) {
-          shardIds = this.options.shardIds;
-        } else {
-          const { start, end } = this.options.shardIds;
-          shardIds = [...(0, import_util3.range)({ start, end: end + 1 })];
-        }
-      } else {
-        const data = await this.fetchGatewayInformation();
-        shardIds = [...(0, import_util3.range)(this.options.shardCount ?? data.shards)];
-      }
-      this.shardIds = shardIds;
-      return shardIds;
-    }
-    async connect() {
-      const shardCount = await this.getShardCount();
-      await this.updateShardCount(shardCount);
-      const shardIds = await this.getShardIds();
-      const data = await this.fetchGatewayInformation();
-      if (data.session_start_limit.remaining < shardIds.length) {
-        throw new Error(`Not enough sessions remaining to spawn ${shardIds.length} shards; only ${data.session_start_limit.remaining} remaining; resets at ${new Date(Date.now() + data.session_start_limit.reset_after).toISOString()}`);
-      }
-      await this.strategy.connect();
-    }
-    destroy(options) {
-      return this.strategy.destroy(options);
-    }
-    send(shardId, payload) {
-      return this.strategy.send(shardId, payload);
-    }
-    fetchStatus() {
-      return this.strategy.fetchStatus();
-    }
-    async[Symbol.asyncDispose]() {
-      await this.destroy();
-    }
-  };
-  var version = "1.1.1";
-});
-
-// node_modules/discord.js/src/util/WebSocketShardEvents.js
-var require_WebSocketShardEvents = __commonJS((exports, module) => {
-  module.exports = {
-    Close: "close",
-    Destroyed: "destroyed",
-    InvalidSession: "invalidSession",
-    Ready: "ready",
-    Resumed: "resumed",
-    AllReady: "allReady"
-  };
-});
-
-// node_modules/discord.js/src/client/websocket/WebSocketShard.js
-var require_WebSocketShard = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
-  var process2 = __require("node:process");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
-  var { GatewayIntentBits } = require_v1012();
-  var Status = require_Status();
-  var WebSocketShardEvents = require_WebSocketShardEvents();
-  var deprecationEmittedForImportant = false;
-
-  class WebSocketShard extends EventEmitter {
-    constructor(manager, id) {
-      super();
-      this.manager = manager;
-      this.id = id;
-      this.status = Status.Idle;
-      this.closeSequence = 0;
-      this.ping = -1;
-      this.lastPingTimestamp = -1;
-      Object.defineProperty(this, "expectedGuilds", { value: null, writable: true });
-      Object.defineProperty(this, "readyTimeout", { value: null, writable: true });
-      Object.defineProperty(this, "sessionInfo", { value: null, writable: true });
-    }
-    debug(messages) {
-      this.manager.debug(messages, this.id);
-    }
-    emitClose(event = {
-      code: 1011,
-      reason: "INTERNAL_ERROR",
-      wasClean: false
-    }) {
-      this.debug([
-        "[CLOSE]",
-        `Event Code: ${event.code}`,
-        `Clean     : ${event.wasClean}`,
-        `Reason    : ${event.reason ?? "No reason received"}`
-      ]);
-      this.emit(WebSocketShardEvents.Close, event);
-    }
-    onReadyPacket(packet) {
-      if (!packet) {
-        this.debug([`Received broken packet: '${packet}'.`]);
-        return;
-      }
-      this.emit(WebSocketShardEvents.Ready);
-      this.expectedGuilds = new Set(packet.guilds.map((guild) => guild.id));
-      this.status = Status.WaitingForGuilds;
-    }
-    gotGuild(guildId) {
-      this.expectedGuilds.delete(guildId);
-      this.checkReady();
-    }
-    checkReady() {
-      if (this.readyTimeout) {
-        clearTimeout2(this.readyTimeout);
-        this.readyTimeout = null;
-      }
-      if (!this.expectedGuilds.size) {
-        this.debug(["Shard received all its guilds. Marking as fully ready."]);
-        this.status = Status.Ready;
-        this.emit(WebSocketShardEvents.AllReady);
-        return;
-      }
-      const hasGuildsIntent = this.manager.client.options.intents.has(GatewayIntentBits.Guilds);
-      const { waitGuildTimeout } = this.manager.client.options;
-      this.readyTimeout = setTimeout2(() => {
-        this.debug([
-          hasGuildsIntent ? `Shard did not receive any guild packets in ${waitGuildTimeout} ms.` : "Shard will not receive anymore guild packets.",
-          `Unavailable guild count: ${this.expectedGuilds.size}`
-        ]);
-        this.readyTimeout = null;
-        this.status = Status.Ready;
-        this.emit(WebSocketShardEvents.AllReady, this.expectedGuilds);
-      }, hasGuildsIntent ? waitGuildTimeout : 0).unref();
-    }
-    send(data, important = false) {
-      if (important && !deprecationEmittedForImportant) {
-        process2.emitWarning("Sending important payloads explicitly is deprecated. They are determined by their opcode implicitly now.", "DeprecationWarning");
-        deprecationEmittedForImportant = true;
-      }
-      this.manager._ws.send(this.id, data);
-    }
-  }
-  module.exports = WebSocketShard;
 });
 
 // node_modules/discord.js/src/client/websocket/handlers/APPLICATION_COMMAND_PERMISSIONS_UPDATE.js
@@ -53851,11 +53826,17 @@ var require_GUILD_BAN_REMOVE = __commonJS((exports, module) => {
   };
 });
 
+// node_modules/discord.js/src/util/Status.js
+var require_Status = __commonJS((exports, module) => {
+  var { createEnum } = require_Enums();
+  module.exports = createEnum(["Ready", "Idle", "WaitingForGuilds"]);
+});
+
 // node_modules/discord.js/src/client/websocket/handlers/GUILD_CREATE.js
 var require_GUILD_CREATE = __commonJS((exports, module) => {
   var Events = require_Events();
   var Status = require_Status();
-  module.exports = (client, { d: data }, shard) => {
+  module.exports = (client, { d: data }, shardId) => {
     let guild = client.guilds.cache.get(data.id);
     if (guild) {
       if (!guild.available && !data.unavailable) {
@@ -53863,9 +53844,9 @@ var require_GUILD_CREATE = __commonJS((exports, module) => {
         client.emit(Events.GuildAvailable, guild);
       }
     } else {
-      data.shardId = shard.id;
+      data.shardId = shardId;
       guild = client.guilds._add(data);
-      if (client.ws.status === Status.Ready) {
+      if (client.status === Status.Ready) {
         client.emit(Events.GuildCreate, guild);
       }
     }
@@ -53895,7 +53876,7 @@ var require_GUILD_INTEGRATIONS_UPDATE = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/websocket/handlers/GUILD_MEMBERS_CHUNK.js
 var require_GUILD_MEMBERS_CHUNK = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Events = require_Events();
   module.exports = (client, { d: data }) => {
     const guild = client.guilds.cache.get(data.guild_id);
@@ -53920,30 +53901,27 @@ var require_GUILD_MEMBERS_CHUNK = __commonJS((exports, module) => {
 // node_modules/discord.js/src/client/websocket/handlers/GUILD_MEMBER_ADD.js
 var require_GUILD_MEMBER_ADD = __commonJS((exports, module) => {
   var Events = require_Events();
-  var Status = require_Status();
-  module.exports = (client, { d: data }, shard) => {
+  module.exports = (client, { d: data }) => {
     const guild = client.guilds.cache.get(data.guild_id);
     if (guild) {
       guild.memberCount++;
       const member = guild.members._add(data);
-      if (shard.status === Status.Ready) {
-        client.emit(Events.GuildMemberAdd, member);
-      }
+      client.emit(Events.GuildMemberAdd, member);
     }
   };
 });
 
 // node_modules/discord.js/src/client/websocket/handlers/GUILD_MEMBER_REMOVE.js
 var require_GUILD_MEMBER_REMOVE = __commonJS((exports, module) => {
-  module.exports = (client, packet, shard) => {
-    client.actions.GuildMemberRemove.handle(packet.d, shard);
+  module.exports = (client, packet) => {
+    client.actions.GuildMemberRemove.handle(packet.d);
   };
 });
 
 // node_modules/discord.js/src/client/websocket/handlers/GUILD_MEMBER_UPDATE.js
 var require_GUILD_MEMBER_UPDATE = __commonJS((exports, module) => {
-  module.exports = (client, packet, shard) => {
-    client.actions.GuildMemberUpdate.handle(packet.d, shard);
+  module.exports = (client, packet) => {
+    client.actions.GuildMemberUpdate.handle(packet.d);
   };
 });
 
@@ -54187,7 +54165,7 @@ var require_ClientUser = __commonJS((exports, module) => {
 var require_READY = __commonJS((exports, module) => {
   var ClientApplication = require_ClientApplication();
   var ClientUser;
-  module.exports = (client, { d: data }, shard) => {
+  module.exports = (client, { d: data }, shardId) => {
     if (client.user) {
       client.user._patch(data.user);
     } else {
@@ -54196,7 +54174,7 @@ var require_READY = __commonJS((exports, module) => {
       client.users.cache.set(client.user.id, client.user);
     }
     for (const guild of data.guilds) {
-      guild.shardId = shard.id;
+      guild.shardId = shardId;
       client.guilds._add(guild);
     }
     if (client.application) {
@@ -54204,16 +54182,6 @@ var require_READY = __commonJS((exports, module) => {
     } else {
       client.application = new ClientApplication(client, data.application);
     }
-    shard.checkReady();
-  };
-});
-
-// node_modules/discord.js/src/client/websocket/handlers/RESUMED.js
-var require_RESUMED = __commonJS((exports, module) => {
-  var Events = require_Events();
-  module.exports = (client, packet, shard) => {
-    const replayed = shard.sessionInfo.sequence - shard.closeSequence;
-    client.emit(Events.ShardResume, shard.id, replayed);
   };
 });
 
@@ -54371,7 +54339,6 @@ var require_handlers = __commonJS((exports, module) => {
     ["MESSAGE_UPDATE", require_MESSAGE_UPDATE()],
     ["PRESENCE_UPDATE", require_PRESENCE_UPDATE()],
     ["READY", require_READY()],
-    ["RESUMED", require_RESUMED()],
     ["STAGE_INSTANCE_CREATE", require_STAGE_INSTANCE_CREATE()],
     ["STAGE_INSTANCE_DELETE", require_STAGE_INSTANCE_DELETE()],
     ["STAGE_INSTANCE_UPDATE", require_STAGE_INSTANCE_UPDATE()],
@@ -54390,234 +54357,10 @@ var require_handlers = __commonJS((exports, module) => {
   module.exports = handlers;
 });
 
-// node_modules/discord.js/src/client/websocket/WebSocketManager.js
-var require_WebSocketManager = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
-  var process2 = __require("node:process");
-  var { setImmediate: setImmediate2 } = __require("node:timers");
-  var { Collection } = require_dist6();
-  var {
-    WebSocketManager: WSWebSocketManager,
-    WebSocketShardEvents: WSWebSocketShardEvents,
-    CompressionMethod,
-    CloseCodes
-  } = require_dist10();
-  var { GatewayCloseCodes, GatewayDispatchEvents } = require_v1012();
-  var WebSocketShard = require_WebSocketShard();
-  var PacketHandlers = require_handlers();
-  var { DiscordjsError, ErrorCodes } = require_errors2();
-  var Events = require_Events();
-  var Status = require_Status();
-  var WebSocketShardEvents = require_WebSocketShardEvents();
-  var zlib;
-  try {
-    zlib = (()=>{throw new Error(`Cannot require module "zlib-sync"`);})();
-  } catch {
-  }
-  var BeforeReadyWhitelist = [
-    GatewayDispatchEvents.Ready,
-    GatewayDispatchEvents.Resumed,
-    GatewayDispatchEvents.GuildCreate,
-    GatewayDispatchEvents.GuildDelete,
-    GatewayDispatchEvents.GuildMembersChunk,
-    GatewayDispatchEvents.GuildMemberAdd,
-    GatewayDispatchEvents.GuildMemberRemove
-  ];
-  var WaitingForGuildEvents = [GatewayDispatchEvents.GuildCreate, GatewayDispatchEvents.GuildDelete];
-  var UNRESUMABLE_CLOSE_CODES = [
-    CloseCodes.Normal,
-    GatewayCloseCodes.AlreadyAuthenticated,
-    GatewayCloseCodes.InvalidSeq
-  ];
-  var reasonIsDeprecated = "the reason property is deprecated, use the code property to determine the reason";
-  var deprecationEmittedForInvalidSessionEvent = false;
-  var deprecationEmittedForDestroyedEvent = false;
-
-  class WebSocketManager extends EventEmitter {
-    constructor(client) {
-      super();
-      Object.defineProperty(this, "client", { value: client });
-      this.gateway = null;
-      this.shards = new Collection;
-      Object.defineProperty(this, "packetQueue", { value: [] });
-      this.status = Status.Idle;
-      this.destroyed = false;
-      this._ws = null;
-    }
-    get ping() {
-      const sum = this.shards.reduce((a, b) => a + b.ping, 0);
-      return sum / this.shards.size;
-    }
-    debug(messages, shardId) {
-      this.client.emit(Events.Debug, `[WS => ${typeof shardId === "number" ? `Shard ${shardId}` : "Manager"}] ${messages.join("\n\t")}`);
-    }
-    async connect() {
-      const invalidToken = new DiscordjsError(ErrorCodes.TokenInvalid);
-      const { shards, shardCount, intents, ws } = this.client.options;
-      if (this._ws && this._ws.options.token !== this.client.token) {
-        await this._ws.destroy({ code: CloseCodes.Normal, reason: "Login with differing token requested" });
-        this._ws = null;
-      }
-      if (!this._ws) {
-        const wsOptions = {
-          intents: intents.bitfield,
-          rest: this.client.rest,
-          token: this.client.token,
-          largeThreshold: ws.large_threshold,
-          version: ws.version,
-          shardIds: shards === "auto" ? null : shards,
-          shardCount: shards === "auto" ? null : shardCount,
-          initialPresence: ws.presence,
-          retrieveSessionInfo: (shardId) => this.shards.get(shardId).sessionInfo,
-          updateSessionInfo: (shardId, sessionInfo) => {
-            this.shards.get(shardId).sessionInfo = sessionInfo;
-          },
-          compression: zlib ? CompressionMethod.ZlibStream : null
-        };
-        if (ws.buildIdentifyThrottler)
-          wsOptions.buildIdentifyThrottler = ws.buildIdentifyThrottler;
-        if (ws.buildStrategy)
-          wsOptions.buildStrategy = ws.buildStrategy;
-        this._ws = new WSWebSocketManager(wsOptions);
-        this.attachEvents();
-      }
-      const {
-        url: gatewayURL,
-        shards: recommendedShards,
-        session_start_limit: sessionStartLimit
-      } = await this._ws.fetchGatewayInformation().catch((error) => {
-        throw error.status === 401 ? invalidToken : error;
-      });
-      const { total, remaining } = sessionStartLimit;
-      this.debug(["Fetched Gateway Information", `URL: ${gatewayURL}`, `Recommended Shards: ${recommendedShards}`]);
-      this.debug(["Session Limit Information", `Total: ${total}`, `Remaining: ${remaining}`]);
-      this.gateway = `${gatewayURL}/`;
-      this.client.options.shardCount = await this._ws.getShardCount();
-      this.client.options.shards = await this._ws.getShardIds();
-      this.totalShards = this.client.options.shards.length;
-      for (const id of this.client.options.shards) {
-        if (!this.shards.has(id)) {
-          const shard = new WebSocketShard(this, id);
-          this.shards.set(id, shard);
-          shard.on(WebSocketShardEvents.AllReady, (unavailableGuilds) => {
-            this.client.emit(Events.ShardReady, shard.id, unavailableGuilds);
-            this.checkShardsReady();
-          });
-          shard.status = Status.Connecting;
-        }
-      }
-      await this._ws.connect();
-      this.shards.forEach((shard) => {
-        if (shard.listenerCount(WebSocketShardEvents.InvalidSession) > 0 && !deprecationEmittedForInvalidSessionEvent) {
-          process2.emitWarning("The WebSocketShard#invalidSession event is deprecated and will never emit.", "DeprecationWarning");
-          deprecationEmittedForInvalidSessionEvent = true;
-        }
-        if (shard.listenerCount(WebSocketShardEvents.Destroyed) > 0 && !deprecationEmittedForDestroyedEvent) {
-          process2.emitWarning("The WebSocketShard#destroyed event is deprecated and will never emit.", "DeprecationWarning");
-          deprecationEmittedForDestroyedEvent = true;
-        }
-      });
-    }
-    attachEvents() {
-      this._ws.on(WSWebSocketShardEvents.Debug, ({ message, shardId }) => this.debug([message], shardId));
-      this._ws.on(WSWebSocketShardEvents.Dispatch, ({ data, shardId }) => {
-        this.client.emit(Events.Raw, data, shardId);
-        this.emit(data.t, data.d, shardId);
-        const shard = this.shards.get(shardId);
-        this.handlePacket(data, shard);
-        if (shard.status === Status.WaitingForGuilds && WaitingForGuildEvents.includes(data.t)) {
-          shard.gotGuild(data.d.id);
-        }
-      });
-      this._ws.on(WSWebSocketShardEvents.Ready, ({ data, shardId }) => {
-        this.shards.get(shardId).onReadyPacket(data);
-      });
-      this._ws.on(WSWebSocketShardEvents.Closed, ({ code, shardId }) => {
-        const shard = this.shards.get(shardId);
-        shard.emit(WebSocketShardEvents.Close, { code, reason: reasonIsDeprecated, wasClean: true });
-        if (UNRESUMABLE_CLOSE_CODES.includes(code) && this.destroyed) {
-          shard.status = Status.Disconnected;
-          this.client.emit(Events.ShardDisconnect, { code, reason: reasonIsDeprecated, wasClean: true }, shardId);
-          this.debug([`Shard not resumable: ${code} (${GatewayCloseCodes[code] ?? CloseCodes[code]})`], shardId);
-          return;
-        }
-        this.shards.get(shardId).status = Status.Connecting;
-        this.client.emit(Events.ShardReconnecting, shardId);
-      });
-      this._ws.on(WSWebSocketShardEvents.Hello, ({ shardId }) => {
-        const shard = this.shards.get(shardId);
-        if (shard.sessionInfo) {
-          shard.closeSequence = shard.sessionInfo.sequence;
-          shard.status = Status.Resuming;
-        } else {
-          shard.status = Status.Identifying;
-        }
-      });
-      this._ws.on(WSWebSocketShardEvents.Resumed, ({ shardId }) => {
-        const shard = this.shards.get(shardId);
-        shard.status = Status.Ready;
-        shard.emit(WebSocketShardEvents.Resumed);
-      });
-      this._ws.on(WSWebSocketShardEvents.HeartbeatComplete, ({ heartbeatAt, latency, shardId }) => {
-        this.debug([`Heartbeat acknowledged, latency of ${latency}ms.`], shardId);
-        const shard = this.shards.get(shardId);
-        shard.lastPingTimestamp = heartbeatAt;
-        shard.ping = latency;
-      });
-      this._ws.on(WSWebSocketShardEvents.Error, ({ error, shardId }) => {
-        this.client.emit(Events.ShardError, error, shardId);
-      });
-    }
-    broadcast(packet) {
-      for (const shardId of this.shards.keys())
-        this._ws.send(shardId, packet);
-    }
-    async destroy() {
-      if (this.destroyed)
-        return;
-      this.debug([Object.assign(new Error, { name: "Manager was destroyed:" }).stack]);
-      this.destroyed = true;
-      await this._ws?.destroy({ code: CloseCodes.Normal, reason: "Manager was destroyed" });
-    }
-    handlePacket(packet, shard) {
-      if (packet && this.status !== Status.Ready) {
-        if (!BeforeReadyWhitelist.includes(packet.t)) {
-          this.packetQueue.push({ packet, shard });
-          return false;
-        }
-      }
-      if (this.packetQueue.length) {
-        const item = this.packetQueue.shift();
-        setImmediate2(() => {
-          this.handlePacket(item.packet, item.shard);
-        }).unref();
-      }
-      if (packet && PacketHandlers[packet.t]) {
-        PacketHandlers[packet.t](this.client, packet, shard);
-      }
-      return true;
-    }
-    checkShardsReady() {
-      if (this.status === Status.Ready)
-        return;
-      if (this.shards.size !== this.totalShards || this.shards.some((shard) => shard.status !== Status.Ready)) {
-        return;
-      }
-      this.triggerClientReady();
-    }
-    triggerClientReady() {
-      this.status = Status.Ready;
-      this.client.readyTimestamp = Date.now();
-      this.client.emit(Events.ClientReady, this.client);
-      this.handlePacket();
-    }
-  }
-  module.exports = WebSocketManager;
-});
-
 // node_modules/discord.js/src/managers/BaseGuildEmojiManager.js
 var require_BaseGuildEmojiManager = __commonJS((exports, module) => {
   var CachedManager = require_CachedManager();
+  var ApplicationEmoji = require_ApplicationEmoji();
   var GuildEmoji = require_GuildEmoji();
   var ReactionEmoji = require_ReactionEmoji();
   var { parseEmoji } = require_Util();
@@ -54629,10 +54372,14 @@ var require_BaseGuildEmojiManager = __commonJS((exports, module) => {
     resolve(emoji) {
       if (emoji instanceof ReactionEmoji)
         return super.resolve(emoji.id);
+      if (emoji instanceof ApplicationEmoji)
+        return super.resolve(emoji.id);
       return super.resolve(emoji);
     }
     resolveId(emoji) {
       if (emoji instanceof ReactionEmoji)
+        return emoji.id;
+      if (emoji instanceof ApplicationEmoji)
         return emoji.id;
       return super.resolveId(emoji);
     }
@@ -54641,6 +54388,8 @@ var require_BaseGuildEmojiManager = __commonJS((exports, module) => {
       if (emojiResolvable)
         return emojiResolvable.identifier;
       if (emoji instanceof ReactionEmoji)
+        return emoji.identifier;
+      if (emoji instanceof ApplicationEmoji)
         return emoji.identifier;
       if (typeof emoji === "string") {
         const res = parseEmoji(emoji);
@@ -54724,6 +54473,7 @@ var require_ChannelManager = __commonJS((exports, module) => {
 var require_ShardClientUtil = __commonJS((exports, module) => {
   var process2 = __require("node:process");
   var { calculateShardId } = require_dist();
+  var { WebSocketShardEvents } = require_dist7();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors2();
   var Events = require_Events();
   var { makeError, makePlainError } = require_Util();
@@ -54736,42 +54486,30 @@ var require_ShardClientUtil = __commonJS((exports, module) => {
       switch (mode) {
         case "process":
           process2.on("message", this._handleMessage.bind(this));
-          client.on(Events.ShardReady, () => {
+          client.on(Events.ClientReady, () => {
             process2.send({ _ready: true });
           });
-          client.on(Events.ShardDisconnect, () => {
+          client.ws.on(WebSocketShardEvents.Closed, () => {
             process2.send({ _disconnect: true });
           });
-          client.on(Events.ShardReconnecting, () => {
-            process2.send({ _reconnecting: true });
-          });
-          client.on(Events.ShardResume, () => {
+          client.ws.on(WebSocketShardEvents.Resumed, () => {
             process2.send({ _resume: true });
           });
           break;
         case "worker":
           this.parentPort = __require("node:worker_threads").parentPort;
           this.parentPort.on("message", this._handleMessage.bind(this));
-          client.on(Events.ShardReady, () => {
+          client.on(Events.ClientReady, () => {
             this.parentPort.postMessage({ _ready: true });
           });
-          client.on(Events.ShardDisconnect, () => {
+          client.ws.on(WebSocketShardEvents.Closed, () => {
             this.parentPort.postMessage({ _disconnect: true });
           });
-          client.on(Events.ShardReconnecting, () => {
-            this.parentPort.postMessage({ _reconnecting: true });
-          });
-          client.on(Events.ShardResume, () => {
+          client.ws.on(WebSocketShardEvents.Resumed, () => {
             this.parentPort.postMessage({ _resume: true });
           });
           break;
       }
-    }
-    get ids() {
-      return this.client.options.shards;
-    }
-    get count() {
-      return this.client.options.shardCount;
     }
     send(message) {
       return new Promise((resolve, reject) => {
@@ -54903,7 +54641,7 @@ var require_ShardClientUtil = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/GuildAuditLogs.js
 var require_GuildAuditLogs = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var ApplicationCommand = require_ApplicationCommand();
   var GuildAuditLogsEntry = require_GuildAuditLogsEntry();
   var Integration = require_Integration();
@@ -54953,7 +54691,7 @@ var require_GuildAuditLogs = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/GuildOnboarding.js
 var require_GuildOnboarding = __commonJS((exports) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Base = require_Base();
   var { GuildOnboardingPrompt } = require_GuildOnboardingPrompt();
 
@@ -54989,7 +54727,7 @@ var require_GuildPreviewEmoji = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/GuildPreview.js
 var require_GuildPreview = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { DiscordSnowflake } = require_cjs();
   var { Routes } = require_v1012();
   var Base = require_Base();
@@ -55076,7 +54814,7 @@ var require_GuildPreview = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/AutoModerationRuleManager.js
 var require_AutoModerationRuleManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var AutoModerationRule = require_AutoModerationRule();
@@ -55207,15 +54945,13 @@ var require_GuildApplicationCommandManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildBanManager.js
 var require_GuildBanManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors2();
   var GuildBan = require_GuildBan();
   var { GuildMember } = require_GuildMember();
-  var deprecationEmittedForDeleteMessageDays = false;
 
   class GuildBanManager extends CachedManager {
     constructor(guild, iterable) {
@@ -55261,13 +54997,9 @@ var require_GuildBanManager = __commonJS((exports, module) => {
       const id = this.client.users.resolveId(user);
       if (!id)
         throw new DiscordjsError(ErrorCodes.BanResolveId, true);
-      if (options.deleteMessageDays !== undefined && !deprecationEmittedForDeleteMessageDays) {
-        process2.emitWarning("The deleteMessageDays option for GuildBanManager#create() is deprecated. Use the deleteMessageSeconds option instead.", "DeprecationWarning");
-        deprecationEmittedForDeleteMessageDays = true;
-      }
       await this.client.rest.put(Routes.guildBan(this.guild.id, id), {
         body: {
-          delete_message_seconds: options.deleteMessageSeconds ?? (options.deleteMessageDays ? options.deleteMessageDays * 24 * 60 * 60 : undefined)
+          delete_message_seconds: options.deleteMessageSeconds
         },
         reason: options.reason
       });
@@ -55308,7 +55040,7 @@ var require_GuildBanManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildChannelManager.js
 var require_GuildChannelManager = __commonJS((exports, module) => {
   var process2 = __require("node:process");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { ChannelType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var GuildTextThreadManager = require_GuildTextThreadManager();
@@ -55361,7 +55093,7 @@ var require_GuildChannelManager = __commonJS((exports, module) => {
     async addFollower(channel, targetChannel, reason) {
       const channelId = this.resolveId(channel);
       if (!channelId) {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "channel", "NewsChannelResolvable");
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "channel", "AnnouncementChannelResolvable");
       }
       const targetChannelId = this.resolveId(targetChannel);
       if (!targetChannelId) {
@@ -55551,7 +55283,7 @@ var require_GuildChannelManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildEmojiManager.js
 var require_GuildEmojiManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes, PermissionFlagsBits } = require_v1012();
   var BaseGuildEmojiManager = require_BaseGuildEmojiManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors2();
@@ -55651,7 +55383,7 @@ var require_GuildEmojiManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildInviteManager.js
 var require_GuildInviteManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, ErrorCodes } = require_errors2();
@@ -55740,7 +55472,7 @@ var require_GuildInviteManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildMemberManager.js
 var require_GuildMemberManager = __commonJS((exports, module) => {
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
   var { Routes, GatewayOpcodes } = require_v1012();
@@ -55844,7 +55576,7 @@ var require_GuildMemberManager = __commonJS((exports, module) => {
       return new Promise((resolve, reject) => {
         if (!query && !users)
           query = "";
-        this.guild.shard.send({
+        this.guild.client.ws.send(this.guild.shardId, {
           op: GatewayOpcodes.RequestGuildMembers,
           d: {
             guild_id: this.guild.id,
@@ -55987,13 +55719,14 @@ var require_GuildMemberManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildScheduledEventManager.js
 var require_GuildScheduledEventManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { GuildScheduledEventEntityType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors2();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
   var { resolveImage } = require_DataResolver();
+  var { _transformGuildScheduledEventRecurrenceRule } = require_Transformers();
 
   class GuildScheduledEventManager extends CachedManager {
     constructor(guild, iterable) {
@@ -56013,7 +55746,8 @@ var require_GuildScheduledEventManager = __commonJS((exports, module) => {
         scheduledEndTime,
         entityMetadata,
         reason,
-        image
+        image,
+        recurrenceRule
       } = options;
       let entity_metadata, channel_id;
       if (entityType === GuildScheduledEventEntityType.External) {
@@ -56035,7 +55769,8 @@ var require_GuildScheduledEventManager = __commonJS((exports, module) => {
           description,
           entity_type: entityType,
           entity_metadata,
-          image: image && await resolveImage(image)
+          image: image && await resolveImage(image),
+          recurrence_rule: recurrenceRule && _transformGuildScheduledEventRecurrenceRule(recurrenceRule)
         },
         reason
       });
@@ -56076,7 +55811,8 @@ var require_GuildScheduledEventManager = __commonJS((exports, module) => {
         scheduledEndTime,
         entityMetadata,
         reason,
-        image
+        image,
+        recurrenceRule
       } = options;
       let entity_metadata;
       if (entityMetadata) {
@@ -56095,7 +55831,8 @@ var require_GuildScheduledEventManager = __commonJS((exports, module) => {
           entity_type: entityType,
           status,
           image: image && await resolveImage(image),
-          entity_metadata
+          entity_metadata,
+          recurrence_rule: recurrenceRule && _transformGuildScheduledEventRecurrenceRule(recurrenceRule)
         },
         reason
       });
@@ -56132,7 +55869,7 @@ var require_GuildScheduledEventManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildStickerManager.js
 var require_GuildStickerManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
@@ -56386,9 +56123,8 @@ var require_PresenceManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/RoleManager.js
 var require_RoleManager = __commonJS((exports, module) => {
   var process2 = __require("node:process");
-  var { Collection } = require_dist6();
-  var { DiscordAPIError } = require_dist5();
-  var { RESTJSONErrorCodes, Routes } = require_v1012();
+  var { Collection } = require_dist8();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors2();
   var { Role } = require_Role();
@@ -56411,9 +56147,9 @@ var require_RoleManager = __commonJS((exports, module) => {
     }
     async fetch(id, { cache = true, force = false } = {}) {
       if (!id) {
-        const data = await this.client.rest.get(Routes.guildRoles(this.guild.id));
+        const data2 = await this.client.rest.get(Routes.guildRoles(this.guild.id));
         const roles = new Collection;
-        for (const role of data)
+        for (const role of data2)
           roles.set(role.id, this._add(role, cache));
         return roles;
       }
@@ -56422,15 +56158,8 @@ var require_RoleManager = __commonJS((exports, module) => {
         if (existing)
           return existing;
       }
-      try {
-        const data = await this.client.rest.get(Routes.guildRole(this.guild.id, id));
-        return this._add(data, cache);
-      } catch (error) {
-        if (error instanceof DiscordAPIError && error.code === RESTJSONErrorCodes.UnknownRole) {
-          return null;
-        }
-        throw error;
-      }
+      const data = await this.client.rest.get(Routes.guildRole(this.guild.id, id));
+      return this._add(data, cache);
     }
     async create(options = {}) {
       let { name, color, hoist, permissions, position, mentionable, reason, icon, unicodeEmoji } = options;
@@ -56670,7 +56399,7 @@ var require_SystemChannelFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Guild.js
 var require_Guild = __commonJS((exports) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
   var { ChannelType, GuildPremiumTier, Routes, GuildFeature } = require_v1012();
@@ -56697,7 +56426,6 @@ var require_Guild = __commonJS((exports) => {
   var StageInstanceManager = require_StageInstanceManager();
   var VoiceStateManager = require_VoiceStateManager();
   var { resolveImage } = require_DataResolver();
-  var Status = require_Status();
   var SystemChannelFlagsBitField = require_SystemChannelFlagsBitField();
   var { discordSort, getSortableGroupTypes, resolvePartialEmoji } = require_Util();
 
@@ -56725,9 +56453,6 @@ var require_Guild = __commonJS((exports) => {
           this.available = false;
       }
       this.shardId = data.shardId;
-    }
-    get shard() {
-      return this.client.ws.shards.get(this.shardId);
     }
     _patch(data) {
       super._patch(data);
@@ -57230,9 +56955,7 @@ var require_Guild = __commonJS((exports) => {
         this.client.voice.adapters.set(this.id, methods);
         return {
           sendPayload: (data) => {
-            if (this.shard.status !== Status.Ready)
-              return false;
-            this.shard.send(data);
+            this.client.ws.send(this.shardId, data);
             return true;
           },
           destroy: () => {
@@ -57272,7 +56995,7 @@ var require_OAuth2Guild = __commonJS((exports, module) => {
 var require_GuildManager = __commonJS((exports, module) => {
   var process2 = __require("node:process");
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
   var { Routes, RouteBases } = require_v1012();
   var CachedManager = require_CachedManager();
@@ -57391,7 +57114,7 @@ var require_GuildManager = __commonJS((exports, module) => {
         const data2 = await this.client.rest.get(Routes.guild(id), {
           query: makeURLSearchParams({ with_counts: options.withCounts ?? true })
         });
-        data2.shardId = ShardClientUtil.shardIdForGuildId(id, this.client.options.shardCount);
+        data2.shardId = ShardClientUtil.shardIdForGuildId(id, await this.client.ws.fetchShardCount());
         return this._add(data2, options.cache);
       }
       const data = await this.client.rest.get(Routes.userGuilds(), { query: makeURLSearchParams(options) });
@@ -57451,9 +57174,6 @@ var require_UserManager = __commonJS((exports, module) => {
       const data = await this.client.rest.get(Routes.user(id));
       return this._add(data, cache);
     }
-    async fetchFlags(user, options) {
-      return (await this.fetch(user, options)).flags;
-    }
     async send(user, options) {
       return (await this.createDM(user)).send(options);
     }
@@ -57487,17 +57207,15 @@ var require_ClientPresence = __commonJS((exports, module) => {
     constructor(client, data = {}) {
       super(client, Object.assign(data, { status: data.status ?? "online", user: { id: null } }));
     }
-    set(presence) {
+    async set(presence) {
       const packet = this._parse(presence);
       this._patch(packet);
       if (presence.shardId === undefined) {
-        this.client.ws.broadcast({ op: GatewayOpcodes.PresenceUpdate, d: packet });
+        await this.client._broadcast({ op: GatewayOpcodes.PresenceUpdate, d: packet });
       } else if (Array.isArray(presence.shardId)) {
-        for (const shardId of presence.shardId) {
-          this.client.ws.shards.get(shardId).send({ op: GatewayOpcodes.PresenceUpdate, d: packet });
-        }
+        await Promise.all(presence.shardId.map((shardId) => this.client.ws.send(shardId, { op: GatewayOpcodes.PresenceUpdate, d: packet })));
       } else {
-        this.client.ws.shards.get(presence.shardId).send({ op: GatewayOpcodes.PresenceUpdate, d: packet });
+        await this.client.ws.send(presence.shardId, { op: GatewayOpcodes.PresenceUpdate, d: packet });
       }
       return this;
     }
@@ -57541,7 +57259,7 @@ var require_ClientPresence = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/StickerPack.js
 var require_StickerPack = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { DiscordSnowflake } = require_cjs();
   var Base = require_Base();
   var { Sticker } = require_Sticker();
@@ -57619,7 +57337,7 @@ var require_WidgetMember = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Widget.js
 var require_Widget = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var { Routes } = require_v1012();
   var Base = require_Base();
   var WidgetMember = require_WidgetMember();
@@ -57928,14 +57646,16 @@ var require_Sweepers = __commonJS((exports, module) => {
 // node_modules/discord.js/src/client/Client.js
 var require_Client = __commonJS((exports, module) => {
   var process2 = __require("node:process");
-  var { Collection } = require_dist6();
+  var { clearTimeout: clearTimeout2, setImmediate: setImmediate2, setTimeout: setTimeout2 } = __require("node:timers");
+  var { Collection } = require_dist8();
   var { makeURLSearchParams } = require_dist5();
-  var { OAuth2Scopes, Routes } = require_v1012();
+  var { WebSocketManager, WebSocketShardEvents, WebSocketShardStatus } = require_dist7();
+  var { GatewayDispatchEvents, GatewayIntentBits, OAuth2Scopes, Routes } = require_v1012();
   var BaseClient = require_BaseClient();
   var ActionsManager = require_ActionsManager();
   var ClientVoiceManager = require_ClientVoiceManager();
-  var WebSocketManager = require_WebSocketManager();
-  var { DiscordjsError, DiscordjsTypeError, DiscordjsRangeError, ErrorCodes } = require_errors2();
+  var PacketHandlers = require_handlers();
+  var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors2();
   var BaseGuildEmojiManager = require_BaseGuildEmojiManager();
   var ChannelManager = require_ChannelManager();
   var GuildManager = require_GuildManager();
@@ -57957,55 +57677,62 @@ var require_Client = __commonJS((exports, module) => {
   var PermissionsBitField = require_PermissionsBitField();
   var Status = require_Status();
   var Sweepers = require_Sweepers();
-  var deprecationEmittedForPremiumStickerPacks = false;
+  var WaitingForGuildEvents = [GatewayDispatchEvents.GuildCreate, GatewayDispatchEvents.GuildDelete];
+  var BeforeReadyWhitelist = [
+    GatewayDispatchEvents.Ready,
+    GatewayDispatchEvents.Resumed,
+    GatewayDispatchEvents.GuildCreate,
+    GatewayDispatchEvents.GuildDelete,
+    GatewayDispatchEvents.GuildMembersChunk,
+    GatewayDispatchEvents.GuildMemberAdd,
+    GatewayDispatchEvents.GuildMemberRemove
+  ];
 
   class Client extends BaseClient {
     constructor(options) {
       super(options);
       const data = __require("node:worker_threads").workerData ?? process2.env;
       const defaults = Options.createDefault();
-      if (this.options.shards === defaults.shards) {
-        if ("SHARDS" in data) {
-          this.options.shards = JSON.parse(data.SHARDS);
-        }
+      if (this.options.ws.shardIds === defaults.ws.shardIds && "SHARDS" in data) {
+        this.options.ws.shardIds = JSON.parse(data.SHARDS);
       }
-      if (this.options.shardCount === defaults.shardCount) {
-        if ("SHARD_COUNT" in data) {
-          this.options.shardCount = Number(data.SHARD_COUNT);
-        } else if (Array.isArray(this.options.shards)) {
-          this.options.shardCount = this.options.shards.length;
-        }
+      if (this.options.ws.shardCount === defaults.ws.shardCount && "SHARD_COUNT" in data) {
+        this.options.ws.shardCount = Number(data.SHARD_COUNT);
       }
-      const typeofShards = typeof this.options.shards;
-      if (typeofShards === "undefined" && typeof this.options.shardCount === "number") {
-        this.options.shards = Array.from({ length: this.options.shardCount }, (_, i) => i);
-      }
-      if (typeofShards === "number")
-        this.options.shards = [this.options.shards];
-      if (Array.isArray(this.options.shards)) {
-        this.options.shards = [
-          ...new Set(this.options.shards.filter((item) => !isNaN(item) && item >= 0 && item < Infinity && item === (item | 0)))
-        ];
-      }
+      this.presence = new ClientPresence(this, this.options.ws.initialPresence ?? this.options.presence);
       this._validateOptions();
-      this.ws = new WebSocketManager(this);
+      this.status = Status.Idle;
+      Object.defineProperty(this, "expectedGuilds", { value: new Set, writable: true });
+      Object.defineProperty(this, "readyTimeout", { value: null, writable: true });
       this.actions = new ActionsManager(this);
-      this.voice = new ClientVoiceManager(this);
       this.shard = process2.env.SHARDING_MANAGER ? ShardClientUtil.singleton(this, process2.env.SHARDING_MANAGER_MODE) : null;
       this.users = new UserManager(this);
       this.guilds = new GuildManager(this);
       this.channels = new ChannelManager(this);
       this.sweepers = new Sweepers(this, this.options.sweepers);
-      this.presence = new ClientPresence(this, this.options.presence);
       Object.defineProperty(this, "token", { writable: true });
       if (!this.token && "DISCORD_TOKEN" in process2.env) {
         this.token = process2.env.DISCORD_TOKEN;
+      } else if (this.options.ws.token) {
+        this.token = this.options.ws.token;
       } else {
         this.token = null;
       }
+      const wsOptions = {
+        ...this.options.ws,
+        intents: this.options.intents.bitfield,
+        rest: this.rest,
+        token: null
+      };
+      this.ws = new WebSocketManager(wsOptions);
+      this.voice = new ClientVoiceManager(this);
       this.user = null;
       this.application = null;
+      this.pings = new Collection;
+      this.lastPingTimestamps = new Collection;
       this.readyTimestamp = null;
+      Object.defineProperty(this, "incomingPacketQueue", { value: [] });
+      this._attachEvents();
     }
     get emojis() {
       const emojis = new BaseGuildEmojiManager(this);
@@ -58025,13 +57752,11 @@ var require_Client = __commonJS((exports, module) => {
     async login(token = this.token) {
       if (!token || typeof token !== "string")
         throw new DiscordjsError(ErrorCodes.TokenInvalid);
-      this.token = token = token.replace(/^(Bot|Bearer)\s*/i, "");
-      this.rest.setToken(token);
+      this.token = token.replace(/^(Bot|Bearer)\s*/i, "");
+      this.rest.setToken(this.token);
       this.emit(Events.Debug, `Provided token: ${this._censoredToken}`);
-      if (this.options.presence) {
-        this.options.ws.presence = this.presence._parse(this.options.presence);
-      }
       this.emit(Events.Debug, "Preparing to connect to the gateway...");
+      this.ws.setToken(this.token);
       try {
         await this.ws.connect();
         return this.token;
@@ -58040,8 +57765,75 @@ var require_Client = __commonJS((exports, module) => {
         throw error;
       }
     }
+    async _checkReady() {
+      if (this.readyTimeout) {
+        clearTimeout2(this.readyTimeout);
+        this.readyTimeout = null;
+      }
+      if (!this.expectedGuilds.size && (await this.ws.fetchStatus()).every((status) => status === WebSocketShardStatus.Ready)) {
+        this.emit(Events.Debug, "Client received all its guilds. Marking as fully ready.");
+        this.status = Status.Ready;
+        this._triggerClientReady();
+        return;
+      }
+      const hasGuildsIntent = this.options.intents.has(GatewayIntentBits.Guilds);
+      this.readyTimeout = setTimeout2(() => {
+        this.emit(Events.Debug, `${hasGuildsIntent ? `Client did not receive any guild packets in ${this.options.waitGuildTimeout} ms.` : "Client will not receive anymore guild packets."}\nUnavailable guild count: ${this.expectedGuilds.size}`);
+        this.readyTimeout = null;
+        this.status = Status.Ready;
+        this._triggerClientReady();
+      }, hasGuildsIntent ? this.options.waitGuildTimeout : 0).unref();
+    }
+    _attachEvents() {
+      this.ws.on(WebSocketShardEvents.Debug, (message, shardId) => this.emit(Events.Debug, `[WS => ${typeof shardId === "number" ? `Shard ${shardId}` : "Manager"}] ${message}`));
+      this.ws.on(WebSocketShardEvents.Dispatch, this._handlePacket.bind(this));
+      this.ws.on(WebSocketShardEvents.Ready, (data) => {
+        for (const guild of data.guilds) {
+          this.expectedGuilds.add(guild.id);
+        }
+        this.status = Status.WaitingForGuilds;
+        this._checkReady();
+      });
+      this.ws.on(WebSocketShardEvents.HeartbeatComplete, ({ heartbeatAt, latency }, shardId) => {
+        this.emit(Events.Debug, `[WS => Shard ${shardId}] Heartbeat acknowledged, latency of ${latency}ms.`);
+        this.lastPingTimestamps.set(shardId, heartbeatAt);
+        this.pings.set(shardId, latency);
+      });
+    }
+    _handlePacket(packet, shardId) {
+      if (this.status !== Status.Ready && !BeforeReadyWhitelist.includes(packet.t)) {
+        this.incomingPacketQueue.push({ packet, shardId });
+      } else {
+        if (this.incomingPacketQueue.length) {
+          const item = this.incomingPacketQueue.shift();
+          setImmediate2(() => {
+            this._handlePacket(item.packet, item.shardId);
+          }).unref();
+        }
+        if (PacketHandlers[packet.t]) {
+          PacketHandlers[packet.t](this, packet, shardId);
+        }
+        if (this.status === Status.WaitingForGuilds && WaitingForGuildEvents.includes(packet.t)) {
+          this.expectedGuilds.delete(packet.d.id);
+          this._checkReady();
+        }
+      }
+    }
+    async _broadcast(packet) {
+      const shardIds = await this.ws.getShardIds();
+      return Promise.all(shardIds.map((shardId) => this.ws.send(shardId, packet)));
+    }
+    _triggerClientReady() {
+      this.status = Status.Ready;
+      this.readyTimestamp = Date.now();
+      this.emit(Events.ClientReady, this);
+    }
     isReady() {
-      return !this.ws.destroyed && this.ws.status === Status.Ready;
+      return this.status === Status.Ready;
+    }
+    get ping() {
+      const sum = this.pings.reduce((a, b) => a + b, 0);
+      return sum / this.pings.size;
     }
     async destroy() {
       super.destroy();
@@ -58087,13 +57879,6 @@ var require_Client = __commonJS((exports, module) => {
       }
       const data = await this.rest.get(Routes.stickerPacks());
       return new Collection(data.sticker_packs.map((stickerPack) => [stickerPack.id, new StickerPack(this, stickerPack)]));
-    }
-    fetchPremiumStickerPacks() {
-      if (!deprecationEmittedForPremiumStickerPacks) {
-        process2.emitWarning("The Client#fetchPremiumStickerPacks() method is deprecated. Use Client#fetchStickerPacks() instead.", "DeprecationWarning");
-        deprecationEmittedForPremiumStickerPacks = true;
-      }
-      return this.fetchStickerPacks();
     }
     async fetchGuildPreview(guild) {
       const id = this.guilds.resolveId(guild);
@@ -58165,21 +57950,10 @@ var require_Client = __commonJS((exports, module) => {
       return eval(script);
     }
     _validateOptions(options = this.options) {
-      if (options.intents === undefined) {
+      if (options.intents === undefined && options.ws?.intents === undefined) {
         throw new DiscordjsTypeError(ErrorCodes.ClientMissingIntents);
       } else {
-        options.intents = new IntentsBitField(options.intents).freeze();
-      }
-      if (typeof options.shardCount !== "number" || isNaN(options.shardCount) || options.shardCount < 1) {
-        throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "shardCount", "a number greater than or equal to 1");
-      }
-      if (options.shards && !(options.shards === "auto" || Array.isArray(options.shards))) {
-        throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "shards", "'auto', a number or array of numbers");
-      }
-      if (options.shards && !options.shards.length)
-        throw new DiscordjsRangeError(ErrorCodes.ClientInvalidProvidedShards);
-      if (typeof options.makeCache !== "function") {
-        throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "makeCache", "a function");
+        options.intents = new IntentsBitField(options.intents ?? options.ws.intents).freeze();
       }
       if (typeof options.sweepers !== "object" || options.sweepers === null) {
         throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "sweepers", "an object");
@@ -58199,11 +57973,13 @@ var require_Client = __commonJS((exports, module) => {
       if (typeof options.allowedMentions !== "object" && options.allowedMentions !== undefined || options.allowedMentions === null) {
         throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "allowedMentions", "an object");
       }
-      if (typeof options.presence !== "object" || options.presence === null) {
-        throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "presence", "an object");
-      }
       if (typeof options.ws !== "object" || options.ws === null) {
         throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "ws", "an object");
+      }
+      if ((typeof options.presence !== "object" || options.presence === null) && options.ws.initialPresence === undefined) {
+        throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "presence", "an object");
+      } else {
+        options.ws.initialPresence = options.ws.initialPresence ?? this.presence._parse(this.options.presence);
       }
       if (typeof options.rest !== "object" || options.rest === null) {
         throw new DiscordjsTypeError(ErrorCodes.ClientInvalidOption, "rest", "an object");
@@ -58224,7 +58000,6 @@ var require_ShardEvents = __commonJS((exports, module) => {
     Error: "error",
     Message: "message",
     Ready: "ready",
-    Reconnecting: "reconnecting",
     Resume: "resume",
     Spawn: "spawn"
   };
@@ -58437,11 +58212,6 @@ var require_Shard = __commonJS((exports, module) => {
           this.emit(ShardEvents.Disconnect);
           return;
         }
-        if (message._reconnecting) {
-          this.ready = false;
-          this.emit(ShardEvents.Reconnecting);
-          return;
-        }
         if (message._resume) {
           this.ready = true;
           this.emit(ShardEvents.Resume);
@@ -58499,7 +58269,7 @@ var require_ShardingManager = __commonJS((exports, module) => {
   var path = __require("node:path");
   var process2 = __require("node:process");
   var { setTimeout: sleep } = __require("node:timers/promises");
-  var { Collection } = require_dist6();
+  var { Collection } = require_dist8();
   var Shard = require_Shard();
   var { DiscordjsError, DiscordjsTypeError, DiscordjsRangeError, ErrorCodes } = require_errors2();
   var { fetchRecommendedShardCount } = require_Util();
@@ -58649,54 +58419,9 @@ var require_ShardingManager = __commonJS((exports, module) => {
   module.exports = ShardingManager;
 });
 
-// node_modules/discord.js/src/util/Formatters.js
-var require_Formatters = __commonJS((exports, module) => {
-  var { deprecate } = __require("node:util");
-  var {
-    blockQuote,
-    bold,
-    channelMention,
-    codeBlock,
-    formatEmoji,
-    hideLinkEmbed,
-    hyperlink,
-    inlineCode,
-    italic,
-    quote,
-    roleMention,
-    spoiler,
-    strikethrough,
-    time,
-    TimestampStyles,
-    underscore,
-    userMention
-  } = require_dist7();
-
-  class Formatters extends null {
-    static blockQuote = deprecate(blockQuote, "Formatters.blockQuote() is deprecated. Import this method directly from discord.js instead.");
-    static bold = deprecate(bold, "Formatters.bold() is deprecated. Import this method directly from discord.js instead.");
-    static channelMention = deprecate(channelMention, "Formatters.channelMention() is deprecated. Import this method directly from discord.js instead.");
-    static codeBlock = deprecate(codeBlock, "Formatters.codeBlock() is deprecated. Import this method directly from discord.js instead.");
-    static formatEmoji = deprecate(formatEmoji, "Formatters.formatEmoji() is deprecated. Import this method directly from discord.js instead.");
-    static hideLinkEmbed = deprecate(hideLinkEmbed, "Formatters.hideLinkEmbed() is deprecated. Import this method directly from discord.js instead.");
-    static hyperlink = deprecate(hyperlink, "Formatters.hyperlink() is deprecated. Import this method directly from discord.js instead.");
-    static inlineCode = deprecate(inlineCode, "Formatters.inlineCode() is deprecated. Import this method directly from discord.js instead.");
-    static italic = deprecate(italic, "Formatters.italic() is deprecated. Import this method directly from discord.js instead.");
-    static quote = deprecate(quote, "Formatters.quote() is deprecated. Import this method directly from discord.js instead.");
-    static roleMention = deprecate(roleMention, "Formatters.roleMention() is deprecated. Import this method directly from discord.js instead.");
-    static spoiler = deprecate(spoiler, "Formatters.spoiler() is deprecated. Import this method directly from discord.js instead.");
-    static strikethrough = deprecate(strikethrough, "Formatters.strikethrough() is deprecated. Import this method directly from discord.js instead.");
-    static time = deprecate(time, "Formatters.time() is deprecated. Import this method directly from discord.js instead.");
-    static TimestampStyles = TimestampStyles;
-    static underscore = deprecate(underscore, "Formatters.underscore() is deprecated. Import this method directly from discord.js instead.");
-    static userMention = deprecate(userMention, "Formatters.userMention() is deprecated. Import this method directly from discord.js instead.");
-  }
-  module.exports = Formatters;
-});
-
 // node_modules/discord.js/src/structures/EmbedBuilder.js
 var require_EmbedBuilder = __commonJS((exports, module) => {
-  var { EmbedBuilder: BuildersEmbed, embedLength } = require_dist8();
+  var { EmbedBuilder: BuildersEmbed, embedLength } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
   var { resolveColor } = require_Util();
@@ -58770,7 +58495,7 @@ var require_AttachmentBuilder = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ModalBuilder.js
 var require_ModalBuilder = __commonJS((exports, module) => {
-  var { ModalBuilder: BuildersModal, ComponentBuilder } = require_dist8();
+  var { ModalBuilder: BuildersModal, ComponentBuilder } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
 
@@ -58788,63 +58513,9 @@ var require_ModalBuilder = __commonJS((exports, module) => {
   module.exports = ModalBuilder;
 });
 
-// node_modules/discord.js/src/structures/SelectMenuBuilder.js
-var require_SelectMenuBuilder = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
-  var StringSelectMenuBuilder = require_StringSelectMenuBuilder();
-  var deprecationEmitted = false;
-
-  class SelectMenuBuilder2 extends StringSelectMenuBuilder {
-    constructor(...params) {
-      super(...params);
-      if (!deprecationEmitted) {
-        process2.emitWarning("The SelectMenuBuilder class is deprecated. Use StringSelectMenuBuilder instead.", "DeprecationWarning");
-        deprecationEmitted = true;
-      }
-    }
-  }
-  module.exports = SelectMenuBuilder2;
-});
-
-// node_modules/discord.js/src/structures/SelectMenuComponent.js
-var require_SelectMenuComponent = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
-  var StringSelectMenuComponent = require_StringSelectMenuComponent();
-  var deprecationEmitted = false;
-
-  class SelectMenuComponent extends StringSelectMenuComponent {
-    constructor(...params) {
-      super(...params);
-      if (!deprecationEmitted) {
-        process2.emitWarning("The SelectMenuComponent class is deprecated. Use StringSelectMenuComponent instead.", "DeprecationWarning");
-        deprecationEmitted = true;
-      }
-    }
-  }
-  module.exports = SelectMenuComponent;
-});
-
-// node_modules/discord.js/src/structures/SelectMenuInteraction.js
-var require_SelectMenuInteraction = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
-  var StringSelectMenuInteraction = require_StringSelectMenuInteraction();
-  var deprecationEmitted = false;
-
-  class SelectMenuInteraction extends StringSelectMenuInteraction {
-    constructor(...params) {
-      super(...params);
-      if (!deprecationEmitted) {
-        process2.emitWarning("The SelectMenuInteraction class is deprecated. Use StringSelectMenuInteraction instead.", "DeprecationWarning");
-        deprecationEmitted = true;
-      }
-    }
-  }
-  module.exports = SelectMenuInteraction;
-});
-
 // node_modules/discord.js/src/structures/StringSelectMenuOptionBuilder.js
 var require_StringSelectMenuOptionBuilder = __commonJS((exports, module) => {
-  var { SelectMenuOptionBuilder: BuildersSelectMenuOption } = require_dist8();
+  var { SelectMenuOptionBuilder: BuildersSelectMenuOption } = require_dist10();
   var { isJSONEncodable } = require_dist();
   var { toSnakeCase } = require_Transformers();
   var { resolvePartialEmoji } = require_Util();
@@ -58869,24 +58540,6 @@ var require_StringSelectMenuOptionBuilder = __commonJS((exports, module) => {
   module.exports = StringSelectMenuOptionBuilder;
 });
 
-// node_modules/discord.js/src/structures/SelectMenuOptionBuilder.js
-var require_SelectMenuOptionBuilder = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
-  var StringSelectMenuOptionBuilder = require_StringSelectMenuOptionBuilder();
-  var deprecationEmitted = false;
-
-  class SelectMenuOptionBuilder2 extends StringSelectMenuOptionBuilder {
-    constructor(...params) {
-      super(...params);
-      if (!deprecationEmitted) {
-        process2.emitWarning("The SelectMenuOptionBuilder class is deprecated. Use StringSelectMenuOptionBuilder instead.", "DeprecationWarning");
-        deprecationEmitted = true;
-      }
-    }
-  }
-  module.exports = SelectMenuOptionBuilder2;
-});
-
 // node_modules/discord.js/src/index.js
 var require_src = __commonJS((exports) => {
   var { polyfillDispose } = require_dist();
@@ -58908,12 +58561,11 @@ var require_src = __commonJS((exports) => {
   exports.BaseManager = require_BaseManager();
   exports.BitField = require_BitField();
   exports.ChannelFlagsBitField = require_ChannelFlagsBitField();
-  exports.Collection = require_dist6().Collection;
+  exports.Collection = require_dist8().Collection;
   exports.Constants = require_Constants();
   exports.Colors = require_Colors();
   __exportStar(require_DataResolver(), exports);
   exports.Events = require_Events();
-  exports.Formatters = require_Formatters();
   exports.GuildMemberFlagsBitField = require_GuildMemberFlagsBitField().GuildMemberFlagsBitField;
   exports.IntentsBitField = require_IntentsBitField();
   exports.LimitedCollection = require_LimitedCollection();
@@ -58931,7 +58583,6 @@ var require_src = __commonJS((exports) => {
   exports.ThreadMemberFlagsBitField = require_ThreadMemberFlagsBitField();
   exports.UserFlagsBitField = require_UserFlagsBitField();
   __exportStar(require_Util(), exports);
-  exports.WebSocketShardEvents = require_WebSocketShardEvents();
   exports.version = require_package().version;
   exports.ApplicationCommandManager = require_ApplicationCommandManager();
   exports.ApplicationEmojiManager = require_ApplicationEmojiManager();
@@ -58969,8 +58620,6 @@ var require_src = __commonJS((exports) => {
   exports.ThreadMemberManager = require_ThreadMemberManager();
   exports.UserManager = require_UserManager();
   exports.VoiceStateManager = require_VoiceStateManager();
-  exports.WebSocketManager = require_WebSocketManager();
-  exports.WebSocketShard = require_WebSocketShard();
   exports.ActionRow = require_ActionRow();
   exports.ActionRowBuilder = require_ActionRowBuilder();
   exports.Activity = require_Presence().Activity;
@@ -59028,7 +58677,6 @@ var require_src = __commonJS((exports) => {
   exports.InteractionResponse = require_InteractionResponse();
   exports.InteractionWebhook = require_InteractionWebhook();
   exports.Invite = require_Invite();
-  exports.InviteStageInstance = require_InviteStageInstance();
   exports.InviteGuild = require_InviteGuild();
   exports.Message = require_Message().Message;
   exports.Attachment = require_Attachment();
@@ -59043,7 +58691,7 @@ var require_src = __commonJS((exports) => {
   exports.MessageReaction = require_MessageReaction();
   exports.ModalSubmitInteraction = require_ModalSubmitInteraction();
   exports.ModalSubmitFields = require_ModalSubmitFields();
-  exports.NewsChannel = require_NewsChannel();
+  exports.AnnouncementChannel = require_AnnouncementChannel();
   exports.OAuth2Guild = require_OAuth2Guild();
   exports.PartialGroupDMChannel = require_PartialGroupDMChannel();
   exports.PermissionOverwrites = require_PermissionOverwrites();
@@ -59054,27 +58702,23 @@ var require_src = __commonJS((exports) => {
   exports.ReactionEmoji = require_ReactionEmoji();
   exports.RichPresenceAssets = require_Presence().RichPresenceAssets;
   exports.Role = require_Role().Role;
-  exports.SelectMenuBuilder = require_SelectMenuBuilder();
   exports.ChannelSelectMenuBuilder = require_ChannelSelectMenuBuilder();
   exports.MentionableSelectMenuBuilder = require_MentionableSelectMenuBuilder();
   exports.RoleSelectMenuBuilder = require_RoleSelectMenuBuilder();
   exports.StringSelectMenuBuilder = require_StringSelectMenuBuilder();
   exports.UserSelectMenuBuilder = require_UserSelectMenuBuilder();
   exports.BaseSelectMenuComponent = require_BaseSelectMenuComponent();
-  exports.SelectMenuComponent = require_SelectMenuComponent();
   exports.ChannelSelectMenuComponent = require_ChannelSelectMenuComponent();
   exports.MentionableSelectMenuComponent = require_MentionableSelectMenuComponent();
   exports.RoleSelectMenuComponent = require_RoleSelectMenuComponent();
   exports.StringSelectMenuComponent = require_StringSelectMenuComponent();
   exports.UserSelectMenuComponent = require_UserSelectMenuComponent();
-  exports.SelectMenuInteraction = require_SelectMenuInteraction();
   exports.ChannelSelectMenuInteraction = require_ChannelSelectMenuInteraction();
   exports.MentionableSelectMenuInteraction = require_MentionableSelectMenuInteraction();
   exports.MentionableSelectMenuInteraction = require_MentionableSelectMenuInteraction();
   exports.RoleSelectMenuInteraction = require_RoleSelectMenuInteraction();
   exports.StringSelectMenuInteraction = require_StringSelectMenuInteraction();
   exports.UserSelectMenuInteraction = require_UserSelectMenuInteraction();
-  exports.SelectMenuOptionBuilder = require_SelectMenuOptionBuilder();
   exports.SKU = require_SKU().SKU;
   exports.StringSelectMenuOptionBuilder = require_StringSelectMenuOptionBuilder();
   exports.StageChannel = require_StageChannel();
@@ -59101,11 +58745,11 @@ var require_src = __commonJS((exports) => {
   exports.WelcomeChannel = require_WelcomeChannel();
   exports.WelcomeScreen = require_WelcomeScreen();
   __exportStar(require_v1012(), exports);
-  __exportStar(require_dist8(), exports);
-  __exportStar(require_dist7(), exports);
+  __exportStar(require_dist10(), exports);
+  __exportStar(require_dist9(), exports);
   __exportStar(require_dist5(), exports);
   __exportStar(require_dist(), exports);
-  __exportStar(require_dist10(), exports);
+  __exportStar(require_dist7(), exports);
 });
 
 // src/discord/discord.module.ts

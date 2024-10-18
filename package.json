@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "discord.js": "^14.16.3"
+    "discord.js": "^15.0.0-dev.1729080291-62fb9de9c"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -17,7 +17,6 @@
     "lint": "biome lint --error-on-warnings --write .",
     "watch": "bun tools/dev.ts watch",
     "commands": "bun tools/dev.ts commands",
-    "start": "bun src/client.module.ts",
-    "start-js": "bun public/client.module.js"
+    "start": "bun tools/dev.ts start"
   }
 }
