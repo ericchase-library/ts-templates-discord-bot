@@ -1,16 +1,19 @@
-import { RunSync } from 'lib/ericchase/Platform/Bun/Child Process.js';
 import { ConsoleError } from 'lib/ericchase/Utility/Console.js';
 import { out_dir, src_dir } from 'tools/scripts/build.js';
 
+const args = new Set(Bun.argv.slice(2));
+
+const env = {
+  DEBUG: args.has('debug') ? '1' : '0',
+};
+
+const path = args.has('js') //
+  ? out_dir.appendSegment('client.module.js')
+  : src_dir.appendSegment('client.module.ts');
+
 async function start() {
   try {
-    switch (Bun.argv[2]) {
-      case 'js':
-        RunSync.Bun(out_dir.appendSegment('client.module.js').path);
-        break;
-      default:
-        RunSync.Bun(src_dir.appendSegment('client.module.ts').path);
-    }
+    Bun.spawnSync(['bun', path.path], { env, stdout: 'inherit', stderr: 'inherit' });
   } catch (error) {
     ConsoleError(error);
   }

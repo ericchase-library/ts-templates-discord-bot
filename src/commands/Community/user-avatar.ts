@@ -1,10 +1,10 @@
 import { ConsoleError } from 'lib/ericchase/Utility/Console.js';
-import { HandleCommandError } from 'src/commands/Command.js';
+import { HandleCommandError, type Command } from 'src/commands/Command.js';
 import { EmbedBuilder, SlashCommandBuilder, type GuildMember, type Interaction } from 'src/discord/discord.module.js';
 
 const name = 'user-avatar';
 
-export const user_avatar = {
+export const user_avatar: Command = {
   name,
 
   // Command Builder

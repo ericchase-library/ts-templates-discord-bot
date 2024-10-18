@@ -1,8 +1,8 @@
-import { getBotToken, getClientID } from 'lib/env.js';
 import { ConsoleError, ConsoleLog } from 'lib/ericchase/Utility/Console.js';
 import { Sleep } from 'lib/ericchase/Utility/Sleep.js';
+import { getBotToken, getClientID } from 'lib/lib.env.js';
 import { command_name_map } from 'src/commands/setup.js';
-import { Client, GatewayIntentBits, REST, Routes, type ApplicationCommand, type SlashCommandOptionsOnlyBuilder } from 'src/discord/discord.module.js';
+import { Client, Events, GatewayIntentBits, REST, Routes, type ApplicationCommand, type SlashCommandOptionsOnlyBuilder } from 'src/discord/discord.module.js';
 
 const rest = new REST({ version: '10' }).setToken(getBotToken());
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -13,7 +13,13 @@ for (const [_, command] of command_name_map) {
   command_data_list.push(command.data);
 }
 
-client.once('ready', async () => {
+if (process.env.DEBUG === '1') {
+  client.on(Events.Debug, (message) => {
+    console.log('debug:', message);
+  });
+}
+
+client.once(Events.ClientReady, async () => {
   try {
     ConsoleLog(`Logged in as ${client.user?.tag ?? '[APP]'}`);
     ConsoleLog(

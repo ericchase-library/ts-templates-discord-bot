@@ -1,9 +1,9 @@
-import { HandleCommandError } from 'src/commands/Command.js';
+import { HandleCommandError, type Command } from 'src/commands/Command.js';
 import { EmbedBuilder, SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
 
 const name = 'server-icon';
 
-export const server_icon = {
+export const server_icon: Command = {
   name,
 
   // Command Builder

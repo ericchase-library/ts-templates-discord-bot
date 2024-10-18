@@ -1,4 +1,4 @@
-import { getBotToken, getClientID } from 'lib/env.js';
+import { getBotToken, getClientID } from 'lib/lib.env.js';
 import { ConsoleError, ConsoleLog } from 'lib/ericchase/Utility/Console.js';
 import { type ApplicationCommand, REST, Routes } from 'src/discord/discord.module.js';
 
