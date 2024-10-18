@@ -15,13 +15,13 @@ for (const [_, command] of command_name_map) {
 
 client.once('ready', async () => {
   try {
-    console.log(`Logged in as ${client.user?.tag ?? '[APP]'}`);
-    console.log(
+    ConsoleLog(`Logged in as ${client.user?.tag ?? '[APP]'}`);
+    ConsoleLog(
       'Registering commands:',
       command_data_list.map((data) => data.name),
     );
     const guilds = await client.guilds.fetch();
-    console.log(`for ${guilds.size} guilds...`);
+    ConsoleLog(`for ${guilds.size} guilds...`);
     for (const [_, guild] of guilds) {
       try {
         const existingCommands = await rest.get(Routes.applicationGuildCommands(getClientID(), guild.id));
@@ -45,9 +45,9 @@ client.once('ready', async () => {
       }
       await Sleep(delay);
     }
-    console.log('Finished registering commands for all guilds!');
+    ConsoleLog('Finished registering commands for all guilds!');
   } catch (error) {
-    console.error('Error fetching guilds:', error);
+    ConsoleError('Error fetching guilds:', error);
   } finally {
     client.destroy();
   }

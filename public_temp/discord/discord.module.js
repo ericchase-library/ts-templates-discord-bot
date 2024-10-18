@@ -59115,6 +59115,7 @@ var export_Routes = import_discord.Routes;
 var export_REST = import_discord.REST;
 var export_PermissionsBitField = import_discord.PermissionsBitField;
 var export_Partials = import_discord.Partials;
+var export_GuildVerificationLevel = import_discord.GuildVerificationLevel;
 var export_GuildMember = import_discord.GuildMember;
 var export_GatewayIntentBits = import_discord.GatewayIntentBits;
 var export_EmbedBuilder = import_discord.EmbedBuilder;
@@ -59132,6 +59133,7 @@ export {
   export_REST as REST,
   export_PermissionsBitField as PermissionsBitField,
   export_Partials as Partials,
+  export_GuildVerificationLevel as GuildVerificationLevel,
   export_GuildMember as GuildMember,
   export_GatewayIntentBits as GatewayIntentBits,
   export_EmbedBuilder as EmbedBuilder,

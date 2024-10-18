@@ -1,9 +1,18 @@
 import type { Command } from 'src/commands/Command.js';
-import { avatar } from 'src/commands/Community/avatar.js';
 import { ping } from 'src/commands/Community/ping.js';
-import { serverIcon } from 'src/commands/Community/server-icon.js';
+import { server_icon } from 'src/commands/Community/server-icon.js';
+import { server_info } from 'src/commands/Community/server-info.js';
+import { user_avatar } from 'src/commands/Community/user-avatar.js';
+import { user_info } from 'src/commands/Community/user-info.js';
 
-const enabled_commands = [avatar, ping, serverIcon];
+const enabled_commands = [
+  //
+  ping,
+  server_icon,
+  server_info,
+  user_avatar,
+  user_info,
+];
 
 export const command_name_map = new Map<string, Command>();
 for (const command of enabled_commands) {

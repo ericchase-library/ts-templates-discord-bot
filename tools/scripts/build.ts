@@ -116,21 +116,12 @@ export async function buildStep_ProcessHTMLFiles() {
 
 // step: copy
 export async function buildStep_Copy() {
-  const src_copied_paths = await copy({
+  const copied_paths = await copy({
     out_dirs: [out_dir],
     to_copy: new GlobScanner().scan(src_dir, '**/*'),
     to_exclude: new GlobScanner().scan(src_dir, '**/*.html', ...component_patterns, ...lib_patterns, ...module_patterns, ...script_patterns, ...source_patterns),
   });
-  const tmp_copied_paths = await copy({
-    out_dirs: [out_dir],
-    to_copy: new GlobScanner().scan(tmp_dir, '**/*'), // exclude nothing
-    preprocessors: [import_module_remapper],
-  });
-  const copied_paths = new Set([
-    ...src_copied_paths.paths, //
-    ...tmp_copied_paths.paths,
-  ]);
-  for (const path of copied_paths) {
+  for (const path of copied_paths.paths) {
     onLog(`copy: ${path}`);
   }
   if (build_mode.watch === false) {
@@ -138,33 +129,19 @@ export async function buildStep_Copy() {
   }
 }
 
-export async function buildStep_Move() {
-  // Move Index
-  // github pages is a popular choice for static website hosting. there's just
-  // one small issue:
-  //
-  // https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-  // > The source branch can be any branch in your repository, and the source
-  // > folder can either be the root of the repository (/) on the source branch
-  // > or a /docs folder on the source branch.
-  //
-  // the classic github pages system doesn't allow serving directly from a
-  // subfolder in a repository. users would need to find a workaround. this
-  // issue is especially frustrating when using popular frontend frameworks,
-  // because those tools typically build the webpage into a subfolder called
-  // "build" or "dist". there's generally no clean solution when using those
-  // tools. and the workarounds are not particularly great. since we have a
-  // custom build tool, we can easily move the built index file to the root
-  // directory and call it a day. the only change we would need to make is
-  // adding the buildDir into any links on the index page. for example,
-  // `<script src="./index.js" type="module"></script>` would become
-  // `<script src="./public/index.js" type="module"></script>`. hopefully i'll
-  // be able to automate this process in the future. for now, we won't do this,
-  // because the local server reads from the public/ folder
-  //
-  // if (await CopyFile({ from: PathGroup.new({ basedir: outDir, path: 'index.html' }).path, to: PathGroup.new({ path: 'index.html' }).path })) {
-  //   DeleteFile(PathGroup.new({ basedir: outDir, path: 'index.html' }).path);
-  // }
+// step: copy temp
+export async function buildStep_CopyTemp() {
+  const copied_paths = await copy({
+    out_dirs: [out_dir],
+    to_copy: new GlobScanner().scan(tmp_dir, '**/*'), // exclude nothing
+    preprocessors: [import_module_remapper],
+  });
+  for (const path of copied_paths.paths) {
+    onLog(`copy: ${path}`);
+  }
+  if (build_mode.watch === false) {
+    onLog(`${copied_paths.size} files copied.`);
+  }
 }
 
 // step: rename
@@ -202,6 +179,7 @@ if (Bun.argv[1] === __filename) {
     await buildStep_SetupBundler();
     await buildStep_ProcessHTMLFiles();
     await buildStep_Copy();
+    await buildStep_CopyTemp();
     await buildStep_Rename();
   }
   Cache_FileStats_Unlock();

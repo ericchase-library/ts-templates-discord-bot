@@ -3,11 +3,13 @@ import { EmbedBuilder, SlashCommandBuilder, type Interaction } from 'src/discord
 
 const name = 'server-icon';
 
-export const serverIcon = {
+export const server_icon = {
   name,
 
   // Command Builder
-  data: new SlashCommandBuilder().setName(name).setDescription('Get the Server Icon of this Server'),
+  data: new SlashCommandBuilder() //
+    .setName(name)
+    .setDescription('Get the Server Icon of this Server'),
 
   // Execute Function
   async execute(interaction: Interaction) {

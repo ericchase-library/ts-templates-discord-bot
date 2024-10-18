@@ -9,11 +9,10 @@ export type Command = {
 
 export async function HandleCommandError(error: any, interaction: Interaction) {
   ConsoleError(error);
-  // Send a user-friendly response
   if (interaction.isChatInputCommand()) {
     await interaction.reply({
       content: 'Oops! Something went wrong while processing your request. Please try again later.',
-      ephemeral: true, // This makes the message visible only to the user who triggered the command
+      ephemeral: true,
     });
   }
 }

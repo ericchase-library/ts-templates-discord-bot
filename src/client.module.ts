@@ -6,7 +6,7 @@ import { Client, GatewayIntentBits, type Interaction } from 'src/discord/discord
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once('ready', () => {
-  console.log('Bot is online.');
+  ConsoleLog('Bot is online.');
 });
 
 client.on('interactionCreate', async (interaction: Interaction) => {
