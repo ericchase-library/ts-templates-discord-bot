@@ -1,7 +1,7 @@
 import { getBotToken } from 'lib/env.js';
 import { ConsoleError, ConsoleLog } from 'lib/ericchase/Utility/Console.js';
 import { command_name_map } from 'src/commands/setup.js';
-import { Client, GatewayIntentBits, type Interaction } from 'src/discord/discord.module.js';
+import { Client, GatewayIntentBits, GuildMember, type Interaction } from 'src/discord/discord.module.js';
 
 // Client Events
 // {
@@ -96,8 +96,11 @@ client.on('interactionCreate', async (interaction: Interaction) => {
     const command = command_name_map.get(interaction.commandName);
     if (command !== undefined) {
       try {
-        const user = getUser(interaction);
-        ConsoleLog(`${user} is executing command "${command.name}".`);
+        if (interaction.member instanceof GuildMember) {
+          ConsoleLog(`${interaction.member.displayName} (${interaction.member?.user.username}) is executing command "${command.name}".`);
+        } else {
+          ConsoleLog(`${interaction.member?.user.username} is executing command "${command.name}".`);
+        }
         await command.execute(interaction);
       } catch (error) {
         ConsoleError(error);
@@ -109,14 +112,3 @@ client.on('interactionCreate', async (interaction: Interaction) => {
 
 ConsoleLog('Attempting to log in.');
 client.login(getBotToken());
-
-function getUser(interaction: Interaction) {
-  if (interaction.isCommand()) {
-    let user = undefined;
-    if ('getUser' in interaction.options) {
-      user = interaction.options.getUser('user');
-    }
-    user = user ?? interaction.user;
-    return `${user.displayName} [${user.id}]`;
-  }
-}
