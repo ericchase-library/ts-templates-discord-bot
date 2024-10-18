@@ -77,6 +77,11 @@ function ConsoleError(...items) {
   newline_count = 0;
   marker_manager.updateMarkers();
 }
+function ConsoleLog(...items) {
+  console["log"](...items);
+  newline_count = 0;
+  marker_manager.updateMarkers();
+}
 
 // src/commands/Command.ts
 async function HandleCommandError(error, interaction) {
@@ -172,19 +177,31 @@ for (const command of enabled_commands) {
 import { Client, GatewayIntentBits } from "./discord/discord.module.js";
 var client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.once("ready", () => {
-  console.log("Bot is ready!");
+  console.log("Bot is online.");
 });
 client.on("interactionCreate", async (interaction) => {
   if (interaction.isCommand()) {
     const command = command_name_map.get(interaction.commandName);
     if (command !== undefined) {
       try {
+        const user = getUser(interaction);
+        ConsoleLog(`${user} is executing command "${command.name}".`);
         await command.execute(interaction);
       } catch (error) {
-        console.error(error);
+        ConsoleError(error);
         await interaction.reply({ content: "There was an error while executing this command!", ephemeral: true });
       }
     }
   }
 });
 client.login(getBotToken());
+function getUser(interaction) {
+  if (interaction.isCommand()) {
+    let user = undefined;
+    if ("getUser" in interaction.options) {
+      user = interaction.options.getUser("user");
+    }
+    user = user ?? interaction.user;
+    return `${user.displayName} [${user.id}]`;
+  }
+}
