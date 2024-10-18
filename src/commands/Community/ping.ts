@@ -3,7 +3,6 @@ import { HandleCommandError, type Command } from 'src/commands/Command.js';
 import { SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
 
 const name = 'ping';
-
 export const ping: Command = {
   name,
 

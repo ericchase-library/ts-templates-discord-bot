@@ -17,6 +17,7 @@ export {
   REST,
   Routes,
   SlashCommandBuilder,
+  User,
 } from 'discord.js';
 
 export type {

@@ -1,4 +1,4 @@
-// src/lib/env.ts
+// src/lib/lib.env.ts
 function getVariable(key) {
   if (process.env[key] === undefined || process.env[key] === "") {
     throw new Error(`.env '${key}' is undefined`);

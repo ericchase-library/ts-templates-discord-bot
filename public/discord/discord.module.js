@@ -58754,6 +58754,7 @@ var require_src = __commonJS((exports) => {
 
 // src/discord/discord.module.ts
 var import_discord = __toESM(require_src(), 1);
+var export_User = import_discord.User;
 var export_SlashCommandBuilder = import_discord.SlashCommandBuilder;
 var export_Routes = import_discord.Routes;
 var export_REST = import_discord.REST;
@@ -58762,6 +58763,7 @@ var export_Partials = import_discord.Partials;
 var export_GuildVerificationLevel = import_discord.GuildVerificationLevel;
 var export_GuildMember = import_discord.GuildMember;
 var export_GatewayIntentBits = import_discord.GatewayIntentBits;
+var export_Events = import_discord.Events;
 var export_EmbedBuilder = import_discord.EmbedBuilder;
 var export_Collection = import_discord.Collection;
 var export_Client = import_discord.Client;
@@ -58772,6 +58774,7 @@ var export_ApplicationCommand = import_discord.ApplicationCommand;
 var export_ActionRowBuilder = import_discord.ActionRowBuilder;
 
 export {
+  export_User as User,
   export_SlashCommandBuilder as SlashCommandBuilder,
   export_Routes as Routes,
   export_REST as REST,
@@ -58780,6 +58783,7 @@ export {
   export_GuildVerificationLevel as GuildVerificationLevel,
   export_GuildMember as GuildMember,
   export_GatewayIntentBits as GatewayIntentBits,
+  export_Events as Events,
   export_EmbedBuilder as EmbedBuilder,
   export_Collection as Collection,
   export_Client as Client,

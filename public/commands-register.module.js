@@ -1,17 +1,3 @@
-// src/lib/env.ts
-function getVariable(key) {
-  if (process.env[key] === undefined || process.env[key] === "") {
-    throw new Error(`.env '${key}' is undefined`);
-  }
-  return process.env[key];
-}
-function getBotToken() {
-  return getVariable("BOT_TOKEN");
-}
-function getClientID() {
-  return getVariable("CLIENT_ID");
-}
-
 // src/lib/ericchase/Utility/UpdateMarker.ts
 class UpdateMarker {
   $manager;
@@ -89,6 +75,20 @@ function ConsoleLog(...items) {
 // src/lib/ericchase/Utility/Sleep.ts
 async function Sleep(ms) {
   await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// src/lib/lib.env.ts
+function getVariable(key) {
+  if (process.env[key] === undefined || process.env[key] === "") {
+    throw new Error(`.env '${key}' is undefined`);
+  }
+  return process.env[key];
+}
+function getBotToken() {
+  return getVariable("BOT_TOKEN");
+}
+function getClientID() {
+  return getVariable("CLIENT_ID");
 }
 
 // src/commands/Command.ts
@@ -225,13 +225,75 @@ var user_info = {
     try {
       if (interaction.isChatInputCommand()) {
         if (interaction.guild) {
-          const user = interaction.options.getUser("user") ?? interaction.user;
-          const member = await interaction.guild.members.fetch(user.id);
-          const icon = user.displayAvatarURL();
-          const tag = user.tag;
-          const embed = new EmbedBuilder4().setColor("Blue").setAuthor({ name: tag, iconURL: icon }).setThumbnail(icon).addFields({ name: "User", value: `${user}`, inline: false }).addFields({ name: "Roles", value: `${member.roles.cache.map((r) => r).join(" ")}`, inline: false }).addFields({ name: "Joined Server", value: member.joinedAt?.toLocaleDateString() ?? "???", inline: true }).addFields({ name: "Joined Discord", value: user.createdAt?.toLocaleDateString() ?? "???", inline: true }).setFooter({ text: `User ID: ${user.id}`, iconURL: icon }).setTimestamp();
+          const target_user = interaction.options.getUser("user") ?? interaction.user;
+          const target_member = await interaction.guild.members.fetch(target_user.id);
+          const target_icon = target_user.displayAvatarURL();
+          const embed = new EmbedBuilder4().setColor("Blue").setAuthor({ name: target_user.tag, iconURL: target_icon }).setThumbnail(target_icon).addFields({ name: "User", value: `${target_user}`, inline: false }).addFields({ name: "Roles", value: `${target_member.roles.cache.map((r) => r).join(" ")}`, inline: false }).addFields({ name: "Joined Server", value: target_member.joinedAt?.toLocaleDateString() ?? "???", inline: true }).addFields({ name: "Joined Discord", value: target_user.createdAt?.toLocaleDateString() ?? "???", inline: true }).setFooter({ text: `User ID: ${target_user.id}`, iconURL: target_icon }).setTimestamp();
           await interaction.reply({ embeds: [embed] });
         }
+      }
+    } catch (error) {
+      HandleCommandError(error, interaction);
+    }
+  }
+};
+
+// src/commands/Moderation/verify.ts
+import { getGuildMember, getUsernameString } from "lib/lib.discord.module.js";
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder as EmbedBuilder5, PermissionsBitField, SlashCommandBuilder as SlashCommandBuilder6 } from "./discord/discord.module.js";
+var verification_role_name = "Verified";
+var name6 = "verify";
+var verify = {
+  name: name6,
+  data: new SlashCommandBuilder6().setName(name6).setDescription("Verify a member of the server.").addUserOption((option) => option.setName("user").setDescription("The user to get info on").setRequired(true)),
+  async execute(interaction) {
+    try {
+      if (interaction.isChatInputCommand()) {
+        const guild = interaction.guild ?? undefined;
+        if (guild === undefined) {
+          await interaction.reply({ content: "Error: Failed to retrieve GUILD data.", ephemeral: true });
+          return;
+        }
+        {
+          const member = await getGuildMember(interaction) ?? undefined;
+          if (member === undefined) {
+            await interaction.reply({ content: "Error: Failed to retrieve MEMBER data.", ephemeral: true });
+            return;
+          }
+          if (member.permissions.has(PermissionsBitField.Flags.ModerateMembers) === false) {
+            await interaction.reply({ content: "Permissions Error: You must be a MODERATOR to create a verification message.", ephemeral: true });
+            return;
+          }
+        }
+        const target_user = interaction.options.getUser("user") ?? interaction.user;
+        const target_member = await guild.members.fetch(target_user.id);
+        const target_user_string = getUsernameString(target_user, target_member);
+        const embed = new EmbedBuilder5().setColor("Blue").setTitle("Server Verification").setDescription(`Click the button below to verify ${target_user_string} within the server.`);
+        const button = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId("button").setEmoji("\u2705").setLabel("Verify").setStyle(ButtonStyle.Success));
+        const reply_message = await interaction.reply({
+          embeds: [embed],
+          components: [button],
+          fetchReply: true
+        });
+        const collector = reply_message.createMessageComponentCollector({});
+        collector.on("collect", async (followup_interaction) => {
+          const description = (() => {
+            const role = guild.roles.cache.find((role2) => role2.name === verification_role_name);
+            if (role) {
+              target_member.roles.add(role);
+              if (target_member.roles.cache.has(role.id)) {
+                return `${target_user_string} is now verified!`;
+              }
+              return `Error: Roles for ${target_user_string} could not be updated.`;
+            }
+            return `Error: Failed to retrieve ROLE data. Does the role "${verification_role_name}" exist?`;
+          })();
+          embed.setDescription(description);
+          await followup_interaction.update({ embeds: [embed], components: [] });
+          collector.stop();
+        });
+      } else {
+        ConsoleError("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -245,7 +307,8 @@ var enabled_commands = [
   server_icon,
   server_info,
   user_avatar,
-  user_info
+  user_info,
+  verify
 ];
 var command_name_map = new Map;
 for (const command of enabled_commands) {
@@ -253,7 +316,7 @@ for (const command of enabled_commands) {
 }
 
 // src/commands-register.module.ts
-import { Client, GatewayIntentBits, REST, Routes } from "./discord/discord.module.js";
+import { Client, Events, GatewayIntentBits, REST, Routes } from "./discord/discord.module.js";
 var rest = new REST({ version: "10" }).setToken(getBotToken());
 var client = new Client({ intents: [GatewayIntentBits.Guilds] });
 var delay = 500;
@@ -261,7 +324,12 @@ var command_data_list = [];
 for (const [_, command] of command_name_map) {
   command_data_list.push(command.data);
 }
-client.once("ready", async () => {
+if (process.env.DEBUG === "1") {
+  client.on(Events.Debug, (message) => {
+    console.log("debug:", message);
+  });
+}
+client.once(Events.ClientReady, async () => {
   try {
     ConsoleLog(`Logged in as ${client.user?.tag ?? "[APP]"}`);
     ConsoleLog("Registering commands:", command_data_list.map((data) => data.name));

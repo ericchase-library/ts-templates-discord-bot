@@ -1,6 +1,6 @@
-import { GuildMember, type Interaction, type User } from 'src/discord/discord.module.js';
-
-export async function getGuildMember(interaction: Interaction) {
+// src/lib/lib.discord.module.ts
+import { GuildMember } from "src/discord/discord.module.js";
+async function getGuildMember(interaction) {
   if (interaction.member) {
     if (interaction.member instanceof GuildMember) {
       return interaction.member;
@@ -9,9 +9,12 @@ export async function getGuildMember(interaction: Interaction) {
       return await interaction.guild.members.fetch(interaction.member.user.id);
     }
   }
-  return undefined;
+  return;
 }
-
-export function getUsernameString(user: User, member: GuildMember) {
+function getUsernameString(user, member) {
   return `${user.displayName} (${member.user.username})`;
 }
+export {
+  getUsernameString,
+  getGuildMember
+};
