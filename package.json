@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "discord.js": "^15.0.0-dev.1729080291-62fb9de9c"
+    "discord.js": "^15.0.0-dev.1729383186-6cbe2487b"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "^1.1.11",
     "@types/chrome": "^0.0.278",
-    "@types/node": "^22.7.6",
+    "@types/node": "^22.7.7",
     "node-html-parser": "^6.1.13",
     "prettier": "^3.3.3"
   },

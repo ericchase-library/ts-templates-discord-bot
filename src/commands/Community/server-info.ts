@@ -1,8 +1,8 @@
 import { HandleCommandError, type Command } from 'src/commands/Command.js';
 import { EmbedBuilder, GuildVerificationLevel, SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
 
-const name = 'server-info';
-export const server_info: Command = {
+const name = 'serverinfo';
+export const command_server_info: Command = {
   name,
 
   // Command Builder
@@ -17,25 +17,26 @@ export const server_info: Command = {
         if (interaction.guild) {
           const { guild } = interaction;
           const { memberCount, name, ownerId } = guild;
-          const user = interaction.options.getUser('user') ?? interaction.user;
-          const member = await interaction.guild.members.fetch(user.id);
-          const emojis = guild.emojis.cache.size;
-          const icon = guild.iconURL() ?? undefined;
-          const roles = guild.roles.cache.size;
+
+          const target_user = interaction.options.getUser('user') ?? interaction.user;
+          const target_member = await interaction.guild.members.fetch(target_user.id);
+          const target_emojis = guild.emojis.cache.size;
+          const target_icon = guild.iconURL() ?? undefined;
+          const target_roles = guild.roles.cache.size;
 
           const embed = new EmbedBuilder()
             .setColor('Blue')
-            .setThumbnail(icon ?? null)
-            .setAuthor({ name: name, iconURL: icon })
-            .setFooter({ text: `Server ID: ${guild.id}`, iconURL: icon })
+            .setThumbnail(target_icon ?? null)
+            .setAuthor({ name: name, iconURL: target_icon })
+            .setFooter({ text: `Server ID: ${guild.id}`, iconURL: target_icon })
             .setTimestamp()
             .addFields({ name: 'Name', value: `${name}`, inline: false })
             .addFields({ name: 'Date Created', value: guild.createdAt?.toLocaleDateString() ?? '???', inline: true })
-            .addFields({ name: 'Joined', value: member.joinedAt?.toLocaleDateString() ?? '???', inline: true })
+            .addFields({ name: 'Joined', value: target_member.joinedAt?.toLocaleDateString() ?? '???', inline: true })
             .addFields({ name: 'Server Owner', value: `<@${ownerId}>`, inline: true })
             .addFields({ name: 'Members', value: `${memberCount}`, inline: true })
-            .addFields({ name: 'Roles', value: `${roles}`, inline: true })
-            .addFields({ name: 'Emojis', value: `${emojis}`, inline: true })
+            .addFields({ name: 'Roles', value: `${target_roles}`, inline: true })
+            .addFields({ name: 'Emojis', value: `${target_emojis}`, inline: true })
             .addFields({ name: 'Verification Level', value: `${getGuildVerificationLevel(guild.verificationLevel)}`, inline: true })
             .addFields({ name: 'Boosts', value: `${guild.premiumSubscriptionCount}`, inline: true });
 

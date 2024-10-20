@@ -6,7 +6,7 @@ import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Permissions
 const verification_role_name = 'Verified';
 
 const name = 'verify';
-export const verify: Command = {
+export const command_verify: Command = {
   name,
 
   // Command Builder
@@ -39,7 +39,7 @@ export const verify: Command = {
 
         const target_user = interaction.options.getUser('user') ?? interaction.user;
         const target_member = await guild.members.fetch(target_user.id);
-        const target_user_string = getUsernameString(target_user, target_member);
+        const target_user_string = getUsernameString(target_user);
 
         const embed = new EmbedBuilder() //
           .setColor('Blue')

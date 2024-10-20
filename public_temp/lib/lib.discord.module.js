@@ -11,8 +11,8 @@ async function getGuildMember(interaction) {
   }
   return;
 }
-function getUsernameString(user, member) {
-  return `${user.displayName} (${member.user.username})`;
+function getUsernameString(user) {
+  return `${user.displayName} (${user.username})`;
 }
 export {
   getUsernameString,

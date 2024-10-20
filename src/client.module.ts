@@ -1,6 +1,6 @@
 import { ConsoleError, ConsoleLog } from 'lib/ericchase/Utility/Console.js';
 import { getBotToken } from 'lib/lib.env.js';
-import { command_name_map } from 'src/commands/setup.js';
+import { command_name_map } from 'src/commands/enabled.js';
 import { Client, Events, GatewayIntentBits, GuildMember, type Interaction } from 'src/discord/discord.module.js';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });

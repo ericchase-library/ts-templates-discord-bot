@@ -94,10 +94,10 @@ async function HandleCommandError(error, interaction) {
   }
 }
 
-// src/commands/Community/ping.ts
+// src/commands/Community/Ping.ts
 import { SlashCommandBuilder } from "./discord/discord.module.js";
 var name = "ping";
-var ping = {
+var command_ping = {
   name,
   data: new SlashCommandBuilder().setName(name).setDescription("Replies with Pong!"),
   async execute(interaction) {
@@ -113,10 +113,10 @@ var ping = {
   }
 };
 
-// src/commands/Community/server-icon.ts
+// src/commands/Community/Server-Icon.ts
 import { EmbedBuilder, SlashCommandBuilder as SlashCommandBuilder2 } from "./discord/discord.module.js";
-var name2 = "server-icon";
-var server_icon = {
+var name2 = "servericon";
+var command_server_icon = {
   name: name2,
   data: new SlashCommandBuilder2().setName(name2).setDescription("Get the Server Icon of this Server"),
   async execute(interaction) {
@@ -135,10 +135,10 @@ var server_icon = {
   }
 };
 
-// src/commands/Community/server-info.ts
+// src/commands/Community/Server-Info.ts
 import { EmbedBuilder as EmbedBuilder2, GuildVerificationLevel, SlashCommandBuilder as SlashCommandBuilder3 } from "./discord/discord.module.js";
-var name3 = "server-info";
-var server_info = {
+var name3 = "serverinfo";
+var command_server_info = {
   name: name3,
   data: new SlashCommandBuilder3().setName(name3).setDescription("This gets some server info"),
   async execute(interaction) {
@@ -147,12 +147,12 @@ var server_info = {
         if (interaction.guild) {
           const { guild } = interaction;
           const { memberCount, name: name4, ownerId } = guild;
-          const user = interaction.options.getUser("user") ?? interaction.user;
-          const member = await interaction.guild.members.fetch(user.id);
-          const emojis = guild.emojis.cache.size;
-          const icon = guild.iconURL() ?? undefined;
-          const roles = guild.roles.cache.size;
-          const embed = new EmbedBuilder2().setColor("Blue").setThumbnail(icon ?? null).setAuthor({ name: name4, iconURL: icon }).setFooter({ text: `Server ID: ${guild.id}`, iconURL: icon }).setTimestamp().addFields({ name: "Name", value: `${name4}`, inline: false }).addFields({ name: "Date Created", value: guild.createdAt?.toLocaleDateString() ?? "???", inline: true }).addFields({ name: "Joined", value: member.joinedAt?.toLocaleDateString() ?? "???", inline: true }).addFields({ name: "Server Owner", value: `<@${ownerId}>`, inline: true }).addFields({ name: "Members", value: `${memberCount}`, inline: true }).addFields({ name: "Roles", value: `${roles}`, inline: true }).addFields({ name: "Emojis", value: `${emojis}`, inline: true }).addFields({ name: "Verification Level", value: `${getGuildVerificationLevel(guild.verificationLevel)}`, inline: true }).addFields({ name: "Boosts", value: `${guild.premiumSubscriptionCount}`, inline: true });
+          const target_user = interaction.options.getUser("user") ?? interaction.user;
+          const target_member = await interaction.guild.members.fetch(target_user.id);
+          const target_emojis = guild.emojis.cache.size;
+          const target_icon = guild.iconURL() ?? undefined;
+          const target_roles = guild.roles.cache.size;
+          const embed = new EmbedBuilder2().setColor("Blue").setThumbnail(target_icon ?? null).setAuthor({ name: name4, iconURL: target_icon }).setFooter({ text: `Server ID: ${guild.id}`, iconURL: target_icon }).setTimestamp().addFields({ name: "Name", value: `${name4}`, inline: false }).addFields({ name: "Date Created", value: guild.createdAt?.toLocaleDateString() ?? "???", inline: true }).addFields({ name: "Joined", value: target_member.joinedAt?.toLocaleDateString() ?? "???", inline: true }).addFields({ name: "Server Owner", value: `<@${ownerId}>`, inline: true }).addFields({ name: "Members", value: `${memberCount}`, inline: true }).addFields({ name: "Roles", value: `${target_roles}`, inline: true }).addFields({ name: "Emojis", value: `${target_emojis}`, inline: true }).addFields({ name: "Verification Level", value: `${getGuildVerificationLevel(guild.verificationLevel)}`, inline: true }).addFields({ name: "Boosts", value: `${guild.premiumSubscriptionCount}`, inline: true });
           await interaction.reply({ embeds: [embed] });
         }
       }
@@ -176,26 +176,26 @@ function getGuildVerificationLevel(verificationLevel) {
   }
 }
 
-// src/commands/Community/user-avatar.ts
+// src/commands/Community/User-Avatar.ts
 import { EmbedBuilder as EmbedBuilder3, SlashCommandBuilder as SlashCommandBuilder4 } from "./discord/discord.module.js";
-var name4 = "user-avatar";
-var user_avatar = {
+var name4 = "useravatar";
+var command_user_avatar = {
   name: name4,
   data: new SlashCommandBuilder4().setName(name4).setDescription("Get your avatar or the Avatar from someone else").addUserOption((option) => option.setName("user").setDescription("The User you want to Avatar from").setRequired(false)),
   async execute(interaction) {
     try {
       if (interaction.isChatInputCommand()) {
-        const user = interaction.options.getUser("user") ?? interaction.user;
+        const target_user = interaction.options.getUser("user") ?? interaction.user;
         if (interaction.guild) {
-          const member = await interaction.guild.members.fetch(user.id);
-          const avatar = user.displayAvatarURL();
+          const member = await interaction.guild.members.fetch(target_user.id);
+          const avatar = target_user.displayAvatarURL();
           const color = member.displayHexColor ?? "Blue";
-          const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${user.username}'s Avatar`).setImage(avatar);
+          const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
           await interaction.reply({ embeds: [Embed], ephemeral: false });
         } else {
-          const avatar = user.displayAvatarURL();
+          const avatar = target_user.displayAvatarURL();
           const color = "Blue";
-          const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${user.username}'s Avatar`).setImage(avatar);
+          const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
           await interaction.reply({ embeds: [Embed], ephemeral: false });
         }
       } else {
@@ -207,12 +207,42 @@ var user_avatar = {
   }
 };
 
-// src/commands/Community/user-info.ts
-import { EmbedBuilder as EmbedBuilder4, SlashCommandBuilder as SlashCommandBuilder5 } from "./discord/discord.module.js";
-var name5 = "user-info";
-var user_info = {
+// src/commands/Community/User-Check-Troll.ts
+import { getUsernameString } from "lib/lib.discord.module.js";
+import { SlashCommandBuilder as SlashCommandBuilder5 } from "./discord/discord.module.js";
+var name5 = "userchecktroll";
+var command_user_check_troll = {
   name: name5,
-  data: new SlashCommandBuilder5().setName(name5).setDescription("Get info on a user").addUserOption((option) => option.setName("user").setDescription("The user to get info on").setRequired(false)),
+  data: new SlashCommandBuilder5().setName(name5).setDescription("Check if a user is a troll! <author:noob2868>").addUserOption((option) => option.setName("user").setDescription("The user to check").setRequired(true)),
+  async execute(interaction) {
+    try {
+      if (interaction.isChatInputCommand()) {
+        const target_user = interaction.options.getUser("user") ?? interaction.user;
+        const target_user_string = getUsernameString(target_user);
+        await interaction.reply(IsUserATroll(target_user_string));
+      } else {
+        ConsoleError("unexpected", interaction);
+      }
+    } catch (error) {
+      HandleCommandError(error, interaction);
+    }
+  }
+};
+function IsUserATroll(username) {
+  let a = [" is ", " is not "];
+  function checkUser(user) {
+    let random = a[Math.floor(Math.random() * a.length)];
+    return user + random;
+  }
+  return `${checkUser(username)}a troll.`;
+}
+
+// src/commands/Community/User-Info.ts
+import { EmbedBuilder as EmbedBuilder4, SlashCommandBuilder as SlashCommandBuilder6 } from "./discord/discord.module.js";
+var name6 = "userinfo";
+var command_user_info = {
+  name: name6,
+  data: new SlashCommandBuilder6().setName(name6).setDescription("Get info on a user").addUserOption((option) => option.setName("user").setDescription("The user to get info on").setRequired(false)),
   async execute(interaction) {
     try {
       if (interaction.isChatInputCommand()) {
@@ -230,14 +260,14 @@ var user_info = {
   }
 };
 
-// src/commands/Moderation/verify.ts
-import { getGuildMember, getUsernameString } from "lib/lib.discord.module.js";
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder as EmbedBuilder5, PermissionsBitField, SlashCommandBuilder as SlashCommandBuilder6 } from "./discord/discord.module.js";
+// src/commands/Moderation/Verify.ts
+import { getGuildMember, getUsernameString as getUsernameString2 } from "lib/lib.discord.module.js";
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder as EmbedBuilder5, PermissionsBitField, SlashCommandBuilder as SlashCommandBuilder7 } from "./discord/discord.module.js";
 var verification_role_name = "Verified";
-var name6 = "verify";
-var verify = {
-  name: name6,
-  data: new SlashCommandBuilder6().setName(name6).setDescription("Verify a member of the server.").addUserOption((option) => option.setName("user").setDescription("The user to get info on").setRequired(true)),
+var name7 = "verify";
+var command_verify = {
+  name: name7,
+  data: new SlashCommandBuilder7().setName(name7).setDescription("Verify a member of the server.").addUserOption((option) => option.setName("user").setDescription("The user to get info on").setRequired(true)),
   async execute(interaction) {
     try {
       if (interaction.isChatInputCommand()) {
@@ -259,7 +289,7 @@ var verify = {
         }
         const target_user = interaction.options.getUser("user") ?? interaction.user;
         const target_member = await guild.members.fetch(target_user.id);
-        const target_user_string = getUsernameString(target_user, target_member);
+        const target_user_string = getUsernameString2(target_user);
         const embed = new EmbedBuilder5().setColor("Blue").setTitle("Server Verification").setDescription(`Click the button below to verify ${target_user_string} within the server.`);
         const button = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId("button").setEmoji("\u2705").setLabel("Verify").setStyle(ButtonStyle.Success));
         const reply_message = await interaction.reply({
@@ -293,14 +323,15 @@ var verify = {
   }
 };
 
-// src/commands/setup.ts
+// src/commands/enabled.ts
 var enabled_commands = [
-  ping,
-  server_icon,
-  server_info,
-  user_avatar,
-  user_info,
-  verify
+  command_ping,
+  command_server_icon,
+  command_server_info,
+  command_user_avatar,
+  command_user_check_troll,
+  command_user_info,
+  command_verify
 ];
 var command_name_map = new Map;
 for (const command of enabled_commands) {

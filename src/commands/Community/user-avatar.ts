@@ -2,8 +2,8 @@ import { ConsoleError } from 'lib/ericchase/Utility/Console.js';
 import { HandleCommandError, type Command } from 'src/commands/Command.js';
 import { EmbedBuilder, SlashCommandBuilder, type GuildMember, type Interaction } from 'src/discord/discord.module.js';
 
-const name = 'user-avatar';
-export const user_avatar: Command = {
+const name = 'useravatar';
+export const command_user_avatar: Command = {
   name,
 
   // Command Builder
@@ -21,17 +21,20 @@ export const user_avatar: Command = {
   async execute(interaction: Interaction) {
     try {
       if (interaction.isChatInputCommand()) {
-        const user = interaction.options.getUser('user') ?? interaction.user;
+        const target_user = interaction.options.getUser('user') ?? interaction.user;
+
         if (interaction.guild) {
-          const member = (await interaction.guild.members.fetch(user.id)) as GuildMember;
-          const avatar = user.displayAvatarURL();
+          const member = (await interaction.guild.members.fetch(target_user.id)) as GuildMember;
+          const avatar = target_user.displayAvatarURL();
           const color = member.displayHexColor ?? 'Blue';
-          const Embed = new EmbedBuilder().setColor(color).setTitle(`Here is ${user.username}'s Avatar`).setImage(avatar);
+          const Embed = new EmbedBuilder().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
+
           await interaction.reply({ embeds: [Embed], ephemeral: false });
         } else {
-          const avatar = user.displayAvatarURL();
+          const avatar = target_user.displayAvatarURL();
           const color = 'Blue';
-          const Embed = new EmbedBuilder().setColor(color).setTitle(`Here is ${user.username}'s Avatar`).setImage(avatar);
+          const Embed = new EmbedBuilder().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
+
           await interaction.reply({ embeds: [Embed], ephemeral: false });
         }
       } else {

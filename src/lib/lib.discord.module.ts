@@ -12,6 +12,6 @@ export async function getGuildMember(interaction: Interaction) {
   return undefined;
 }
 
-export function getUsernameString(user: User, member: GuildMember) {
-  return `${user.displayName} (${member.user.username})`;
+export function getUsernameString(user: User) {
+  return `${user.displayName} (${user.username})`;
 }

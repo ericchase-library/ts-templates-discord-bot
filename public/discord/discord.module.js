@@ -25351,15 +25351,7 @@ var require_ErrorCodes = __commonJS((exports, module) => {
     "TokenInvalid",
     "TokenMissing",
     "ApplicationCommandPermissionsTokenMissing",
-    "WSCloseRequested",
-    "WSConnectionExists",
-    "WSNotOpen",
-    "ManagerDestroyed",
     "BitFieldInvalid",
-    "ShardingInvalid",
-    "ShardingRequired",
-    "InvalidIntents",
-    "DisallowedIntents",
     "ShardingNoShards",
     "ShardingInProcess",
     "ShardingInvalidEvalBroadcast",
@@ -25375,29 +25367,17 @@ var require_ErrorCodes = __commonJS((exports, module) => {
     "ColorRange",
     "ColorConvert",
     "InviteOptionsMissingChannel",
-    "ButtonLabel",
-    "ButtonURL",
-    "ButtonCustomId",
-    "SelectMenuCustomId",
-    "SelectMenuPlaceholder",
-    "SelectOptionLabel",
-    "SelectOptionValue",
-    "SelectOptionDescription",
     "InteractionCollectorError",
     "FileNotFound",
-    "UserBannerNotFetched",
     "UserNoDMChannel",
     "VoiceNotStageChannel",
     "VoiceStateNotOwn",
     "VoiceStateInvalidType",
     "ReqResourceType",
-    "ImageFormat",
-    "ImageSize",
     "MessageBulkDeleteType",
     "MessageContentType",
     "MessageNonceRequired",
     "MessageNonceType",
-    "SplitMaxLen",
     "BanResolveId",
     "FetchBanResolveId",
     "PruneDaysType",
@@ -25425,10 +25405,8 @@ var require_ErrorCodes = __commonJS((exports, module) => {
     "EmojiType",
     "EmojiManaged",
     "MissingManageGuildExpressionsPermission",
-    "MissingManageEmojisAndStickersPermission",
     "NotGuildSticker",
     "ReactionResolveUser",
-    "VanityURL",
     "InviteResolveCode",
     "InviteNotFound",
     "DeleteGroupDMChannel",
@@ -25438,7 +25416,6 @@ var require_ErrorCodes = __commonJS((exports, module) => {
     "GuildUncachedEntityResolve",
     "InteractionAlreadyReplied",
     "InteractionNotReplied",
-    "InteractionEphemeralReplied",
     "CommandInteractionOptionNotFound",
     "CommandInteractionOptionType",
     "CommandInteractionOptionEmpty",
@@ -33024,7 +33001,7 @@ var require_package = __commonJS((exports, module) => {
   module.exports = {
     $schema: "https://json.schemastore.org/package.json",
     name: "discord.js",
-    version: "15.0.0-dev.1729080291-62fb9de9c",
+    version: "15.0.0-dev.1729383186-6cbe2487b",
     description: "A powerful library for interacting with the Discord API",
     main: "./src/index.js",
     types: "./typings/index.d.ts",
@@ -33083,10 +33060,10 @@ var require_package = __commonJS((exports, module) => {
       "lodash.snakecase": "4.1.1",
       tslib: "^2.6.3",
       undici: "6.19.8",
-      "@discordjs/rest": "^2.4.0",
       "@discordjs/formatters": "^0.5.0",
+      "@discordjs/ws": "^2.0.0",
       "@discordjs/util": "^1.1.1",
-      "@discordjs/ws": "^2.0.0"
+      "@discordjs/rest": "^2.4.0"
     },
     devDependencies: {
       "@favware/cliff-jumper": "^4.1.0",
@@ -33103,8 +33080,8 @@ var require_package = __commonJS((exports, module) => {
       tslint: "6.1.3",
       turbo: "^2.0.14",
       typescript: "~5.5.4",
-      "@discordjs/docgen": "^0.12.1",
       "@discordjs/api-extractor": "^7.38.1",
+      "@discordjs/docgen": "^0.12.1",
       "@discordjs/scripts": "^0.1.0"
     },
     engines: {
@@ -57705,7 +57682,6 @@ var require_Client = __commonJS((exports, module) => {
       Object.defineProperty(this, "expectedGuilds", { value: new Set, writable: true });
       Object.defineProperty(this, "readyTimeout", { value: null, writable: true });
       this.actions = new ActionsManager(this);
-      this.shard = process2.env.SHARDING_MANAGER ? ShardClientUtil.singleton(this, process2.env.SHARDING_MANAGER_MODE) : null;
       this.users = new UserManager(this);
       this.guilds = new GuildManager(this);
       this.channels = new ChannelManager(this);
@@ -57725,6 +57701,7 @@ var require_Client = __commonJS((exports, module) => {
         token: null
       };
       this.ws = new WebSocketManager(wsOptions);
+      this.shard = process2.env.SHARDING_MANAGER ? ShardClientUtil.singleton(this, process2.env.SHARDING_MANAGER_MODE) : null;
       this.voice = new ClientVoiceManager(this);
       this.user = null;
       this.application = null;
@@ -57832,8 +57809,7 @@ var require_Client = __commonJS((exports, module) => {
       return this.status === Status.Ready;
     }
     get ping() {
-      const sum = this.pings.reduce((a, b) => a + b, 0);
-      return sum / this.pings.size;
+      return this.pings.size ? this.pings.reduce((a, b) => a + b, 0) / this.pings.size : null;
     }
     async destroy() {
       super.destroy();

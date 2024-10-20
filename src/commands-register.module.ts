@@ -1,7 +1,7 @@
 import { ConsoleError, ConsoleLog } from 'lib/ericchase/Utility/Console.js';
 import { Sleep } from 'lib/ericchase/Utility/Sleep.js';
 import { getBotToken, getClientID } from 'lib/lib.env.js';
-import { command_name_map } from 'src/commands/setup.js';
+import { command_name_map } from 'src/commands/enabled.js';
 import { Client, Events, GatewayIntentBits, REST, Routes, type ApplicationCommand, type SlashCommandOptionsOnlyBuilder } from 'src/discord/discord.module.js';
 
 const rest = new REST({ version: '10' }).setToken(getBotToken());
