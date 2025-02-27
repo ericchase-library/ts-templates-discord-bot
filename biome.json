@@ -5,7 +5,7 @@
   },
   "formatter": {
     "enabled": true,
-    "ignore": ["*.js", "public/", "public_temp/", "src/lib/ericchase/"],
+    "ignore": ["out/"],
     "attributePosition": "auto",
     "formatWithErrors": true,
     "indentStyle": "space",
@@ -43,16 +43,20 @@
   },
   "linter": {
     "enabled": true,
-    "ignore": ["*.js", "public/", "public_temp/"],
+    "ignore": ["out/"],
     "rules": {
       "complexity": {
+        "noUselessConstructor": "off",
         "noUselessTernary": "off"
       },
       "style": {
-        "useConst": "off"
+        "noParameterAssign": "off",
+        "useConst": "off",
+        "useImportType": "off"
       },
       "suspicious": {
         "noConfusingVoidType": "off",
+        "noEmptyInterface": "off",
         "noExplicitAny": "off"
       }
     }

@@ -1,5 +1,5 @@
-import { HandleCommandError, type Command } from 'src/commands/Command.js';
-import { EmbedBuilder, SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
+import { Command, HandleCommandError } from 'src/commands/Command.js';
+import { EmbedBuilder, Interaction, SlashCommandBuilder } from 'src/external/discord/discord.module.js';
 
 const name = 'userinfo';
 export const command_user_info: Command = {

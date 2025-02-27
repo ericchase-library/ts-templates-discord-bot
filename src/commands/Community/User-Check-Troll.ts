@@ -1,7 +1,7 @@
-import { ConsoleError } from 'lib/ericchase/Utility/Console.js';
-import { getUsernameString } from 'lib/lib.discord.module.js';
-import { HandleCommandError, type Command } from 'src/commands/Command.js';
-import { SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
+import { Command, HandleCommandError } from 'src/commands/Command.js';
+import { Interaction, SlashCommandBuilder } from 'src/external/discord/discord.module.js';
+import { ConsoleError } from 'src/lib/ericchase/Utility/Console.js';
+import { getUsernameString } from 'src/lib/lib.discord.module.js';
 
 const name = 'userchecktroll';
 export const command_user_check_troll: Command = {

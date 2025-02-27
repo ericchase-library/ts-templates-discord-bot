@@ -7,25 +7,24 @@
 
     // Bundler mode
     "moduleResolution": "Bundler",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
 
     // Best practices
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "strict": true,
 
-    // Aliases for Modules
+    // Import aliases
     "paths": {
-      "lib/*": ["./src/lib/*"],
       "src/*": ["./src/*"],
       "tools/*": ["./tools/*"]
     }
   },
   "exclude": [
-    "node_modules", //
+    //
+    "node_modules",
     "**/node_modules/*",
-    "public/",
-    "public_temp/",
+    "out/",
     "dev_server/"
   ]
 }

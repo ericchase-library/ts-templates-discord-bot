@@ -1,6 +1,6 @@
-import { ConsoleError } from 'lib/ericchase/Utility/Console.js';
-import { HandleCommandError, type Command } from 'src/commands/Command.js';
-import { EmbedBuilder, SlashCommandBuilder, type GuildMember, type Interaction } from 'src/discord/discord.module.js';
+import { Command, HandleCommandError } from 'src/commands/Command.js';
+import { EmbedBuilder, GuildMember, Interaction, SlashCommandBuilder } from 'src/external/discord/discord.module.js';
+import { ConsoleError } from 'src/lib/ericchase/Utility/Console.js';
 
 const name = 'useravatar';
 export const command_user_avatar: Command = {
@@ -11,8 +11,8 @@ export const command_user_avatar: Command = {
     .setName(name)
     .setDescription('Get your avatar or the Avatar from someone else')
     .addUserOption((option) =>
-      option
-        .setName('user') //
+      option //
+        .setName('user')
         .setDescription('The User you want to Avatar from')
         .setRequired(false),
     ),

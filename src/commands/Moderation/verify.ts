@@ -1,7 +1,7 @@
-import { ConsoleError } from 'lib/ericchase/Utility/Console.js';
-import { getGuildMember, getUsernameString } from 'lib/lib.discord.module.js';
-import { HandleCommandError, type Command } from 'src/commands/Command.js';
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, PermissionsBitField, SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
+import { Command, HandleCommandError } from 'src/commands/Command.js';
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Interaction, PermissionsBitField, SlashCommandBuilder } from 'src/external/discord/discord.module.js';
+import { ConsoleError } from 'src/lib/ericchase/Utility/Console.js';
+import { getGuildMember, getUsernameString } from 'src/lib/lib.discord.module.js';
 
 const verification_role_name = 'Verified';
 

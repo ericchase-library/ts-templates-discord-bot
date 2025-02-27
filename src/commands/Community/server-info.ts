@@ -1,5 +1,5 @@
-import { HandleCommandError, type Command } from 'src/commands/Command.js';
-import { EmbedBuilder, GuildVerificationLevel, SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
+import { Command, HandleCommandError } from 'src/commands/Command.js';
+import { EmbedBuilder, GuildVerificationLevel, Interaction, SlashCommandBuilder } from 'src/external/discord/discord.module.js';
 
 const name = 'serverinfo';
 export const command_server_info: Command = {

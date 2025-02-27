@@ -160,10 +160,6 @@ dist-ssr
 *.mkv
 *.mp4
 
-# don't share vscode settings unless you know for sure they should be shared
-.vscode/**/*
-!.vscode/settings.json
-
 # build folders
 # build/
 # out/

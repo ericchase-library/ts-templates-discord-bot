@@ -1,6 +1,6 @@
-import { ConsoleError } from 'lib/ericchase/Utility/Console.js';
-import { HandleCommandError, type Command } from 'src/commands/Command.js';
-import { SlashCommandBuilder, type Interaction } from 'src/discord/discord.module.js';
+import { Command, HandleCommandError } from 'src/commands/Command.js';
+import { Interaction, SlashCommandBuilder } from 'src/external/discord/discord.module.js';
+import { ConsoleError } from 'src/lib/ericchase/Utility/Console.js';
 
 const name = 'ping';
 export const command_ping: Command = {

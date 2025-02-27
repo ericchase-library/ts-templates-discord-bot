@@ -1,7 +1,7 @@
-import { ConsoleError, ConsoleLog } from 'lib/ericchase/Utility/Console.js';
-import { getBotToken } from 'lib/lib.env.js';
 import { command_name_map } from 'src/commands/enabled.js';
-import { Client, Events, GatewayIntentBits, GuildMember, type Interaction } from 'src/discord/discord.module.js';
+import { Client, Events, GatewayIntentBits, GuildMember, Interaction } from 'src/external/discord/discord.module.js';
+import { ConsoleError, ConsoleLog } from 'src/lib/ericchase/Utility/Console.js';
+import { getBotToken } from 'src/lib/lib.env.js';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 

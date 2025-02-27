@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sources": ["src\\lib\\lib.discord.module.ts"],
+  "sourcesContent": [
+    "import { GuildMember, type Interaction, type User } from 'src/external/discord/discord.module.js';\n\nexport async function getGuildMember(interaction: Interaction) {\n  if (interaction.member) {\n    if (interaction.member instanceof GuildMember) {\n      return interaction.member;\n    }\n    if (interaction.guild) {\n      return await interaction.guild.members.fetch(interaction.member.user.id);\n    }\n  }\n  return undefined;\n}\n\nexport function getUsernameString(user: User) {\n  return `${user.displayName} (${user.username})`;\n}\n"
+  ],
+  "mappings": ";;AAAA;AAEA,eAAsB,cAAc,CAAC,aAA0B;AAC7D,MAAI,YAAY,QAAQ;AACtB,QAAI,YAAY,kBAAkB,aAAa;AAC7C,aAAO,YAAY;AAAA,IACrB;AACA,QAAI,YAAY,OAAO;AACrB,aAAO,MAAM,YAAY,MAAM,QAAQ,MAAM,YAAY,OAAO,KAAK,EAAE;AAAA,IACzE;AAAA,EACF;AACA;AAAA;AAGK,SAAS,iBAAiB,CAAC,MAAY;AAC5C,SAAO,GAAG,KAAK,gBAAgB,KAAK;AAAA;",
+  "debugId": "362F2E59B062AA7C64756E2164756E21",
+  "names": []
+}
