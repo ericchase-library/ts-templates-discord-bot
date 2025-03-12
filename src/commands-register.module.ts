@@ -59,5 +59,5 @@ client.once(Events.ClientReady, async () => {
   }
 });
 
-ConsoleLog('Attempting to log in.');
+// ConsoleLog('Attempting to log in.');
 client.login(getBotToken());

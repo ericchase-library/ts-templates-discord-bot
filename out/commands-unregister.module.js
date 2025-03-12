@@ -1,6 +1,6 @@
 // @bun
 // src/commands-unregister.module.ts
-import { REST, Routes } from "..\external\discord\discord.module.js";
+import { REST, Routes } from "./external/discord/discord.module.js";
 
 // src/lib/ericchase/Utility/UpdateMarker.ts
 class UpdateMarker {

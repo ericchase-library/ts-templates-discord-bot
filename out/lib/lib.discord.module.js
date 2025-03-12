@@ -1,6 +1,6 @@
 // @bun
 // src/lib/lib.discord.module.ts
-import { GuildMember } from "..\..\external\discord\discord.module.js";
+import { GuildMember } from "../external/discord/discord.module.js";
 async function getGuildMember(interaction) {
   if (interaction.member) {
     if (interaction.member instanceof GuildMember) {
