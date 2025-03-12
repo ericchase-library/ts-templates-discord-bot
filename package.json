@@ -11,8 +11,10 @@
     "prettier": "^3.5.2"
   },
   "scripts": {
-    "build": "bun tools/build.ts",
-    "lint": "biome lint --error-on-warnings --write ."
+    "build": "bun run tools/build.ts",
+    "dev": "bun run tools/build.ts --watch",
+    "lint": "biome lint --error-on-warnings --write .",
+    "serve": "bun run server/tools/start.ts"
   },
   "type": "module"
 }

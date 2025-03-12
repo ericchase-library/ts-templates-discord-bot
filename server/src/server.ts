@@ -4,7 +4,7 @@ import { get } from './router.get.js';
 import { options } from './router.options.js';
 import { post } from './router.post.js';
 
-const PUBLIC_PATH = '../public';
+const PUBLIC_PATH = '../out';
 
 const PREFERRED_HOSTNAME = Bun.env.HOSTNAME ?? '127.0.0.1';
 const PREFERRED_PORT = Number.parseInt(Bun.env.PORT ?? '8000');
@@ -15,9 +15,8 @@ Bun.env.PUBLIC_PATH = PUBLIC_PATH;
 
 tryStartServer(PREFERRED_HOSTNAME, PREFERRED_PORT);
 
-type WebSocketData = { empty: true };
 function createServer(hostname: string, port: number) {
-  const server = Bun.serve<WebSocketData>({
+  const server = Bun.serve({
     async fetch(req) {
       try {
         const method = req.method;

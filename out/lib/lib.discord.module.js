@@ -1,6 +1,6 @@
 // @bun
 // src/lib/lib.discord.module.ts
-import { GuildMember } from "../external/discord/discord.module.js";
+import { GuildMember } from "..\..\external\discord\discord.module.js";
 async function getGuildMember(interaction) {
   if (interaction.member) {
     if (interaction.member instanceof GuildMember) {
@@ -19,6 +19,3 @@ export {
   getUsernameString,
   getGuildMember
 };
-
-//# debugId=362F2E59B062AA7C64756E2164756E21
-//# sourceMappingURL=lib.discord.module.js.map

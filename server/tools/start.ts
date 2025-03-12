@@ -1,8 +1,9 @@
-import { Run } from '../src/lib/ericchase/Platform/Bun/Child Process.js';
 import { ConsoleLog } from '../src/lib/ericchase/Utility/Console.js';
 
+Bun.spawnSync(['bun', 'install'], { cwd: `${__dirname}\\..`, stderr: 'inherit', stdout: 'inherit' });
+
 while (true) {
-  const server_process = Run.Bun('./src/server.ts');
+  const server_process = Bun.spawn(['bun', './src/server.ts'], { cwd: `${__dirname}/..`, stderr: 'inherit', stdout: 'inherit' });
   await server_process.exited;
   switch (server_process.exitCode) {
     case 1:

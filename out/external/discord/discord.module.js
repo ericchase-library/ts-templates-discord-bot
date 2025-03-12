@@ -33777,6 +33777,3 @@ export {
   export_ApplicationCommand as ApplicationCommand,
   export_ActionRowBuilder as ActionRowBuilder
 };
-
-//# debugId=A8AEB8A5613116F964756E2164756E21
-//# sourceMappingURL=discord.module.js.map

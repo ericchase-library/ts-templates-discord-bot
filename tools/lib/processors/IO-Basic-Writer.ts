@@ -1,31 +1,33 @@
-import { DefaultBuilder, ProcessorModule } from 'tools/lib/Builder.js';
+import { Path } from 'src/lib/ericchase/Platform/FilePath.js';
+import { globMatch } from 'src/lib/ericchase/Platform/util.js';
+import { BuilderInternal } from 'tools/lib/BuilderInternal.js';
+import { ProcessorModule } from 'tools/lib/Processor.js';
 import { ProjectFile } from 'tools/lib/ProjectFile.js';
 
-export class Processor_IOBasicWriter implements ProcessorModule {
-  builder = DefaultBuilder;
+// patterns should use / instead of \
+export class CProcessor_IOBasicWriter implements ProcessorModule {
+  constructor(
+    readonly include_patterns: string[],
+    readonly exclude_patterns: string[],
+  ) {}
 
-  async onFilesAdded(file_list: ProjectFile[]): Promise<void> {
-    for (const file of file_list) {
-      if (this.canWrite(file)) {
-        file.processor_function_list.push(async (file) => {
-          if (file.downstream_dirty === true) {
-            await file.write();
-          }
-        });
+  async onAdd(builder: BuilderInternal, files: Set<ProjectFile>): Promise<void> {
+    for (const file of files) {
+      if (globMatch(builder.platform, file.src_path.standard, this.include_patterns, this.exclude_patterns) === true) {
+        file.addProcessor(this, this.onProcess);
       }
     }
   }
+  async onRemove(builder: BuilderInternal, files: Set<ProjectFile>): Promise<void> {}
 
-  canWrite(file: ProjectFile): boolean {
-    // we want to copy all module and script source files
-    if (file.src_file.path.endsWith('.module.ts')) return true;
-    if (file.src_file.path.endsWith('.script.ts')) return true;
-
-    // skip regular typescript files
-    if (file.src_file.path.endsWith('.ts')) return false;
-    // skip anything else in lib directory
-    if (file.src_file.path.startsWith(this.builder.lib_dir.path)) return false;
-
-    return true;
+  async onProcess(builder: BuilderInternal, file: ProjectFile): Promise<void> {
+    await file.write();
   }
+}
+
+export function Processor_IOBasicWriter(include_patterns: string[], exclude_patterns: string[]): ProcessorModule {
+  return new CProcessor_IOBasicWriter(
+    include_patterns.map((pattern) => Path(pattern).standard),
+    exclude_patterns.map((pattern) => Path(pattern).standard),
+  );
 }

@@ -1,31 +1,34 @@
-import { Path } from 'src/lib/ericchase/Platform/Node/Path.js';
-import { ProcessorFunction } from 'tools/lib/Builder.js';
+import { CPath } from 'src/lib/ericchase/Platform/FilePath.js';
+import { BuilderInternal } from 'tools/lib/BuilderInternal.js';
+import { ProcessorMethod, ProcessorModule } from 'tools/lib/Processor.js';
 
 export class ProjectFile {
   constructor(
-    public src_file: Path,
-    public out_file: Path,
+    public builder: BuilderInternal,
+    public src_path: CPath,
+    public out_path: CPath,
   ) {}
 
-  processor_function_list = new Array<ProcessorFunction>();
+  /** When true, file needs to be processed during the next processing phase. */
+  $isdirty = false;
+  $processor_list: { processor: ProcessorModule; method: ProcessorMethod }[] = [];
+  addProcessor(processor: ProcessorModule, method: ProcessorMethod): void {
+    this.$processor_list.push({ processor, method });
+  }
 
-  downstream_set = new Set<ProjectFile>();
-  upstream_set = new Set<ProjectFile>();
-
-  /** When true, downstream files need to be re-processed. */
-  downstream_dirty = false;
+  /** When true, file contents have been modified during the current processing phase. */
+  ismodified = false;
   /** When false, $bytes/$text are no longer from the original file. */
-  original_bytes = true;
-  /** When true,  */
-  unsaved = false;
+  isoriginal = true;
 
   $bytes?: Uint8Array;
   $text?: string;
 
+  // Get cached contents or contents from file on disk as Uint8Array.
   async getBytes(): Promise<Uint8Array> {
     if (this.$bytes === undefined) {
       if (this.$text === undefined) {
-        this.$bytes = await Bun.file(this.src_file.path).bytes();
+        this.$bytes = await this.builder.platform.File.readBytes(this.src_path);
       } else {
         this.$bytes = new TextEncoder().encode(this.$text);
         this.$text = undefined;
@@ -33,10 +36,11 @@ export class ProjectFile {
     }
     return this.$bytes;
   }
+  // Get cached contents or contents from file on disk as string.
   async getText(): Promise<string> {
     if (this.$text === undefined) {
       if (this.$bytes === undefined) {
-        this.$text = await Bun.file(this.src_file.path).text();
+        this.$text = await this.builder.platform.File.readText(this.src_path);
       } else {
         this.$text = new TextDecoder().decode(this.$bytes);
         this.$bytes = undefined;
@@ -45,31 +49,45 @@ export class ProjectFile {
     return this.$text;
   }
 
+  // Set cached contents to Uint8Array.
   setBytes(bytes: Uint8Array) {
-    this.downstream_dirty = true;
-    this.original_bytes = false;
-    this.unsaved = true;
+    this.isoriginal = false;
+    this.ismodified = true;
     this.$bytes = bytes;
     this.$text = undefined;
   }
+  // Set cached contents to string.
   setText(text: string) {
-    this.downstream_dirty = true;
-    this.original_bytes = false;
-    this.unsaved = true;
+    this.isoriginal = false;
+    this.ismodified = true;
     this.$bytes = undefined;
     this.$text = text;
   }
 
+  // Clears the cached contents and resets attributes.
   resetBytes() {
-    this.downstream_dirty = false;
-    this.original_bytes = true;
-    this.unsaved = false;
+    this.isoriginal = true;
+    this.ismodified = false;
     this.$bytes = undefined;
     this.$text = undefined;
   }
 
-  async write(out_file = this.out_file) {
-    await Bun.write(out_file.path, this.$text !== undefined ? this.$text : await this.getBytes());
-    this.unsaved = false;
+  // Attempts to write cached contents to file on disk.
+  // Returns number of bytes written.
+  async write(): Promise<number> {
+    let byteswritten = 0;
+    if (this.ismodified) {
+      if (this.$text !== undefined) {
+        byteswritten = await this.builder.platform.File.writeText(this.out_path, this.$text);
+      } else {
+        byteswritten = await this.builder.platform.File.writeBytes(this.out_path, await this.getBytes());
+      }
+    }
+    return byteswritten;
+  }
+
+  // Useful for some console log coercion.
+  toString(): string {
+    return this.src_path.toString();
   }
 }

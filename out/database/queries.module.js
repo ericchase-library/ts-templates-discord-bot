@@ -139,6 +139,3 @@ export {
   DatabaseConnected,
   CreateTable
 };
-
-//# debugId=2476FB5337DDF80464756E2164756E21
-//# sourceMappingURL=queries.module.js.map

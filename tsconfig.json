@@ -7,6 +7,7 @@
 
     // Bundler mode
     "moduleResolution": "Bundler",
+    "noEmit": true,
     "verbatimModuleSyntax": false,
 
     // Best practices
@@ -15,16 +16,9 @@
     "strict": true,
 
     // Import aliases
-    "paths": {
-      "src/*": ["./src/*"],
-      "tools/*": ["./tools/*"]
-    }
+    "paths": { "src/*": ["./src/*"], "tools/*": ["./tools/*"] }
   },
-  "exclude": [
-    //
-    "node_modules",
-    "**/node_modules/*",
-    "out/",
-    "dev_server/"
-  ]
+
+  // Include files for typescript/intellisense
+  "include": ["./*", "./src/**/*", "./tools/**/*"]
 }

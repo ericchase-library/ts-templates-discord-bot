@@ -1,41 +1,46 @@
-import { ParseHTML } from 'src/lib/ericchase/Platform/Node/HTML Processor/ParseHTML.js';
-import { Path } from 'src/lib/ericchase/Platform/Node/Path.js';
-import { DefaultBuilder, ProcessorFunction, ProcessorModule } from 'tools/lib/Builder.js';
+import { Path } from 'src/lib/ericchase/Platform/FilePath.js';
+import { ParseHTML } from 'src/lib/ericchase/Platform/NPM/NodeHTMLParser.js';
+import { BuilderInternal } from 'tools/lib/BuilderInternal.js';
+import { ProcessorModule } from 'tools/lib/Processor.js';
 import { ProjectFile } from 'tools/lib/ProjectFile.js';
 
-export class Processor_HTMLImportConverter implements ProcessorModule {
-  builder = DefaultBuilder;
-
-  async onFilesAdded(file_list: ProjectFile[]) {
-    for (const file of file_list) {
-      if (file.src_file.path.endsWith('.html') === false) continue;
-
-      file.processor_function_list.push(this.processSourceFile);
+export class CProcessor_HTMLImportConverter implements ProcessorModule {
+  async onAdd(builder: BuilderInternal, files: Set<ProjectFile>) {
+    for (const file of files) {
+      if (file.src_path.ext !== '.html') {
+        continue;
+      }
+      file.addProcessor(this, this.onProcess);
     }
   }
+  async onRemove(builder: BuilderInternal, files: Set<ProjectFile>): Promise<void> {}
 
-  processSourceFile: ProcessorFunction = async (source_file: ProjectFile) => {
+  async onProcess(builder: BuilderInternal, file: ProjectFile): Promise<void> {
     let update_text = false;
-    const root_element = ParseHTML((await source_file.getText()).trim(), { convert_tagnames_to_lowercase: true, self_close_void_tags: true });
+    const root_element = ParseHTML((await file.getText()).trim(), { convert_tagnames_to_lowercase: true, self_close_void_tags: true });
     for (const script_tag of root_element.getElementsByTagName('script')) {
       const src = script_tag.getAttribute('src');
       if (src !== undefined) {
-        if (getPathBase(src).endsWith('.ts')) {
+        if (getBasename(src).endsWith('.ts')) {
           script_tag.setAttribute('src', `${src.slice(0, src.lastIndexOf('.ts'))}.js`);
           update_text = true;
         }
       }
     }
     if (update_text === true) {
-      source_file.setText(root_element.toString());
+      file.setText(root_element.toString());
     }
-  };
+  }
 }
 
-function getPathBase(src: string) {
+function getBasename(src: string) {
   try {
-    return new Path(new URL(src).pathname).base;
+    return Path(new URL(src).pathname).basename;
   } catch (error) {
-    return new Path(src).base;
+    return Path(src).basename;
   }
+}
+
+export function Processor_HTMLImportConverter(): ProcessorModule {
+  return new CProcessor_HTMLImportConverter();
 }

@@ -1,10 +1,13 @@
-import { RunSync } from 'src/lib/ericchase/Platform/Bun/Child Process.js';
-import { BuildStep, DefaultBuilder } from 'tools/lib/Builder.js';
+import { ConsoleLog } from 'src/lib/ericchase/Utility/Console.js';
+import { BuilderInternal, BuildStep } from 'tools/lib/BuilderInternal.js';
 
-export class Step_BunUpdate implements BuildStep {
-  builder = DefaultBuilder;
-
-  async run() {
-    RunSync.Bun('update');
+class CBuildStep_BunUpdate implements BuildStep {
+  async run(builder: BuilderInternal) {
+    Bun.spawnSync(['bun', 'update'], { stderr: 'inherit', stdout: 'inherit' });
+    ConsoleLog();
   }
+}
+
+export function BuildStep_BunUpdate(): BuildStep {
+  return new CBuildStep_BunUpdate();
 }

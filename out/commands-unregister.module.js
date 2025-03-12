@@ -1,6 +1,6 @@
 // @bun
 // src/commands-unregister.module.ts
-import { REST, Routes } from "./external/discord/discord.module.js";
+import { REST, Routes } from "..\external\discord\discord.module.js";
 
 // src/lib/ericchase/Utility/UpdateMarker.ts
 class UpdateMarker {
@@ -78,6 +78,3 @@ function getBotToken() {
 
 // src/commands-unregister.module.ts
 var rest = new REST({ version: "10" }).setToken(getBotToken());
-
-//# debugId=FD20D3B4519D9FBE64756E2164756E21
-//# sourceMappingURL=commands-unregister.module.js.map

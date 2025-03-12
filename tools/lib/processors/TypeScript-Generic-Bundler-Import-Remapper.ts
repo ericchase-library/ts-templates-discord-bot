@@ -1,33 +1,31 @@
-import node_path from 'node:path';
-
 import { MatchAny } from 'src/lib/ericchase/Algorithm/String/Search/WildcardMatcher.js';
-import { Path } from 'src/lib/ericchase/Platform/Node/Path.js';
-import { DefaultBuilder, ProcessorModule } from 'tools/lib/Builder.js';
+import { BuilderInternal } from 'tools/lib/BuilderInternal.js';
+import { ProcessorModule } from 'tools/lib/Processor.js';
 import { ProjectFile } from 'tools/lib/ProjectFile.js';
 
-export class Processor_TypeScriptImportRemapper implements ProcessorModule {
-  builder = DefaultBuilder;
-
-  async onFilesAdded(file_list: ProjectFile[]) {
-    const src_dir = this.builder.src_dir.path;
-
-    for (const file of file_list) {
-      if (file.src_file.path.endsWith('.module.ts') === false) continue;
-
-      file.processor_function_list.push(async (file) => {
-        let text = await file.getText();
-        let result = findImportPath(text);
-        while (result.indexStart !== -1) {
-          if (result.importPath.startsWith(src_dir)) {
-            const new_import_path = getRelativePath(file.src_file, new Path(result.importPath));
-            text = text.slice(0, result.indexStart) + new_import_path + text.slice(result.indexEnd);
-            result.indexEnd = result.indexStart + new_import_path.length;
-          }
-          result = findImportPath(text, result.indexEnd);
-        }
-        file.setText(text);
-      });
+export class CProcessor_TypeScriptGenericBundlerImportRemapper implements ProcessorModule {
+  async onAdd(builder: BuilderInternal, files: Set<ProjectFile>) {
+    for (const file of files) {
+      if (file.src_path.endsWith('.module.ts') === false) {
+        continue;
+      }
+      file.addProcessor(this, this.onProcess);
     }
+  }
+  async onRemove(builder: BuilderInternal, files: Set<ProjectFile>): Promise<void> {}
+
+  async onProcess(builder: BuilderInternal, file: ProjectFile): Promise<void> {
+    let text = await file.getText();
+    let find_results = findImportPath(text);
+    while (find_results.indexStart !== -1) {
+      if (find_results.importPath.startsWith('src/')) {
+        const new_import_path = file.src_path.getRelative(find_results.importPath);
+        text = text.slice(0, find_results.indexStart) + new_import_path + text.slice(find_results.indexEnd);
+        find_results.indexEnd = find_results.indexStart + new_import_path.length;
+      }
+      find_results = findImportPath(text, find_results.indexEnd);
+    }
+    file.setText(text);
   }
 }
 
@@ -68,7 +66,6 @@ function findImportPath(text: string, indexStart = 0) {
   return { indexStart: -1, indexEnd: -1, importPath: '' };
 }
 
-function getRelativePath(source_path: Path, import_path: Path) {
-  const relative = new Path(node_path.relative(source_path.path, import_path.path)).standard_path;
-  return relative.startsWith('../../') ? relative.slice(3) : relative.slice(1);
+export function Processor_TypeScriptGenericBundlerImportRemapper(): ProcessorModule {
+  return new CProcessor_TypeScriptGenericBundlerImportRemapper();
 }

@@ -1,6 +1,6 @@
 // @bun
 // src/commands-list.module.ts
-import { REST, Routes } from "./external/discord/discord.module.js";
+import { REST, Routes } from "..\external\discord\discord.module.js";
 
 // src/lib/ericchase/Utility/UpdateMarker.ts
 class UpdateMarker {
@@ -108,6 +108,3 @@ async function getCommands() {
   }
 }
 getCommands();
-
-//# debugId=364442360DFA228964756E2164756E21
-//# sourceMappingURL=commands-list.module.js.map
