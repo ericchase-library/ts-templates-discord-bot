@@ -1,18 +1,21 @@
 import { CPath, Path } from 'src/lib/ericchase/Platform/FilePath.js';
 import { FileStats, PlatformProviderId, UnimplementedProvider } from 'src/lib/ericchase/Platform/PlatformProvider.js';
-import { ConsoleLogWithDate } from 'src/lib/ericchase/Utility/Console.js';
+import { KEYS } from 'src/lib/ericchase/Platform/Shell.js';
+import { AddStdinListener, StartStdinRawModeReader } from 'src/lib/ericchase/Platform/StdinReader.js';
 import { Debounce } from 'src/lib/ericchase/Utility/Debounce.js';
 import { Defer } from 'src/lib/ericchase/Utility/Defer.js';
+import { Logger } from 'src/lib/ericchase/Utility/Logger.js';
 import { Map_GetOrDefault } from 'src/lib/ericchase/Utility/Map.js';
 import { Builder } from 'tools/lib/Builder.js';
 import { ProcessorModule } from 'tools/lib/Processor.js';
 import { ProjectFile } from 'tools/lib/ProjectFile.js';
+import { Step } from 'tools/lib/Step.js';
 
-export interface BuildStep {
-  run: (builder: BuilderInternal) => Promise<void>;
-}
+const logger = Logger(__filename, 'Builder');
 
 export class BuilderInternal {
+  logger = logger.newChannel();
+
   constructor(public external: Builder) {}
 
   platform = UnimplementedProvider;
@@ -30,9 +33,9 @@ export class BuilderInternal {
 
   // Build Steps & Processor Modules
 
-  startup_steps: BuildStep[] = [];
+  startup_steps: Step[] = [];
   processor_modules: ProcessorModule[] = [];
-  cleanup_steps: BuildStep[] = [];
+  cleanup_steps: Step[] = [];
 
   // Dependencies
 
@@ -136,7 +139,8 @@ export class BuilderInternal {
     this.$set_unprocessed_updated_files.add(file);
   }
 
-  // File Events
+  // Source Watcher
+
   $unwatchSource?: () => void;
   async getStats(path: CPath | string): Promise<FileStats | undefined> {
     try {
@@ -179,9 +183,9 @@ export class BuilderInternal {
       }, 100);
       this.$unwatchSource = this.platform.Directory.watch(this.dir.src, (event, path) => {
         event_paths.add(path.raw);
-        process_events();
+        const orphan = process_events();
       });
-      ConsoleLogWithDate(`Watching "${this.dir.src.raw}"`);
+      this.logger.logWithDate(`Watching "${this.dir.src.raw}"`);
     }
   }
 
@@ -198,7 +202,6 @@ export class BuilderInternal {
 
     // Startup Steps
     for (const step of this.startup_steps) {
-      ConsoleLogWithDate(step.constructor.name);
       await step.run(this);
     }
 
@@ -206,12 +209,26 @@ export class BuilderInternal {
     await this.processUnprocessedFiles();
 
     if (this.watchmode === true) {
-      // Source Watcher
+      // Setup Source Watcher
       this.setupSourceWatcher();
+      // Setup Stdin Reader
+      AddStdinListener(async (bytes, text, removeSelf) => {
+        if (text === KEYS.SIGINT || text === 'q') {
+          removeSelf();
+          this.logger.log('User Command: Quit');
+          this.$unwatchSource?.();
+          // Cleanup Steps
+          for (const step of this.cleanup_steps) {
+            await step.run(this);
+          }
+          // Force Exit
+          process.exit();
+        }
+      });
+      StartStdinRawModeReader();
     } else {
       // Cleanup Steps
       for (const step of this.cleanup_steps) {
-        ConsoleLogWithDate(step.constructor.name);
         await step.run(this);
       }
     }
@@ -289,7 +306,7 @@ async function runProcessorList(file: ProjectFile, waitlist: Promise<void>[], de
   for (const task of waitlist) {
     await task;
   }
-  ConsoleLogWithDate(`Processing - "${file.src_path.raw}"`);
+  logger.logWithDate(`Processing - "${file.src_path.raw}"`);
   file.resetBytes();
   for (const { processor, method } of file.$processor_list) {
     await method.call(processor, file.builder, file);

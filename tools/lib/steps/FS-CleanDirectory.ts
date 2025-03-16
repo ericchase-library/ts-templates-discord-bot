@@ -1,16 +1,26 @@
 import { CPath, Path } from 'src/lib/ericchase/Platform/FilePath.js';
-import { BuilderInternal, BuildStep } from 'tools/lib/BuilderInternal.js';
+import { Logger } from 'src/lib/ericchase/Utility/Logger.js';
+import { BuilderInternal } from 'tools/lib/BuilderInternal.js';
+import { Step } from 'tools/lib/Step.js';
 
-class CBuildStep_FSCleanDirectory implements BuildStep {
-  constructor(readonly paths: CPath[]) {}
+const logger = Logger(__filename, Step_CleanDirectory.name);
+
+export function Step_CleanDirectory(...paths: (CPath | string)[]): Step {
+  return new CStep_CleanDirectory(paths);
+}
+
+class CStep_CleanDirectory implements Step {
+  logger = logger.newChannel();
+
+  paths: CPath[];
+  constructor(paths: (CPath | string)[]) {
+    this.paths = paths.map((path) => Path(path));
+  }
   async run(builder: BuilderInternal) {
+    this.logger.logWithDate();
     for (const path of this.paths) {
       await builder.platform.Directory.delete(path);
       await builder.platform.Directory.create(path);
     }
   }
-}
-
-export function BuildStep_FSCleanDirectory(paths: (CPath | string)[]): BuildStep {
-  return new CBuildStep_FSCleanDirectory(paths.map((path) => Path(path)));
 }

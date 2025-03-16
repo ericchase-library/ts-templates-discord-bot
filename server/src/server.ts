@@ -1,3 +1,4 @@
+import { ServerWebSocket } from 'bun';
 import chalk from 'chalk';
 import { ConsoleLog } from './lib/ericchase/Utility/Console.js';
 import { get } from './router.get.js';
@@ -13,10 +14,9 @@ Bun.env.HOSTNAME = PREFERRED_HOSTNAME;
 Bun.env.PORT = `${PREFERRED_PORT}`;
 Bun.env.PUBLIC_PATH = PUBLIC_PATH;
 
-tryStartServer(PREFERRED_HOSTNAME, PREFERRED_PORT);
-
+interface WebSocketData {}
 function createServer(hostname: string, port: number) {
-  const server = Bun.serve({
+  const server = Bun.serve<ServerWebSocket<WebSocketData>, undefined>({
     async fetch(req) {
       try {
         const method = req.method;
@@ -47,11 +47,11 @@ function createServer(hostname: string, port: number) {
     hostname: hostname,
     port,
     websocket: {
-      close(ws) {
+      close(ws: ServerWebSocket<WebSocketData>, code: number, reason: string) {
         ws.unsubscribe('ws');
       },
-      message(ws, message) {},
-      open(ws) {
+      message(ws: ServerWebSocket<WebSocketData>, message: string | Buffer) {},
+      open(ws: ServerWebSocket<WebSocketData>) {
         ws.subscribe('ws');
       },
       perMessageDeflate: false,
@@ -68,10 +68,11 @@ function getMethodHandler(method: string): ((req: Request, url: URL, pathname: s
   }[method.toUpperCase()];
 }
 
-function tryStartServer(hostname: string, port: number) {
+async function tryStartServer(hostname: string, port: number) {
   try {
     const server = createServer(hostname, port);
     ConsoleLog('Serving at', `http://${server.hostname === '0.0.0.0' ? 'localhost' : server.hostname}:${server.port}/`);
+    ConsoleLog('Console at', `http://${server.hostname === '0.0.0.0' ? 'localhost' : server.hostname}:${server.port}/console`);
     ConsoleLog();
   } catch (error) {
     let error_code: 'EADDRINUSE' | 'EBADHOST' | undefined = undefined;
@@ -82,7 +83,7 @@ function tryStartServer(hostname: string, port: number) {
     }
 
     if (error_code === 'EADDRINUSE') {
-      if (testLocalhostServer(port)) {
+      if (await testLocalhostServer(port)) {
         error_code = 'EBADHOST';
       } else {
         ConsoleLog(`${chalk.red(error_code)}${chalk.gray(': Failed to start server. Is port 8000 in use?')}`);
@@ -102,7 +103,7 @@ function tryStartServer(hostname: string, port: number) {
   }
 }
 
-function testLocalhostServer(port: number) {
+async function testLocalhostServer(port: number) {
   try {
     const server = Bun.serve({
       fetch() {
@@ -110,9 +111,11 @@ function testLocalhostServer(port: number) {
       },
       port,
     });
-    server.stop();
+    await server.stop();
     return true;
   } catch (error) {
     return false;
   }
 }
+
+await tryStartServer(PREFERRED_HOSTNAME, PREFERRED_PORT);

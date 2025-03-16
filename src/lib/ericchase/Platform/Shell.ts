@@ -1,12 +1,16 @@
-import { ArraySplit } from '../../Algorithm/Array.js';
-import { ConsoleError } from '../../Utility/Console.js';
-import { Split, SplitMultipleSpaces } from '../../Utility/String.js';
+import { ArraySplit } from 'src/lib/ericchase/Algorithm/Array.js';
+import { JSONRawStringParse } from 'src/lib/ericchase/Algorithm/JSON.js';
+import { ConsoleError } from 'src/lib/ericchase/Utility/Console.js';
+import { Split, SplitMultipleSpaces } from 'src/lib/ericchase/Utility/String.js';
+
+// The seemingly random JSONRawStringParse(String.raw``)s are to keep bundlers
+// from replacing the unicode code points with an alternative representation.
 
 function createCodeMap(table: string) {
   // witness the power of my library
   const map: Record<string, string> = {};
   for (const [name, code] of ArraySplit(Split(table.trim(), '|', true), 3)) {
-    map[name.trim()] = SplitMultipleSpaces(code, true)[0];
+    map[name.trim()] = JSONRawStringParse(SplitMultipleSpaces(code, true)[0]);
   }
   // for (const name in map) {
   //   ConsoleLog([name, map[name].charCodeAt(0)]);
@@ -14,7 +18,7 @@ function createCodeMap(table: string) {
   return map;
 }
 
-const GeneralASCIICodes = createCodeMap(`
+const GeneralASCIICodes = createCodeMap(String.raw`
 | BEL | \u0007 | Terminal bell
 | BS  | \u0008 | Backspace
 | HT  | \u0009 | Horizontal TAB
@@ -27,32 +31,41 @@ const GeneralASCIICodes = createCodeMap(`
 `);
 
 // Sequences
+
 const ESC = GeneralASCIICodes.ESC;
 const CSI = `${ESC}[`;
 const DCS = `${ESC}P`;
 const OSC = `${ESC}]`;
 
 export const KEYS = {
-  // Special
-  SIGINT: '\u0003', // Kill the currently running task in terminal.
-  ESC,
+  BEL: GeneralASCIICodes.BEL,
+  BS: GeneralASCIICodes.BS,
+  CR: GeneralASCIICodes.CR,
   CSI,
   DCS,
+  DEL: GeneralASCIICodes.DEL,
+  ESC,
+  FF: GeneralASCIICodes.FF,
+  HT: GeneralASCIICodes.HT,
+  LF: GeneralASCIICodes.LF,
   OSC,
+  VT: GeneralASCIICodes.VT,
+  SIGINT: JSONRawStringParse(String.raw`\u0003`), // Kill the currently running task in terminal.
   ARROWS: {
-    DOWN: '\u001B[B',
-    LEFT: '\u001B[D',
-    RIGHT: '\u001B[C',
-    UP: '\u001B[A',
+    DOWN: JSONRawStringParse(String.raw`\u001B[B`),
+    LEFT: JSONRawStringParse(String.raw`\u001B[D`),
+    RIGHT: JSONRawStringParse(String.raw`\u001B[C`),
+    UP: JSONRawStringParse(String.raw`\u001B[A`),
   },
 };
+
 export const Shell = {
   EraseLine() {
     process.stdout.write(`${CSI}2K`);
   },
   HideCursor() {
     process.stdout.write(`${CSI}?25l`);
-    if (exit_trapped === false) {
+    if (exittrap === false) {
       SetupExitTrapForCursor();
     }
   },
@@ -87,7 +100,7 @@ export const Shell = {
   },
 };
 
-let exit_trapped = false;
+let exittrap = false;
 function listenerUncaughtException(error: Error, origin: NodeJS.UncaughtExceptionOrigin) {
   Shell.ShowCursor();
   if (process.listeners('uncaughtException').length === 1) {
@@ -96,7 +109,7 @@ function listenerUncaughtException(error: Error, origin: NodeJS.UncaughtExceptio
   }
 }
 function SetupExitTrapForCursor() {
-  exit_trapped = true;
+  exittrap = true;
   process.on('exit', Shell.ShowCursor);
   process.on('SIGINT', Shell.ShowCursor);
   process.on('uncaughtException', () => listenerUncaughtException);

@@ -26808,7 +26808,7 @@ var require_dist9 = __commonJS((exports, module) => {
 
 // node_modules/@discordjs/ws/dist/index.js
 var require_dist10 = __commonJS((exports, module) => {
-  var __dirname = "C:\\Code\\Base\\Javascript-Typescript\\Projects-v2\\Discord-Bot-v2\\node_modules\\@discordjs\\ws\\dist";
+  var __dirname = "C:\\Code\\Base\\Javascript-Typescript\\Templates\\Discord Bot\\node_modules\\@discordjs\\ws\\dist";
   var __create2 = Object.create;
   var __defProp2 = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;

@@ -1,4 +1,4 @@
-import { Handler, HandlerCaller } from '../Handler.js';
+import { Handler, HandlerCaller } from 'src/lib/ericchase/Design Pattern/Handler.js';
 
 export type ChainedHandler<Request = void, Actions = void> = Handler<Request, { stopHandlerChain: () => void } & Actions>;
 
@@ -8,9 +8,7 @@ export class ChainedHandlerCaller<Request = void, Actions = void> extends Handle
     for (const handler of this) {
       await handler(request, {
         ...actions,
-        removeSelf: () => {
-          this.remove(handler);
-        },
+        removeSelf: () => this.remove(handler),
         stopHandlerChain: () => {
           abort = true;
         },

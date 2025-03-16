@@ -3,10 +3,9 @@ import { Path } from 'src/lib/ericchase/Platform/FilePath.js';
 import { getPlatformProvider } from 'src/lib/ericchase/Platform/PlatformProvider.js';
 
 export const cache_dir = Path('./tools/cache');
+export const cache_platform = await getPlatformProvider('bun');
 
-const platform = await getPlatformProvider('node');
-await platform.Directory.create(cache_dir);
-
+await cache_platform.Directory.create(cache_dir);
 export const cache_db = new Database(Path(cache_dir, 'cache.db').raw, { create: true, strict: true });
 
 type SQLQueryBindings = Record<string, string | bigint | NodeJS.TypedArray | number | boolean | null>;

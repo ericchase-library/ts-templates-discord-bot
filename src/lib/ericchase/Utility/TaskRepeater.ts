@@ -1,4 +1,4 @@
-import type { SyncAsync } from './Types.js';
+import { SyncAsync } from 'src/lib/ericchase/Utility/Types.js';
 
 export class TaskRepeater<ReturnType> {
   $result?: SyncAsync<ReturnType>;
@@ -27,7 +27,7 @@ export class TaskRepeater<ReturnType> {
   start() {
     if (this.$running === false) {
       this.$running = true;
-      this.$executor();
+      const orphan = this.$executor();
     }
   }
   stop() {

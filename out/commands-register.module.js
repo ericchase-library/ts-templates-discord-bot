@@ -366,7 +366,7 @@ if (process.env.DEBUG === "1") {
 client.once(Events.ClientReady, async () => {
   try {
     ConsoleLog(`Logged in as ${client.user?.tag ?? "[APP]"}`);
-    ConsoleLog("Registering commands:", command_data_list.map((data) => data.name));
+    ConsoleLog(`Registering commands: [${command_data_list.map((data) => data.name).join(", ")}]`);
     const guilds = await client.guilds.fetch();
     ConsoleLog(`for ${guilds.size} guilds...`);
     for (const [_, guild] of guilds) {
