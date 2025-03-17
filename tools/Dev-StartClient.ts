@@ -4,10 +4,9 @@ import { U8ToString } from 'src/lib/ericchase/Algorithm/Uint8Array.js';
 import { Debounce } from 'src/lib/ericchase/Utility/Debounce.js';
 import { Logger } from 'src/lib/ericchase/Utility/Logger.js';
 import { Sleep } from 'src/lib/ericchase/Utility/Sleep.js';
-import { BuilderInternal } from 'tools/lib/BuilderInternal.js';
-import { Step } from 'tools/lib/Step.js';
+import { BuilderInternal, Step } from 'tools/lib/Builder.js';
 
-const logger = Logger(__filename, Step_StartClient.name);
+const logger = Logger(Step_StartClient.name);
 
 export function Step_StartClient(): Step {
   return new CStep_StartClient();

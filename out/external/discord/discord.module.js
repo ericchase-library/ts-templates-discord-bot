@@ -3876,8 +3876,7 @@ var require_dist3 = __commonJS((exports, module) => {
       const { name } = this.constructor;
       if (name !== "AsyncEventEmitter")
         ctorInfo = ` on ${name} instance`;
-    } catch {
-    }
+    } catch {}
     const sep = `
 Emitted 'error' event${ctorInfo} at:
 `;
@@ -4059,8 +4058,7 @@ Emitted 'error' event${ctorInfo} at:
               value: enhanceStackTrace.call(this, er, capture),
               configurable: true
             });
-          } catch {
-          }
+          } catch {}
           throw er;
         }
         const stringifiedError = String(er);
@@ -4324,8 +4322,7 @@ Emitted 'error' event${ctorInfo} at:
     }
   }
   __name(eventTargetAgnosticAddListener, "eventTargetAgnosticAddListener");
-  var AsyncIteratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf(async function* () {
-  }).prototype);
+  var AsyncIteratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf(async function* () {}).prototype);
   function createIterResult(value, done) {
     return { value, done };
   }
@@ -10483,10 +10480,8 @@ var require_Collector = __commonJS((exports, module) => {
     get endReason() {
       return this._endReason;
     }
-    collect() {
-    }
-    dispose() {
-    }
+    collect() {}
+    dispose() {}
   }
   module.exports = Collector;
 });
@@ -10725,8 +10720,7 @@ var require__getRawTag = __commonJS((exports, module) => {
     try {
       value[symToStringTag] = undefined;
       var unmasked = true;
-    } catch (e) {
-    }
+    } catch (e) {}
     var result = nativeObjectToString.call(value);
     if (unmasked) {
       if (isOwn) {
@@ -10860,12 +10854,10 @@ var require__toSource = __commonJS((exports, module) => {
     if (func != null) {
       try {
         return funcToString.call(func);
-      } catch (e) {
-      }
+      } catch (e) {}
       try {
         return func + "";
-      } catch (e) {
-      }
+      } catch (e) {}
     }
     return "";
   }
@@ -11578,8 +11570,7 @@ var require__Set = __commonJS((exports, module) => {
 
 // node_modules/lodash/noop.js
 var require_noop = __commonJS((exports, module) => {
-  function noop() {
-  }
+  function noop() {}
   module.exports = noop;
 });
 
@@ -11762,8 +11753,7 @@ var require_cjs3 = __commonJS((exports) => {
     (this || r).fun = e3, (this || r).array = t3;
   }
   __name(m, "m");
-  function p() {
-  }
+  function p() {}
   __name(p, "p");
   o.nextTick = function(e3) {
     var t3 = new Array(arguments.length - 1);
@@ -11829,8 +11819,7 @@ var require_cjs3 = __commonJS((exports) => {
       return false;
     try {
       return Function("return function*() {}")();
-    } catch (t3) {
-    }
+    } catch (t3) {}
   }();
   var u2 = c2 ? r$1(c2) : {};
   var i2 = /* @__PURE__ */ __name(function(c3) {
@@ -11841,8 +11830,7 @@ var require_cjs3 = __commonJS((exports) => {
   } : function(t3, e3) {
     if (e3) {
       t3.super_ = e3;
-      var o3 = /* @__PURE__ */ __name(function() {
-      }, "o");
+      var o3 = /* @__PURE__ */ __name(function() {}, "o");
       o3.prototype = e3.prototype, t3.prototype = new o3, t3.prototype.constructor = t3;
     }
   };
@@ -12246,8 +12234,7 @@ var require_cjs3 = __commonJS((exports) => {
           console.error("%s %d: %s", e3, t3, r3);
         };
       } else
-        re[e3] = function() {
-        };
+        re[e3] = function() {};
     return re[e3];
   }, X.inspect = oe, oe.colors = { bold: [1, 22], italic: [3, 23], underline: [4, 24], inverse: [7, 27], white: [37, 39], grey: [90, 39], black: [30, 39], blue: [34, 39], cyan: [36, 39], green: [32, 39], magenta: [35, 39], red: [31, 39], yellow: [33, 39] }, oe.styles = { special: "cyan", number: "yellow", boolean: "yellow", undefined: "grey", null: "bold", string: "green", date: "magenta", regexp: "red" }, X.types = o$2, X.isArray = pe, X.isBoolean = ye, X.isNull = le, X.isNullOrUndefined = function(e3) {
     return e3 == null;
@@ -20986,26 +20973,16 @@ var require_WebhookClient = __commonJS((exports, module) => {
       this.id = id;
       Object.defineProperty(this, "token", { value: token, writable: true, configurable: true });
     }
-    send() {
-    }
-    fetchMessage() {
-    }
-    editMessage() {
-    }
-    sendSlackMessage() {
-    }
-    edit() {
-    }
-    delete() {
-    }
-    deleteMessage() {
-    }
-    get createdTimestamp() {
-    }
-    get createdAt() {
-    }
-    get url() {
-    }
+    send() {}
+    fetchMessage() {}
+    editMessage() {}
+    sendSlackMessage() {}
+    edit() {}
+    delete() {}
+    deleteMessage() {}
+    get createdTimestamp() {}
+    get createdAt() {}
+    get url() {}
   }
   Webhook.applyToClass(WebhookClient);
   module.exports = WebhookClient;
@@ -21595,16 +21572,11 @@ var require_InteractionWebhook = __commonJS((exports, module) => {
       this.id = id;
       Object.defineProperty(this, "token", { value: token, writable: true, configurable: true });
     }
-    send() {
-    }
-    fetchMessage() {
-    }
-    editMessage() {
-    }
-    deleteMessage() {
-    }
-    get url() {
-    }
+    send() {}
+    fetchMessage() {}
+    editMessage() {}
+    deleteMessage() {}
+    get url() {}
   }
   Webhook.applyToClass(InteractionWebhook, ["sendSlackMessage", "edit", "delete", "createdTimestamp", "createdAt"]);
   module.exports = InteractionWebhook;
@@ -22012,22 +21984,14 @@ var require_DMChannel = __commonJS((exports, module) => {
     toString() {
       return userMention(this.recipientId);
     }
-    get lastMessage() {
-    }
-    get lastPinAt() {
-    }
-    send() {
-    }
-    sendTyping() {
-    }
-    createMessageCollector() {
-    }
-    awaitMessages() {
-    }
-    createMessageComponentCollector() {
-    }
-    awaitMessageComponent() {
-    }
+    get lastMessage() {}
+    get lastPinAt() {}
+    send() {}
+    sendTyping() {}
+    createMessageCollector() {}
+    awaitMessages() {}
+    createMessageComponentCollector() {}
+    awaitMessageComponent() {}
   }
   TextBasedChannel.applyToClass(DMChannel, true, [
     "bulkDelete",
@@ -22154,14 +22118,10 @@ var require_ThreadOnlyChannel = __commonJS((exports, module) => {
     setDefaultSortOrder(defaultSortOrder, reason) {
       return this.edit({ defaultSortOrder, reason });
     }
-    createWebhook() {
-    }
-    fetchWebhooks() {
-    }
-    setNSFW() {
-    }
-    setRateLimitPerUser() {
-    }
+    createWebhook() {}
+    fetchWebhooks() {}
+    setNSFW() {}
+    setRateLimitPerUser() {}
   }
   TextBasedChannel.applyToClass(ThreadOnlyChannel, true, [
     "send",
@@ -22562,24 +22522,15 @@ var require_ThreadChannel = __commonJS((exports, module) => {
       await this.guild.channels.delete(this.id, reason);
       return this;
     }
-    get lastMessage() {
-    }
-    get lastPinAt() {
-    }
-    send() {
-    }
-    sendTyping() {
-    }
-    createMessageCollector() {
-    }
-    awaitMessages() {
-    }
-    createMessageComponentCollector() {
-    }
-    awaitMessageComponent() {
-    }
-    bulkDelete() {
-    }
+    get lastMessage() {}
+    get lastPinAt() {}
+    send() {}
+    sendTyping() {}
+    createMessageCollector() {}
+    awaitMessages() {}
+    createMessageComponentCollector() {}
+    awaitMessageComponent() {}
+    bulkDelete() {}
   }
   TextBasedChannel.applyToClass(ThreadChannel, true, ["fetchWebhooks", "setRateLimitPerUser", "setNSFW"]);
   module.exports = ThreadChannel;
@@ -22771,32 +22722,19 @@ var require_BaseGuildTextChannel = __commonJS((exports, module) => {
     fetchInvites(cache = true) {
       return this.guild.invites.fetch({ channelId: this.id, cache });
     }
-    get lastMessage() {
-    }
-    get lastPinAt() {
-    }
-    send() {
-    }
-    sendTyping() {
-    }
-    createMessageCollector() {
-    }
-    awaitMessages() {
-    }
-    createMessageComponentCollector() {
-    }
-    awaitMessageComponent() {
-    }
-    bulkDelete() {
-    }
-    fetchWebhooks() {
-    }
-    createWebhook() {
-    }
-    setRateLimitPerUser() {
-    }
-    setNSFW() {
-    }
+    get lastMessage() {}
+    get lastPinAt() {}
+    send() {}
+    sendTyping() {}
+    createMessageCollector() {}
+    awaitMessages() {}
+    createMessageComponentCollector() {}
+    awaitMessageComponent() {}
+    bulkDelete() {}
+    fetchWebhooks() {}
+    createWebhook() {}
+    setRateLimitPerUser() {}
+    setNSFW() {}
   }
   TextBasedChannel.applyToClass(BaseGuildTextChannel, true);
   module.exports = BaseGuildTextChannel;
@@ -22905,30 +22843,18 @@ var require_BaseGuildVoiceChannel = __commonJS((exports, module) => {
     setVideoQualityMode(videoQualityMode, reason) {
       return this.edit({ videoQualityMode, reason });
     }
-    get lastMessage() {
-    }
-    send() {
-    }
-    sendTyping() {
-    }
-    createMessageCollector() {
-    }
-    awaitMessages() {
-    }
-    createMessageComponentCollector() {
-    }
-    awaitMessageComponent() {
-    }
-    bulkDelete() {
-    }
-    fetchWebhooks() {
-    }
-    createWebhook() {
-    }
-    setRateLimitPerUser() {
-    }
-    setNSFW() {
-    }
+    get lastMessage() {}
+    send() {}
+    sendTyping() {}
+    createMessageCollector() {}
+    awaitMessages() {}
+    createMessageComponentCollector() {}
+    awaitMessageComponent() {}
+    bulkDelete() {}
+    fetchWebhooks() {}
+    createWebhook() {}
+    setRateLimitPerUser() {}
+    setNSFW() {}
   }
   TextBasedChannel.applyToClass(BaseGuildVoiceChannel, true, ["lastPinAt"]);
   module.exports = BaseGuildVoiceChannel;
@@ -23074,14 +23000,10 @@ var require_PartialGroupDMChannel = __commonJS((exports, module) => {
     async fetch() {
       throw new DiscordjsError(ErrorCodes.FetchGroupDMChannel);
     }
-    get lastMessage() {
-    }
-    get lastPinAt() {
-    }
-    createMessageComponentCollector() {
-    }
-    awaitMessageComponent() {
-    }
+    get lastMessage() {}
+    get lastPinAt() {}
+    createMessageComponentCollector() {}
+    awaitMessageComponent() {}
   }
   TextBasedChannel.applyToClass(PartialGroupDMChannel, true, [
     "bulkDelete",
@@ -25052,28 +24974,17 @@ var require_MessageComponentInteraction = __commonJS((exports, module) => {
     get component() {
       return this.message.components.flatMap((row) => row.components).find((component) => (component.customId ?? component.custom_id) === this.customId);
     }
-    deferReply() {
-    }
-    reply() {
-    }
-    fetchReply() {
-    }
-    editReply() {
-    }
-    deleteReply() {
-    }
-    followUp() {
-    }
-    deferUpdate() {
-    }
-    update() {
-    }
-    showModal() {
-    }
-    sendPremiumRequired() {
-    }
-    awaitModalSubmit() {
-    }
+    deferReply() {}
+    reply() {}
+    fetchReply() {}
+    editReply() {}
+    deleteReply() {}
+    followUp() {}
+    deferUpdate() {}
+    update() {}
+    showModal() {}
+    sendPremiumRequired() {}
+    awaitModalSubmit() {}
   }
   InteractionResponses.applyToClass(MessageComponentInteraction);
   module.exports = MessageComponentInteraction;
@@ -25158,24 +25069,15 @@ var require_CommandInteraction = __commonJS((exports, module) => {
       }
       return result;
     }
-    deferReply() {
-    }
-    reply() {
-    }
-    fetchReply() {
-    }
-    editReply() {
-    }
-    deleteReply() {
-    }
-    followUp() {
-    }
-    showModal() {
-    }
-    sendPremiumRequired() {
-    }
-    awaitModalSubmit() {
-    }
+    deferReply() {}
+    reply() {}
+    fetchReply() {}
+    editReply() {}
+    deleteReply() {}
+    followUp() {}
+    showModal() {}
+    sendPremiumRequired() {}
+    awaitModalSubmit() {}
   }
   InteractionResponses.applyToClass(CommandInteraction, ["deferUpdate", "update"]);
   module.exports = CommandInteraction;
@@ -25359,24 +25261,15 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
     isFromMessage() {
       return Boolean(this.message);
     }
-    deferReply() {
-    }
-    reply() {
-    }
-    fetchReply() {
-    }
-    editReply() {
-    }
-    deleteReply() {
-    }
-    followUp() {
-    }
-    deferUpdate() {
-    }
-    update() {
-    }
-    sendPremiumRequired() {
-    }
+    deferReply() {}
+    reply() {}
+    fetchReply() {}
+    editReply() {}
+    deleteReply() {}
+    followUp() {}
+    deferUpdate() {}
+    update() {}
+    sendPremiumRequired() {}
   }
   InteractionResponses.applyToClass(ModalSubmitInteraction, "showModal");
   module.exports = ModalSubmitInteraction;
@@ -27912,7 +27805,7 @@ var require_dist10 = __commonJS((exports, module) => {
     }
     debug(messages) {
       this.emit("debug", { message: messages.join(`
-\t`) });
+	`) });
     }
   };
   var SimpleShardingStrategy = class {
@@ -28995,8 +28888,7 @@ var require_WebSocketManager = __commonJS((exports, module) => {
   var zlib;
   try {
     zlib = (()=>{throw new Error("Cannot require module "+"zlib-sync");})();
-  } catch {
-  }
+  } catch {}
   var BeforeReadyWhitelist = [
     GatewayDispatchEvents.Ready,
     GatewayDispatchEvents.Resumed,
@@ -29033,7 +28925,7 @@ var require_WebSocketManager = __commonJS((exports, module) => {
     }
     debug(messages, shardId) {
       this.client.emit(Events.Debug, `[WS => ${typeof shardId === "number" ? `Shard ${shardId}` : "Manager"}] ${messages.join(`
-\t`)}`);
+	`)}`);
     }
     async connect() {
       const invalidToken = new DiscordjsError(ErrorCodes.TokenInvalid);
@@ -33082,8 +32974,7 @@ var require_Shard = __commonJS((exports, module) => {
         }
         if (message._sRespawnAll) {
           const { shardDelay, respawnDelay, timeout } = message._sRespawnAll;
-          this.manager.respawnAll({ shardDelay, respawnDelay, timeout }).catch(() => {
-          });
+          this.manager.respawnAll({ shardDelay, respawnDelay, timeout }).catch(() => {});
           return;
         }
       }

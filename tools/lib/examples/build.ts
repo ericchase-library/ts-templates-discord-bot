@@ -1,4 +1,3 @@
-import { Step_StartClient } from 'tools/Dev-StartClient.js';
 import { Builder } from 'tools/lib/Builder.js';
 import { Processor_BasicWriter } from 'tools/lib/processors/FS-BasicWriter.js';
 import { Processor_TypeScript_GenericBundlerImportRemapper } from 'tools/lib/processors/TypeScript-GenericBundler-ImportRemapper.js';
@@ -10,14 +9,10 @@ import { Step_Format } from 'tools/lib/steps/FS-Format.js';
 // Use command line arguments to set watch mode.
 const builder = new Builder(Bun.argv[2] === '--watch' ? 'watch' : 'build');
 
-// During "dev" mode (when "--watch" is passed as an argument), the bot client
-// will start running with automatic re-running when output files change. Look
-// in the "Dev-StartClient.ts" file to see how it works.
 builder.setStartupSteps([
   Step_Bun_Run({ cmd: ['bun', 'install'] }, 'quiet'),
   Step_CleanDirectory(builder.dir.out),
   Step_Format('quiet'),
-  Step_StartClient(),
   //
 ]);
 
@@ -29,7 +24,7 @@ builder.setStartupSteps([
 // the other hand, produce fully contained bundles. They do not import anything
 // from anywhere. Use them accordingly.
 builder.setProcessorModules([
-  Processor_TypeScript_GenericBundler({ sourcemap: 'none', target: 'bun' }),
+  Processor_TypeScript_GenericBundler({ sourcemap: 'none', target: 'browser' }),
   Processor_TypeScript_GenericBundlerImportRemapper(),
   Processor_BasicWriter(['**/*'], ['**/*.ts', `${builder.dir.lib.standard}/**/*`]), // all files except for .ts and lib files
   Processor_BasicWriter(['**/*.module.ts', '**/*.script.ts'], []), // all module and script files
@@ -37,6 +32,7 @@ builder.setProcessorModules([
 ]);
 
 builder.setCleanupSteps([
+  Step_Format('quiet'),
   //
 ]);
 
