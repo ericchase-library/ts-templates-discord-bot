@@ -34005,5 +34005,6 @@ client.on(import_discord.Events.InteractionCreate, async (interaction) => {
     }
   }
 });
+console.log("test test test");
 ConsoleLog("Attempting to log in.");
 client.login(getBotToken());

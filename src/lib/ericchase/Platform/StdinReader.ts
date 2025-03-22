@@ -1,3 +1,5 @@
+import { Orphan } from 'src/lib/ericchase/Utility/Promise.js';
+
 // Gotchas:
 // If the stdin stream is switched to utf8 mode, it cannot be switched back to
 // byte mode (need to verify again). Instead, leave it in byte mode, and decode the bytes.
@@ -11,17 +13,13 @@ const listeners = new Set<(bytes: Uint8Array, text: string, removeSelf: () => bo
 function handler(bytes: Uint8Array): void {
   const text = decoder.decode(bytes);
   for (const listener of listeners) {
-    const ignore = listener(bytes, text, () => listeners.delete(listener));
+    Orphan(listener(bytes, text, () => listeners.delete(listener)));
   }
 }
 
-export function AddStdinListener(listener: (bytes: Uint8Array, text: string, removeSelf: () => boolean) => Promise<void>) {
-  listeners.add(listener);
-}
-
-export function StartStdinReader() {
+function SwitchToLineReader() {
   if (enabled === true && rawmode === true) {
-    StopStdinReader();
+    StopStdInReader();
   }
   if (enabled === false) {
     process.stdin //
@@ -32,10 +30,9 @@ export function StartStdinReader() {
     rawmode = false;
   }
 }
-
-export function StartStdinRawModeReader() {
+function SwitchToRawModeReader() {
   if (enabled === true && rawmode === false) {
-    StopStdinReader();
+    StopStdInReader();
   }
   if (enabled === false) {
     process.stdin //
@@ -47,8 +44,7 @@ export function StartStdinRawModeReader() {
     rawmode = true;
   }
 }
-
-export function StopStdinReader() {
+function StopReader() {
   if (enabled === true) {
     process.stdin //
       .pause()
@@ -57,5 +53,35 @@ export function StopStdinReader() {
     // await Sleep(0); // ??
     enabled = true;
     rawmode = false;
+  }
+}
+
+export function AddStdInListener(listener: (bytes: Uint8Array, text: string, removeSelf: () => boolean) => Promise<void>) {
+  listeners.add(listener);
+}
+
+const locks = new Set<() => void>();
+export function GetStdInReaderLock() {
+  const release = () => {
+    locks.delete(release);
+    if (locks.size === 0) {
+      StopReader();
+    }
+  };
+  locks.add(release);
+  return release;
+}
+
+export function StartStdInReader() {
+  SwitchToLineReader();
+}
+
+export function StartStdInRawModeReader() {
+  SwitchToRawModeReader();
+}
+
+export function StopStdInReader() {
+  if (locks.size === 0) {
+    StopReader();
   }
 }

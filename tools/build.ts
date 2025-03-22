@@ -10,16 +10,16 @@ import { Step_Format } from 'tools/lib/steps/FS-Format.js';
 // Use command line arguments to set watch mode.
 const builder = new Builder(Bun.argv[2] === '--watch' ? 'watch' : 'build');
 
-// During "dev" mode (when "--watch" is passed as an argument), the bot client
-// will start running with automatic re-running when output files change. Look
-// in the "Dev-StartClient.ts" file to see how it works.
+// These steps are run during the startup phase only.
 builder.setStartupSteps([
-  Step_Bun_Run({ cmd: ['bun', 'install'] }, 'quiet'),
+  Step_Bun_Run({ cmd: ['bun', 'install'] }),
   Step_CleanDirectory(builder.dir.out),
   Step_Format('quiet'),
-  Step_StartClient(),
   //
 ]);
+
+// These steps are run before each processing phase.
+builder.setBeforeProcessingSteps([]);
 
 // Basic setup for a general typescript project. Typescript files that match
 // "*.module.ts" and "*.script.ts" are bundled and written to the out folder.
@@ -31,13 +31,23 @@ builder.setStartupSteps([
 builder.setProcessorModules([
   Processor_TypeScript_GenericBundler({ sourcemap: 'none', target: 'bun' }),
   Processor_TypeScript_GenericBundlerImportRemapper(),
-  Processor_BasicWriter(['**/*'], ['**/*.ts', `${builder.dir.lib.standard}/**/*`]), // all files except for .ts and lib files
-  Processor_BasicWriter(['**/*.module.ts', '**/*.script.ts'], []), // all module and script files
+  // all files except for .ts and lib files
+  Processor_BasicWriter(['**/*'], ['**/*.ts', `${builder.dir.lib.standard}/**/*`]),
+  // all module and script files
+  Processor_BasicWriter(['**/*.module.ts', '**/*.script.ts'], []),
   //
 ]);
 
-builder.setCleanupSteps([
+// These steps are run after each processing phase.
+builder.setAfterProcessingSteps([
+  // During "dev" mode (when "--watch" is passed as an argument), the bot
+  // client will start running with automatic re-running when output files
+  // change. Look in the "Dev-StartClient.ts" file to see how it works.
+  Step_StartClient(),
   //
 ]);
+
+// These steps are run during the shutdown phase only.
+builder.setCleanupSteps([]);
 
 await builder.start();

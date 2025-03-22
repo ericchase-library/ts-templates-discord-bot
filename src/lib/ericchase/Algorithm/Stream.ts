@@ -1,5 +1,6 @@
 import { U8, U8Concat, U8Take } from 'src/lib/ericchase/Algorithm/Uint8Array.js';
 import { SplitLines } from 'src/lib/ericchase/Utility/String.js';
+import { SyncAsync } from 'src/lib/ericchase/Utility/Types.js';
 
 export async function* AsyncReader<T>(stream: ReadableStream<T>) {
   const reader = stream.getReader();
@@ -136,5 +137,15 @@ export async function U8StreamReadSome(stream: ReadableStream<Uint8Array>, count
     return U8Take(U8Concat(chunks), count)[0];
   } finally {
     reader.releaseLock();
+  }
+}
+
+export async function U8StreamReadLines(stream: ReadableStream<Uint8Array>, callback: (line: string) => SyncAsync<boolean | void>) {
+  for await (const lines of AsyncLineReader(stream)) {
+    for (const line of lines) {
+      if ((await callback(line)) === false) {
+        return;
+      }
+    }
   }
 }
