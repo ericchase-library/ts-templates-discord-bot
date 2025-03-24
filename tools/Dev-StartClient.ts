@@ -1,10 +1,10 @@
 import { Subprocess } from 'bun';
-import { U8StreamReadLines } from 'src/lib/ericchase/Algorithm/Stream.js';
-import { Debounce } from 'src/lib/ericchase/Utility/Debounce.js';
-import { Logger } from 'src/lib/ericchase/Utility/Logger.js';
-import { Orphan } from 'src/lib/ericchase/Utility/Promise.js';
-import { RestartableTaskChain } from 'src/lib/ericchase/Utility/Task_RestartableTaskChain.js';
-import { BuilderInternal, Step } from 'tools/lib/Builder.js';
+import { U8StreamReadLines } from '../src/lib/ericchase/Algorithm/Stream.js';
+import { Debounce } from '../src/lib/ericchase/Utility/Debounce.js';
+import { Logger } from '../src/lib/ericchase/Utility/Logger.js';
+import { Orphan } from '../src/lib/ericchase/Utility/Promise.js';
+import { RestartableTaskChain } from '../src/lib/ericchase/Utility/Task_RestartableTaskChain.js';
+import { BuilderInternal, Step } from './lib/Builder.js';
 
 const logger = Logger(Step_StartClient.name);
 

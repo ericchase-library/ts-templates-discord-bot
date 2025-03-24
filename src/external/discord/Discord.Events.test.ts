@@ -1,6 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-
-import { Events } from 'src/external/discord/discord.module.js';
+import { Events } from './discord.module.js';
 
 describe('Discord.Events', () => {
   test('ApplicationCommandPermissionsUpdate', () => {

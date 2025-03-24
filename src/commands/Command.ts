@@ -1,5 +1,5 @@
-import { Interaction, SlashCommandOptionsOnlyBuilder } from 'src/external/discord/discord.module.js';
-import { ConsoleError } from 'src/lib/ericchase/Utility/Console.js';
+import { Interaction, SlashCommandOptionsOnlyBuilder } from '../external/discord/discord.module.js';
+import { ConsoleError } from '../lib/ericchase/Utility/Console.js';
 
 export type Command = {
   name: string;

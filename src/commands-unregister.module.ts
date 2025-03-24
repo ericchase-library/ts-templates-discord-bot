@@ -1,6 +1,6 @@
-import { REST, Routes } from 'src/external/discord/discord.module.js';
-import { ConsoleError, ConsoleLog } from 'src/lib/ericchase/Utility/Console.js';
-import { getBotToken, getClientID } from 'src/lib/lib.env.js';
+import { REST, Routes } from './external/discord/discord.module.js';
+import { ConsoleError, ConsoleLog } from './lib/ericchase/Utility/Console.js';
+import { getBotToken, getClientID } from './lib/lib.env.js';
 
 const rest = new REST({ version: '10' }).setToken(getBotToken());
 

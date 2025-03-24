@@ -1,4 +1,4 @@
-import { GuildMember, type Interaction, type User } from 'src/external/discord/discord.module.js';
+import { GuildMember, Interaction, User } from '../external/discord/discord.module.js';
 
 export async function getGuildMember(interaction: Interaction) {
   if (interaction.member) {
