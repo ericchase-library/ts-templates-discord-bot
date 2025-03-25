@@ -24,8 +24,7 @@ class CStep_StartClient implements Step {
         const { stderr, stdout } = this.process_register;
         await Promise.allSettled([
           U8StreamReadLines(stderr, (line) => this.channel.error(line)),
-          U8StreamReadLines(stdout, (line) => this.channel.log(line)),
-          //
+          U8StreamReadLines(stdout, (line) => this.channel.log(line)), //
         ]);
       },
       async () => {
@@ -49,6 +48,7 @@ class CStep_StartClient implements Step {
   debouncedRestart = Debounce(() => {
     this.taskchain.restart();
   }, 250);
+
   async end(builder: BuilderInternal) {
     this.taskchain.abort();
   }
