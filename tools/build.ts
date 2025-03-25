@@ -18,7 +18,8 @@ builder.setStartupSteps(
   //
 );
 
-// These steps are run before each processing phase.
+// These steps are run before each processing phase, only if there are
+// processors to run.
 builder.setBeforeProcessingSteps();
 
 // Basic setup for a general typescript project. Typescript files that match
@@ -38,7 +39,8 @@ builder.setProcessorModules(
   //
 );
 
-// These steps are run after each processing phase.
+// The processors are run for every file that added them during every
+// processing phase.
 builder.setAfterProcessingSteps(
   // During "dev" mode (when "--watch" is passed as an argument), the bot
   // client will start running with automatic re-running when output files
@@ -47,7 +49,8 @@ builder.setAfterProcessingSteps(
   //
 );
 
-// These steps are run during the shutdown phase only.
+// These steps are run after each processing phase, only if there are
+// processors to run.
 builder.setCleanupSteps();
 
 await builder.start();
