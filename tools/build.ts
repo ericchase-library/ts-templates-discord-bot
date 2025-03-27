@@ -18,8 +18,7 @@ builder.setStartupSteps(
   //
 );
 
-// These steps are run before each processing phase, only if there are
-// processors to run.
+// These steps are run before each processing phase.
 builder.setBeforeProcessingSteps();
 
 // Basic setup for a general typescript project. Typescript files that match
@@ -49,8 +48,7 @@ builder.setAfterProcessingSteps(
   //
 );
 
-// These steps are run after each processing phase, only if there are
-// processors to run.
+// These steps are run after each processing phase.
 builder.setCleanupSteps();
 
 await builder.start();

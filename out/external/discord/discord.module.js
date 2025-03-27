@@ -5782,7 +5782,7 @@ var require_dist5 = __commonJS((exports, module) => {
     version: () => version
   });
   module.exports = __toCommonJS(src_exports);
-  var import_node_buffer = __require("buffer");
+  var import_node_buffer = __require("node:buffer");
   var import_util2 = require_dist();
   var import_undici2 = __require("undici");
   var defaultStrategy;
@@ -5794,9 +5794,9 @@ var require_dist5 = __commonJS((exports, module) => {
     return defaultStrategy;
   }
   __name(getDefaultStrategy, "getDefaultStrategy");
-  var import_node_http = __require("http");
-  var import_node_url = __require("url");
-  var import_node_util = __require("util");
+  var import_node_http = __require("node:http");
+  var import_node_url = __require("node:url");
+  var import_node_util = __require("node:util");
   var import_undici = __require("undici");
   async function makeRequest(url, init) {
     const options = {
@@ -9250,7 +9250,7 @@ var require_PermissionOverwrites = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/PermissionOverwriteManager.js
 var require_PermissionOverwriteManager = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { Collection } = require_dist6();
   var { OverwriteType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
@@ -9568,8 +9568,8 @@ var require_SKU = __commonJS((exports) => {
 
 // node_modules/discord.js/src/util/Util.js
 var require_Util = __commonJS((exports, module) => {
-  var { parse } = __require("path");
-  var process2 = __require("process");
+  var { parse } = __require("node:path");
+  var process2 = __require("node:process");
   var { Collection } = require_dist6();
   var { ChannelType, RouteBases, Routes } = require_v106();
   var { fetch: fetch2 } = __require("undici");
@@ -9868,7 +9868,7 @@ var require_Util = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/BaseClient.js
 var require_BaseClient = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
+  var EventEmitter = __require("node:events");
   var { REST } = require_dist5();
   var { Routes } = require_v106();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -10338,8 +10338,8 @@ var require_CategoryChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/interfaces/Collector.js
 var require_Collector = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
+  var EventEmitter = __require("node:events");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
   var { Collection } = require_dist6();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { flatten } = require_Util();
@@ -16603,7 +16603,7 @@ var require_Component = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ActionRow.js
 var require_ActionRow = __commonJS((exports, module) => {
-  var { deprecate } = __require("util");
+  var { deprecate } = __require("node:util");
   var { isJSONEncodable } = require_dist();
   var Component = require_Component();
   var { createComponent } = require_Components();
@@ -17444,7 +17444,7 @@ var require_AnonymousGuild = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Emoji.js
 var require_Emoji = __commonJS((exports) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { formatEmoji } = require_dist7();
   var { DiscordSnowflake } = require_cjs();
   var Base = require_Base();
@@ -17717,7 +17717,7 @@ var require_Invite = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/GuildTemplate.js
 var require_GuildTemplate = __commonJS((exports, module) => {
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
   var { RouteBases, Routes } = require_v106();
   var Base = require_Base();
   var { resolveImage } = require_DataResolver();
@@ -17825,9 +17825,9 @@ var require_GuildTemplate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/DataResolver.js
 var require_DataResolver = __commonJS((exports, module) => {
-  var { Buffer: Buffer2 } = __require("buffer");
-  var fs = __require("fs/promises");
-  var path = __require("path");
+  var { Buffer: Buffer2 } = __require("node:buffer");
+  var fs = __require("node:fs/promises");
+  var path = __require("node:path");
   var { fetch: fetch2 } = __require("undici");
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
   var Invite = require_Invite();
@@ -17893,7 +17893,7 @@ var require_MessageFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/BaseInteraction.js
 var require_BaseInteraction = __commonJS((exports, module) => {
-  var { deprecate } = __require("util");
+  var { deprecate } = __require("node:util");
   var { Collection } = require_dist6();
   var { DiscordSnowflake } = require_cjs();
   var { InteractionType, ApplicationCommandType, ComponentType } = require_v106();
@@ -21584,7 +21584,7 @@ var require_InteractionWebhook = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/MessagePayload.js
 var require_MessagePayload = __commonJS((exports, module) => {
-  var { Buffer: Buffer2 } = __require("buffer");
+  var { Buffer: Buffer2 } = __require("node:buffer");
   var { lazy, isJSONEncodable } = require_dist();
   var { DiscordSnowflake } = require_cjs();
   var { MessageFlags, MessageReferenceType } = require_v106();
@@ -22201,7 +22201,7 @@ var require_ThreadMember = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ThreadMemberManager.js
 var require_ThreadMemberManager = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v106();
@@ -24735,8 +24735,8 @@ var require_InteractionResponse = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/interfaces/InteractionResponses.js
 var require_InteractionResponses = __commonJS((exports, module) => {
-  var process2 = __require("process");
-  var { deprecate } = __require("util");
+  var process2 = __require("node:process");
+  var { deprecate } = __require("node:util");
   var { makeURLSearchParams } = require_dist5();
   var { isJSONEncodable } = require_dist();
   var { InteractionResponseType, MessageFlags, Routes, InteractionType } = require_v106();
@@ -26141,7 +26141,7 @@ var require_VoiceStateUpdate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/WebhooksUpdate.js
 var require_WebhooksUpdate = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var Action = require_Action();
   var deprecationEmitted = false;
 
@@ -26701,7 +26701,7 @@ var require_dist9 = __commonJS((exports, module) => {
 
 // node_modules/@discordjs/ws/dist/index.js
 var require_dist10 = __commonJS((exports, module) => {
-  var __dirname = "C:\\Code\\Base\\Javascript-Typescript\\Templates\\Discord-Bot\\node_modules\\@discordjs\\ws\\dist";
+  var __dirname = "C:\\Code\\Base\\JavaScript-TypeScript\\Templates\\Discord-Bot\\node_modules\\@discordjs\\ws\\dist";
   var __create2 = Object.create;
   var __defProp2 = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -26797,11 +26797,11 @@ var require_dist10 = __commonJS((exports, module) => {
       await throttler.waitForIdentify(shardId, signal);
     }
   };
-  var import_node_worker_threads2 = __require("worker_threads");
+  var import_node_worker_threads2 = __require("node:worker_threads");
   var import_collection2 = require_dist9();
-  var import_node_events = __require("events");
-  var import_node_path = __require("path");
-  var import_node_worker_threads = __require("worker_threads");
+  var import_node_events = __require("node:events");
+  var import_node_path = __require("node:path");
+  var import_node_worker_threads = __require("node:worker_threads");
   var import_collection = require_dist9();
   var WorkerSendPayloadOp = /* @__PURE__ */ ((WorkerSendPayloadOp2) => {
     WorkerSendPayloadOp2[WorkerSendPayloadOp2["Connect"] = 0] = "Connect";
@@ -27108,24 +27108,24 @@ var require_dist10 = __commonJS((exports, module) => {
     }
   };
   var import_collection6 = require_dist9();
-  var import_node_buffer = __require("buffer");
-  var import_node_events2 = __require("events");
-  var import_node_timers = __require("timers");
-  var import_promises2 = __require("timers/promises");
-  var import_node_url = __require("url");
-  var import_node_util = __require("util");
-  var import_node_zlib = __require("zlib");
+  var import_node_buffer = __require("node:buffer");
+  var import_node_events2 = __require("node:events");
+  var import_node_timers = __require("node:timers");
+  var import_promises2 = __require("node:timers/promises");
+  var import_node_url = __require("node:url");
+  var import_node_util = __require("node:util");
+  var import_node_zlib = __require("node:zlib");
   var import_collection5 = require_dist9();
   var import_util2 = require_dist();
   var import_async_queue2 = require_cjs2();
   var import_async_event_emitter = require_dist3();
   var import_v102 = require_v106();
   var import_ws = __require("ws");
-  var import_node_process = __toESM2(__require("process"));
+  var import_node_process = __toESM2(__require("node:process"));
   var import_collection4 = require_dist9();
   var import_util = require_dist();
   var import_v10 = require_v106();
-  var import_promises = __require("timers/promises");
+  var import_promises = __require("node:timers/promises");
   var import_collection3 = require_dist9();
   var import_async_queue = require_cjs2();
   var SimpleIdentifyThrottler = class {
@@ -27854,7 +27854,7 @@ var require_dist10 = __commonJS((exports, module) => {
       return this.shards.mapValues((shard) => shard.status);
     }
   };
-  var import_node_worker_threads3 = __require("worker_threads");
+  var import_node_worker_threads3 = __require("node:worker_threads");
   var import_collection7 = require_dist9();
   var WorkerBootstrapper = class {
     static {
@@ -28061,9 +28061,9 @@ var require_WebSocketShardEvents = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/websocket/WebSocketShard.js
 var require_WebSocketShard = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
-  var process2 = __require("process");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
+  var EventEmitter = __require("node:events");
+  var process2 = __require("node:process");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
   var { GatewayIntentBits } = require_v106();
   var Status = require_Status();
   var WebSocketShardEvents = require_WebSocketShardEvents();
@@ -28868,9 +28868,9 @@ var require_handlers = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/websocket/WebSocketManager.js
 var require_WebSocketManager = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
-  var process2 = __require("process");
-  var { setImmediate } = __require("timers");
+  var EventEmitter = __require("node:events");
+  var process2 = __require("node:process");
+  var { setImmediate } = __require("node:timers");
   var { Collection } = require_dist6();
   var {
     WebSocketManager: WSWebSocketManager,
@@ -29142,7 +29142,7 @@ var require_BaseGuildEmojiManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ChannelManager.js
 var require_ChannelManager = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { BaseChannel } = require_BaseChannel();
@@ -29205,7 +29205,7 @@ var require_ChannelManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/sharding/ShardClientUtil.js
 var require_ShardClientUtil = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { calculateShardId } = require_dist();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
   var Events = require_Events();
@@ -29233,7 +29233,7 @@ var require_ShardClientUtil = __commonJS((exports, module) => {
           });
           break;
         case "worker":
-          this.parentPort = __require("worker_threads").parentPort;
+          this.parentPort = __require("node:worker_threads").parentPort;
           this.parentPort.on("message", this._handleMessage.bind(this));
           client.on(Events.ShardReady, () => {
             this.parentPort.postMessage({ _ready: true });
@@ -29690,7 +29690,7 @@ var require_GuildApplicationCommandManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildBanManager.js
 var require_GuildBanManager = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v106();
@@ -29790,7 +29790,7 @@ var require_GuildBanManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildChannelManager.js
 var require_GuildChannelManager = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { Collection } = require_dist6();
   var { ChannelType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
@@ -30222,7 +30222,7 @@ var require_GuildInviteManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildMemberManager.js
 var require_GuildMemberManager = __commonJS((exports, module) => {
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
@@ -30873,7 +30873,7 @@ var require_PresenceManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/RoleManager.js
 var require_RoleManager = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { Collection } = require_dist6();
   var { DiscordAPIError } = require_dist5();
   var { RESTJSONErrorCodes, Routes } = require_v106();
@@ -31767,8 +31767,8 @@ var require_OAuth2Guild = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildManager.js
 var require_GuildManager = __commonJS((exports, module) => {
-  var process2 = __require("process");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
+  var process2 = __require("node:process");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { Routes, RouteBases } = require_v106();
@@ -32189,7 +32189,7 @@ var require_IntentsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/Sweepers.js
 var require_Sweepers = __commonJS((exports, module) => {
-  var { setInterval: setInterval2, clearInterval: clearInterval2 } = __require("timers");
+  var { setInterval: setInterval2, clearInterval: clearInterval2 } = __require("node:timers");
   var { ThreadChannelTypes, SweeperKeys } = require_Constants();
   var Events = require_Events();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -32442,7 +32442,7 @@ var require_Sweepers = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/Client.js
 var require_Client = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { OAuth2Scopes, Routes } = require_v106();
@@ -32477,7 +32477,7 @@ var require_Client = __commonJS((exports, module) => {
   class Client extends BaseClient {
     constructor(options) {
       super(options);
-      const data = __require("worker_threads").workerData ?? process2.env;
+      const data = __require("node:worker_threads").workerData ?? process2.env;
       const defaults = Options.createDefault();
       if (this.options.shards === defaults.shards) {
         if ("SHARDS" in data) {
@@ -32747,12 +32747,12 @@ var require_ShardEvents = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/sharding/Shard.js
 var require_Shard = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
-  var path = __require("path");
-  var process2 = __require("process");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
-  var { setTimeout: sleep } = __require("timers/promises");
-  var { SHARE_ENV } = __require("worker_threads");
+  var EventEmitter = __require("node:events");
+  var path = __require("node:path");
+  var process2 = __require("node:process");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
+  var { setTimeout: sleep } = __require("node:timers/promises");
+  var { SHARE_ENV } = __require("node:worker_threads");
   var { DiscordjsError, ErrorCodes } = require_errors();
   var ShardEvents = require_ShardEvents();
   var { makeError, makePlainError } = require_Util();
@@ -32764,10 +32764,10 @@ var require_Shard = __commonJS((exports, module) => {
       super();
       switch (manager.mode) {
         case "process":
-          childProcess = __require("child_process");
+          childProcess = __require("node:child_process");
           break;
         case "worker":
-          Worker = __require("worker_threads").Worker;
+          Worker = __require("node:worker_threads").Worker;
           break;
       }
       this.manager = manager;
@@ -33008,11 +33008,11 @@ var require_Shard = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/sharding/ShardingManager.js
 var require_ShardingManager = __commonJS((exports, module) => {
-  var EventEmitter = __require("events");
-  var fs = __require("fs");
-  var path = __require("path");
-  var process2 = __require("process");
-  var { setTimeout: sleep } = __require("timers/promises");
+  var EventEmitter = __require("node:events");
+  var fs = __require("node:fs");
+  var path = __require("node:path");
+  var process2 = __require("node:process");
+  var { setTimeout: sleep } = __require("node:timers/promises");
   var { Collection } = require_dist6();
   var Shard = require_Shard();
   var { DiscordjsError, DiscordjsTypeError, DiscordjsRangeError, ErrorCodes } = require_errors();
@@ -33165,7 +33165,7 @@ var require_ShardingManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/Formatters.js
 var require_Formatters = __commonJS((exports, module) => {
-  var { deprecate } = __require("util");
+  var { deprecate } = __require("node:util");
   var {
     blockQuote,
     bold,
@@ -33304,7 +33304,7 @@ var require_ModalBuilder = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuBuilder.js
 var require_SelectMenuBuilder = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var StringSelectMenuBuilder = require_StringSelectMenuBuilder();
   var deprecationEmitted = false;
 
@@ -33322,7 +33322,7 @@ var require_SelectMenuBuilder = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuComponent.js
 var require_SelectMenuComponent = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var StringSelectMenuComponent = require_StringSelectMenuComponent();
   var deprecationEmitted = false;
 
@@ -33340,7 +33340,7 @@ var require_SelectMenuComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuInteraction.js
 var require_SelectMenuInteraction = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var StringSelectMenuInteraction = require_StringSelectMenuInteraction();
   var deprecationEmitted = false;
 
@@ -33385,7 +33385,7 @@ var require_StringSelectMenuOptionBuilder = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuOptionBuilder.js
 var require_SelectMenuOptionBuilder = __commonJS((exports, module) => {
-  var process2 = __require("process");
+  var process2 = __require("node:process");
   var StringSelectMenuOptionBuilder = require_StringSelectMenuOptionBuilder();
   var deprecationEmitted = false;
 
