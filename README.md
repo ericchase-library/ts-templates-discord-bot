@@ -2,11 +2,14 @@
 
 https://github.com/ericchase-library/ts-templates-discord-bot
 
-## Library Project
+This project houses the base Discord bot template project that I use to create new Discord bot template projects.
 
-Please visit the library project for information about my build TypeScript library and templates.
+## TypeScript Library and Template Project
+
+For more information about my TypeScript library and template projects, please visit:
 
 - https://github.com/ericchase-library/ts-library
+- https://github.com/ericchase-library/ts-template
 
 ## Disclaimer
 
