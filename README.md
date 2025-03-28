@@ -2,7 +2,11 @@
 
 https://github.com/ericchase-library/ts-templates-discord-bot
 
-This is a template for Discord bot projects. Please read the `README.md` file at https://github.com/ericchase-library/ts-library for more information.
+## Library Project
+
+Please visit the library project for information about my build TypeScript library and templates.
+
+- https://github.com/ericchase-library/ts-library
 
 ## Disclaimer
 
