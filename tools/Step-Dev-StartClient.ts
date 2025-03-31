@@ -39,7 +39,7 @@ class CStep_StartClient implements Step {
           ]);
         },
         async () => {
-          this.process_client = Bun.spawn(['bun', 'run', Path(builder.dir.out, 'out/client.module.js').standard], { stderr: 'pipe', stdout: 'pipe' });
+          this.process_client = Bun.spawn(['bun', 'run', Path(builder.dir.out, 'client.module.js').standard], { stderr: 'pipe', stdout: 'pipe' });
           const { stderr, stdout } = this.process_client;
           Orphan(U8StreamReadLines(stderr, (line) => this.channel.error(line)));
           Orphan(U8StreamReadLines(stdout, (line) => this.channel.log(line)));
