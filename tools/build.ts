@@ -1,8 +1,9 @@
-import { Step_StartClient } from './Step-Dev-StartClient.js';
+import { IntoPattern } from '../src/lib/ericchase/Platform/FilePath.js';
+import { Step_DevClient } from './lib-discord-bot/steps/Dev-Client.js';
 import { Builder } from './lib/Builder.js';
 import { Processor_BasicWriter } from './lib/processors/FS-BasicWriter.js';
 import { Processor_TypeScript_GenericBundlerImportRemapper } from './lib/processors/TypeScript-GenericBundler-ImportRemapper.js';
-import { module_script, Processor_TypeScript_GenericBundler, ts_tsx_js_jsx } from './lib/processors/TypeScript-GenericBundler.js';
+import { Processor_TypeScript_GenericBundler, pattern } from './lib/processors/TypeScript-GenericBundler.js';
 import { Step_Bun_Run } from './lib/steps/Bun-Run.js';
 import { Step_CleanDirectory } from './lib/steps/FS-CleanDirectory.js';
 import { Step_Format } from './lib/steps/FS-Format.js';
@@ -21,34 +22,40 @@ builder.setStartUpSteps(
 // These steps are run before each processing phase.
 builder.setBeforeProcessingSteps();
 
-// Basic setup for a general typescript project. Typescript files that match
-// "*.module.ts" and "*.script.ts" are bundled and written to the out folder.
+// Basic setup for a typescript powered project. Typescript files that match
+// "*.module.ts" and "*.iife.ts" are bundled and written to the out folder.
 // The other typescript files do not produce bundles. Module ("*.module.ts")
 // files will not bundle other module files. Instead, they'll import whatever
-// exports are needed from other module files. Script ("*.script.ts") files, on
+// exports are needed from other module files. IIFE ("*.iife.ts") files, on
 // the other hand, produce fully contained bundles. They do not import anything
 // from anywhere. Use them accordingly.
-builder.setProcessorModules(
-  Processor_TypeScript_GenericBundler({ sourcemap: 'none', target: 'bun' }),
-  Processor_TypeScript_GenericBundlerImportRemapper(),
-  // all files except for .ts and lib files
-  Processor_BasicWriter(['**/*'], [`**/*${ts_tsx_js_jsx}`, `${builder.dir.lib.standard}/**/*`]),
-  // all module and script files
-  Processor_BasicWriter([`**/*${module_script}${ts_tsx_js_jsx}`], []),
-  //
-);
+
+// HTML custom components are a lightweight alternative to web components made
+// possible by the processors below.
 
 // The processors are run for every file that added them during every
 // processing phase.
-builder.setAfterProcessingSteps(
-  // During "dev" mode (when "--watch" is passed as an argument), the bot
-  // client will start running with automatic re-running when output files
-  // change. Look in the "Dev-StartClient.ts" file to see how it works.
-  Step_StartClient(),
+builder.setProcessorModules(
+  // Bundle the modules.
+  Processor_TypeScript_GenericBundler({ target: 'bun' }),
+  Processor_TypeScript_GenericBundlerImportRemapper(),
+  // Write non-bundle files and non-library files.
+  Processor_BasicWriter(['**/*'], ['**/*{.ts,.tsx,.jsx}', IntoPattern(builder.dir.lib, '**/*')]),
+  // Write bundled files.
+  Processor_BasicWriter([`**/*${pattern.moduleoriife}`], []),
   //
 );
 
 // These steps are run after each processing phase.
+builder.setAfterProcessingSteps(
+  // During "dev" mode (when "--watch" is passed as an argument), the bot
+  // client will start running with automatic re-running when output files
+  // change. Look in the "Dev-StartClient.ts" file to see how it works.
+  Step_DevClient(),
+  //
+);
+
+// These steps are run during the shutdown phase only.
 builder.setCleanUpSteps();
 
 await builder.start();

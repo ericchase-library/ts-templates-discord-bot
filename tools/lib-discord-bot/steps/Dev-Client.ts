@@ -1,23 +1,23 @@
 import { Subprocess } from 'bun';
-import { U8StreamReadLines } from '../src/lib/ericchase/Algorithm/Stream.js';
-import { Path } from '../src/lib/ericchase/Platform/FilePath.js';
-import { Debounce } from '../src/lib/ericchase/Utility/Debounce.js';
-import { Logger } from '../src/lib/ericchase/Utility/Logger.js';
-import { Orphan } from '../src/lib/ericchase/Utility/Promise.js';
-import { RestartableTaskChain } from '../src/lib/ericchase/Utility/Task_RestartableTaskChain.js';
-import { BuilderInternal, Step } from './lib/Builder.js';
+import { U8StreamReadLines } from '../../../src/lib/ericchase/Algorithm/Stream.js';
+import { Path } from '../../../src/lib/ericchase/Platform/FilePath.js';
+import { Debounce } from '../../../src/lib/ericchase/Utility/Debounce.js';
+import { Logger } from '../../../src/lib/ericchase/Utility/Logger.js';
+import { Orphan } from '../../../src/lib/ericchase/Utility/Promise.js';
+import { RestartableTaskChain } from '../../../src/lib/ericchase/Utility/Task_RestartableTaskChain.js';
+import { BuilderInternal, Step } from '../../lib/Builder.js';
 
-const logger = Logger(Step_StartClient.name);
+const logger = Logger(Step_DevClient.name);
 
-export function Step_StartClient(): Step {
-  return new CStep_StartClient();
+export function Step_DevClient(): Step {
+  return new CStep_DevClient();
 }
 
-class CStep_StartClient implements Step {
+class CStep_DevClient implements Step {
   channel = logger.newChannel();
 
-  process_register?: Subprocess<'ignore', 'pipe', 'pipe'>;
   process_client?: Subprocess<'ignore', 'pipe', 'pipe'>;
+  process_register?: Subprocess<'ignore', 'pipe', 'pipe'>;
   taskchain: ReturnType<typeof RestartableTaskChain> | undefined;
   debouncedRestart = Debounce(() => {
     this.taskchain?.restart();
