@@ -14,7 +14,7 @@ builder.setStartUpSteps(
   // Pull Discord-Bot Template Tools Lib
   Step_MirrorDirectory({
     from: Path('C:/Code/Base/JavaScript-TypeScript/Templates/Discord-Bot', 'tools/lib-discord-bot'),
-    to: Path('tools/lib-discord-bot'),
+    to: Path(builder.dir.tools, 'lib-discord-bot'),
     include_patterns: ['**/*'],
   }),
   //
