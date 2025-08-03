@@ -2,15 +2,14 @@
 // src/commands-list.module.ts
 import { REST, Routes } from "./external/discord/discord.module.js";
 
-// src/lib/ericchase/Utility/Console.ts
-var newline_count = 0;
-function ConsoleError(...items) {
+// src/lib/ericchase/Core_Console_Error.ts
+function Core_Console_Error(...items) {
   console["error"](...items);
-  newline_count = 0;
 }
-function ConsoleLog(...items) {
+
+// src/lib/ericchase/Core_Console_Log.ts
+function Core_Console_Log(...items) {
   console["log"](...items);
-  newline_count = 0;
 }
 
 // src/lib/lib.env.ts
@@ -31,17 +30,20 @@ function getClientID() {
 var rest = new REST({ version: "10" }).setToken(getBotToken());
 async function getCommands() {
   try {
-    ConsoleLog("Fetching global commands.");
+    Core_Console_Log("Fetching global commands.");
     const commands = await rest.get(Routes.applicationCommands(getClientID()));
     if (commands.length === 0) {
-      ConsoleLog("No global commands registered.");
+      Core_Console_Log("No global commands registered.");
     } else {
       for (const command of commands) {
-        ConsoleLog(`Command Name: ${command.name}, Command ID: ${command.id}`);
+        Core_Console_Log(`Command Name: ${command.name}, Command ID: ${command.id}`);
       }
     }
   } catch (error) {
-    ConsoleError("Failed to fetch commands:", error);
+    Core_Console_Error("Failed to fetch commands:", error);
   }
 }
 getCommands();
+
+//# debugId=73972DE93528446164756E2164756E21
+//# sourceMappingURL=commands-list.module.js.map

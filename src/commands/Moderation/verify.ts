@@ -1,5 +1,5 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Interaction, PermissionsBitField, SlashCommandBuilder } from '../../external/discord/discord.module.js';
-import { ConsoleError } from '../../lib/ericchase/Utility/Console.js';
+import { Core_Console_Error } from '../../lib/ericchase/Core_Console_Error.js';
 import { getGuildMember, getUsernameString } from '../../lib/lib.discord.module.js';
 import { Command, HandleCommandError } from '../Command.js';
 
@@ -79,7 +79,7 @@ export const command_verify: Command = {
           collector.stop();
         });
       } else {
-        ConsoleError('unexpected', interaction);
+        Core_Console_Error('unexpected', interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);

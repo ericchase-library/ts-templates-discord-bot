@@ -737,36 +737,10 @@ var require_tslib = __commonJS((exports, module) => {
   });
 });
 
-// node_modules/discord-api-types/gateway/common.js
-var require_common = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
 // node_modules/discord-api-types/gateway/v10.js
 var require_v10 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
-  __exportStar(require_common(), exports);
   exports.GatewayVersion = "10";
   var GatewayOpcodes;
   (function(GatewayOpcodes2) {
@@ -935,7 +909,7 @@ var require_globals = __commonJS((exports) => {
 });
 
 // node_modules/discord-api-types/payloads/common.js
-var require_common2 = __commonJS((exports) => {
+var require_common = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.PermissionFlagsBits = undefined;
   exports.PermissionFlagsBits = {
@@ -1098,6 +1072,7 @@ var require_auditLog = __commonJS((exports) => {
     AuditLogEvent2[AuditLogEvent2["AutoModerationBlockMessage"] = 143] = "AutoModerationBlockMessage";
     AuditLogEvent2[AuditLogEvent2["AutoModerationFlagToChannel"] = 144] = "AutoModerationFlagToChannel";
     AuditLogEvent2[AuditLogEvent2["AutoModerationUserCommunicationDisabled"] = 145] = "AutoModerationUserCommunicationDisabled";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationQuarantineUser"] = 146] = "AutoModerationQuarantineUser";
     AuditLogEvent2[AuditLogEvent2["CreatorMonetizationRequestCreated"] = 150] = "CreatorMonetizationRequestCreated";
     AuditLogEvent2[AuditLogEvent2["CreatorMonetizationTermsAccepted"] = 151] = "CreatorMonetizationTermsAccepted";
     AuditLogEvent2[AuditLogEvent2["OnboardingPromptCreate"] = 163] = "OnboardingPromptCreate";
@@ -1150,7 +1125,7 @@ var require_autoModeration = __commonJS((exports) => {
 // node_modules/discord-api-types/payloads/v10/channel.js
 var require_channel = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ChannelFlags = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
+  exports.ChannelFlags = exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
   var SortOrderType;
   (function(SortOrderType2) {
     SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
@@ -1255,6 +1230,7 @@ var require_channel = __commonJS((exports) => {
     MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
     MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
     MessageFlags2[MessageFlags2["HasSnapshot"] = 16384] = "HasSnapshot";
+    MessageFlags2[MessageFlags2["IsComponentsV2"] = 32768] = "IsComponentsV2";
   })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
   var OverwriteType;
   (function(OverwriteType2) {
@@ -1306,6 +1282,14 @@ var require_channel = __commonJS((exports) => {
     ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
     ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
     ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
+    ComponentType2[ComponentType2["Section"] = 9] = "Section";
+    ComponentType2[ComponentType2["TextDisplay"] = 10] = "TextDisplay";
+    ComponentType2[ComponentType2["Thumbnail"] = 11] = "Thumbnail";
+    ComponentType2[ComponentType2["MediaGallery"] = 12] = "MediaGallery";
+    ComponentType2[ComponentType2["File"] = 13] = "File";
+    ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
+    ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
+    ComponentType2[ComponentType2["Container"] = 17] = "Container";
     ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
   })(ComponentType || (exports.ComponentType = ComponentType = {}));
   var ButtonStyle;
@@ -1328,6 +1312,18 @@ var require_channel = __commonJS((exports) => {
     SelectMenuDefaultValueType2["Role"] = "role";
     SelectMenuDefaultValueType2["User"] = "user";
   })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
+  var UnfurledMediaItemLoadingState;
+  (function(UnfurledMediaItemLoadingState2) {
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Unknown"] = 0] = "Unknown";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Loading"] = 1] = "Loading";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedSuccess"] = 2] = "LoadedSuccess";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedNotFound"] = 3] = "LoadedNotFound";
+  })(UnfurledMediaItemLoadingState || (exports.UnfurledMediaItemLoadingState = UnfurledMediaItemLoadingState = {}));
+  var SeparatorSpacingSize;
+  (function(SeparatorSpacingSize2) {
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Small"] = 1] = "Small";
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Large"] = 2] = "Large";
+  })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
   var ChannelFlags;
   (function(ChannelFlags2) {
     ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
@@ -1340,11 +1336,6 @@ var require_channel = __commonJS((exports) => {
     ChannelFlags2[ChannelFlags2["IsScheduledForDeletion"] = 512] = "IsScheduledForDeletion";
     ChannelFlags2[ChannelFlags2["HideMediaDownloadOptions"] = 32768] = "HideMediaDownloadOptions";
   })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/emoji.js
-var require_emoji = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/payloads/v10/gateway.js
@@ -1487,6 +1478,8 @@ var require_guild = __commonJS((exports) => {
     GuildFeature2["Verified"] = "VERIFIED";
     GuildFeature2["VIPRegions"] = "VIP_REGIONS";
     GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
+    GuildFeature2["GuildTags"] = "GUILD_TAGS";
+    GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
   })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
   var GuildMemberFlags;
   (function(GuildMemberFlags2) {
@@ -1500,6 +1493,7 @@ var require_guild = __commonJS((exports) => {
     GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedUsernameOrGuildNickname"] = 128] = "AutomodQuarantinedUsernameOrGuildNickname";
     GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedBio"] = 256] = "AutomodQuarantinedBio";
     GuildMemberFlags2[GuildMemberFlags2["DmSettingsUpsellAcknowledged"] = 512] = "DmSettingsUpsellAcknowledged";
+    GuildMemberFlags2[GuildMemberFlags2["AutoModQuarantinedGuildTag"] = 1024] = "AutoModQuarantinedGuildTag";
   })(GuildMemberFlags || (exports.GuildMemberFlags = GuildMemberFlags = {}));
   var IntegrationExpireBehavior;
   (function(IntegrationExpireBehavior2) {
@@ -1585,46 +1579,6 @@ var require_guildScheduledEvent = __commonJS((exports) => {
   })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/attachment.js
-var require_attachment = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/base.js
-var require_base = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/boolean.js
-var require_boolean = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/channel.js
-var require_channel2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/integer.js
-var require_integer = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/mentionable.js
-var require_mentionable = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/number.js
-var require_number = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/role.js
-var require_role = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
 // node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
 var require_shared = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
@@ -1643,26 +1597,6 @@ var require_shared = __commonJS((exports) => {
     ApplicationCommandOptionType2[ApplicationCommandOptionType2["Number"] = 10] = "Number";
     ApplicationCommandOptionType2[ApplicationCommandOptionType2["Attachment"] = 11] = "Attachment";
   })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/string.js
-var require_string = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommand.js
-var require_subcommand = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/subcommandGroup.js
-var require_subcommandGroup = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/user.js
-var require_user = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
@@ -1688,24 +1622,7 @@ var require_chatInput = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_attachment(), exports);
-  __exportStar(require_base(), exports);
-  __exportStar(require_boolean(), exports);
-  __exportStar(require_channel2(), exports);
-  __exportStar(require_integer(), exports);
-  __exportStar(require_mentionable(), exports);
-  __exportStar(require_number(), exports);
-  __exportStar(require_role(), exports);
   __exportStar(require_shared(), exports);
-  __exportStar(require_string(), exports);
-  __exportStar(require_subcommand(), exports);
-  __exportStar(require_subcommandGroup(), exports);
-  __exportStar(require_user(), exports);
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/contextMenu.js
-var require_contextMenu = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
@@ -1722,11 +1639,6 @@ var require_permissions = __commonJS((exports) => {
     Everyone: (guildId) => String(guildId),
     AllChannels: (guildId) => String(BigInt(guildId) - 1n)
   };
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/entryPoint.js
-var require_entryPoint = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
@@ -1754,9 +1666,7 @@ var require_applicationCommands = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.EntryPointCommandHandlerType = exports.InteractionContextType = exports.ApplicationIntegrationType = exports.ApplicationCommandType = undefined;
   __exportStar(require_chatInput(), exports);
-  __exportStar(require_contextMenu(), exports);
   __exportStar(require_permissions(), exports);
-  __exportStar(require_entryPoint(), exports);
   var ApplicationCommandType;
   (function(ApplicationCommandType2) {
     ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
@@ -1780,31 +1690,6 @@ var require_applicationCommands = __commonJS((exports) => {
     EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["AppHandler"] = 1] = "AppHandler";
     EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["DiscordLaunchActivity"] = 2] = "DiscordLaunchActivity";
   })(EntryPointCommandHandlerType || (exports.EntryPointCommandHandlerType = EntryPointCommandHandlerType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/autocomplete.js
-var require_autocomplete = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/base.js
-var require_base2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/messageComponents.js
-var require_messageComponents = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/modalSubmit.js
-var require_modalSubmit = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/ping.js
-var require_ping = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/payloads/v10/_interactions/responses.js
@@ -1857,11 +1742,6 @@ var require_interactions = __commonJS((exports) => {
   };
   Object.defineProperty(exports, "__esModule", { value: true });
   __exportStar(require_applicationCommands(), exports);
-  __exportStar(require_autocomplete(), exports);
-  __exportStar(require_base2(), exports);
-  __exportStar(require_messageComponents(), exports);
-  __exportStar(require_modalSubmit(), exports);
-  __exportStar(require_ping(), exports);
   __exportStar(require_responses(), exports);
 });
 
@@ -1936,6 +1816,9 @@ var require_oauth2 = __commonJS((exports) => {
     OAuth2Scopes2["MessagesRead"] = "messages.read";
     OAuth2Scopes2["RoleConnectionsWrite"] = "role_connections.write";
     OAuth2Scopes2["RPC"] = "rpc";
+    OAuth2Scopes2["RPCActivitiesWrite"] = "rpc.activities.write";
+    OAuth2Scopes2["RPCVoiceRead"] = "rpc.voice.read";
+    OAuth2Scopes2["RPCVoiceWrite"] = "rpc.voice.write";
     OAuth2Scopes2["RPCNotificationsRead"] = "rpc.notifications.read";
     OAuth2Scopes2["WebhookIncoming"] = "webhook.incoming";
     OAuth2Scopes2["Voice"] = "voice";
@@ -1970,11 +1853,6 @@ var require_poll = __commonJS((exports) => {
   (function(PollLayoutType2) {
     PollLayoutType2[PollLayoutType2["Default"] = 1] = "Default";
   })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/soundboard.js
-var require_soundboard = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/payloads/v10/stageInstance.js
@@ -2023,15 +1901,10 @@ var require_teams = __commonJS((exports) => {
   })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/template.js
-var require_template = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
 // node_modules/discord-api-types/payloads/v10/user.js
-var require_user2 = __commonJS((exports) => {
+var require_user = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
+  exports.NameplatePalette = exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
   var UserFlags;
   (function(UserFlags2) {
     UserFlags2[UserFlags2["Staff"] = 1] = "Staff";
@@ -2100,11 +1973,20 @@ var require_user2 = __commonJS((exports) => {
     ConnectionVisibility2[ConnectionVisibility2["None"] = 0] = "None";
     ConnectionVisibility2[ConnectionVisibility2["Everyone"] = 1] = "Everyone";
   })(ConnectionVisibility || (exports.ConnectionVisibility = ConnectionVisibility = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/voice.js
-var require_voice = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
+  var NameplatePalette;
+  (function(NameplatePalette2) {
+    NameplatePalette2["Berry"] = "berry";
+    NameplatePalette2["BubbleGum"] = "bubble_gum";
+    NameplatePalette2["Clover"] = "clover";
+    NameplatePalette2["Cobalt"] = "cobalt";
+    NameplatePalette2["Crimson"] = "crimson";
+    NameplatePalette2["Forest"] = "forest";
+    NameplatePalette2["Lemon"] = "lemon";
+    NameplatePalette2["Sky"] = "sky";
+    NameplatePalette2["Teal"] = "teal";
+    NameplatePalette2["Violet"] = "violet";
+    NameplatePalette2["White"] = "white";
+  })(NameplatePalette || (exports.NameplatePalette = NameplatePalette = {}));
 });
 
 // node_modules/discord-api-types/payloads/v10/webhook.js
@@ -2119,6 +2001,7 @@ var require_webhook = __commonJS((exports) => {
   var ApplicationWebhookEventType;
   (function(ApplicationWebhookEventType2) {
     ApplicationWebhookEventType2["ApplicationAuthorized"] = "APPLICATION_AUTHORIZED";
+    ApplicationWebhookEventType2["ApplicationDeauthorized"] = "APPLICATION_DEAUTHORIZED";
     ApplicationWebhookEventType2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
     ApplicationWebhookEventType2["QuestUserEnrollment"] = "QUEST_USER_ENROLLMENT";
   })(ApplicationWebhookEventType || (exports.ApplicationWebhookEventType = ApplicationWebhookEventType = {}));
@@ -2153,12 +2036,11 @@ var require_v102 = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common2(), exports);
+  __exportStar(require_common(), exports);
   __exportStar(require_application(), exports);
   __exportStar(require_auditLog(), exports);
   __exportStar(require_autoModeration(), exports);
   __exportStar(require_channel(), exports);
-  __exportStar(require_emoji(), exports);
   __exportStar(require_gateway(), exports);
   __exportStar(require_guild(), exports);
   __exportStar(require_guildScheduledEvent(), exports);
@@ -2168,13 +2050,10 @@ var require_v102 = __commonJS((exports) => {
   __exportStar(require_oauth2(), exports);
   __exportStar(require_permissions2(), exports);
   __exportStar(require_poll(), exports);
-  __exportStar(require_soundboard(), exports);
   __exportStar(require_stageInstance(), exports);
   __exportStar(require_sticker(), exports);
   __exportStar(require_teams(), exports);
-  __exportStar(require_template(), exports);
-  __exportStar(require_user2(), exports);
-  __exportStar(require_voice(), exports);
+  __exportStar(require_user(), exports);
   __exportStar(require_webhook(), exports);
 });
 
@@ -2193,7 +2072,7 @@ var require_internals = __commonJS((exports) => {
 });
 
 // node_modules/discord-api-types/rest/common.js
-var require_common3 = __commonJS((exports) => {
+var require_common2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.Locale = exports.RESTJSONErrorCodes = undefined;
   var RESTJSONErrorCodes;
@@ -2460,23 +2339,8 @@ var require_common3 = __commonJS((exports) => {
   })(Locale || (exports.Locale = Locale = {}));
 });
 
-// node_modules/discord-api-types/rest/v10/application.js
-var require_application2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/auditLog.js
-var require_auditLog2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/autoModeration.js
-var require_autoModeration2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
 // node_modules/discord-api-types/rest/v10/channel.js
-var require_channel3 = __commonJS((exports) => {
+var require_channel2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ReactionType = undefined;
   var ReactionType;
@@ -2484,36 +2348,6 @@ var require_channel3 = __commonJS((exports) => {
     ReactionType2[ReactionType2["Normal"] = 0] = "Normal";
     ReactionType2[ReactionType2["Super"] = 1] = "Super";
   })(ReactionType || (exports.ReactionType = ReactionType = {}));
-});
-
-// node_modules/discord-api-types/rest/v10/emoji.js
-var require_emoji2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/gateway.js
-var require_gateway2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/guild.js
-var require_guild2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/guildScheduledEvent.js
-var require_guildScheduledEvent2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/interactions.js
-var require_interactions2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/invite.js
-var require_invite2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/rest/v10/monetization.js
@@ -2525,51 +2359,6 @@ var require_monetization2 = __commonJS((exports) => {
     EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
     EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
   })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
-});
-
-// node_modules/discord-api-types/rest/v10/oauth2.js
-var require_oauth22 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/poll.js
-var require_poll2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/soundboard.js
-var require_soundboard2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/stageInstance.js
-var require_stageInstance2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/sticker.js
-var require_sticker2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/template.js
-var require_template2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/user.js
-var require_user3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/voice.js
-var require_voice2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-});
-
-// node_modules/discord-api-types/rest/v10/webhook.js
-var require_webhook2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
 });
 
 // node_modules/discord-api-types/rest/v10/index.js
@@ -2597,27 +2386,9 @@ var require_v103 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
   var internals_1 = require_internals();
-  __exportStar(require_common3(), exports);
-  __exportStar(require_application2(), exports);
-  __exportStar(require_auditLog2(), exports);
-  __exportStar(require_autoModeration2(), exports);
-  __exportStar(require_channel3(), exports);
-  __exportStar(require_emoji2(), exports);
-  __exportStar(require_gateway2(), exports);
-  __exportStar(require_guild2(), exports);
-  __exportStar(require_guildScheduledEvent2(), exports);
-  __exportStar(require_interactions2(), exports);
-  __exportStar(require_invite2(), exports);
+  __exportStar(require_common2(), exports);
+  __exportStar(require_channel2(), exports);
   __exportStar(require_monetization2(), exports);
-  __exportStar(require_oauth22(), exports);
-  __exportStar(require_poll2(), exports);
-  __exportStar(require_soundboard2(), exports);
-  __exportStar(require_stageInstance2(), exports);
-  __exportStar(require_sticker2(), exports);
-  __exportStar(require_template2(), exports);
-  __exportStar(require_user3(), exports);
-  __exportStar(require_voice2(), exports);
-  __exportStar(require_webhook2(), exports);
   exports.APIVersion = "10";
   exports.Routes = {
     applicationRoleConnectionMetadata(applicationId) {
@@ -2670,6 +2441,12 @@ var require_v103 = __commonJS((exports) => {
     },
     channelTyping(channelId) {
       return `/channels/${channelId}/typing`;
+    },
+    channelMessagesPins(channelId) {
+      return `/channels/${channelId}/messages/pins`;
+    },
+    channelMessagesPin(channelId, messageId) {
+      return `/channels/${channelId}/messages/pins/${messageId}`;
     },
     channelPins(channelId) {
       return `/channels/${channelId}/pins`;
@@ -3063,6 +2840,9 @@ var require_v103 = __commonJS((exports) => {
     },
     soundboardSound(soundId) {
       return `/soundboard-sounds/${soundId}`;
+    },
+    guildTagBadge(guildId, guildTagBadge, format) {
+      return `/guild-tag-badges/${guildId}/${guildTagBadge}.${format}`;
     }
   };
   for (const [key, fn] of Object.entries(exports.CDNRoutes)) {
@@ -3099,12 +2879,54 @@ var require_v103 = __commonJS((exports) => {
 });
 
 // node_modules/discord-api-types/rpc/common.js
-var require_common4 = __commonJS((exports) => {
+var require_common3 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RPCCloseEventCodes = exports.RPCErrorCodes = undefined;
+  exports.RPCCloseEventCodes = exports.RPCErrorCodes = exports.RelationshipType = exports.VoiceConnectionStates = exports.RPCVoiceShortcutKeyComboKeyType = exports.RPCVoiceSettingsModeType = exports.RPCDeviceType = undefined;
+  var RPCDeviceType;
+  (function(RPCDeviceType2) {
+    RPCDeviceType2["AudioInput"] = "audioinput";
+    RPCDeviceType2["AudioOutput"] = "audiooutput";
+    RPCDeviceType2["VideoInput"] = "videoinput";
+  })(RPCDeviceType || (exports.RPCDeviceType = RPCDeviceType = {}));
+  var RPCVoiceSettingsModeType;
+  (function(RPCVoiceSettingsModeType2) {
+    RPCVoiceSettingsModeType2["PushToTalk"] = "PUSH_TO_TALK";
+    RPCVoiceSettingsModeType2["VoiceActivity"] = "VOICE_ACTIVITY";
+  })(RPCVoiceSettingsModeType || (exports.RPCVoiceSettingsModeType = RPCVoiceSettingsModeType = {}));
+  var RPCVoiceShortcutKeyComboKeyType;
+  (function(RPCVoiceShortcutKeyComboKeyType2) {
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardKey"] = 0] = "KeyboardKey";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["MouseButton"] = 1] = "MouseButton";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardModifierKey"] = 2] = "KeyboardModifierKey";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["GamepadButton"] = 3] = "GamepadButton";
+  })(RPCVoiceShortcutKeyComboKeyType || (exports.RPCVoiceShortcutKeyComboKeyType = RPCVoiceShortcutKeyComboKeyType = {}));
+  var VoiceConnectionStates;
+  (function(VoiceConnectionStates2) {
+    VoiceConnectionStates2["Disconnected"] = "DISCONNECTED";
+    VoiceConnectionStates2["AwaitingEndpoint"] = "AWAITING_ENDPOINT";
+    VoiceConnectionStates2["Authenticating"] = "AUTHENTICATING";
+    VoiceConnectionStates2["Connecting"] = "CONNECTING";
+    VoiceConnectionStates2["Connected"] = "CONNECTED";
+    VoiceConnectionStates2["VoiceDisconnected"] = "VOICE_DISCONNECTED";
+    VoiceConnectionStates2["VoiceConnecting"] = "VOICE_CONNECTING";
+    VoiceConnectionStates2["VoiceConnected"] = "VOICE_CONNECTED";
+    VoiceConnectionStates2["NoRoute"] = "NO_ROUTE";
+    VoiceConnectionStates2["IceChecking"] = "ICE_CHECKING";
+  })(VoiceConnectionStates || (exports.VoiceConnectionStates = VoiceConnectionStates = {}));
+  var RelationshipType;
+  (function(RelationshipType2) {
+    RelationshipType2[RelationshipType2["None"] = 0] = "None";
+    RelationshipType2[RelationshipType2["Friend"] = 1] = "Friend";
+    RelationshipType2[RelationshipType2["Blocked"] = 2] = "Blocked";
+    RelationshipType2[RelationshipType2["PendingIncoming"] = 3] = "PendingIncoming";
+    RelationshipType2[RelationshipType2["PendingOutgoing"] = 4] = "PendingOutgoing";
+    RelationshipType2[RelationshipType2["Implicit"] = 5] = "Implicit";
+  })(RelationshipType || (exports.RelationshipType = RelationshipType = {}));
   var RPCErrorCodes;
   (function(RPCErrorCodes2) {
     RPCErrorCodes2[RPCErrorCodes2["UnknownError"] = 1000] = "UnknownError";
+    RPCErrorCodes2[RPCErrorCodes2["ServiceUnavailable"] = 1001] = "ServiceUnavailable";
+    RPCErrorCodes2[RPCErrorCodes2["TransactionAborted"] = 1002] = "TransactionAborted";
     RPCErrorCodes2[RPCErrorCodes2["InvalidPayload"] = 4000] = "InvalidPayload";
     RPCErrorCodes2[RPCErrorCodes2["InvalidCommand"] = 4002] = "InvalidCommand";
     RPCErrorCodes2[RPCErrorCodes2["InvalidGuild"] = 4003] = "InvalidGuild";
@@ -3115,14 +2937,27 @@ var require_common4 = __commonJS((exports) => {
     RPCErrorCodes2[RPCErrorCodes2["InvalidOrigin"] = 4008] = "InvalidOrigin";
     RPCErrorCodes2[RPCErrorCodes2["InvalidToken"] = 4009] = "InvalidToken";
     RPCErrorCodes2[RPCErrorCodes2["InvalidUser"] = 4010] = "InvalidUser";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidInvite"] = 4011] = "InvalidInvite";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidActivityJoinRequest"] = 4012] = "InvalidActivityJoinRequest";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidEntitlement"] = 4013] = "InvalidEntitlement";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidGiftCode"] = 4014] = "InvalidGiftCode";
     RPCErrorCodes2[RPCErrorCodes2["OAuth2Error"] = 5000] = "OAuth2Error";
     RPCErrorCodes2[RPCErrorCodes2["SelectChannelTimedOut"] = 5001] = "SelectChannelTimedOut";
     RPCErrorCodes2[RPCErrorCodes2["GetGuildTimedOut"] = 5002] = "GetGuildTimedOut";
     RPCErrorCodes2[RPCErrorCodes2["SelectVoiceForceRequired"] = 5003] = "SelectVoiceForceRequired";
     RPCErrorCodes2[RPCErrorCodes2["CaptureShortcutAlreadyListening"] = 5004] = "CaptureShortcutAlreadyListening";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidActivitySecret"] = 5005] = "InvalidActivitySecret";
+    RPCErrorCodes2[RPCErrorCodes2["NoEligibleActivity"] = 5006] = "NoEligibleActivity";
+    RPCErrorCodes2[RPCErrorCodes2["PurchaseCanceled"] = 5007] = "PurchaseCanceled";
+    RPCErrorCodes2[RPCErrorCodes2["PurchaseError"] = 5008] = "PurchaseError";
+    RPCErrorCodes2[RPCErrorCodes2["UnauthorizedForAchievement"] = 5009] = "UnauthorizedForAchievement";
+    RPCErrorCodes2[RPCErrorCodes2["RateLimited"] = 5010] = "RateLimited";
   })(RPCErrorCodes || (exports.RPCErrorCodes = RPCErrorCodes = {}));
   var RPCCloseEventCodes;
   (function(RPCCloseEventCodes2) {
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseNormal"] = 1000] = "CloseNormal";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseUnsupported"] = 1003] = "CloseUnsupported";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseAbnormal"] = 1006] = "CloseAbnormal";
     RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidClientId"] = 4000] = "InvalidClientId";
     RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidOrigin"] = 4001] = "InvalidOrigin";
     RPCCloseEventCodes2[RPCCloseEventCodes2["RateLimited"] = 4002] = "RateLimited";
@@ -3155,7 +2990,94 @@ var require_v104 = __commonJS((exports) => {
         __createBinding(exports2, m, p);
   };
   Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common4(), exports);
+  exports.RPCEvents = exports.RPCCommands = exports.RPCVersion = undefined;
+  __exportStar(require_common3(), exports);
+  exports.RPCVersion = "1";
+  var RPCCommands;
+  (function(RPCCommands2) {
+    RPCCommands2["AcceptActivityInvite"] = "ACCEPT_ACTIVITY_INVITE";
+    RPCCommands2["ActivityInviteUser"] = "ACTIVITY_INVITE_USER";
+    RPCCommands2["Authenticate"] = "AUTHENTICATE";
+    RPCCommands2["Authorize"] = "AUTHORIZE";
+    RPCCommands2["BraintreePopupBridgeCallback"] = "BRAINTREE_POPUP_BRIDGE_CALLBACK";
+    RPCCommands2["BrowserHandoff"] = "BROWSER_HANDOFF";
+    RPCCommands2["CloseActivityJoinRequest"] = "CLOSE_ACTIVITY_JOIN_REQUEST";
+    RPCCommands2["ConnectionsCallback"] = "CONNECTIONS_CALLBACK";
+    RPCCommands2["CreateChannelInvite"] = "CREATE_CHANNEL_INVITE";
+    RPCCommands2["DeepLink"] = "DEEP_LINK";
+    RPCCommands2["Dispatch"] = "DISPATCH";
+    RPCCommands2["GetApplicationTicket"] = "GET_APPLICATION_TICKET";
+    RPCCommands2["GetChannel"] = "GET_CHANNEL";
+    RPCCommands2["GetChannels"] = "GET_CHANNELS";
+    RPCCommands2["GetEntitlementTicket"] = "GET_ENTITLEMENT_TICKET";
+    RPCCommands2["GetEntitlements"] = "GET_ENTITLEMENTS";
+    RPCCommands2["GetGuild"] = "GET_GUILD";
+    RPCCommands2["GetGuilds"] = "GET_GUILDS";
+    RPCCommands2["GetImage"] = "GET_IMAGE";
+    RPCCommands2["GetNetworkingConfig"] = "GET_NETWORKING_CONFIG";
+    RPCCommands2["GetRelationships"] = "GET_RELATIONSHIPS";
+    RPCCommands2["GetSelectedVoiceChannel"] = "GET_SELECTED_VOICE_CHANNEL";
+    RPCCommands2["GetSkus"] = "GET_SKUS";
+    RPCCommands2["GetUser"] = "GET_USER";
+    RPCCommands2["GetVoiceSettings"] = "GET_VOICE_SETTINGS";
+    RPCCommands2["GiftCodeBrowser"] = "GIFT_CODE_BROWSER";
+    RPCCommands2["GuildTemplateBrowser"] = "GUILD_TEMPLATE_BROWSER";
+    RPCCommands2["InviteBrowser"] = "INVITE_BROWSER";
+    RPCCommands2["NetworkingCreateToken"] = "NETWORKING_CREATE_TOKEN";
+    RPCCommands2["NetworkingPeerMetrics"] = "NETWORKING_PEER_METRICS";
+    RPCCommands2["NetworkingSystemMetrics"] = "NETWORKING_SYSTEM_METRICS";
+    RPCCommands2["OpenOverlayActivityInvite"] = "OPEN_OVERLAY_ACTIVITY_INVITE";
+    RPCCommands2["OpenOverlayGuildInvite"] = "OPEN_OVERLAY_GUILD_INVITE";
+    RPCCommands2["OpenOverlayVoiceSettings"] = "OPEN_OVERLAY_VOICE_SETTINGS";
+    RPCCommands2["Overlay"] = "OVERLAY";
+    RPCCommands2["SelectTextChannel"] = "SELECT_TEXT_CHANNEL";
+    RPCCommands2["SelectVoiceChannel"] = "SELECT_VOICE_CHANNEL";
+    RPCCommands2["SendActivityJoinInvite"] = "SEND_ACTIVITY_JOIN_INVITE";
+    RPCCommands2["SetActivity"] = "SET_ACTIVITY";
+    RPCCommands2["SetCertifiedDevices"] = "SET_CERTIFIED_DEVICES";
+    RPCCommands2["SetOverlayLocked"] = "SET_OVERLAY_LOCKED";
+    RPCCommands2["SetUserVoiceSettings"] = "SET_USER_VOICE_SETTINGS";
+    RPCCommands2["SetUserVoiceSettings2"] = "SET_USER_VOICE_SETTINGS_2";
+    RPCCommands2["SetVoiceSettings"] = "SET_VOICE_SETTINGS";
+    RPCCommands2["SetVoiceSettings2"] = "SET_VOICE_SETTINGS_2";
+    RPCCommands2["StartPurchase"] = "START_PURCHASE";
+    RPCCommands2["Subscribe"] = "SUBSCRIBE";
+    RPCCommands2["Unsubscribe"] = "UNSUBSCRIBE";
+    RPCCommands2["ValidateApplication"] = "VALIDATE_APPLICATION";
+  })(RPCCommands || (exports.RPCCommands = RPCCommands = {}));
+  var RPCEvents;
+  (function(RPCEvents2) {
+    RPCEvents2["ActivityInvite"] = "ACTIVITY_INVITE";
+    RPCEvents2["ActivityJoin"] = "ACTIVITY_JOIN";
+    RPCEvents2["ActivityJoinRequest"] = "ACTIVITY_JOIN_REQUEST";
+    RPCEvents2["ActivitySpectate"] = "ACTIVITY_SPECTATE";
+    RPCEvents2["ChannelCreate"] = "CHANNEL_CREATE";
+    RPCEvents2["CurrentUserUpdate"] = "CURRENT_USER_UPDATE";
+    RPCEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    RPCEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
+    RPCEvents2["Error"] = "ERROR";
+    RPCEvents2["GameJoin"] = "GAME_JOIN";
+    RPCEvents2["GameSpectate"] = "GAME_SPECTATE";
+    RPCEvents2["GuildCreate"] = "GUILD_CREATE";
+    RPCEvents2["GuildStatus"] = "GUILD_STATUS";
+    RPCEvents2["MessageCreate"] = "MESSAGE_CREATE";
+    RPCEvents2["MessageDelete"] = "MESSAGE_DELETE";
+    RPCEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
+    RPCEvents2["NotificationCreate"] = "NOTIFICATION_CREATE";
+    RPCEvents2["Overlay"] = "OVERLAY";
+    RPCEvents2["OverlayUpdate"] = "OVERLAY_UPDATE";
+    RPCEvents2["Ready"] = "READY";
+    RPCEvents2["RelationshipUpdate"] = "RELATIONSHIP_UPDATE";
+    RPCEvents2["SpeakingStart"] = "SPEAKING_START";
+    RPCEvents2["SpeakingStop"] = "SPEAKING_STOP";
+    RPCEvents2["VoiceChannelSelect"] = "VOICE_CHANNEL_SELECT";
+    RPCEvents2["VoiceConnectionStatus"] = "VOICE_CONNECTION_STATUS";
+    RPCEvents2["VoiceSettingsUpdate"] = "VOICE_SETTINGS_UPDATE";
+    RPCEvents2["VoiceSettingsUpdate2"] = "VOICE_SETTINGS_UPDATE_2";
+    RPCEvents2["VoiceStateCreate"] = "VOICE_STATE_CREATE";
+    RPCEvents2["VoiceStateDelete"] = "VOICE_STATE_DELETE";
+    RPCEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
+  })(RPCEvents || (exports.RPCEvents = RPCEvents = {}));
 });
 
 // node_modules/discord-api-types/utils/v10.js
@@ -3251,6 +3173,7 @@ var require_v106 = __commonJS((exports) => {
   __exportStar(require_v102(), exports);
   __exportStar(require_v103(), exports);
   __exportStar(require_v104(), exports);
+  __exportStar(require_internals(), exports);
   exports.Utils = require_v105();
 });
 
@@ -4384,21 +4307,18 @@ var require_tree = __commonJS((exports) => {
     mime: leaf.info.mime,
     extension: leaf.info.extension
   });
-  var isMatchingNode = (tree, path) => tree && path.length === 0;
-  var head = (arr) => arr[0];
-  var tail = (arr) => arr.slice(1, arr.length);
+  var isLeafNode = (tree, path) => tree && path.length === 0;
   var merge = (node, tree) => {
     if (node.bytes.length === 0)
       return tree;
-    const currentByte = head(node.bytes);
-    const path = tail(node.bytes);
+    const [currentByte, ...path] = node.bytes;
     const currentTree = tree.bytes[currentByte];
-    if (isMatchingNode(currentTree, path)) {
+    if (isLeafNode(currentTree, path)) {
       const matchingNode = tree.bytes[currentByte];
       tree.bytes[currentByte] = {
         ...matchingNode,
         matches: [
-          ...matchingNode.matches ? matchingNode.matches : [],
+          ...matchingNode.matches ?? [],
           createMatch(node)
         ]
       };
@@ -4406,13 +4326,8 @@ var require_tree = __commonJS((exports) => {
     }
     if (tree.bytes[currentByte]) {
       tree.bytes[currentByte] = exports.merge(exports.createNode(node.typename, path, node.info), tree.bytes[currentByte]);
-      return tree;
-    }
-    if (!tree.bytes[currentByte]) {
-      tree.bytes[currentByte] = {
-        ...tree.bytes[currentByte],
-        ...exports.createComplexNode(node.typename, path, node.info)
-      };
+    } else {
+      tree.bytes[currentByte] = exports.createComplexNode(node.typename, path, node.info);
     }
     return tree;
   };
@@ -4426,8 +4341,7 @@ var require_tree = __commonJS((exports) => {
       bytes: {},
       matches: undefined
     };
-    const currentKey = head(bytes);
-    const path = tail(bytes);
+    const [currentKey, ...path] = bytes;
     if (bytes.length === 0) {
       return {
         matches: [
@@ -4448,6 +4362,7 @@ var require_tree = __commonJS((exports) => {
 // node_modules/magic-bytes.js/dist/model/pattern-tree.js
 var require_pattern_tree = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
+  exports.createTree = exports.add = undefined;
   var toHex_1 = require_toHex();
   var tree_1 = require_tree();
   var tree = {
@@ -4471,19 +4386,20 @@ var require_pattern_tree = __commonJS((exports) => {
       }
     }
   };
-  add("gif", ["0x47", "0x49", "0x46", "0x38", "0x37", "0x61"], {
+  exports.add = add;
+  exports.add("gif", ["0x47", "0x49", "0x46", "0x38", "0x37", "0x61"], {
     mime: "image/gif",
     extension: "gif"
   });
-  add("gif", ["0x47", "0x49", "0x46", "0x38", "0x39", "0x61"], {
+  exports.add("gif", ["0x47", "0x49", "0x46", "0x38", "0x39", "0x61"], {
     mime: "image/gif",
     extension: "gif"
   });
-  add("jpg", ["0xFF", "0xD8", "0xFF"], {
+  exports.add("jpg", ["0xFF", "0xD8", "0xFF"], {
     mime: "image/jpeg",
     extension: "jpeg"
   });
-  add("webp", [
+  exports.add("webp", [
     "0x52",
     "0x49",
     "0x46",
@@ -4497,39 +4413,39 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x42",
     "0x50"
   ], { mime: "image/webp", extension: "webp" });
-  add("heif", ["0x66", "0x74", "0x79", "0x70", "0x6D", "0x69", "0x66", "0x31"], { mime: "image/heif", extension: "heif" }, 4);
-  add("heif", ["0x66", "0x74", "0x79", "0x70", "0x68", "0x65", "0x69", "0x63"], { mime: "image/heif", extension: "heic" }, 4);
-  add("rpm", ["0xed", "0xab", "0xee", "0xdb"]);
-  add("bin", ["0x53", "0x50", "0x30", "0x31"], {
+  exports.add("heif", ["0x66", "0x74", "0x79", "0x70", "0x6D", "0x69", "0x66", "0x31"], { mime: "image/heif", extension: "heif" }, 4);
+  exports.add("heif", ["0x66", "0x74", "0x79", "0x70", "0x68", "0x65", "0x69", "0x63"], { mime: "image/heif", extension: "heic" }, 4);
+  exports.add("rpm", ["0xed", "0xab", "0xee", "0xdb"]);
+  exports.add("bin", ["0x53", "0x50", "0x30", "0x31"], {
     mime: "application/octet-stream",
     extension: "bin"
   });
-  add("pic", ["0x00"]);
-  add("pif", ["0x00"]);
-  add("sea", ["0x00"]);
-  add("ytr", ["0x00"]);
-  add("mp4", ["0x66", "0x74", "0x79", "0x70"], { mime: "video/mp4", extension: "mp4" }, 4);
-  add("ttf", ["0x00", "0x01", "0x00", "0x00", "0x00"], {
+  exports.add("pic", ["0x00"]);
+  exports.add("pif", ["0x00"]);
+  exports.add("sea", ["0x00"]);
+  exports.add("ytr", ["0x00"]);
+  exports.add("mp4", ["0x66", "0x74", "0x79", "0x70"], { mime: "video/mp4", extension: "mp4" }, 4);
+  exports.add("ttf", ["0x00", "0x01", "0x00", "0x00", "0x00"], {
     mime: "font/ttf",
     extension: "ttf"
   });
-  add("otf", ["0x4F", "0x54", "0x54", "0x4F"], {
+  exports.add("otf", ["0x4F", "0x54", "0x54", "0x4F"], {
     mime: "font/otf",
     extension: "otf"
   });
-  add("eot", ["0x50", "0x4C"], {
+  exports.add("eot", ["0x50", "0x4C"], {
     mime: "application/vnd.ms-fontobject",
     extension: "eot"
   });
-  add("woff", ["0x77", "0x4F", "0x46", "0x46"], {
+  exports.add("woff", ["0x77", "0x4F", "0x46", "0x46"], {
     mime: "font/woff",
     extension: "woff"
   });
-  add("woff2", ["0x77", "0x4F", "0x46", "0x32"], {
+  exports.add("woff2", ["0x77", "0x4F", "0x46", "0x32"], {
     mime: "font/woff2",
     extension: "woff2"
   });
-  add("pdb", [
+  exports.add("pdb", [
     "0x00",
     "0x00",
     "0x00",
@@ -4555,18 +4471,18 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x00",
     "0x00"
   ]);
-  add("dba", ["0xBE", "0xBA", "0xFE", "0xCA"]);
-  add("dba2", ["0x00", "0x01", "0x42", "0x44"]);
-  add("tda", ["0x00", "0x01", "0x44", "0x54"]);
-  add("tda2", ["0x00", "0x01", "0x00", "0x00"]);
-  add("ico", ["0x00", "0x00", "0x01", "0x00"], {
+  exports.add("dba", ["0xBE", "0xBA", "0xFE", "0xCA"]);
+  exports.add("dba2", ["0x00", "0x01", "0x42", "0x44"]);
+  exports.add("tda", ["0x00", "0x01", "0x44", "0x54"]);
+  exports.add("tda2", ["0x00", "0x01", "0x00", "0x00"]);
+  exports.add("ico", ["0x00", "0x00", "0x01", "0x00"], {
     mime: "image/x-icon",
     extension: "ico"
   });
-  add("3gp", ["0x66", "0x74", "0x79", "0x70", "0x33", "0x67"]);
-  add("z", ["0x1F", "0x9D"]);
-  add("tar.z", ["0x1F", "0xA0"]);
-  add("bac", [
+  exports.add("3gp", ["0x66", "0x74", "0x79", "0x70", "0x33", "0x67"]);
+  exports.add("z", ["0x1F", "0x9D"]);
+  exports.add("tar.z", ["0x1F", "0xA0"]);
+  exports.add("bac", [
     "0x42",
     "0x41",
     "0x43",
@@ -4580,19 +4496,19 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x53",
     "0x4B"
   ]);
-  add("bz2", ["0x42", "0x5A", "0x68"], {
+  exports.add("bz2", ["0x42", "0x5A", "0x68"], {
     mime: "application/x-bzip2",
     extension: "bz2"
   });
-  add("tif", ["0x49", "0x49", "0x2A", "0x00"], {
+  exports.add("tif", ["0x49", "0x49", "0x2A", "0x00"], {
     mime: "image/tiff",
     extension: "tif"
   });
-  add("tiff", ["0x4D", "0x4D", "0x00", "0x2A"], {
+  exports.add("tiff", ["0x4D", "0x4D", "0x00", "0x2A"], {
     mime: "image/tiff",
     extension: "tiff"
   });
-  add("cr2", [
+  exports.add("cr2", [
     "0x49",
     "0x49",
     "0x2A",
@@ -4604,14 +4520,14 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x43",
     "0x52"
   ]);
-  add("cin", ["0x80", "0x2A", "0x5F", "0xD7"]);
-  add("cin1", ["0x52", "0x4E", "0x43", "0x01"]);
-  add("cin2", ["0x52", "0x4E", "0x43", "0x02"]);
-  add("dpx", ["0x53", "0x44", "0x50", "0x58"]);
-  add("dpx2", ["0x58", "0x50", "0x44", "0x53"]);
-  add("exr", ["0x76", "0x2F", "0x31", "0x01"]);
-  add("bpg", ["0x42", "0x50", "0x47", "0xFB"]);
-  add("ilbm", [
+  exports.add("cin", ["0x80", "0x2A", "0x5F", "0xD7"]);
+  exports.add("cin1", ["0x52", "0x4E", "0x43", "0x01"]);
+  exports.add("cin2", ["0x52", "0x4E", "0x43", "0x02"]);
+  exports.add("dpx", ["0x53", "0x44", "0x50", "0x58"]);
+  exports.add("dpx2", ["0x58", "0x50", "0x44", "0x53"]);
+  exports.add("exr", ["0x76", "0x2F", "0x31", "0x01"]);
+  exports.add("bpg", ["0x42", "0x50", "0x47", "0xFB"]);
+  exports.add("ilbm", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4625,7 +4541,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x42",
     "0x4D"
   ]);
-  add("8svx", [
+  exports.add("8svx", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4639,7 +4555,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x56",
     "0x58"
   ]);
-  add("acbm", [
+  exports.add("acbm", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4653,7 +4569,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x42",
     "0x4D"
   ]);
-  add("anbm", [
+  exports.add("anbm", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4667,7 +4583,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x42",
     "0x4D"
   ]);
-  add("anim", [
+  exports.add("anim", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4681,7 +4597,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x49",
     "0x4D"
   ]);
-  add("faxx", [
+  exports.add("faxx", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4695,7 +4611,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x58",
     "0x58"
   ]);
-  add("ftxt", [
+  exports.add("ftxt", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4709,7 +4625,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x58",
     "0x54"
   ]);
-  add("smus", [
+  exports.add("smus", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4723,7 +4639,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x55",
     "0x53"
   ]);
-  add("cmus", [
+  exports.add("cmus", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4737,7 +4653,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x55",
     "0x53"
   ]);
-  add("yuvn", [
+  exports.add("yuvn", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4751,7 +4667,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x56",
     "0x4E"
   ]);
-  add("iff", [
+  exports.add("iff", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4765,7 +4681,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x4E",
     "0x54"
   ]);
-  add("aiff", [
+  exports.add("aiff", [
     "0x46",
     "0x4F",
     "0x52",
@@ -4779,179 +4695,179 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x46",
     "0x46"
   ], { mime: "audio/x-aiff", extension: "aiff" });
-  add("idx", ["0x49", "0x4E", "0x44", "0x58"]);
-  add("lz", ["0x4C", "0x5A", "0x49", "0x50"]);
-  add("exe", ["0x4D", "0x5A"]);
-  add("zip", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("idx", ["0x49", "0x4E", "0x44", "0x58"]);
+  exports.add("lz", ["0x4C", "0x5A", "0x49", "0x50"]);
+  exports.add("exe", ["0x4D", "0x5A"]);
+  exports.add("zip", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/zip",
     extension: "zip"
   });
-  add("zip", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("zip", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/zip",
     extension: "zip"
   });
-  add("zip", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("zip", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/zip",
     extension: "zip"
   });
-  add("jar", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("jar", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/java-archive",
     extension: "jar"
   });
-  add("jar", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("jar", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/java-archive",
     extension: "jar"
   });
-  add("jar", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("jar", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/java-archive",
     extension: "jar"
   });
-  add("odt", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("odt", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.oasis.opendocument.text",
     extension: "odt"
   });
-  add("odt", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("odt", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.oasis.opendocument.text",
     extension: "odt"
   });
-  add("odt", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("odt", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.oasis.opendocument.text",
     extension: "odt"
   });
-  add("ods", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("ods", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.oasis.opendocument.spreadsheet",
     extension: "ods"
   });
-  add("ods", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("ods", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.oasis.opendocument.spreadsheet",
     extension: "ods"
   });
-  add("ods", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("ods", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.oasis.opendocument.spreadsheet",
     extension: "ods"
   });
-  add("odp", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("odp", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.oasis.opendocument.presentation",
     extension: "odp"
   });
-  add("odp", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("odp", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.oasis.opendocument.presentation",
     extension: "odp"
   });
-  add("odp", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("odp", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.oasis.opendocument.presentation",
     extension: "odp"
   });
-  add("docx", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("docx", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     extension: "docx"
   });
-  add("docx", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("docx", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     extension: "docx"
   });
-  add("docx", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("docx", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     extension: "docx"
   });
-  add("xlsx", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("xlsx", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     extension: "xlsx"
   });
-  add("xlsx", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("xlsx", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     extension: "xlsx"
   });
-  add("xlsx", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("xlsx", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     extension: "xlsx"
   });
-  add("pptx", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("pptx", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
     extension: "pptx"
   });
-  add("pptx", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("pptx", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
     extension: "pptx"
   });
-  add("pptx", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("pptx", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
     extension: "pptx"
   });
-  add("vsdx", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("vsdx", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.ms-visio.drawing",
     extension: "vsdx"
   });
-  add("vsdx", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("vsdx", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.ms-visio.drawing",
     extension: "vsdx"
   });
-  add("vsdx", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("vsdx", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.ms-visio.drawing",
     extension: "vsdx"
   });
-  add("apk", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("apk", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.android.package-archive",
     extension: "apk"
   });
-  add("apk", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("apk", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.android.package-archive",
     extension: "apk"
   });
-  add("apk", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("apk", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.android.package-archive",
     extension: "apk"
   });
-  add("aar", ["0x50", "0x4B", "0x03", "0x04"], {
+  exports.add("aar", ["0x50", "0x4B", "0x03", "0x04"], {
     mime: "application/vnd.android.package-archive",
     extension: "aar"
   });
-  add("aar", ["0x50", "0x4B", "0x05", "0x06"], {
+  exports.add("aar", ["0x50", "0x4B", "0x05", "0x06"], {
     mime: "application/vnd.android.package-archive",
     extension: "aar"
   });
-  add("aar", ["0x50", "0x4B", "0x07", "0x08"], {
+  exports.add("aar", ["0x50", "0x4B", "0x07", "0x08"], {
     mime: "application/vnd.android.package-archive",
     extension: "aar"
   });
-  add("rar", ["0x52", "0x61", "0x72", "0x21", "0x1A", "0x07", "0x00"], {
+  exports.add("rar", ["0x52", "0x61", "0x72", "0x21", "0x1A", "0x07", "0x00"], {
     mime: "application/vnd.rar",
     extension: "rar"
   });
-  add("rar", ["0x52", "0x61", "0x72", "0x21", "0x1A", "0x07", "0x01", "0x00"], {
+  exports.add("rar", ["0x52", "0x61", "0x72", "0x21", "0x1A", "0x07", "0x01", "0x00"], {
     mime: "application/vnd.rar",
     extension: "rar"
   });
-  add("rar", ["0x7F", "0x45", "0x4C", "0x46"], {
+  exports.add("rar", ["0x7F", "0x45", "0x4C", "0x46"], {
     mime: "application/vnd.rar",
     extension: "rar"
   });
-  add("png", ["0x89", "0x50", "0x4E", "0x47", "0x0D", "0x0A", "0x1A", "0x0A"], {
+  exports.add("png", ["0x89", "0x50", "0x4E", "0x47", "0x0D", "0x0A", "0x1A", "0x0A"], {
     mime: "image/png",
     extension: "png"
   });
-  add("apng", ["0x89", "0x50", "0x4E", "0x47", "0x0D", "0x0A", "0x1A", "0x0A"], {
+  exports.add("apng", ["0x89", "0x50", "0x4E", "0x47", "0x0D", "0x0A", "0x1A", "0x0A"], {
     mime: "image/apng",
     extension: "apng"
   });
-  add("class", ["0xCA", "0xFE", "0xBA", "0xBE"]);
-  add("class", ["0xEF", "0xBB", "0xBF"]);
-  add("class", ["0xFE", "0xed", "0xFA", "0xCE"], undefined, 4096);
-  add("class", ["0xFE", "0xed", "0xFA", "0xCF"], undefined, 4096);
-  add("class", ["0xCE", "0xFA", "0xed", "0xFE"]);
-  add("class", ["0xCF", "0xFA", "0xed", "0xFE"]);
-  add("class", ["0xFF", "0xFE"]);
-  add("class", ["0xFF", "0xFE"]);
-  add("class", ["0xFF", "0xFE", "0x00", "0x00"]);
-  add("ps", ["0x25", "0x21", "0x50", "0x53"], {
+  exports.add("class", ["0xCA", "0xFE", "0xBA", "0xBE"]);
+  exports.add("class", ["0xEF", "0xBB", "0xBF"]);
+  exports.add("class", ["0xFE", "0xed", "0xFA", "0xCE"], undefined, 4096);
+  exports.add("class", ["0xFE", "0xed", "0xFA", "0xCF"], undefined, 4096);
+  exports.add("class", ["0xCE", "0xFA", "0xed", "0xFE"]);
+  exports.add("class", ["0xCF", "0xFA", "0xed", "0xFE"]);
+  exports.add("class", ["0xFF", "0xFE"]);
+  exports.add("class", ["0xFF", "0xFE"]);
+  exports.add("class", ["0xFF", "0xFE", "0x00", "0x00"]);
+  exports.add("ps", ["0x25", "0x21", "0x50", "0x53"], {
     mime: "application/postscript",
     extension: ".ps"
   });
-  add("pdf", ["0x25", "0x50", "0x44", "0x46"], {
+  exports.add("pdf", ["0x25", "0x50", "0x44", "0x46"], {
     mime: "application/pdf",
     extension: "pdf"
   });
-  add("asf", [
+  exports.add("asf", [
     "0x30",
     "0x26",
     "0xB2",
@@ -4969,7 +4885,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0xCE",
     "0x6C"
   ]);
-  add("wma", [
+  exports.add("wma", [
     "0x30",
     "0x26",
     "0xB2",
@@ -4987,7 +4903,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0xCE",
     "0x6C"
   ]);
-  add("wmv", [
+  exports.add("wmv", [
     "0x30",
     "0x26",
     "0xB2",
@@ -5005,7 +4921,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0xCE",
     "0x6C"
   ]);
-  add("deploymentimage", [
+  exports.add("deploymentimage", [
     "0x24",
     "0x53",
     "0x44",
@@ -5015,7 +4931,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x30",
     "0x31"
   ]);
-  add("ogv", [
+  exports.add("ogv", [
     "0x4F",
     "0x67",
     "0x67",
@@ -5055,7 +4971,7 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "video/ogg",
     extension: "ogv"
   });
-  add("ogm", [
+  exports.add("ogm", [
     "0x4F",
     "0x67",
     "0x67",
@@ -5095,7 +5011,7 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "video/ogg",
     extension: "ogm"
   });
-  add("oga", [
+  exports.add("oga", [
     "0x4F",
     "0x67",
     "0x67",
@@ -5133,7 +5049,7 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "audio/ogg",
     extension: "oga"
   });
-  add("spx", [
+  exports.add("spx", [
     "0x4F",
     "0x67",
     "0x67",
@@ -5173,7 +5089,7 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "audio/ogg",
     extension: "spx"
   });
-  add("ogg", [
+  exports.add("ogg", [
     "0x4F",
     "0x67",
     "0x67",
@@ -5213,16 +5129,16 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "audio/ogg",
     extension: "ogg"
   });
-  add("ogx", ["0x4F", "0x67", "0x67", "0x53"], {
+  exports.add("ogx", ["0x4F", "0x67", "0x67", "0x53"], {
     mime: "application/ogg",
     extension: "ogx"
   });
-  add("psd", ["0x38", "0x42", "0x50", "0x53"], {
+  exports.add("psd", ["0x38", "0x42", "0x50", "0x53"], {
     mime: "application/x-photoshop",
     extension: "psd"
   });
-  add("clip", ["0x43", "0x53", "0x46", "0x43", "0x48", "0x55", "0x4e", "0x4b"]);
-  add("wav", [
+  exports.add("clip", ["0x43", "0x53", "0x46", "0x43", "0x48", "0x55", "0x4e", "0x4b"]);
+  exports.add("wav", [
     "0x52",
     "0x49",
     "0x46",
@@ -5236,7 +5152,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x56",
     "0x45"
   ], { mime: "audio/x-wav", extension: "wav" });
-  add("avi", [
+  exports.add("avi", [
     "0x52",
     "0x49",
     "0x46",
@@ -5250,39 +5166,39 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x49",
     "0x20"
   ], { mime: "video/x-msvideo", extension: "avi" });
-  add("mp3", ["0xFF", "0xFB"], { mime: "audio/mpeg", extension: "mp3" });
-  add("mp3", ["0xFF", "0xF3"], { mime: "audio/mpeg", extension: "mp3" });
-  add("mp3", ["0xFF", "0xF2"], { mime: "audio/mpeg", extension: "mp3" });
-  add("mp3", ["0x49", "0x44", "0x33"], { mime: "audio/mpeg", extension: "mp3" });
-  add("bmp", ["0x42", "0x4D"], { mime: "image/bmp", extension: "bmp" });
-  add("iso", ["0x43", "0x44", "0x30", "0x30", "0x31"]);
-  add("flac", ["0x66", "0x4C", "0x61", "0x43"]);
-  add("mid", ["0x4D", "0x54", "0x68", "0x64"], {
+  exports.add("mp3", ["0xFF", "0xFB"], { mime: "audio/mpeg", extension: "mp3" });
+  exports.add("mp3", ["0xFF", "0xF3"], { mime: "audio/mpeg", extension: "mp3" });
+  exports.add("mp3", ["0xFF", "0xF2"], { mime: "audio/mpeg", extension: "mp3" });
+  exports.add("mp3", ["0x49", "0x44", "0x33"], { mime: "audio/mpeg", extension: "mp3" });
+  exports.add("bmp", ["0x42", "0x4D"], { mime: "image/bmp", extension: "bmp" });
+  exports.add("iso", ["0x43", "0x44", "0x30", "0x30", "0x31"]);
+  exports.add("flac", ["0x66", "0x4C", "0x61", "0x43"]);
+  exports.add("mid", ["0x4D", "0x54", "0x68", "0x64"], {
     mime: "audio/midi",
     extension: "mid"
   });
-  add("midi", ["0x4D", "0x54", "0x68", "0x64"], {
+  exports.add("midi", ["0x4D", "0x54", "0x68", "0x64"], {
     mime: "audio/midi",
     extension: "midi"
   });
-  add("doc", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"], {
+  exports.add("doc", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"], {
     mime: "application/msword",
     extension: "doc"
   });
-  add("xls", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"], {
+  exports.add("xls", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"], {
     mime: "application/vnd.ms-excel",
     extension: "xls"
   });
-  add("ppt", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"], {
+  exports.add("ppt", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"], {
     mime: "application/vnd.ms-powerpoint",
     extension: "ppt"
   });
-  add("msg", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"]);
-  add("dex", ["0x64", "0x65", "0x78", "0x0A", "0x30", "0x33", "0x35", "0x00"]);
-  add("vmdk", ["0x4B", "0x44", "0x4D"]);
-  add("crx", ["0x43", "0x72", "0x32", "0x34"]);
-  add("fh8", ["0x41", "0x47", "0x44", "0x33"]);
-  add("cwk", [
+  exports.add("msg", ["0xD0", "0xCF", "0x11", "0xE0", "0xA1", "0xB1", "0x1A", "0xE1"]);
+  exports.add("dex", ["0x64", "0x65", "0x78", "0x0A", "0x30", "0x33", "0x35", "0x00"]);
+  exports.add("vmdk", ["0x4B", "0x44", "0x4D"]);
+  exports.add("crx", ["0x43", "0x72", "0x32", "0x34"]);
+  exports.add("fh8", ["0x41", "0x47", "0x44", "0x33"]);
+  exports.add("cwk", [
     "0x05",
     "0x07",
     "0x00",
@@ -5306,7 +5222,7 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x00",
     "0x01"
   ]);
-  add("cwk", [
+  exports.add("cwk", [
     "0x06",
     "0x07",
     "0xE1",
@@ -5330,23 +5246,23 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x00",
     "0x01"
   ]);
-  add("toast", ["0x45", "0x52", "0x02", "0x00", "0x00", "0x00"]);
-  add("toast", ["0x8B", "0x45", "0x52", "0x02", "0x00", "0x00", "0x00"]);
-  add("dmg", ["0x78", "0x01", "0x73", "0x0D", "0x62", "0x62", "0x60"]);
-  add("xar", ["0x78", "0x61", "0x72", "0x21"]);
-  add("dat", ["0x50", "0x4D", "0x4F", "0x43", "0x43", "0x4D", "0x4F", "0x43"]);
-  add("nes", ["0x4E", "0x45", "0x53", "0x1A"]);
-  add("tar", ["0x75", "0x73", "0x74", "0x61", "0x72", "0x00", "0x30", "0x30"], {
+  exports.add("toast", ["0x45", "0x52", "0x02", "0x00", "0x00", "0x00"]);
+  exports.add("toast", ["0x8B", "0x45", "0x52", "0x02", "0x00", "0x00", "0x00"]);
+  exports.add("dmg", ["0x78", "0x01", "0x73", "0x0D", "0x62", "0x62", "0x60"]);
+  exports.add("xar", ["0x78", "0x61", "0x72", "0x21"]);
+  exports.add("dat", ["0x50", "0x4D", "0x4F", "0x43", "0x43", "0x4D", "0x4F", "0x43"]);
+  exports.add("nes", ["0x4E", "0x45", "0x53", "0x1A"]);
+  exports.add("tar", ["0x75", "0x73", "0x74", "0x61", "0x72", "0x00", "0x30", "0x30"], {
     mime: "application/x-tar",
     extension: "tar"
   }, 257);
-  add("tar", ["0x75", "0x73", "0x74", "0x61", "0x72", "0x20", "0x20", "0x00"], {
+  exports.add("tar", ["0x75", "0x73", "0x74", "0x61", "0x72", "0x20", "0x20", "0x00"], {
     mime: "application/x-tar",
     extension: "tar"
   }, 257);
-  add("tox", ["0x74", "0x6F", "0x78", "0x33"]);
-  add("mlv", ["0x4D", "0x4C", "0x56", "0x49"]);
-  add("windowsupdate", [
+  exports.add("tox", ["0x74", "0x6F", "0x78", "0x33"]);
+  exports.add("mlv", ["0x4D", "0x4C", "0x56", "0x49"]);
+  exports.add("windowsupdate", [
     "0x44",
     "0x43",
     "0x4D",
@@ -5356,126 +5272,126 @@ var require_pattern_tree = __commonJS((exports) => {
     "0x33",
     "0x30"
   ]);
-  add("7z", ["0x37", "0x7A", "0xBC", "0xAF", "0x27", "0x1C"], {
+  exports.add("7z", ["0x37", "0x7A", "0xBC", "0xAF", "0x27", "0x1C"], {
     mime: "application/x-7z-compressed",
     extension: "7z"
   });
-  add("gz", ["0x1F", "0x8B"], { mime: "application/gzip", extension: "gz" });
-  add("tar.gz", ["0x1F", "0x8B"], {
+  exports.add("gz", ["0x1F", "0x8B"], { mime: "application/gzip", extension: "gz" });
+  exports.add("tar.gz", ["0x1F", "0x8B"], {
     mime: "application/gzip",
     extension: "tar.gz"
   });
-  add("xz", ["0xFD", "0x37", "0x7A", "0x58", "0x5A", "0x00", "0x00"], {
+  exports.add("xz", ["0xFD", "0x37", "0x7A", "0x58", "0x5A", "0x00", "0x00"], {
     mime: "application/gzip",
     extension: "xz"
   });
-  add("tar.xz", ["0xFD", "0x37", "0x7A", "0x58", "0x5A", "0x00", "0x00"], {
+  exports.add("tar.xz", ["0xFD", "0x37", "0x7A", "0x58", "0x5A", "0x00", "0x00"], {
     mime: "application/gzip",
     extension: "tar.xz"
   });
-  add("lz2", ["0x04", "0x22", "0x4D", "0x18"]);
-  add("cab", ["0x4D", "0x53", "0x43", "0x46"]);
-  add("mkv", ["0x1A", "0x45", "0xDF", "0xA3"], {
+  exports.add("lz2", ["0x04", "0x22", "0x4D", "0x18"]);
+  exports.add("cab", ["0x4D", "0x53", "0x43", "0x46"]);
+  exports.add("mkv", ["0x1A", "0x45", "0xDF", "0xA3"], {
     mime: "video/x-matroska",
     extension: "mkv"
   });
-  add("mka", ["0x1A", "0x45", "0xDF", "0xA3"], {
+  exports.add("mka", ["0x1A", "0x45", "0xDF", "0xA3"], {
     mime: "audio/x-matroska",
     extension: "mka"
   });
-  add("mks", ["0x1A", "0x45", "0xDF", "0xA3"], {
+  exports.add("mks", ["0x1A", "0x45", "0xDF", "0xA3"], {
     mime: "video/x-matroska",
     extension: "mks"
   });
-  add("mk3d", ["0x1A", "0x45", "0xDF", "0xA3"]);
-  add("webm", ["0x1A", "0x45", "0xDF", "0xA3"], {
+  exports.add("mk3d", ["0x1A", "0x45", "0xDF", "0xA3"]);
+  exports.add("webm", ["0x1A", "0x45", "0xDF", "0xA3"], {
     mime: "audio/webm",
     extension: "webm"
   });
-  add("dcm", ["0x44", "0x49", "0x43", "0x4D"], undefined, 128);
-  add("xml", ["0x3C", "0x3f", "0x78", "0x6d", "0x6C", "0x20"], {
+  exports.add("dcm", ["0x44", "0x49", "0x43", "0x4D"], undefined, 128);
+  exports.add("xml", ["0x3C", "0x3f", "0x78", "0x6d", "0x6C", "0x20"], {
     mime: "application/xml",
     extension: "xml"
   });
-  add("wasm", ["0x00", "0x61", "0x73", "0x6d"], {
+  exports.add("wasm", ["0x00", "0x61", "0x73", "0x6d"], {
     mime: "application/wasm",
     extension: "wasm"
   });
-  add("lep", ["0xCF", "0x84", "0x01"]);
-  add("swf", ["0x43", "0x57", "0x53"], {
+  exports.add("lep", ["0xCF", "0x84", "0x01"]);
+  exports.add("swf", ["0x43", "0x57", "0x53"], {
     mime: "application/x-shockwave-flash",
     extension: "swf"
   });
-  add("swf", ["0x46", "0x57", "0x53"], {
+  exports.add("swf", ["0x46", "0x57", "0x53"], {
     mime: "application/x-shockwave-flash",
     extension: "swf"
   });
-  add("deb", ["0x21", "0x3C", "0x61", "0x72", "0x63", "0x68", "0x3E"]);
-  add("rtf", ["0x7B", "0x5C", "0x72", "0x74", "0x66", "0x31"], {
+  exports.add("deb", ["0x21", "0x3C", "0x61", "0x72", "0x63", "0x68", "0x3E"]);
+  exports.add("rtf", ["0x7B", "0x5C", "0x72", "0x74", "0x66", "0x31"], {
     mime: "application/rtf",
     extension: "rtf"
   });
-  add("m2p", ["0x00", "0x00", "0x01", "0xBA"]);
-  add("vob", ["0x00", "0x00", "0x01", "0xBA"]);
-  add("mpg", ["0x00", "0x00", "0x01", "0xBA"], {
+  exports.add("m2p", ["0x00", "0x00", "0x01", "0xBA"]);
+  exports.add("vob", ["0x00", "0x00", "0x01", "0xBA"]);
+  exports.add("mpg", ["0x00", "0x00", "0x01", "0xBA"], {
     mime: "video/mpeg",
     extension: "mpg"
   });
-  add("mpeg", ["0x00", "0x00", "0x01", "0xBA"], {
+  exports.add("mpeg", ["0x00", "0x00", "0x01", "0xBA"], {
     mime: "video/mpeg",
     extension: "mpeg"
   });
-  add("mpeg", ["0x47"], { mime: "video/mpeg", extension: "mpeg" });
-  add("mpeg", ["0x00", "0x00", "0x01", "0xB3"], {
+  exports.add("mpeg", ["0x47"], { mime: "video/mpeg", extension: "mpeg" });
+  exports.add("mpeg", ["0x00", "0x00", "0x01", "0xB3"], {
     mime: "video/mpeg",
     extension: "mpeg"
   });
-  add("mov", ["0x66", "0x72", "0x65", "0x65"], {
+  exports.add("mov", ["0x66", "0x72", "0x65", "0x65"], {
     mime: "video/quicktime",
     extension: "mov"
   }, 4);
-  add("mov", ["0x6D", "0x64", "0x61", "0x74"], {
+  exports.add("mov", ["0x6D", "0x64", "0x61", "0x74"], {
     mime: "video/quicktime",
     extension: "mov"
   }, 4);
-  add("mov", ["0x6D", "0x6F", "0x6F", "0x76"], {
+  exports.add("mov", ["0x6D", "0x6F", "0x6F", "0x76"], {
     mime: "video/quicktime",
     extension: "mov"
   }, 4);
-  add("mov", ["0x77", "0x69", "0x64", "0x65"], {
+  exports.add("mov", ["0x77", "0x69", "0x64", "0x65"], {
     mime: "video/quicktime",
     extension: "mov"
   }, 4);
-  add("mov", ["0x66", "0x74", "0x79", "0x70", "0x71", "0x74"], {
+  exports.add("mov", ["0x66", "0x74", "0x79", "0x70", "0x71", "0x74"], {
     mime: "video/quicktime",
     extension: "mov"
   }, 4);
-  add("hl2demo", ["0x48", "0x4C", "0x32", "0x44", "0x45", "0x4D", "0x4F"]);
-  add("txt", ["0xEF", "0xBB", "0xBF"], {
+  exports.add("hl2demo", ["0x48", "0x4C", "0x32", "0x44", "0x45", "0x4D", "0x4F"]);
+  exports.add("txt", ["0xEF", "0xBB", "0xBF"], {
     mime: "text/plain; charset=UTF-8",
     extension: "txt"
   });
-  add("txt", ["0xFF", "0xFE"], {
+  exports.add("txt", ["0xFF", "0xFE"], {
     mime: "text/plain; charset=UTF-16LE",
     extension: "txt"
   });
-  add("txt", ["0xFE", "0xFF"], {
+  exports.add("txt", ["0xFE", "0xFF"], {
     mime: "text/plain; charset=UTF-16BE",
     extension: "txt"
   });
-  add("txt", ["0xFF", "0xFE", "0x00", "0x00"], {
+  exports.add("txt", ["0xFF", "0xFE", "0x00", "0x00"], {
     mime: "text/plain; charset=UTF-32LE",
     extension: "txt"
   });
-  add("txt", ["0x00", "0x00", "0xFE", "0xFF"], {
+  exports.add("txt", ["0x00", "0x00", "0xFE", "0xFF"], {
     mime: "text/plain; charset=UTF-32BE",
     extension: "txt"
   });
-  add("SubRip", ["0x31", "0x0D", "0x0A", "0x30", "0x30", "0x3A"], {
+  exports.add("SubRip", ["0x31", "0x0D", "0x0A", "0x30", "0x30", "0x3A"], {
     mime: "application/x-subrip",
     extension: "srt"
   });
-  add("WebVTT", [
+  exports.add("WebVTT", [
     "0xEF",
     "0xBB",
     "0xBF",
@@ -5490,7 +5406,7 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("WebVTT", [
+  exports.add("WebVTT", [
     "0xEF",
     "0xBB",
     "0xBF",
@@ -5505,7 +5421,7 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("WebVTT", [
+  exports.add("WebVTT", [
     "0xEF",
     "0xBB",
     "0xBF",
@@ -5520,7 +5436,7 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("WebVTT", [
+  exports.add("WebVTT", [
     "0xEF",
     "0xBB",
     "0xBF",
@@ -5535,63 +5451,66 @@ var require_pattern_tree = __commonJS((exports) => {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x0A"], {
+  exports.add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x0A"], {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x0D"], {
+  exports.add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x0D"], {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x20"], {
+  exports.add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x20"], {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x09"], {
+  exports.add("WebVTT", ["0x57", "0x45", "0x42", "0x56", "0x54", "0x54", "0x09"], {
     mime: "text/vtt",
     extension: "vtt"
   });
-  add("Json", ["0x7B"], {
+  exports.add("Json", ["0x7B"], {
     mime: "application/json",
     extension: ".json"
   });
-  add("Json", ["0x5B"], {
+  exports.add("Json", ["0x5B"], {
     mime: "application/json",
     extension: ".json"
   });
-  add("ELF", ["0x7F", "0x45", "0x4C", "0x46"], {
+  exports.add("ELF", ["0x7F", "0x45", "0x4C", "0x46"], {
     mime: "application/x-executable",
     extension: ".elf"
   });
-  add("Mach-O", ["0xFE", "0xED", "0xFA", "0xC"], {
+  exports.add("Mach-O", ["0xFE", "0xED", "0xFA", "0xC"], {
     mime: "application/x-mach-binary",
     extension: ".o"
   });
-  add("Mach-O", ["0xFE", "0xED", "0xFA", "0xCF"], {
+  exports.add("Mach-O", ["0xFE", "0xED", "0xFA", "0xCF"], {
     mime: "application/x-executable",
     extension: "elf"
   });
-  add("EML", ["0x52", "0x65", "0x63", "0x65", "0x69", "0x76", "0x65", "0x64", "0x3A"], {
+  exports.add("EML", ["0x52", "0x65", "0x63", "0x65", "0x69", "0x76", "0x65", "0x64", "0x3A"], {
     mime: "message/rfc822",
     extension: ".eml"
   });
-  add("SVG", ["0x3c", "0x73", "0x76", "0x67"], {
+  exports.add("SVG", ["0x3c", "0x73", "0x76", "0x67"], {
     mime: "image/svg+xml",
     extension: "svg"
   });
+  exports.add("avif", ["0x66", "0x74", "0x79", "0x70", "0x61", "0x76", "0x69", "0x66"], {
+    mime: "image/avif",
+    extension: "avif"
+  }, 4);
+  var createTree = () => tree;
+  exports.createTree = createTree;
   exports.default = () => tree;
 });
 
 // node_modules/magic-bytes.js/dist/index.js
 var require_dist4 = __commonJS((exports) => {
-  var __importDefault = exports && exports.__importDefault || function(mod) {
-    return mod && mod.__esModule ? mod : { default: mod };
-  };
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.filetypeextension = exports.filetypemime = exports.filetypename = exports.filetypeinfo = undefined;
-  var pattern_tree_1 = __importDefault(require_pattern_tree());
+  exports.register = exports.filetypeextension = exports.filetypemime = exports.filetypename = exports.filetypeinfo = undefined;
+  var pattern_tree_1 = require_pattern_tree();
   var toHex_1 = require_toHex();
-  var patternTree = pattern_tree_1.default();
+  var patternTree = pattern_tree_1.createTree();
   var filetypeinfo = (bytes) => {
     let tree = patternTree;
     for (const k of Object.keys(tree.offset)) {
@@ -5638,6 +5557,10 @@ var require_dist4 = __commonJS((exports) => {
   exports.filetypemime = filetypemime;
   var filetypeextension = (bytes) => exports.filetypeinfo(bytes).map((e) => e.extension ? e.extension : null).filter((x) => x !== null);
   exports.filetypeextension = filetypeextension;
+  var register = (typename, signature, additionalInfo, offset) => {
+    pattern_tree_1.add(typename, signature, additionalInfo, offset);
+  };
+  exports.register = register;
 });
 
 // node_modules/@sapphire/async-queue/dist/cjs/index.cjs
@@ -5782,7 +5705,7 @@ var require_dist5 = __commonJS((exports, module) => {
     version: () => version
   });
   module.exports = __toCommonJS(src_exports);
-  var import_node_buffer = __require("node:buffer");
+  var import_node_buffer = __require("buffer");
   var import_util2 = require_dist();
   var import_undici2 = __require("undici");
   var defaultStrategy;
@@ -5794,9 +5717,9 @@ var require_dist5 = __commonJS((exports, module) => {
     return defaultStrategy;
   }
   __name(getDefaultStrategy, "getDefaultStrategy");
-  var import_node_http = __require("node:http");
-  var import_node_url = __require("node:url");
-  var import_node_util = __require("node:util");
+  var import_node_http = __require("http");
+  var import_node_url = __require("url");
+  var import_node_util = __require("util");
   var import_undici = __require("undici");
   async function makeRequest(url, init) {
     const options = {
@@ -5855,9 +5778,10 @@ var require_dist5 = __commonJS((exports, module) => {
     throw new TypeError(`Unable to resolve body.`);
   }
   __name(resolveBody, "resolveBody");
+  var import_v102 = require_v106();
   var import_util = require_dist();
   var import_v10 = require_v106();
-  var DefaultUserAgent = `DiscordBot (https://discord.js.org, 2.4.3)`;
+  var DefaultUserAgent = `DiscordBot (https://discord.js.org, 2.5.1)`;
   var DefaultUserAgentAppendix = (0, import_util.getUserAgentAppendix)();
   var DefaultRestOptions = {
     agent: null,
@@ -5892,7 +5816,17 @@ var require_dist5 = __commonJS((exports, module) => {
   })(RESTEvents || {});
   var ALLOWED_EXTENSIONS = ["webp", "png", "jpg", "jpeg", "gif"];
   var ALLOWED_STICKER_EXTENSIONS = ["png", "json", "gif"];
-  var ALLOWED_SIZES = [16, 32, 64, 128, 256, 512, 1024, 2048, 4096];
+  var ALLOWED_SIZES = [
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+  ];
   var OverwrittenMimeTypes = {
     "image/apng": "image/png"
   };
@@ -6129,6 +6063,9 @@ var require_dist5 = __commonJS((exports, module) => {
     }
     guildScheduledEventCover(scheduledEventId, coverHash, options) {
       return this.makeURL(`/guild-events/${scheduledEventId}/${coverHash}`, options);
+    }
+    soundboardSound(soundId) {
+      return `${this.cdn}${import_v102.CDNRoutes.soundboardSound(soundId)}`;
     }
     dynamicMakeURL(route, hash, { forceStatic = false, ...options } = {}) {
       return this.makeURL(route, !forceStatic && hash.startsWith("a_") ? { ...options, extension: "gif" } : options);
@@ -6818,7 +6755,7 @@ ${flattened}` : error.message || flattened || "Unknown Error";
       };
     }
   };
-  var version = "2.4.3";
+  var version = "2.5.1";
   globalThis.FormData ??= import_undici2.FormData;
   globalThis.Blob ??= import_node_buffer.Blob;
   setDefaultStrategy((0, import_util2.shouldUseGlobalFetchAndWebSocket)() ? fetch : makeRequest);
@@ -6890,6 +6827,7 @@ var require_ErrorCodes = __commonJS((exports, module) => {
     "GuildChannelUnowned",
     "GuildOwned",
     "GuildMembersTimeout",
+    "GuildSoundboardSoundsTimeout",
     "GuildUncachedMe",
     "ChannelNotCached",
     "StageChannelResolve",
@@ -6909,6 +6847,7 @@ var require_ErrorCodes = __commonJS((exports, module) => {
     "EmojiManaged",
     "MissingManageGuildExpressionsPermission",
     "MissingManageEmojisAndStickersPermission",
+    "NotGuildSoundboardSound",
     "NotGuildSticker",
     "ReactionResolveUser",
     "VanityURL",
@@ -7010,6 +6949,7 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.GuildChannelUnowned]: "The fetched channel does not belong to this manager's guild.",
     [DjsErrorCodes.GuildOwned]: "Guild is owned by the client.",
     [DjsErrorCodes.GuildMembersTimeout]: "Members didn't arrive in time.",
+    [DjsErrorCodes.GuildSoundboardSoundsTimeout]: "Soundboard sounds didn't arrive in time.",
     [DjsErrorCodes.GuildUncachedMe]: "The client user as a member of this guild is uncached.",
     [DjsErrorCodes.ChannelNotCached]: "Could not find the channel where this message came from in the cache!",
     [DjsErrorCodes.StageChannelResolve]: "Could not resolve channel to a stage channel.",
@@ -7029,6 +6969,7 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.EmojiManaged]: "Emoji is managed and has no Author.",
     [DjsErrorCodes.MissingManageGuildExpressionsPermission]: (guild) => `Client must have Manage Guild Expressions permission in guild ${guild} to see emoji authors.`,
     [DjsErrorCodes.MissingManageEmojisAndStickersPermission]: (guild) => `Client must have Manage Emojis and Stickers permission in guild ${guild} to see emoji authors.`,
+    [DjsErrorCodes.NotGuildSoundboardSound]: (action) => `Soundboard sound is a default (non-guild) soundboard sound and can't be ${action}.`,
     [DjsErrorCodes.NotGuildSticker]: "Sticker is a standard (non-guild) sticker and has no author.",
     [DjsErrorCodes.ReactionResolveUser]: "Couldn't resolve the user id to remove from the reaction.",
     [DjsErrorCodes.VanityURL]: "This guild does not have the vanity URL feature enabled.",
@@ -7425,179 +7366,6 @@ var require_lodash = __commonJS((exports, module) => {
   module.exports = snakeCase;
 });
 
-// node_modules/discord.js/src/util/Transformers.js
-var require_Transformers = __commonJS((exports, module) => {
-  var { isJSONEncodable } = require_dist();
-  var snakeCase = require_lodash();
-  function toSnakeCase(obj) {
-    if (typeof obj !== "object" || !obj)
-      return obj;
-    if (obj instanceof Date)
-      return obj;
-    if (isJSONEncodable(obj))
-      return toSnakeCase(obj.toJSON());
-    if (Array.isArray(obj))
-      return obj.map(toSnakeCase);
-    return Object.fromEntries(Object.entries(obj).map(([key, value]) => [snakeCase(key), toSnakeCase(value)]));
-  }
-  function _transformAPIAutoModerationAction(autoModerationAction) {
-    return {
-      type: autoModerationAction.type,
-      metadata: {
-        durationSeconds: autoModerationAction.metadata.duration_seconds ?? null,
-        channelId: autoModerationAction.metadata.channel_id ?? null,
-        customMessage: autoModerationAction.metadata.custom_message ?? null
-      }
-    };
-  }
-  function _transformAPIMessageInteractionMetadata(client, messageInteractionMetadata) {
-    return {
-      id: messageInteractionMetadata.id,
-      type: messageInteractionMetadata.type,
-      user: client.users._add(messageInteractionMetadata.user),
-      authorizingIntegrationOwners: messageInteractionMetadata.authorizing_integration_owners,
-      originalResponseMessageId: messageInteractionMetadata.original_response_message_id ?? null,
-      interactedMessageId: messageInteractionMetadata.interacted_message_id ?? null,
-      triggeringInteractionMetadata: messageInteractionMetadata.triggering_interaction_metadata ? _transformAPIMessageInteractionMetadata(client, messageInteractionMetadata.triggering_interaction_metadata) : null
-    };
-  }
-  function _transformGuildScheduledEventRecurrenceRule(recurrenceRule) {
-    return {
-      start: new Date(recurrenceRule.startAt).toISOString(),
-      frequency: recurrenceRule.frequency,
-      interval: recurrenceRule.interval,
-      by_weekday: recurrenceRule.byWeekday,
-      by_n_weekday: recurrenceRule.byNWeekday,
-      by_month: recurrenceRule.byMonth,
-      by_month_day: recurrenceRule.byMonthDay
-    };
-  }
-  function _transformAPIIncidentsData(data) {
-    return {
-      invitesDisabledUntil: data.invites_disabled_until ? new Date(data.invites_disabled_until) : null,
-      dmsDisabledUntil: data.dms_disabled_until ? new Date(data.dms_disabled_until) : null,
-      dmSpamDetectedAt: data.dm_spam_detected_at ? new Date(data.dm_spam_detected_at) : null,
-      raidDetectedAt: data.raid_detected_at ? new Date(data.raid_detected_at) : null
-    };
-  }
-  module.exports = {
-    toSnakeCase,
-    _transformAPIAutoModerationAction,
-    _transformAPIMessageInteractionMetadata,
-    _transformGuildScheduledEventRecurrenceRule,
-    _transformAPIIncidentsData
-  };
-});
-
-// node_modules/discord.js/package.json
-var require_package = __commonJS((exports, module) => {
-  module.exports = {
-    $schema: "https://json.schemastore.org/package.json",
-    name: "discord.js",
-    version: "14.18.0",
-    description: "A powerful library for interacting with the Discord API",
-    main: "./src/index.js",
-    types: "./typings/index.d.ts",
-    exports: {
-      ".": {
-        import: {
-          types: "./typings/index.d.mts",
-          default: "./src/index.js"
-        },
-        require: {
-          types: "./typings/index.d.ts",
-          default: "./src/index.js"
-        }
-      }
-    },
-    directories: {
-      lib: "src",
-      test: "test"
-    },
-    files: [
-      "src",
-      "typings"
-    ],
-    contributors: [
-      "Crawl <icrawltogo@gmail.com>",
-      "Amish Shah <amishshah.2k@gmail.com>",
-      "Vlad Frangu <me@vladfrangu.dev>",
-      "SpaceEEC <spaceeec@yahoo.com>",
-      "Aura Rom\xE1n <kyradiscord@gmail.com>"
-    ],
-    license: "Apache-2.0",
-    keywords: [
-      "discord",
-      "api",
-      "bot",
-      "client",
-      "node",
-      "discordapp"
-    ],
-    repository: {
-      type: "git",
-      url: "https://github.com/discordjs/discord.js.git",
-      directory: "packages/discord.js"
-    },
-    bugs: {
-      url: "https://github.com/discordjs/discord.js/issues"
-    },
-    homepage: "https://discord.js.org",
-    funding: "https://github.com/discordjs/discord.js?sponsor",
-    dependencies: {
-      "@discordjs/builders": "^1.10.1",
-      "@discordjs/collection": "1.5.3",
-      "@discordjs/formatters": "^0.6.0",
-      "@discordjs/ws": "^1.2.1",
-      "@sapphire/snowflake": "3.5.3",
-      "discord-api-types": "^0.37.119",
-      "fast-deep-equal": "3.1.3",
-      "lodash.snakecase": "4.1.1",
-      tslib: "^2.6.3",
-      undici: "6.21.1",
-      "@discordjs/rest": "^2.4.3",
-      "@discordjs/util": "^1.1.1"
-    },
-    devDependencies: {
-      "@favware/cliff-jumper": "^4.1.0",
-      "@types/node": "^16.18.105",
-      "@typescript-eslint/eslint-plugin": "^8.2.0",
-      "@typescript-eslint/parser": "^8.2.0",
-      "cross-env": "^7.0.3",
-      dtslint: "4.2.1",
-      eslint: "^8.57.0",
-      "eslint-formatter-pretty": "^5.0.0",
-      jest: "29.7.0",
-      prettier: "^3.3.3",
-      tsd: "^0.31.1",
-      tslint: "6.1.3",
-      turbo: "^2.0.14",
-      typescript: "~5.5.4",
-      "@discordjs/api-extractor": "^7.38.1",
-      "@discordjs/scripts": "^0.1.0",
-      "@discordjs/docgen": "^0.12.1"
-    },
-    engines: {
-      node: ">=18"
-    },
-    publishConfig: {
-      provenance: true
-    },
-    scripts: {
-      test: "pnpm run docs:test && pnpm run test:typescript",
-      "test:typescript": "tsc --noEmit && tsd",
-      lint: "prettier --check . && tslint typings/index.d.ts && cross-env ESLINT_USE_FLAT_CONFIG=false eslint --format=pretty src typings",
-      format: "prettier --write . && cross-env ESLINT_USE_FLAT_CONFIG=false eslint --fix --format=pretty src",
-      fmt: "pnpm run format",
-      docs: 'docgen -i "./src/*.js" "./src/**/*.js" -c ./docs/index.json -r ../../ -o ./docs/docs.json && pnpm run docs:new',
-      "docs:test": 'docgen -i "./src/*.js" "./src/**/*.js" -c ./docs/index.json -r ../../',
-      "docs:new": "api-extractor run --local --minify && generate-split-documentation",
-      changelog: "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/discord.js/*'",
-      release: "cliff-jumper"
-    }
-  };
-});
-
 // node_modules/@discordjs/collection/dist/index.js
 var require_dist6 = __commonJS((exports, module) => {
   var __defProp2 = Object.defineProperty;
@@ -7968,120 +7736,6 @@ var require_dist6 = __commonJS((exports, module) => {
     }
   };
   var version = "1.5.3";
-});
-
-// node_modules/discord.js/src/util/LimitedCollection.js
-var require_LimitedCollection = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var { DiscordjsTypeError, ErrorCodes } = require_errors();
-
-  class LimitedCollection extends Collection {
-    constructor(options = {}, iterable) {
-      if (typeof options !== "object" || options === null) {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "options", "object", true);
-      }
-      const { maxSize = Infinity, keepOverLimit = null } = options;
-      if (typeof maxSize !== "number") {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "maxSize", "number");
-      }
-      if (keepOverLimit !== null && typeof keepOverLimit !== "function") {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "keepOverLimit", "function");
-      }
-      super(iterable);
-      this.maxSize = maxSize;
-      this.keepOverLimit = keepOverLimit;
-    }
-    set(key, value) {
-      if (this.maxSize === 0 && !this.keepOverLimit?.(value, key, this))
-        return this;
-      if (this.size >= this.maxSize && !this.has(key)) {
-        for (const [k, v] of this.entries()) {
-          const keep = this.keepOverLimit?.(v, k, this) ?? false;
-          if (!keep) {
-            this.delete(k);
-            break;
-          }
-        }
-      }
-      return super.set(key, value);
-    }
-    static get [Symbol.species]() {
-      return Collection;
-    }
-  }
-  module.exports = LimitedCollection;
-});
-
-// node_modules/discord.js/src/util/Options.js
-var require_Options = __commonJS((exports, module) => {
-  var { DefaultRestOptions, DefaultUserAgentAppendix } = require_dist5();
-  var { toSnakeCase } = require_Transformers();
-  var { version } = require_package();
-
-  class Options extends null {
-    static userAgentAppendix = `discord.js/${version} ${DefaultUserAgentAppendix}`.trimEnd();
-    static createDefault() {
-      return {
-        closeTimeout: 5000,
-        waitGuildTimeout: 15000,
-        shardCount: 1,
-        makeCache: this.cacheWithLimits(this.DefaultMakeCacheSettings),
-        partials: [],
-        failIfNotExists: true,
-        enforceNonce: false,
-        presence: {},
-        sweepers: this.DefaultSweeperSettings,
-        ws: {
-          large_threshold: 50,
-          version: 10
-        },
-        rest: {
-          ...DefaultRestOptions,
-          userAgentAppendix: this.userAgentAppendix
-        },
-        jsonTransformer: toSnakeCase
-      };
-    }
-    static cacheWithLimits(settings = {}) {
-      const { Collection } = require_dist6();
-      const LimitedCollection = require_LimitedCollection();
-      return (managerType, _, manager) => {
-        const setting = settings[manager.name] ?? settings[managerType.name];
-        if (setting == null) {
-          return new Collection;
-        }
-        if (typeof setting === "number") {
-          if (setting === Infinity) {
-            return new Collection;
-          }
-          return new LimitedCollection({ maxSize: setting });
-        }
-        const noLimit = setting.maxSize == null || setting.maxSize === Infinity;
-        if (noLimit) {
-          return new Collection;
-        }
-        return new LimitedCollection(setting);
-      };
-    }
-    static cacheEverything() {
-      const { Collection } = require_dist6();
-      return () => new Collection;
-    }
-    static get DefaultMakeCacheSettings() {
-      return {
-        MessageManager: 200
-      };
-    }
-    static get DefaultSweeperSettings() {
-      return {
-        threads: {
-          interval: 3600,
-          lifetime: 14400
-        }
-      };
-    }
-  }
-  module.exports = Options;
 });
 
 // node_modules/discord.js/src/util/Colors.js
@@ -8676,7 +8330,7 @@ ${content}
     GuildNavigationMentions2["Guide"] = "<id:guide>";
     return GuildNavigationMentions2;
   })(GuildNavigationMentions || {});
-  var version = "0.6.0";
+  var version = "0.6.1";
 });
 
 // node_modules/discord.js/src/structures/Base.js
@@ -9250,7 +8904,7 @@ var require_PermissionOverwrites = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/PermissionOverwriteManager.js
 var require_PermissionOverwriteManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { OverwriteType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
@@ -9568,8 +9222,8 @@ var require_SKU = __commonJS((exports) => {
 
 // node_modules/discord.js/src/util/Util.js
 var require_Util = __commonJS((exports, module) => {
-  var { parse } = __require("node:path");
-  var process2 = __require("node:process");
+  var { parse } = __require("path");
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { ChannelType, RouteBases, Routes } = require_v106();
   var { fetch: fetch2 } = __require("undici");
@@ -9866,9 +9520,302 @@ var require_Util = __commonJS((exports, module) => {
   var { SKU } = require_SKU();
 });
 
+// node_modules/discord.js/src/util/Transformers.js
+var require_Transformers = __commonJS((exports, module) => {
+  var { isJSONEncodable } = require_dist();
+  var snakeCase = require_lodash();
+  var { resolvePartialEmoji } = require_Util();
+  function toSnakeCase(obj) {
+    if (typeof obj !== "object" || !obj)
+      return obj;
+    if (obj instanceof Date)
+      return obj;
+    if (isJSONEncodable(obj))
+      return toSnakeCase(obj.toJSON());
+    if (Array.isArray(obj))
+      return obj.map(toSnakeCase);
+    return Object.fromEntries(Object.entries(obj).map(([key, value]) => [
+      snakeCase(key),
+      key === "emoji" && typeof value === "string" ? resolvePartialEmoji(value) : toSnakeCase(value)
+    ]));
+  }
+  function _transformAPIAutoModerationAction(autoModerationAction) {
+    return {
+      type: autoModerationAction.type,
+      metadata: {
+        durationSeconds: autoModerationAction.metadata.duration_seconds ?? null,
+        channelId: autoModerationAction.metadata.channel_id ?? null,
+        customMessage: autoModerationAction.metadata.custom_message ?? null
+      }
+    };
+  }
+  function _transformAPIMessageInteractionMetadata(client, messageInteractionMetadata) {
+    return {
+      id: messageInteractionMetadata.id,
+      type: messageInteractionMetadata.type,
+      user: client.users._add(messageInteractionMetadata.user),
+      authorizingIntegrationOwners: messageInteractionMetadata.authorizing_integration_owners,
+      originalResponseMessageId: messageInteractionMetadata.original_response_message_id ?? null,
+      interactedMessageId: messageInteractionMetadata.interacted_message_id ?? null,
+      triggeringInteractionMetadata: messageInteractionMetadata.triggering_interaction_metadata ? _transformAPIMessageInteractionMetadata(client, messageInteractionMetadata.triggering_interaction_metadata) : null
+    };
+  }
+  function _transformGuildScheduledEventRecurrenceRule(recurrenceRule) {
+    return {
+      start: new Date(recurrenceRule.startAt).toISOString(),
+      frequency: recurrenceRule.frequency,
+      interval: recurrenceRule.interval,
+      by_weekday: recurrenceRule.byWeekday,
+      by_n_weekday: recurrenceRule.byNWeekday,
+      by_month: recurrenceRule.byMonth,
+      by_month_day: recurrenceRule.byMonthDay
+    };
+  }
+  function _transformAPIIncidentsData(data) {
+    return {
+      invitesDisabledUntil: data.invites_disabled_until ? new Date(data.invites_disabled_until) : null,
+      dmsDisabledUntil: data.dms_disabled_until ? new Date(data.dms_disabled_until) : null,
+      dmSpamDetectedAt: data.dm_spam_detected_at ? new Date(data.dm_spam_detected_at) : null,
+      raidDetectedAt: data.raid_detected_at ? new Date(data.raid_detected_at) : null
+    };
+  }
+  module.exports = {
+    toSnakeCase,
+    _transformAPIAutoModerationAction,
+    _transformAPIMessageInteractionMetadata,
+    _transformGuildScheduledEventRecurrenceRule,
+    _transformAPIIncidentsData
+  };
+});
+
+// node_modules/discord.js/package.json
+var require_package = __commonJS((exports, module) => {
+  module.exports = {
+    $schema: "https://json.schemastore.org/package.json",
+    name: "discord.js",
+    version: "14.21.0",
+    description: "A powerful library for interacting with the Discord API",
+    main: "./src/index.js",
+    types: "./typings/index.d.ts",
+    exports: {
+      ".": {
+        import: {
+          types: "./typings/index.d.mts",
+          default: "./src/index.js"
+        },
+        require: {
+          types: "./typings/index.d.ts",
+          default: "./src/index.js"
+        }
+      }
+    },
+    directories: {
+      lib: "src",
+      test: "test"
+    },
+    files: [
+      "src",
+      "typings/*.d.ts",
+      "typings/*.d.mts"
+    ],
+    contributors: [
+      "Crawl <icrawltogo@gmail.com>",
+      "Amish Shah <amishshah.2k@gmail.com>",
+      "Vlad Frangu <me@vladfrangu.dev>",
+      "SpaceEEC <spaceeec@yahoo.com>",
+      "Aura Rom\xE1n <kyradiscord@gmail.com>"
+    ],
+    license: "Apache-2.0",
+    keywords: [
+      "discord",
+      "api",
+      "bot",
+      "client",
+      "node",
+      "discordapp"
+    ],
+    repository: {
+      type: "git",
+      url: "https://github.com/discordjs/discord.js.git",
+      directory: "packages/discord.js"
+    },
+    bugs: {
+      url: "https://github.com/discordjs/discord.js/issues"
+    },
+    homepage: "https://discord.js.org",
+    funding: "https://github.com/discordjs/discord.js?sponsor",
+    dependencies: {
+      "@discordjs/builders": "^1.11.2",
+      "@discordjs/collection": "1.5.3",
+      "@discordjs/formatters": "^0.6.1",
+      "@discordjs/ws": "^1.2.3",
+      "@sapphire/snowflake": "3.5.3",
+      "discord-api-types": "^0.38.1",
+      "fast-deep-equal": "3.1.3",
+      "lodash.snakecase": "4.1.1",
+      "magic-bytes.js": "^1.10.0",
+      tslib: "^2.6.3",
+      undici: "6.21.3",
+      "@discordjs/rest": "^2.5.1",
+      "@discordjs/util": "^1.1.1"
+    },
+    devDependencies: {
+      "@favware/cliff-jumper": "^4.1.0",
+      "@types/node": "^16.18.105",
+      "@typescript-eslint/eslint-plugin": "^8.2.0",
+      "@typescript-eslint/parser": "^8.2.0",
+      "cross-env": "^7.0.3",
+      dtslint: "4.2.1",
+      eslint: "^8.57.0",
+      "eslint-formatter-pretty": "^5.0.0",
+      jest: "29.7.0",
+      prettier: "^3.3.3",
+      tsd: "^0.31.1",
+      tslint: "6.1.3",
+      turbo: "^2.0.14",
+      typescript: "~5.5.4",
+      "@discordjs/api-extractor": "^7.38.1",
+      "@discordjs/docgen": "^0.12.1",
+      "@discordjs/scripts": "^0.1.0"
+    },
+    engines: {
+      node: ">=18"
+    },
+    publishConfig: {
+      provenance: true
+    },
+    scripts: {
+      test: "pnpm run docs:test && pnpm run test:typescript",
+      "test:typescript": "tsc --noEmit && tsd",
+      lint: "prettier --check . && tslint typings/index.d.ts && cross-env ESLINT_USE_FLAT_CONFIG=false eslint --format=pretty src typings",
+      format: "prettier --write . && cross-env ESLINT_USE_FLAT_CONFIG=false eslint --fix --format=pretty src",
+      fmt: "pnpm run format",
+      docs: 'docgen -i "./src/*.js" "./src/**/*.js" -c ./docs/index.json -r ../../ -o ./docs/docs.json && pnpm run docs:new',
+      "docs:test": 'docgen -i "./src/*.js" "./src/**/*.js" -c ./docs/index.json -r ../../',
+      "docs:new": "api-extractor run --local --minify && generate-split-documentation",
+      changelog: "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/discord.js/*'",
+      release: "cliff-jumper"
+    }
+  };
+});
+
+// node_modules/discord.js/src/util/LimitedCollection.js
+var require_LimitedCollection = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var { DiscordjsTypeError, ErrorCodes } = require_errors();
+
+  class LimitedCollection extends Collection {
+    constructor(options = {}, iterable) {
+      if (typeof options !== "object" || options === null) {
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "options", "object", true);
+      }
+      const { maxSize = Infinity, keepOverLimit = null } = options;
+      if (typeof maxSize !== "number") {
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "maxSize", "number");
+      }
+      if (keepOverLimit !== null && typeof keepOverLimit !== "function") {
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "keepOverLimit", "function");
+      }
+      super(iterable);
+      this.maxSize = maxSize;
+      this.keepOverLimit = keepOverLimit;
+    }
+    set(key, value) {
+      if (this.maxSize === 0 && !this.keepOverLimit?.(value, key, this))
+        return this;
+      if (this.size >= this.maxSize && !this.has(key)) {
+        for (const [k, v] of this.entries()) {
+          const keep = this.keepOverLimit?.(v, k, this) ?? false;
+          if (!keep) {
+            this.delete(k);
+            break;
+          }
+        }
+      }
+      return super.set(key, value);
+    }
+    static get [Symbol.species]() {
+      return Collection;
+    }
+  }
+  module.exports = LimitedCollection;
+});
+
+// node_modules/discord.js/src/util/Options.js
+var require_Options = __commonJS((exports, module) => {
+  var { DefaultRestOptions, DefaultUserAgentAppendix } = require_dist5();
+  var { toSnakeCase } = require_Transformers();
+  var { version } = require_package();
+
+  class Options extends null {
+    static userAgentAppendix = `discord.js/${version} ${DefaultUserAgentAppendix}`.trimEnd();
+    static createDefault() {
+      return {
+        closeTimeout: 5000,
+        waitGuildTimeout: 15000,
+        shardCount: 1,
+        makeCache: this.cacheWithLimits(this.DefaultMakeCacheSettings),
+        partials: [],
+        failIfNotExists: true,
+        enforceNonce: false,
+        presence: {},
+        sweepers: this.DefaultSweeperSettings,
+        ws: {
+          large_threshold: 50,
+          version: 10
+        },
+        rest: {
+          ...DefaultRestOptions,
+          userAgentAppendix: this.userAgentAppendix
+        },
+        jsonTransformer: toSnakeCase
+      };
+    }
+    static cacheWithLimits(settings = {}) {
+      const { Collection } = require_dist6();
+      const LimitedCollection = require_LimitedCollection();
+      return (managerType, _, manager) => {
+        const setting = settings[manager.name] ?? settings[managerType.name];
+        if (setting == null) {
+          return new Collection;
+        }
+        if (typeof setting === "number") {
+          if (setting === Infinity) {
+            return new Collection;
+          }
+          return new LimitedCollection({ maxSize: setting });
+        }
+        const noLimit = setting.maxSize == null || setting.maxSize === Infinity;
+        if (noLimit) {
+          return new Collection;
+        }
+        return new LimitedCollection(setting);
+      };
+    }
+    static cacheEverything() {
+      const { Collection } = require_dist6();
+      return () => new Collection;
+    }
+    static get DefaultMakeCacheSettings() {
+      return {
+        MessageManager: 200
+      };
+    }
+    static get DefaultSweeperSettings() {
+      return {
+        threads: {
+          interval: 3600,
+          lifetime: 14400
+        }
+      };
+    }
+  }
+  module.exports = Options;
+});
+
 // node_modules/discord.js/src/client/BaseClient.js
 var require_BaseClient = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
+  var EventEmitter = __require("events");
   var { REST } = require_dist5();
   var { Routes } = require_v106();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -9959,7 +9906,8 @@ var require_Partials = __commonJS((exports, module) => {
     "Message",
     "Reaction",
     "GuildScheduledEvent",
-    "ThreadMember"
+    "ThreadMember",
+    "SoundboardSound"
   ]);
 });
 
@@ -10030,6 +9978,9 @@ var require_Action = __commonJS((exports, module) => {
     getThreadMember(id, manager) {
       return this.getPayload({ user_id: id }, manager, id, Partials.ThreadMember, false);
     }
+    getSoundboardSound(data, guild) {
+      return this.getPayload(data, guild.soundboardSounds, data.sound_id, Partials.SoundboardSound);
+    }
     spreadInjectedData(data) {
       return Object.fromEntries(Object.getOwnPropertySymbols(data).map((symbol) => [symbol, data[symbol]]));
     }
@@ -10079,6 +10030,10 @@ var require_Events = __commonJS((exports, module) => {
     GuildScheduledEventUpdate: "guildScheduledEventUpdate",
     GuildScheduledEventUserAdd: "guildScheduledEventUserAdd",
     GuildScheduledEventUserRemove: "guildScheduledEventUserRemove",
+    GuildSoundboardSoundCreate: "guildSoundboardSoundCreate",
+    GuildSoundboardSoundDelete: "guildSoundboardSoundDelete",
+    GuildSoundboardSoundsUpdate: "guildSoundboardSoundsUpdate",
+    GuildSoundboardSoundUpdate: "guildSoundboardSoundUpdate",
     GuildStickerCreate: "stickerCreate",
     GuildStickerDelete: "stickerDelete",
     GuildStickerUpdate: "stickerUpdate",
@@ -10099,6 +10054,7 @@ var require_Events = __commonJS((exports, module) => {
     MessageReactionRemoveEmoji: "messageReactionRemoveEmoji",
     MessageUpdate: "messageUpdate",
     PresenceUpdate: "presenceUpdate",
+    SoundboardSounds: "soundboardSounds",
     Raw: "raw",
     ShardDisconnect: "shardDisconnect",
     ShardError: "shardError",
@@ -10338,8 +10294,8 @@ var require_CategoryChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/interfaces/Collector.js
 var require_Collector = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
+  var EventEmitter = __require("events");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
   var { Collection } = require_dist6();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { flatten } = require_Util();
@@ -10679,6 +10635,2264 @@ var require_MessageCollector = __commonJS((exports, module) => {
     }
   }
   module.exports = MessageCollector;
+});
+
+// node_modules/discord.js/src/structures/GuildScheduledEvent.js
+var require_GuildScheduledEvent = __commonJS((exports) => {
+  var { DiscordSnowflake } = require_cjs();
+  var { GuildScheduledEventStatus, GuildScheduledEventEntityType, RouteBases } = require_v106();
+  var Base = require_Base();
+  var { DiscordjsError, ErrorCodes } = require_errors();
+
+  class GuildScheduledEvent extends Base {
+    constructor(client, data) {
+      super(client);
+      this.id = data.id;
+      this.guildId = data.guild_id;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("channel_id" in data) {
+        this.channelId = data.channel_id;
+      } else {
+        this.channelId ??= null;
+      }
+      if ("creator_id" in data) {
+        this.creatorId = data.creator_id;
+      } else {
+        this.creatorId ??= null;
+      }
+      if ("name" in data) {
+        this.name = data.name;
+      } else {
+        this.name ??= null;
+      }
+      if ("description" in data) {
+        this.description = data.description;
+      } else {
+        this.description ??= null;
+      }
+      if ("scheduled_start_time" in data) {
+        this.scheduledStartTimestamp = Date.parse(data.scheduled_start_time);
+      } else {
+        this.scheduledStartTimestamp ??= null;
+      }
+      if ("scheduled_end_time" in data) {
+        this.scheduledEndTimestamp = data.scheduled_end_time ? Date.parse(data.scheduled_end_time) : null;
+      } else {
+        this.scheduledEndTimestamp ??= null;
+      }
+      if ("privacy_level" in data) {
+        this.privacyLevel = data.privacy_level;
+      } else {
+        this.privacyLevel ??= null;
+      }
+      if ("status" in data) {
+        this.status = data.status;
+      } else {
+        this.status ??= null;
+      }
+      if ("entity_type" in data) {
+        this.entityType = data.entity_type;
+      } else {
+        this.entityType ??= null;
+      }
+      if ("entity_id" in data) {
+        this.entityId = data.entity_id;
+      } else {
+        this.entityId ??= null;
+      }
+      if ("user_count" in data) {
+        this.userCount = data.user_count;
+      } else {
+        this.userCount ??= null;
+      }
+      if ("creator" in data) {
+        this.creator = this.client.users._add(data.creator);
+      } else {
+        this.creator ??= this.client.users.resolve(this.creatorId);
+      }
+      if ("entity_metadata" in data) {
+        if (data.entity_metadata) {
+          this.entityMetadata = {
+            location: data.entity_metadata.location ?? this.entityMetadata?.location ?? null
+          };
+        } else {
+          this.entityMetadata = null;
+        }
+      } else {
+        this.entityMetadata ??= null;
+      }
+      if ("image" in data) {
+        this.image = data.image;
+      } else {
+        this.image ??= null;
+      }
+      if ("recurrence_rule" in data) {
+        this.recurrenceRule = data.recurrence_rule && {
+          startTimestamp: Date.parse(data.recurrence_rule.start),
+          get startAt() {
+            return new Date(this.startTimestamp);
+          },
+          endTimestamp: data.recurrence_rule.end && Date.parse(data.recurrence_rule.end),
+          get endAt() {
+            return this.endTimestamp && new Date(this.endTimestamp);
+          },
+          frequency: data.recurrence_rule.frequency,
+          interval: data.recurrence_rule.interval,
+          byWeekday: data.recurrence_rule.by_weekday,
+          byNWeekday: data.recurrence_rule.by_n_weekday,
+          byMonth: data.recurrence_rule.by_month,
+          byMonthDay: data.recurrence_rule.by_month_day,
+          byYearDay: data.recurrence_rule.by_year_day,
+          count: data.recurrence_rule.count
+        };
+      } else {
+        this.recurrenceRule ??= null;
+      }
+    }
+    get partial() {
+      return this.name === null;
+    }
+    coverImageURL(options = {}) {
+      return this.image && this.client.rest.cdn.guildScheduledEventCover(this.id, this.image, options);
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    get scheduledStartAt() {
+      return this.scheduledStartTimestamp && new Date(this.scheduledStartTimestamp);
+    }
+    get scheduledEndAt() {
+      return this.scheduledEndTimestamp && new Date(this.scheduledEndTimestamp);
+    }
+    get channel() {
+      return this.client.channels.resolve(this.channelId);
+    }
+    get guild() {
+      return this.client.guilds.resolve(this.guildId);
+    }
+    get url() {
+      return `${RouteBases.scheduledEvent}/${this.guildId}/${this.id}`;
+    }
+    async createInviteURL(options) {
+      let channelId = this.channelId;
+      if (this.entityType === GuildScheduledEventEntityType.External) {
+        if (!options?.channel)
+          throw new DiscordjsError(ErrorCodes.InviteOptionsMissingChannel);
+        channelId = this.guild.channels.resolveId(options.channel);
+        if (!channelId)
+          throw new DiscordjsError(ErrorCodes.GuildChannelResolve);
+      }
+      const invite = await this.guild.invites.create(channelId, options);
+      return `${RouteBases.invite}/${invite.code}?event=${this.id}`;
+    }
+    edit(options) {
+      return this.guild.scheduledEvents.edit(this.id, options);
+    }
+    fetch(force = true) {
+      return this.guild.scheduledEvents.fetch({ guildScheduledEvent: this.id, force });
+    }
+    async delete() {
+      await this.guild.scheduledEvents.delete(this.id);
+      return this;
+    }
+    setName(name, reason) {
+      return this.edit({ name, reason });
+    }
+    setScheduledStartTime(scheduledStartTime, reason) {
+      return this.edit({ scheduledStartTime, reason });
+    }
+    setScheduledEndTime(scheduledEndTime, reason) {
+      return this.edit({ scheduledEndTime, reason });
+    }
+    setDescription(description, reason) {
+      return this.edit({ description, reason });
+    }
+    setStatus(status, reason) {
+      return this.edit({ status, reason });
+    }
+    setLocation(location, reason) {
+      return this.edit({ entityMetadata: { location }, reason });
+    }
+    fetchSubscribers(options) {
+      return this.guild.scheduledEvents.fetchSubscribers(this.id, options);
+    }
+    toString() {
+      return this.url;
+    }
+    isActive() {
+      return this.status === GuildScheduledEventStatus.Active;
+    }
+    isCanceled() {
+      return this.status === GuildScheduledEventStatus.Canceled;
+    }
+    isCompleted() {
+      return this.status === GuildScheduledEventStatus.Completed;
+    }
+    isScheduled() {
+      return this.status === GuildScheduledEventStatus.Scheduled;
+    }
+  }
+  exports.GuildScheduledEvent = GuildScheduledEvent;
+});
+
+// node_modules/discord.js/src/structures/interfaces/Application.js
+var require_Application = __commonJS((exports, module) => {
+  var { DiscordSnowflake } = require_cjs();
+  var Base = require_Base();
+
+  class Application extends Base {
+    constructor(client, data) {
+      super(client);
+      this._patch(data);
+    }
+    _patch(data) {
+      this.id = data.id;
+      if ("name" in data) {
+        this.name = data.name;
+      } else {
+        this.name ??= null;
+      }
+      if ("description" in data) {
+        this.description = data.description;
+      } else {
+        this.description ??= null;
+      }
+      if ("icon" in data) {
+        this.icon = data.icon;
+      } else {
+        this.icon ??= null;
+      }
+      if ("terms_of_service_url" in data) {
+        this.termsOfServiceURL = data.terms_of_service_url;
+      } else {
+        this.termsOfServiceURL ??= null;
+      }
+      if ("privacy_policy_url" in data) {
+        this.privacyPolicyURL = data.privacy_policy_url;
+      } else {
+        this.privacyPolicyURL ??= null;
+      }
+      if ("rpc_origins" in data) {
+        this.rpcOrigins = data.rpc_origins;
+      } else {
+        this.rpcOrigins ??= [];
+      }
+      if ("cover_image" in data) {
+        this.cover = data.cover_image;
+      } else {
+        this.cover ??= null;
+      }
+      if ("verify_key" in data) {
+        this.verifyKey = data.verify_key;
+      } else {
+        this.verifyKey ??= null;
+      }
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    iconURL(options = {}) {
+      return this.icon && this.client.rest.cdn.appIcon(this.id, this.icon, options);
+    }
+    coverURL(options = {}) {
+      return this.cover && this.client.rest.cdn.appIcon(this.id, this.cover, options);
+    }
+    toString() {
+      return this.name;
+    }
+    toJSON() {
+      return super.toJSON({ createdTimestamp: true });
+    }
+  }
+  module.exports = Application;
+});
+
+// node_modules/discord.js/src/structures/IntegrationApplication.js
+var require_IntegrationApplication = __commonJS((exports, module) => {
+  var Application = require_Application();
+
+  class IntegrationApplication extends Application {
+    _patch(data) {
+      super._patch(data);
+      if ("bot" in data) {
+        this.bot = this.client.users._add(data.bot);
+      } else {
+        this.bot ??= null;
+      }
+      if ("terms_of_service_url" in data) {
+        this.termsOfServiceURL = data.terms_of_service_url;
+      } else {
+        this.termsOfServiceURL ??= null;
+      }
+      if ("privacy_policy_url" in data) {
+        this.privacyPolicyURL = data.privacy_policy_url;
+      } else {
+        this.privacyPolicyURL ??= null;
+      }
+      if ("rpc_origins" in data) {
+        this.rpcOrigins = data.rpc_origins;
+      } else {
+        this.rpcOrigins ??= [];
+      }
+      if ("hook" in data) {
+        this.hook = data.hook;
+      } else {
+        this.hook ??= null;
+      }
+      if ("cover_image" in data) {
+        this.cover = data.cover_image;
+      } else {
+        this.cover ??= null;
+      }
+      if ("verify_key" in data) {
+        this.verifyKey = data.verify_key;
+      } else {
+        this.verifyKey ??= null;
+      }
+    }
+  }
+  module.exports = IntegrationApplication;
+});
+
+// node_modules/discord.js/src/structures/InviteStageInstance.js
+var require_InviteStageInstance = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var Base = require_Base();
+
+  class InviteStageInstance extends Base {
+    constructor(client, data, channelId, guildId) {
+      super(client);
+      this.channelId = channelId;
+      this.guildId = guildId;
+      this.members = new Collection;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("topic" in data) {
+        this.topic = data.topic;
+      }
+      if ("participant_count" in data) {
+        this.participantCount = data.participant_count;
+      }
+      if ("speaker_count" in data) {
+        this.speakerCount = data.speaker_count;
+      }
+      this.members.clear();
+      for (const rawMember of data.members) {
+        const member = this.guild.members._add(rawMember);
+        this.members.set(member.id, member);
+      }
+    }
+    get channel() {
+      return this.client.channels.resolve(this.channelId);
+    }
+    get guild() {
+      return this.client.guilds.resolve(this.guildId);
+    }
+  }
+  module.exports = InviteStageInstance;
+});
+
+// node_modules/discord.js/src/structures/BaseGuild.js
+var require_BaseGuild = __commonJS((exports, module) => {
+  var { makeURLSearchParams } = require_dist5();
+  var { DiscordSnowflake } = require_cjs();
+  var { Routes, GuildFeature } = require_v106();
+  var Base = require_Base();
+
+  class BaseGuild extends Base {
+    constructor(client, data) {
+      super(client);
+      this.id = data.id;
+      this.name = data.name;
+      this.icon = data.icon;
+      this.features = data.features;
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    get nameAcronym() {
+      return this.name.replace(/'s /g, " ").replace(/\w+/g, (e) => e[0]).replace(/\s/g, "");
+    }
+    get partnered() {
+      return this.features.includes(GuildFeature.Partnered);
+    }
+    get verified() {
+      return this.features.includes(GuildFeature.Verified);
+    }
+    iconURL(options = {}) {
+      return this.icon && this.client.rest.cdn.icon(this.id, this.icon, options);
+    }
+    async fetch() {
+      const data = await this.client.rest.get(Routes.guild(this.id), {
+        query: makeURLSearchParams({ with_counts: true })
+      });
+      return this.client.guilds._add(data);
+    }
+    toString() {
+      return this.name;
+    }
+  }
+  module.exports = BaseGuild;
+});
+
+// node_modules/discord.js/src/structures/AnonymousGuild.js
+var require_AnonymousGuild = __commonJS((exports, module) => {
+  var BaseGuild = require_BaseGuild();
+
+  class AnonymousGuild extends BaseGuild {
+    constructor(client, data, immediatePatch = true) {
+      super(client, data);
+      if (immediatePatch)
+        this._patch(data);
+    }
+    _patch(data) {
+      if ("features" in data)
+        this.features = data.features;
+      if ("splash" in data) {
+        this.splash = data.splash;
+      }
+      if ("banner" in data) {
+        this.banner = data.banner;
+      }
+      if ("description" in data) {
+        this.description = data.description;
+      }
+      if ("verification_level" in data) {
+        this.verificationLevel = data.verification_level;
+      }
+      if ("vanity_url_code" in data) {
+        this.vanityURLCode = data.vanity_url_code;
+      }
+      if ("nsfw_level" in data) {
+        this.nsfwLevel = data.nsfw_level;
+      }
+      if ("premium_subscription_count" in data) {
+        this.premiumSubscriptionCount = data.premium_subscription_count;
+      } else {
+        this.premiumSubscriptionCount ??= null;
+      }
+    }
+    bannerURL(options = {}) {
+      return this.banner && this.client.rest.cdn.banner(this.id, this.banner, options);
+    }
+    splashURL(options = {}) {
+      return this.splash && this.client.rest.cdn.splash(this.id, this.splash, options);
+    }
+  }
+  module.exports = AnonymousGuild;
+});
+
+// node_modules/discord.js/src/structures/Emoji.js
+var require_Emoji = __commonJS((exports) => {
+  var process2 = __require("process");
+  var { formatEmoji } = require_dist7();
+  var { DiscordSnowflake } = require_cjs();
+  var Base = require_Base();
+  var deprecationEmittedForURL = false;
+
+  class Emoji extends Base {
+    constructor(client, emoji) {
+      super(client);
+      this.animated = emoji.animated ?? null;
+      this.name = emoji.name ?? null;
+      this.id = emoji.id ?? null;
+    }
+    get identifier() {
+      if (this.id)
+        return `${this.animated ? "a:" : ""}${this.name}:${this.id}`;
+      return encodeURIComponent(this.name);
+    }
+    imageURL(options) {
+      return this.id && this.client.rest.cdn.emoji(this.id, options);
+    }
+    get url() {
+      if (!deprecationEmittedForURL) {
+        process2.emitWarning("The Emoji#url getter is deprecated. Use Emoji#imageURL() instead.", "DeprecationWarning");
+        deprecationEmittedForURL = true;
+      }
+      return this.imageURL({ extension: this.animated ? "gif" : "png" });
+    }
+    get createdTimestamp() {
+      return this.id && DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return this.id && new Date(this.createdTimestamp);
+    }
+    toString() {
+      return this.id ? formatEmoji({ animated: this.animated, id: this.id, name: this.name }) : this.name;
+    }
+    toJSON() {
+      const json = super.toJSON({
+        guild: "guildId",
+        createdTimestamp: true,
+        identifier: true
+      });
+      json.imageURL = this.imageURL();
+      return json;
+    }
+  }
+  exports.Emoji = Emoji;
+});
+
+// node_modules/discord.js/src/structures/WelcomeChannel.js
+var require_WelcomeChannel = __commonJS((exports, module) => {
+  var Base = require_Base();
+  var { Emoji } = require_Emoji();
+
+  class WelcomeChannel extends Base {
+    constructor(guild, data) {
+      super(guild.client);
+      this.guild = guild;
+      this.description = data.description;
+      this._emoji = {
+        name: data.emoji_name,
+        id: data.emoji_id
+      };
+      this.channelId = data.channel_id;
+    }
+    get channel() {
+      return this.client.channels.resolve(this.channelId);
+    }
+    get emoji() {
+      return this.client.emojis.cache.get(this._emoji.id) ?? new Emoji(this.client, this._emoji);
+    }
+  }
+  module.exports = WelcomeChannel;
+});
+
+// node_modules/discord.js/src/structures/WelcomeScreen.js
+var require_WelcomeScreen = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var { GuildFeature } = require_v106();
+  var Base = require_Base();
+  var WelcomeChannel = require_WelcomeChannel();
+
+  class WelcomeScreen extends Base {
+    constructor(guild, data) {
+      super(guild.client);
+      this.guild = guild;
+      this.description = data.description ?? null;
+      this.welcomeChannels = new Collection;
+      for (const channel of data.welcome_channels) {
+        const welcomeChannel = new WelcomeChannel(this.guild, channel);
+        this.welcomeChannels.set(welcomeChannel.channelId, welcomeChannel);
+      }
+    }
+    get enabled() {
+      return this.guild.features.includes(GuildFeature.WelcomeScreenEnabled);
+    }
+  }
+  module.exports = WelcomeScreen;
+});
+
+// node_modules/discord.js/src/structures/InviteGuild.js
+var require_InviteGuild = __commonJS((exports, module) => {
+  var AnonymousGuild = require_AnonymousGuild();
+  var WelcomeScreen = require_WelcomeScreen();
+
+  class InviteGuild extends AnonymousGuild {
+    constructor(client, data) {
+      super(client, data);
+      this.welcomeScreen = data.welcome_screen !== undefined ? new WelcomeScreen(this, data.welcome_screen) : null;
+    }
+  }
+  module.exports = InviteGuild;
+});
+
+// node_modules/discord.js/src/structures/Invite.js
+var require_Invite = __commonJS((exports, module) => {
+  var { RouteBases, Routes, PermissionFlagsBits } = require_v106();
+  var Base = require_Base();
+  var { GuildScheduledEvent } = require_GuildScheduledEvent();
+  var IntegrationApplication = require_IntegrationApplication();
+  var InviteStageInstance = require_InviteStageInstance();
+  var { DiscordjsError, ErrorCodes } = require_errors();
+
+  class Invite extends Base {
+    static InvitesPattern = /discord(?:(?:app)?\.com\/invite|\.gg(?:\/invite)?)\/(?<code>[\w-]{2,255})/i;
+    constructor(client, data) {
+      super(client);
+      this.type = data.type;
+      this._patch(data);
+    }
+    _patch(data) {
+      const InviteGuild = require_InviteGuild();
+      this.guild ??= null;
+      if (data.guild) {
+        this.guild = this.client.guilds.cache.get(data.guild.id) ?? new InviteGuild(this.client, data.guild);
+      }
+      if ("code" in data) {
+        this.code = data.code;
+      }
+      if ("approximate_presence_count" in data) {
+        this.presenceCount = data.approximate_presence_count;
+      } else {
+        this.presenceCount ??= null;
+      }
+      if ("approximate_member_count" in data) {
+        this.memberCount = data.approximate_member_count;
+      } else {
+        this.memberCount ??= null;
+      }
+      if ("temporary" in data) {
+        this.temporary = data.temporary ?? null;
+      } else {
+        this.temporary ??= null;
+      }
+      if ("max_age" in data) {
+        this.maxAge = data.max_age;
+      } else {
+        this.maxAge ??= null;
+      }
+      if ("uses" in data) {
+        this.uses = data.uses;
+      } else {
+        this.uses ??= null;
+      }
+      if ("max_uses" in data) {
+        this.maxUses = data.max_uses;
+      } else {
+        this.maxUses ??= null;
+      }
+      if ("inviter_id" in data) {
+        this.inviterId = data.inviter_id;
+      } else {
+        this.inviterId ??= null;
+      }
+      if ("inviter" in data) {
+        this.client.users._add(data.inviter);
+        this.inviterId = data.inviter.id;
+      }
+      if ("target_user" in data) {
+        this.targetUser = this.client.users._add(data.target_user);
+      } else {
+        this.targetUser ??= null;
+      }
+      if ("target_application" in data) {
+        this.targetApplication = new IntegrationApplication(this.client, data.target_application);
+      } else {
+        this.targetApplication ??= null;
+      }
+      if ("target_type" in data) {
+        this.targetType = data.target_type;
+      } else {
+        this.targetType ??= null;
+      }
+      if ("channel_id" in data) {
+        this.channelId = data.channel_id;
+      }
+      if ("channel" in data) {
+        this.channel = this.client.channels._add(data.channel, this.guild, { cache: false }) ?? this.client.channels.resolve(this.channelId);
+        this.channelId ??= data.channel.id;
+      }
+      if ("created_at" in data) {
+        this.createdTimestamp = Date.parse(data.created_at);
+      } else {
+        this.createdTimestamp ??= null;
+      }
+      if ("expires_at" in data) {
+        this._expiresTimestamp = data.expires_at && Date.parse(data.expires_at);
+      } else {
+        this._expiresTimestamp ??= null;
+      }
+      if ("stage_instance" in data) {
+        this.stageInstance = new InviteStageInstance(this.client, data.stage_instance, this.channel.id, this.guild.id);
+      } else {
+        this.stageInstance ??= null;
+      }
+      if ("guild_scheduled_event" in data) {
+        this.guildScheduledEvent = new GuildScheduledEvent(this.client, data.guild_scheduled_event);
+      } else {
+        this.guildScheduledEvent ??= null;
+      }
+    }
+    get createdAt() {
+      return this.createdTimestamp && new Date(this.createdTimestamp);
+    }
+    get deletable() {
+      const guild = this.guild;
+      if (!guild || !this.client.guilds.cache.has(guild.id))
+        return false;
+      if (!guild.members.me)
+        throw new DiscordjsError(ErrorCodes.GuildUncachedMe);
+      return Boolean(this.channel?.permissionsFor(this.client.user).has(PermissionFlagsBits.ManageChannels, false) || guild.members.me.permissions.has(PermissionFlagsBits.ManageGuild));
+    }
+    get expiresTimestamp() {
+      return this._expiresTimestamp ?? (this.createdTimestamp && this.maxAge ? this.createdTimestamp + this.maxAge * 1000 : null);
+    }
+    get expiresAt() {
+      return this.expiresTimestamp && new Date(this.expiresTimestamp);
+    }
+    get inviter() {
+      return this.inviterId && this.client.users.resolve(this.inviterId);
+    }
+    get url() {
+      return `${RouteBases.invite}/${this.code}`;
+    }
+    async delete(reason) {
+      await this.client.rest.delete(Routes.invite(this.code), { reason });
+      return this;
+    }
+    toString() {
+      return this.url;
+    }
+    toJSON() {
+      return super.toJSON({
+        url: true,
+        expiresTimestamp: true,
+        presenceCount: false,
+        memberCount: false,
+        uses: false,
+        channel: "channelId",
+        inviter: "inviterId",
+        guild: "guildId"
+      });
+    }
+    valueOf() {
+      return this.code;
+    }
+  }
+  module.exports = Invite;
+});
+
+// node_modules/discord.js/src/structures/GuildTemplate.js
+var require_GuildTemplate = __commonJS((exports, module) => {
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
+  var { RouteBases, Routes } = require_v106();
+  var Base = require_Base();
+  var { resolveImage } = require_DataResolver();
+  var Events = require_Events();
+
+  class GuildTemplate extends Base {
+    static GuildTemplatesPattern = /discord(?:app)?\.(?:com\/template|new)\/(?<code>[\w-]{2,255})/i;
+    constructor(client, data) {
+      super(client);
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("code" in data) {
+        this.code = data.code;
+      }
+      if ("name" in data) {
+        this.name = data.name;
+      }
+      if ("description" in data) {
+        this.description = data.description;
+      }
+      if ("usage_count" in data) {
+        this.usageCount = data.usage_count;
+      }
+      if ("creator_id" in data) {
+        this.creatorId = data.creator_id;
+      }
+      if ("creator" in data) {
+        this.creator = this.client.users._add(data.creator);
+      }
+      if ("created_at" in data) {
+        this.createdTimestamp = Date.parse(data.created_at);
+      }
+      if ("updated_at" in data) {
+        this.updatedTimestamp = Date.parse(data.updated_at);
+      }
+      if ("source_guild_id" in data) {
+        this.guildId = data.source_guild_id;
+      }
+      if ("serialized_source_guild" in data) {
+        this.serializedGuild = data.serialized_source_guild;
+      }
+      this.unSynced = "is_dirty" in data ? Boolean(data.is_dirty) : null;
+      return this;
+    }
+    async createGuild(name, icon) {
+      const { client } = this;
+      const data = await client.rest.post(Routes.template(this.code), {
+        body: {
+          name,
+          icon: await resolveImage(icon)
+        }
+      });
+      if (client.guilds.cache.has(data.id))
+        return client.guilds.cache.get(data.id);
+      return new Promise((resolve) => {
+        const resolveGuild = (guild) => {
+          client.off(Events.GuildCreate, handleGuild);
+          client.decrementMaxListeners();
+          resolve(guild);
+        };
+        const handleGuild = (guild) => {
+          if (guild.id === data.id) {
+            clearTimeout2(timeout);
+            resolveGuild(guild);
+          }
+        };
+        client.incrementMaxListeners();
+        client.on(Events.GuildCreate, handleGuild);
+        const timeout = setTimeout2(() => resolveGuild(client.guilds._add(data)), 1e4).unref();
+      });
+    }
+    async edit({ name, description } = {}) {
+      const data = await this.client.rest.patch(Routes.guildTemplate(this.guildId, this.code), {
+        body: { name, description }
+      });
+      return this._patch(data);
+    }
+    async delete() {
+      await this.client.rest.delete(Routes.guildTemplate(this.guildId, this.code));
+      return this;
+    }
+    async sync() {
+      const data = await this.client.rest.put(Routes.guildTemplate(this.guildId, this.code));
+      return this._patch(data);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    get updatedAt() {
+      return new Date(this.updatedTimestamp);
+    }
+    get guild() {
+      return this.client.guilds.resolve(this.guildId);
+    }
+    get url() {
+      return `${RouteBases.template}/${this.code}`;
+    }
+    toString() {
+      return this.code;
+    }
+  }
+  module.exports = GuildTemplate;
+});
+
+// node_modules/discord.js/src/util/DataResolver.js
+var require_DataResolver = __commonJS((exports, module) => {
+  var { Buffer: Buffer2 } = __require("buffer");
+  var fs = __require("fs/promises");
+  var path = __require("path");
+  var { fetch: fetch2 } = __require("undici");
+  var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
+  var Invite = require_Invite();
+  function resolveCode(data, regex) {
+    return regex.exec(data)?.[1] ?? data;
+  }
+  function resolveInviteCode(data) {
+    return resolveCode(data, Invite.InvitesPattern);
+  }
+  function resolveGuildTemplateCode(data) {
+    const GuildTemplate = require_GuildTemplate();
+    return resolveCode(data, GuildTemplate.GuildTemplatesPattern);
+  }
+  async function resolveFile(resource) {
+    if (Buffer2.isBuffer(resource))
+      return { data: resource };
+    if (typeof resource[Symbol.asyncIterator] === "function") {
+      const buffers = [];
+      for await (const data of resource)
+        buffers.push(Buffer2.from(data));
+      return { data: Buffer2.concat(buffers) };
+    }
+    if (typeof resource === "string") {
+      if (/^https?:\/\//.test(resource)) {
+        const res = await fetch2(resource);
+        return { data: Buffer2.from(await res.arrayBuffer()), contentType: res.headers.get("content-type") };
+      }
+      const file = path.resolve(resource);
+      const stats = await fs.stat(file);
+      if (!stats.isFile())
+        throw new DiscordjsError(ErrorCodes.FileNotFound, file);
+      return { data: await fs.readFile(file) };
+    }
+    throw new DiscordjsTypeError(ErrorCodes.ReqResourceType);
+  }
+  function resolveBase64(data, contentType = "image/jpg") {
+    if (Buffer2.isBuffer(data))
+      return `data:${contentType};base64,${data.toString("base64")}`;
+    return data;
+  }
+  async function resolveImage(image) {
+    if (!image)
+      return null;
+    if (typeof image === "string" && image.startsWith("data:")) {
+      return image;
+    }
+    const file = await resolveFile(image);
+    return resolveBase64(file.data);
+  }
+  module.exports = { resolveCode, resolveInviteCode, resolveGuildTemplateCode, resolveImage, resolveBase64, resolveFile };
+});
+
+// node_modules/discord.js/src/util/MessageFlagsBitField.js
+var require_MessageFlagsBitField = __commonJS((exports, module) => {
+  var { MessageFlags } = require_v106();
+  var BitField = require_BitField();
+
+  class MessageFlagsBitField extends BitField {
+    static Flags = MessageFlags;
+  }
+  module.exports = MessageFlagsBitField;
+});
+
+// node_modules/discord.js/src/structures/BaseInteraction.js
+var require_BaseInteraction = __commonJS((exports, module) => {
+  var { deprecate } = __require("util");
+  var { Collection } = require_dist6();
+  var { DiscordSnowflake } = require_cjs();
+  var { InteractionType, ApplicationCommandType, ComponentType } = require_v106();
+  var Base = require_Base();
+  var { SelectMenuTypes } = require_Constants();
+  var PermissionsBitField = require_PermissionsBitField();
+
+  class BaseInteraction extends Base {
+    constructor(client, data) {
+      super(client);
+      this.type = data.type;
+      this.id = data.id;
+      Object.defineProperty(this, "token", { value: data.token });
+      this.applicationId = data.application_id;
+      this.channelId = data.channel?.id ?? null;
+      this.guildId = data.guild_id ?? null;
+      this.user = this.client.users._add(data.user ?? data.member.user);
+      this.member = data.member ? this.guild?.members._add(data.member) ?? data.member : null;
+      this.version = data.version;
+      this.appPermissions = new PermissionsBitField(data.app_permissions).freeze();
+      this.memberPermissions = data.member?.permissions ? new PermissionsBitField(data.member.permissions).freeze() : null;
+      this.locale = data.locale;
+      this.guildLocale = data.guild_locale ?? null;
+      this.entitlements = data.entitlements.reduce((coll, entitlement) => coll.set(entitlement.id, this.client.application.entitlements._add(entitlement)), new Collection);
+      this.authorizingIntegrationOwners = data.authorizing_integration_owners;
+      this.context = data.context ?? null;
+      this.attachmentSizeLimit = data.attachment_size_limit;
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    get channel() {
+      return this.client.channels.cache.get(this.channelId) ?? null;
+    }
+    get guild() {
+      return this.client.guilds.cache.get(this.guildId) ?? null;
+    }
+    inGuild() {
+      return Boolean(this.guildId && this.member);
+    }
+    inCachedGuild() {
+      return Boolean(this.guild && this.member);
+    }
+    inRawGuild() {
+      return Boolean(this.guildId && !this.guild && this.member);
+    }
+    isAutocomplete() {
+      return this.type === InteractionType.ApplicationCommandAutocomplete;
+    }
+    isCommand() {
+      return this.type === InteractionType.ApplicationCommand;
+    }
+    isChatInputCommand() {
+      return this.type === InteractionType.ApplicationCommand && this.commandType === ApplicationCommandType.ChatInput;
+    }
+    isContextMenuCommand() {
+      return this.type === InteractionType.ApplicationCommand && [ApplicationCommandType.User, ApplicationCommandType.Message].includes(this.commandType);
+    }
+    isPrimaryEntryPointCommand() {
+      return this.type === InteractionType.ApplicationCommand && this.commandType === ApplicationCommandType.PrimaryEntryPoint;
+    }
+    isMessageComponent() {
+      return this.type === InteractionType.MessageComponent;
+    }
+    isModalSubmit() {
+      return this.type === InteractionType.ModalSubmit;
+    }
+    isUserContextMenuCommand() {
+      return this.isContextMenuCommand() && this.commandType === ApplicationCommandType.User;
+    }
+    isMessageContextMenuCommand() {
+      return this.isContextMenuCommand() && this.commandType === ApplicationCommandType.Message;
+    }
+    isButton() {
+      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.Button;
+    }
+    isSelectMenu() {
+      return this.isStringSelectMenu();
+    }
+    isAnySelectMenu() {
+      return this.type === InteractionType.MessageComponent && SelectMenuTypes.includes(this.componentType);
+    }
+    isStringSelectMenu() {
+      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.StringSelect;
+    }
+    isUserSelectMenu() {
+      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.UserSelect;
+    }
+    isRoleSelectMenu() {
+      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.RoleSelect;
+    }
+    isChannelSelectMenu() {
+      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.ChannelSelect;
+    }
+    isMentionableSelectMenu() {
+      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.MentionableSelect;
+    }
+    isRepliable() {
+      return ![InteractionType.Ping, InteractionType.ApplicationCommandAutocomplete].includes(this.type);
+    }
+  }
+  BaseInteraction.prototype.isSelectMenu = deprecate(BaseInteraction.prototype.isSelectMenu, "BaseInteraction#isSelectMenu() is deprecated. Use BaseInteraction#isStringSelectMenu() instead.");
+  module.exports = BaseInteraction;
+});
+
+// node_modules/discord.js/src/structures/ApplicationRoleConnectionMetadata.js
+var require_ApplicationRoleConnectionMetadata = __commonJS((exports) => {
+  class ApplicationRoleConnectionMetadata {
+    constructor(data) {
+      this.name = data.name;
+      this.nameLocalizations = data.name_localizations ?? null;
+      this.description = data.description;
+      this.descriptionLocalizations = data.description_localizations ?? null;
+      this.key = data.key;
+      this.type = data.type;
+    }
+  }
+  exports.ApplicationRoleConnectionMetadata = ApplicationRoleConnectionMetadata;
+});
+
+// node_modules/discord.js/src/structures/TeamMember.js
+var require_TeamMember = __commonJS((exports, module) => {
+  var Base = require_Base();
+
+  class TeamMember extends Base {
+    constructor(team, data) {
+      super(team.client);
+      this.team = team;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("permissions" in data) {
+        this.permissions = data.permissions;
+      }
+      if ("membership_state" in data) {
+        this.membershipState = data.membership_state;
+      }
+      if ("user" in data) {
+        this.user = this.client.users._add(data.user);
+      }
+      if ("role" in data) {
+        this.role = data.role;
+      }
+    }
+    get id() {
+      return this.user.id;
+    }
+    toString() {
+      return this.user.toString();
+    }
+  }
+  module.exports = TeamMember;
+});
+
+// node_modules/discord.js/src/structures/Team.js
+var require_Team = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var { DiscordSnowflake } = require_cjs();
+  var Base = require_Base();
+  var TeamMember = require_TeamMember();
+
+  class Team extends Base {
+    constructor(client, data) {
+      super(client);
+      this._patch(data);
+    }
+    _patch(data) {
+      this.id = data.id;
+      if ("name" in data) {
+        this.name = data.name;
+      }
+      if ("icon" in data) {
+        this.icon = data.icon;
+      } else {
+        this.icon ??= null;
+      }
+      if ("owner_user_id" in data) {
+        this.ownerId = data.owner_user_id;
+      } else {
+        this.ownerId ??= null;
+      }
+      this.members = new Collection;
+      for (const memberData of data.members) {
+        const member = new TeamMember(this, memberData);
+        this.members.set(member.id, member);
+      }
+    }
+    get owner() {
+      return this.members.get(this.ownerId) ?? null;
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    iconURL(options = {}) {
+      return this.icon && this.client.rest.cdn.teamIcon(this.id, this.icon, options);
+    }
+    toString() {
+      return this.name;
+    }
+    toJSON() {
+      return super.toJSON({ createdTimestamp: true });
+    }
+  }
+  module.exports = Team;
+});
+
+// node_modules/discord.js/src/managers/ApplicationCommandPermissionsManager.js
+var require_ApplicationCommandPermissionsManager = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var { ApplicationCommandPermissionType, RESTJSONErrorCodes, Routes } = require_v106();
+  var BaseManager = require_BaseManager();
+  var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
+
+  class ApplicationCommandPermissionsManager extends BaseManager {
+    constructor(manager) {
+      super(manager.client);
+      this.manager = manager;
+      this.guild = manager.guild ?? null;
+      this.guildId = manager.guildId ?? manager.guild?.id ?? null;
+      this.commandId = manager.id ?? null;
+    }
+    permissionsPath(guildId, commandId) {
+      if (commandId) {
+        return Routes.applicationCommandPermissions(this.client.application.id, guildId, commandId);
+      }
+      return Routes.guildApplicationCommandsPermissions(this.client.application.id, guildId);
+    }
+    async fetch({ guild, command } = {}) {
+      const { guildId, commandId } = this._validateOptions(guild, command);
+      if (commandId) {
+        const data2 = await this.client.rest.get(this.permissionsPath(guildId, commandId));
+        return data2.permissions;
+      }
+      const data = await this.client.rest.get(this.permissionsPath(guildId));
+      return data.reduce((coll, perm) => coll.set(perm.id, perm.permissions), new Collection);
+    }
+    async set({ guild, command, permissions, token } = {}) {
+      if (!token) {
+        throw new DiscordjsError(ErrorCodes.ApplicationCommandPermissionsTokenMissing);
+      }
+      let { guildId, commandId } = this._validateOptions(guild, command);
+      if (!Array.isArray(permissions)) {
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissions", "Array of ApplicationCommandPermissions", true);
+      }
+      if (!commandId) {
+        commandId = this.client.user.id;
+      }
+      const data = await this.client.rest.put(this.permissionsPath(guildId, commandId), {
+        body: { permissions },
+        auth: false,
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      return data.permissions;
+    }
+    async add({ guild, command, permissions, token } = {}) {
+      if (!token) {
+        throw new DiscordjsError(ErrorCodes.ApplicationCommandPermissionsTokenMissing);
+      }
+      let { guildId, commandId } = this._validateOptions(guild, command);
+      if (!commandId) {
+        commandId = this.client.user.id;
+      }
+      if (!Array.isArray(permissions)) {
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissions", "Array of ApplicationCommandPermissions", true);
+      }
+      let existingPermissions = [];
+      try {
+        existingPermissions = await this.fetch({ guild: guildId, command: commandId });
+      } catch (error) {
+        if (error.code !== RESTJSONErrorCodes.UnknownApplicationCommandPermissions)
+          throw error;
+      }
+      const newPermissions = permissions.slice();
+      for (const existingPermission of existingPermissions) {
+        if (!newPermissions.some((newPermission) => newPermission.id === existingPermission.id)) {
+          newPermissions.push(existingPermission);
+        }
+      }
+      return this.set({ guild: guildId, command: commandId, permissions: newPermissions, token });
+    }
+    async remove({ guild, command, users, roles, channels, token } = {}) {
+      if (!token) {
+        throw new DiscordjsError(ErrorCodes.ApplicationCommandPermissionsTokenMissing);
+      }
+      let { guildId, commandId } = this._validateOptions(guild, command);
+      if (!commandId) {
+        commandId = this.client.user.id;
+      }
+      if (!users && !roles && !channels) {
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "users OR roles OR channels", "Array or Resolvable", true);
+      }
+      let resolvedUserIds = [];
+      if (Array.isArray(users)) {
+        for (const user of users) {
+          const userId = this.client.users.resolveId(user);
+          if (!userId)
+            throw new DiscordjsTypeError(ErrorCodes.InvalidElement, "Array", "users", user);
+          resolvedUserIds.push(userId);
+        }
+      }
+      let resolvedRoleIds = [];
+      if (Array.isArray(roles)) {
+        for (const role of roles) {
+          if (typeof role === "string") {
+            resolvedRoleIds.push(role);
+            continue;
+          }
+          if (!this.guild)
+            throw new DiscordjsError(ErrorCodes.GuildUncachedEntityResolve, "roles");
+          const roleId = this.guild.roles.resolveId(role);
+          if (!roleId)
+            throw new DiscordjsTypeError(ErrorCodes.InvalidElement, "Array", "users", role);
+          resolvedRoleIds.push(roleId);
+        }
+      }
+      let resolvedChannelIds = [];
+      if (Array.isArray(channels)) {
+        for (const channel of channels) {
+          if (typeof channel === "string") {
+            resolvedChannelIds.push(channel);
+            continue;
+          }
+          if (!this.guild)
+            throw new DiscordjsError(ErrorCodes.GuildUncachedEntityResolve, "channels");
+          const channelId = this.guild.channels.resolveId(channel);
+          if (!channelId)
+            throw new DiscordjsTypeError(ErrorCodes.InvalidElement, "Array", "channels", channel);
+          resolvedChannelIds.push(channelId);
+        }
+      }
+      let existing = [];
+      try {
+        existing = await this.fetch({ guild: guildId, command: commandId });
+      } catch (error) {
+        if (error.code !== RESTJSONErrorCodes.UnknownApplicationCommandPermissions)
+          throw error;
+      }
+      const permissions = existing.filter((perm) => {
+        switch (perm.type) {
+          case ApplicationCommandPermissionType.Role:
+            return !resolvedRoleIds.includes(perm.id);
+          case ApplicationCommandPermissionType.User:
+            return !resolvedUserIds.includes(perm.id);
+          case ApplicationCommandPermissionType.Channel:
+            return !resolvedChannelIds.includes(perm.id);
+        }
+        return true;
+      });
+      return this.set({ guild: guildId, command: commandId, permissions, token });
+    }
+    async has({ guild, command, permissionId, permissionType }) {
+      const { guildId, commandId } = this._validateOptions(guild, command);
+      if (!commandId)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable");
+      if (!permissionId) {
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissionId", "UserResolvable, RoleResolvable, ChannelResolvable, or Permission Constant");
+      }
+      let resolvedId = permissionId;
+      if (typeof permissionId !== "string") {
+        resolvedId = this.client.users.resolveId(permissionId);
+        if (!resolvedId) {
+          if (!this.guild)
+            throw new DiscordjsError(ErrorCodes.GuildUncachedEntityResolve, "roles");
+          resolvedId = this.guild.roles.resolveId(permissionId);
+        }
+        if (!resolvedId) {
+          resolvedId = this.guild.channels.resolveId(permissionId);
+        }
+        if (!resolvedId) {
+          throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissionId", "UserResolvable, RoleResolvable, ChannelResolvable, or Permission Constant");
+        }
+      }
+      let existing = [];
+      try {
+        existing = await this.fetch({ guild: guildId, command: commandId });
+      } catch (error) {
+        if (error.code !== RESTJSONErrorCodes.UnknownApplicationCommandPermissions)
+          throw error;
+      }
+      return existing.some((perm) => perm.id === resolvedId && (permissionType ?? perm.type) === perm.type);
+    }
+    _validateOptions(guild, command) {
+      const guildId = this.guildId ?? this.client.guilds.resolveId(guild);
+      if (!guildId)
+        throw new DiscordjsError(ErrorCodes.GlobalCommandPermissions);
+      let commandId = this.commandId;
+      if (command && !commandId) {
+        commandId = this.manager.resolveId?.(command);
+        if (!commandId && this.guild) {
+          commandId = this.guild.commands.resolveId(command);
+        }
+        commandId ??= this.client.application?.commands.resolveId(command);
+        if (!commandId) {
+          throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable", true);
+        }
+      }
+      return { guildId, commandId };
+    }
+  }
+  module.exports = ApplicationCommandPermissionsManager;
+});
+
+// node_modules/fast-deep-equal/index.js
+var require_fast_deep_equal = __commonJS((exports, module) => {
+  module.exports = function equal(a, b) {
+    if (a === b)
+      return true;
+    if (a && b && typeof a == "object" && typeof b == "object") {
+      if (a.constructor !== b.constructor)
+        return false;
+      var length, i, keys;
+      if (Array.isArray(a)) {
+        length = a.length;
+        if (length != b.length)
+          return false;
+        for (i = length;i-- !== 0; )
+          if (!equal(a[i], b[i]))
+            return false;
+        return true;
+      }
+      if (a.constructor === RegExp)
+        return a.source === b.source && a.flags === b.flags;
+      if (a.valueOf !== Object.prototype.valueOf)
+        return a.valueOf() === b.valueOf();
+      if (a.toString !== Object.prototype.toString)
+        return a.toString() === b.toString();
+      keys = Object.keys(a);
+      length = keys.length;
+      if (length !== Object.keys(b).length)
+        return false;
+      for (i = length;i-- !== 0; )
+        if (!Object.prototype.hasOwnProperty.call(b, keys[i]))
+          return false;
+      for (i = length;i-- !== 0; ) {
+        var key = keys[i];
+        if (!equal(a[key], b[key]))
+          return false;
+      }
+      return true;
+    }
+    return a !== a && b !== b;
+  };
+});
+
+// node_modules/discord.js/src/structures/ApplicationCommand.js
+var require_ApplicationCommand = __commonJS((exports, module) => {
+  var { DiscordSnowflake } = require_cjs();
+  var { ApplicationCommandOptionType } = require_v106();
+  var isEqual = require_fast_deep_equal();
+  var Base = require_Base();
+  var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
+  var PermissionsBitField = require_PermissionsBitField();
+
+  class ApplicationCommand extends Base {
+    constructor(client, data, guild, guildId) {
+      super(client);
+      this.id = data.id;
+      this.applicationId = data.application_id;
+      this.guild = guild ?? null;
+      this.guildId = guild?.id ?? guildId ?? null;
+      this.permissions = new ApplicationCommandPermissionsManager(this);
+      this.type = data.type;
+      this.nsfw = data.nsfw ?? false;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("name" in data) {
+        this.name = data.name;
+      }
+      if ("name_localizations" in data) {
+        this.nameLocalizations = data.name_localizations;
+      } else {
+        this.nameLocalizations ??= null;
+      }
+      if ("name_localized" in data) {
+        this.nameLocalized = data.name_localized;
+      } else {
+        this.nameLocalized ??= null;
+      }
+      if ("description" in data) {
+        this.description = data.description;
+      }
+      if ("description_localizations" in data) {
+        this.descriptionLocalizations = data.description_localizations;
+      } else {
+        this.descriptionLocalizations ??= null;
+      }
+      if ("description_localized" in data) {
+        this.descriptionLocalized = data.description_localized;
+      } else {
+        this.descriptionLocalized ??= null;
+      }
+      if ("options" in data) {
+        this.options = data.options.map((option) => this.constructor.transformOption(option, true));
+      } else {
+        this.options ??= [];
+      }
+      if ("default_member_permissions" in data) {
+        this.defaultMemberPermissions = data.default_member_permissions ? new PermissionsBitField(BigInt(data.default_member_permissions)).freeze() : null;
+      } else {
+        this.defaultMemberPermissions ??= null;
+      }
+      if ("dm_permission" in data) {
+        this.dmPermission = data.dm_permission;
+      } else {
+        this.dmPermission ??= null;
+      }
+      if ("integration_types" in data) {
+        this.integrationTypes = data.integration_types;
+      } else {
+        this.integrationTypes ??= null;
+      }
+      if ("contexts" in data) {
+        this.contexts = data.contexts;
+      } else {
+        this.contexts ??= null;
+      }
+      if ("handler" in data) {
+        this.handler = data.handler;
+      } else {
+        this.handler ??= null;
+      }
+      if ("version" in data) {
+        this.version = data.version;
+      }
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    get manager() {
+      return (this.guild ?? this.client.application).commands;
+    }
+    edit(data) {
+      return this.manager.edit(this, data, this.guildId);
+    }
+    setName(name) {
+      return this.edit({ name });
+    }
+    setNameLocalizations(nameLocalizations) {
+      return this.edit({ nameLocalizations });
+    }
+    setDescription(description) {
+      return this.edit({ description });
+    }
+    setDescriptionLocalizations(descriptionLocalizations) {
+      return this.edit({ descriptionLocalizations });
+    }
+    setDefaultMemberPermissions(defaultMemberPermissions) {
+      return this.edit({ defaultMemberPermissions });
+    }
+    setDMPermission(dmPermission = true) {
+      return this.edit({ dmPermission });
+    }
+    setOptions(options) {
+      return this.edit({ options });
+    }
+    delete() {
+      return this.manager.delete(this, this.guildId);
+    }
+    equals(command, enforceOptionOrder = false) {
+      if (command.id && this.id !== command.id)
+        return false;
+      let defaultMemberPermissions = null;
+      let dmPermission = command.dmPermission ?? command.dm_permission;
+      if ("default_member_permissions" in command) {
+        defaultMemberPermissions = command.default_member_permissions ? new PermissionsBitField(BigInt(command.default_member_permissions)).bitfield : null;
+      }
+      if ("defaultMemberPermissions" in command) {
+        defaultMemberPermissions = command.defaultMemberPermissions !== null ? new PermissionsBitField(command.defaultMemberPermissions).bitfield : null;
+      }
+      if (command.name !== this.name || "description" in command && command.description !== this.description || "version" in command && command.version !== this.version || command.type && command.type !== this.type || "nsfw" in command && command.nsfw !== this.nsfw || (command.options?.length ?? 0) !== (this.options?.length ?? 0) || defaultMemberPermissions !== (this.defaultMemberPermissions?.bitfield ?? null) || dmPermission !== undefined && dmPermission !== this.dmPermission || !isEqual(command.nameLocalizations ?? command.name_localizations ?? {}, this.nameLocalizations ?? {}) || !isEqual(command.descriptionLocalizations ?? command.description_localizations ?? {}, this.descriptionLocalizations ?? {}) || !isEqual(command.integrationTypes ?? command.integration_types ?? [], this.integrationTypes ?? []) || !isEqual(command.contexts ?? [], this.contexts ?? []) || "handler" in command && command.handler !== this.handler) {
+        return false;
+      }
+      if (command.options) {
+        return this.constructor.optionsEqual(this.options, command.options, enforceOptionOrder);
+      }
+      return true;
+    }
+    static optionsEqual(existing, options, enforceOptionOrder = false) {
+      if (existing.length !== options.length)
+        return false;
+      if (enforceOptionOrder) {
+        return existing.every((option, index) => this._optionEquals(option, options[index], enforceOptionOrder));
+      }
+      const newOptions = new Map(options.map((option) => [option.name, option]));
+      for (const option of existing) {
+        const foundOption = newOptions.get(option.name);
+        if (!foundOption || !this._optionEquals(option, foundOption))
+          return false;
+      }
+      return true;
+    }
+    static _optionEquals(existing, option, enforceOptionOrder = false) {
+      if (option.name !== existing.name || option.type !== existing.type || option.description !== existing.description || option.autocomplete !== existing.autocomplete || (option.required ?? ([ApplicationCommandOptionType.Subcommand, ApplicationCommandOptionType.SubcommandGroup].includes(option.type) ? undefined : false)) !== existing.required || option.choices?.length !== existing.choices?.length || option.options?.length !== existing.options?.length || (option.channelTypes ?? option.channel_types)?.length !== existing.channelTypes?.length || (option.minValue ?? option.min_value) !== existing.minValue || (option.maxValue ?? option.max_value) !== existing.maxValue || (option.minLength ?? option.min_length) !== existing.minLength || (option.maxLength ?? option.max_length) !== existing.maxLength || !isEqual(option.nameLocalizations ?? option.name_localizations ?? {}, existing.nameLocalizations ?? {}) || !isEqual(option.descriptionLocalizations ?? option.description_localizations ?? {}, existing.descriptionLocalizations ?? {})) {
+        return false;
+      }
+      if (existing.choices) {
+        if (enforceOptionOrder && !existing.choices.every((choice, index) => choice.name === option.choices[index].name && choice.value === option.choices[index].value && isEqual(choice.nameLocalizations ?? {}, option.choices[index].nameLocalizations ?? option.choices[index].name_localizations ?? {}))) {
+          return false;
+        }
+        if (!enforceOptionOrder) {
+          const newChoices = new Map(option.choices.map((choice) => [choice.name, choice]));
+          for (const choice of existing.choices) {
+            const foundChoice = newChoices.get(choice.name);
+            if (!foundChoice || foundChoice.value !== choice.value)
+              return false;
+          }
+        }
+      }
+      if (existing.channelTypes) {
+        const newTypes = option.channelTypes ?? option.channel_types;
+        for (const type of existing.channelTypes) {
+          if (!newTypes.includes(type))
+            return false;
+        }
+      }
+      if (existing.options) {
+        return this.optionsEqual(existing.options, option.options, enforceOptionOrder);
+      }
+      return true;
+    }
+    static transformOption(option, received) {
+      const channelTypesKey = received ? "channelTypes" : "channel_types";
+      const minValueKey = received ? "minValue" : "min_value";
+      const maxValueKey = received ? "maxValue" : "max_value";
+      const minLengthKey = received ? "minLength" : "min_length";
+      const maxLengthKey = received ? "maxLength" : "max_length";
+      const nameLocalizationsKey = received ? "nameLocalizations" : "name_localizations";
+      const nameLocalizedKey = received ? "nameLocalized" : "name_localized";
+      const descriptionLocalizationsKey = received ? "descriptionLocalizations" : "description_localizations";
+      const descriptionLocalizedKey = received ? "descriptionLocalized" : "description_localized";
+      return {
+        type: option.type,
+        name: option.name,
+        [nameLocalizationsKey]: option.nameLocalizations ?? option.name_localizations,
+        [nameLocalizedKey]: option.nameLocalized ?? option.name_localized,
+        description: option.description,
+        [descriptionLocalizationsKey]: option.descriptionLocalizations ?? option.description_localizations,
+        [descriptionLocalizedKey]: option.descriptionLocalized ?? option.description_localized,
+        required: option.required ?? (option.type === ApplicationCommandOptionType.Subcommand || option.type === ApplicationCommandOptionType.SubcommandGroup ? undefined : false),
+        autocomplete: option.autocomplete,
+        choices: option.choices?.map((choice) => ({
+          name: choice.name,
+          [nameLocalizedKey]: choice.nameLocalized ?? choice.name_localized,
+          [nameLocalizationsKey]: choice.nameLocalizations ?? choice.name_localizations,
+          value: choice.value
+        })),
+        options: option.options?.map((opt) => this.transformOption(opt, received)),
+        [channelTypesKey]: option.channelTypes ?? option.channel_types,
+        [minValueKey]: option.minValue ?? option.min_value,
+        [maxValueKey]: option.maxValue ?? option.max_value,
+        [minLengthKey]: option.minLength ?? option.min_length,
+        [maxLengthKey]: option.maxLength ?? option.max_length
+      };
+    }
+  }
+  module.exports = ApplicationCommand;
+});
+
+// node_modules/discord.js/src/managers/ApplicationCommandManager.js
+var require_ApplicationCommandManager = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var { makeURLSearchParams } = require_dist5();
+  var { isJSONEncodable } = require_dist();
+  var { Routes } = require_v106();
+  var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
+  var CachedManager = require_CachedManager();
+  var { DiscordjsTypeError, ErrorCodes } = require_errors();
+  var ApplicationCommand = require_ApplicationCommand();
+  var PermissionsBitField = require_PermissionsBitField();
+
+  class ApplicationCommandManager extends CachedManager {
+    constructor(client, iterable) {
+      super(client, ApplicationCommand, iterable);
+      this.permissions = new ApplicationCommandPermissionsManager(this);
+    }
+    _add(data, cache, guildId) {
+      return super._add(data, cache, { extras: [this.guild, guildId] });
+    }
+    commandPath({ id, guildId } = {}) {
+      if (this.guild ?? guildId) {
+        if (id) {
+          return Routes.applicationGuildCommand(this.client.application.id, this.guild?.id ?? guildId, id);
+        }
+        return Routes.applicationGuildCommands(this.client.application.id, this.guild?.id ?? guildId);
+      }
+      if (id) {
+        return Routes.applicationCommand(this.client.application.id, id);
+      }
+      return Routes.applicationCommands(this.client.application.id);
+    }
+    async fetch(id, { guildId, cache = true, force = false, locale, withLocalizations } = {}) {
+      if (typeof id === "object") {
+        ({ guildId, cache = true, locale, withLocalizations } = id);
+      } else if (id) {
+        if (!force) {
+          const existing = this.cache.get(id);
+          if (existing)
+            return existing;
+        }
+        const command = await this.client.rest.get(this.commandPath({ id, guildId }));
+        return this._add(command, cache);
+      }
+      const data = await this.client.rest.get(this.commandPath({ guildId }), {
+        headers: {
+          "X-Discord-Locale": locale
+        },
+        query: makeURLSearchParams({ with_localizations: withLocalizations })
+      });
+      return data.reduce((coll, command) => coll.set(command.id, this._add(command, cache, guildId)), new Collection);
+    }
+    async create(command, guildId) {
+      const data = await this.client.rest.post(this.commandPath({ guildId }), {
+        body: this.constructor.transformCommand(command)
+      });
+      return this._add(data, true, guildId);
+    }
+    async set(commands, guildId) {
+      const data = await this.client.rest.put(this.commandPath({ guildId }), {
+        body: commands.map((command) => this.constructor.transformCommand(command))
+      });
+      return data.reduce((collection, command) => collection.set(command.id, this._add(command, true, guildId)), new Collection);
+    }
+    async edit(command, data, guildId) {
+      const id = this.resolveId(command);
+      if (!id)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable");
+      const patched = await this.client.rest.patch(this.commandPath({ id, guildId }), {
+        body: this.constructor.transformCommand(data)
+      });
+      return this._add(patched, true, guildId);
+    }
+    async delete(command, guildId) {
+      const id = this.resolveId(command);
+      if (!id)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable");
+      await this.client.rest.delete(this.commandPath({ id, guildId }));
+      const cached = this.cache.get(id);
+      this.cache.delete(id);
+      return cached ?? null;
+    }
+    static transformCommand(command) {
+      if (isJSONEncodable(command))
+        return command.toJSON();
+      let default_member_permissions;
+      if ("default_member_permissions" in command) {
+        default_member_permissions = command.default_member_permissions ? new PermissionsBitField(BigInt(command.default_member_permissions)).bitfield.toString() : command.default_member_permissions;
+      }
+      if ("defaultMemberPermissions" in command) {
+        default_member_permissions = command.defaultMemberPermissions !== null ? new PermissionsBitField(command.defaultMemberPermissions).bitfield.toString() : command.defaultMemberPermissions;
+      }
+      return {
+        name: command.name,
+        name_localizations: command.nameLocalizations ?? command.name_localizations,
+        description: command.description,
+        nsfw: command.nsfw,
+        description_localizations: command.descriptionLocalizations ?? command.description_localizations,
+        type: command.type,
+        options: command.options?.map((option) => ApplicationCommand.transformOption(option)),
+        default_member_permissions,
+        dm_permission: command.dmPermission ?? command.dm_permission,
+        integration_types: command.integrationTypes ?? command.integration_types,
+        contexts: command.contexts,
+        handler: command.handler
+      };
+    }
+  }
+  module.exports = ApplicationCommandManager;
+});
+
+// node_modules/discord.js/src/structures/ApplicationEmoji.js
+var require_ApplicationEmoji = __commonJS((exports, module) => {
+  var { Emoji } = require_Emoji();
+
+  class ApplicationEmoji extends Emoji {
+    constructor(client, data, application) {
+      super(client, data);
+      this.application = application;
+      this.author = null;
+      this.managed = null;
+      this.requiresColons = null;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("name" in data)
+        this.name = data.name;
+      if (data.user)
+        this.author = this.client.users._add(data.user);
+      if ("managed" in data) {
+        this.managed = data.managed;
+      }
+      if ("require_colons" in data) {
+        this.requiresColons = data.require_colons;
+      }
+    }
+    fetchAuthor() {
+      return this.application.emojis.fetchAuthor(this);
+    }
+    edit(options) {
+      return this.application.emojis.edit(this.id, options);
+    }
+    setName(name) {
+      return this.edit({ name });
+    }
+    async delete() {
+      await this.application.emojis.delete(this.id);
+      return this;
+    }
+    equals(other) {
+      if (other instanceof ApplicationEmoji) {
+        return other.animated === this.animated && other.id === this.id && other.name === this.name && other.managed === this.managed && other.requiresColons === this.requiresColons;
+      }
+      return other.id === this.id && other.name === this.name;
+    }
+  }
+  module.exports = ApplicationEmoji;
+});
+
+// node_modules/discord.js/src/managers/ApplicationEmojiManager.js
+var require_ApplicationEmojiManager = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var { Routes } = require_v106();
+  var CachedManager = require_CachedManager();
+  var { DiscordjsTypeError, ErrorCodes } = require_errors();
+  var ApplicationEmoji = require_ApplicationEmoji();
+  var { resolveImage } = require_DataResolver();
+
+  class ApplicationEmojiManager extends CachedManager {
+    constructor(application, iterable) {
+      super(application.client, ApplicationEmoji, iterable);
+      this.application = application;
+    }
+    _add(data, cache) {
+      return super._add(data, cache, { extras: [this.application] });
+    }
+    async create({ attachment, name }) {
+      attachment = await resolveImage(attachment);
+      if (!attachment)
+        throw new DiscordjsTypeError(ErrorCodes.ReqResourceType);
+      const body = { image: attachment, name };
+      const emoji = await this.client.rest.post(Routes.applicationEmojis(this.application.id), { body });
+      return this._add(emoji);
+    }
+    async fetch(id, { cache = true, force = false } = {}) {
+      if (id) {
+        if (!force) {
+          const existing = this.cache.get(id);
+          if (existing)
+            return existing;
+        }
+        const emoji = await this.client.rest.get(Routes.applicationEmoji(this.application.id, id));
+        return this._add(emoji, cache);
+      }
+      const { items: data } = await this.client.rest.get(Routes.applicationEmojis(this.application.id));
+      const emojis = new Collection;
+      for (const emoji of data)
+        emojis.set(emoji.id, this._add(emoji, cache));
+      return emojis;
+    }
+    async delete(emoji) {
+      const id = this.resolveId(emoji);
+      if (!id)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "emoji", "EmojiResolvable", true);
+      await this.client.rest.delete(Routes.applicationEmoji(this.application.id, id));
+    }
+    async edit(emoji, options) {
+      const id = this.resolveId(emoji);
+      if (!id)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "emoji", "EmojiResolvable", true);
+      const newData = await this.client.rest.patch(Routes.applicationEmoji(this.application.id, id), {
+        body: {
+          name: options.name
+        }
+      });
+      const existing = this.cache.get(id);
+      if (existing) {
+        existing._patch(newData);
+        return existing;
+      }
+      return this._add(newData);
+    }
+    async fetchAuthor(emoji) {
+      const id = this.resolveId(emoji);
+      if (!id)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "emoji", "EmojiResolvable", true);
+      const data = await this.client.rest.get(Routes.applicationEmoji(this.application.id, id));
+      return this._add(data).author;
+    }
+  }
+  module.exports = ApplicationEmojiManager;
+});
+
+// node_modules/discord.js/src/structures/Entitlement.js
+var require_Entitlement = __commonJS((exports) => {
+  var Base = require_Base();
+
+  class Entitlement extends Base {
+    constructor(client, data) {
+      super(client);
+      this.id = data.id;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("sku_id" in data) {
+        this.skuId = data.sku_id;
+      }
+      if ("user_id" in data) {
+        this.userId = data.user_id;
+      }
+      if ("guild_id" in data) {
+        this.guildId = data.guild_id;
+      } else {
+        this.guildId ??= null;
+      }
+      if ("application_id" in data) {
+        this.applicationId = data.application_id;
+      }
+      if ("type" in data) {
+        this.type = data.type;
+      }
+      if ("deleted" in data) {
+        this.deleted = data.deleted;
+      }
+      if ("starts_at" in data) {
+        this.startsTimestamp = data.starts_at ? Date.parse(data.starts_at) : null;
+      } else {
+        this.startsTimestamp ??= null;
+      }
+      if ("ends_at" in data) {
+        this.endsTimestamp = data.ends_at ? Date.parse(data.ends_at) : null;
+      } else {
+        this.endsTimestamp ??= null;
+      }
+      if ("consumed" in data) {
+        this.consumed = data.consumed;
+      } else {
+        this.consumed ??= false;
+      }
+    }
+    get guild() {
+      if (!this.guildId)
+        return null;
+      return this.client.guilds.cache.get(this.guildId) ?? null;
+    }
+    get startsAt() {
+      return this.startsTimestamp && new Date(this.startsTimestamp);
+    }
+    get endsAt() {
+      return this.endsTimestamp && new Date(this.endsTimestamp);
+    }
+    isActive() {
+      return !this.deleted && (!this.endsTimestamp || this.endsTimestamp > Date.now());
+    }
+    isTest() {
+      return this.startsTimestamp === null;
+    }
+    isUserSubscription() {
+      return this.guildId === null;
+    }
+    isGuildSubscription() {
+      return this.guildId !== null;
+    }
+    fetchUser() {
+      return this.client.users.fetch(this.userId);
+    }
+    async consume() {
+      await this.client.application.entitlements.consume(this.id);
+    }
+  }
+  exports.Entitlement = Entitlement;
+});
+
+// node_modules/discord.js/src/managers/EntitlementManager.js
+var require_EntitlementManager = __commonJS((exports) => {
+  var { Collection } = require_dist6();
+  var { makeURLSearchParams } = require_dist5();
+  var { Routes, EntitlementOwnerType } = require_v106();
+  var CachedManager = require_CachedManager();
+  var { ErrorCodes, DiscordjsTypeError } = require_errors();
+  var { Entitlement } = require_Entitlement();
+  var { resolveSKUId } = require_Util();
+
+  class EntitlementManager extends CachedManager {
+    constructor(client, iterable) {
+      super(client, Entitlement, iterable);
+    }
+    async fetch(options) {
+      if (!options)
+        return this._fetchMany(options);
+      const { entitlement, cache, force } = options;
+      const resolvedEntitlement = this.resolveId(entitlement ?? options);
+      if (resolvedEntitlement) {
+        return this._fetchSingle({ entitlement: resolvedEntitlement, cache, force });
+      }
+      return this._fetchMany(options);
+    }
+    async _fetchSingle({ entitlement, cache, force = false }) {
+      if (!force) {
+        const existing = this.cache.get(entitlement);
+        if (existing) {
+          return existing;
+        }
+      }
+      const data = await this.client.rest.get(Routes.entitlement(this.client.application.id, entitlement));
+      return this._add(data, cache);
+    }
+    async _fetchMany({ limit, guild, user, skus, excludeEnded, excludeDeleted, cache, before, after } = {}) {
+      const query = makeURLSearchParams({
+        limit,
+        guild_id: guild && this.client.guilds.resolveId(guild),
+        user_id: user && this.client.users.resolveId(user),
+        sku_ids: skus?.map((sku) => resolveSKUId(sku)).join(","),
+        exclude_ended: excludeEnded,
+        exclude_deleted: excludeDeleted,
+        before,
+        after
+      });
+      const entitlements = await this.client.rest.get(Routes.entitlements(this.client.application.id), { query });
+      return entitlements.reduce((coll, entitlement) => coll.set(entitlement.id, this._add(entitlement, cache)), new Collection);
+    }
+    async createTest({ sku, guild, user }) {
+      const skuId = resolveSKUId(sku);
+      if (!skuId)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "sku", "SKUResolvable");
+      if (guild && user || !guild && !user) {
+        throw new DiscordjsTypeError(ErrorCodes.EntitlementCreateInvalidOwner);
+      }
+      const resolved = guild ? this.client.guilds.resolveId(guild) : this.client.users.resolveId(user);
+      if (!resolved) {
+        const name = guild ? "guild" : "user";
+        const type = guild ? "GuildResolvable" : "UserResolvable";
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, name, type);
+      }
+      const entitlement = await this.client.rest.post(Routes.entitlements(this.client.application.id), {
+        body: {
+          sku_id: skuId,
+          owner_id: resolved,
+          owner_type: guild ? EntitlementOwnerType.Guild : EntitlementOwnerType.User
+        }
+      });
+      return new Entitlement(this.client, entitlement);
+    }
+    async deleteTest(entitlement) {
+      const resolved = this.resolveId(entitlement);
+      if (!resolved)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "entitlement", "EntitlementResolvable");
+      await this.client.rest.delete(Routes.entitlement(this.client.application.id, resolved));
+    }
+    async consume(entitlementId) {
+      await this.client.rest.post(Routes.consumeEntitlement(this.client.application.id, entitlementId));
+    }
+  }
+  exports.EntitlementManager = EntitlementManager;
+});
+
+// node_modules/discord.js/src/structures/Subscription.js
+var require_Subscription = __commonJS((exports) => {
+  var Base = require_Base();
+
+  class Subscription extends Base {
+    constructor(client, data) {
+      super(client);
+      this.id = data.id;
+      this.userId = data.user_id;
+      this._patch(data);
+    }
+    _patch(data) {
+      this.skuIds = data.sku_ids;
+      this.entitlementIds = data.entitlement_ids;
+      this.currentPeriodStartTimestamp = Date.parse(data.current_period_start);
+      this.currentPeriodEndTimestamp = Date.parse(data.current_period_end);
+      this.status = data.status;
+      if ("renewal_sku_ids" in data) {
+        this.renewalSkuIds = data.renewal_sku_ids;
+      }
+      if ("canceled_at" in data) {
+        this.canceledTimestamp = data.canceled_at ? Date.parse(data.canceled_at) : null;
+      } else {
+        this.canceledTimestamp ??= null;
+      }
+      if ("country" in data) {
+        this.country = data.country;
+      } else {
+        this.country ??= null;
+      }
+    }
+    get canceledAt() {
+      return this.canceledTimestamp && new Date(this.canceledTimestamp);
+    }
+    get currentPeriodStartAt() {
+      return new Date(this.currentPeriodStartTimestamp);
+    }
+    get currentPeriodEndAt() {
+      return new Date(this.currentPeriodEndTimestamp);
+    }
+  }
+  exports.Subscription = Subscription;
+});
+
+// node_modules/discord.js/src/managers/SubscriptionManager.js
+var require_SubscriptionManager = __commonJS((exports) => {
+  var { Collection } = require_dist6();
+  var { makeURLSearchParams } = require_dist5();
+  var { Routes } = require_v106();
+  var CachedManager = require_CachedManager();
+  var { DiscordjsTypeError, ErrorCodes } = require_errors();
+  var { Subscription } = require_Subscription();
+  var { resolveSKUId } = require_Util();
+
+  class SubscriptionManager extends CachedManager {
+    constructor(client, iterable) {
+      super(client, Subscription, iterable);
+    }
+    async fetch(options = {}) {
+      if (typeof options !== "object")
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "options", "object", true);
+      const { after, before, cache, limit, sku, subscriptionId, user } = options;
+      const skuId = resolveSKUId(sku);
+      if (!skuId)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "sku", "SKUResolvable");
+      if (subscriptionId) {
+        const subscription = await this.client.rest.get(Routes.skuSubscription(skuId, subscriptionId));
+        return this._add(subscription, cache);
+      }
+      const query = makeURLSearchParams({
+        limit,
+        user_id: this.client.users.resolveId(user) ?? undefined,
+        sku_id: skuId,
+        before,
+        after
+      });
+      const subscriptions = await this.client.rest.get(Routes.skuSubscriptions(skuId), { query });
+      return subscriptions.reduce((coll, subscription) => coll.set(subscription.id, this._add(subscription, cache)), new Collection);
+    }
+  }
+  exports.SubscriptionManager = SubscriptionManager;
+});
+
+// node_modules/discord.js/src/util/ApplicationFlagsBitField.js
+var require_ApplicationFlagsBitField = __commonJS((exports, module) => {
+  var { ApplicationFlags } = require_v106();
+  var BitField = require_BitField();
+
+  class ApplicationFlagsBitField extends BitField {
+    static Flags = ApplicationFlags;
+  }
+  module.exports = ApplicationFlagsBitField;
+});
+
+// node_modules/discord.js/src/structures/ClientApplication.js
+var require_ClientApplication = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var { Routes } = require_v106();
+  var { ApplicationRoleConnectionMetadata } = require_ApplicationRoleConnectionMetadata();
+  var { SKU } = require_SKU();
+  var Team = require_Team();
+  var Application = require_Application();
+  var ApplicationCommandManager = require_ApplicationCommandManager();
+  var ApplicationEmojiManager = require_ApplicationEmojiManager();
+  var { EntitlementManager } = require_EntitlementManager();
+  var { SubscriptionManager } = require_SubscriptionManager();
+  var ApplicationFlagsBitField = require_ApplicationFlagsBitField();
+  var { resolveImage } = require_DataResolver();
+  var PermissionsBitField = require_PermissionsBitField();
+
+  class ClientApplication extends Application {
+    constructor(client, data) {
+      super(client, data);
+      this.commands = new ApplicationCommandManager(this.client);
+      this.emojis = new ApplicationEmojiManager(this);
+      this.entitlements = new EntitlementManager(this.client);
+      this.subscriptions = new SubscriptionManager(this.client);
+    }
+    _patch(data) {
+      super._patch(data);
+      this.tags = data.tags ?? [];
+      if ("install_params" in data) {
+        this.installParams = {
+          scopes: data.install_params.scopes,
+          permissions: new PermissionsBitField(data.install_params.permissions).freeze()
+        };
+      } else {
+        this.installParams ??= null;
+      }
+      if ("integration_types_config" in data) {
+        this.integrationTypesConfig = Object.fromEntries(Object.entries(data.integration_types_config).map(([key, config]) => {
+          let oauth2InstallParams = null;
+          if (config.oauth2_install_params) {
+            oauth2InstallParams = {
+              scopes: config.oauth2_install_params.scopes,
+              permissions: new PermissionsBitField(config.oauth2_install_params.permissions).freeze()
+            };
+          }
+          const context = {
+            oauth2InstallParams
+          };
+          return [key, context];
+        }));
+      } else {
+        this.integrationTypesConfig ??= null;
+      }
+      if ("custom_install_url" in data) {
+        this.customInstallURL = data.custom_install_url;
+      } else {
+        this.customInstallURL = null;
+      }
+      if ("flags" in data) {
+        this.flags = new ApplicationFlagsBitField(data.flags).freeze();
+      }
+      if ("approximate_guild_count" in data) {
+        this.approximateGuildCount = data.approximate_guild_count;
+      } else {
+        this.approximateGuildCount ??= null;
+      }
+      if ("approximate_user_install_count" in data) {
+        this.approximateUserInstallCount = data.approximate_user_install_count;
+      } else {
+        this.approximateUserInstallCount ??= null;
+      }
+      if ("approximate_user_authorization_count" in data) {
+        this.approximateUserAuthorizationCount = data.approximate_user_authorization_count;
+      } else {
+        this.approximateUserAuthorizationCount ??= null;
+      }
+      if ("guild_id" in data) {
+        this.guildId = data.guild_id;
+      } else {
+        this.guildId ??= null;
+      }
+      if ("bot_require_code_grant" in data) {
+        this.botRequireCodeGrant = data.bot_require_code_grant;
+      } else {
+        this.botRequireCodeGrant ??= null;
+      }
+      if ("bot" in data) {
+        this.bot = this.client.users._add(data.bot);
+      } else {
+        this.bot ??= null;
+      }
+      if ("bot_public" in data) {
+        this.botPublic = data.bot_public;
+      } else {
+        this.botPublic ??= null;
+      }
+      if ("interactions_endpoint_url" in data) {
+        this.interactionsEndpointURL = data.interactions_endpoint_url;
+      } else {
+        this.interactionsEndpointURL ??= null;
+      }
+      if ("role_connections_verification_url" in data) {
+        this.roleConnectionsVerificationURL = data.role_connections_verification_url;
+      } else {
+        this.roleConnectionsVerificationURL ??= null;
+      }
+      if ("event_webhooks_url" in data) {
+        this.eventWebhooksURL = data.event_webhooks_url;
+      } else {
+        this.eventWebhooksURL ??= null;
+      }
+      if ("event_webhooks_status" in data) {
+        this.eventWebhooksStatus = data.event_webhooks_status;
+      } else {
+        this.eventWebhooksStatus ??= null;
+      }
+      if ("event_webhooks_types" in data) {
+        this.eventWebhooksTypes = data.event_webhooks_types;
+      } else {
+        this.eventWebhooksTypes ??= null;
+      }
+      this.owner = data.team ? new Team(this.client, data.team) : data.owner ? this.client.users._add(data.owner) : this.owner ?? null;
+    }
+    get guild() {
+      return this.client.guilds.cache.get(this.guildId) ?? null;
+    }
+    get partial() {
+      return !this.name;
+    }
+    async edit({
+      customInstallURL,
+      description,
+      roleConnectionsVerificationURL,
+      installParams,
+      flags,
+      icon,
+      coverImage,
+      interactionsEndpointURL,
+      eventWebhooksURL,
+      eventWebhooksStatus,
+      eventWebhooksTypes,
+      tags
+    } = {}) {
+      const data = await this.client.rest.patch(Routes.currentApplication(), {
+        body: {
+          custom_install_url: customInstallURL,
+          description,
+          role_connections_verification_url: roleConnectionsVerificationURL,
+          install_params: installParams,
+          flags: flags === undefined ? undefined : ApplicationFlagsBitField.resolve(flags),
+          icon: icon && await resolveImage(icon),
+          cover_image: coverImage && await resolveImage(coverImage),
+          interactions_endpoint_url: interactionsEndpointURL,
+          event_webhooks_url: eventWebhooksURL,
+          event_webhooks_status: eventWebhooksStatus,
+          event_webhooks_types: eventWebhooksTypes,
+          tags
+        }
+      });
+      this._patch(data);
+      return this;
+    }
+    async fetch() {
+      const data = await this.client.rest.get(Routes.currentApplication());
+      this._patch(data);
+      return this;
+    }
+    async fetchRoleConnectionMetadataRecords() {
+      const metadata = await this.client.rest.get(Routes.applicationRoleConnectionMetadata(this.client.user.id));
+      return metadata.map((data) => new ApplicationRoleConnectionMetadata(data));
+    }
+    async editRoleConnectionMetadataRecords(records) {
+      const newRecords = await this.client.rest.put(Routes.applicationRoleConnectionMetadata(this.client.user.id), {
+        body: records.map((record) => ({
+          type: record.type,
+          key: record.key,
+          name: record.name,
+          name_localizations: record.nameLocalizations,
+          description: record.description,
+          description_localizations: record.descriptionLocalizations
+        }))
+      });
+      return newRecords.map((data) => new ApplicationRoleConnectionMetadata(data));
+    }
+    async fetchSKUs() {
+      const skus = await this.client.rest.get(Routes.skus(this.id));
+      return skus.reduce((coll, sku) => coll.set(sku.id, new SKU(this.client, sku)), new Collection);
+    }
+  }
+  module.exports = ClientApplication;
 });
 
 // node_modules/lodash/isArray.js
@@ -14591,48 +16805,6 @@ ${pairsBlock}`;
   exports.setGlobalValidationEnabled = setGlobalValidationEnabled;
 });
 
-// node_modules/fast-deep-equal/index.js
-var require_fast_deep_equal = __commonJS((exports, module) => {
-  module.exports = function equal(a, b) {
-    if (a === b)
-      return true;
-    if (a && b && typeof a == "object" && typeof b == "object") {
-      if (a.constructor !== b.constructor)
-        return false;
-      var length, i, keys;
-      if (Array.isArray(a)) {
-        length = a.length;
-        if (length != b.length)
-          return false;
-        for (i = length;i-- !== 0; )
-          if (!equal(a[i], b[i]))
-            return false;
-        return true;
-      }
-      if (a.constructor === RegExp)
-        return a.source === b.source && a.flags === b.flags;
-      if (a.valueOf !== Object.prototype.valueOf)
-        return a.valueOf() === b.valueOf();
-      if (a.toString !== Object.prototype.toString)
-        return a.toString() === b.toString();
-      keys = Object.keys(a);
-      length = keys.length;
-      if (length !== Object.keys(b).length)
-        return false;
-      for (i = length;i-- !== 0; )
-        if (!Object.prototype.hasOwnProperty.call(b, keys[i]))
-          return false;
-      for (i = length;i-- !== 0; ) {
-        var key = keys[i];
-        if (!equal(a[key], b[key]))
-          return false;
-      }
-      return true;
-    }
-    return a !== a && b !== b;
-  };
-});
-
 // node_modules/ts-mixer/dist/cjs/util.js
 var require_util = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
@@ -15053,21 +17225,28 @@ var require_dist8 = __commonJS((exports, module) => {
     ChannelSelectMenuBuilder: () => ChannelSelectMenuBuilder,
     ComponentAssertions: () => Assertions_exports2,
     ComponentBuilder: () => ComponentBuilder,
-    ContextMenuCommandAssertions: () => Assertions_exports6,
+    ComponentsV2Assertions: () => Assertions_exports4,
+    ContainerBuilder: () => ContainerBuilder,
+    ContextMenuCommandAssertions: () => Assertions_exports7,
     ContextMenuCommandBuilder: () => ContextMenuCommandBuilder,
     EmbedAssertions: () => Assertions_exports,
     EmbedBuilder: () => EmbedBuilder,
+    FileBuilder: () => FileBuilder,
+    MediaGalleryBuilder: () => MediaGalleryBuilder,
+    MediaGalleryItemBuilder: () => MediaGalleryItemBuilder,
     MentionableSelectMenuBuilder: () => MentionableSelectMenuBuilder,
-    ModalAssertions: () => Assertions_exports4,
+    ModalAssertions: () => Assertions_exports5,
     ModalBuilder: () => ModalBuilder,
     RoleSelectMenuBuilder: () => RoleSelectMenuBuilder,
+    SectionBuilder: () => SectionBuilder,
     SelectMenuBuilder: () => StringSelectMenuBuilder,
     SelectMenuOptionBuilder: () => StringSelectMenuOptionBuilder,
+    SeparatorBuilder: () => SeparatorBuilder,
     SharedNameAndDescription: () => SharedNameAndDescription,
     SharedSlashCommand: () => SharedSlashCommand,
     SharedSlashCommandOptions: () => SharedSlashCommandOptions,
     SharedSlashCommandSubcommands: () => SharedSlashCommandSubcommands,
-    SlashCommandAssertions: () => Assertions_exports5,
+    SlashCommandAssertions: () => Assertions_exports6,
     SlashCommandAttachmentOption: () => SlashCommandAttachmentOption,
     SlashCommandBooleanOption: () => SlashCommandBooleanOption,
     SlashCommandBuilder: () => SlashCommandBuilder,
@@ -15082,8 +17261,10 @@ var require_dist8 = __commonJS((exports, module) => {
     SlashCommandUserOption: () => SlashCommandUserOption,
     StringSelectMenuBuilder: () => StringSelectMenuBuilder,
     StringSelectMenuOptionBuilder: () => StringSelectMenuOptionBuilder,
+    TextDisplayBuilder: () => TextDisplayBuilder,
     TextInputAssertions: () => Assertions_exports3,
     TextInputBuilder: () => TextInputBuilder,
+    ThumbnailBuilder: () => ThumbnailBuilder,
     UserSelectMenuBuilder: () => UserSelectMenuBuilder,
     createComponentBuilder: () => createComponentBuilder,
     disableValidators: () => disableValidators,
@@ -15091,6 +17272,7 @@ var require_dist8 = __commonJS((exports, module) => {
     enableValidators: () => enableValidators,
     isValidationEnabled: () => isValidationEnabled,
     normalizeArray: () => normalizeArray,
+    resolveBuilder: () => resolveBuilder,
     version: () => version
   });
   module.exports = __toCommonJS(src_exports);
@@ -15276,6 +17458,7 @@ var require_dist8 = __commonJS((exports, module) => {
     defaultValidator: () => defaultValidator,
     disabledValidator: () => disabledValidator,
     emojiValidator: () => emojiValidator,
+    idValidator: () => idValidator,
     jsonOptionValidator: () => jsonOptionValidator,
     labelValueDescriptionValidator: () => labelValueDescriptionValidator,
     minMaxValidator: () => minMaxValidator,
@@ -15324,6 +17507,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
+  var idValidator = import_shapeshift2.s.number().safeInt().greaterThanOrEqual(1).lessThan(4294967296).setValidationEnabled(isValidationEnabled);
   var customIdValidator = import_shapeshift2.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
   var emojiValidator = import_shapeshift2.s.object({
     id: import_shapeshift2.s.string(),
@@ -15389,7 +17573,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   }
   __name(validateRequiredButtonParameters, "validateRequiredButtonParameters");
-  var import_v1011 = require_v106();
+  var import_v1019 = require_v106();
   var ComponentBuilder = class {
     static {
       __name(this, "ComponentBuilder");
@@ -15398,8 +17582,16 @@ var require_dist8 = __commonJS((exports, module) => {
     constructor(data) {
       this.data = data;
     }
+    setId(id) {
+      this.data.id = idValidator.parse(id);
+      return this;
+    }
+    clearId() {
+      this.data.id = undefined;
+      return this;
+    }
   };
-  var import_v1010 = require_v106();
+  var import_v1018 = require_v106();
   var import_v102 = require_v106();
   var ButtonBuilder = class extends ComponentBuilder {
     static {
@@ -15735,39 +17927,376 @@ var require_dist8 = __commonJS((exports, module) => {
       return (0, import_fast_deep_equal.default)(other, this.data);
     }
   };
+  var import_v1015 = require_v106();
+  var Assertions_exports4 = {};
+  __export(Assertions_exports4, {
+    accessoryPredicate: () => accessoryPredicate,
+    assertReturnOfBuilder: () => assertReturnOfBuilder,
+    containerColorPredicate: () => containerColorPredicate,
+    descriptionPredicate: () => descriptionPredicate2,
+    dividerPredicate: () => dividerPredicate,
+    filePredicate: () => filePredicate,
+    spacingPredicate: () => spacingPredicate,
+    spoilerPredicate: () => spoilerPredicate,
+    textDisplayContentPredicate: () => textDisplayContentPredicate,
+    unfurledMediaItemPredicate: () => unfurledMediaItemPredicate,
+    validateComponentArray: () => validateComponentArray
+  });
+  var import_shapeshift4 = require_cjs3();
+  var import_v1011 = require_v106();
+  var import_v1010 = require_v106();
+  var ThumbnailBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "ThumbnailBuilder");
+    }
+    constructor(data = {}) {
+      super({
+        type: import_v1010.ComponentType.Thumbnail,
+        ...data,
+        media: data.media ? { url: data.media.url } : undefined
+      });
+    }
+    setDescription(description) {
+      this.data.description = descriptionPredicate2.parse(description);
+      return this;
+    }
+    clearDescription() {
+      this.data.description = undefined;
+      return this;
+    }
+    setSpoiler(spoiler = true) {
+      this.data.spoiler = spoilerPredicate.parse(spoiler);
+      return this;
+    }
+    setURL(url) {
+      this.data.media = unfurledMediaItemPredicate.parse({ url });
+      return this;
+    }
+    toJSON() {
+      unfurledMediaItemPredicate.parse(this.data.media);
+      return { ...this.data };
+    }
+  };
+  var unfurledMediaItemPredicate = import_shapeshift4.s.object({
+    url: import_shapeshift4.s.string().url({ allowedProtocols: ["http:", "https:", "attachment:"] }, { message: "Invalid protocol for media URL. Must be http:, https:, or attachment:" })
+  }).setValidationEnabled(isValidationEnabled);
+  var descriptionPredicate2 = import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(1024).setValidationEnabled(isValidationEnabled);
+  var filePredicate = import_shapeshift4.s.object({
+    url: import_shapeshift4.s.string().url({ allowedProtocols: ["attachment:"] }, { message: "Invalid protocol for file URL. Must be attachment:" })
+  }).setValidationEnabled(isValidationEnabled);
+  var spoilerPredicate = import_shapeshift4.s.boolean();
+  var dividerPredicate = import_shapeshift4.s.boolean();
+  var spacingPredicate = import_shapeshift4.s.nativeEnum(import_v1011.SeparatorSpacingSize);
+  var textDisplayContentPredicate = import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var accessoryPredicate = import_shapeshift4.s.instance(ButtonBuilder).or(import_shapeshift4.s.instance(ThumbnailBuilder)).setValidationEnabled(isValidationEnabled);
+  var containerColorPredicate = colorPredicate.nullish();
+  function assertReturnOfBuilder(input, ExpectedInstanceOf) {
+    import_shapeshift4.s.instance(ExpectedInstanceOf).setValidationEnabled(isValidationEnabled).parse(input);
+  }
+  __name(assertReturnOfBuilder, "assertReturnOfBuilder");
+  function validateComponentArray(input, min, max, ExpectedInstanceOf) {
+    (ExpectedInstanceOf ? import_shapeshift4.s.instance(ExpectedInstanceOf) : import_shapeshift4.s.instance(ComponentBuilder)).array().lengthGreaterThanOrEqual(min).lengthLessThanOrEqual(max).setValidationEnabled(isValidationEnabled).parse(input);
+  }
+  __name(validateComponentArray, "validateComponentArray");
+  var import_v1012 = require_v106();
+  var FileBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "FileBuilder");
+    }
+    constructor(data = {}) {
+      super({ type: import_v1012.ComponentType.File, ...data, file: data.file ? { url: data.file.url } : undefined });
+    }
+    setSpoiler(spoiler = true) {
+      this.data.spoiler = spoilerPredicate.parse(spoiler);
+      return this;
+    }
+    setURL(url) {
+      this.data.file = filePredicate.parse({ url });
+      return this;
+    }
+    toJSON() {
+      filePredicate.parse(this.data.file);
+      return { ...this.data, file: { ...this.data.file } };
+    }
+  };
+  var import_v1013 = require_v106();
+  var SeparatorBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "SeparatorBuilder");
+    }
+    constructor(data = {}) {
+      super({
+        type: import_v1013.ComponentType.Separator,
+        ...data
+      });
+    }
+    setDivider(divider = true) {
+      this.data.divider = dividerPredicate.parse(divider);
+      return this;
+    }
+    setSpacing(spacing) {
+      this.data.spacing = spacingPredicate.parse(spacing);
+      return this;
+    }
+    clearSpacing() {
+      this.data.spacing = undefined;
+      return this;
+    }
+    toJSON() {
+      return { ...this.data };
+    }
+  };
+  var import_v1014 = require_v106();
+  var TextDisplayBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "TextDisplayBuilder");
+    }
+    constructor(data = {}) {
+      super({
+        type: import_v1014.ComponentType.TextDisplay,
+        ...data
+      });
+    }
+    setContent(content) {
+      this.data.content = textDisplayContentPredicate.parse(content);
+      return this;
+    }
+    toJSON() {
+      textDisplayContentPredicate.parse(this.data.content);
+      return { ...this.data };
+    }
+  };
+  var ContainerBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "ContainerBuilder");
+    }
+    components;
+    constructor({ components, ...data } = {}) {
+      super({ type: import_v1015.ComponentType.Container, ...data });
+      this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
+    }
+    setAccentColor(color) {
+      containerColorPredicate.parse(color);
+      if (Array.isArray(color)) {
+        const [red, green, blue] = color;
+        this.data.accent_color = (red << 16) + (green << 8) + blue;
+        return this;
+      }
+      this.data.accent_color = color;
+      return this;
+    }
+    clearAccentColor() {
+      this.data.accent_color = undefined;
+      return this;
+    }
+    addActionRowComponents(...components) {
+      this.components.push(...normalizeArray(components).map((component) => resolveBuilder(component, ActionRowBuilder)));
+      return this;
+    }
+    addFileComponents(...components) {
+      this.components.push(...normalizeArray(components).map((component) => resolveBuilder(component, FileBuilder)));
+      return this;
+    }
+    addMediaGalleryComponents(...components) {
+      this.components.push(...normalizeArray(components).map((component) => resolveBuilder(component, MediaGalleryBuilder)));
+      return this;
+    }
+    addSectionComponents(...components) {
+      this.components.push(...normalizeArray(components).map((component) => resolveBuilder(component, SectionBuilder)));
+      return this;
+    }
+    addSeparatorComponents(...components) {
+      this.components.push(...normalizeArray(components).map((component) => resolveBuilder(component, SeparatorBuilder)));
+      return this;
+    }
+    addTextDisplayComponents(...components) {
+      this.components.push(...normalizeArray(components).map((component) => resolveBuilder(component, TextDisplayBuilder)));
+      return this;
+    }
+    spliceComponents(index, deleteCount, ...components) {
+      this.components.splice(index, deleteCount, ...normalizeArray(components).map((component) => component instanceof ComponentBuilder ? component : createComponentBuilder(component)));
+      return this;
+    }
+    setSpoiler(spoiler = true) {
+      this.data.spoiler = spoilerPredicate.parse(spoiler);
+      return this;
+    }
+    toJSON() {
+      return {
+        ...this.data,
+        components: this.components.map((component) => component.toJSON())
+      };
+    }
+  };
+  var import_v1016 = require_v106();
+  var MediaGalleryItemBuilder = class {
+    static {
+      __name(this, "MediaGalleryItemBuilder");
+    }
+    data;
+    constructor(data = {}) {
+      this.data = data;
+    }
+    setDescription(description) {
+      this.data.description = descriptionPredicate2.parse(description);
+      return this;
+    }
+    clearDescription() {
+      this.data.description = undefined;
+      return this;
+    }
+    setSpoiler(spoiler = true) {
+      this.data.spoiler = spoilerPredicate.parse(spoiler);
+      return this;
+    }
+    setURL(url) {
+      this.data.media = unfurledMediaItemPredicate.parse({ url });
+      return this;
+    }
+    toJSON() {
+      unfurledMediaItemPredicate.parse(this.data.media);
+      return { ...this.data };
+    }
+  };
+  var MediaGalleryBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "MediaGalleryBuilder");
+    }
+    items;
+    constructor({ items, ...data } = {}) {
+      super({ type: import_v1016.ComponentType.MediaGallery, ...data });
+      this.items = items?.map((item) => new MediaGalleryItemBuilder(item)) ?? [];
+    }
+    addItems(...items) {
+      this.items.push(...normalizeArray(items).map((input) => {
+        const result = resolveBuilder(input, MediaGalleryItemBuilder);
+        assertReturnOfBuilder(result, MediaGalleryItemBuilder);
+        return result;
+      }));
+      return this;
+    }
+    spliceItems(index, deleteCount, ...items) {
+      this.items.splice(index, deleteCount, ...normalizeArray(items).map((input) => {
+        const result = resolveBuilder(input, MediaGalleryItemBuilder);
+        assertReturnOfBuilder(result, MediaGalleryItemBuilder);
+        return result;
+      }));
+      return this;
+    }
+    toJSON() {
+      validateComponentArray(this.items, 1, 10, MediaGalleryItemBuilder);
+      return {
+        ...this.data,
+        items: this.items.map((item) => item.toJSON())
+      };
+    }
+  };
+  var import_v1017 = require_v106();
+  var SectionBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "SectionBuilder");
+    }
+    components;
+    accessory;
+    constructor({ components, accessory, ...data } = {}) {
+      super({ type: import_v1017.ComponentType.Section, ...data });
+      this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
+      this.accessory = accessory ? createComponentBuilder(accessory) : undefined;
+    }
+    setButtonAccessory(accessory) {
+      Reflect.set(this, "accessory", accessoryPredicate.parse(resolveBuilder(accessory, ButtonBuilder)));
+      return this;
+    }
+    setThumbnailAccessory(accessory) {
+      Reflect.set(this, "accessory", accessoryPredicate.parse(resolveBuilder(accessory, ThumbnailBuilder)));
+      return this;
+    }
+    addTextDisplayComponents(...components) {
+      this.components.push(...normalizeArray(components).map((input) => {
+        const result = resolveBuilder(input, TextDisplayBuilder);
+        assertReturnOfBuilder(result, TextDisplayBuilder);
+        return result;
+      }));
+      return this;
+    }
+    spliceTextDisplayComponents(index, deleteCount, ...components) {
+      this.components.splice(index, deleteCount, ...normalizeArray(components).map((input) => {
+        const result = resolveBuilder(input, TextDisplayBuilder);
+        assertReturnOfBuilder(result, TextDisplayBuilder);
+        return result;
+      }));
+      return this;
+    }
+    toJSON() {
+      validateComponentArray(this.components, 1, 3, TextDisplayBuilder);
+      return {
+        ...this.data,
+        components: this.components.map((component) => component.toJSON()),
+        accessory: accessoryPredicate.parse(this.accessory).toJSON()
+      };
+    }
+  };
   function createComponentBuilder(data) {
     if (data instanceof ComponentBuilder) {
       return data;
     }
     switch (data.type) {
-      case import_v1010.ComponentType.ActionRow:
+      case import_v1018.ComponentType.ActionRow:
         return new ActionRowBuilder(data);
-      case import_v1010.ComponentType.Button:
+      case import_v1018.ComponentType.Button:
         return new ButtonBuilder(data);
-      case import_v1010.ComponentType.StringSelect:
+      case import_v1018.ComponentType.StringSelect:
         return new StringSelectMenuBuilder(data);
-      case import_v1010.ComponentType.TextInput:
+      case import_v1018.ComponentType.TextInput:
         return new TextInputBuilder(data);
-      case import_v1010.ComponentType.UserSelect:
+      case import_v1018.ComponentType.UserSelect:
         return new UserSelectMenuBuilder(data);
-      case import_v1010.ComponentType.RoleSelect:
+      case import_v1018.ComponentType.RoleSelect:
         return new RoleSelectMenuBuilder(data);
-      case import_v1010.ComponentType.MentionableSelect:
+      case import_v1018.ComponentType.MentionableSelect:
         return new MentionableSelectMenuBuilder(data);
-      case import_v1010.ComponentType.ChannelSelect:
+      case import_v1018.ComponentType.ChannelSelect:
         return new ChannelSelectMenuBuilder(data);
+      case import_v1018.ComponentType.File:
+        return new FileBuilder(data);
+      case import_v1018.ComponentType.Container:
+        return new ContainerBuilder(data);
+      case import_v1018.ComponentType.Section:
+        return new SectionBuilder(data);
+      case import_v1018.ComponentType.Separator:
+        return new SeparatorBuilder(data);
+      case import_v1018.ComponentType.TextDisplay:
+        return new TextDisplayBuilder(data);
+      case import_v1018.ComponentType.Thumbnail:
+        return new ThumbnailBuilder(data);
+      case import_v1018.ComponentType.MediaGallery:
+        return new MediaGalleryBuilder(data);
       default:
         throw new Error(`Cannot properly serialize component type: ${data.type}`);
     }
   }
   __name(createComponentBuilder, "createComponentBuilder");
+  function isBuilder(builder, Constructor) {
+    return builder instanceof Constructor;
+  }
+  __name(isBuilder, "isBuilder");
+  function resolveBuilder(builder, Constructor) {
+    if (isBuilder(builder, Constructor)) {
+      return builder;
+    }
+    if (typeof builder === "function") {
+      return builder(new Constructor);
+    }
+    return new Constructor(builder);
+  }
+  __name(resolveBuilder, "resolveBuilder");
   var ActionRowBuilder = class extends ComponentBuilder {
     static {
       __name(this, "ActionRowBuilder");
     }
     components;
     constructor({ components, ...data } = {}) {
-      super({ type: import_v1011.ComponentType.ActionRow, ...data });
+      super({ type: import_v1019.ComponentType.ActionRow, ...data });
       this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
     }
     addComponents(...components) {
@@ -15785,15 +18314,15 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var Assertions_exports4 = {};
-  __export(Assertions_exports4, {
+  var Assertions_exports5 = {};
+  __export(Assertions_exports5, {
     componentsValidator: () => componentsValidator,
     titleValidator: () => titleValidator,
     validateRequiredParameters: () => validateRequiredParameters2
   });
-  var import_shapeshift4 = require_cjs3();
-  var titleValidator = import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
-  var componentsValidator = import_shapeshift4.s.instance(ActionRowBuilder).array().lengthGreaterThanOrEqual(1).setValidationEnabled(isValidationEnabled);
+  var import_shapeshift5 = require_cjs3();
+  var titleValidator = import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
+  var componentsValidator = import_shapeshift5.s.instance(ActionRowBuilder).array().lengthGreaterThanOrEqual(1).setValidationEnabled(isValidationEnabled);
   function validateRequiredParameters2(customId, title, components) {
     customIdValidator.parse(customId);
     titleValidator.parse(title);
@@ -15834,9 +18363,9 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var Assertions_exports5 = {};
-  __export(Assertions_exports5, {
-    assertReturnOfBuilder: () => assertReturnOfBuilder,
+  var Assertions_exports6 = {};
+  __export(Assertions_exports6, {
+    assertReturnOfBuilder: () => assertReturnOfBuilder2,
     contextsPredicate: () => contextsPredicate,
     integrationTypesPredicate: () => integrationTypesPredicate,
     localizationMapPredicate: () => localizationMapPredicate,
@@ -15853,20 +18382,20 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequired: () => validateRequired,
     validateRequiredParameters: () => validateRequiredParameters3
   });
-  var import_shapeshift5 = require_cjs3();
-  var import_v1012 = require_v106();
-  var namePredicate = import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
+  var import_shapeshift6 = require_cjs3();
+  var import_v1020 = require_v106();
+  var namePredicate = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
   function validateName(name) {
     namePredicate.parse(name);
   }
   __name(validateName, "validateName");
-  var descriptionPredicate2 = import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
-  var localePredicate = import_shapeshift5.s.nativeEnum(import_v1012.Locale);
+  var descriptionPredicate3 = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
+  var localePredicate = import_shapeshift6.s.nativeEnum(import_v1020.Locale);
   function validateDescription(description) {
-    descriptionPredicate2.parse(description);
+    descriptionPredicate3.parse(description);
   }
   __name(validateDescription, "validateDescription");
-  var maxArrayLengthPredicate = import_shapeshift5.s.unknown().array().lengthLessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
+  var maxArrayLengthPredicate = import_shapeshift6.s.unknown().array().lengthLessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
   function validateLocale(locale) {
     return localePredicate.parse(locale);
   }
@@ -15881,7 +18410,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateMaxOptionsLength(options);
   }
   __name(validateRequiredParameters3, "validateRequiredParameters");
-  var booleanPredicate = import_shapeshift5.s.boolean();
+  var booleanPredicate = import_shapeshift6.s.boolean();
   function validateDefaultPermission(value) {
     booleanPredicate.parse(value);
   }
@@ -15890,29 +18419,29 @@ var require_dist8 = __commonJS((exports, module) => {
     booleanPredicate.parse(required);
   }
   __name(validateRequired, "validateRequired");
-  var choicesLengthPredicate = import_shapeshift5.s.number().lessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
+  var choicesLengthPredicate = import_shapeshift6.s.number().lessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
   function validateChoicesLength(amountAdding, choices) {
     choicesLengthPredicate.parse((choices?.length ?? 0) + amountAdding);
   }
   __name(validateChoicesLength, "validateChoicesLength");
-  function assertReturnOfBuilder(input, ExpectedInstanceOf) {
-    import_shapeshift5.s.instance(ExpectedInstanceOf).parse(input);
+  function assertReturnOfBuilder2(input, ExpectedInstanceOf) {
+    import_shapeshift6.s.instance(ExpectedInstanceOf).parse(input);
   }
-  __name(assertReturnOfBuilder, "assertReturnOfBuilder");
-  var localizationMapPredicate = import_shapeshift5.s.object(Object.fromEntries(Object.values(import_v1012.Locale).map((locale) => [locale, import_shapeshift5.s.string().nullish()]))).strict().nullish().setValidationEnabled(isValidationEnabled);
+  __name(assertReturnOfBuilder2, "assertReturnOfBuilder");
+  var localizationMapPredicate = import_shapeshift6.s.object(Object.fromEntries(Object.values(import_v1020.Locale).map((locale) => [locale, import_shapeshift6.s.string().nullish()]))).strict().nullish().setValidationEnabled(isValidationEnabled);
   function validateLocalizationMap(value) {
     localizationMapPredicate.parse(value);
   }
   __name(validateLocalizationMap, "validateLocalizationMap");
-  var dmPermissionPredicate = import_shapeshift5.s.boolean().nullish();
+  var dmPermissionPredicate = import_shapeshift6.s.boolean().nullish();
   function validateDMPermission(value) {
     dmPermissionPredicate.parse(value);
   }
   __name(validateDMPermission, "validateDMPermission");
-  var memberPermissionPredicate = import_shapeshift5.s.union([
-    import_shapeshift5.s.bigint().transform((value) => value.toString()),
-    import_shapeshift5.s.number().safeInt().transform((value) => value.toString()),
-    import_shapeshift5.s.string().regex(/^\d+$/)
+  var memberPermissionPredicate = import_shapeshift6.s.union([
+    import_shapeshift6.s.bigint().transform((value) => value.toString()),
+    import_shapeshift6.s.number().safeInt().transform((value) => value.toString()),
+    import_shapeshift6.s.string().regex(/^\d+$/)
   ]).nullish();
   function validateDefaultMemberPermissions(permissions) {
     return memberPermissionPredicate.parse(permissions);
@@ -15922,8 +18451,8 @@ var require_dist8 = __commonJS((exports, module) => {
     booleanPredicate.parse(value);
   }
   __name(validateNSFW, "validateNSFW");
-  var contextsPredicate = import_shapeshift5.s.array(import_shapeshift5.s.nativeEnum(import_v1012.InteractionContextType).setValidationEnabled(isValidationEnabled));
-  var integrationTypesPredicate = import_shapeshift5.s.array(import_shapeshift5.s.nativeEnum(import_v1012.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
+  var contextsPredicate = import_shapeshift6.s.array(import_shapeshift6.s.nativeEnum(import_v1020.InteractionContextType).setValidationEnabled(isValidationEnabled));
+  var integrationTypesPredicate = import_shapeshift6.s.array(import_shapeshift6.s.nativeEnum(import_v1020.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
   var import_ts_mixer6 = require_cjs4();
   var SharedNameAndDescription = class {
     static {
@@ -15992,7 +18521,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1013 = require_v106();
+  var import_v1021 = require_v106();
   var SharedSlashCommand = class {
     static {
       __name(this, "SharedSlashCommand");
@@ -16042,12 +18571,12 @@ var require_dist8 = __commonJS((exports, module) => {
       validateLocalizationMap(this.description_localizations);
       return {
         ...this,
-        type: import_v1013.ApplicationCommandType.ChatInput,
+        type: import_v1021.ApplicationCommandType.ChatInput,
         options: this.options.map((option) => option.toJSON())
       };
     }
   };
-  var import_v1014 = require_v106();
+  var import_v1022 = require_v106();
   var ApplicationCommandOptionBase = class extends SharedNameAndDescription {
     static {
       __name(this, "ApplicationCommandOptionBase");
@@ -16069,40 +18598,40 @@ var require_dist8 = __commonJS((exports, module) => {
     static {
       __name(this, "SlashCommandAttachmentOption");
     }
-    type = import_v1014.ApplicationCommandOptionType.Attachment;
+    type = import_v1022.ApplicationCommandOptionType.Attachment;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_v1015 = require_v106();
+  var import_v1023 = require_v106();
   var SlashCommandBooleanOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandBooleanOption");
     }
-    type = import_v1015.ApplicationCommandOptionType.Boolean;
+    type = import_v1023.ApplicationCommandOptionType.Boolean;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_v1017 = require_v106();
+  var import_v1025 = require_v106();
   var import_ts_mixer = require_cjs4();
-  var import_shapeshift6 = require_cjs3();
-  var import_v1016 = require_v106();
+  var import_shapeshift7 = require_cjs3();
+  var import_v1024 = require_v106();
   var allowedChannelTypes = [
-    import_v1016.ChannelType.GuildText,
-    import_v1016.ChannelType.GuildVoice,
-    import_v1016.ChannelType.GuildCategory,
-    import_v1016.ChannelType.GuildAnnouncement,
-    import_v1016.ChannelType.AnnouncementThread,
-    import_v1016.ChannelType.PublicThread,
-    import_v1016.ChannelType.PrivateThread,
-    import_v1016.ChannelType.GuildStageVoice,
-    import_v1016.ChannelType.GuildForum,
-    import_v1016.ChannelType.GuildMedia
+    import_v1024.ChannelType.GuildText,
+    import_v1024.ChannelType.GuildVoice,
+    import_v1024.ChannelType.GuildCategory,
+    import_v1024.ChannelType.GuildAnnouncement,
+    import_v1024.ChannelType.AnnouncementThread,
+    import_v1024.ChannelType.PublicThread,
+    import_v1024.ChannelType.PrivateThread,
+    import_v1024.ChannelType.GuildStageVoice,
+    import_v1024.ChannelType.GuildForum,
+    import_v1024.ChannelType.GuildMedia
   ];
-  var channelTypesPredicate = import_shapeshift6.s.array(import_shapeshift6.s.union(allowedChannelTypes.map((type) => import_shapeshift6.s.literal(type))));
+  var channelTypesPredicate = import_shapeshift7.s.array(import_shapeshift7.s.union(allowedChannelTypes.map((type) => import_shapeshift7.s.literal(type))));
   var ApplicationCommandOptionChannelTypesMixin = class {
     static {
       __name(this, "ApplicationCommandOptionChannelTypesMixin");
@@ -16117,7 +18646,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var SlashCommandChannelOption = class extends ApplicationCommandOptionBase {
-    type = import_v1017.ApplicationCommandOptionType.Channel;
+    type = import_v1025.ApplicationCommandOptionType.Channel;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
@@ -16127,8 +18656,8 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandChannelOption = __decorateClass([
     (0, import_ts_mixer.mix)(ApplicationCommandOptionChannelTypesMixin)
   ], SlashCommandChannelOption);
-  var import_shapeshift9 = require_cjs3();
-  var import_v1019 = require_v106();
+  var import_shapeshift10 = require_cjs3();
+  var import_v1027 = require_v106();
   var import_ts_mixer2 = require_cjs4();
   var ApplicationCommandNumericOptionMinMaxValueMixin = class {
     static {
@@ -16137,8 +18666,8 @@ var require_dist8 = __commonJS((exports, module) => {
     max_value;
     min_value;
   };
-  var import_shapeshift7 = require_cjs3();
-  var booleanPredicate2 = import_shapeshift7.s.boolean();
+  var import_shapeshift8 = require_cjs3();
+  var booleanPredicate2 = import_shapeshift8.s.boolean();
   var ApplicationCommandOptionWithAutocompleteMixin = class {
     static {
       __name(this, "ApplicationCommandOptionWithAutocompleteMixin");
@@ -16154,14 +18683,14 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_shapeshift8 = require_cjs3();
-  var import_v1018 = require_v106();
-  var stringPredicate = import_shapeshift8.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
-  var numberPredicate = import_shapeshift8.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
-  var choicesPredicate = import_shapeshift8.s.object({
+  var import_shapeshift9 = require_cjs3();
+  var import_v1026 = require_v106();
+  var stringPredicate = import_shapeshift9.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
+  var numberPredicate = import_shapeshift9.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
+  var choicesPredicate = import_shapeshift9.s.object({
     name: stringPredicate,
     name_localizations: localizationMapPredicate,
-    value: import_shapeshift8.s.union([stringPredicate, numberPredicate])
+    value: import_shapeshift9.s.union([stringPredicate, numberPredicate])
   }).array();
   var ApplicationCommandOptionWithChoicesMixin = class {
     static {
@@ -16180,7 +18709,7 @@ var require_dist8 = __commonJS((exports, module) => {
       }
       validateChoicesLength(normalizedChoices.length, this.choices);
       for (const { name, name_localizations, value } of normalizedChoices) {
-        if (this.type === import_v1018.ApplicationCommandOptionType.String) {
+        if (this.type === import_v1026.ApplicationCommandOptionType.String) {
           stringPredicate.parse(value);
         } else {
           numberPredicate.parse(value);
@@ -16200,9 +18729,9 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var numberValidator = import_shapeshift9.s.number().int();
+  var numberValidator = import_shapeshift10.s.number().int();
   var SlashCommandIntegerOption = class extends ApplicationCommandOptionBase {
-    type = import_v1019.ApplicationCommandOptionType.Integer;
+    type = import_v1027.ApplicationCommandOptionType.Integer;
     setMaxValue(max) {
       numberValidator.parse(max);
       Reflect.set(this, "max_value", max);
@@ -16225,23 +18754,23 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandIntegerOption = __decorateClass([
     (0, import_ts_mixer2.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandIntegerOption);
-  var import_v1020 = require_v106();
+  var import_v1028 = require_v106();
   var SlashCommandMentionableOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandMentionableOption");
     }
-    type = import_v1020.ApplicationCommandOptionType.Mentionable;
+    type = import_v1028.ApplicationCommandOptionType.Mentionable;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_shapeshift10 = require_cjs3();
-  var import_v1021 = require_v106();
+  var import_shapeshift11 = require_cjs3();
+  var import_v1029 = require_v106();
   var import_ts_mixer3 = require_cjs4();
-  var numberValidator2 = import_shapeshift10.s.number();
+  var numberValidator2 = import_shapeshift11.s.number();
   var SlashCommandNumberOption = class extends ApplicationCommandOptionBase {
-    type = import_v1021.ApplicationCommandOptionType.Number;
+    type = import_v1029.ApplicationCommandOptionType.Number;
     setMaxValue(max) {
       numberValidator2.parse(max);
       Reflect.set(this, "max_value", max);
@@ -16264,24 +18793,24 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandNumberOption = __decorateClass([
     (0, import_ts_mixer3.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandNumberOption);
-  var import_v1022 = require_v106();
+  var import_v1030 = require_v106();
   var SlashCommandRoleOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandRoleOption");
     }
-    type = import_v1022.ApplicationCommandOptionType.Role;
+    type = import_v1030.ApplicationCommandOptionType.Role;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_shapeshift11 = require_cjs3();
-  var import_v1023 = require_v106();
+  var import_shapeshift12 = require_cjs3();
+  var import_v1031 = require_v106();
   var import_ts_mixer4 = require_cjs4();
-  var minLengthValidator2 = import_shapeshift11.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
-  var maxLengthValidator2 = import_shapeshift11.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
+  var minLengthValidator2 = import_shapeshift12.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
+  var maxLengthValidator2 = import_shapeshift12.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
   var SlashCommandStringOption = class extends ApplicationCommandOptionBase {
-    type = import_v1023.ApplicationCommandOptionType.String;
+    type = import_v1031.ApplicationCommandOptionType.String;
     max_length;
     min_length;
     setMaxLength(max) {
@@ -16306,12 +18835,12 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandStringOption = __decorateClass([
     (0, import_ts_mixer4.mix)(ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandStringOption);
-  var import_v1024 = require_v106();
+  var import_v1032 = require_v106();
   var SlashCommandUserOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandUserOption");
     }
-    type = import_v1024.ApplicationCommandOptionType.User;
+    type = import_v1032.ApplicationCommandOptionType.User;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
@@ -16353,12 +18882,12 @@ var require_dist8 = __commonJS((exports, module) => {
       const { options } = this;
       validateMaxOptionsLength(options);
       const result = typeof input === "function" ? input(new Instance) : input;
-      assertReturnOfBuilder(result, Instance);
+      assertReturnOfBuilder2(result, Instance);
       options.push(result);
       return this;
     }
   };
-  var import_v1025 = require_v106();
+  var import_v1033 = require_v106();
   var import_ts_mixer5 = require_cjs4();
   var SlashCommandSubcommandGroupBuilder = class {
     name = undefined;
@@ -16368,14 +18897,14 @@ var require_dist8 = __commonJS((exports, module) => {
       const { options } = this;
       validateMaxOptionsLength(options);
       const result = typeof input === "function" ? input(new SlashCommandSubcommandBuilder) : input;
-      assertReturnOfBuilder(result, SlashCommandSubcommandBuilder);
+      assertReturnOfBuilder2(result, SlashCommandSubcommandBuilder);
       options.push(result);
       return this;
     }
     toJSON() {
       validateRequiredParameters3(this.name, this.description, this.options);
       return {
-        type: import_v1025.ApplicationCommandOptionType.SubcommandGroup,
+        type: import_v1033.ApplicationCommandOptionType.SubcommandGroup,
         name: this.name,
         name_localizations: this.name_localizations,
         description: this.description,
@@ -16395,7 +18924,7 @@ var require_dist8 = __commonJS((exports, module) => {
     toJSON() {
       validateRequiredParameters3(this.name, this.description, this.options);
       return {
-        type: import_v1025.ApplicationCommandOptionType.Subcommand,
+        type: import_v1033.ApplicationCommandOptionType.Subcommand,
         name: this.name,
         name_localizations: this.name_localizations,
         description: this.description,
@@ -16417,7 +18946,7 @@ var require_dist8 = __commonJS((exports, module) => {
       const { options } = this;
       validateMaxOptionsLength(options);
       const result = typeof input === "function" ? input(new SlashCommandSubcommandGroupBuilder) : input;
-      assertReturnOfBuilder(result, SlashCommandSubcommandGroupBuilder);
+      assertReturnOfBuilder2(result, SlashCommandSubcommandGroupBuilder);
       options.push(result);
       return this;
     }
@@ -16425,7 +18954,7 @@ var require_dist8 = __commonJS((exports, module) => {
       const { options } = this;
       validateMaxOptionsLength(options);
       const result = typeof input === "function" ? input(new SlashCommandSubcommandBuilder) : input;
-      assertReturnOfBuilder(result, SlashCommandSubcommandBuilder);
+      assertReturnOfBuilder2(result, SlashCommandSubcommandBuilder);
       options.push(result);
       return this;
     }
@@ -16447,8 +18976,8 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandBuilder = __decorateClass([
     (0, import_ts_mixer6.mix)(SharedSlashCommandOptions, SharedNameAndDescription, SharedSlashCommandSubcommands, SharedSlashCommand)
   ], SlashCommandBuilder);
-  var Assertions_exports6 = {};
-  __export(Assertions_exports6, {
+  var Assertions_exports7 = {};
+  __export(Assertions_exports7, {
     contextsPredicate: () => contextsPredicate2,
     integrationTypesPredicate: () => integrationTypesPredicate2,
     validateDMPermission: () => validateDMPermission2,
@@ -16458,11 +18987,11 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredParameters: () => validateRequiredParameters4,
     validateType: () => validateType
   });
-  var import_shapeshift12 = require_cjs3();
-  var import_v1026 = require_v106();
-  var namePredicate2 = import_shapeshift12.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^( *[\p{P}\p{L}\p{N}\p{sc=Devanagari}\p{sc=Thai}]+ *)+$/u).setValidationEnabled(isValidationEnabled);
-  var typePredicate = import_shapeshift12.s.union([import_shapeshift12.s.literal(import_v1026.ApplicationCommandType.User), import_shapeshift12.s.literal(import_v1026.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
-  var booleanPredicate3 = import_shapeshift12.s.boolean();
+  var import_shapeshift13 = require_cjs3();
+  var import_v1034 = require_v106();
+  var namePredicate2 = import_shapeshift13.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^( *[\p{P}\p{L}\p{N}\p{sc=Devanagari}\p{sc=Thai}]+ *)+$/u).setValidationEnabled(isValidationEnabled);
+  var typePredicate = import_shapeshift13.s.union([import_shapeshift13.s.literal(import_v1034.ApplicationCommandType.User), import_shapeshift13.s.literal(import_v1034.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
+  var booleanPredicate3 = import_shapeshift13.s.boolean();
   function validateDefaultPermission2(value) {
     booleanPredicate3.parse(value);
   }
@@ -16480,22 +19009,22 @@ var require_dist8 = __commonJS((exports, module) => {
     validateType(type);
   }
   __name(validateRequiredParameters4, "validateRequiredParameters");
-  var dmPermissionPredicate2 = import_shapeshift12.s.boolean().nullish();
+  var dmPermissionPredicate2 = import_shapeshift13.s.boolean().nullish();
   function validateDMPermission2(value) {
     dmPermissionPredicate2.parse(value);
   }
   __name(validateDMPermission2, "validateDMPermission");
-  var memberPermissionPredicate2 = import_shapeshift12.s.union([
-    import_shapeshift12.s.bigint().transform((value) => value.toString()),
-    import_shapeshift12.s.number().safeInt().transform((value) => value.toString()),
-    import_shapeshift12.s.string().regex(/^\d+$/)
+  var memberPermissionPredicate2 = import_shapeshift13.s.union([
+    import_shapeshift13.s.bigint().transform((value) => value.toString()),
+    import_shapeshift13.s.number().safeInt().transform((value) => value.toString()),
+    import_shapeshift13.s.string().regex(/^\d+$/)
   ]).nullish();
   function validateDefaultMemberPermissions2(permissions) {
     return memberPermissionPredicate2.parse(permissions);
   }
   __name(validateDefaultMemberPermissions2, "validateDefaultMemberPermissions");
-  var contextsPredicate2 = import_shapeshift12.s.array(import_shapeshift12.s.nativeEnum(import_v1026.InteractionContextType).setValidationEnabled(isValidationEnabled));
-  var integrationTypesPredicate2 = import_shapeshift12.s.array(import_shapeshift12.s.nativeEnum(import_v1026.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
+  var contextsPredicate2 = import_shapeshift13.s.array(import_shapeshift13.s.nativeEnum(import_v1034.InteractionContextType).setValidationEnabled(isValidationEnabled));
+  var integrationTypesPredicate2 = import_shapeshift13.s.array(import_shapeshift13.s.nativeEnum(import_v1034.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
   var ContextMenuCommandBuilder = class {
     static {
       __name(this, "ContextMenuCommandBuilder");
@@ -16574,2616 +19103,7 @@ var require_dist8 = __commonJS((exports, module) => {
     return (data.title?.length ?? 0) + (data.description?.length ?? 0) + (data.fields?.reduce((prev, curr) => prev + curr.name.length + curr.value.length, 0) ?? 0) + (data.footer?.text.length ?? 0) + (data.author?.name.length ?? 0);
   }
   __name(embedLength, "embedLength");
-  var version = "1.10.1";
-});
-
-// node_modules/discord.js/src/structures/Component.js
-var require_Component = __commonJS((exports, module) => {
-  var isEqual = require_fast_deep_equal();
-
-  class Component {
-    constructor(data) {
-      this.data = data;
-    }
-    get type() {
-      return this.data.type;
-    }
-    equals(other) {
-      if (other instanceof Component) {
-        return isEqual(other.data, this.data);
-      }
-      return isEqual(other, this.data);
-    }
-    toJSON() {
-      return { ...this.data };
-    }
-  }
-  module.exports = Component;
-});
-
-// node_modules/discord.js/src/structures/ActionRow.js
-var require_ActionRow = __commonJS((exports, module) => {
-  var { deprecate } = __require("node:util");
-  var { isJSONEncodable } = require_dist();
-  var Component = require_Component();
-  var { createComponent } = require_Components();
-
-  class ActionRow extends Component {
-    constructor({ components, ...data }) {
-      super(data);
-      this.components = components.map((component) => createComponent(component));
-    }
-    static from = deprecate((other) => new this(isJSONEncodable(other) ? other.toJSON() : other), "ActionRow.from() is deprecated. Use ActionRowBuilder.from() instead.");
-    toJSON() {
-      return { ...this.data, components: this.components.map((component) => component.toJSON()) };
-    }
-  }
-  module.exports = ActionRow;
-});
-
-// node_modules/discord.js/src/structures/ButtonBuilder.js
-var require_ButtonBuilder = __commonJS((exports, module) => {
-  var { ButtonBuilder: BuildersButton } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { toSnakeCase } = require_Transformers();
-  var { resolvePartialEmoji } = require_Util();
-
-  class ButtonBuilder extends BuildersButton {
-    constructor({ emoji, ...data } = {}) {
-      super(toSnakeCase({ ...data, emoji: emoji && typeof emoji === "string" ? resolvePartialEmoji(emoji) : emoji }));
-    }
-    setEmoji(emoji) {
-      if (typeof emoji === "string") {
-        return super.setEmoji(resolvePartialEmoji(emoji));
-      }
-      return super.setEmoji(emoji);
-    }
-    static from(other) {
-      return new this(isJSONEncodable(other) ? other.toJSON() : other);
-    }
-  }
-  module.exports = ButtonBuilder;
-});
-
-// node_modules/discord.js/src/structures/ButtonComponent.js
-var require_ButtonComponent = __commonJS((exports, module) => {
-  var Component = require_Component();
-
-  class ButtonComponent extends Component {
-    get style() {
-      return this.data.style;
-    }
-    get label() {
-      return this.data.label ?? null;
-    }
-    get emoji() {
-      return this.data.emoji ?? null;
-    }
-    get disabled() {
-      return this.data.disabled ?? false;
-    }
-    get customId() {
-      return this.data.custom_id ?? null;
-    }
-    get url() {
-      return this.data.url ?? null;
-    }
-  }
-  module.exports = ButtonComponent;
-});
-
-// node_modules/discord.js/src/structures/ChannelSelectMenuBuilder.js
-var require_ChannelSelectMenuBuilder = __commonJS((exports, module) => {
-  var { ChannelSelectMenuBuilder: BuildersChannelSelectMenu } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { toSnakeCase } = require_Transformers();
-
-  class ChannelSelectMenuBuilder extends BuildersChannelSelectMenu {
-    constructor(data = {}) {
-      super(toSnakeCase(data));
-    }
-    static from(other) {
-      return new this(isJSONEncodable(other) ? other.toJSON() : other);
-    }
-  }
-  module.exports = ChannelSelectMenuBuilder;
-});
-
-// node_modules/discord.js/src/structures/BaseSelectMenuComponent.js
-var require_BaseSelectMenuComponent = __commonJS((exports, module) => {
-  var Component = require_Component();
-
-  class BaseSelectMenuComponent extends Component {
-    get placeholder() {
-      return this.data.placeholder ?? null;
-    }
-    get maxValues() {
-      return this.data.max_values ?? null;
-    }
-    get minValues() {
-      return this.data.min_values ?? null;
-    }
-    get customId() {
-      return this.data.custom_id;
-    }
-    get disabled() {
-      return this.data.disabled ?? false;
-    }
-  }
-  module.exports = BaseSelectMenuComponent;
-});
-
-// node_modules/discord.js/src/structures/ChannelSelectMenuComponent.js
-var require_ChannelSelectMenuComponent = __commonJS((exports, module) => {
-  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
-
-  class ChannelSelectMenuComponent extends BaseSelectMenuComponent {
-    get channelTypes() {
-      return this.data.channel_types ?? null;
-    }
-  }
-  module.exports = ChannelSelectMenuComponent;
-});
-
-// node_modules/discord.js/src/structures/MentionableSelectMenuBuilder.js
-var require_MentionableSelectMenuBuilder = __commonJS((exports, module) => {
-  var { MentionableSelectMenuBuilder: BuildersMentionableSelectMenu } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { toSnakeCase } = require_Transformers();
-
-  class MentionableSelectMenuBuilder extends BuildersMentionableSelectMenu {
-    constructor(data = {}) {
-      super(toSnakeCase(data));
-    }
-    static from(other) {
-      return new this(isJSONEncodable(other) ? other.toJSON() : other);
-    }
-  }
-  module.exports = MentionableSelectMenuBuilder;
-});
-
-// node_modules/discord.js/src/structures/MentionableSelectMenuComponent.js
-var require_MentionableSelectMenuComponent = __commonJS((exports, module) => {
-  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
-
-  class MentionableSelectMenuComponent extends BaseSelectMenuComponent {
-  }
-  module.exports = MentionableSelectMenuComponent;
-});
-
-// node_modules/discord.js/src/structures/RoleSelectMenuBuilder.js
-var require_RoleSelectMenuBuilder = __commonJS((exports, module) => {
-  var { RoleSelectMenuBuilder: BuildersRoleSelectMenu } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { toSnakeCase } = require_Transformers();
-
-  class RoleSelectMenuBuilder extends BuildersRoleSelectMenu {
-    constructor(data = {}) {
-      super(toSnakeCase(data));
-    }
-    static from(other) {
-      return new this(isJSONEncodable(other) ? other.toJSON() : other);
-    }
-  }
-  module.exports = RoleSelectMenuBuilder;
-});
-
-// node_modules/discord.js/src/structures/RoleSelectMenuComponent.js
-var require_RoleSelectMenuComponent = __commonJS((exports, module) => {
-  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
-
-  class RoleSelectMenuComponent extends BaseSelectMenuComponent {
-  }
-  module.exports = RoleSelectMenuComponent;
-});
-
-// node_modules/discord.js/src/structures/StringSelectMenuBuilder.js
-var require_StringSelectMenuBuilder = __commonJS((exports, module) => {
-  var { SelectMenuBuilder: BuildersSelectMenu, normalizeArray } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { toSnakeCase } = require_Transformers();
-  var { resolvePartialEmoji } = require_Util();
-
-  class StringSelectMenuBuilder extends BuildersSelectMenu {
-    constructor({ options, ...data } = {}) {
-      super(toSnakeCase({
-        ...data,
-        options: options?.map(({ emoji, ...option }) => ({
-          ...option,
-          emoji: emoji && typeof emoji === "string" ? resolvePartialEmoji(emoji) : emoji
-        }))
-      }));
-    }
-    static normalizeEmoji(selectMenuOption) {
-      if (isJSONEncodable(selectMenuOption)) {
-        return selectMenuOption;
-      }
-      const { emoji, ...option } = selectMenuOption;
-      return {
-        ...option,
-        emoji: typeof emoji === "string" ? resolvePartialEmoji(emoji) : emoji
-      };
-    }
-    addOptions(...options) {
-      return super.addOptions(normalizeArray(options).map((option) => StringSelectMenuBuilder.normalizeEmoji(option)));
-    }
-    setOptions(...options) {
-      return super.setOptions(normalizeArray(options).map((option) => StringSelectMenuBuilder.normalizeEmoji(option)));
-    }
-    static from(other) {
-      if (isJSONEncodable(other)) {
-        return new this(other.toJSON());
-      }
-      return new this(other);
-    }
-  }
-  module.exports = StringSelectMenuBuilder;
-});
-
-// node_modules/discord.js/src/structures/StringSelectMenuComponent.js
-var require_StringSelectMenuComponent = __commonJS((exports, module) => {
-  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
-
-  class StringSelectMenuComponent extends BaseSelectMenuComponent {
-    get options() {
-      return this.data.options;
-    }
-  }
-  module.exports = StringSelectMenuComponent;
-});
-
-// node_modules/discord.js/src/structures/TextInputBuilder.js
-var require_TextInputBuilder = __commonJS((exports, module) => {
-  var { TextInputBuilder: BuildersTextInput } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { toSnakeCase } = require_Transformers();
-
-  class TextInputBuilder extends BuildersTextInput {
-    constructor(data) {
-      super(toSnakeCase(data));
-    }
-    static from(other) {
-      return new this(isJSONEncodable(other) ? other.toJSON() : other);
-    }
-  }
-  module.exports = TextInputBuilder;
-});
-
-// node_modules/discord.js/src/structures/TextInputComponent.js
-var require_TextInputComponent = __commonJS((exports, module) => {
-  var Component = require_Component();
-
-  class TextInputComponent extends Component {
-    get customId() {
-      return this.data.custom_id;
-    }
-    get value() {
-      return this.data.value;
-    }
-  }
-  module.exports = TextInputComponent;
-});
-
-// node_modules/discord.js/src/structures/UserSelectMenuBuilder.js
-var require_UserSelectMenuBuilder = __commonJS((exports, module) => {
-  var { UserSelectMenuBuilder: BuildersUserSelectMenu } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { toSnakeCase } = require_Transformers();
-
-  class UserSelectMenuBuilder extends BuildersUserSelectMenu {
-    constructor(data = {}) {
-      super(toSnakeCase(data));
-    }
-    static from(other) {
-      return new this(isJSONEncodable(other) ? other.toJSON() : other);
-    }
-  }
-  module.exports = UserSelectMenuBuilder;
-});
-
-// node_modules/discord.js/src/structures/UserSelectMenuComponent.js
-var require_UserSelectMenuComponent = __commonJS((exports, module) => {
-  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
-
-  class UserSelectMenuComponent extends BaseSelectMenuComponent {
-  }
-  module.exports = UserSelectMenuComponent;
-});
-
-// node_modules/discord.js/src/util/Components.js
-var require_Components = __commonJS((exports, module) => {
-  var { ComponentBuilder } = require_dist8();
-  var { ComponentType } = require_v106();
-  function createComponent(data) {
-    if (data instanceof Component) {
-      return data;
-    }
-    switch (data.type) {
-      case ComponentType.ActionRow:
-        return new ActionRow(data);
-      case ComponentType.Button:
-        return new ButtonComponent(data);
-      case ComponentType.StringSelect:
-        return new StringSelectMenuComponent(data);
-      case ComponentType.TextInput:
-        return new TextInputComponent(data);
-      case ComponentType.UserSelect:
-        return new UserSelectMenuComponent(data);
-      case ComponentType.RoleSelect:
-        return new RoleSelectMenuComponent(data);
-      case ComponentType.MentionableSelect:
-        return new MentionableSelectMenuComponent(data);
-      case ComponentType.ChannelSelect:
-        return new ChannelSelectMenuComponent(data);
-      default:
-        return new Component(data);
-    }
-  }
-  function createComponentBuilder(data) {
-    if (data instanceof ComponentBuilder) {
-      return data;
-    }
-    switch (data.type) {
-      case ComponentType.ActionRow:
-        return new ActionRowBuilder(data);
-      case ComponentType.Button:
-        return new ButtonBuilder(data);
-      case ComponentType.StringSelect:
-        return new StringSelectMenuBuilder(data);
-      case ComponentType.TextInput:
-        return new TextInputBuilder(data);
-      case ComponentType.UserSelect:
-        return new UserSelectMenuBuilder(data);
-      case ComponentType.RoleSelect:
-        return new RoleSelectMenuBuilder(data);
-      case ComponentType.MentionableSelect:
-        return new MentionableSelectMenuBuilder(data);
-      case ComponentType.ChannelSelect:
-        return new ChannelSelectMenuBuilder(data);
-      default:
-        return new ComponentBuilder(data);
-    }
-  }
-  module.exports = { createComponent, createComponentBuilder };
-  var ActionRow = require_ActionRow();
-  var ActionRowBuilder = require_ActionRowBuilder();
-  var ButtonBuilder = require_ButtonBuilder();
-  var ButtonComponent = require_ButtonComponent();
-  var ChannelSelectMenuBuilder = require_ChannelSelectMenuBuilder();
-  var ChannelSelectMenuComponent = require_ChannelSelectMenuComponent();
-  var Component = require_Component();
-  var MentionableSelectMenuBuilder = require_MentionableSelectMenuBuilder();
-  var MentionableSelectMenuComponent = require_MentionableSelectMenuComponent();
-  var RoleSelectMenuBuilder = require_RoleSelectMenuBuilder();
-  var RoleSelectMenuComponent = require_RoleSelectMenuComponent();
-  var StringSelectMenuBuilder = require_StringSelectMenuBuilder();
-  var StringSelectMenuComponent = require_StringSelectMenuComponent();
-  var TextInputBuilder = require_TextInputBuilder();
-  var TextInputComponent = require_TextInputComponent();
-  var UserSelectMenuBuilder = require_UserSelectMenuBuilder();
-  var UserSelectMenuComponent = require_UserSelectMenuComponent();
-});
-
-// node_modules/discord.js/src/structures/ActionRowBuilder.js
-var require_ActionRowBuilder = __commonJS((exports, module) => {
-  var { ActionRowBuilder: BuildersActionRow } = require_dist8();
-  var { isJSONEncodable } = require_dist();
-  var { createComponentBuilder } = require_Components();
-  var { toSnakeCase } = require_Transformers();
-
-  class ActionRowBuilder extends BuildersActionRow {
-    constructor({ components, ...data } = {}) {
-      super({
-        ...toSnakeCase(data),
-        components: components?.map((component) => createComponentBuilder(component))
-      });
-    }
-    static from(other) {
-      return new this(isJSONEncodable(other) ? other.toJSON() : other);
-    }
-  }
-  module.exports = ActionRowBuilder;
-});
-
-// node_modules/discord.js/src/structures/GuildScheduledEvent.js
-var require_GuildScheduledEvent = __commonJS((exports) => {
-  var { DiscordSnowflake } = require_cjs();
-  var { GuildScheduledEventStatus, GuildScheduledEventEntityType, RouteBases } = require_v106();
-  var Base = require_Base();
-  var { DiscordjsError, ErrorCodes } = require_errors();
-
-  class GuildScheduledEvent extends Base {
-    constructor(client, data) {
-      super(client);
-      this.id = data.id;
-      this.guildId = data.guild_id;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("channel_id" in data) {
-        this.channelId = data.channel_id;
-      } else {
-        this.channelId ??= null;
-      }
-      if ("creator_id" in data) {
-        this.creatorId = data.creator_id;
-      } else {
-        this.creatorId ??= null;
-      }
-      if ("name" in data) {
-        this.name = data.name;
-      } else {
-        this.name ??= null;
-      }
-      if ("description" in data) {
-        this.description = data.description;
-      } else {
-        this.description ??= null;
-      }
-      if ("scheduled_start_time" in data) {
-        this.scheduledStartTimestamp = Date.parse(data.scheduled_start_time);
-      } else {
-        this.scheduledStartTimestamp ??= null;
-      }
-      if ("scheduled_end_time" in data) {
-        this.scheduledEndTimestamp = data.scheduled_end_time ? Date.parse(data.scheduled_end_time) : null;
-      } else {
-        this.scheduledEndTimestamp ??= null;
-      }
-      if ("privacy_level" in data) {
-        this.privacyLevel = data.privacy_level;
-      } else {
-        this.privacyLevel ??= null;
-      }
-      if ("status" in data) {
-        this.status = data.status;
-      } else {
-        this.status ??= null;
-      }
-      if ("entity_type" in data) {
-        this.entityType = data.entity_type;
-      } else {
-        this.entityType ??= null;
-      }
-      if ("entity_id" in data) {
-        this.entityId = data.entity_id;
-      } else {
-        this.entityId ??= null;
-      }
-      if ("user_count" in data) {
-        this.userCount = data.user_count;
-      } else {
-        this.userCount ??= null;
-      }
-      if ("creator" in data) {
-        this.creator = this.client.users._add(data.creator);
-      } else {
-        this.creator ??= this.client.users.resolve(this.creatorId);
-      }
-      if ("entity_metadata" in data) {
-        if (data.entity_metadata) {
-          this.entityMetadata = {
-            location: data.entity_metadata.location ?? this.entityMetadata?.location ?? null
-          };
-        } else {
-          this.entityMetadata = null;
-        }
-      } else {
-        this.entityMetadata ??= null;
-      }
-      if ("image" in data) {
-        this.image = data.image;
-      } else {
-        this.image ??= null;
-      }
-      if ("recurrence_rule" in data) {
-        this.recurrenceRule = data.recurrence_rule && {
-          startTimestamp: Date.parse(data.recurrence_rule.start),
-          get startAt() {
-            return new Date(this.startTimestamp);
-          },
-          endTimestamp: data.recurrence_rule.end && Date.parse(data.recurrence_rule.end),
-          get endAt() {
-            return this.endTimestamp && new Date(this.endTimestamp);
-          },
-          frequency: data.recurrence_rule.frequency,
-          interval: data.recurrence_rule.interval,
-          byWeekday: data.recurrence_rule.by_weekday,
-          byNWeekday: data.recurrence_rule.by_n_weekday,
-          byMonth: data.recurrence_rule.by_month,
-          byMonthDay: data.recurrence_rule.by_month_day,
-          byYearDay: data.recurrence_rule.by_year_day,
-          count: data.recurrence_rule.count
-        };
-      } else {
-        this.recurrenceRule ??= null;
-      }
-    }
-    get partial() {
-      return this.name === null;
-    }
-    coverImageURL(options = {}) {
-      return this.image && this.client.rest.cdn.guildScheduledEventCover(this.id, this.image, options);
-    }
-    get createdTimestamp() {
-      return DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    get scheduledStartAt() {
-      return this.scheduledStartTimestamp && new Date(this.scheduledStartTimestamp);
-    }
-    get scheduledEndAt() {
-      return this.scheduledEndTimestamp && new Date(this.scheduledEndTimestamp);
-    }
-    get channel() {
-      return this.client.channels.resolve(this.channelId);
-    }
-    get guild() {
-      return this.client.guilds.resolve(this.guildId);
-    }
-    get url() {
-      return `${RouteBases.scheduledEvent}/${this.guildId}/${this.id}`;
-    }
-    async createInviteURL(options) {
-      let channelId = this.channelId;
-      if (this.entityType === GuildScheduledEventEntityType.External) {
-        if (!options?.channel)
-          throw new DiscordjsError(ErrorCodes.InviteOptionsMissingChannel);
-        channelId = this.guild.channels.resolveId(options.channel);
-        if (!channelId)
-          throw new DiscordjsError(ErrorCodes.GuildChannelResolve);
-      }
-      const invite = await this.guild.invites.create(channelId, options);
-      return `${RouteBases.invite}/${invite.code}?event=${this.id}`;
-    }
-    edit(options) {
-      return this.guild.scheduledEvents.edit(this.id, options);
-    }
-    fetch(force = true) {
-      return this.guild.scheduledEvents.fetch({ guildScheduledEvent: this.id, force });
-    }
-    async delete() {
-      await this.guild.scheduledEvents.delete(this.id);
-      return this;
-    }
-    setName(name, reason) {
-      return this.edit({ name, reason });
-    }
-    setScheduledStartTime(scheduledStartTime, reason) {
-      return this.edit({ scheduledStartTime, reason });
-    }
-    setScheduledEndTime(scheduledEndTime, reason) {
-      return this.edit({ scheduledEndTime, reason });
-    }
-    setDescription(description, reason) {
-      return this.edit({ description, reason });
-    }
-    setStatus(status, reason) {
-      return this.edit({ status, reason });
-    }
-    setLocation(location, reason) {
-      return this.edit({ entityMetadata: { location }, reason });
-    }
-    fetchSubscribers(options) {
-      return this.guild.scheduledEvents.fetchSubscribers(this.id, options);
-    }
-    toString() {
-      return this.url;
-    }
-    isActive() {
-      return this.status === GuildScheduledEventStatus.Active;
-    }
-    isCanceled() {
-      return this.status === GuildScheduledEventStatus.Canceled;
-    }
-    isCompleted() {
-      return this.status === GuildScheduledEventStatus.Completed;
-    }
-    isScheduled() {
-      return this.status === GuildScheduledEventStatus.Scheduled;
-    }
-  }
-  exports.GuildScheduledEvent = GuildScheduledEvent;
-});
-
-// node_modules/discord.js/src/structures/interfaces/Application.js
-var require_Application = __commonJS((exports, module) => {
-  var { DiscordSnowflake } = require_cjs();
-  var Base = require_Base();
-
-  class Application extends Base {
-    constructor(client, data) {
-      super(client);
-      this._patch(data);
-    }
-    _patch(data) {
-      this.id = data.id;
-      if ("name" in data) {
-        this.name = data.name;
-      } else {
-        this.name ??= null;
-      }
-      if ("description" in data) {
-        this.description = data.description;
-      } else {
-        this.description ??= null;
-      }
-      if ("icon" in data) {
-        this.icon = data.icon;
-      } else {
-        this.icon ??= null;
-      }
-      if ("terms_of_service_url" in data) {
-        this.termsOfServiceURL = data.terms_of_service_url;
-      } else {
-        this.termsOfServiceURL ??= null;
-      }
-      if ("privacy_policy_url" in data) {
-        this.privacyPolicyURL = data.privacy_policy_url;
-      } else {
-        this.privacyPolicyURL ??= null;
-      }
-      if ("rpc_origins" in data) {
-        this.rpcOrigins = data.rpc_origins;
-      } else {
-        this.rpcOrigins ??= [];
-      }
-      if ("cover_image" in data) {
-        this.cover = data.cover_image;
-      } else {
-        this.cover ??= null;
-      }
-      if ("verify_key" in data) {
-        this.verifyKey = data.verify_key;
-      } else {
-        this.verifyKey ??= null;
-      }
-    }
-    get createdTimestamp() {
-      return DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    iconURL(options = {}) {
-      return this.icon && this.client.rest.cdn.appIcon(this.id, this.icon, options);
-    }
-    coverURL(options = {}) {
-      return this.cover && this.client.rest.cdn.appIcon(this.id, this.cover, options);
-    }
-    toString() {
-      return this.name;
-    }
-    toJSON() {
-      return super.toJSON({ createdTimestamp: true });
-    }
-  }
-  module.exports = Application;
-});
-
-// node_modules/discord.js/src/structures/IntegrationApplication.js
-var require_IntegrationApplication = __commonJS((exports, module) => {
-  var Application = require_Application();
-
-  class IntegrationApplication extends Application {
-    _patch(data) {
-      super._patch(data);
-      if ("bot" in data) {
-        this.bot = this.client.users._add(data.bot);
-      } else {
-        this.bot ??= null;
-      }
-      if ("terms_of_service_url" in data) {
-        this.termsOfServiceURL = data.terms_of_service_url;
-      } else {
-        this.termsOfServiceURL ??= null;
-      }
-      if ("privacy_policy_url" in data) {
-        this.privacyPolicyURL = data.privacy_policy_url;
-      } else {
-        this.privacyPolicyURL ??= null;
-      }
-      if ("rpc_origins" in data) {
-        this.rpcOrigins = data.rpc_origins;
-      } else {
-        this.rpcOrigins ??= [];
-      }
-      if ("hook" in data) {
-        this.hook = data.hook;
-      } else {
-        this.hook ??= null;
-      }
-      if ("cover_image" in data) {
-        this.cover = data.cover_image;
-      } else {
-        this.cover ??= null;
-      }
-      if ("verify_key" in data) {
-        this.verifyKey = data.verify_key;
-      } else {
-        this.verifyKey ??= null;
-      }
-    }
-  }
-  module.exports = IntegrationApplication;
-});
-
-// node_modules/discord.js/src/structures/InviteStageInstance.js
-var require_InviteStageInstance = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var Base = require_Base();
-
-  class InviteStageInstance extends Base {
-    constructor(client, data, channelId, guildId) {
-      super(client);
-      this.channelId = channelId;
-      this.guildId = guildId;
-      this.members = new Collection;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("topic" in data) {
-        this.topic = data.topic;
-      }
-      if ("participant_count" in data) {
-        this.participantCount = data.participant_count;
-      }
-      if ("speaker_count" in data) {
-        this.speakerCount = data.speaker_count;
-      }
-      this.members.clear();
-      for (const rawMember of data.members) {
-        const member = this.guild.members._add(rawMember);
-        this.members.set(member.id, member);
-      }
-    }
-    get channel() {
-      return this.client.channels.resolve(this.channelId);
-    }
-    get guild() {
-      return this.client.guilds.resolve(this.guildId);
-    }
-  }
-  module.exports = InviteStageInstance;
-});
-
-// node_modules/discord.js/src/structures/BaseGuild.js
-var require_BaseGuild = __commonJS((exports, module) => {
-  var { makeURLSearchParams } = require_dist5();
-  var { DiscordSnowflake } = require_cjs();
-  var { Routes, GuildFeature } = require_v106();
-  var Base = require_Base();
-
-  class BaseGuild extends Base {
-    constructor(client, data) {
-      super(client);
-      this.id = data.id;
-      this.name = data.name;
-      this.icon = data.icon;
-      this.features = data.features;
-    }
-    get createdTimestamp() {
-      return DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    get nameAcronym() {
-      return this.name.replace(/'s /g, " ").replace(/\w+/g, (e) => e[0]).replace(/\s/g, "");
-    }
-    get partnered() {
-      return this.features.includes(GuildFeature.Partnered);
-    }
-    get verified() {
-      return this.features.includes(GuildFeature.Verified);
-    }
-    iconURL(options = {}) {
-      return this.icon && this.client.rest.cdn.icon(this.id, this.icon, options);
-    }
-    async fetch() {
-      const data = await this.client.rest.get(Routes.guild(this.id), {
-        query: makeURLSearchParams({ with_counts: true })
-      });
-      return this.client.guilds._add(data);
-    }
-    toString() {
-      return this.name;
-    }
-  }
-  module.exports = BaseGuild;
-});
-
-// node_modules/discord.js/src/structures/AnonymousGuild.js
-var require_AnonymousGuild = __commonJS((exports, module) => {
-  var BaseGuild = require_BaseGuild();
-
-  class AnonymousGuild extends BaseGuild {
-    constructor(client, data, immediatePatch = true) {
-      super(client, data);
-      if (immediatePatch)
-        this._patch(data);
-    }
-    _patch(data) {
-      if ("features" in data)
-        this.features = data.features;
-      if ("splash" in data) {
-        this.splash = data.splash;
-      }
-      if ("banner" in data) {
-        this.banner = data.banner;
-      }
-      if ("description" in data) {
-        this.description = data.description;
-      }
-      if ("verification_level" in data) {
-        this.verificationLevel = data.verification_level;
-      }
-      if ("vanity_url_code" in data) {
-        this.vanityURLCode = data.vanity_url_code;
-      }
-      if ("nsfw_level" in data) {
-        this.nsfwLevel = data.nsfw_level;
-      }
-      if ("premium_subscription_count" in data) {
-        this.premiumSubscriptionCount = data.premium_subscription_count;
-      } else {
-        this.premiumSubscriptionCount ??= null;
-      }
-    }
-    bannerURL(options = {}) {
-      return this.banner && this.client.rest.cdn.banner(this.id, this.banner, options);
-    }
-    splashURL(options = {}) {
-      return this.splash && this.client.rest.cdn.splash(this.id, this.splash, options);
-    }
-  }
-  module.exports = AnonymousGuild;
-});
-
-// node_modules/discord.js/src/structures/Emoji.js
-var require_Emoji = __commonJS((exports) => {
-  var process2 = __require("node:process");
-  var { formatEmoji } = require_dist7();
-  var { DiscordSnowflake } = require_cjs();
-  var Base = require_Base();
-  var deprecationEmittedForURL = false;
-
-  class Emoji extends Base {
-    constructor(client, emoji) {
-      super(client);
-      this.animated = emoji.animated ?? null;
-      this.name = emoji.name ?? null;
-      this.id = emoji.id ?? null;
-    }
-    get identifier() {
-      if (this.id)
-        return `${this.animated ? "a:" : ""}${this.name}:${this.id}`;
-      return encodeURIComponent(this.name);
-    }
-    imageURL(options) {
-      return this.id && this.client.rest.cdn.emoji(this.id, options);
-    }
-    get url() {
-      if (!deprecationEmittedForURL) {
-        process2.emitWarning("The Emoji#url getter is deprecated. Use Emoji#imageURL() instead.", "DeprecationWarning");
-        deprecationEmittedForURL = true;
-      }
-      return this.imageURL({ extension: this.animated ? "gif" : "png" });
-    }
-    get createdTimestamp() {
-      return this.id && DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return this.id && new Date(this.createdTimestamp);
-    }
-    toString() {
-      return this.id ? formatEmoji({ animated: this.animated, id: this.id, name: this.name }) : this.name;
-    }
-    toJSON() {
-      const json = super.toJSON({
-        guild: "guildId",
-        createdTimestamp: true,
-        identifier: true
-      });
-      json.imageURL = this.imageURL();
-      return json;
-    }
-  }
-  exports.Emoji = Emoji;
-});
-
-// node_modules/discord.js/src/structures/WelcomeChannel.js
-var require_WelcomeChannel = __commonJS((exports, module) => {
-  var Base = require_Base();
-  var { Emoji } = require_Emoji();
-
-  class WelcomeChannel extends Base {
-    constructor(guild, data) {
-      super(guild.client);
-      this.guild = guild;
-      this.description = data.description;
-      this._emoji = {
-        name: data.emoji_name,
-        id: data.emoji_id
-      };
-      this.channelId = data.channel_id;
-    }
-    get channel() {
-      return this.client.channels.resolve(this.channelId);
-    }
-    get emoji() {
-      return this.client.emojis.cache.get(this._emoji.id) ?? new Emoji(this.client, this._emoji);
-    }
-  }
-  module.exports = WelcomeChannel;
-});
-
-// node_modules/discord.js/src/structures/WelcomeScreen.js
-var require_WelcomeScreen = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var { GuildFeature } = require_v106();
-  var Base = require_Base();
-  var WelcomeChannel = require_WelcomeChannel();
-
-  class WelcomeScreen extends Base {
-    constructor(guild, data) {
-      super(guild.client);
-      this.guild = guild;
-      this.description = data.description ?? null;
-      this.welcomeChannels = new Collection;
-      for (const channel of data.welcome_channels) {
-        const welcomeChannel = new WelcomeChannel(this.guild, channel);
-        this.welcomeChannels.set(welcomeChannel.channelId, welcomeChannel);
-      }
-    }
-    get enabled() {
-      return this.guild.features.includes(GuildFeature.WelcomeScreenEnabled);
-    }
-  }
-  module.exports = WelcomeScreen;
-});
-
-// node_modules/discord.js/src/structures/InviteGuild.js
-var require_InviteGuild = __commonJS((exports, module) => {
-  var AnonymousGuild = require_AnonymousGuild();
-  var WelcomeScreen = require_WelcomeScreen();
-
-  class InviteGuild extends AnonymousGuild {
-    constructor(client, data) {
-      super(client, data);
-      this.welcomeScreen = data.welcome_screen !== undefined ? new WelcomeScreen(this, data.welcome_screen) : null;
-    }
-  }
-  module.exports = InviteGuild;
-});
-
-// node_modules/discord.js/src/structures/Invite.js
-var require_Invite = __commonJS((exports, module) => {
-  var { RouteBases, Routes, PermissionFlagsBits } = require_v106();
-  var Base = require_Base();
-  var { GuildScheduledEvent } = require_GuildScheduledEvent();
-  var IntegrationApplication = require_IntegrationApplication();
-  var InviteStageInstance = require_InviteStageInstance();
-  var { DiscordjsError, ErrorCodes } = require_errors();
-
-  class Invite extends Base {
-    static InvitesPattern = /discord(?:(?:app)?\.com\/invite|\.gg(?:\/invite)?)\/(?<code>[\w-]{2,255})/i;
-    constructor(client, data) {
-      super(client);
-      this.type = data.type;
-      this._patch(data);
-    }
-    _patch(data) {
-      const InviteGuild = require_InviteGuild();
-      this.guild ??= null;
-      if (data.guild) {
-        this.guild = this.client.guilds.cache.get(data.guild.id) ?? new InviteGuild(this.client, data.guild);
-      }
-      if ("code" in data) {
-        this.code = data.code;
-      }
-      if ("approximate_presence_count" in data) {
-        this.presenceCount = data.approximate_presence_count;
-      } else {
-        this.presenceCount ??= null;
-      }
-      if ("approximate_member_count" in data) {
-        this.memberCount = data.approximate_member_count;
-      } else {
-        this.memberCount ??= null;
-      }
-      if ("temporary" in data) {
-        this.temporary = data.temporary ?? null;
-      } else {
-        this.temporary ??= null;
-      }
-      if ("max_age" in data) {
-        this.maxAge = data.max_age;
-      } else {
-        this.maxAge ??= null;
-      }
-      if ("uses" in data) {
-        this.uses = data.uses;
-      } else {
-        this.uses ??= null;
-      }
-      if ("max_uses" in data) {
-        this.maxUses = data.max_uses;
-      } else {
-        this.maxUses ??= null;
-      }
-      if ("inviter_id" in data) {
-        this.inviterId = data.inviter_id;
-      } else {
-        this.inviterId ??= null;
-      }
-      if ("inviter" in data) {
-        this.client.users._add(data.inviter);
-        this.inviterId = data.inviter.id;
-      }
-      if ("target_user" in data) {
-        this.targetUser = this.client.users._add(data.target_user);
-      } else {
-        this.targetUser ??= null;
-      }
-      if ("target_application" in data) {
-        this.targetApplication = new IntegrationApplication(this.client, data.target_application);
-      } else {
-        this.targetApplication ??= null;
-      }
-      if ("target_type" in data) {
-        this.targetType = data.target_type;
-      } else {
-        this.targetType ??= null;
-      }
-      if ("channel_id" in data) {
-        this.channelId = data.channel_id;
-      }
-      if ("channel" in data) {
-        this.channel = this.client.channels._add(data.channel, this.guild, { cache: false }) ?? this.client.channels.resolve(this.channelId);
-        this.channelId ??= data.channel.id;
-      }
-      if ("created_at" in data) {
-        this.createdTimestamp = Date.parse(data.created_at);
-      } else {
-        this.createdTimestamp ??= null;
-      }
-      if ("expires_at" in data) {
-        this._expiresTimestamp = data.expires_at && Date.parse(data.expires_at);
-      } else {
-        this._expiresTimestamp ??= null;
-      }
-      if ("stage_instance" in data) {
-        this.stageInstance = new InviteStageInstance(this.client, data.stage_instance, this.channel.id, this.guild.id);
-      } else {
-        this.stageInstance ??= null;
-      }
-      if ("guild_scheduled_event" in data) {
-        this.guildScheduledEvent = new GuildScheduledEvent(this.client, data.guild_scheduled_event);
-      } else {
-        this.guildScheduledEvent ??= null;
-      }
-    }
-    get createdAt() {
-      return this.createdTimestamp && new Date(this.createdTimestamp);
-    }
-    get deletable() {
-      const guild = this.guild;
-      if (!guild || !this.client.guilds.cache.has(guild.id))
-        return false;
-      if (!guild.members.me)
-        throw new DiscordjsError(ErrorCodes.GuildUncachedMe);
-      return Boolean(this.channel?.permissionsFor(this.client.user).has(PermissionFlagsBits.ManageChannels, false) || guild.members.me.permissions.has(PermissionFlagsBits.ManageGuild));
-    }
-    get expiresTimestamp() {
-      return this._expiresTimestamp ?? (this.createdTimestamp && this.maxAge ? this.createdTimestamp + this.maxAge * 1000 : null);
-    }
-    get expiresAt() {
-      return this.expiresTimestamp && new Date(this.expiresTimestamp);
-    }
-    get inviter() {
-      return this.inviterId && this.client.users.resolve(this.inviterId);
-    }
-    get url() {
-      return `${RouteBases.invite}/${this.code}`;
-    }
-    async delete(reason) {
-      await this.client.rest.delete(Routes.invite(this.code), { reason });
-      return this;
-    }
-    toString() {
-      return this.url;
-    }
-    toJSON() {
-      return super.toJSON({
-        url: true,
-        expiresTimestamp: true,
-        presenceCount: false,
-        memberCount: false,
-        uses: false,
-        channel: "channelId",
-        inviter: "inviterId",
-        guild: "guildId"
-      });
-    }
-    valueOf() {
-      return this.code;
-    }
-  }
-  module.exports = Invite;
-});
-
-// node_modules/discord.js/src/structures/GuildTemplate.js
-var require_GuildTemplate = __commonJS((exports, module) => {
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
-  var { RouteBases, Routes } = require_v106();
-  var Base = require_Base();
-  var { resolveImage } = require_DataResolver();
-  var Events = require_Events();
-
-  class GuildTemplate extends Base {
-    static GuildTemplatesPattern = /discord(?:app)?\.(?:com\/template|new)\/(?<code>[\w-]{2,255})/i;
-    constructor(client, data) {
-      super(client);
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("code" in data) {
-        this.code = data.code;
-      }
-      if ("name" in data) {
-        this.name = data.name;
-      }
-      if ("description" in data) {
-        this.description = data.description;
-      }
-      if ("usage_count" in data) {
-        this.usageCount = data.usage_count;
-      }
-      if ("creator_id" in data) {
-        this.creatorId = data.creator_id;
-      }
-      if ("creator" in data) {
-        this.creator = this.client.users._add(data.creator);
-      }
-      if ("created_at" in data) {
-        this.createdTimestamp = Date.parse(data.created_at);
-      }
-      if ("updated_at" in data) {
-        this.updatedTimestamp = Date.parse(data.updated_at);
-      }
-      if ("source_guild_id" in data) {
-        this.guildId = data.source_guild_id;
-      }
-      if ("serialized_source_guild" in data) {
-        this.serializedGuild = data.serialized_source_guild;
-      }
-      this.unSynced = "is_dirty" in data ? Boolean(data.is_dirty) : null;
-      return this;
-    }
-    async createGuild(name, icon) {
-      const { client } = this;
-      const data = await client.rest.post(Routes.template(this.code), {
-        body: {
-          name,
-          icon: await resolveImage(icon)
-        }
-      });
-      if (client.guilds.cache.has(data.id))
-        return client.guilds.cache.get(data.id);
-      return new Promise((resolve) => {
-        const resolveGuild = (guild) => {
-          client.off(Events.GuildCreate, handleGuild);
-          client.decrementMaxListeners();
-          resolve(guild);
-        };
-        const handleGuild = (guild) => {
-          if (guild.id === data.id) {
-            clearTimeout2(timeout);
-            resolveGuild(guild);
-          }
-        };
-        client.incrementMaxListeners();
-        client.on(Events.GuildCreate, handleGuild);
-        const timeout = setTimeout2(() => resolveGuild(client.guilds._add(data)), 1e4).unref();
-      });
-    }
-    async edit({ name, description } = {}) {
-      const data = await this.client.rest.patch(Routes.guildTemplate(this.guildId, this.code), {
-        body: { name, description }
-      });
-      return this._patch(data);
-    }
-    async delete() {
-      await this.client.rest.delete(Routes.guildTemplate(this.guildId, this.code));
-      return this;
-    }
-    async sync() {
-      const data = await this.client.rest.put(Routes.guildTemplate(this.guildId, this.code));
-      return this._patch(data);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    get updatedAt() {
-      return new Date(this.updatedTimestamp);
-    }
-    get guild() {
-      return this.client.guilds.resolve(this.guildId);
-    }
-    get url() {
-      return `${RouteBases.template}/${this.code}`;
-    }
-    toString() {
-      return this.code;
-    }
-  }
-  module.exports = GuildTemplate;
-});
-
-// node_modules/discord.js/src/util/DataResolver.js
-var require_DataResolver = __commonJS((exports, module) => {
-  var { Buffer: Buffer2 } = __require("node:buffer");
-  var fs = __require("node:fs/promises");
-  var path = __require("node:path");
-  var { fetch: fetch2 } = __require("undici");
-  var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
-  var Invite = require_Invite();
-  function resolveCode(data, regex) {
-    return regex.exec(data)?.[1] ?? data;
-  }
-  function resolveInviteCode(data) {
-    return resolveCode(data, Invite.InvitesPattern);
-  }
-  function resolveGuildTemplateCode(data) {
-    const GuildTemplate = require_GuildTemplate();
-    return resolveCode(data, GuildTemplate.GuildTemplatesPattern);
-  }
-  async function resolveFile(resource) {
-    if (Buffer2.isBuffer(resource))
-      return { data: resource };
-    if (typeof resource[Symbol.asyncIterator] === "function") {
-      const buffers = [];
-      for await (const data of resource)
-        buffers.push(Buffer2.from(data));
-      return { data: Buffer2.concat(buffers) };
-    }
-    if (typeof resource === "string") {
-      if (/^https?:\/\//.test(resource)) {
-        const res = await fetch2(resource);
-        return { data: Buffer2.from(await res.arrayBuffer()), contentType: res.headers.get("content-type") };
-      }
-      const file = path.resolve(resource);
-      const stats = await fs.stat(file);
-      if (!stats.isFile())
-        throw new DiscordjsError(ErrorCodes.FileNotFound, file);
-      return { data: await fs.readFile(file) };
-    }
-    throw new DiscordjsTypeError(ErrorCodes.ReqResourceType);
-  }
-  function resolveBase64(data) {
-    if (Buffer2.isBuffer(data))
-      return `data:image/jpg;base64,${data.toString("base64")}`;
-    return data;
-  }
-  async function resolveImage(image) {
-    if (!image)
-      return null;
-    if (typeof image === "string" && image.startsWith("data:")) {
-      return image;
-    }
-    const file = await resolveFile(image);
-    return resolveBase64(file.data);
-  }
-  module.exports = { resolveCode, resolveInviteCode, resolveGuildTemplateCode, resolveImage, resolveBase64, resolveFile };
-});
-
-// node_modules/discord.js/src/util/MessageFlagsBitField.js
-var require_MessageFlagsBitField = __commonJS((exports, module) => {
-  var { MessageFlags } = require_v106();
-  var BitField = require_BitField();
-
-  class MessageFlagsBitField extends BitField {
-    static Flags = MessageFlags;
-  }
-  module.exports = MessageFlagsBitField;
-});
-
-// node_modules/discord.js/src/structures/BaseInteraction.js
-var require_BaseInteraction = __commonJS((exports, module) => {
-  var { deprecate } = __require("node:util");
-  var { Collection } = require_dist6();
-  var { DiscordSnowflake } = require_cjs();
-  var { InteractionType, ApplicationCommandType, ComponentType } = require_v106();
-  var Base = require_Base();
-  var { SelectMenuTypes } = require_Constants();
-  var PermissionsBitField = require_PermissionsBitField();
-
-  class BaseInteraction extends Base {
-    constructor(client, data) {
-      super(client);
-      this.type = data.type;
-      this.id = data.id;
-      Object.defineProperty(this, "token", { value: data.token });
-      this.applicationId = data.application_id;
-      this.channelId = data.channel?.id ?? null;
-      this.guildId = data.guild_id ?? null;
-      this.user = this.client.users._add(data.user ?? data.member.user);
-      this.member = data.member ? this.guild?.members._add(data.member) ?? data.member : null;
-      this.version = data.version;
-      this.appPermissions = new PermissionsBitField(data.app_permissions).freeze();
-      this.memberPermissions = data.member?.permissions ? new PermissionsBitField(data.member.permissions).freeze() : null;
-      this.locale = data.locale;
-      this.guildLocale = data.guild_locale ?? null;
-      this.entitlements = data.entitlements.reduce((coll, entitlement) => coll.set(entitlement.id, this.client.application.entitlements._add(entitlement)), new Collection);
-      this.authorizingIntegrationOwners = data.authorizing_integration_owners;
-      this.context = data.context ?? null;
-    }
-    get createdTimestamp() {
-      return DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    get channel() {
-      return this.client.channels.cache.get(this.channelId) ?? null;
-    }
-    get guild() {
-      return this.client.guilds.cache.get(this.guildId) ?? null;
-    }
-    inGuild() {
-      return Boolean(this.guildId && this.member);
-    }
-    inCachedGuild() {
-      return Boolean(this.guild && this.member);
-    }
-    inRawGuild() {
-      return Boolean(this.guildId && !this.guild && this.member);
-    }
-    isAutocomplete() {
-      return this.type === InteractionType.ApplicationCommandAutocomplete;
-    }
-    isCommand() {
-      return this.type === InteractionType.ApplicationCommand;
-    }
-    isChatInputCommand() {
-      return this.type === InteractionType.ApplicationCommand && this.commandType === ApplicationCommandType.ChatInput;
-    }
-    isContextMenuCommand() {
-      return this.type === InteractionType.ApplicationCommand && [ApplicationCommandType.User, ApplicationCommandType.Message].includes(this.commandType);
-    }
-    isMessageComponent() {
-      return this.type === InteractionType.MessageComponent;
-    }
-    isModalSubmit() {
-      return this.type === InteractionType.ModalSubmit;
-    }
-    isUserContextMenuCommand() {
-      return this.isContextMenuCommand() && this.commandType === ApplicationCommandType.User;
-    }
-    isMessageContextMenuCommand() {
-      return this.isContextMenuCommand() && this.commandType === ApplicationCommandType.Message;
-    }
-    isButton() {
-      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.Button;
-    }
-    isSelectMenu() {
-      return this.isStringSelectMenu();
-    }
-    isAnySelectMenu() {
-      return this.type === InteractionType.MessageComponent && SelectMenuTypes.includes(this.componentType);
-    }
-    isStringSelectMenu() {
-      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.StringSelect;
-    }
-    isUserSelectMenu() {
-      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.UserSelect;
-    }
-    isRoleSelectMenu() {
-      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.RoleSelect;
-    }
-    isChannelSelectMenu() {
-      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.ChannelSelect;
-    }
-    isMentionableSelectMenu() {
-      return this.type === InteractionType.MessageComponent && this.componentType === ComponentType.MentionableSelect;
-    }
-    isRepliable() {
-      return ![InteractionType.Ping, InteractionType.ApplicationCommandAutocomplete].includes(this.type);
-    }
-  }
-  BaseInteraction.prototype.isSelectMenu = deprecate(BaseInteraction.prototype.isSelectMenu, "BaseInteraction#isSelectMenu() is deprecated. Use BaseInteraction#isStringSelectMenu() instead.");
-  module.exports = BaseInteraction;
-});
-
-// node_modules/discord.js/src/structures/ApplicationRoleConnectionMetadata.js
-var require_ApplicationRoleConnectionMetadata = __commonJS((exports) => {
-  class ApplicationRoleConnectionMetadata {
-    constructor(data) {
-      this.name = data.name;
-      this.nameLocalizations = data.name_localizations ?? null;
-      this.description = data.description;
-      this.descriptionLocalizations = data.description_localizations ?? null;
-      this.key = data.key;
-      this.type = data.type;
-    }
-  }
-  exports.ApplicationRoleConnectionMetadata = ApplicationRoleConnectionMetadata;
-});
-
-// node_modules/discord.js/src/structures/TeamMember.js
-var require_TeamMember = __commonJS((exports, module) => {
-  var Base = require_Base();
-
-  class TeamMember extends Base {
-    constructor(team, data) {
-      super(team.client);
-      this.team = team;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("permissions" in data) {
-        this.permissions = data.permissions;
-      }
-      if ("membership_state" in data) {
-        this.membershipState = data.membership_state;
-      }
-      if ("user" in data) {
-        this.user = this.client.users._add(data.user);
-      }
-      if ("role" in data) {
-        this.role = data.role;
-      }
-    }
-    get id() {
-      return this.user.id;
-    }
-    toString() {
-      return this.user.toString();
-    }
-  }
-  module.exports = TeamMember;
-});
-
-// node_modules/discord.js/src/structures/Team.js
-var require_Team = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var { DiscordSnowflake } = require_cjs();
-  var Base = require_Base();
-  var TeamMember = require_TeamMember();
-
-  class Team extends Base {
-    constructor(client, data) {
-      super(client);
-      this._patch(data);
-    }
-    _patch(data) {
-      this.id = data.id;
-      if ("name" in data) {
-        this.name = data.name;
-      }
-      if ("icon" in data) {
-        this.icon = data.icon;
-      } else {
-        this.icon ??= null;
-      }
-      if ("owner_user_id" in data) {
-        this.ownerId = data.owner_user_id;
-      } else {
-        this.ownerId ??= null;
-      }
-      this.members = new Collection;
-      for (const memberData of data.members) {
-        const member = new TeamMember(this, memberData);
-        this.members.set(member.id, member);
-      }
-    }
-    get owner() {
-      return this.members.get(this.ownerId) ?? null;
-    }
-    get createdTimestamp() {
-      return DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    iconURL(options = {}) {
-      return this.icon && this.client.rest.cdn.teamIcon(this.id, this.icon, options);
-    }
-    toString() {
-      return this.name;
-    }
-    toJSON() {
-      return super.toJSON({ createdTimestamp: true });
-    }
-  }
-  module.exports = Team;
-});
-
-// node_modules/discord.js/src/managers/ApplicationCommandPermissionsManager.js
-var require_ApplicationCommandPermissionsManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var { ApplicationCommandPermissionType, RESTJSONErrorCodes, Routes } = require_v106();
-  var BaseManager = require_BaseManager();
-  var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
-
-  class ApplicationCommandPermissionsManager extends BaseManager {
-    constructor(manager) {
-      super(manager.client);
-      this.manager = manager;
-      this.guild = manager.guild ?? null;
-      this.guildId = manager.guildId ?? manager.guild?.id ?? null;
-      this.commandId = manager.id ?? null;
-    }
-    permissionsPath(guildId, commandId) {
-      if (commandId) {
-        return Routes.applicationCommandPermissions(this.client.application.id, guildId, commandId);
-      }
-      return Routes.guildApplicationCommandsPermissions(this.client.application.id, guildId);
-    }
-    async fetch({ guild, command } = {}) {
-      const { guildId, commandId } = this._validateOptions(guild, command);
-      if (commandId) {
-        const data2 = await this.client.rest.get(this.permissionsPath(guildId, commandId));
-        return data2.permissions;
-      }
-      const data = await this.client.rest.get(this.permissionsPath(guildId));
-      return data.reduce((coll, perm) => coll.set(perm.id, perm.permissions), new Collection);
-    }
-    async set({ guild, command, permissions, token } = {}) {
-      if (!token) {
-        throw new DiscordjsError(ErrorCodes.ApplicationCommandPermissionsTokenMissing);
-      }
-      let { guildId, commandId } = this._validateOptions(guild, command);
-      if (!Array.isArray(permissions)) {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissions", "Array of ApplicationCommandPermissions", true);
-      }
-      if (!commandId) {
-        commandId = this.client.user.id;
-      }
-      const data = await this.client.rest.put(this.permissionsPath(guildId, commandId), {
-        body: { permissions },
-        auth: false,
-        headers: { Authorization: `Bearer ${token}` }
-      });
-      return data.permissions;
-    }
-    async add({ guild, command, permissions, token } = {}) {
-      if (!token) {
-        throw new DiscordjsError(ErrorCodes.ApplicationCommandPermissionsTokenMissing);
-      }
-      let { guildId, commandId } = this._validateOptions(guild, command);
-      if (!commandId) {
-        commandId = this.client.user.id;
-      }
-      if (!Array.isArray(permissions)) {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissions", "Array of ApplicationCommandPermissions", true);
-      }
-      let existingPermissions = [];
-      try {
-        existingPermissions = await this.fetch({ guild: guildId, command: commandId });
-      } catch (error) {
-        if (error.code !== RESTJSONErrorCodes.UnknownApplicationCommandPermissions)
-          throw error;
-      }
-      const newPermissions = permissions.slice();
-      for (const existingPermission of existingPermissions) {
-        if (!newPermissions.some((newPermission) => newPermission.id === existingPermission.id)) {
-          newPermissions.push(existingPermission);
-        }
-      }
-      return this.set({ guild: guildId, command: commandId, permissions: newPermissions, token });
-    }
-    async remove({ guild, command, users, roles, channels, token } = {}) {
-      if (!token) {
-        throw new DiscordjsError(ErrorCodes.ApplicationCommandPermissionsTokenMissing);
-      }
-      let { guildId, commandId } = this._validateOptions(guild, command);
-      if (!commandId) {
-        commandId = this.client.user.id;
-      }
-      if (!users && !roles && !channels) {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "users OR roles OR channels", "Array or Resolvable", true);
-      }
-      let resolvedUserIds = [];
-      if (Array.isArray(users)) {
-        for (const user of users) {
-          const userId = this.client.users.resolveId(user);
-          if (!userId)
-            throw new DiscordjsTypeError(ErrorCodes.InvalidElement, "Array", "users", user);
-          resolvedUserIds.push(userId);
-        }
-      }
-      let resolvedRoleIds = [];
-      if (Array.isArray(roles)) {
-        for (const role of roles) {
-          if (typeof role === "string") {
-            resolvedRoleIds.push(role);
-            continue;
-          }
-          if (!this.guild)
-            throw new DiscordjsError(ErrorCodes.GuildUncachedEntityResolve, "roles");
-          const roleId = this.guild.roles.resolveId(role);
-          if (!roleId)
-            throw new DiscordjsTypeError(ErrorCodes.InvalidElement, "Array", "users", role);
-          resolvedRoleIds.push(roleId);
-        }
-      }
-      let resolvedChannelIds = [];
-      if (Array.isArray(channels)) {
-        for (const channel of channels) {
-          if (typeof channel === "string") {
-            resolvedChannelIds.push(channel);
-            continue;
-          }
-          if (!this.guild)
-            throw new DiscordjsError(ErrorCodes.GuildUncachedEntityResolve, "channels");
-          const channelId = this.guild.channels.resolveId(channel);
-          if (!channelId)
-            throw new DiscordjsTypeError(ErrorCodes.InvalidElement, "Array", "channels", channel);
-          resolvedChannelIds.push(channelId);
-        }
-      }
-      let existing = [];
-      try {
-        existing = await this.fetch({ guild: guildId, command: commandId });
-      } catch (error) {
-        if (error.code !== RESTJSONErrorCodes.UnknownApplicationCommandPermissions)
-          throw error;
-      }
-      const permissions = existing.filter((perm) => {
-        switch (perm.type) {
-          case ApplicationCommandPermissionType.Role:
-            return !resolvedRoleIds.includes(perm.id);
-          case ApplicationCommandPermissionType.User:
-            return !resolvedUserIds.includes(perm.id);
-          case ApplicationCommandPermissionType.Channel:
-            return !resolvedChannelIds.includes(perm.id);
-        }
-        return true;
-      });
-      return this.set({ guild: guildId, command: commandId, permissions, token });
-    }
-    async has({ guild, command, permissionId, permissionType }) {
-      const { guildId, commandId } = this._validateOptions(guild, command);
-      if (!commandId)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable");
-      if (!permissionId) {
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissionId", "UserResolvable, RoleResolvable, ChannelResolvable, or Permission Constant");
-      }
-      let resolvedId = permissionId;
-      if (typeof permissionId !== "string") {
-        resolvedId = this.client.users.resolveId(permissionId);
-        if (!resolvedId) {
-          if (!this.guild)
-            throw new DiscordjsError(ErrorCodes.GuildUncachedEntityResolve, "roles");
-          resolvedId = this.guild.roles.resolveId(permissionId);
-        }
-        if (!resolvedId) {
-          resolvedId = this.guild.channels.resolveId(permissionId);
-        }
-        if (!resolvedId) {
-          throw new DiscordjsTypeError(ErrorCodes.InvalidType, "permissionId", "UserResolvable, RoleResolvable, ChannelResolvable, or Permission Constant");
-        }
-      }
-      let existing = [];
-      try {
-        existing = await this.fetch({ guild: guildId, command: commandId });
-      } catch (error) {
-        if (error.code !== RESTJSONErrorCodes.UnknownApplicationCommandPermissions)
-          throw error;
-      }
-      return existing.some((perm) => perm.id === resolvedId && (permissionType ?? perm.type) === perm.type);
-    }
-    _validateOptions(guild, command) {
-      const guildId = this.guildId ?? this.client.guilds.resolveId(guild);
-      if (!guildId)
-        throw new DiscordjsError(ErrorCodes.GlobalCommandPermissions);
-      let commandId = this.commandId;
-      if (command && !commandId) {
-        commandId = this.manager.resolveId?.(command);
-        if (!commandId && this.guild) {
-          commandId = this.guild.commands.resolveId(command);
-        }
-        commandId ??= this.client.application?.commands.resolveId(command);
-        if (!commandId) {
-          throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable", true);
-        }
-      }
-      return { guildId, commandId };
-    }
-  }
-  module.exports = ApplicationCommandPermissionsManager;
-});
-
-// node_modules/discord.js/src/structures/ApplicationCommand.js
-var require_ApplicationCommand = __commonJS((exports, module) => {
-  var { DiscordSnowflake } = require_cjs();
-  var { ApplicationCommandOptionType } = require_v106();
-  var isEqual = require_fast_deep_equal();
-  var Base = require_Base();
-  var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
-  var PermissionsBitField = require_PermissionsBitField();
-
-  class ApplicationCommand extends Base {
-    constructor(client, data, guild, guildId) {
-      super(client);
-      this.id = data.id;
-      this.applicationId = data.application_id;
-      this.guild = guild ?? null;
-      this.guildId = guild?.id ?? guildId ?? null;
-      this.permissions = new ApplicationCommandPermissionsManager(this);
-      this.type = data.type;
-      this.nsfw = data.nsfw ?? false;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("name" in data) {
-        this.name = data.name;
-      }
-      if ("name_localizations" in data) {
-        this.nameLocalizations = data.name_localizations;
-      } else {
-        this.nameLocalizations ??= null;
-      }
-      if ("name_localized" in data) {
-        this.nameLocalized = data.name_localized;
-      } else {
-        this.nameLocalized ??= null;
-      }
-      if ("description" in data) {
-        this.description = data.description;
-      }
-      if ("description_localizations" in data) {
-        this.descriptionLocalizations = data.description_localizations;
-      } else {
-        this.descriptionLocalizations ??= null;
-      }
-      if ("description_localized" in data) {
-        this.descriptionLocalized = data.description_localized;
-      } else {
-        this.descriptionLocalized ??= null;
-      }
-      if ("options" in data) {
-        this.options = data.options.map((option) => this.constructor.transformOption(option, true));
-      } else {
-        this.options ??= [];
-      }
-      if ("default_member_permissions" in data) {
-        this.defaultMemberPermissions = data.default_member_permissions ? new PermissionsBitField(BigInt(data.default_member_permissions)).freeze() : null;
-      } else {
-        this.defaultMemberPermissions ??= null;
-      }
-      if ("dm_permission" in data) {
-        this.dmPermission = data.dm_permission;
-      } else {
-        this.dmPermission ??= null;
-      }
-      if ("integration_types" in data) {
-        this.integrationTypes = data.integration_types;
-      } else {
-        this.integrationTypes ??= null;
-      }
-      if ("contexts" in data) {
-        this.contexts = data.contexts;
-      } else {
-        this.contexts ??= null;
-      }
-      if ("version" in data) {
-        this.version = data.version;
-      }
-    }
-    get createdTimestamp() {
-      return DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    get manager() {
-      return (this.guild ?? this.client.application).commands;
-    }
-    edit(data) {
-      return this.manager.edit(this, data, this.guildId);
-    }
-    setName(name) {
-      return this.edit({ name });
-    }
-    setNameLocalizations(nameLocalizations) {
-      return this.edit({ nameLocalizations });
-    }
-    setDescription(description) {
-      return this.edit({ description });
-    }
-    setDescriptionLocalizations(descriptionLocalizations) {
-      return this.edit({ descriptionLocalizations });
-    }
-    setDefaultMemberPermissions(defaultMemberPermissions) {
-      return this.edit({ defaultMemberPermissions });
-    }
-    setDMPermission(dmPermission = true) {
-      return this.edit({ dmPermission });
-    }
-    setOptions(options) {
-      return this.edit({ options });
-    }
-    delete() {
-      return this.manager.delete(this, this.guildId);
-    }
-    equals(command, enforceOptionOrder = false) {
-      if (command.id && this.id !== command.id)
-        return false;
-      let defaultMemberPermissions = null;
-      let dmPermission = command.dmPermission ?? command.dm_permission;
-      if ("default_member_permissions" in command) {
-        defaultMemberPermissions = command.default_member_permissions ? new PermissionsBitField(BigInt(command.default_member_permissions)).bitfield : null;
-      }
-      if ("defaultMemberPermissions" in command) {
-        defaultMemberPermissions = command.defaultMemberPermissions !== null ? new PermissionsBitField(command.defaultMemberPermissions).bitfield : null;
-      }
-      if (command.name !== this.name || "description" in command && command.description !== this.description || "version" in command && command.version !== this.version || command.type && command.type !== this.type || "nsfw" in command && command.nsfw !== this.nsfw || (command.options?.length ?? 0) !== (this.options?.length ?? 0) || defaultMemberPermissions !== (this.defaultMemberPermissions?.bitfield ?? null) || dmPermission !== undefined && dmPermission !== this.dmPermission || !isEqual(command.nameLocalizations ?? command.name_localizations ?? {}, this.nameLocalizations ?? {}) || !isEqual(command.descriptionLocalizations ?? command.description_localizations ?? {}, this.descriptionLocalizations ?? {}) || !isEqual(command.integrationTypes ?? command.integration_types ?? [], this.integrationTypes ?? []) || !isEqual(command.contexts ?? [], this.contexts ?? [])) {
-        return false;
-      }
-      if (command.options) {
-        return this.constructor.optionsEqual(this.options, command.options, enforceOptionOrder);
-      }
-      return true;
-    }
-    static optionsEqual(existing, options, enforceOptionOrder = false) {
-      if (existing.length !== options.length)
-        return false;
-      if (enforceOptionOrder) {
-        return existing.every((option, index) => this._optionEquals(option, options[index], enforceOptionOrder));
-      }
-      const newOptions = new Map(options.map((option) => [option.name, option]));
-      for (const option of existing) {
-        const foundOption = newOptions.get(option.name);
-        if (!foundOption || !this._optionEquals(option, foundOption))
-          return false;
-      }
-      return true;
-    }
-    static _optionEquals(existing, option, enforceOptionOrder = false) {
-      if (option.name !== existing.name || option.type !== existing.type || option.description !== existing.description || option.autocomplete !== existing.autocomplete || (option.required ?? ([ApplicationCommandOptionType.Subcommand, ApplicationCommandOptionType.SubcommandGroup].includes(option.type) ? undefined : false)) !== existing.required || option.choices?.length !== existing.choices?.length || option.options?.length !== existing.options?.length || (option.channelTypes ?? option.channel_types)?.length !== existing.channelTypes?.length || (option.minValue ?? option.min_value) !== existing.minValue || (option.maxValue ?? option.max_value) !== existing.maxValue || (option.minLength ?? option.min_length) !== existing.minLength || (option.maxLength ?? option.max_length) !== existing.maxLength || !isEqual(option.nameLocalizations ?? option.name_localizations ?? {}, existing.nameLocalizations ?? {}) || !isEqual(option.descriptionLocalizations ?? option.description_localizations ?? {}, existing.descriptionLocalizations ?? {})) {
-        return false;
-      }
-      if (existing.choices) {
-        if (enforceOptionOrder && !existing.choices.every((choice, index) => choice.name === option.choices[index].name && choice.value === option.choices[index].value && isEqual(choice.nameLocalizations ?? {}, option.choices[index].nameLocalizations ?? option.choices[index].name_localizations ?? {}))) {
-          return false;
-        }
-        if (!enforceOptionOrder) {
-          const newChoices = new Map(option.choices.map((choice) => [choice.name, choice]));
-          for (const choice of existing.choices) {
-            const foundChoice = newChoices.get(choice.name);
-            if (!foundChoice || foundChoice.value !== choice.value)
-              return false;
-          }
-        }
-      }
-      if (existing.channelTypes) {
-        const newTypes = option.channelTypes ?? option.channel_types;
-        for (const type of existing.channelTypes) {
-          if (!newTypes.includes(type))
-            return false;
-        }
-      }
-      if (existing.options) {
-        return this.optionsEqual(existing.options, option.options, enforceOptionOrder);
-      }
-      return true;
-    }
-    static transformOption(option, received) {
-      const channelTypesKey = received ? "channelTypes" : "channel_types";
-      const minValueKey = received ? "minValue" : "min_value";
-      const maxValueKey = received ? "maxValue" : "max_value";
-      const minLengthKey = received ? "minLength" : "min_length";
-      const maxLengthKey = received ? "maxLength" : "max_length";
-      const nameLocalizationsKey = received ? "nameLocalizations" : "name_localizations";
-      const nameLocalizedKey = received ? "nameLocalized" : "name_localized";
-      const descriptionLocalizationsKey = received ? "descriptionLocalizations" : "description_localizations";
-      const descriptionLocalizedKey = received ? "descriptionLocalized" : "description_localized";
-      return {
-        type: option.type,
-        name: option.name,
-        [nameLocalizationsKey]: option.nameLocalizations ?? option.name_localizations,
-        [nameLocalizedKey]: option.nameLocalized ?? option.name_localized,
-        description: option.description,
-        [descriptionLocalizationsKey]: option.descriptionLocalizations ?? option.description_localizations,
-        [descriptionLocalizedKey]: option.descriptionLocalized ?? option.description_localized,
-        required: option.required ?? (option.type === ApplicationCommandOptionType.Subcommand || option.type === ApplicationCommandOptionType.SubcommandGroup ? undefined : false),
-        autocomplete: option.autocomplete,
-        choices: option.choices?.map((choice) => ({
-          name: choice.name,
-          [nameLocalizedKey]: choice.nameLocalized ?? choice.name_localized,
-          [nameLocalizationsKey]: choice.nameLocalizations ?? choice.name_localizations,
-          value: choice.value
-        })),
-        options: option.options?.map((opt) => this.transformOption(opt, received)),
-        [channelTypesKey]: option.channelTypes ?? option.channel_types,
-        [minValueKey]: option.minValue ?? option.min_value,
-        [maxValueKey]: option.maxValue ?? option.max_value,
-        [minLengthKey]: option.minLength ?? option.min_length,
-        [maxLengthKey]: option.maxLength ?? option.max_length
-      };
-    }
-  }
-  module.exports = ApplicationCommand;
-});
-
-// node_modules/discord.js/src/managers/ApplicationCommandManager.js
-var require_ApplicationCommandManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var { makeURLSearchParams } = require_dist5();
-  var { isJSONEncodable } = require_dist();
-  var { Routes } = require_v106();
-  var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
-  var CachedManager = require_CachedManager();
-  var { DiscordjsTypeError, ErrorCodes } = require_errors();
-  var ApplicationCommand = require_ApplicationCommand();
-  var PermissionsBitField = require_PermissionsBitField();
-
-  class ApplicationCommandManager extends CachedManager {
-    constructor(client, iterable) {
-      super(client, ApplicationCommand, iterable);
-      this.permissions = new ApplicationCommandPermissionsManager(this);
-    }
-    _add(data, cache, guildId) {
-      return super._add(data, cache, { extras: [this.guild, guildId] });
-    }
-    commandPath({ id, guildId } = {}) {
-      if (this.guild ?? guildId) {
-        if (id) {
-          return Routes.applicationGuildCommand(this.client.application.id, this.guild?.id ?? guildId, id);
-        }
-        return Routes.applicationGuildCommands(this.client.application.id, this.guild?.id ?? guildId);
-      }
-      if (id) {
-        return Routes.applicationCommand(this.client.application.id, id);
-      }
-      return Routes.applicationCommands(this.client.application.id);
-    }
-    async fetch(id, { guildId, cache = true, force = false, locale, withLocalizations } = {}) {
-      if (typeof id === "object") {
-        ({ guildId, cache = true, locale, withLocalizations } = id);
-      } else if (id) {
-        if (!force) {
-          const existing = this.cache.get(id);
-          if (existing)
-            return existing;
-        }
-        const command = await this.client.rest.get(this.commandPath({ id, guildId }));
-        return this._add(command, cache);
-      }
-      const data = await this.client.rest.get(this.commandPath({ guildId }), {
-        headers: {
-          "X-Discord-Locale": locale
-        },
-        query: makeURLSearchParams({ with_localizations: withLocalizations })
-      });
-      return data.reduce((coll, command) => coll.set(command.id, this._add(command, cache, guildId)), new Collection);
-    }
-    async create(command, guildId) {
-      const data = await this.client.rest.post(this.commandPath({ guildId }), {
-        body: this.constructor.transformCommand(command)
-      });
-      return this._add(data, true, guildId);
-    }
-    async set(commands, guildId) {
-      const data = await this.client.rest.put(this.commandPath({ guildId }), {
-        body: commands.map((command) => this.constructor.transformCommand(command))
-      });
-      return data.reduce((collection, command) => collection.set(command.id, this._add(command, true, guildId)), new Collection);
-    }
-    async edit(command, data, guildId) {
-      const id = this.resolveId(command);
-      if (!id)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable");
-      const patched = await this.client.rest.patch(this.commandPath({ id, guildId }), {
-        body: this.constructor.transformCommand(data)
-      });
-      return this._add(patched, true, guildId);
-    }
-    async delete(command, guildId) {
-      const id = this.resolveId(command);
-      if (!id)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "command", "ApplicationCommandResolvable");
-      await this.client.rest.delete(this.commandPath({ id, guildId }));
-      const cached = this.cache.get(id);
-      this.cache.delete(id);
-      return cached ?? null;
-    }
-    static transformCommand(command) {
-      if (isJSONEncodable(command))
-        return command.toJSON();
-      let default_member_permissions;
-      if ("default_member_permissions" in command) {
-        default_member_permissions = command.default_member_permissions ? new PermissionsBitField(BigInt(command.default_member_permissions)).bitfield.toString() : command.default_member_permissions;
-      }
-      if ("defaultMemberPermissions" in command) {
-        default_member_permissions = command.defaultMemberPermissions !== null ? new PermissionsBitField(command.defaultMemberPermissions).bitfield.toString() : command.defaultMemberPermissions;
-      }
-      return {
-        name: command.name,
-        name_localizations: command.nameLocalizations ?? command.name_localizations,
-        description: command.description,
-        nsfw: command.nsfw,
-        description_localizations: command.descriptionLocalizations ?? command.description_localizations,
-        type: command.type,
-        options: command.options?.map((option) => ApplicationCommand.transformOption(option)),
-        default_member_permissions,
-        dm_permission: command.dmPermission ?? command.dm_permission,
-        integration_types: command.integrationTypes ?? command.integration_types,
-        contexts: command.contexts
-      };
-    }
-  }
-  module.exports = ApplicationCommandManager;
-});
-
-// node_modules/discord.js/src/structures/ApplicationEmoji.js
-var require_ApplicationEmoji = __commonJS((exports, module) => {
-  var { Emoji } = require_Emoji();
-
-  class ApplicationEmoji extends Emoji {
-    constructor(client, data, application) {
-      super(client, data);
-      this.application = application;
-      this.author = null;
-      this.managed = null;
-      this.requiresColons = null;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("name" in data)
-        this.name = data.name;
-      if (data.user)
-        this.author = this.client.users._add(data.user);
-      if ("managed" in data) {
-        this.managed = data.managed;
-      }
-      if ("require_colons" in data) {
-        this.requiresColons = data.require_colons;
-      }
-    }
-    fetchAuthor() {
-      return this.application.emojis.fetchAuthor(this);
-    }
-    edit(options) {
-      return this.application.emojis.edit(this.id, options);
-    }
-    setName(name) {
-      return this.edit({ name });
-    }
-    async delete() {
-      await this.application.emojis.delete(this.id);
-      return this;
-    }
-    equals(other) {
-      if (other instanceof ApplicationEmoji) {
-        return other.animated === this.animated && other.id === this.id && other.name === this.name && other.managed === this.managed && other.requiresColons === this.requiresColons;
-      }
-      return other.id === this.id && other.name === this.name;
-    }
-  }
-  module.exports = ApplicationEmoji;
-});
-
-// node_modules/discord.js/src/managers/ApplicationEmojiManager.js
-var require_ApplicationEmojiManager = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var { Routes } = require_v106();
-  var CachedManager = require_CachedManager();
-  var { DiscordjsTypeError, ErrorCodes } = require_errors();
-  var ApplicationEmoji = require_ApplicationEmoji();
-  var { resolveImage } = require_DataResolver();
-
-  class ApplicationEmojiManager extends CachedManager {
-    constructor(application, iterable) {
-      super(application.client, ApplicationEmoji, iterable);
-      this.application = application;
-    }
-    _add(data, cache) {
-      return super._add(data, cache, { extras: [this.application] });
-    }
-    async create({ attachment, name }) {
-      attachment = await resolveImage(attachment);
-      if (!attachment)
-        throw new DiscordjsTypeError(ErrorCodes.ReqResourceType);
-      const body = { image: attachment, name };
-      const emoji = await this.client.rest.post(Routes.applicationEmojis(this.application.id), { body });
-      return this._add(emoji);
-    }
-    async fetch(id, { cache = true, force = false } = {}) {
-      if (id) {
-        if (!force) {
-          const existing = this.cache.get(id);
-          if (existing)
-            return existing;
-        }
-        const emoji = await this.client.rest.get(Routes.applicationEmoji(this.application.id, id));
-        return this._add(emoji, cache);
-      }
-      const { items: data } = await this.client.rest.get(Routes.applicationEmojis(this.application.id));
-      const emojis = new Collection;
-      for (const emoji of data)
-        emojis.set(emoji.id, this._add(emoji, cache));
-      return emojis;
-    }
-    async delete(emoji) {
-      const id = this.resolveId(emoji);
-      if (!id)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "emoji", "EmojiResolvable", true);
-      await this.client.rest.delete(Routes.applicationEmoji(this.application.id, id));
-    }
-    async edit(emoji, options) {
-      const id = this.resolveId(emoji);
-      if (!id)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "emoji", "EmojiResolvable", true);
-      const newData = await this.client.rest.patch(Routes.applicationEmoji(this.application.id, id), {
-        body: {
-          name: options.name
-        }
-      });
-      const existing = this.cache.get(id);
-      if (existing) {
-        existing._patch(newData);
-        return existing;
-      }
-      return this._add(newData);
-    }
-    async fetchAuthor(emoji) {
-      const id = this.resolveId(emoji);
-      if (!id)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "emoji", "EmojiResolvable", true);
-      const data = await this.client.rest.get(Routes.applicationEmoji(this.application.id, id));
-      return this._add(data).author;
-    }
-  }
-  module.exports = ApplicationEmojiManager;
-});
-
-// node_modules/discord.js/src/structures/Entitlement.js
-var require_Entitlement = __commonJS((exports) => {
-  var Base = require_Base();
-
-  class Entitlement extends Base {
-    constructor(client, data) {
-      super(client);
-      this.id = data.id;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("sku_id" in data) {
-        this.skuId = data.sku_id;
-      }
-      if ("user_id" in data) {
-        this.userId = data.user_id;
-      }
-      if ("guild_id" in data) {
-        this.guildId = data.guild_id;
-      } else {
-        this.guildId ??= null;
-      }
-      if ("application_id" in data) {
-        this.applicationId = data.application_id;
-      }
-      if ("type" in data) {
-        this.type = data.type;
-      }
-      if ("deleted" in data) {
-        this.deleted = data.deleted;
-      }
-      if ("starts_at" in data) {
-        this.startsTimestamp = data.starts_at ? Date.parse(data.starts_at) : null;
-      } else {
-        this.startsTimestamp ??= null;
-      }
-      if ("ends_at" in data) {
-        this.endsTimestamp = data.ends_at ? Date.parse(data.ends_at) : null;
-      } else {
-        this.endsTimestamp ??= null;
-      }
-      if ("consumed" in data) {
-        this.consumed = data.consumed;
-      } else {
-        this.consumed ??= false;
-      }
-    }
-    get guild() {
-      if (!this.guildId)
-        return null;
-      return this.client.guilds.cache.get(this.guildId) ?? null;
-    }
-    get startsAt() {
-      return this.startsTimestamp && new Date(this.startsTimestamp);
-    }
-    get endsAt() {
-      return this.endsTimestamp && new Date(this.endsTimestamp);
-    }
-    isActive() {
-      return !this.deleted && (!this.endsTimestamp || this.endsTimestamp > Date.now());
-    }
-    isTest() {
-      return this.startsTimestamp === null;
-    }
-    isUserSubscription() {
-      return this.guildId === null;
-    }
-    isGuildSubscription() {
-      return this.guildId !== null;
-    }
-    fetchUser() {
-      return this.client.users.fetch(this.userId);
-    }
-    async consume() {
-      await this.client.application.entitlements.consume(this.id);
-    }
-  }
-  exports.Entitlement = Entitlement;
-});
-
-// node_modules/discord.js/src/managers/EntitlementManager.js
-var require_EntitlementManager = __commonJS((exports) => {
-  var { Collection } = require_dist6();
-  var { makeURLSearchParams } = require_dist5();
-  var { Routes, EntitlementOwnerType } = require_v106();
-  var CachedManager = require_CachedManager();
-  var { ErrorCodes, DiscordjsTypeError } = require_errors();
-  var { Entitlement } = require_Entitlement();
-  var { resolveSKUId } = require_Util();
-
-  class EntitlementManager extends CachedManager {
-    constructor(client, iterable) {
-      super(client, Entitlement, iterable);
-    }
-    async fetch(options) {
-      if (!options)
-        return this._fetchMany(options);
-      const { entitlement, cache, force } = options;
-      const resolvedEntitlement = this.resolveId(entitlement ?? options);
-      if (resolvedEntitlement) {
-        return this._fetchSingle({ entitlement: resolvedEntitlement, cache, force });
-      }
-      return this._fetchMany(options);
-    }
-    async _fetchSingle({ entitlement, cache, force = false }) {
-      if (!force) {
-        const existing = this.cache.get(entitlement);
-        if (existing) {
-          return existing;
-        }
-      }
-      const data = await this.client.rest.get(Routes.entitlement(this.client.application.id, entitlement));
-      return this._add(data, cache);
-    }
-    async _fetchMany({ limit, guild, user, skus, excludeEnded, excludeDeleted, cache, before, after } = {}) {
-      const query = makeURLSearchParams({
-        limit,
-        guild_id: guild && this.client.guilds.resolveId(guild),
-        user_id: user && this.client.users.resolveId(user),
-        sku_ids: skus?.map((sku) => resolveSKUId(sku)).join(","),
-        exclude_ended: excludeEnded,
-        exclude_deleted: excludeDeleted,
-        before,
-        after
-      });
-      const entitlements = await this.client.rest.get(Routes.entitlements(this.client.application.id), { query });
-      return entitlements.reduce((coll, entitlement) => coll.set(entitlement.id, this._add(entitlement, cache)), new Collection);
-    }
-    async createTest({ sku, guild, user }) {
-      const skuId = resolveSKUId(sku);
-      if (!skuId)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "sku", "SKUResolvable");
-      if (guild && user || !guild && !user) {
-        throw new DiscordjsTypeError(ErrorCodes.EntitlementCreateInvalidOwner);
-      }
-      const resolved = guild ? this.client.guilds.resolveId(guild) : this.client.users.resolveId(user);
-      if (!resolved) {
-        const name = guild ? "guild" : "user";
-        const type = guild ? "GuildResolvable" : "UserResolvable";
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, name, type);
-      }
-      const entitlement = await this.client.rest.post(Routes.entitlements(this.client.application.id), {
-        body: {
-          sku_id: skuId,
-          owner_id: resolved,
-          owner_type: guild ? EntitlementOwnerType.Guild : EntitlementOwnerType.User
-        }
-      });
-      return new Entitlement(this.client, entitlement);
-    }
-    async deleteTest(entitlement) {
-      const resolved = this.resolveId(entitlement);
-      if (!resolved)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "entitlement", "EntitlementResolvable");
-      await this.client.rest.delete(Routes.entitlement(this.client.application.id, resolved));
-    }
-    async consume(entitlementId) {
-      await this.client.rest.post(Routes.consumeEntitlement(this.client.application.id, entitlementId));
-    }
-  }
-  exports.EntitlementManager = EntitlementManager;
-});
-
-// node_modules/discord.js/src/structures/Subscription.js
-var require_Subscription = __commonJS((exports) => {
-  var Base = require_Base();
-
-  class Subscription extends Base {
-    constructor(client, data) {
-      super(client);
-      this.id = data.id;
-      this.userId = data.user_id;
-      this._patch(data);
-    }
-    _patch(data) {
-      this.skuIds = data.sku_ids;
-      this.entitlementIds = data.entitlement_ids;
-      this.currentPeriodStartTimestamp = Date.parse(data.current_period_start);
-      this.currentPeriodEndTimestamp = Date.parse(data.current_period_end);
-      this.status = data.status;
-      if ("renewal_sku_ids" in data) {
-        this.renewalSkuIds = data.renewal_sku_ids;
-      }
-      if ("canceled_at" in data) {
-        this.canceledTimestamp = data.canceled_at ? Date.parse(data.canceled_at) : null;
-      } else {
-        this.canceledTimestamp ??= null;
-      }
-      if ("country" in data) {
-        this.country = data.country;
-      } else {
-        this.country ??= null;
-      }
-    }
-    get canceledAt() {
-      return this.canceledTimestamp && new Date(this.canceledTimestamp);
-    }
-    get currentPeriodStartAt() {
-      return new Date(this.currentPeriodStartTimestamp);
-    }
-    get currentPeriodEndAt() {
-      return new Date(this.currentPeriodEndTimestamp);
-    }
-  }
-  exports.Subscription = Subscription;
-});
-
-// node_modules/discord.js/src/managers/SubscriptionManager.js
-var require_SubscriptionManager = __commonJS((exports) => {
-  var { Collection } = require_dist6();
-  var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v106();
-  var CachedManager = require_CachedManager();
-  var { DiscordjsTypeError, ErrorCodes } = require_errors();
-  var { Subscription } = require_Subscription();
-  var { resolveSKUId } = require_Util();
-
-  class SubscriptionManager extends CachedManager {
-    constructor(client, iterable) {
-      super(client, Subscription, iterable);
-    }
-    async fetch(options = {}) {
-      if (typeof options !== "object")
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "options", "object", true);
-      const { after, before, cache, limit, sku, subscriptionId, user } = options;
-      const skuId = resolveSKUId(sku);
-      if (!skuId)
-        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "sku", "SKUResolvable");
-      if (subscriptionId) {
-        const subscription = await this.client.rest.get(Routes.skuSubscription(skuId, subscriptionId));
-        return this._add(subscription, cache);
-      }
-      const query = makeURLSearchParams({
-        limit,
-        user_id: this.client.users.resolveId(user) ?? undefined,
-        sku_id: skuId,
-        before,
-        after
-      });
-      const subscriptions = await this.client.rest.get(Routes.skuSubscriptions(skuId), { query });
-      return subscriptions.reduce((coll, subscription) => coll.set(subscription.id, this._add(subscription, cache)), new Collection);
-    }
-  }
-  exports.SubscriptionManager = SubscriptionManager;
-});
-
-// node_modules/discord.js/src/util/ApplicationFlagsBitField.js
-var require_ApplicationFlagsBitField = __commonJS((exports, module) => {
-  var { ApplicationFlags } = require_v106();
-  var BitField = require_BitField();
-
-  class ApplicationFlagsBitField extends BitField {
-    static Flags = ApplicationFlags;
-  }
-  module.exports = ApplicationFlagsBitField;
-});
-
-// node_modules/discord.js/src/structures/ClientApplication.js
-var require_ClientApplication = __commonJS((exports, module) => {
-  var { Collection } = require_dist6();
-  var { Routes } = require_v106();
-  var { ApplicationRoleConnectionMetadata } = require_ApplicationRoleConnectionMetadata();
-  var { SKU } = require_SKU();
-  var Team = require_Team();
-  var Application = require_Application();
-  var ApplicationCommandManager = require_ApplicationCommandManager();
-  var ApplicationEmojiManager = require_ApplicationEmojiManager();
-  var { EntitlementManager } = require_EntitlementManager();
-  var { SubscriptionManager } = require_SubscriptionManager();
-  var ApplicationFlagsBitField = require_ApplicationFlagsBitField();
-  var { resolveImage } = require_DataResolver();
-  var PermissionsBitField = require_PermissionsBitField();
-
-  class ClientApplication extends Application {
-    constructor(client, data) {
-      super(client, data);
-      this.commands = new ApplicationCommandManager(this.client);
-      this.emojis = new ApplicationEmojiManager(this);
-      this.entitlements = new EntitlementManager(this.client);
-      this.subscriptions = new SubscriptionManager(this.client);
-    }
-    _patch(data) {
-      super._patch(data);
-      this.tags = data.tags ?? [];
-      if ("install_params" in data) {
-        this.installParams = {
-          scopes: data.install_params.scopes,
-          permissions: new PermissionsBitField(data.install_params.permissions).freeze()
-        };
-      } else {
-        this.installParams ??= null;
-      }
-      if ("integration_types_config" in data) {
-        this.integrationTypesConfig = Object.fromEntries(Object.entries(data.integration_types_config).map(([key, config]) => {
-          let oauth2InstallParams = null;
-          if (config.oauth2_install_params) {
-            oauth2InstallParams = {
-              scopes: config.oauth2_install_params.scopes,
-              permissions: new PermissionsBitField(config.oauth2_install_params.permissions).freeze()
-            };
-          }
-          const context = {
-            oauth2InstallParams
-          };
-          return [key, context];
-        }));
-      } else {
-        this.integrationTypesConfig ??= null;
-      }
-      if ("custom_install_url" in data) {
-        this.customInstallURL = data.custom_install_url;
-      } else {
-        this.customInstallURL = null;
-      }
-      if ("flags" in data) {
-        this.flags = new ApplicationFlagsBitField(data.flags).freeze();
-      }
-      if ("approximate_guild_count" in data) {
-        this.approximateGuildCount = data.approximate_guild_count;
-      } else {
-        this.approximateGuildCount ??= null;
-      }
-      if ("approximate_user_install_count" in data) {
-        this.approximateUserInstallCount = data.approximate_user_install_count;
-      } else {
-        this.approximateUserInstallCount ??= null;
-      }
-      if ("guild_id" in data) {
-        this.guildId = data.guild_id;
-      } else {
-        this.guildId ??= null;
-      }
-      if ("bot_require_code_grant" in data) {
-        this.botRequireCodeGrant = data.bot_require_code_grant;
-      } else {
-        this.botRequireCodeGrant ??= null;
-      }
-      if ("bot" in data) {
-        this.bot = this.client.users._add(data.bot);
-      } else {
-        this.bot ??= null;
-      }
-      if ("bot_public" in data) {
-        this.botPublic = data.bot_public;
-      } else {
-        this.botPublic ??= null;
-      }
-      if ("interactions_endpoint_url" in data) {
-        this.interactionsEndpointURL = data.interactions_endpoint_url;
-      } else {
-        this.interactionsEndpointURL ??= null;
-      }
-      if ("role_connections_verification_url" in data) {
-        this.roleConnectionsVerificationURL = data.role_connections_verification_url;
-      } else {
-        this.roleConnectionsVerificationURL ??= null;
-      }
-      if ("event_webhooks_url" in data) {
-        this.eventWebhooksURL = data.event_webhooks_url;
-      } else {
-        this.eventWebhooksURL ??= null;
-      }
-      if ("event_webhooks_status" in data) {
-        this.eventWebhooksStatus = data.event_webhooks_status;
-      } else {
-        this.eventWebhooksStatus ??= null;
-      }
-      if ("event_webhooks_types" in data) {
-        this.eventWebhooksTypes = data.event_webhooks_types;
-      } else {
-        this.eventWebhooksTypes ??= null;
-      }
-      this.owner = data.team ? new Team(this.client, data.team) : data.owner ? this.client.users._add(data.owner) : this.owner ?? null;
-    }
-    get guild() {
-      return this.client.guilds.cache.get(this.guildId) ?? null;
-    }
-    get partial() {
-      return !this.name;
-    }
-    async edit({
-      customInstallURL,
-      description,
-      roleConnectionsVerificationURL,
-      installParams,
-      flags,
-      icon,
-      coverImage,
-      interactionsEndpointURL,
-      eventWebhooksURL,
-      eventWebhooksStatus,
-      eventWebhooksTypes,
-      tags
-    } = {}) {
-      const data = await this.client.rest.patch(Routes.currentApplication(), {
-        body: {
-          custom_install_url: customInstallURL,
-          description,
-          role_connections_verification_url: roleConnectionsVerificationURL,
-          install_params: installParams,
-          flags: flags === undefined ? undefined : ApplicationFlagsBitField.resolve(flags),
-          icon: icon && await resolveImage(icon),
-          cover_image: coverImage && await resolveImage(coverImage),
-          interactions_endpoint_url: interactionsEndpointURL,
-          event_webhooks_url: eventWebhooksURL,
-          event_webhooks_status: eventWebhooksStatus,
-          event_webhooks_types: eventWebhooksTypes,
-          tags
-        }
-      });
-      this._patch(data);
-      return this;
-    }
-    async fetch() {
-      const data = await this.client.rest.get(Routes.currentApplication());
-      this._patch(data);
-      return this;
-    }
-    async fetchRoleConnectionMetadataRecords() {
-      const metadata = await this.client.rest.get(Routes.applicationRoleConnectionMetadata(this.client.user.id));
-      return metadata.map((data) => new ApplicationRoleConnectionMetadata(data));
-    }
-    async editRoleConnectionMetadataRecords(records) {
-      const newRecords = await this.client.rest.put(Routes.applicationRoleConnectionMetadata(this.client.user.id), {
-        body: records.map((record) => ({
-          type: record.type,
-          key: record.key,
-          name: record.name,
-          name_localizations: record.nameLocalizations,
-          description: record.description,
-          description_localizations: record.descriptionLocalizations
-        }))
-      });
-      return newRecords.map((data) => new ApplicationRoleConnectionMetadata(data));
-    }
-    async fetchSKUs() {
-      const skus = await this.client.rest.get(Routes.skus(this.id));
-      return skus.reduce((coll, sku) => coll.set(sku.id, new SKU(this.client, sku)), new Collection);
-    }
-  }
-  module.exports = ClientApplication;
+  var version = "1.11.2";
 });
 
 // node_modules/discord.js/src/structures/Embed.js
@@ -20255,6 +20175,596 @@ var require_ReactionManager = __commonJS((exports, module) => {
   module.exports = ReactionManager;
 });
 
+// node_modules/discord.js/src/structures/Component.js
+var require_Component = __commonJS((exports, module) => {
+  var isEqual = require_fast_deep_equal();
+
+  class Component {
+    constructor(data) {
+      this.data = data;
+    }
+    get id() {
+      return this.data.id;
+    }
+    get type() {
+      return this.data.type;
+    }
+    equals(other) {
+      if (other instanceof Component) {
+        return isEqual(other.data, this.data);
+      }
+      return isEqual(other, this.data);
+    }
+    toJSON() {
+      return { ...this.data };
+    }
+  }
+  module.exports = Component;
+});
+
+// node_modules/discord.js/src/structures/ActionRow.js
+var require_ActionRow = __commonJS((exports, module) => {
+  var { deprecate } = __require("util");
+  var { isJSONEncodable } = require_dist();
+  var Component = require_Component();
+  var { createComponent } = require_Components();
+
+  class ActionRow extends Component {
+    constructor({ components, ...data }) {
+      super(data);
+      this.components = components.map((component) => createComponent(component));
+    }
+    static from = deprecate((other) => new this(isJSONEncodable(other) ? other.toJSON() : other), "ActionRow.from() is deprecated. Use ActionRowBuilder.from() instead.");
+    toJSON() {
+      return { ...this.data, components: this.components.map((component) => component.toJSON()) };
+    }
+  }
+  module.exports = ActionRow;
+});
+
+// node_modules/discord.js/src/structures/ActionRowBuilder.js
+var require_ActionRowBuilder = __commonJS((exports, module) => {
+  var { ActionRowBuilder: BuildersActionRow } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { createComponentBuilder } = require_Components();
+  var { toSnakeCase } = require_Transformers();
+
+  class ActionRowBuilder extends BuildersActionRow {
+    constructor({ components, ...data } = {}) {
+      super({
+        ...toSnakeCase(data),
+        components: components?.map((component) => createComponentBuilder(component))
+      });
+    }
+    static from(other) {
+      return new this(isJSONEncodable(other) ? other.toJSON() : other);
+    }
+  }
+  module.exports = ActionRowBuilder;
+});
+
+// node_modules/discord.js/src/structures/ButtonBuilder.js
+var require_ButtonBuilder = __commonJS((exports, module) => {
+  var { ButtonBuilder: BuildersButton } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { toSnakeCase } = require_Transformers();
+  var { resolvePartialEmoji } = require_Util();
+
+  class ButtonBuilder extends BuildersButton {
+    constructor({ emoji, ...data } = {}) {
+      super(toSnakeCase({ ...data, emoji: emoji && typeof emoji === "string" ? resolvePartialEmoji(emoji) : emoji }));
+    }
+    setEmoji(emoji) {
+      if (typeof emoji === "string") {
+        return super.setEmoji(resolvePartialEmoji(emoji));
+      }
+      return super.setEmoji(emoji);
+    }
+    static from(other) {
+      return new this(isJSONEncodable(other) ? other.toJSON() : other);
+    }
+  }
+  module.exports = ButtonBuilder;
+});
+
+// node_modules/discord.js/src/structures/ButtonComponent.js
+var require_ButtonComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+
+  class ButtonComponent extends Component {
+    get style() {
+      return this.data.style;
+    }
+    get label() {
+      return this.data.label ?? null;
+    }
+    get emoji() {
+      return this.data.emoji ?? null;
+    }
+    get disabled() {
+      return this.data.disabled ?? false;
+    }
+    get customId() {
+      return this.data.custom_id ?? null;
+    }
+    get url() {
+      return this.data.url ?? null;
+    }
+  }
+  module.exports = ButtonComponent;
+});
+
+// node_modules/discord.js/src/structures/ChannelSelectMenuBuilder.js
+var require_ChannelSelectMenuBuilder = __commonJS((exports, module) => {
+  var { ChannelSelectMenuBuilder: BuildersChannelSelectMenu } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { toSnakeCase } = require_Transformers();
+
+  class ChannelSelectMenuBuilder extends BuildersChannelSelectMenu {
+    constructor(data = {}) {
+      super(toSnakeCase(data));
+    }
+    static from(other) {
+      return new this(isJSONEncodable(other) ? other.toJSON() : other);
+    }
+  }
+  module.exports = ChannelSelectMenuBuilder;
+});
+
+// node_modules/discord.js/src/structures/BaseSelectMenuComponent.js
+var require_BaseSelectMenuComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+
+  class BaseSelectMenuComponent extends Component {
+    get placeholder() {
+      return this.data.placeholder ?? null;
+    }
+    get maxValues() {
+      return this.data.max_values ?? null;
+    }
+    get minValues() {
+      return this.data.min_values ?? null;
+    }
+    get customId() {
+      return this.data.custom_id;
+    }
+    get disabled() {
+      return this.data.disabled ?? false;
+    }
+  }
+  module.exports = BaseSelectMenuComponent;
+});
+
+// node_modules/discord.js/src/structures/ChannelSelectMenuComponent.js
+var require_ChannelSelectMenuComponent = __commonJS((exports, module) => {
+  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
+
+  class ChannelSelectMenuComponent extends BaseSelectMenuComponent {
+    get channelTypes() {
+      return this.data.channel_types ?? null;
+    }
+  }
+  module.exports = ChannelSelectMenuComponent;
+});
+
+// node_modules/discord.js/src/structures/ContainerComponent.js
+var require_ContainerComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+  var { createComponent } = require_Components();
+
+  class ContainerComponent extends Component {
+    constructor({ components, ...data }) {
+      super(data);
+      this.components = components.map((component) => createComponent(component));
+    }
+    get accentColor() {
+      return this.data.accent_color ?? null;
+    }
+    get hexAccentColor() {
+      return typeof this.data.accent_color === "number" ? `#${this.data.accent_color.toString(16).padStart(6, "0")}` : this.data.accent_color ?? null;
+    }
+    get spoiler() {
+      return this.data.spoiler ?? false;
+    }
+    toJSON() {
+      return { ...this.data, components: this.components.map((component) => component.toJSON()) };
+    }
+  }
+  module.exports = ContainerComponent;
+});
+
+// node_modules/discord.js/src/structures/UnfurledMediaItem.js
+var require_UnfurledMediaItem = __commonJS((exports, module) => {
+  class UnfurledMediaItem {
+    constructor(data) {
+      this.data = data;
+    }
+    get url() {
+      return this.data.url;
+    }
+    toJSON() {
+      return { ...this.data };
+    }
+  }
+  module.exports = UnfurledMediaItem;
+});
+
+// node_modules/discord.js/src/structures/FileComponent.js
+var require_FileComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+  var UnfurledMediaItem = require_UnfurledMediaItem();
+
+  class FileComponent extends Component {
+    constructor({ file, ...data }) {
+      super(data);
+      this.file = new UnfurledMediaItem(file);
+    }
+    get spoiler() {
+      return this.data.spoiler ?? false;
+    }
+    toJSON() {
+      return { ...this.data, file: this.file.toJSON() };
+    }
+  }
+  module.exports = FileComponent;
+});
+
+// node_modules/discord.js/src/structures/MediaGalleryItem.js
+var require_MediaGalleryItem = __commonJS((exports, module) => {
+  var UnfurledMediaItem = require_UnfurledMediaItem();
+
+  class MediaGalleryItem {
+    constructor({ media, ...data }) {
+      this.data = data;
+      this.media = new UnfurledMediaItem(media);
+    }
+    get description() {
+      return this.data.description ?? null;
+    }
+    get spoiler() {
+      return this.data.spoiler ?? false;
+    }
+    toJSON() {
+      return { ...this.data, media: this.media.toJSON() };
+    }
+  }
+  module.exports = MediaGalleryItem;
+});
+
+// node_modules/discord.js/src/structures/MediaGalleryComponent.js
+var require_MediaGalleryComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+  var MediaGalleryItem = require_MediaGalleryItem();
+
+  class MediaGalleryComponent extends Component {
+    constructor({ items, ...data }) {
+      super(data);
+      this.items = items.map((item) => new MediaGalleryItem(item));
+    }
+    toJSON() {
+      return { ...this.data, items: this.items.map((item) => item.toJSON()) };
+    }
+  }
+  module.exports = MediaGalleryComponent;
+});
+
+// node_modules/discord.js/src/structures/MentionableSelectMenuBuilder.js
+var require_MentionableSelectMenuBuilder = __commonJS((exports, module) => {
+  var { MentionableSelectMenuBuilder: BuildersMentionableSelectMenu } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { toSnakeCase } = require_Transformers();
+
+  class MentionableSelectMenuBuilder extends BuildersMentionableSelectMenu {
+    constructor(data = {}) {
+      super(toSnakeCase(data));
+    }
+    static from(other) {
+      return new this(isJSONEncodable(other) ? other.toJSON() : other);
+    }
+  }
+  module.exports = MentionableSelectMenuBuilder;
+});
+
+// node_modules/discord.js/src/structures/MentionableSelectMenuComponent.js
+var require_MentionableSelectMenuComponent = __commonJS((exports, module) => {
+  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
+
+  class MentionableSelectMenuComponent extends BaseSelectMenuComponent {
+  }
+  module.exports = MentionableSelectMenuComponent;
+});
+
+// node_modules/discord.js/src/structures/RoleSelectMenuBuilder.js
+var require_RoleSelectMenuBuilder = __commonJS((exports, module) => {
+  var { RoleSelectMenuBuilder: BuildersRoleSelectMenu } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { toSnakeCase } = require_Transformers();
+
+  class RoleSelectMenuBuilder extends BuildersRoleSelectMenu {
+    constructor(data = {}) {
+      super(toSnakeCase(data));
+    }
+    static from(other) {
+      return new this(isJSONEncodable(other) ? other.toJSON() : other);
+    }
+  }
+  module.exports = RoleSelectMenuBuilder;
+});
+
+// node_modules/discord.js/src/structures/RoleSelectMenuComponent.js
+var require_RoleSelectMenuComponent = __commonJS((exports, module) => {
+  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
+
+  class RoleSelectMenuComponent extends BaseSelectMenuComponent {
+  }
+  module.exports = RoleSelectMenuComponent;
+});
+
+// node_modules/discord.js/src/structures/SectionComponent.js
+var require_SectionComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+  var { createComponent } = require_Components();
+
+  class SectionComponent extends Component {
+    constructor({ accessory, components, ...data }) {
+      super(data);
+      this.components = components.map((component) => createComponent(component));
+      this.accessory = createComponent(accessory);
+    }
+    toJSON() {
+      return {
+        ...this.data,
+        accessory: this.accessory.toJSON(),
+        components: this.components.map((component) => component.toJSON())
+      };
+    }
+  }
+  module.exports = SectionComponent;
+});
+
+// node_modules/discord.js/src/structures/SeparatorComponent.js
+var require_SeparatorComponent = __commonJS((exports, module) => {
+  var { SeparatorSpacingSize } = require_v106();
+  var Component = require_Component();
+
+  class SeparatorComponent extends Component {
+    get spacing() {
+      return this.data.spacing ?? SeparatorSpacingSize.Small;
+    }
+    get divider() {
+      return this.data.divider ?? true;
+    }
+  }
+  module.exports = SeparatorComponent;
+});
+
+// node_modules/discord.js/src/structures/StringSelectMenuBuilder.js
+var require_StringSelectMenuBuilder = __commonJS((exports, module) => {
+  var { SelectMenuBuilder: BuildersSelectMenu, normalizeArray } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { toSnakeCase } = require_Transformers();
+  var { resolvePartialEmoji } = require_Util();
+
+  class StringSelectMenuBuilder extends BuildersSelectMenu {
+    constructor({ options, ...data } = {}) {
+      super(toSnakeCase({
+        ...data,
+        options: options?.map(({ emoji, ...option }) => ({
+          ...option,
+          emoji: emoji && typeof emoji === "string" ? resolvePartialEmoji(emoji) : emoji
+        }))
+      }));
+    }
+    static normalizeEmoji(selectMenuOption) {
+      if (isJSONEncodable(selectMenuOption)) {
+        return selectMenuOption;
+      }
+      const { emoji, ...option } = selectMenuOption;
+      return {
+        ...option,
+        emoji: typeof emoji === "string" ? resolvePartialEmoji(emoji) : emoji
+      };
+    }
+    addOptions(...options) {
+      return super.addOptions(normalizeArray(options).map((option) => StringSelectMenuBuilder.normalizeEmoji(option)));
+    }
+    setOptions(...options) {
+      return super.setOptions(normalizeArray(options).map((option) => StringSelectMenuBuilder.normalizeEmoji(option)));
+    }
+    static from(other) {
+      if (isJSONEncodable(other)) {
+        return new this(other.toJSON());
+      }
+      return new this(other);
+    }
+  }
+  module.exports = StringSelectMenuBuilder;
+});
+
+// node_modules/discord.js/src/structures/StringSelectMenuComponent.js
+var require_StringSelectMenuComponent = __commonJS((exports, module) => {
+  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
+
+  class StringSelectMenuComponent extends BaseSelectMenuComponent {
+    get options() {
+      return this.data.options;
+    }
+  }
+  module.exports = StringSelectMenuComponent;
+});
+
+// node_modules/discord.js/src/structures/TextDisplayComponent.js
+var require_TextDisplayComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+
+  class TextDisplayComponent extends Component {
+    get content() {
+      return this.data.content;
+    }
+  }
+  module.exports = TextDisplayComponent;
+});
+
+// node_modules/discord.js/src/structures/TextInputBuilder.js
+var require_TextInputBuilder = __commonJS((exports, module) => {
+  var { TextInputBuilder: BuildersTextInput } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { toSnakeCase } = require_Transformers();
+
+  class TextInputBuilder extends BuildersTextInput {
+    constructor(data) {
+      super(toSnakeCase(data));
+    }
+    static from(other) {
+      return new this(isJSONEncodable(other) ? other.toJSON() : other);
+    }
+  }
+  module.exports = TextInputBuilder;
+});
+
+// node_modules/discord.js/src/structures/TextInputComponent.js
+var require_TextInputComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+
+  class TextInputComponent extends Component {
+    get customId() {
+      return this.data.custom_id;
+    }
+    get value() {
+      return this.data.value;
+    }
+  }
+  module.exports = TextInputComponent;
+});
+
+// node_modules/discord.js/src/structures/ThumbnailComponent.js
+var require_ThumbnailComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+  var UnfurledMediaItem = require_UnfurledMediaItem();
+
+  class ThumbnailComponent extends Component {
+    constructor({ media, ...data }) {
+      super(data);
+      this.media = new UnfurledMediaItem(media);
+    }
+    get description() {
+      return this.data.description ?? null;
+    }
+    get spoiler() {
+      return this.data.spoiler ?? false;
+    }
+    toJSON() {
+      return { ...this.data, media: this.media.toJSON() };
+    }
+  }
+  module.exports = ThumbnailComponent;
+});
+
+// node_modules/discord.js/src/structures/UserSelectMenuBuilder.js
+var require_UserSelectMenuBuilder = __commonJS((exports, module) => {
+  var { UserSelectMenuBuilder: BuildersUserSelectMenu } = require_dist8();
+  var { isJSONEncodable } = require_dist();
+  var { toSnakeCase } = require_Transformers();
+
+  class UserSelectMenuBuilder extends BuildersUserSelectMenu {
+    constructor(data = {}) {
+      super(toSnakeCase(data));
+    }
+    static from(other) {
+      return new this(isJSONEncodable(other) ? other.toJSON() : other);
+    }
+  }
+  module.exports = UserSelectMenuBuilder;
+});
+
+// node_modules/discord.js/src/structures/UserSelectMenuComponent.js
+var require_UserSelectMenuComponent = __commonJS((exports, module) => {
+  var BaseSelectMenuComponent = require_BaseSelectMenuComponent();
+
+  class UserSelectMenuComponent extends BaseSelectMenuComponent {
+  }
+  module.exports = UserSelectMenuComponent;
+});
+
+// node_modules/discord.js/src/util/Components.js
+var require_Components = __commonJS((exports, module) => {
+  var { ComponentBuilder } = require_dist8();
+  var { ComponentType } = require_v106();
+  function createComponent(data) {
+    return data instanceof Component ? data : new (ComponentTypeToComponent[data.type] ?? Component)(data);
+  }
+  function createComponentBuilder(data) {
+    return data instanceof ComponentBuilder ? data : new (ComponentTypeToBuilder[data.type] ?? ComponentBuilder)(data);
+  }
+  function extractInteractiveComponents(component) {
+    switch (component.type) {
+      case ComponentType.ActionRow:
+        return component.components;
+      case ComponentType.Section:
+        return [...component.components, component.accessory];
+      case ComponentType.Container:
+        return component.components.flatMap(extractInteractiveComponents);
+      default:
+        return [component];
+    }
+  }
+  function findComponentByCustomId(components, customId) {
+    return components.flatMap(extractInteractiveComponents).find((component) => (component.customId ?? component.custom_id) === customId) ?? null;
+  }
+  module.exports = { createComponent, createComponentBuilder, findComponentByCustomId };
+  var ActionRow = require_ActionRow();
+  var ActionRowBuilder = require_ActionRowBuilder();
+  var ButtonBuilder = require_ButtonBuilder();
+  var ButtonComponent = require_ButtonComponent();
+  var ChannelSelectMenuBuilder = require_ChannelSelectMenuBuilder();
+  var ChannelSelectMenuComponent = require_ChannelSelectMenuComponent();
+  var Component = require_Component();
+  var ContainerComponent = require_ContainerComponent();
+  var FileComponent = require_FileComponent();
+  var MediaGalleryComponent = require_MediaGalleryComponent();
+  var MentionableSelectMenuBuilder = require_MentionableSelectMenuBuilder();
+  var MentionableSelectMenuComponent = require_MentionableSelectMenuComponent();
+  var RoleSelectMenuBuilder = require_RoleSelectMenuBuilder();
+  var RoleSelectMenuComponent = require_RoleSelectMenuComponent();
+  var SectionComponent = require_SectionComponent();
+  var SeparatorComponent = require_SeparatorComponent();
+  var StringSelectMenuBuilder = require_StringSelectMenuBuilder();
+  var StringSelectMenuComponent = require_StringSelectMenuComponent();
+  var TextDisplayComponent = require_TextDisplayComponent();
+  var TextInputBuilder = require_TextInputBuilder();
+  var TextInputComponent = require_TextInputComponent();
+  var ThumbnailComponent = require_ThumbnailComponent();
+  var UserSelectMenuBuilder = require_UserSelectMenuBuilder();
+  var UserSelectMenuComponent = require_UserSelectMenuComponent();
+  var ComponentTypeToComponent = {
+    [ComponentType.ActionRow]: ActionRow,
+    [ComponentType.Button]: ButtonComponent,
+    [ComponentType.StringSelect]: StringSelectMenuComponent,
+    [ComponentType.TextInput]: TextInputComponent,
+    [ComponentType.UserSelect]: UserSelectMenuComponent,
+    [ComponentType.RoleSelect]: RoleSelectMenuComponent,
+    [ComponentType.MentionableSelect]: MentionableSelectMenuComponent,
+    [ComponentType.ChannelSelect]: ChannelSelectMenuComponent,
+    [ComponentType.Container]: ContainerComponent,
+    [ComponentType.TextDisplay]: TextDisplayComponent,
+    [ComponentType.File]: FileComponent,
+    [ComponentType.MediaGallery]: MediaGalleryComponent,
+    [ComponentType.Section]: SectionComponent,
+    [ComponentType.Separator]: SeparatorComponent,
+    [ComponentType.Thumbnail]: ThumbnailComponent
+  };
+  var ComponentTypeToBuilder = {
+    [ComponentType.ActionRow]: ActionRowBuilder,
+    [ComponentType.Button]: ButtonBuilder,
+    [ComponentType.StringSelect]: StringSelectMenuBuilder,
+    [ComponentType.TextInput]: TextInputBuilder,
+    [ComponentType.UserSelect]: UserSelectMenuBuilder,
+    [ComponentType.RoleSelect]: RoleSelectMenuBuilder,
+    [ComponentType.MentionableSelect]: MentionableSelectMenuBuilder,
+    [ComponentType.ChannelSelect]: ChannelSelectMenuBuilder
+  };
+});
+
 // node_modules/discord.js/src/structures/Message.js
 var require_Message = __commonJS((exports) => {
   var { Collection } = require_dist6();
@@ -20280,7 +20790,7 @@ var require_Message = __commonJS((exports) => {
   var { Sticker } = require_Sticker();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var ReactionManager = require_ReactionManager();
-  var { createComponent } = require_Components();
+  var { createComponent, findComponentByCustomId } = require_Components();
   var { NonSystemMessageTypes, MaxBulkDeletableMessageAge, UndeletableMessageTypes } = require_Constants();
   var MessageFlagsBitField = require_MessageFlagsBitField();
   var PermissionsBitField = require_PermissionsBitField();
@@ -20708,7 +21218,7 @@ var require_Message = __commonJS((exports) => {
       return this.edit({ attachments: [] });
     }
     resolveComponent(customId) {
-      return this.components.flatMap((row) => row.components).find((component) => component.customId === customId) ?? null;
+      return findComponentByCustomId(this.components, customId);
     }
     equals(message, rawData) {
       if (!message)
@@ -20815,11 +21325,12 @@ var require_Webhook = __commonJS((exports, module) => {
       } else {
         messagePayload = MessagePayload.create(this, options).resolveBody();
       }
+      const { body, files } = await messagePayload.resolveFiles();
       const query = makeURLSearchParams({
         wait: true,
-        thread_id: messagePayload.options.threadId
+        thread_id: messagePayload.options.threadId,
+        with_components: messagePayload.options.withComponents
       });
-      const { body, files } = await messagePayload.resolveFiles();
       const d = await this.client.rest.post(Routes.webhook(this.id, this.token), {
         body,
         files,
@@ -20875,10 +21386,14 @@ var require_Webhook = __commonJS((exports, module) => {
       else
         messagePayload = MessagePayload.create(this, options);
       const { body, files } = await messagePayload.resolveBody().resolveFiles();
+      const query = makeURLSearchParams({
+        thread_id: messagePayload.options.threadId,
+        with_components: messagePayload.options.withComponents
+      });
       const d = await this.client.rest.patch(Routes.webhookMessage(this.id, this.token, typeof message === "string" ? message : message.id), {
         body,
         files,
-        query: messagePayload.options.threadId ? makeURLSearchParams({ thread_id: messagePayload.options.threadId }) : undefined,
+        query,
         auth: false
       });
       const channelManager = this.client.channels;
@@ -21301,6 +21816,14 @@ var require_GuildMember = __commonJS((exports) => {
       } else {
         this.flags ??= new GuildMemberFlagsBitField().freeze();
       }
+      if (data.avatar_decoration_data) {
+        this.avatarDecorationData = {
+          asset: data.avatar_decoration_data.asset,
+          skuId: data.avatar_decoration_data.sku_id
+        };
+      } else {
+        this.avatarDecorationData = null;
+      }
     }
     _clone() {
       const clone = super._clone();
@@ -21319,6 +21842,9 @@ var require_GuildMember = __commonJS((exports) => {
     avatarURL(options = {}) {
       return this.avatar && this.client.rest.cdn.guildMemberAvatar(this.guild.id, this.id, this.avatar, options);
     }
+    avatarDecorationURL() {
+      return this.avatarDecorationData ? this.client.rest.cdn.avatarDecoration(this.avatarDecorationData.asset) : null;
+    }
     bannerURL(options = {}) {
       return this.banner && this.client.rest.cdn.guildMemberBanner(this.guild.id, this.id, this.banner, options);
     }
@@ -21327,6 +21853,9 @@ var require_GuildMember = __commonJS((exports) => {
     }
     displayBannerURL(options) {
       return this.bannerURL(options) ?? this.user.bannerURL(options);
+    }
+    displayAvatarDecorationURL() {
+      return this.avatarDecorationURL() ?? this.user.avatarDecorationURL();
     }
     get joinedAt() {
       return this.joinedTimestamp && new Date(this.joinedTimestamp);
@@ -21424,7 +21953,7 @@ var require_GuildMember = __commonJS((exports) => {
       return this.guild.members.fetch({ user: this.id, cache: true, force });
     }
     equals(member) {
-      return member instanceof this.constructor && this.id === member.id && this.partial === member.partial && this.guild.id === member.guild.id && this.joinedTimestamp === member.joinedTimestamp && this.nickname === member.nickname && this.avatar === member.avatar && this.banner === member.banner && this.pending === member.pending && this.communicationDisabledUntilTimestamp === member.communicationDisabledUntilTimestamp && this.flags.bitfield === member.flags.bitfield && (this._roles === member._roles || this._roles.length === member._roles.length && this._roles.every((role, i) => role === member._roles[i]));
+      return member instanceof this.constructor && this.id === member.id && this.partial === member.partial && this.guild.id === member.guild.id && this.joinedTimestamp === member.joinedTimestamp && this.nickname === member.nickname && this.avatar === member.avatar && this.banner === member.banner && this.pending === member.pending && this.communicationDisabledUntilTimestamp === member.communicationDisabledUntilTimestamp && this.flags.bitfield === member.flags.bitfield && (this._roles === member._roles || this._roles.length === member._roles.length && this._roles.every((role, index) => role === member._roles[index])) && this.avatarDecorationData?.asset === member.avatarDecorationData?.asset && this.avatarDecorationData?.skuId === member.avatarDecorationData?.skuId;
     }
     toString() {
       return this.user.toString();
@@ -21440,6 +21969,7 @@ var require_GuildMember = __commonJS((exports) => {
       json.bannerURL = this.bannerURL();
       json.displayAvatarURL = this.displayAvatarURL();
       json.displayBannerURL = this.displayBannerURL();
+      json.avatarDecorationURL = this.avatarDecorationURL();
       return json;
     }
   }
@@ -21584,11 +22114,10 @@ var require_InteractionWebhook = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/MessagePayload.js
 var require_MessagePayload = __commonJS((exports, module) => {
-  var { Buffer: Buffer2 } = __require("node:buffer");
+  var { Buffer: Buffer2 } = __require("buffer");
   var { lazy, isJSONEncodable } = require_dist();
   var { DiscordSnowflake } = require_cjs();
   var { MessageFlags, MessageReferenceType } = require_v106();
-  var ActionRowBuilder = require_ActionRowBuilder();
   var { DiscordjsError, DiscordjsRangeError, ErrorCodes } = require_errors();
   var { resolveFile } = require_DataResolver();
   var MessageFlagsBitField = require_MessageFlagsBitField();
@@ -21657,7 +22186,7 @@ var require_MessagePayload = __commonJS((exports, module) => {
           throw new DiscordjsError(ErrorCodes.MessageNonceRequired);
         }
       }
-      const components = this.options.components?.map((component) => (isJSONEncodable(component) ? component : new ActionRowBuilder(component)).toJSON());
+      const components = this.options.components?.map((component) => isJSONEncodable(component) ? component.toJSON() : this.target.client.options.jsonTransformer(component));
       let username;
       let avatarURL;
       let threadName;
@@ -21672,7 +22201,7 @@ var require_MessagePayload = __commonJS((exports, module) => {
           appliedTags = this.options.appliedTags;
       }
       let flags;
-      if (this.options.flags != null || this.isMessage && this.options.reply === undefined || this.isMessageManager) {
+      if (this.options.flags != null) {
         flags = new MessageFlagsBitField(this.options.flags).bitfield;
       }
       if (isInteraction && this.options.ephemeral) {
@@ -21742,7 +22271,7 @@ var require_MessagePayload = __commonJS((exports, module) => {
         components,
         username,
         avatar_url: avatarURL,
-        allowed_mentions: content === undefined && message_reference === undefined ? undefined : allowedMentions,
+        allowed_mentions: this.isMessage && message_reference === undefined && this.target.author.id !== this.target.client.user.id ? undefined : allowedMentions,
         flags,
         message_reference,
         attachments: this.options.attachments,
@@ -22201,7 +22730,7 @@ var require_ThreadMember = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ThreadMemberManager.js
 var require_ThreadMemberManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v106();
@@ -22904,7 +23433,7 @@ var require_TextChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/VoiceChannel.js
 var require_VoiceChannel = __commonJS((exports, module) => {
-  var { PermissionFlagsBits } = require_v106();
+  var { PermissionFlagsBits, Routes } = require_v106();
   var BaseGuildVoiceChannel = require_BaseGuildVoiceChannel();
 
   class VoiceChannel extends BaseGuildVoiceChannel {
@@ -22922,6 +23451,14 @@ var require_VoiceChannel = __commonJS((exports, module) => {
       if (permissions.has(PermissionFlagsBits.Administrator, false))
         return true;
       return this.guild.members.me.communicationDisabledUntilTimestamp < Date.now() && permissions.has(PermissionFlagsBits.Speak, false);
+    }
+    async sendSoundboardSound(sound) {
+      await this.client.rest.post(Routes.sendSoundboardSound(this.id), {
+        body: {
+          sound_id: sound.soundId,
+          source_guild_id: sound.guildId ?? undefined
+        }
+      });
     }
   }
   module.exports = VoiceChannel;
@@ -22966,8 +23503,8 @@ var require_PartialGroupDMChannel = __commonJS((exports, module) => {
       super(client, data);
       this.flags = null;
       this.name = data.name;
-      this.icon = data.icon;
-      this.recipients = data.recipients;
+      this.icon = data.icon ?? null;
+      this.recipients = data.recipients ?? [];
       this.messages = new PartialGroupDMMessageManager(this);
       if ("owner_id" in data) {
         this.ownerId = data.owner_id;
@@ -23583,6 +24120,7 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
     AutoModeration: "AutoModeration",
     GuildOnboarding: "GuildOnboarding",
     GuildOnboardingPrompt: "GuildOnboardingPrompt",
+    SoundboardSound: "SoundboardSound",
     Unknown: "Unknown"
   };
   function changesReduce(changes, initialData = {}) {
@@ -23618,7 +24156,6 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
           break;
         case AuditLogEvent.MemberMove:
         case AuditLogEvent.MessageDelete:
-        case AuditLogEvent.MessageBulkDelete:
           this.extra = {
             channel: guild.channels.cache.get(data.options.channel_id) ?? { id: data.options.channel_id },
             count: Number(data.options.count)
@@ -23631,6 +24168,7 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
             messageId: data.options.message_id
           };
           break;
+        case AuditLogEvent.MessageBulkDelete:
         case AuditLogEvent.MemberDisconnect:
           this.extra = {
             count: Number(data.options.count)
@@ -23729,10 +24267,14 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
         this.target = guild.autoModerationRules.cache.get(data.target_id) ?? new AutoModerationRule(guild.client, changesReduce(this.changes, { id: data.target_id, guild_id: guild.id }), guild);
       } else if (targetType === Targets.GuildOnboardingPrompt) {
         this.target = data.action_type === AuditLogEvent.OnboardingPromptCreate ? new GuildOnboardingPrompt(guild.client, changesReduce(this.changes, { id: data.target_id }), guild.id) : changesReduce(this.changes, { id: data.target_id });
-      } else if (targetType === Targets.GuildOnboarding) {
-        this.target = changesReduce(this.changes, { id: data.target_id });
+      } else if (targetType === Targets.Role) {
+        this.target = guild.roles.cache.get(data.target_id) ?? { id: data.target_id };
+      } else if (targetType === Targets.Emoji) {
+        this.target = guild.emojis.cache.get(data.target_id) ?? { id: data.target_id };
+      } else if (targetType === Targets.SoundboardSound) {
+        this.target = guild.soundboardSounds.cache.get(data.target_id) ?? { id: data.target_id };
       } else if (data.target_id) {
-        this.target = guild[`${targetType.toLowerCase()}s`]?.cache.get(data.target_id) ?? { id: data.target_id };
+        this.target = { id: data.target_id };
       }
     }
     static targetType(target) {
@@ -23764,8 +24306,12 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
         return Targets.Thread;
       if (target < 130)
         return Targets.ApplicationCommand;
-      if (target >= 140 && target < 150)
+      if (target < 140)
+        return Targets.SoundboardSound;
+      if (target < 143)
         return Targets.AutoModeration;
+      if (target < 146)
+        return Targets.User;
       if (target >= 163 && target <= 165)
         return Targets.GuildOnboardingPrompt;
       if (target >= 160 && target < 170)
@@ -23788,6 +24334,7 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
         AuditLogEvent.StickerCreate,
         AuditLogEvent.GuildScheduledEventCreate,
         AuditLogEvent.ThreadCreate,
+        AuditLogEvent.SoundboardSoundCreate,
         AuditLogEvent.AutoModerationRuleCreate,
         AuditLogEvent.AutoModerationBlockMessage,
         AuditLogEvent.OnboardingPromptCreate,
@@ -23814,6 +24361,7 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
         AuditLogEvent.StickerDelete,
         AuditLogEvent.GuildScheduledEventDelete,
         AuditLogEvent.ThreadDelete,
+        AuditLogEvent.SoundboardSoundDelete,
         AuditLogEvent.AutoModerationRuleDelete,
         AuditLogEvent.OnboardingPromptDelete
       ].includes(action)) {
@@ -23835,8 +24383,12 @@ var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
         AuditLogEvent.StickerUpdate,
         AuditLogEvent.GuildScheduledEventUpdate,
         AuditLogEvent.ThreadUpdate,
+        AuditLogEvent.SoundboardSoundUpdate,
         AuditLogEvent.ApplicationCommandPermissionUpdate,
         AuditLogEvent.AutoModerationRuleUpdate,
+        AuditLogEvent.AutoModerationBlockMessage,
+        AuditLogEvent.AutoModerationFlagToChannel,
+        AuditLogEvent.AutoModerationUserCommunicationDisabled,
         AuditLogEvent.OnboardingPromptUpdate,
         AuditLogEvent.OnboardingUpdate
       ].includes(action)) {
@@ -24365,6 +24917,27 @@ var require_GuildScheduledEventUserRemove = __commonJS((exports, module) => {
   module.exports = GuildScheduledEventUserRemoveAction;
 });
 
+// node_modules/discord.js/src/client/actions/GuildSoundboardSoundDelete.js
+var require_GuildSoundboardSoundDelete = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var Events = require_Events();
+
+  class GuildSoundboardSoundDeleteAction extends Action {
+    handle(data) {
+      const guild = this.client.guilds.cache.get(data.guild_id);
+      if (!guild)
+        return {};
+      const soundboardSound = this.getSoundboardSound(data, guild);
+      if (soundboardSound) {
+        guild.soundboardSounds.cache.delete(soundboardSound.soundId);
+        this.client.emit(Events.GuildSoundboardSoundDelete, soundboardSound);
+      }
+      return { soundboardSound };
+    }
+  }
+  module.exports = GuildSoundboardSoundDeleteAction;
+});
+
 // node_modules/discord.js/src/client/actions/GuildStickerCreate.js
 var require_GuildStickerCreate = __commonJS((exports, module) => {
   var Action = require_Action();
@@ -24735,8 +25308,8 @@ var require_InteractionResponse = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/interfaces/InteractionResponses.js
 var require_InteractionResponses = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
-  var { deprecate } = __require("node:util");
+  var process2 = __require("process");
+  var { deprecate } = __require("util");
   var { makeURLSearchParams } = require_dist5();
   var { isJSONEncodable } = require_dist();
   var { InteractionResponseType, MessageFlags, Routes, InteractionType } = require_v106();
@@ -24887,6 +25460,19 @@ var require_InteractionResponses = __commonJS((exports, module) => {
       this.replied = true;
       return options.withResponse ? new InteractionCallbackResponse(this.client, response) : options.fetchReply ? this.fetchReply() : new InteractionResponse(this, this.message.interactionMetadata?.id);
     }
+    async launchActivity({ withResponse } = {}) {
+      if (this.deferred || this.replied)
+        throw new DiscordjsError(ErrorCodes.InteractionAlreadyReplied);
+      const response = await this.client.rest.post(Routes.interactionCallback(this.id, this.token), {
+        query: makeURLSearchParams({ with_response: withResponse ?? false }),
+        body: {
+          type: InteractionResponseType.LaunchActivity
+        },
+        auth: false
+      });
+      this.replied = true;
+      return withResponse ? new InteractionCallbackResponse(this.client, response) : undefined;
+    }
     async showModal(modal, options = {}) {
       if (this.deferred || this.replied)
         throw new DiscordjsError(ErrorCodes.InteractionAlreadyReplied);
@@ -24937,6 +25523,7 @@ var require_InteractionResponses = __commonJS((exports, module) => {
         "followUp",
         "deferUpdate",
         "update",
+        "launchActivity",
         "showModal",
         "sendPremiumRequired",
         "awaitModalSubmit"
@@ -24958,6 +25545,7 @@ var require_MessageComponentInteraction = __commonJS((exports, module) => {
   var BaseInteraction = require_BaseInteraction();
   var InteractionWebhook = require_InteractionWebhook();
   var InteractionResponses = require_InteractionResponses();
+  var { findComponentByCustomId } = require_Components();
   var getMessage = lazy(() => require_Message().Message);
 
   class MessageComponentInteraction extends BaseInteraction {
@@ -24972,7 +25560,7 @@ var require_MessageComponentInteraction = __commonJS((exports, module) => {
       this.webhook = new InteractionWebhook(this.client, this.applicationId, this.token);
     }
     get component() {
-      return this.message.components.flatMap((row) => row.components).find((component) => (component.customId ?? component.custom_id) === this.customId);
+      return findComponentByCustomId(this.message.components, this.customId);
     }
     deferReply() {}
     reply() {}
@@ -24982,6 +25570,7 @@ var require_MessageComponentInteraction = __commonJS((exports, module) => {
     followUp() {}
     deferUpdate() {}
     update() {}
+    launchActivity() {}
     showModal() {}
     sendPremiumRequired() {}
     awaitModalSubmit() {}
@@ -25075,6 +25664,7 @@ var require_CommandInteraction = __commonJS((exports, module) => {
     editReply() {}
     deleteReply() {}
     followUp() {}
+    launchActivity() {}
     showModal() {}
     sendPremiumRequired() {}
     awaitModalSubmit() {}
@@ -25270,9 +25860,19 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
     deferUpdate() {}
     update() {}
     sendPremiumRequired() {}
+    launchActivity() {}
   }
   InteractionResponses.applyToClass(ModalSubmitInteraction, "showModal");
   module.exports = ModalSubmitInteraction;
+});
+
+// node_modules/discord.js/src/structures/PrimaryEntryPointCommandInteraction.js
+var require_PrimaryEntryPointCommandInteraction = __commonJS((exports, module) => {
+  var CommandInteraction = require_CommandInteraction();
+
+  class PrimaryEntryPointCommandInteraction extends CommandInteraction {
+  }
+  module.exports = PrimaryEntryPointCommandInteraction;
 });
 
 // node_modules/discord.js/src/structures/RoleSelectMenuInteraction.js
@@ -25362,6 +25962,7 @@ var require_InteractionCreate = __commonJS((exports, module) => {
   var MentionableSelectMenuInteraction = require_MentionableSelectMenuInteraction();
   var MessageContextMenuCommandInteraction = require_MessageContextMenuCommandInteraction();
   var ModalSubmitInteraction = require_ModalSubmitInteraction();
+  var PrimaryEntryPointCommandInteraction = require_PrimaryEntryPointCommandInteraction();
   var RoleSelectMenuInteraction = require_RoleSelectMenuInteraction();
   var StringSelectMenuInteraction = require_StringSelectMenuInteraction();
   var UserContextMenuCommandInteraction = require_UserContextMenuCommandInteraction();
@@ -25386,6 +25987,9 @@ var require_InteractionCreate = __commonJS((exports, module) => {
               if (channel && !channel.isTextBased())
                 return;
               InteractionClass = MessageContextMenuCommandInteraction;
+              break;
+            case ApplicationCommandType.PrimaryEntryPoint:
+              InteractionClass = PrimaryEntryPointCommandInteraction;
               break;
             default:
               client.emit(Events.Debug, `[INTERACTION] Received application command interaction with unknown type: ${data.data.type}`);
@@ -26141,7 +26745,7 @@ var require_VoiceStateUpdate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/WebhooksUpdate.js
 var require_WebhooksUpdate = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var Action = require_Action();
   var deprecationEmitted = false;
 
@@ -26201,6 +26805,7 @@ var require_ActionsManager = __commonJS((exports, module) => {
       this.register(require_GuildScheduledEventUpdate());
       this.register(require_GuildScheduledEventUserAdd());
       this.register(require_GuildScheduledEventUserRemove());
+      this.register(require_GuildSoundboardSoundDelete());
       this.register(require_GuildStickerCreate());
       this.register(require_GuildStickerDelete());
       this.register(require_GuildStickerUpdate());
@@ -26797,11 +27402,11 @@ var require_dist10 = __commonJS((exports, module) => {
       await throttler.waitForIdentify(shardId, signal);
     }
   };
-  var import_node_worker_threads2 = __require("node:worker_threads");
+  var import_node_worker_threads2 = __require("worker_threads");
   var import_collection2 = require_dist9();
-  var import_node_events = __require("node:events");
-  var import_node_path = __require("node:path");
-  var import_node_worker_threads = __require("node:worker_threads");
+  var import_node_events = __require("events");
+  var import_node_path = __require("path");
+  var import_node_worker_threads = __require("worker_threads");
   var import_collection = require_dist9();
   var WorkerSendPayloadOp = /* @__PURE__ */ ((WorkerSendPayloadOp2) => {
     WorkerSendPayloadOp2[WorkerSendPayloadOp2["Connect"] = 0] = "Connect";
@@ -27108,24 +27713,24 @@ var require_dist10 = __commonJS((exports, module) => {
     }
   };
   var import_collection6 = require_dist9();
-  var import_node_buffer = __require("node:buffer");
-  var import_node_events2 = __require("node:events");
-  var import_node_timers = __require("node:timers");
-  var import_promises2 = __require("node:timers/promises");
-  var import_node_url = __require("node:url");
-  var import_node_util = __require("node:util");
-  var import_node_zlib = __require("node:zlib");
+  var import_node_buffer = __require("buffer");
+  var import_node_events2 = __require("events");
+  var import_node_timers = __require("timers");
+  var import_promises2 = __require("timers/promises");
+  var import_node_url = __require("url");
+  var import_node_util = __require("util");
+  var import_node_zlib = __require("zlib");
   var import_collection5 = require_dist9();
   var import_util2 = require_dist();
   var import_async_queue2 = require_cjs2();
   var import_async_event_emitter = require_dist3();
   var import_v102 = require_v106();
   var import_ws = __require("ws");
-  var import_node_process = __toESM2(__require("node:process"));
+  var import_node_process = __toESM2(__require("process"));
   var import_collection4 = require_dist9();
   var import_util = require_dist();
   var import_v10 = require_v106();
-  var import_promises = __require("node:timers/promises");
+  var import_promises = __require("timers/promises");
   var import_collection3 = require_dist9();
   var import_async_queue = require_cjs2();
   var SimpleIdentifyThrottler = class {
@@ -27165,7 +27770,7 @@ var require_dist10 = __commonJS((exports, module) => {
     CompressionMethod2["ZlibStream"] = "zlib-stream";
     return CompressionMethod2;
   })(CompressionMethod || {});
-  var DefaultDeviceProperty = `@discordjs/ws 1.2.1`;
+  var DefaultDeviceProperty = `@discordjs/ws 1.2.3`;
   var getDefaultSessionStore = (0, import_util.lazy)(() => new import_collection4.Collection);
   var DefaultWebSocketManagerOptions = {
     async buildIdentifyThrottler(manager) {
@@ -27854,7 +28459,7 @@ var require_dist10 = __commonJS((exports, module) => {
       return this.shards.mapValues((shard) => shard.status);
     }
   };
-  var import_node_worker_threads3 = __require("node:worker_threads");
+  var import_node_worker_threads3 = __require("worker_threads");
   var import_collection7 = require_dist9();
   var WorkerBootstrapper = class {
     static {
@@ -28044,7 +28649,7 @@ var require_dist10 = __commonJS((exports, module) => {
       await this.destroy();
     }
   };
-  var version = "1.2.1";
+  var version = "1.2.3";
 });
 
 // node_modules/discord.js/src/util/WebSocketShardEvents.js
@@ -28061,9 +28666,9 @@ var require_WebSocketShardEvents = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/websocket/WebSocketShard.js
 var require_WebSocketShard = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
-  var process2 = __require("node:process");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
+  var EventEmitter = __require("events");
+  var process2 = __require("process");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
   var { GatewayIntentBits } = require_v106();
   var Status = require_Status();
   var WebSocketShardEvents = require_WebSocketShardEvents();
@@ -28412,6 +29017,54 @@ var require_GUILD_SCHEDULED_EVENT_USER_REMOVE = __commonJS((exports, module) => 
   };
 });
 
+// node_modules/discord.js/src/client/websocket/handlers/GUILD_SOUNDBOARD_SOUNDS_UPDATE.js
+var require_GUILD_SOUNDBOARD_SOUNDS_UPDATE = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var Events = require_Events();
+  module.exports = (client, { d: data }) => {
+    const guild = client.guilds.cache.get(data.guild_id);
+    if (!guild)
+      return;
+    const soundboardSounds = new Collection;
+    for (const soundboardSound of data.soundboard_sounds) {
+      soundboardSounds.set(soundboardSound.sound_id, guild.soundboardSounds._add(soundboardSound));
+    }
+    client.emit(Events.GuildSoundboardSoundsUpdate, soundboardSounds, guild);
+  };
+});
+
+// node_modules/discord.js/src/client/websocket/handlers/GUILD_SOUNDBOARD_SOUND_CREATE.js
+var require_GUILD_SOUNDBOARD_SOUND_CREATE = __commonJS((exports, module) => {
+  var Events = require_Events();
+  module.exports = (client, { d: data }) => {
+    const guild = client.guilds.cache.get(data.guild_id);
+    if (!guild)
+      return;
+    const soundboardSound = guild.soundboardSounds._add(data);
+    client.emit(Events.GuildSoundboardSoundCreate, soundboardSound);
+  };
+});
+
+// node_modules/discord.js/src/client/websocket/handlers/GUILD_SOUNDBOARD_SOUND_DELETE.js
+var require_GUILD_SOUNDBOARD_SOUND_DELETE = __commonJS((exports, module) => {
+  module.exports = (client, { d: data }) => {
+    client.actions.GuildSoundboardSoundDelete.handle(data);
+  };
+});
+
+// node_modules/discord.js/src/client/websocket/handlers/GUILD_SOUNDBOARD_SOUND_UPDATE.js
+var require_GUILD_SOUNDBOARD_SOUND_UPDATE = __commonJS((exports, module) => {
+  var Events = require_Events();
+  module.exports = (client, { d: data }) => {
+    const guild = client.guilds.cache.get(data.guild_id);
+    if (!guild)
+      return;
+    const oldGuildSoundboardSound = guild.soundboardSounds.cache.get(data.sound_id)?._clone() ?? null;
+    const newGuildSoundboardSound = guild.soundboardSounds._add(data);
+    client.emit(Events.GuildSoundboardSoundUpdate, oldGuildSoundboardSound, newGuildSoundboardSound);
+  };
+});
+
 // node_modules/discord.js/src/client/websocket/handlers/GUILD_STICKERS_UPDATE.js
 var require_GUILD_STICKERS_UPDATE = __commonJS((exports, module) => {
   module.exports = (client, packet) => {
@@ -28559,8 +29212,6 @@ var require_ClientUser = __commonJS((exports, module) => {
           banner: banner && await resolveImage(banner)
         }
       });
-      this.client.token = data.token;
-      this.client.rest.setToken(data.token);
       const { updated } = this.client.actions.UserUpdate.handle(data);
       return updated ?? this;
     }
@@ -28623,6 +29274,22 @@ var require_RESUMED = __commonJS((exports, module) => {
   module.exports = (client, packet, shard) => {
     const replayed = shard.sessionInfo.sequence - shard.closeSequence;
     client.emit(Events.ShardResume, shard.id, replayed);
+  };
+});
+
+// node_modules/discord.js/src/client/websocket/handlers/SOUNDBOARD_SOUNDS.js
+var require_SOUNDBOARD_SOUNDS = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
+  var Events = require_Events();
+  module.exports = (client, { d: data }) => {
+    const guild = client.guilds.cache.get(data.guild_id);
+    if (!guild)
+      return;
+    const soundboardSounds = new Collection;
+    for (const soundboardSound of data.soundboard_sounds) {
+      soundboardSounds.set(soundboardSound.sound_id, guild.soundboardSounds._add(soundboardSound));
+    }
+    client.emit(Events.SoundboardSounds, soundboardSounds, guild);
   };
 });
 
@@ -28754,6 +29421,9 @@ var require_VoiceChannelEffect = __commonJS((exports, module) => {
     get channel() {
       return this.guild.channels.cache.get(this.channelId) ?? null;
     }
+    get soundboardSound() {
+      return this.guild.soundboardSounds.cache.get(this.soundId) ?? null;
+    }
   }
   module.exports = VoiceChannelEffect;
 });
@@ -28826,6 +29496,10 @@ var require_handlers = __commonJS((exports, module) => {
     ["GUILD_SCHEDULED_EVENT_UPDATE", require_GUILD_SCHEDULED_EVENT_UPDATE()],
     ["GUILD_SCHEDULED_EVENT_USER_ADD", require_GUILD_SCHEDULED_EVENT_USER_ADD()],
     ["GUILD_SCHEDULED_EVENT_USER_REMOVE", require_GUILD_SCHEDULED_EVENT_USER_REMOVE()],
+    ["GUILD_SOUNDBOARD_SOUNDS_UPDATE", require_GUILD_SOUNDBOARD_SOUNDS_UPDATE()],
+    ["GUILD_SOUNDBOARD_SOUND_CREATE", require_GUILD_SOUNDBOARD_SOUND_CREATE()],
+    ["GUILD_SOUNDBOARD_SOUND_DELETE", require_GUILD_SOUNDBOARD_SOUND_DELETE()],
+    ["GUILD_SOUNDBOARD_SOUND_UPDATE", require_GUILD_SOUNDBOARD_SOUND_UPDATE()],
     ["GUILD_STICKERS_UPDATE", require_GUILD_STICKERS_UPDATE()],
     ["GUILD_UPDATE", require_GUILD_UPDATE()],
     ["INTERACTION_CREATE", require_INTERACTION_CREATE()],
@@ -28844,6 +29518,7 @@ var require_handlers = __commonJS((exports, module) => {
     ["PRESENCE_UPDATE", require_PRESENCE_UPDATE()],
     ["READY", require_READY()],
     ["RESUMED", require_RESUMED()],
+    ["SOUNDBOARD_SOUNDS", require_SOUNDBOARD_SOUNDS()],
     ["STAGE_INSTANCE_CREATE", require_STAGE_INSTANCE_CREATE()],
     ["STAGE_INSTANCE_DELETE", require_STAGE_INSTANCE_DELETE()],
     ["STAGE_INSTANCE_UPDATE", require_STAGE_INSTANCE_UPDATE()],
@@ -28868,9 +29543,9 @@ var require_handlers = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/websocket/WebSocketManager.js
 var require_WebSocketManager = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
-  var process2 = __require("node:process");
-  var { setImmediate } = __require("node:timers");
+  var EventEmitter = __require("events");
+  var process2 = __require("process");
+  var { setImmediate } = __require("timers");
   var { Collection } = require_dist6();
   var {
     WebSocketManager: WSWebSocketManager,
@@ -28899,10 +29574,13 @@ var require_WebSocketManager = __commonJS((exports, module) => {
     GatewayDispatchEvents.GuildMemberRemove
   ];
   var WaitingForGuildEvents = [GatewayDispatchEvents.GuildCreate, GatewayDispatchEvents.GuildDelete];
-  var UNRESUMABLE_CLOSE_CODES = [
-    CloseCodes.Normal,
-    GatewayCloseCodes.AlreadyAuthenticated,
-    GatewayCloseCodes.InvalidSeq
+  var UNRECOVERABLE_CLOSE_CODES = [
+    GatewayCloseCodes.AuthenticationFailed,
+    GatewayCloseCodes.InvalidShard,
+    GatewayCloseCodes.ShardingRequired,
+    GatewayCloseCodes.InvalidAPIVersion,
+    GatewayCloseCodes.InvalidIntents,
+    GatewayCloseCodes.DisallowedIntents
   ];
   var reasonIsDeprecated = "the reason property is deprecated, use the code property to determine the reason";
   var deprecationEmittedForInvalidSessionEvent = false;
@@ -29011,10 +29689,10 @@ var require_WebSocketManager = __commonJS((exports, module) => {
       this._ws.on(WSWebSocketShardEvents.Closed, ({ code, shardId }) => {
         const shard = this.shards.get(shardId);
         shard.emit(WebSocketShardEvents.Close, { code, reason: reasonIsDeprecated, wasClean: true });
-        if (UNRESUMABLE_CLOSE_CODES.includes(code) && this.destroyed) {
+        if (UNRECOVERABLE_CLOSE_CODES.includes(code)) {
           shard.status = Status.Disconnected;
           this.client.emit(Events.ShardDisconnect, { code, reason: reasonIsDeprecated, wasClean: true }, shardId);
-          this.debug([`Shard not resumable: ${code} (${GatewayCloseCodes[code] ?? CloseCodes[code]})`], shardId);
+          this.debug([`Shard not recoverable: ${code} (${GatewayCloseCodes[code] ?? CloseCodes[code]})`], shardId);
           return;
         }
         this.shards.get(shardId).status = Status.Connecting;
@@ -29142,7 +29820,7 @@ var require_BaseGuildEmojiManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ChannelManager.js
 var require_ChannelManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { BaseChannel } = require_BaseChannel();
@@ -29189,6 +29867,12 @@ var require_ChannelManager = __commonJS((exports, module) => {
       }
       channel?.parent?.threads?.cache.delete(id);
       this.cache.delete(id);
+      if (channel?.threads) {
+        for (const threadId of channel.threads.cache.keys()) {
+          this.cache.delete(threadId);
+          channel.guild?.channels.cache.delete(threadId);
+        }
+      }
     }
     async fetch(id, { allowUnknownGuild = false, cache = true, force = false } = {}) {
       if (!force) {
@@ -29205,7 +29889,7 @@ var require_ChannelManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/sharding/ShardClientUtil.js
 var require_ShardClientUtil = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { calculateShardId } = require_dist();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
   var Events = require_Events();
@@ -29233,7 +29917,7 @@ var require_ShardClientUtil = __commonJS((exports, module) => {
           });
           break;
         case "worker":
-          this.parentPort = __require("node:worker_threads").parentPort;
+          this.parentPort = __require("worker_threads").parentPort;
           this.parentPort.on("message", this._handleMessage.bind(this));
           client.on(Events.ShardReady, () => {
             this.parentPort.postMessage({ _ready: true });
@@ -29690,7 +30374,7 @@ var require_GuildApplicationCommandManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildBanManager.js
 var require_GuildBanManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v106();
@@ -29790,7 +30474,7 @@ var require_GuildBanManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildChannelManager.js
 var require_GuildChannelManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { ChannelType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
@@ -30222,7 +30906,7 @@ var require_GuildInviteManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildMemberManager.js
 var require_GuildMemberManager = __commonJS((exports, module) => {
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
@@ -30618,6 +31302,179 @@ var require_GuildScheduledEventManager = __commonJS((exports, module) => {
   module.exports = GuildScheduledEventManager;
 });
 
+// node_modules/discord.js/src/structures/SoundboardSound.js
+var require_SoundboardSound = __commonJS((exports) => {
+  var { DiscordSnowflake } = require_cjs();
+  var Base = require_Base();
+  var { Emoji } = require_Emoji();
+  var { DiscordjsError, ErrorCodes } = require_errors();
+
+  class SoundboardSound extends Base {
+    constructor(client, data) {
+      super(client);
+      this.soundId = data.sound_id;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("available" in data) {
+        this.available = data.available;
+      } else {
+        this.available ??= null;
+      }
+      if ("name" in data) {
+        this.name = data.name;
+      } else {
+        this.name ??= null;
+      }
+      if ("volume" in data) {
+        this.volume = data.volume;
+      } else {
+        this.volume ??= null;
+      }
+      if ("emoji_id" in data) {
+        this._emoji = {
+          id: data.emoji_id,
+          name: data.emoji_name
+        };
+      } else {
+        this._emoji ??= null;
+      }
+      if ("guild_id" in data) {
+        this.guildId = data.guild_id;
+      } else {
+        this.guildId ??= null;
+      }
+      if ("user" in data) {
+        this.user = this.client.users._add(data.user);
+      } else {
+        this.user ??= null;
+      }
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.soundId);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    get emoji() {
+      if (!this._emoji)
+        return null;
+      return this.guild?.emojis.cache.get(this._emoji.id) ?? new Emoji(this.client, this._emoji);
+    }
+    get guild() {
+      return this.client.guilds.resolve(this.guildId);
+    }
+    get url() {
+      return this.client.rest.cdn.soundboardSound(this.soundId);
+    }
+    async edit(options) {
+      if (!this.guildId)
+        throw new DiscordjsError(ErrorCodes.NotGuildSoundboardSound, "edited");
+      return this.guild.soundboardSounds.edit(this, options);
+    }
+    async delete(reason) {
+      if (!this.guildId)
+        throw new DiscordjsError(ErrorCodes.NotGuildSoundboardSound, "deleted");
+      await this.guild.soundboardSounds.delete(this, reason);
+      return this;
+    }
+    equals(other) {
+      if (other instanceof SoundboardSound) {
+        return this.soundId === other.soundId && this.available === other.available && this.name === other.name && this.volume === other.volume && this._emoji?.id === other._emoji?.id && this._emoji?.name === other._emoji?.name && this.guildId === other.guildId && this.user?.id === other.user?.id;
+      }
+      return this.soundId === other.sound_id && this.available === other.available && this.name === other.name && this.volume === other.volume && (this._emoji?.id ?? null) === other.emoji_id && (this._emoji?.name ?? null) === other.emoji_name && this.guildId === other.guild_id && this.user?.id === other.user?.id;
+    }
+  }
+  exports.SoundboardSound = SoundboardSound;
+});
+
+// node_modules/discord.js/src/managers/GuildSoundboardSoundManager.js
+var require_GuildSoundboardSoundManager = __commonJS((exports) => {
+  var { Collection } = require_dist6();
+  var { lazy } = require_dist();
+  var { Routes } = require_v106();
+  var CachedManager = require_CachedManager();
+  var { DiscordjsTypeError, ErrorCodes } = require_errors();
+  var { SoundboardSound } = require_SoundboardSound();
+  var { resolveBase64, resolveFile } = require_DataResolver();
+  var fileTypeMime = lazy(() => require_dist4().filetypemime);
+
+  class GuildSoundboardSoundManager extends CachedManager {
+    constructor(guild, iterable) {
+      super(guild.client, SoundboardSound, iterable);
+      this.guild = guild;
+    }
+    _add(data, cache) {
+      return super._add(data, cache, { extras: [this.guild], id: data.sound_id });
+    }
+    resolveId(soundboardSound) {
+      if (soundboardSound instanceof this.holds)
+        return soundboardSound.soundId;
+      if (typeof soundboardSound === "string")
+        return soundboardSound;
+      return null;
+    }
+    async create({ contentType, emojiId, emojiName, file, name, reason, volume }) {
+      const resolvedFile = await resolveFile(file);
+      const resolvedContentType = contentType ?? resolvedFile.contentType ?? fileTypeMime()(resolvedFile.data)[0];
+      const sound = resolveBase64(resolvedFile.data, resolvedContentType);
+      const body = { emoji_id: emojiId, emoji_name: emojiName, name, sound, volume };
+      const soundboardSound = await this.client.rest.post(Routes.guildSoundboardSounds(this.guild.id), {
+        body,
+        reason
+      });
+      return this._add(soundboardSound);
+    }
+    async edit(soundboardSound, options = {}) {
+      const soundId = this.resolveId(soundboardSound);
+      if (!soundId)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "soundboardSound", "SoundboardSoundResolvable");
+      const { emojiId, emojiName, name, reason, volume } = options;
+      const body = { emoji_id: emojiId, emoji_name: emojiName, name, volume };
+      const data = await this.client.rest.patch(Routes.guildSoundboardSound(this.guild.id, soundId), {
+        body,
+        reason
+      });
+      const existing = this.cache.get(soundId);
+      if (existing) {
+        const clone = existing._clone();
+        clone._patch(data);
+        return clone;
+      }
+      return this._add(data);
+    }
+    async delete(soundboardSound, reason) {
+      const soundId = this.resolveId(soundboardSound);
+      if (!soundId)
+        throw new DiscordjsTypeError(ErrorCodes.InvalidType, "soundboardSound", "SoundboardSoundResolvable");
+      await this.client.rest.delete(Routes.guildSoundboardSound(this.guild.id, soundId), { reason });
+    }
+    async fetch(options) {
+      if (!options)
+        return this._fetchMany();
+      const { cache, force, soundboardSound } = options;
+      const resolvedSoundboardSound = this.resolveId(soundboardSound ?? options);
+      if (resolvedSoundboardSound)
+        return this._fetchSingle({ cache, force, soundboardSound: resolvedSoundboardSound });
+      return this._fetchMany({ cache });
+    }
+    async _fetchSingle({ cache, force, soundboardSound } = {}) {
+      if (!force) {
+        const existing = this.cache.get(soundboardSound);
+        if (existing)
+          return existing;
+      }
+      const data = await this.client.rest.get(Routes.guildSoundboardSound(this.guild.id, soundboardSound));
+      return this._add(data, cache);
+    }
+    async _fetchMany({ cache } = {}) {
+      const data = await this.client.rest.get(Routes.guildSoundboardSounds(this.guild.id));
+      return data.items.reduce((coll, sound) => coll.set(sound.sound_id, this._add(sound, cache)), new Collection);
+    }
+  }
+  exports.GuildSoundboardSoundManager = GuildSoundboardSoundManager;
+});
+
 // node_modules/discord.js/src/managers/GuildStickerManager.js
 var require_GuildStickerManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
@@ -30873,7 +31730,7 @@ var require_PresenceManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/RoleManager.js
 var require_RoleManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { DiscordAPIError } = require_dist5();
   var { RESTJSONErrorCodes, Routes } = require_v106();
@@ -31179,6 +32036,7 @@ var require_Guild = __commonJS((exports) => {
   var GuildInviteManager = require_GuildInviteManager();
   var GuildMemberManager = require_GuildMemberManager();
   var GuildScheduledEventManager = require_GuildScheduledEventManager();
+  var { GuildSoundboardSoundManager } = require_GuildSoundboardSoundManager();
   var GuildStickerManager = require_GuildStickerManager();
   var PresenceManager = require_PresenceManager();
   var RoleManager = require_RoleManager();
@@ -31204,6 +32062,7 @@ var require_Guild = __commonJS((exports) => {
       this.invites = new GuildInviteManager(this);
       this.scheduledEvents = new GuildScheduledEventManager(this);
       this.autoModerationRules = new AutoModerationRuleManager(this);
+      this.soundboardSounds = new GuildSoundboardSoundManager(this);
       if (!data)
         return;
       if (data.unavailable) {
@@ -31400,6 +32259,12 @@ var require_Guild = __commonJS((exports) => {
         this.incidentsData = data.incidents_data && _transformAPIIncidentsData(data.incidents_data);
       } else {
         this.incidentsData ??= null;
+      }
+      if (data.soundboard_sounds) {
+        this.soundboardSounds.cache.clear();
+        for (const soundboardSound of data.soundboard_sounds) {
+          this.soundboardSounds._add(soundboardSound);
+        }
       }
     }
     get joinedAt() {
@@ -31767,12 +32632,13 @@ var require_OAuth2Guild = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildManager.js
 var require_GuildManager = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
+  var process2 = __require("process");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes, RouteBases } = require_v106();
+  var { GatewayOpcodes, Routes, RouteBases } = require_v106();
   var CachedManager = require_CachedManager();
+  var { ErrorCodes, DiscordjsError } = require_errors();
   var ShardClientUtil = require_ShardClientUtil();
   var { Guild } = require_Guild();
   var GuildChannel = require_GuildChannel();
@@ -31894,6 +32760,50 @@ var require_GuildManager = __commonJS((exports, module) => {
       }
       const data = await this.client.rest.get(Routes.userGuilds(), { query: makeURLSearchParams(options) });
       return data.reduce((coll, guild) => coll.set(guild.id, new OAuth2Guild(this.client, guild)), new Collection);
+    }
+    async fetchSoundboardSounds({ guildIds, time = 1e4 }) {
+      const shardCount = this.client.options.shardCount;
+      const shardIds = new Map;
+      for (const guildId of guildIds) {
+        const shardId = ShardClientUtil.shardIdForGuildId(guildId, shardCount);
+        const group = shardIds.get(shardId);
+        if (group)
+          group.push(guildId);
+        else
+          shardIds.set(shardId, [guildId]);
+      }
+      for (const [shardId, shardGuildIds] of shardIds) {
+        this.client.ws.shards.get(shardId).send({
+          op: GatewayOpcodes.RequestSoundboardSounds,
+          d: {
+            guild_ids: shardGuildIds
+          }
+        });
+      }
+      return new Promise((resolve, reject) => {
+        const remainingGuildIds = new Set(guildIds);
+        const fetchedSoundboardSounds = new Collection;
+        const handler = (soundboardSounds, guild) => {
+          timeout.refresh();
+          if (!remainingGuildIds.has(guild.id))
+            return;
+          fetchedSoundboardSounds.set(guild.id, soundboardSounds);
+          remainingGuildIds.delete(guild.id);
+          if (remainingGuildIds.size === 0) {
+            clearTimeout2(timeout);
+            this.client.removeListener(Events.SoundboardSounds, handler);
+            this.client.decrementMaxListeners();
+            resolve(fetchedSoundboardSounds);
+          }
+        };
+        const timeout = setTimeout2(() => {
+          this.client.removeListener(Events.SoundboardSounds, handler);
+          this.client.decrementMaxListeners();
+          reject(new DiscordjsError(ErrorCodes.GuildSoundboardSoundsTimeout));
+        }, time).unref();
+        this.client.incrementMaxListeners();
+        this.client.on(Events.SoundboardSounds, handler);
+      });
     }
     async setIncidentActions(guild, { invitesDisabledUntil, dmsDisabledUntil }) {
       const guildId = this.resolveId(guild);
@@ -32189,7 +33099,7 @@ var require_IntentsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/Sweepers.js
 var require_Sweepers = __commonJS((exports, module) => {
-  var { setInterval: setInterval2, clearInterval: clearInterval2 } = __require("node:timers");
+  var { setInterval: setInterval2, clearInterval: clearInterval2 } = __require("timers");
   var { ThreadChannelTypes, SweeperKeys } = require_Constants();
   var Events = require_Events();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -32442,7 +33352,7 @@ var require_Sweepers = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/Client.js
 var require_Client = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { OAuth2Scopes, Routes } = require_v106();
@@ -32460,6 +33370,7 @@ var require_Client = __commonJS((exports, module) => {
   var GuildPreview = require_GuildPreview();
   var GuildTemplate = require_GuildTemplate();
   var Invite = require_Invite();
+  var { SoundboardSound } = require_SoundboardSound();
   var { Sticker } = require_Sticker();
   var StickerPack = require_StickerPack();
   var VoiceRegion = require_VoiceRegion();
@@ -32477,7 +33388,7 @@ var require_Client = __commonJS((exports, module) => {
   class Client extends BaseClient {
     constructor(options) {
       super(options);
-      const data = __require("node:worker_threads").workerData ?? process2.env;
+      const data = __require("worker_threads").workerData ?? process2.env;
       const defaults = Options.createDefault();
       if (this.options.shards === defaults.shards) {
         if ("SHARDS" in data) {
@@ -32569,7 +33480,6 @@ var require_Client = __commonJS((exports, module) => {
       const code = resolveInviteCode(invite);
       const query = makeURLSearchParams({
         with_counts: true,
-        with_expiration: true,
         guild_scheduled_event_id: options?.guildScheduledEventId
       });
       const data = await this.rest.get(Routes.invite(code), { query });
@@ -32609,6 +33519,10 @@ var require_Client = __commonJS((exports, module) => {
         deprecationEmittedForPremiumStickerPacks = true;
       }
       return this.fetchStickerPacks();
+    }
+    async fetchDefaultSoundboardSounds() {
+      const data = await this.rest.get(Routes.soundboardDefaultSounds());
+      return new Collection(data.map((sound) => [sound.sound_id, new SoundboardSound(this, sound)]));
     }
     async fetchGuildPreview(guild) {
       const id = this.guilds.resolveId(guild);
@@ -32747,12 +33661,12 @@ var require_ShardEvents = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/sharding/Shard.js
 var require_Shard = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
-  var path = __require("node:path");
-  var process2 = __require("node:process");
-  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("node:timers");
-  var { setTimeout: sleep } = __require("node:timers/promises");
-  var { SHARE_ENV } = __require("node:worker_threads");
+  var EventEmitter = __require("events");
+  var path = __require("path");
+  var process2 = __require("process");
+  var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
+  var { setTimeout: sleep } = __require("timers/promises");
+  var { SHARE_ENV } = __require("worker_threads");
   var { DiscordjsError, ErrorCodes } = require_errors();
   var ShardEvents = require_ShardEvents();
   var { makeError, makePlainError } = require_Util();
@@ -32764,10 +33678,10 @@ var require_Shard = __commonJS((exports, module) => {
       super();
       switch (manager.mode) {
         case "process":
-          childProcess = __require("node:child_process");
+          childProcess = __require("child_process");
           break;
         case "worker":
-          Worker = __require("node:worker_threads").Worker;
+          Worker = __require("worker_threads").Worker;
           break;
       }
       this.manager = manager;
@@ -33008,11 +33922,11 @@ var require_Shard = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/sharding/ShardingManager.js
 var require_ShardingManager = __commonJS((exports, module) => {
-  var EventEmitter = __require("node:events");
-  var fs = __require("node:fs");
-  var path = __require("node:path");
-  var process2 = __require("node:process");
-  var { setTimeout: sleep } = __require("node:timers/promises");
+  var EventEmitter = __require("events");
+  var fs = __require("fs");
+  var path = __require("path");
+  var process2 = __require("process");
+  var { setTimeout: sleep } = __require("timers/promises");
   var { Collection } = require_dist6();
   var Shard = require_Shard();
   var { DiscordjsError, DiscordjsTypeError, DiscordjsRangeError, ErrorCodes } = require_errors();
@@ -33165,7 +34079,7 @@ var require_ShardingManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/Formatters.js
 var require_Formatters = __commonJS((exports, module) => {
-  var { deprecate } = __require("node:util");
+  var { deprecate } = __require("util");
   var {
     blockQuote,
     bold,
@@ -33304,7 +34218,7 @@ var require_ModalBuilder = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuBuilder.js
 var require_SelectMenuBuilder = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var StringSelectMenuBuilder = require_StringSelectMenuBuilder();
   var deprecationEmitted = false;
 
@@ -33322,7 +34236,7 @@ var require_SelectMenuBuilder = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuComponent.js
 var require_SelectMenuComponent = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var StringSelectMenuComponent = require_StringSelectMenuComponent();
   var deprecationEmitted = false;
 
@@ -33340,7 +34254,7 @@ var require_SelectMenuComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuInteraction.js
 var require_SelectMenuInteraction = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var StringSelectMenuInteraction = require_StringSelectMenuInteraction();
   var deprecationEmitted = false;
 
@@ -33385,7 +34299,7 @@ var require_StringSelectMenuOptionBuilder = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SelectMenuOptionBuilder.js
 var require_SelectMenuOptionBuilder = __commonJS((exports, module) => {
-  var process2 = __require("node:process");
+  var process2 = __require("process");
   var StringSelectMenuOptionBuilder = require_StringSelectMenuOptionBuilder();
   var deprecationEmitted = false;
 
@@ -33469,6 +34383,7 @@ var require_src = __commonJS((exports) => {
   exports.GuildMemberRoleManager = require_GuildMemberRoleManager();
   exports.GuildMessageManager = require_GuildMessageManager();
   exports.GuildScheduledEventManager = require_GuildScheduledEventManager();
+  exports.GuildSoundboardSoundManager = require_GuildSoundboardSoundManager().GuildSoundboardSoundManager;
   exports.GuildStickerManager = require_GuildStickerManager();
   exports.GuildTextThreadManager = require_GuildTextThreadManager();
   exports.MessageManager = require_MessageManager();
@@ -33514,12 +34429,14 @@ var require_src = __commonJS((exports) => {
   exports.Collector = require_Collector();
   exports.CommandInteractionOptionResolver = require_CommandInteractionOptionResolver();
   exports.Component = require_Component();
+  exports.ContainerComponent = require_ContainerComponent();
   exports.ContextMenuCommandInteraction = require_ContextMenuCommandInteraction();
   exports.DMChannel = require_DMChannel();
   exports.Embed = require_Embed();
   exports.EmbedBuilder = require_EmbedBuilder();
   exports.Emoji = require_Emoji().Emoji;
   exports.Entitlement = require_Entitlement().Entitlement;
+  exports.FileComponent = require_FileComponent();
   exports.ForumChannel = require_ForumChannel();
   exports.Guild = require_Guild().Guild;
   exports.GuildAuditLogs = require_GuildAuditLogs();
@@ -33552,6 +34469,8 @@ var require_src = __commonJS((exports) => {
   exports.AttachmentBuilder = require_AttachmentBuilder();
   exports.ModalBuilder = require_ModalBuilder();
   exports.MediaChannel = require_MediaChannel();
+  exports.MediaGalleryComponent = require_MediaGalleryComponent();
+  exports.MediaGalleryItem = require_MediaGalleryItem();
   exports.MessageCollector = require_MessageCollector();
   exports.MessageComponentInteraction = require_MessageComponentInteraction();
   exports.MessageContextMenuCommandInteraction = require_MessageContextMenuCommandInteraction();
@@ -33566,11 +34485,13 @@ var require_src = __commonJS((exports) => {
   exports.PermissionOverwrites = require_PermissionOverwrites();
   exports.Poll = require_Poll().Poll;
   exports.PollAnswer = require_PollAnswer().PollAnswer;
+  exports.PrimaryEntryPointCommandInteraction = require_PrimaryEntryPointCommandInteraction();
   exports.Presence = require_Presence().Presence;
   exports.ReactionCollector = require_ReactionCollector();
   exports.ReactionEmoji = require_ReactionEmoji();
   exports.RichPresenceAssets = require_Presence().RichPresenceAssets;
   exports.Role = require_Role().Role;
+  exports.SectionComponent = require_SectionComponent();
   exports.SelectMenuBuilder = require_SelectMenuBuilder();
   exports.ChannelSelectMenuBuilder = require_ChannelSelectMenuBuilder();
   exports.MentionableSelectMenuBuilder = require_MentionableSelectMenuBuilder();
@@ -33592,7 +34513,9 @@ var require_src = __commonJS((exports) => {
   exports.StringSelectMenuInteraction = require_StringSelectMenuInteraction();
   exports.UserSelectMenuInteraction = require_UserSelectMenuInteraction();
   exports.SelectMenuOptionBuilder = require_SelectMenuOptionBuilder();
+  exports.SeparatorComponent = require_SeparatorComponent();
   exports.SKU = require_SKU().SKU;
+  exports.SoundboardSound = require_SoundboardSound().SoundboardSound;
   exports.StringSelectMenuOptionBuilder = require_StringSelectMenuOptionBuilder();
   exports.StageChannel = require_StageChannel();
   exports.StageInstance = require_StageInstance().StageInstance;
@@ -33602,12 +34525,15 @@ var require_src = __commonJS((exports) => {
   exports.Team = require_Team();
   exports.TeamMember = require_TeamMember();
   exports.TextChannel = require_TextChannel();
+  exports.TextDisplayComponent = require_TextDisplayComponent();
   exports.TextInputBuilder = require_TextInputBuilder();
   exports.TextInputComponent = require_TextInputComponent();
   exports.ThreadChannel = require_ThreadChannel();
   exports.ThreadMember = require_ThreadMember();
   exports.ThreadOnlyChannel = require_ThreadOnlyChannel();
+  exports.ThumbnailComponent = require_ThumbnailComponent();
   exports.Typing = require_Typing();
+  exports.UnfurledMediaItem = require_UnfurledMediaItem();
   exports.User = require_User();
   exports.UserContextMenuCommandInteraction = require_UserContextMenuCommandInteraction();
   exports.VoiceChannelEffect = require_VoiceChannelEffect();
@@ -33668,3 +34594,6 @@ export {
   export_ApplicationCommand as ApplicationCommand,
   export_ActionRowBuilder as ActionRowBuilder
 };
+
+//# debugId=D58E752CF3BBBD6A64756E2164756E21
+//# sourceMappingURL=discord.module.js.map

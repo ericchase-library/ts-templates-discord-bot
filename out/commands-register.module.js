@@ -2,20 +2,14 @@
 // src/commands/Community/ping.ts
 import { SlashCommandBuilder } from "./external/discord/discord.module.js";
 
-// src/lib/ericchase/Utility/Console.ts
-var newline_count = 0;
-function ConsoleError(...items) {
+// src/lib/ericchase/Core_Console_Error.ts
+function Core_Console_Error(...items) {
   console["error"](...items);
-  newline_count = 0;
-}
-function ConsoleLog(...items) {
-  console["log"](...items);
-  newline_count = 0;
 }
 
 // src/commands/Command.ts
 async function HandleCommandError(error, interaction) {
-  ConsoleError(error);
+  Core_Console_Error(error);
   if (interaction.isChatInputCommand()) {
     await interaction.reply({
       content: "Oops! Something went wrong while processing your request. Please try again later.",
@@ -34,7 +28,7 @@ var command_ping = {
       if (interaction.isChatInputCommand()) {
         await interaction.reply("Pong!");
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -120,15 +114,15 @@ var command_user_avatar = {
           const avatar = target_user.displayAvatarURL();
           const color = member.displayHexColor ?? "Blue";
           const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
-          await interaction.reply({ embeds: [Embed], ephemeral: false });
+          await interaction.reply({ embeds: [Embed] });
         } else {
           const avatar = target_user.displayAvatarURL();
           const color = "Blue";
           const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
-          await interaction.reply({ embeds: [Embed], ephemeral: false });
+          await interaction.reply({ embeds: [Embed] });
         }
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -150,7 +144,7 @@ var command_user_check_troll = {
         const target_user_string = getUsernameString(target_user);
         await interaction.reply(IsUserATroll(target_user_string));
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -244,7 +238,7 @@ var command_verify = {
           collector.stop();
         });
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -270,9 +264,16 @@ for (const command of enabled_commands) {
 // src/commands-register.module.ts
 import { Client, Events, GatewayIntentBits, REST, Routes } from "./external/discord/discord.module.js";
 
-// src/lib/ericchase/Utility/Sleep.ts
-async function Sleep(ms) {
-  await new Promise((resolve) => setTimeout(resolve, ms));
+// src/lib/ericchase/Core_Console_Log.ts
+function Core_Console_Log(...items) {
+  console["log"](...items);
+}
+
+// src/lib/ericchase/Core_Utility_Sleep.ts
+function Async_Core_Utility_Sleep(duration_ms) {
+  return new Promise((resolve) => setTimeout(() => {
+    resolve();
+  }, duration_ms));
 }
 
 // src/lib/lib.env.ts
@@ -304,38 +305,41 @@ if (process.env.DEBUG === "1") {
 }
 client.once(Events.ClientReady, async () => {
   try {
-    ConsoleLog(`Logged in as ${client.user?.tag ?? "[APP]"}`);
-    ConsoleLog(`Registering commands: [${command_data_list.map((data) => data.name).join(", ")}]`);
+    Core_Console_Log(`Logged in as ${client.user?.tag ?? "[APP]"}`);
+    Core_Console_Log(`Registering commands: [${command_data_list.map((data) => data.name).join(", ")}]`);
     const guilds = await client.guilds.fetch();
-    ConsoleLog(`for ${guilds.size} guilds...`);
+    Core_Console_Log(`for ${guilds.size} guilds...`);
     for (const [_, guild] of guilds) {
       try {
         const existingCommands = await rest.get(Routes.applicationGuildCommands(getClientID(), guild.id));
         for (const command of existingCommands) {
           if (command_name_map.has(command.name) === false) {
             try {
-              ConsoleLog(`Deleting command [${command.id}] for guild [${guild.id}]`);
+              Core_Console_Log(`Deleting command [${command.id}] for guild [${guild.id}]`);
               await rest.delete(Routes.applicationGuildCommand(getClientID(), guild.id, command.id));
-              ConsoleLog("Success");
+              Core_Console_Log("Success");
             } catch (error) {
-              ConsoleError(`Error deleting command [${command.id}] for guild [${guild.id}]:`, error);
+              Core_Console_Error(`Error deleting command [${command.id}] for guild [${guild.id}]:`, error);
             }
-            await Sleep(delay);
+            await Async_Core_Utility_Sleep(delay);
           }
         }
-        ConsoleLog(`Registering commands for guild [${guild.id}]`);
+        Core_Console_Log(`Registering commands for guild [${guild.id}]`);
         await rest.put(Routes.applicationGuildCommands(getClientID(), guild.id), { body: command_data_list });
-        ConsoleLog("Success");
+        Core_Console_Log("Success");
       } catch (error) {
-        ConsoleError(`Error registering commands for guild [${guild.id}]:`, error);
+        Core_Console_Error(`Error registering commands for guild [${guild.id}]:`, error);
       }
-      await Sleep(delay);
+      await Async_Core_Utility_Sleep(delay);
     }
-    ConsoleLog("Finished registering commands for all guilds!");
+    Core_Console_Log("Finished registering commands for all guilds!");
   } catch (error) {
-    ConsoleError("Error fetching guilds:", error);
+    Core_Console_Error("Error fetching guilds:", error);
   } finally {
     client.destroy();
   }
 });
 client.login(getBotToken());
+
+//# debugId=9697CB8E306F509464756E2164756E21
+//# sourceMappingURL=commands-register.module.js.map

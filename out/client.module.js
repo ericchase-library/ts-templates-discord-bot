@@ -2,20 +2,14 @@
 // src/commands/Community/ping.ts
 import { SlashCommandBuilder } from "./external/discord/discord.module.js";
 
-// src/lib/ericchase/Utility/Console.ts
-var newline_count = 0;
-function ConsoleError(...items) {
+// src/lib/ericchase/Core_Console_Error.ts
+function Core_Console_Error(...items) {
   console["error"](...items);
-  newline_count = 0;
-}
-function ConsoleLog(...items) {
-  console["log"](...items);
-  newline_count = 0;
 }
 
 // src/commands/Command.ts
 async function HandleCommandError(error, interaction) {
-  ConsoleError(error);
+  Core_Console_Error(error);
   if (interaction.isChatInputCommand()) {
     await interaction.reply({
       content: "Oops! Something went wrong while processing your request. Please try again later.",
@@ -34,7 +28,7 @@ var command_ping = {
       if (interaction.isChatInputCommand()) {
         await interaction.reply("Pong!");
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -120,15 +114,15 @@ var command_user_avatar = {
           const avatar = target_user.displayAvatarURL();
           const color = member.displayHexColor ?? "Blue";
           const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
-          await interaction.reply({ embeds: [Embed], ephemeral: false });
+          await interaction.reply({ embeds: [Embed] });
         } else {
           const avatar = target_user.displayAvatarURL();
           const color = "Blue";
           const Embed = new EmbedBuilder3().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
-          await interaction.reply({ embeds: [Embed], ephemeral: false });
+          await interaction.reply({ embeds: [Embed] });
         }
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -150,7 +144,7 @@ var command_user_check_troll = {
         const target_user_string = getUsernameString(target_user);
         await interaction.reply(IsUserATroll(target_user_string));
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -244,7 +238,7 @@ var command_verify = {
           collector.stop();
         });
       } else {
-        ConsoleError("unexpected", interaction);
+        Core_Console_Error("unexpected", interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
@@ -270,6 +264,11 @@ for (const command of enabled_commands) {
 // src/client.module.ts
 import { Client, Events, GatewayIntentBits, GuildMember as GuildMember2 } from "./external/discord/discord.module.js";
 
+// src/lib/ericchase/Core_Console_Log.ts
+function Core_Console_Log(...items) {
+  console["log"](...items);
+}
+
 // src/lib/lib.env.ts
 function getVariable(key) {
   if (process.env[key] === undefined || process.env[key] === "") {
@@ -289,7 +288,7 @@ if (process.env.DEBUG === "1") {
   });
 }
 client.once(Events.ClientReady, () => {
-  ConsoleLog("Bot is online.");
+  Core_Console_Log("Bot is online.");
 });
 client.on(Events.InteractionCreate, async (interaction) => {
   if (interaction.isCommand()) {
@@ -297,17 +296,20 @@ client.on(Events.InteractionCreate, async (interaction) => {
     if (command !== undefined) {
       try {
         if (interaction.member instanceof GuildMember2) {
-          ConsoleLog(`${interaction.member.displayName} (${interaction.member?.user.username}) is executing command "${command.name}".`);
+          Core_Console_Log(`${interaction.member.displayName} (${interaction.member?.user.username}) is executing command "${command.name}".`);
         } else {
-          ConsoleLog(`${interaction.member?.user.username} is executing command "${command.name}".`);
+          Core_Console_Log(`${interaction.member?.user.username} is executing command "${command.name}".`);
         }
         await command.execute(interaction);
       } catch (error) {
-        ConsoleError(error);
+        Core_Console_Error(error);
         await interaction.reply({ content: "There was an error while executing this command!", ephemeral: true });
       }
     }
   }
 });
-ConsoleLog("Attempting to log in.");
+Core_Console_Log("Attempting to log in.");
 client.login(getBotToken());
+
+//# debugId=A641B4EC64190DD864756E2164756E21
+//# sourceMappingURL=client.module.js.map

@@ -1,5 +1,5 @@
 import { Interaction, SlashCommandBuilder } from '../../external/discord/discord.module.js';
-import { ConsoleError } from '../../lib/ericchase/Utility/Console.js';
+import { Core_Console_Error } from '../../lib/ericchase/Core_Console_Error.js';
 import { getUsernameString } from '../../lib/lib.discord.module.js';
 import { Command, HandleCommandError } from '../Command.js';
 
@@ -22,7 +22,7 @@ export const command_user_check_troll: Command = {
 
         await interaction.reply(IsUserATroll(target_user_string));
       } else {
-        ConsoleError('unexpected', interaction);
+        Core_Console_Error('unexpected', interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);

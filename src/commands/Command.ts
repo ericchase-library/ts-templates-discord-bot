@@ -1,5 +1,5 @@
 import { Interaction, SlashCommandOptionsOnlyBuilder } from '../external/discord/discord.module.js';
-import { ConsoleError } from '../lib/ericchase/Utility/Console.js';
+import { Core_Console_Error } from '../lib/ericchase/Core_Console_Error.js';
 
 export type Command = {
   name: string;
@@ -8,7 +8,7 @@ export type Command = {
 };
 
 export async function HandleCommandError(error: any, interaction: Interaction) {
-  ConsoleError(error);
+  Core_Console_Error(error);
   if (interaction.isChatInputCommand()) {
     await interaction.reply({
       content: 'Oops! Something went wrong while processing your request. Please try again later.',

@@ -1,7 +1,8 @@
 import { command_name_map } from './commands/enabled.js';
 import { ApplicationCommand, Client, Events, GatewayIntentBits, REST, Routes, SlashCommandOptionsOnlyBuilder } from './external/discord/discord.module.js';
-import { ConsoleError, ConsoleLog } from './lib/ericchase/Utility/Console.js';
-import { Sleep } from './lib/ericchase/Utility/Sleep.js';
+import { Core_Console_Error } from './lib/ericchase/Core_Console_Error.js';
+import { Core_Console_Log } from './lib/ericchase/Core_Console_Log.js';
+import { Async_Core_Utility_Sleep } from './lib/ericchase/Core_Utility_Sleep.js';
 import { getBotToken, getClientID } from './lib/lib.env.js';
 
 const rest = new REST({ version: '10' }).setToken(getBotToken());
@@ -21,40 +22,40 @@ if (process.env.DEBUG === '1') {
 
 client.once(Events.ClientReady, async () => {
   try {
-    ConsoleLog(`Logged in as ${client.user?.tag ?? '[APP]'}`);
-    ConsoleLog(`Registering commands: [${command_data_list.map((data) => data.name).join(', ')}]`);
+    Core_Console_Log(`Logged in as ${client.user?.tag ?? '[APP]'}`);
+    Core_Console_Log(`Registering commands: [${command_data_list.map((data) => data.name).join(', ')}]`);
     const guilds = await client.guilds.fetch();
-    ConsoleLog(`for ${guilds.size} guilds...`);
+    Core_Console_Log(`for ${guilds.size} guilds...`);
     for (const [_, guild] of guilds) {
       try {
         const existingCommands = await rest.get(Routes.applicationGuildCommands(getClientID(), guild.id));
         for (const command of existingCommands as ApplicationCommand[]) {
           if (command_name_map.has(command.name) === false) {
             try {
-              ConsoleLog(`Deleting command [${command.id}] for guild [${guild.id}]`);
+              Core_Console_Log(`Deleting command [${command.id}] for guild [${guild.id}]`);
               await rest.delete(Routes.applicationGuildCommand(getClientID(), guild.id, command.id));
-              ConsoleLog('Success');
+              Core_Console_Log('Success');
             } catch (error) {
-              ConsoleError(`Error deleting command [${command.id}] for guild [${guild.id}]:`, error);
+              Core_Console_Error(`Error deleting command [${command.id}] for guild [${guild.id}]:`, error);
             }
-            await Sleep(delay);
+            await Async_Core_Utility_Sleep(delay);
           }
         }
-        ConsoleLog(`Registering commands for guild [${guild.id}]`);
+        Core_Console_Log(`Registering commands for guild [${guild.id}]`);
         await rest.put(Routes.applicationGuildCommands(getClientID(), guild.id), { body: command_data_list });
-        ConsoleLog('Success');
+        Core_Console_Log('Success');
       } catch (error) {
-        ConsoleError(`Error registering commands for guild [${guild.id}]:`, error);
+        Core_Console_Error(`Error registering commands for guild [${guild.id}]:`, error);
       }
-      await Sleep(delay);
+      await Async_Core_Utility_Sleep(delay);
     }
-    ConsoleLog('Finished registering commands for all guilds!');
+    Core_Console_Log('Finished registering commands for all guilds!');
   } catch (error) {
-    ConsoleError('Error fetching guilds:', error);
+    Core_Console_Error('Error fetching guilds:', error);
   } finally {
     client.destroy();
   }
 });
 
-// ConsoleLog('Attempting to log in.');
+// Core_Console_Log('Attempting to log in.');
 client.login(getBotToken());

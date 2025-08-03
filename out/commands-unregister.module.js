@@ -15,3 +15,6 @@ function getBotToken() {
 
 // src/commands-unregister.module.ts
 var rest = new REST({ version: "10" }).setToken(getBotToken());
+
+//# debugId=5A54A39208ED3A5B64756E2164756E21
+//# sourceMappingURL=commands-unregister.module.js.map

@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "sources": ["src\\commands-list.module.ts", "src\\lib\\ericchase\\Core_Console_Error.ts", "src\\lib\\ericchase\\Core_Console_Log.ts", "src\\lib\\lib.env.ts"],
+  "sourcesContent": [
+    "import { ApplicationCommand, REST, Routes } from './external/discord/discord.module.js';\nimport { Core_Console_Error } from './lib/ericchase/Core_Console_Error.js';\nimport { Core_Console_Log } from './lib/ericchase/Core_Console_Log.js';\nimport { getBotToken, getClientID } from './lib/lib.env.js';\n\nconst rest = new REST({ version: '10' }).setToken(getBotToken());\n\nasync function getCommands() {\n  try {\n    Core_Console_Log('Fetching global commands.');\n    const commands = (await rest.get(Routes.applicationCommands(getClientID()))) as ApplicationCommand[];\n    if (commands.length === 0) {\n      Core_Console_Log('No global commands registered.');\n    } else {\n      for (const command of commands) {\n        Core_Console_Log(`Command Name: ${command.name}, Command ID: ${command.id}`);\n      }\n    }\n  } catch (error) {\n    Core_Console_Error('Failed to fetch commands:', error);\n  }\n}\n\ngetCommands();\n",
+    "export function Core_Console_Error(...items: any[]): void {\n  console['error'](...items);\n}\n",
+    "export function Core_Console_Log(...items: any[]): void {\n  console['log'](...items);\n}\n",
+    "function getVariable(key: string) {\n  if (process.env[key] === undefined || process.env[key] === '') {\n    throw new Error(`.env '${key}' is undefined`);\n  }\n  return process.env[key];\n}\n\nexport function getBotToken() {\n  return getVariable('BOT_TOKEN');\n}\nexport function getClientID() {\n  return getVariable('CLIENT_ID');\n}\nexport function getGuildID() {\n  return getVariable('GUILD_ID');\n}\nexport function getMongoDBUrl() {\n  return getVariable('MONGODBURL');\n}\n"
+  ],
+  "mappings": ";;AAAA;;;ACAO,SAAS,kBAAkB,IAAI,OAAoB;AAAA,EACxD,QAAQ,SAAS,GAAG,KAAK;AAAA;;;ACDpB,SAAS,gBAAgB,IAAI,OAAoB;AAAA,EACtD,QAAQ,OAAO,GAAG,KAAK;AAAA;;;ACDzB,SAAS,WAAW,CAAC,KAAa;AAAA,EAChC,IAAI,QAAQ,IAAI,SAAS,aAAa,QAAQ,IAAI,SAAS,IAAI;AAAA,IAC7D,MAAM,IAAI,MAAM,SAAS,mBAAmB;AAAA,EAC9C;AAAA,EACA,OAAO,QAAQ,IAAI;AAAA;AAGd,SAAS,WAAW,GAAG;AAAA,EAC5B,OAAO,YAAY,WAAW;AAAA;AAEzB,SAAS,WAAW,GAAG;AAAA,EAC5B,OAAO,YAAY,WAAW;AAAA;;;AHNhC,IAAM,OAAO,IAAI,KAAK,EAAE,SAAS,KAAK,CAAC,EAAE,SAAS,YAAY,CAAC;AAE/D,eAAe,WAAW,GAAG;AAAA,EAC3B,IAAI;AAAA,IACF,iBAAiB,2BAA2B;AAAA,IAC5C,MAAM,WAAY,MAAM,KAAK,IAAI,OAAO,oBAAoB,YAAY,CAAC,CAAC;AAAA,IAC1E,IAAI,SAAS,WAAW,GAAG;AAAA,MACzB,iBAAiB,gCAAgC;AAAA,IACnD,EAAO;AAAA,MACL,WAAW,WAAW,UAAU;AAAA,QAC9B,iBAAiB,iBAAiB,QAAQ,qBAAqB,QAAQ,IAAI;AAAA,MAC7E;AAAA;AAAA,IAEF,OAAO,OAAO;AAAA,IACd,mBAAmB,6BAA6B,KAAK;AAAA;AAAA;AAIzD,YAAY;",
+  "debugId": "73972DE93528446164756E2164756E21",
+  "names": []
+}

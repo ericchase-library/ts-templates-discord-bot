@@ -1,5 +1,5 @@
 import { EmbedBuilder, GuildMember, Interaction, SlashCommandBuilder } from '../../external/discord/discord.module.js';
-import { ConsoleError } from '../../lib/ericchase/Utility/Console.js';
+import { Core_Console_Error } from '../../lib/ericchase/Core_Console_Error.js';
 import { Command, HandleCommandError } from '../Command.js';
 
 const name = 'useravatar';
@@ -29,16 +29,16 @@ export const command_user_avatar: Command = {
           const color = member.displayHexColor ?? 'Blue';
           const Embed = new EmbedBuilder().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
 
-          await interaction.reply({ embeds: [Embed], ephemeral: false });
+          await interaction.reply({ embeds: [Embed] });
         } else {
           const avatar = target_user.displayAvatarURL();
           const color = 'Blue';
           const Embed = new EmbedBuilder().setColor(color).setTitle(`Here is ${target_user.username}'s Avatar`).setImage(avatar);
 
-          await interaction.reply({ embeds: [Embed], ephemeral: false });
+          await interaction.reply({ embeds: [Embed] });
         }
       } else {
-        ConsoleError('unexpected', interaction);
+        Core_Console_Error('unexpected', interaction);
       }
     } catch (error) {
       HandleCommandError(error, interaction);
