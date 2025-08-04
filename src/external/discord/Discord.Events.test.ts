@@ -55,7 +55,7 @@ describe('Discord.Events', () => {
   test('ClientReady', () => {
     const key = 'ClientReady';
     expect(key in Events).toBeTrue();
-    expect(Events.ClientReady as string).toBe('clientReady');
+    expect(Events.ClientReady as string).toBe('ready');
   });
   test('Debug', () => {
     const key = 'Debug';
@@ -370,6 +370,6 @@ describe('Discord.Events', () => {
   test('WebhooksUpdate', () => {
     const key = 'WebhooksUpdate';
     expect(key in Events).toBeTrue();
-    expect(Events.WebhooksUpdate as string).toBe('webhooksUpdate');
+    expect(Events.WebhooksUpdate as string).toBe('webhookUpdate');
   });
 });
