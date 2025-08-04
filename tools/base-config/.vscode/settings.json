@@ -10,6 +10,5 @@
     ".prettierignore": true,
     ".prettierrc": true,
     "tsconfig.json": true
-  },
-  "typescript.preferences.autoImportSpecifierExcludeRegexes": ["discord.js"]
+  }
 }

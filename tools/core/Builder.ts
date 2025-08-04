@@ -327,9 +327,9 @@ async function Init() {
   }
 
   await Async_StartUp();
-  await Async_BeforeProcess();
+  await Async_BeforeSteps();
   await Async_Process();
-  await Async_AfterProcess();
+  await Async_AfterSteps();
 
   switch (_mode) {
     case Builder.MODE.BUILD:
@@ -348,7 +348,7 @@ async function Init() {
 
 async function Async_SetupWatcher() {
   unwatch_source_directory?.();
-  unwatch_source_directory = await Async_Cacher_Watch_Directory(Builder.Dir.Src, 250, 2_000, async (added, deleted, modified) => {
+  unwatch_source_directory = Async_Cacher_Watch_Directory(Builder.Dir.Src, 250, 2_000, async (added, deleted, modified) => {
     for (const path of added) {
       set__added_paths.add(path);
     }
@@ -365,9 +365,9 @@ async function Async_SetupWatcher() {
         set__modified_paths.add(path);
       }
       set__error_paths.clear();
-      await Async_BeforeProcess();
+      await Async_BeforeSteps();
       await Async_Process();
-      await Async_AfterProcess();
+      await Async_AfterSteps();
     }
     if (waiting_for_cleanup === true) {
       await Async_CleanUp();
@@ -415,8 +415,9 @@ async function Async_StartUp() {
   _channel.newLine();
 }
 
-async function Async_BeforeProcess() {
-  // Before Steps onRun
+async function Async_BeforeSteps() {
+  Log(_logs._phase_begin_('BeforeSteps'));
+
   for (const step of array__before_steps) {
     try {
       Log(_logs._step_onrun_(step.StepName), Builder.VERBOSITY._2_DEBUG);
@@ -426,6 +427,9 @@ async function Async_BeforeProcess() {
       throw error;
     }
   }
+
+  Log(_logs._phase_end_('BeforeSteps'));
+  _channel.newLine();
 }
 
 async function Async_Process() {
@@ -471,7 +475,7 @@ async function Async_Process() {
         set__files.delete(file);
         set__paths.delete(file.src_path);
         await Async_NodePlatform_File_Delete(file.out_path);
-        Log(_logs._file_removed_(file.src_path));
+        Log(_logs._file_removed_(file.src_path), Builder.VERBOSITY._2_DEBUG);
       }
     }
   }
@@ -483,7 +487,7 @@ async function Async_Process() {
         const new_file = new Builder.File(path, NODE_PATH.join(Builder.Dir.Out, NODE_PATH.relative(Builder.Dir.Src, path)));
         set__files.add(new_file);
         set__paths.add(path);
-        Log(_logs._file_added_(path));
+        Log(_logs._file_added_(path), Builder.VERBOSITY._2_DEBUG);
         return new_file;
       });
       set__files_to_add.add(file);
@@ -493,7 +497,7 @@ async function Async_Process() {
       // Processor Modules onAdd
       for (const processor of array__processor_modules) {
         try {
-          Log(_logs._processor_onadd_(processor.ProcessorName), Builder.VERBOSITY._2_DEBUG);
+          Log(_logs._processor_onadd_(processor.ProcessorName), Builder.VERBOSITY._1_LOG);
           await processor.onAdd?.(set__files_to_add);
         } catch (error) {
           Err(error, `Unhandled exception in ${processor.ProcessorName} onAdd:`);
@@ -505,7 +509,7 @@ async function Async_Process() {
         file.resetBytes();
         for (const { processor, method } of file.$processor_list) {
           try {
-            Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._2_DEBUG);
+            Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._1_LOG);
             await method.call(processor, file);
           } catch (error) {
             Err(error, `Unhandled exception in ${processor.ProcessorName} for "${file.src_path}":`);
@@ -532,7 +536,7 @@ async function Async_Process() {
     for (const path of temp__modified_paths) {
       const file = map__path_to_file.get(path);
       if (file !== undefined) {
-        Log(_logs._file_updated_(path));
+        Log(_logs._file_updated_(path), Builder.VERBOSITY._2_DEBUG);
         set__files_to_update.add(file);
       } else {
         Err(new Error(_errors._path_does_not_exist_(path)), _errors._path_does_not_exist_(path));
@@ -562,7 +566,7 @@ async function Async_Process() {
           task_fns.push(async () => {
             for (const { processor, method } of file.$processor_list) {
               try {
-                Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._2_DEBUG);
+                Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._1_LOG);
                 await method.call(processor, file);
               } catch (error) {
                 Err(error, `Unhandled exception in ${processor.ProcessorName} for "${file.src_path}":`);
@@ -607,8 +611,9 @@ async function Async_Process() {
   }
 }
 
-async function Async_AfterProcess() {
-  // After Steps onRun
+async function Async_AfterSteps() {
+  Log(_logs._phase_begin_('AfterSteps'));
+
   for (const step of array__after_steps) {
     try {
       Log(_logs._step_onrun_(step.StepName), Builder.VERBOSITY._2_DEBUG);
@@ -618,6 +623,9 @@ async function Async_AfterProcess() {
       throw error;
     }
   }
+
+  Log(_logs._phase_end_('AfterSteps'));
+  _channel.newLine();
 }
 
 async function Async_CleanUp() {
