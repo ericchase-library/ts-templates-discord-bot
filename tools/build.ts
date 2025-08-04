@@ -3,10 +3,10 @@ import { Step_Dev_Format } from './core-dev/step/Step_Dev_Format.js';
 import { Step_Dev_Project_Sync_Config } from './core-dev/step/Step_Dev_Project_Sync_Config.js';
 import { Builder } from './core/Builder.js';
 import { Processor_Set_Writable } from './core/processor/Processor_Set_Writable.js';
-import { PATTERN, Processor_TypeScript_Generic_Bundler } from './core/processor/Processor_TypeScript_Generic_Bundler.js';
+import { Processor_TypeScript_Generic_Bundler } from './core/processor/Processor_TypeScript_Generic_Bundler.js';
 import { Step_Bun_Run } from './core/step/Step_Bun_Run.js';
 import { Step_FS_Clean_Directory } from './core/step/Step_FS_Clean_Directory.js';
-import { Step_Dev_Client } from './lib-discord-bot/steps/Dev-Client.js';
+import { Step_Dev_Client } from './lib-discord-bot/steps/Step_Dev_Client.js';
 
 // Use command line arguments to set watch mode.
 if (BunPlatform_Args_Has('--dev')) {
@@ -44,9 +44,7 @@ Builder.SetProcessorModules(
   // Bundle the modules.
   Processor_TypeScript_Generic_Bundler({ target: 'bun', sourcemap: 'linked' }),
   // Write non-bundle files and non-library files.
-  Processor_Set_Writable({ include_patterns: ['**/*'], exclude_patterns: ['**/*.ts'] }, { include_libdir: false }),
-  // Write bundled files.
-  Processor_Set_Writable({ include_patterns: [`**/*${PATTERN.MODULE_IIFE}`] }, { include_libdir: true }),
+  Processor_Set_Writable({ include_patterns: ['**/*'], exclude_patterns: ['**/*.ts'] }),
   //
 );
 
