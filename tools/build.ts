@@ -11,7 +11,7 @@ import { Step_Dev_Client } from './lib-discord-bot/steps/Dev-Client.js';
 if (BunPlatform_Args_Has('--dev')) {
   Builder.SetMode(Builder.MODE.DEV);
 }
-Builder.SetVerbosity(Builder.VERBOSITY._1_LOG);
+Builder.SetVerbosity(Builder.VERBOSITY._2_DEBUG);
 
 // These steps are run during the startup phase only.
 Builder.SetStartUpSteps(

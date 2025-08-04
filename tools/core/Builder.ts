@@ -25,10 +25,12 @@ namespace _errors {
   export const _upstream_not_in_src_ = (p0: string) => `Upstream path "${p0}" must reside in src directory!`;
 }
 namespace _logs {
-  export const _file_added_ = (p0: string) => `[add] "${p0}"`;
-  export const _file_refreshed_ = (p0: string) => `[refresh] "${p0}"`;
-  export const _file_removed_ = (p0: string) => `[remove] "${p0}"`;
-  export const _file_updated_ = (p0: string) => `[update] "${p0}"`;
+  export const _file_added_ = (p0: string) => `[added] "${p0}"`;
+  export const _file_deleted_ = (p0: string) => `[removed] "${p0}"`;
+  export const _file_modified_ = (p0: string) => `[modified] "${p0}"`;
+  export const _file_refresh_ = (p0: string) => `[refresh] "${p0}"`;
+  export const _file_set_bytes_ = (p0: string) => `[set-bytes] "${p0}"`;
+  export const _file_set_text_ = (p0: string) => `[set-text] "${p0}"`;
   export const _phase_begin_ = (p0: string) => `[begin] ${p0}`;
   export const _phase_end_ = (p0: string) => `[end] ${p0}`;
   export const _processor_onadd_ = (p0: string) => `[onAdd] ${p0}`;
@@ -161,7 +163,7 @@ export namespace Builder {
     }
     // Treats the file as modified during the next Process phase.
     refresh(): void {
-      Log(_logs._file_refreshed_(this.src_path), VERBOSITY._2_DEBUG);
+      Log(_logs._file_refresh_(this.src_path), VERBOSITY._2_DEBUG);
       set__modified_paths.add(this.src_path);
     }
     // Clears the cached contents and resets attributes.
@@ -173,6 +175,7 @@ export namespace Builder {
     }
     // Set cached contents to Uint8Array.
     setBytes(bytes: Uint8Array<ArrayBuffer>): void {
+      Log(_logs._file_set_bytes_(this.src_path), VERBOSITY._2_DEBUG);
       this.isoriginal = false;
       this.ismodified = true;
       this.$data.bytes = bytes;
@@ -180,6 +183,7 @@ export namespace Builder {
     }
     // Set cached contents to string.
     setText(text: string): void {
+      Log(_logs._file_set_text_(this.src_path), VERBOSITY._2_DEBUG);
       this.isoriginal = false;
       this.ismodified = true;
       this.$data.bytes = undefined;
@@ -322,7 +326,9 @@ async function Init() {
         throwErrorOnBrokenSymlink: false,
       }),
     )) {
-      set__added_paths.add(NODE_PATH.join(Builder.Dir.Src, subpath));
+      const path = NODE_PATH.join(Builder.Dir.Src, subpath);
+      set__added_paths.add(path);
+      FILESTATS.UpdateStats(path);
     }
   }
 
@@ -435,14 +441,6 @@ async function Async_BeforeSteps() {
 async function Async_Process() {
   Log(_logs._phase_begin_('Process'));
 
-  const temp__deleted_paths = new Set<string>(set__deleted_paths);
-  const temp__added_paths = new Set<string>(set__added_paths);
-  const temp__modified_paths = new Set<string>(set__modified_paths);
-
-  set__deleted_paths.clear();
-  set__added_paths.clear();
-  set__modified_paths.clear();
-
   const set__files_to_remove = new Set<Builder.File>();
   const set__files_to_add = new Set<Builder.File>();
   const set__files_to_update = new Set<Builder.File>();
@@ -451,7 +449,7 @@ async function Async_Process() {
 
   // Process Removed Files
   {
-    for (const path of temp__deleted_paths) {
+    for (const path of set__deleted_paths) {
       const file = map__path_to_file.get(path);
       if (file !== undefined) {
         set__files_to_remove.add(file);
@@ -459,6 +457,7 @@ async function Async_Process() {
         Err(new Error(_errors._path_does_not_exist_(path)), _errors._path_does_not_exist_(path));
       }
     }
+    set__deleted_paths.clear();
     if (set__files_to_remove.size > 0) {
       // Processor Modules onRemove
       for (const processor of array__processor_modules) {
@@ -475,29 +474,30 @@ async function Async_Process() {
         set__files.delete(file);
         set__paths.delete(file.src_path);
         await Async_NodePlatform_File_Delete(file.out_path);
-        Log(_logs._file_removed_(file.src_path), Builder.VERBOSITY._2_DEBUG);
+        Log(_logs._file_deleted_(file.src_path), Builder.VERBOSITY._1_LOG);
       }
     }
   }
 
   // Process Added Files
   {
-    for (const path of temp__added_paths) {
+    for (const path of set__added_paths) {
       const file = Core_Map_Get_Or_Default(map__path_to_file, path, () => {
         const new_file = new Builder.File(path, NODE_PATH.join(Builder.Dir.Out, NODE_PATH.relative(Builder.Dir.Src, path)));
         set__files.add(new_file);
         set__paths.add(path);
-        Log(_logs._file_added_(path), Builder.VERBOSITY._2_DEBUG);
+        Log(_logs._file_added_(path), Builder.VERBOSITY._1_LOG);
         return new_file;
       });
       set__files_to_add.add(file);
       set__files_to_update.add(file);
     }
+    set__added_paths.clear();
     if (set__files_to_add.size > 0) {
       // Processor Modules onAdd
       for (const processor of array__processor_modules) {
         try {
-          Log(_logs._processor_onadd_(processor.ProcessorName), Builder.VERBOSITY._1_LOG);
+          Log(_logs._processor_onadd_(processor.ProcessorName), Builder.VERBOSITY._2_DEBUG);
           await processor.onAdd?.(set__files_to_add);
         } catch (error) {
           Err(error, `Unhandled exception in ${processor.ProcessorName} onAdd:`);
@@ -509,7 +509,7 @@ async function Async_Process() {
         file.resetBytes();
         for (const { processor, method } of file.$processor_list) {
           try {
-            Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._1_LOG);
+            Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._2_DEBUG);
             await method.call(processor, file);
           } catch (error) {
             Err(error, `Unhandled exception in ${processor.ProcessorName} for "${file.src_path}":`);
@@ -533,16 +533,16 @@ async function Async_Process() {
 
   // Process Updated Files
   {
-    for (const path of temp__modified_paths) {
+    for (const path of set__modified_paths) {
       const file = map__path_to_file.get(path);
       if (file !== undefined) {
-        Log(_logs._file_updated_(path), Builder.VERBOSITY._2_DEBUG);
+        Log(_logs._file_modified_(path), Builder.VERBOSITY._1_LOG);
         set__files_to_update.add(file);
       } else {
         Err(new Error(_errors._path_does_not_exist_(path)), _errors._path_does_not_exist_(path));
-        caught_error = true;
       }
     }
+    set__modified_paths.clear();
     if (set__files_to_update.size > 0) {
       // Processor Modules onProcess
       const set__unprocessed_files = new Set<Builder.File>();
@@ -566,7 +566,7 @@ async function Async_Process() {
           task_fns.push(async () => {
             for (const { processor, method } of file.$processor_list) {
               try {
-                Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._1_LOG);
+                Log(_logs._processor_onprocess_(processor.ProcessorName, file.src_path), Builder.VERBOSITY._2_DEBUG);
                 await method.call(processor, file);
               } catch (error) {
                 Err(error, `Unhandled exception in ${processor.ProcessorName} for "${file.src_path}":`);
