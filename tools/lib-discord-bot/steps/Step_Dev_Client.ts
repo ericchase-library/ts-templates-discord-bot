@@ -49,7 +49,7 @@ class Class implements Builder.Step {
   async onRun(): Promise<void> {
     // only start server if in dev mode
     if (Builder.GetMode() !== Builder.MODE.DEV) return;
-    this.debouncedStartUp();
+    await this.debouncedStartUp();
   }
   async onCleanUp(): Promise<void> {
     this.killProcesses();
