@@ -1,6 +1,5 @@
 import { BunPlatform_Args_Has } from '../src/lib/ericchase/BunPlatform_Args_Has.js';
 import { Step_Dev_Format } from './core-dev/step/Step_Dev_Format.js';
-import { Step_Dev_Project_Sync_Config } from './core-dev/step/Step_Dev_Project_Sync_Config.js';
 import { Builder } from './core/Builder.js';
 import { Processor_Set_Writable } from './core/processor/Processor_Set_Writable.js';
 import { Processor_TypeScript_Generic_Bundler } from './core/processor/Processor_TypeScript_Generic_Bundler.js';
@@ -8,7 +7,7 @@ import { Step_Bun_Run } from './core/step/Step_Bun_Run.js';
 import { Step_FS_Clean_Directory } from './core/step/Step_FS_Clean_Directory.js';
 import { Step_Dev_Client } from './lib-discord-bot/steps/Step_Dev_Client.js';
 
-// Use command line arguments to set watch mode.
+// Use command line arguments to set dev mode.
 if (BunPlatform_Args_Has('--dev')) {
   Builder.SetMode(Builder.MODE.DEV);
 }
@@ -19,7 +18,6 @@ Builder.SetStartUpSteps(
   Step_Bun_Run({ cmd: ['bun', 'update', '--latest'], showlogs: false }),
   Step_Bun_Run({ cmd: ['bun', 'install'], showlogs: false }),
   Step_FS_Clean_Directory(Builder.Dir.Out),
-  Step_Dev_Project_Sync_Config({ project_path: './' }),
   Step_Dev_Format({ showlogs: false }),
   //
 );
@@ -50,7 +48,7 @@ Builder.SetProcessorModules(
 
 // These steps are run after each processing phase.
 Builder.SetAfterProcessingSteps(
-  // During "dev" mode (when "--watch" is passed as an argument), the bot
+  // During "dev" mode (when "--dev" is passed as an argument), the bot
   // client will start running with automatic re-running when output files
   // change. Look in the "Dev-StartClient.ts" file to see how it works.
   Step_Dev_Client(),
