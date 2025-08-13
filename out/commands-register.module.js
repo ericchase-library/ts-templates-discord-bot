@@ -340,6 +340,3 @@ client.once(Events.ClientReady, async () => {
   }
 });
 client.login(getBotToken());
-
-//# debugId=9697CB8E306F509464756E2164756E21
-//# sourceMappingURL=commands-register.module.js.map

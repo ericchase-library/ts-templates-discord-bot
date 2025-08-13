@@ -19,6 +19,3 @@ export {
   getUsernameString,
   getGuildMember
 };
-
-//# debugId=0B479C8358A849F464756E2164756E21
-//# sourceMappingURL=lib.discord.module.js.map

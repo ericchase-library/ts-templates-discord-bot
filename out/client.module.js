@@ -310,6 +310,3 @@ client.on(Events.InteractionCreate, async (interaction) => {
 });
 Core_Console_Log("Attempting to log in.");
 client.login(getBotToken());
-
-//# debugId=A641B4EC64190DD864756E2164756E21
-//# sourceMappingURL=client.module.js.map

@@ -2,7 +2,6 @@ import { BunPlatform_Args_Has } from '../src/lib/ericchase/BunPlatform_Args_Has.
 import { Step_Dev_Format } from './core-dev/step/Step_Dev_Format.js';
 import { Step_Dev_Project_Update_Config } from './core-dev/step/Step_Dev_Project_Update_Config.js';
 import { Builder } from './core/Builder.js';
-import { Processor_Set_Writable } from './core/processor/Processor_Set_Writable.js';
 import { Processor_TypeScript_Generic_Bundler } from './core/processor/Processor_TypeScript_Generic_Bundler.js';
 import { Step_Bun_Run } from './core/step/Step_Bun_Run.js';
 import { Step_FS_Clean_Directory } from './core/step/Step_FS_Clean_Directory.js';
@@ -41,10 +40,9 @@ Builder.SetBeforeProcessingSteps();
 // The processors are run for every file that added them during every
 // processing phase.
 Builder.SetProcessorModules(
-  // Bundle the modules.
-  Processor_TypeScript_Generic_Bundler({ target: 'bun', sourcemap: 'linked' }),
-  // Write non-bundle files and non-library files.
-  Processor_Set_Writable({ include_patterns: ['**/*'], exclude_patterns: ['**/*.ts'] }),
+  // Bundle the iife scripts and modules.
+  Processor_TypeScript_Generic_Bundler({ target: 'bun' }, { bundler_mode: 'iife' }),
+  Processor_TypeScript_Generic_Bundler({ target: 'bun' }, { bundler_mode: 'module' }),
   //
 );
 

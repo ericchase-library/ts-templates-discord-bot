@@ -44,6 +44,3 @@ async function getCommands() {
   }
 }
 getCommands();
-
-//# debugId=73972DE93528446164756E2164756E21
-//# sourceMappingURL=commands-list.module.js.map
