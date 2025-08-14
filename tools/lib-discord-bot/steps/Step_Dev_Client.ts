@@ -6,24 +6,29 @@ import { NODE_PATH } from '../../../src/lib/ericchase/NodePlatform.js';
 import { Builder } from '../../core/Builder.js';
 import { Logger } from '../../core/Logger.js';
 
-export function Step_Dev_Client(): Builder.Step {
+export function Step_Run_Client(): Builder.Step {
   return new Class();
 }
 class Class implements Builder.Step {
-  StepName = Step_Dev_Client.name;
+  StepName = Step_Run_Client.name;
   channel = Logger(this.StepName).newChannel();
 
   process_register?: Subprocess<'ignore', 'pipe', 'pipe'>;
   process_client?: Subprocess<'ignore', 'pipe', 'pipe'>;
-  killProcesses() {
-    this.process_register?.kill(0);
-    this.process_register = undefined;
-    this.process_client?.kill(0);
-    this.process_client = undefined;
+  async killProcesses() {
+    if (this.process_register !== undefined) {
+      this.process_register.kill('SIGTERM');
+      await this.process_register.exited;
+      this.process_register = undefined;
+    }
+    if (this.process_client !== undefined) {
+      this.process_client.kill('SIGTERM');
+      await this.process_client.exited;
+      this.process_client = undefined;
+    }
   }
   debouncedStartUp = Core_Utility_Debounce(async () => {
-    this.killProcesses();
-
+    await this.killProcesses();
     {
       this.channel.log('Register Commands');
       this.process_register = Bun.spawn(['bun', 'run', NODE_PATH.join(Builder.Dir.Out, 'commands-register.module.js')], { stderr: 'pipe', stdout: 'pipe' });
@@ -35,7 +40,6 @@ class Class implements Builder.Step {
       await this.process_register.exited;
       this.process_register = undefined;
     }
-
     {
       this.channel.log('Start Client');
       this.process_client = Bun.spawn(['bun', 'run', NODE_PATH.join(Builder.Dir.Out, 'client.module.js')], { stderr: 'pipe', stdout: 'pipe' });
@@ -52,6 +56,6 @@ class Class implements Builder.Step {
     await this.debouncedStartUp();
   }
   async onCleanUp(): Promise<void> {
-    this.killProcesses();
+    await this.killProcesses();
   }
 }

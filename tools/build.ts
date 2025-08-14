@@ -5,7 +5,7 @@ import { Builder } from './core/Builder.js';
 import { Processor_TypeScript_Generic_Bundler } from './core/processor/Processor_TypeScript_Generic_Bundler.js';
 import { Step_Bun_Run } from './core/step/Step_Bun_Run.js';
 import { Step_FS_Clean_Directory } from './core/step/Step_FS_Clean_Directory.js';
-import { Step_Dev_Client } from './lib-discord-bot/steps/Step_Dev_Client.js';
+import { Step_Run_Client } from './lib-discord-bot/steps/Step_Dev_Client.js';
 
 // Use command line arguments to set dev mode.
 if (BunPlatform_Args_Has('--dev')) {
@@ -51,7 +51,7 @@ Builder.SetAfterProcessingSteps(
   // During "dev" mode (when "--dev" is passed as an argument), the bot
   // client will start running with automatic re-running when output files
   // change. Look in the "Dev-StartClient.ts" file to see how it works.
-  Step_Dev_Client(),
+  Step_Run_Client(),
   //
 );
 
