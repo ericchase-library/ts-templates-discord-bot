@@ -6,11 +6,11 @@ import { NODE_PATH } from '../../../src/lib/ericchase/NodePlatform.js';
 import { Builder } from '../../core/Builder.js';
 import { Logger } from '../../core/Logger.js';
 
-export function Step_Run_Client(): Builder.Step {
+export function Step_Run_Discord_Bot(): Builder.Step {
   return new Class();
 }
 class Class implements Builder.Step {
-  StepName = Step_Run_Client.name;
+  StepName = Step_Run_Discord_Bot.name;
   channel = Logger(this.StepName).newChannel();
 
   process_register?: Subprocess<'ignore', 'pipe', 'pipe'>;
