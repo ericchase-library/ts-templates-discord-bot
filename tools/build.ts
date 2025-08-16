@@ -11,7 +11,7 @@ import { Step_Run_Discord_Bot } from './lib-discord-bot/steps/Step_Run_Discord_B
 if (BunPlatform_Args_Has('--dev')) {
   Builder.SetMode(Builder.MODE.DEV);
 }
-Builder.SetVerbosity(Builder.VERBOSITY._2_DEBUG);
+Builder.SetVerbosity(Builder.VERBOSITY._1_LOG);
 
 // These steps are run during the startup phase only.
 Builder.SetStartUpSteps(
