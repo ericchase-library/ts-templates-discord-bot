@@ -11,4 +11,5 @@ bun.lock
 ## Project Specific
 
 # up to you whether you want to format the build files
-/out/
+# /out/
+/out/external/discord/discord.module.js

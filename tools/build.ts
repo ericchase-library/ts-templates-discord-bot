@@ -1,4 +1,4 @@
-import { BunPlatform_Args_Has } from '../src/lib/ericchase/BunPlatform_Args_Has.js';
+import { BunPlatform_Argv_Includes } from '../src/lib/ericchase/BunPlatform_Argv_Includes.js';
 import { Step_Dev_Format } from './core-dev/step/Step_Dev_Format.js';
 import { Step_Dev_Project_Update_Config } from './core-dev/step/Step_Dev_Project_Update_Config.js';
 import { Builder } from './core/Builder.js';
@@ -11,7 +11,7 @@ import { Step_Run_Discord_Bot } from './lib-discord-bot/steps/Step_Run_Discord_B
 // await AddLoggerOutputDirectory('cache');
 
 // Use command line arguments to set developer mode.
-if (BunPlatform_Args_Has('--dev')) {
+if (BunPlatform_Argv_Includes('--dev')) {
   Builder.SetMode(Builder.MODE.DEV);
 }
 // Set the logging verbosity
@@ -23,7 +23,6 @@ Builder.SetStartUpSteps(
   Step_Bun_Run({ cmd: ['bun', 'update', '--latest'], showlogs: false }),
   Step_Bun_Run({ cmd: ['bun', 'install'], showlogs: false }),
   Step_FS_Clean_Directory(Builder.Dir.Out),
-  Step_Dev_Format({ showlogs: false }),
   //
 );
 
@@ -60,6 +59,9 @@ Builder.SetAfterProcessingSteps(
 );
 
 // These steps are run during the cleanup phase only.
-Builder.SetCleanUpSteps();
+Builder.SetCleanUpSteps(
+  Step_Dev_Format({ showlogs: false }),
+  //
+);
 
 await Builder.Start();

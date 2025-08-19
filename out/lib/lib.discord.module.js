@@ -1,6 +1,6 @@
 // @bun
 // src/lib/lib.discord.module.ts
-import { GuildMember } from "../external/discord/discord.module.js";
+import { GuildMember } from '../external/discord/discord.module.js';
 async function getGuildMember(interaction) {
   if (interaction.member) {
     if (interaction.member instanceof GuildMember) {
@@ -15,7 +15,4 @@ async function getGuildMember(interaction) {
 function getUsernameString(user) {
   return `${user.displayName} (${user.username})`;
 }
-export {
-  getUsernameString,
-  getGuildMember
-};
+export { getUsernameString, getGuildMember };
