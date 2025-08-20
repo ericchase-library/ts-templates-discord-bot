@@ -49,7 +49,6 @@ class Class implements Builder.Step {
     }
   }, 250);
 
-  async onStartUp(): Promise<void> {}
   async onRun(): Promise<void> {
     // only start server if in dev mode
     if (Builder.GetMode() !== Builder.MODE.DEV) return;
