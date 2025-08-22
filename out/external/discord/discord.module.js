@@ -5781,7 +5781,7 @@ var require_dist5 = __commonJS((exports, module) => {
   var import_v102 = require_v106();
   var import_util = require_dist();
   var import_v10 = require_v106();
-  var DefaultUserAgent = `DiscordBot (https://discord.js.org, 2.5.1)`;
+  var DefaultUserAgent = `DiscordBot (https://discord.js.org, 2.6.0)`;
   var DefaultUserAgentAppendix = (0, import_util.getUserAgentAppendix)();
   var DefaultRestOptions = {
     agent: null,
@@ -6067,6 +6067,9 @@ var require_dist5 = __commonJS((exports, module) => {
     soundboardSound(soundId) {
       return `${this.cdn}${import_v102.CDNRoutes.soundboardSound(soundId)}`;
     }
+    guildTagBadge(guildId, badgeHash, options) {
+      return this.makeURL(`/guild-tag-badges/${guildId}/${badgeHash}`, options);
+    }
     dynamicMakeURL(route, hash, { forceStatic = false, ...options } = {}) {
       return this.makeURL(route, !forceStatic && hash.startsWith("a_") ? { ...options, extension: "gif" } : options);
     }
@@ -6074,7 +6077,8 @@ var require_dist5 = __commonJS((exports, module) => {
       allowedExtensions = ALLOWED_EXTENSIONS,
       base = this.cdn,
       extension = "webp",
-      size
+      size,
+      animated
     } = {}) {
       extension = String(extension).toLowerCase();
       if (!allowedExtensions.includes(extension)) {
@@ -6086,6 +6090,9 @@ Must be one of: ${allowedExtensions.join(", ")}`);
 Must be one of: ${ALLOWED_SIZES.join(", ")}`);
       }
       const url = new URL(`${base}${route}.${extension}`);
+      if (animated !== undefined) {
+        url.searchParams.set("animated", String(animated));
+      }
       if (size) {
         url.searchParams.set("size", String(size));
       }
@@ -6755,7 +6762,7 @@ ${flattened}` : error.message || flattened || "Unknown Error";
       };
     }
   };
-  var version = "2.5.1";
+  var version = "2.6.0";
   globalThis.FormData ??= import_undici2.FormData;
   globalThis.Blob ??= import_node_buffer.Blob;
   setDefaultStrategy((0, import_util2.shouldUseGlobalFetchAndWebSocket)() ? fetch : makeRequest);
@@ -8458,6 +8465,11 @@ var require_Constants = __commonJS((exports) => {
     [StickerFormatType.Lottie]: ImageFormat.Lottie,
     [StickerFormatType.GIF]: ImageFormat.GIF
   };
+  exports.HolographicStyle = {
+    Primary: 11127295,
+    Secondary: 16759788,
+    Tertiary: 16761760
+  };
 });
 
 // node_modules/discord.js/src/structures/BaseChannel.js
@@ -8685,6 +8697,13 @@ var require_Role = __commonJS((exports) => {
       if ("color" in data) {
         this.color = data.color;
       }
+      if ("colors" in data) {
+        this.colors = {
+          primaryColor: data.colors.primary_color,
+          secondaryColor: data.colors.secondary_color,
+          tertiaryColor: data.colors.tertiary_color
+        };
+      }
       if ("hoist" in data) {
         this.hoist = data.hoist;
       }
@@ -8738,7 +8757,7 @@ var require_Role = __commonJS((exports) => {
       return new Date(this.createdTimestamp);
     }
     get hexColor() {
-      return `#${this.color.toString(16).padStart(6, "0")}`;
+      return `#${this.colors.primaryColor.toString(16).padStart(6, "0")}`;
     }
     get members() {
       return this.id === this.guild.id ? this.guild.members.cache.clone() : this.guild.members.cache.filter((member) => member._roles.includes(this.id));
@@ -8769,8 +8788,11 @@ var require_Role = __commonJS((exports) => {
     setName(name, reason) {
       return this.edit({ name, reason });
     }
-    setColor(color, reason) {
+    async setColor(color, reason) {
       return this.edit({ color, reason });
+    }
+    async setColors(colors, reason) {
+      return this.edit({ colors, reason });
     }
     setHoist(hoist = true, reason) {
       return this.edit({ hoist, reason });
@@ -8798,7 +8820,7 @@ var require_Role = __commonJS((exports) => {
       return this.icon && this.client.rest.cdn.roleIcon(this.id, this.icon, options);
     }
     equals(role) {
-      return role && this.id === role.id && this.name === role.name && this.color === role.color && this.hoist === role.hoist && this.position === role.position && this.permissions.bitfield === role.permissions.bitfield && this.managed === role.managed && this.icon === role.icon && this.unicodeEmoji === role.unicodeEmoji;
+      return role && this.id === role.id && this.name === role.name && this.colors.primaryColor === role.colors.primaryColor && this.colors.secondaryColor === role.colors.secondaryColor && this.colors.tertiaryColor === role.colors.tertiaryColor && this.hoist === role.hoist && this.position === role.position && this.permissions.bitfield === role.permissions.bitfield && this.managed === role.managed && this.icon === role.icon && this.unicodeEmoji === role.unicodeEmoji;
     }
     toString() {
       if (this.id === this.guild.id)
@@ -9579,12 +9601,25 @@ var require_Transformers = __commonJS((exports, module) => {
       raidDetectedAt: data.raid_detected_at ? new Date(data.raid_detected_at) : null
     };
   }
+  function _transformCollectibles(collectibles) {
+    if (!collectibles.nameplate)
+      return { nameplate: null };
+    return {
+      nameplate: {
+        skuId: collectibles.nameplate.sku_id,
+        asset: collectibles.nameplate.asset,
+        label: collectibles.nameplate.label,
+        palette: collectibles.nameplate.palette
+      }
+    };
+  }
   module.exports = {
     toSnakeCase,
     _transformAPIAutoModerationAction,
     _transformAPIMessageInteractionMetadata,
     _transformGuildScheduledEventRecurrenceRule,
-    _transformAPIIncidentsData
+    _transformAPIIncidentsData,
+    _transformCollectibles
   };
 });
 
@@ -9593,7 +9628,7 @@ var require_package = __commonJS((exports, module) => {
   module.exports = {
     $schema: "https://json.schemastore.org/package.json",
     name: "discord.js",
-    version: "14.21.0",
+    version: "14.22.0",
     description: "A powerful library for interacting with the Discord API",
     main: "./src/index.js",
     types: "./typings/index.d.ts",
@@ -9650,13 +9685,13 @@ var require_package = __commonJS((exports, module) => {
       "@discordjs/formatters": "^0.6.1",
       "@discordjs/ws": "^1.2.3",
       "@sapphire/snowflake": "3.5.3",
-      "discord-api-types": "^0.38.1",
+      "discord-api-types": "^0.38.16",
       "fast-deep-equal": "3.1.3",
       "lodash.snakecase": "4.1.1",
       "magic-bytes.js": "^1.10.0",
       tslib: "^2.6.3",
       undici: "6.21.3",
-      "@discordjs/rest": "^2.5.1",
+      "@discordjs/rest": "^2.6.0",
       "@discordjs/util": "^1.1.1"
     },
     devDependencies: {
@@ -10001,7 +10036,7 @@ var require_Events = __commonJS((exports, module) => {
     ChannelDelete: "channelDelete",
     ChannelPinsUpdate: "channelPinsUpdate",
     ChannelUpdate: "channelUpdate",
-    ClientReady: "ready",
+    ClientReady: "clientReady",
     Debug: "debug",
     EntitlementCreate: "entitlementCreate",
     EntitlementUpdate: "entitlementUpdate",
@@ -10079,7 +10114,7 @@ var require_Events = __commonJS((exports, module) => {
     VoiceServerUpdate: "voiceServerUpdate",
     VoiceStateUpdate: "voiceStateUpdate",
     Warn: "warn",
-    WebhooksUpdate: "webhookUpdate"
+    WebhooksUpdate: "webhooksUpdate"
   };
 });
 
@@ -12333,21 +12368,22 @@ var require_ApplicationEmoji = __commonJS((exports, module) => {
     constructor(client, data, application) {
       super(client, data);
       this.application = application;
-      this.author = null;
-      this.managed = null;
-      this.requiresColons = null;
       this._patch(data);
     }
     _patch(data) {
       if ("name" in data)
         this.name = data.name;
-      if (data.user)
+      if (data.user) {
         this.author = this.client.users._add(data.user);
+      }
       if ("managed" in data) {
         this.managed = data.managed;
       }
       if ("require_colons" in data) {
         this.requiresColons = data.require_colons;
+      }
+      if ("available" in data) {
+        this.available = data.available;
       }
     }
     fetchAuthor() {
@@ -12365,7 +12401,7 @@ var require_ApplicationEmoji = __commonJS((exports, module) => {
     }
     equals(other) {
       if (other instanceof ApplicationEmoji) {
-        return other.animated === this.animated && other.id === this.id && other.name === this.name && other.managed === this.managed && other.requiresColons === this.requiresColons;
+        return other.animated === this.animated && other.id === this.id && other.name === this.name && other.managed === this.managed && other.requiresColons === this.requiresColons && other.available === this.available;
       }
       return other.id === this.id && other.name === this.name;
     }
@@ -19841,6 +19877,7 @@ var require_User = __commonJS((exports, module) => {
   var { DiscordSnowflake } = require_cjs();
   var Base = require_Base();
   var TextBasedChannel = require_TextBasedChannel();
+  var { _transformCollectibles } = require_Transformers();
   var UserFlagsBitField = require_UserFlagsBitField();
   var { emitDeprecationWarningForUserFetchFlags } = require_Util();
 
@@ -19902,13 +19939,36 @@ var require_User = __commonJS((exports, module) => {
       } else {
         this.avatarDecoration ??= null;
       }
-      if (data.avatar_decoration_data) {
-        this.avatarDecorationData = {
-          asset: data.avatar_decoration_data.asset,
-          skuId: data.avatar_decoration_data.sku_id
-        };
+      if ("avatar_decoration_data" in data) {
+        if (data.avatar_decoration_data) {
+          this.avatarDecorationData = {
+            asset: data.avatar_decoration_data.asset,
+            skuId: data.avatar_decoration_data.sku_id
+          };
+        } else {
+          this.avatarDecorationData = null;
+        }
       } else {
-        this.avatarDecorationData = null;
+        this.avatarDecorationData ??= null;
+      }
+      if (data.collectibles) {
+        this.collectibles = _transformCollectibles(data.collectibles);
+      } else {
+        this.collectibles = null;
+      }
+      if ("primary_guild" in data) {
+        if (data.primary_guild) {
+          this.primaryGuild = {
+            identityGuildId: data.primary_guild.identity_guild_id,
+            identityEnabled: data.primary_guild.identity_enabled,
+            tag: data.primary_guild.tag,
+            badge: data.primary_guild.badge
+          };
+        } else {
+          this.primaryGuild = null;
+        }
+      } else {
+        this.primaryGuild ??= null;
       }
     }
     get partial() {
@@ -19944,6 +20004,9 @@ var require_User = __commonJS((exports, module) => {
     bannerURL(options = {}) {
       return this.banner && this.client.rest.cdn.banner(this.id, this.banner, options);
     }
+    guildTagBadgeURL(options = {}) {
+      return this.primaryGuild?.badge ? this.client.rest.cdn.guildTagBadge(this.primaryGuild.identityGuildId, this.primaryGuild.badge, options) : null;
+    }
     get tag() {
       return typeof this.username === "string" ? this.discriminator === "0" ? this.username : `${this.username}#${this.discriminator}` : null;
     }
@@ -19960,10 +20023,10 @@ var require_User = __commonJS((exports, module) => {
       return this.client.users.deleteDM(this.id);
     }
     equals(user) {
-      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.globalName && this.avatar === user.avatar && this.flags?.bitfield === user.flags?.bitfield && this.banner === user.banner && this.accentColor === user.accentColor && this.avatarDecoration === user.avatarDecoration && this.avatarDecorationData?.asset === user.avatarDecorationData?.asset && this.avatarDecorationData?.skuId === user.avatarDecorationData?.skuId;
+      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.globalName && this.avatar === user.avatar && this.flags?.bitfield === user.flags?.bitfield && this.banner === user.banner && this.accentColor === user.accentColor && this.avatarDecoration === user.avatarDecoration && this.avatarDecorationData?.asset === user.avatarDecorationData?.asset && this.avatarDecorationData?.skuId === user.avatarDecorationData?.skuId && this.collectibles?.nameplate?.skuId === user.collectibles?.nameplate?.skuId && this.collectibles?.nameplate?.asset === user.collectibles?.nameplate?.asset && this.collectibles?.nameplate?.label === user.collectibles?.nameplate?.label && this.collectibles?.nameplate?.palette === user.collectibles?.nameplate?.palette && this.primaryGuild?.identityGuildId === user.primaryGuild?.identityGuildId && this.primaryGuild?.identityEnabled === user.primaryGuild?.identityEnabled && this.primaryGuild?.tag === user.primaryGuild?.tag && this.primaryGuild?.badge === user.primaryGuild?.badge;
     }
     _equals(user) {
-      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.global_name && this.avatar === user.avatar && this.flags?.bitfield === user.public_flags && ("banner" in user ? this.banner === user.banner : true) && ("accent_color" in user ? this.accentColor === user.accent_color : true) && ("avatar_decoration" in user ? this.avatarDecoration === user.avatar_decoration : true) && ("avatar_decoration_data" in user ? this.avatarDecorationData?.asset === user.avatar_decoration_data?.asset && this.avatarDecorationData?.skuId === user.avatar_decoration_data?.sku_id : true);
+      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.global_name && this.avatar === user.avatar && this.flags?.bitfield === user.public_flags && ("banner" in user ? this.banner === user.banner : true) && ("accent_color" in user ? this.accentColor === user.accent_color : true) && ("avatar_decoration" in user ? this.avatarDecoration === user.avatar_decoration : true) && ("avatar_decoration_data" in user ? this.avatarDecorationData?.asset === user.avatar_decoration_data?.asset && this.avatarDecorationData?.skuId === user.avatar_decoration_data?.sku_id : true) && ("collectibles" in user ? this.collectibles?.nameplate?.skuId === user.collectibles?.nameplate?.sku_id && this.collectibles?.nameplate?.asset === user.collectibles?.nameplate?.asset && this.collectibles?.nameplate?.label === user.collectibles?.nameplate?.label && this.collectibles?.nameplate?.palette === user.collectibles?.nameplate?.palette : true) && ("primary_guild" in user ? this.primaryGuild?.identityGuildId === user.primary_guild?.identity_guild_id && this.primaryGuild?.identityEnabled === user.primary_guild?.identity_enabled && this.primaryGuild?.tag === user.primary_guild?.tag && this.primaryGuild?.badge === user.primary_guild?.badge : true);
     }
     fetchFlags(force = false) {
       emitDeprecationWarningForUserFetchFlags(this.constructor.name);
@@ -19985,6 +20048,7 @@ var require_User = __commonJS((exports, module) => {
       json.avatarURL = this.avatarURL();
       json.displayAvatarURL = this.displayAvatarURL();
       json.bannerURL = this.banner ? this.bannerURL() : this.banner;
+      json.guildTagBadgeURL = this.guildTagBadgeURL();
       return json;
     }
   }
@@ -21114,7 +21178,7 @@ var require_Message = __commonJS((exports) => {
     get crosspostable() {
       const bitfield = PermissionFlagsBits.SendMessages | (this.author.id === this.client.user.id ? PermissionsBitField.DefaultBit : PermissionFlagsBits.ManageMessages);
       const { channel } = this;
-      return Boolean(channel?.type === ChannelType.GuildAnnouncement && !this.flags.has(MessageFlags.Crossposted) && this.type === MessageType.Default && !this.poll && channel.viewable && channel.permissionsFor(this.client.user)?.has(bitfield, false));
+      return Boolean(channel?.type === ChannelType.GuildAnnouncement && !this.flags.has(MessageFlags.Crossposted) && this.reference?.type !== MessageReferenceType.Forward && this.type === MessageType.Default && !this.poll && channel.viewable && channel.permissionsFor(this.client.user)?.has(bitfield, false));
     }
     async edit(options) {
       if (!this.channel)
@@ -21670,7 +21734,7 @@ var require_GuildMemberRoleManager = __commonJS((exports, module) => {
       return iconRoles.reduce((prev, role) => role.comparePositionTo(prev) > 0 ? role : prev);
     }
     get color() {
-      const coloredRoles = this.cache.filter((role) => role.color);
+      const coloredRoles = this.cache.filter((role) => role.colors.primaryColor);
       if (!coloredRoles.size)
         return null;
       return coloredRoles.reduce((prev, role) => role.comparePositionTo(prev) > 0 ? role : prev);
@@ -21870,7 +21934,7 @@ var require_GuildMember = __commonJS((exports) => {
       return this.guild.presences.cache.get(this.id) ?? null;
     }
     get displayColor() {
-      return this.roles.color?.color ?? 0;
+      return this.roles.color?.colors.primaryColor ?? 0;
     }
     get displayHexColor() {
       return this.roles.color?.hexColor ?? "#000000";
@@ -21979,6 +22043,7 @@ var require_GuildMember = __commonJS((exports) => {
 
 // node_modules/discord.js/src/managers/MessageManager.js
 var require_MessageManager = __commonJS((exports, module) => {
+  var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { Routes } = require_v106();
@@ -21988,6 +22053,7 @@ var require_MessageManager = __commonJS((exports, module) => {
   var MessagePayload = require_MessagePayload();
   var { MakeCacheOverrideSymbol } = require_Symbols();
   var { resolvePartialEmoji } = require_Util();
+  var deprecationEmittedForFetchPinned = false;
 
   class MessageManager extends CachedManager {
     static [MakeCacheOverrideSymbol] = MessageManager;
@@ -22022,7 +22088,29 @@ var require_MessageManager = __commonJS((exports, module) => {
       });
       return data.reduce((_data, message) => _data.set(message.id, this._add(message, options.cache)), new Collection);
     }
+    async fetchPins(options = {}) {
+      const data = await this.client.rest.get(Routes.channelMessagesPins(this.channel.id), {
+        query: makeURLSearchParams({
+          ...options,
+          before: options.before && new Date(options.before).toISOString()
+        })
+      });
+      return {
+        items: data.items.map((item) => ({
+          pinnedTimestamp: Date.parse(item.pinned_at),
+          get pinnedAt() {
+            return new Date(this.pinnedTimestamp);
+          },
+          message: this._add(item.message, options.cache)
+        })),
+        hasMore: data.has_more
+      };
+    }
     async fetchPinned(cache = true) {
+      if (!deprecationEmittedForFetchPinned) {
+        process2.emitWarning("The MessageManager#fetchPinned() method is deprecated. Use MessageManager#fetchPins() instead.", "DeprecationWarning");
+        deprecationEmittedForFetchPinned = true;
+      }
       const data = await this.client.rest.get(Routes.channelPins(this.channel.id));
       const messages = new Collection;
       for (const message of data)
@@ -22054,13 +22142,13 @@ var require_MessageManager = __commonJS((exports, module) => {
       message = this.resolveId(message);
       if (!message)
         throw new DiscordjsTypeError(ErrorCodes.InvalidType, "message", "MessageResolvable");
-      await this.client.rest.put(Routes.channelPin(this.channel.id, message), { reason });
+      await this.client.rest.put(Routes.channelMessagesPin(this.channel.id, message), { reason });
     }
     async unpin(message, reason) {
       message = this.resolveId(message);
       if (!message)
         throw new DiscordjsTypeError(ErrorCodes.InvalidType, "message", "MessageResolvable");
-      await this.client.rest.delete(Routes.channelPin(this.channel.id, message), { reason });
+      await this.client.rest.delete(Routes.channelMessagesPin(this.channel.id, message), { reason });
     }
     async react(message, emoji) {
       message = this.resolveId(message);
@@ -22968,7 +23056,7 @@ var require_ThreadChannel = __commonJS((exports, module) => {
     async edit(options) {
       const newData = await this.client.rest.patch(Routes.channel(this.id), {
         body: {
-          name: (options.name ?? this.name).trim(),
+          name: options.name,
           archived: options.archived,
           auto_archive_duration: options.autoArchiveDuration,
           rate_limit_per_user: options.rateLimitPerUser,
@@ -29561,6 +29649,7 @@ var require_WebSocketManager = __commonJS((exports, module) => {
   var Status = require_Status();
   var WebSocketShardEvents = require_WebSocketShardEvents();
   var zlib;
+  var deprecationEmitted = false;
   try {
     zlib = (()=>{throw new Error("Cannot require module "+"zlib-sync");})();
   } catch {}
@@ -29762,6 +29851,10 @@ var require_WebSocketManager = __commonJS((exports, module) => {
     triggerClientReady() {
       this.status = Status.Ready;
       this.client.readyTimestamp = Date.now();
+      if (this.client.emit("ready", this.client) && !deprecationEmitted) {
+        deprecationEmitted = true;
+        process2.emitWarning("The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.", "DeprecationWarning");
+      }
       this.client.emit(Events.ClientReady, this.client);
       this.handlePacket();
     }
@@ -30592,13 +30685,11 @@ var require_GuildChannelManager = __commonJS((exports, module) => {
       const id = this.resolveId(channel);
       if (!id)
         throw new DiscordjsTypeError(ErrorCodes.InvalidType, "channel", "GuildChannelResolvable");
-      if (typeof avatar === "string" && !avatar.startsWith("data:")) {
-        avatar = await resolveImage(avatar);
-      }
+      const resolvedImage = await resolveImage(avatar);
       const data = await this.client.rest.post(Routes.channelWebhooks(id), {
         body: {
           name,
-          avatar
+          avatar: resolvedImage
         },
         reason
       });
@@ -31741,6 +31832,8 @@ var require_RoleManager = __commonJS((exports, module) => {
   var PermissionsBitField = require_PermissionsBitField();
   var { setPosition, resolveColor } = require_Util();
   var cacheWarningEmitted = false;
+  var deprecationEmittedForCreate = false;
+  var deprecationEmittedForEdit = false;
 
   class RoleManager extends CachedManager {
     constructor(guild, iterable) {
@@ -31778,8 +31871,8 @@ var require_RoleManager = __commonJS((exports, module) => {
       }
     }
     async create(options = {}) {
-      let { name, color, hoist, permissions, position, mentionable, reason, icon, unicodeEmoji } = options;
-      color &&= resolveColor(color);
+      let { permissions, icon } = options;
+      const { name, color, hoist, position, mentionable, reason, unicodeEmoji } = options;
       if (permissions !== undefined)
         permissions = new PermissionsBitField(permissions);
       if (icon) {
@@ -31788,10 +31881,26 @@ var require_RoleManager = __commonJS((exports, module) => {
         if (typeof icon !== "string")
           icon = undefined;
       }
+      let colors = options.colors && {
+        primary_color: resolveColor(options.colors.primaryColor),
+        secondary_color: options.colors.secondaryColor && resolveColor(options.colors.secondaryColor),
+        tertiary_color: options.colors.tertiaryColor && resolveColor(options.colors.tertiaryColor)
+      };
+      if (color !== undefined) {
+        if (!deprecationEmittedForCreate) {
+          process2.emitWarning(`Passing "color" to RoleManager#create() is deprecated. Use "colors" instead.`);
+        }
+        deprecationEmittedForCreate = true;
+        colors = {
+          primary_color: resolveColor(color),
+          secondary_color: null,
+          tertiary_color: null
+        };
+      }
       const data = await this.client.rest.post(Routes.guildRoles(this.guild.id), {
         body: {
           name,
-          color,
+          colors,
           hoist,
           permissions,
           mentionable,
@@ -31822,9 +31931,25 @@ var require_RoleManager = __commonJS((exports, module) => {
         if (typeof icon !== "string")
           icon = undefined;
       }
+      let colors = options.colors && {
+        primary_color: resolveColor(options.colors.primaryColor),
+        secondary_color: options.colors.secondaryColor && resolveColor(options.colors.secondaryColor),
+        tertiary_color: options.colors.tertiaryColor && resolveColor(options.colors.tertiaryColor)
+      };
+      if (options.color !== undefined) {
+        if (!deprecationEmittedForEdit) {
+          process2.emitWarning(`Passing "color" to RoleManager#edit() is deprecated. Use "colors" instead.`);
+        }
+        deprecationEmittedForEdit = true;
+        colors = {
+          primary_color: resolveColor(options.color),
+          secondary_color: null,
+          tertiary_color: null
+        };
+      }
       const body = {
         name: options.name,
-        color: options.color === undefined ? undefined : resolveColor(options.color),
+        colors,
         hoist: options.hoist,
         permissions: options.permissions === undefined ? undefined : new PermissionsBitField(options.permissions),
         mentionable: options.mentionable,
@@ -34431,6 +34556,7 @@ var require_src = __commonJS((exports) => {
   exports.Component = require_Component();
   exports.ContainerComponent = require_ContainerComponent();
   exports.ContextMenuCommandInteraction = require_ContextMenuCommandInteraction();
+  exports.DirectoryChannel = require_DirectoryChannel();
   exports.DMChannel = require_DMChannel();
   exports.Embed = require_Embed();
   exports.EmbedBuilder = require_EmbedBuilder();
