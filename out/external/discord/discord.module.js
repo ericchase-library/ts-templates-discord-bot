@@ -9124,9 +9124,10 @@ var require_GuildChannel = __commonJS((exports, module) => {
       if (checkAdmin && role.permissions.has(PermissionFlagsBits.Administrator)) {
         return new PermissionsBitField(PermissionsBitField.All).freeze();
       }
+      const basePermissions = new PermissionsBitField([role.permissions, role.guild.roles.everyone.permissions]);
       const everyoneOverwrites = this.permissionOverwrites.cache.get(this.guild.id);
       const roleOverwrites = this.permissionOverwrites.cache.get(role.id);
-      return role.permissions.remove(everyoneOverwrites?.deny ?? PermissionsBitField.DefaultBit).add(everyoneOverwrites?.allow ?? PermissionsBitField.DefaultBit).remove(roleOverwrites?.deny ?? PermissionsBitField.DefaultBit).add(roleOverwrites?.allow ?? PermissionsBitField.DefaultBit).freeze();
+      return basePermissions.remove(everyoneOverwrites?.deny ?? PermissionsBitField.DefaultBit).add(everyoneOverwrites?.allow ?? PermissionsBitField.DefaultBit).remove(roleOverwrites?.deny ?? PermissionsBitField.DefaultBit).add(roleOverwrites?.allow ?? PermissionsBitField.DefaultBit).freeze();
     }
     async lockPermissions() {
       if (!this.parent)
@@ -9628,7 +9629,7 @@ var require_package = __commonJS((exports, module) => {
   module.exports = {
     $schema: "https://json.schemastore.org/package.json",
     name: "discord.js",
-    version: "14.22.0",
+    version: "14.22.1",
     description: "A powerful library for interacting with the Discord API",
     main: "./src/index.js",
     types: "./typings/index.d.ts",
@@ -9691,8 +9692,8 @@ var require_package = __commonJS((exports, module) => {
       "magic-bytes.js": "^1.10.0",
       tslib: "^2.6.3",
       undici: "6.21.3",
-      "@discordjs/rest": "^2.6.0",
-      "@discordjs/util": "^1.1.1"
+      "@discordjs/util": "^1.1.1",
+      "@discordjs/rest": "^2.6.0"
     },
     devDependencies: {
       "@favware/cliff-jumper": "^4.1.0",
