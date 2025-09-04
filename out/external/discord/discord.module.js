@@ -962,7 +962,8 @@ var require_common = __commonJS((exports) => {
     UseExternalSounds: 1n << 45n,
     SendVoiceMessages: 1n << 46n,
     SendPolls: 1n << 49n,
-    UseExternalApps: 1n << 50n
+    UseExternalApps: 1n << 50n,
+    PinMessages: 1n << 51n
   };
   Object.freeze(exports.PermissionFlagsBits);
 });
@@ -1290,6 +1291,7 @@ var require_channel = __commonJS((exports) => {
     ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
     ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
     ComponentType2[ComponentType2["Container"] = 17] = "Container";
+    ComponentType2[ComponentType2["Label"] = 18] = "Label";
     ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
   })(ComponentType || (exports.ComponentType = ComponentType = {}));
   var ButtonStyle;
@@ -1341,7 +1343,7 @@ var require_channel = __commonJS((exports) => {
 // node_modules/discord-api-types/payloads/v10/gateway.js
 var require_gateway = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ActivityFlags = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
+  exports.ActivityFlags = exports.StatusDisplayType = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
   var PresenceUpdateStatus;
   (function(PresenceUpdateStatus2) {
     PresenceUpdateStatus2["Online"] = "online";
@@ -1370,6 +1372,12 @@ var require_gateway = __commonJS((exports) => {
     ActivityType2[ActivityType2["Custom"] = 4] = "Custom";
     ActivityType2[ActivityType2["Competing"] = 5] = "Competing";
   })(ActivityType || (exports.ActivityType = ActivityType = {}));
+  var StatusDisplayType;
+  (function(StatusDisplayType2) {
+    StatusDisplayType2[StatusDisplayType2["Name"] = 0] = "Name";
+    StatusDisplayType2[StatusDisplayType2["State"] = 1] = "State";
+    StatusDisplayType2[StatusDisplayType2["Details"] = 2] = "Details";
+  })(StatusDisplayType || (exports.StatusDisplayType = StatusDisplayType = {}));
   var ActivityFlags;
   (function(ActivityFlags2) {
     ActivityFlags2[ActivityFlags2["Instance"] = 1] = "Instance";
@@ -1480,6 +1488,7 @@ var require_guild = __commonJS((exports) => {
     GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
     GuildFeature2["GuildTags"] = "GUILD_TAGS";
     GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
+    GuildFeature2["GuestsEnabled"] = "GUESTS_ENABLED";
   })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
   var GuildMemberFlags;
   (function(GuildMemberFlags2) {
@@ -1748,7 +1757,11 @@ var require_interactions = __commonJS((exports) => {
 // node_modules/discord-api-types/payloads/v10/invite.js
 var require_invite = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.InviteTargetType = exports.InviteType = undefined;
+  exports.InviteTargetType = exports.InviteType = exports.InviteFlags = undefined;
+  var InviteFlags;
+  (function(InviteFlags2) {
+    InviteFlags2[InviteFlags2["IsGuestInvite"] = 1] = "IsGuestInvite";
+  })(InviteFlags || (exports.InviteFlags = InviteFlags = {}));
   var InviteType;
   (function(InviteType2) {
     InviteType2[InviteType2["Guild"] = 0] = "Guild";
@@ -19026,7 +19039,7 @@ var require_dist8 = __commonJS((exports, module) => {
   });
   var import_shapeshift13 = require_cjs3();
   var import_v1034 = require_v106();
-  var namePredicate2 = import_shapeshift13.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^( *[\p{P}\p{L}\p{N}\p{sc=Devanagari}\p{sc=Thai}]+ *)+$/u).setValidationEnabled(isValidationEnabled);
+  var namePredicate2 = import_shapeshift13.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/\S/).setValidationEnabled(isValidationEnabled);
   var typePredicate = import_shapeshift13.s.union([import_shapeshift13.s.literal(import_v1034.ApplicationCommandType.User), import_shapeshift13.s.literal(import_v1034.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
   var booleanPredicate3 = import_shapeshift13.s.boolean();
   function validateDefaultPermission2(value) {
@@ -19140,7 +19153,7 @@ var require_dist8 = __commonJS((exports, module) => {
     return (data.title?.length ?? 0) + (data.description?.length ?? 0) + (data.fields?.reduce((prev, curr) => prev + curr.name.length + curr.value.length, 0) ?? 0) + (data.footer?.text.length ?? 0) + (data.author?.name.length ?? 0);
   }
   __name(embedLength, "embedLength");
-  var version = "1.11.2";
+  var version = "1.11.3";
 });
 
 // node_modules/discord.js/src/structures/Embed.js

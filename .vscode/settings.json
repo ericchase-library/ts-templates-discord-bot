@@ -16,5 +16,5 @@
     "package.json": true,
     "tsconfig.json": true
   },
-  "typescript.preferences.autoImportSpecifierExcludeRegexes": ["discord.js"]
+  "typescript.preferences.autoImportSpecifierExcludeRegexes": ["^discord.js$"]
 }
