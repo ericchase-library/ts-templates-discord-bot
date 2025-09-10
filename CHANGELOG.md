@@ -4,7 +4,6 @@ Please refer to the `ts-library` changelog for library and build tool changes:
 
 ## 2025-10-01
 
-- Minor build tool updates
 - Fix `typescript.preferences.autoImportSpecifierExcludeRegexes` setting
 
 ## 2025-09-01
