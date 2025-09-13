@@ -1126,7 +1126,7 @@ var require_autoModeration = __commonJS((exports) => {
 // node_modules/discord-api-types/payloads/v10/channel.js
 var require_channel = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ChannelFlags = exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
+  exports.ChannelFlags = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
   var SortOrderType;
   (function(SortOrderType2) {
     SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
@@ -1163,76 +1163,6 @@ var require_channel = __commonJS((exports) => {
     VideoQualityMode2[VideoQualityMode2["Auto"] = 1] = "Auto";
     VideoQualityMode2[VideoQualityMode2["Full"] = 2] = "Full";
   })(VideoQualityMode || (exports.VideoQualityMode = VideoQualityMode = {}));
-  var MessageType;
-  (function(MessageType2) {
-    MessageType2[MessageType2["Default"] = 0] = "Default";
-    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
-    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
-    MessageType2[MessageType2["Call"] = 3] = "Call";
-    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
-    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
-    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
-    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
-    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
-    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
-    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
-    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
-    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
-    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
-    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
-    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
-    MessageType2[MessageType2["Reply"] = 19] = "Reply";
-    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
-    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
-    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
-    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
-    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
-    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
-    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
-    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
-    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
-    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
-    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
-    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
-    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
-    MessageType2[MessageType2["GuildIncidentAlertModeEnabled"] = 36] = "GuildIncidentAlertModeEnabled";
-    MessageType2[MessageType2["GuildIncidentAlertModeDisabled"] = 37] = "GuildIncidentAlertModeDisabled";
-    MessageType2[MessageType2["GuildIncidentReportRaid"] = 38] = "GuildIncidentReportRaid";
-    MessageType2[MessageType2["GuildIncidentReportFalseAlarm"] = 39] = "GuildIncidentReportFalseAlarm";
-    MessageType2[MessageType2["PurchaseNotification"] = 44] = "PurchaseNotification";
-    MessageType2[MessageType2["PollResult"] = 46] = "PollResult";
-  })(MessageType || (exports.MessageType = MessageType = {}));
-  var MessageActivityType;
-  (function(MessageActivityType2) {
-    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
-    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
-    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
-    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
-  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
-  var MessageReferenceType;
-  (function(MessageReferenceType2) {
-    MessageReferenceType2[MessageReferenceType2["Default"] = 0] = "Default";
-    MessageReferenceType2[MessageReferenceType2["Forward"] = 1] = "Forward";
-  })(MessageReferenceType || (exports.MessageReferenceType = MessageReferenceType = {}));
-  var MessageFlags;
-  (function(MessageFlags2) {
-    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
-    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
-    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
-    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
-    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
-    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
-    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
-    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
-    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
-    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
-    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
-    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
-    MessageFlags2[MessageFlags2["HasSnapshot"] = 16384] = "HasSnapshot";
-    MessageFlags2[MessageFlags2["IsComponentsV2"] = 32768] = "IsComponentsV2";
-  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
   var OverwriteType;
   (function(OverwriteType2) {
     OverwriteType2[OverwriteType2["Role"] = 0] = "Role";
@@ -1252,80 +1182,6 @@ var require_channel = __commonJS((exports) => {
     ThreadMemberFlags2[ThreadMemberFlags2["OnlyMentions"] = 4] = "OnlyMentions";
     ThreadMemberFlags2[ThreadMemberFlags2["NoMessages"] = 8] = "NoMessages";
   })(ThreadMemberFlags || (exports.ThreadMemberFlags = ThreadMemberFlags = {}));
-  var EmbedType;
-  (function(EmbedType2) {
-    EmbedType2["Rich"] = "rich";
-    EmbedType2["Image"] = "image";
-    EmbedType2["Video"] = "video";
-    EmbedType2["GIFV"] = "gifv";
-    EmbedType2["Article"] = "article";
-    EmbedType2["Link"] = "link";
-    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
-    EmbedType2["PollResult"] = "poll_result";
-  })(EmbedType || (exports.EmbedType = EmbedType = {}));
-  var AttachmentFlags;
-  (function(AttachmentFlags2) {
-    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
-  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
-  var AllowedMentionsTypes;
-  (function(AllowedMentionsTypes2) {
-    AllowedMentionsTypes2["Everyone"] = "everyone";
-    AllowedMentionsTypes2["Role"] = "roles";
-    AllowedMentionsTypes2["User"] = "users";
-  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
-  var ComponentType;
-  (function(ComponentType2) {
-    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
-    ComponentType2[ComponentType2["Button"] = 2] = "Button";
-    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
-    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
-    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
-    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
-    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
-    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
-    ComponentType2[ComponentType2["Section"] = 9] = "Section";
-    ComponentType2[ComponentType2["TextDisplay"] = 10] = "TextDisplay";
-    ComponentType2[ComponentType2["Thumbnail"] = 11] = "Thumbnail";
-    ComponentType2[ComponentType2["MediaGallery"] = 12] = "MediaGallery";
-    ComponentType2[ComponentType2["File"] = 13] = "File";
-    ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
-    ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
-    ComponentType2[ComponentType2["Container"] = 17] = "Container";
-    ComponentType2[ComponentType2["Label"] = 18] = "Label";
-    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
-  })(ComponentType || (exports.ComponentType = ComponentType = {}));
-  var ButtonStyle;
-  (function(ButtonStyle2) {
-    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
-    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
-    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
-    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
-    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
-    ButtonStyle2[ButtonStyle2["Premium"] = 6] = "Premium";
-  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
-  var TextInputStyle;
-  (function(TextInputStyle2) {
-    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
-    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
-  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
-  var SelectMenuDefaultValueType;
-  (function(SelectMenuDefaultValueType2) {
-    SelectMenuDefaultValueType2["Channel"] = "channel";
-    SelectMenuDefaultValueType2["Role"] = "role";
-    SelectMenuDefaultValueType2["User"] = "user";
-  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
-  var UnfurledMediaItemLoadingState;
-  (function(UnfurledMediaItemLoadingState2) {
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Unknown"] = 0] = "Unknown";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Loading"] = 1] = "Loading";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedSuccess"] = 2] = "LoadedSuccess";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedNotFound"] = 3] = "LoadedNotFound";
-  })(UnfurledMediaItemLoadingState || (exports.UnfurledMediaItemLoadingState = UnfurledMediaItemLoadingState = {}));
-  var SeparatorSpacingSize;
-  (function(SeparatorSpacingSize2) {
-    SeparatorSpacingSize2[SeparatorSpacingSize2["Small"] = 1] = "Small";
-    SeparatorSpacingSize2[SeparatorSpacingSize2["Large"] = 2] = "Large";
-  })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
   var ChannelFlags;
   (function(ChannelFlags2) {
     ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
@@ -1775,6 +1631,156 @@ var require_invite = __commonJS((exports) => {
   })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
 });
 
+// node_modules/discord-api-types/payloads/v10/message.js
+var require_message = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = undefined;
+  var MessageType;
+  (function(MessageType2) {
+    MessageType2[MessageType2["Default"] = 0] = "Default";
+    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
+    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
+    MessageType2[MessageType2["Call"] = 3] = "Call";
+    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
+    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
+    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
+    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
+    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
+    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
+    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
+    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
+    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
+    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
+    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
+    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
+    MessageType2[MessageType2["Reply"] = 19] = "Reply";
+    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
+    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
+    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
+    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
+    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
+    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
+    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
+    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
+    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
+    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
+    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
+    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
+    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
+    MessageType2[MessageType2["GuildIncidentAlertModeEnabled"] = 36] = "GuildIncidentAlertModeEnabled";
+    MessageType2[MessageType2["GuildIncidentAlertModeDisabled"] = 37] = "GuildIncidentAlertModeDisabled";
+    MessageType2[MessageType2["GuildIncidentReportRaid"] = 38] = "GuildIncidentReportRaid";
+    MessageType2[MessageType2["GuildIncidentReportFalseAlarm"] = 39] = "GuildIncidentReportFalseAlarm";
+    MessageType2[MessageType2["PurchaseNotification"] = 44] = "PurchaseNotification";
+    MessageType2[MessageType2["PollResult"] = 46] = "PollResult";
+  })(MessageType || (exports.MessageType = MessageType = {}));
+  var MessageActivityType;
+  (function(MessageActivityType2) {
+    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
+    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
+    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
+    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
+  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
+  var MessageReferenceType;
+  (function(MessageReferenceType2) {
+    MessageReferenceType2[MessageReferenceType2["Default"] = 0] = "Default";
+    MessageReferenceType2[MessageReferenceType2["Forward"] = 1] = "Forward";
+  })(MessageReferenceType || (exports.MessageReferenceType = MessageReferenceType = {}));
+  var MessageFlags;
+  (function(MessageFlags2) {
+    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
+    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
+    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
+    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
+    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
+    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
+    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
+    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
+    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
+    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
+    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
+    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
+    MessageFlags2[MessageFlags2["HasSnapshot"] = 16384] = "HasSnapshot";
+    MessageFlags2[MessageFlags2["IsComponentsV2"] = 32768] = "IsComponentsV2";
+  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
+  var EmbedType;
+  (function(EmbedType2) {
+    EmbedType2["Rich"] = "rich";
+    EmbedType2["Image"] = "image";
+    EmbedType2["Video"] = "video";
+    EmbedType2["GIFV"] = "gifv";
+    EmbedType2["Article"] = "article";
+    EmbedType2["Link"] = "link";
+    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
+    EmbedType2["PollResult"] = "poll_result";
+  })(EmbedType || (exports.EmbedType = EmbedType = {}));
+  var AttachmentFlags;
+  (function(AttachmentFlags2) {
+    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
+  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
+  var AllowedMentionsTypes;
+  (function(AllowedMentionsTypes2) {
+    AllowedMentionsTypes2["Everyone"] = "everyone";
+    AllowedMentionsTypes2["Role"] = "roles";
+    AllowedMentionsTypes2["User"] = "users";
+  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
+  var ComponentType;
+  (function(ComponentType2) {
+    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
+    ComponentType2[ComponentType2["Button"] = 2] = "Button";
+    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
+    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
+    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
+    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
+    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
+    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
+    ComponentType2[ComponentType2["Section"] = 9] = "Section";
+    ComponentType2[ComponentType2["TextDisplay"] = 10] = "TextDisplay";
+    ComponentType2[ComponentType2["Thumbnail"] = 11] = "Thumbnail";
+    ComponentType2[ComponentType2["MediaGallery"] = 12] = "MediaGallery";
+    ComponentType2[ComponentType2["File"] = 13] = "File";
+    ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
+    ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
+    ComponentType2[ComponentType2["Container"] = 17] = "Container";
+    ComponentType2[ComponentType2["Label"] = 18] = "Label";
+    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
+  })(ComponentType || (exports.ComponentType = ComponentType = {}));
+  var ButtonStyle;
+  (function(ButtonStyle2) {
+    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
+    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
+    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
+    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
+    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
+    ButtonStyle2[ButtonStyle2["Premium"] = 6] = "Premium";
+  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
+  var TextInputStyle;
+  (function(TextInputStyle2) {
+    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
+    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
+  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
+  var SelectMenuDefaultValueType;
+  (function(SelectMenuDefaultValueType2) {
+    SelectMenuDefaultValueType2["Channel"] = "channel";
+    SelectMenuDefaultValueType2["Role"] = "role";
+    SelectMenuDefaultValueType2["User"] = "user";
+  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
+  var UnfurledMediaItemLoadingState;
+  (function(UnfurledMediaItemLoadingState2) {
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Unknown"] = 0] = "Unknown";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Loading"] = 1] = "Loading";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedSuccess"] = 2] = "LoadedSuccess";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedNotFound"] = 3] = "LoadedNotFound";
+  })(UnfurledMediaItemLoadingState || (exports.UnfurledMediaItemLoadingState = UnfurledMediaItemLoadingState = {}));
+  var SeparatorSpacingSize;
+  (function(SeparatorSpacingSize2) {
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Small"] = 1] = "Small";
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Large"] = 2] = "Large";
+  })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
+});
+
 // node_modules/discord-api-types/payloads/v10/monetization.js
 var require_monetization = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
@@ -2059,6 +2065,7 @@ var require_v102 = __commonJS((exports) => {
   __exportStar(require_guildScheduledEvent(), exports);
   __exportStar(require_interactions(), exports);
   __exportStar(require_invite(), exports);
+  __exportStar(require_message(), exports);
   __exportStar(require_monetization(), exports);
   __exportStar(require_oauth2(), exports);
   __exportStar(require_permissions2(), exports);
@@ -2307,6 +2314,7 @@ var require_common2 = __commonJS((exports) => {
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageBlockedByHarmfulLinksFilter"] = 240000] = "MessageBlockedByHarmfulLinksFilter";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEnableOnboardingRequirementsAreNotMet"] = 350000] = "CannotEnableOnboardingRequirementsAreNotMet";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateOnboardingWhileBelowRequirements"] = 350001] = "CannotUpdateOnboardingWhileBelowRequirements";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AccessToFileUploadsHasBeenLimitedForThisGuild"] = 400001] = "AccessToFileUploadsHasBeenLimitedForThisGuild";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToBanUsers"] = 500000] = "FailedToBanUsers";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollVotingBlocked"] = 520000] = "PollVotingBlocked";
     RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollExpired"] = 520001] = "PollExpired";
