@@ -737,7 +737,7 @@ var require_tslib = __commonJS((exports, module) => {
   });
 });
 
-// node_modules/discord-api-types/gateway/v10.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/gateway/v10.js
 var require_v10 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
@@ -885,7 +885,7 @@ var require_v10 = __commonJS((exports) => {
   })(VoiceChannelEffectSendAnimationType || (exports.VoiceChannelEffectSendAnimationType = VoiceChannelEffectSendAnimationType = {}));
 });
 
-// node_modules/discord-api-types/globals.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/globals.js
 var require_globals = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.FormattingPatterns = undefined;
@@ -908,7 +908,7 @@ var require_globals = __commonJS((exports) => {
   Object.freeze(exports.FormattingPatterns);
 });
 
-// node_modules/discord-api-types/payloads/common.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/common.js
 var require_common = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.PermissionFlagsBits = undefined;
@@ -968,7 +968,7 @@ var require_common = __commonJS((exports) => {
   Object.freeze(exports.PermissionFlagsBits);
 });
 
-// node_modules/discord-api-types/payloads/v10/application.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/application.js
 var require_application = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ApplicationWebhookEventStatus = exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
@@ -1010,7 +1010,7 @@ var require_application = __commonJS((exports) => {
   })(ApplicationWebhookEventStatus || (exports.ApplicationWebhookEventStatus = ApplicationWebhookEventStatus = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/auditLog.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/auditLog.js
 var require_auditLog = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
@@ -1091,7 +1091,7 @@ var require_auditLog = __commonJS((exports) => {
   })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/autoModeration.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/autoModeration.js
 var require_autoModeration = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
@@ -1123,7 +1123,7 @@ var require_autoModeration = __commonJS((exports) => {
   })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/channel.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/channel.js
 var require_channel = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ChannelFlags = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
@@ -1196,7 +1196,7 @@ var require_channel = __commonJS((exports) => {
   })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/gateway.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/gateway.js
 var require_gateway = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ActivityFlags = exports.StatusDisplayType = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
@@ -1248,7 +1248,7 @@ var require_gateway = __commonJS((exports) => {
   })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/guild.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/guild.js
 var require_guild = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
@@ -1389,7 +1389,7 @@ var require_guild = __commonJS((exports) => {
   })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
 var require_guildScheduledEvent = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
@@ -1444,7 +1444,7 @@ var require_guildScheduledEvent = __commonJS((exports) => {
   })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
 var require_shared = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ApplicationCommandOptionType = undefined;
@@ -1464,7 +1464,7 @@ var require_shared = __commonJS((exports) => {
   })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
 var require_chatInput = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -1490,7 +1490,7 @@ var require_chatInput = __commonJS((exports) => {
   __exportStar(require_shared(), exports);
 });
 
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
 var require_permissions = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
@@ -1506,7 +1506,7 @@ var require_permissions = __commonJS((exports) => {
   };
 });
 
-// node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
 var require_applicationCommands = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -1557,7 +1557,7 @@ var require_applicationCommands = __commonJS((exports) => {
   })(EntryPointCommandHandlerType || (exports.EntryPointCommandHandlerType = EntryPointCommandHandlerType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/_interactions/responses.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/responses.js
 var require_responses = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.InteractionResponseType = exports.InteractionType = undefined;
@@ -1583,7 +1583,7 @@ var require_responses = __commonJS((exports) => {
   })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/interactions.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/interactions.js
 var require_interactions = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -1610,7 +1610,7 @@ var require_interactions = __commonJS((exports) => {
   __exportStar(require_responses(), exports);
 });
 
-// node_modules/discord-api-types/payloads/v10/invite.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/invite.js
 var require_invite = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.InviteTargetType = exports.InviteType = exports.InviteFlags = undefined;
@@ -1631,7 +1631,7 @@ var require_invite = __commonJS((exports) => {
   })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/message.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/message.js
 var require_message = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = undefined;
@@ -1781,7 +1781,7 @@ var require_message = __commonJS((exports) => {
   })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/monetization.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/monetization.js
 var require_monetization = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
@@ -1817,7 +1817,7 @@ var require_monetization = __commonJS((exports) => {
   })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/oauth2.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/oauth2.js
 var require_oauth2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.OAuth2Scopes = undefined;
@@ -1854,7 +1854,7 @@ var require_oauth2 = __commonJS((exports) => {
   })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/permissions.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/permissions.js
 var require_permissions2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.RoleFlags = undefined;
@@ -1864,7 +1864,7 @@ var require_permissions2 = __commonJS((exports) => {
   })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/poll.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/poll.js
 var require_poll = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.PollLayoutType = undefined;
@@ -1874,7 +1874,7 @@ var require_poll = __commonJS((exports) => {
   })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/stageInstance.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/stageInstance.js
 var require_stageInstance = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.StageInstancePrivacyLevel = undefined;
@@ -1885,7 +1885,7 @@ var require_stageInstance = __commonJS((exports) => {
   })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/sticker.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/sticker.js
 var require_sticker = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.StickerFormatType = exports.StickerType = undefined;
@@ -1903,7 +1903,7 @@ var require_sticker = __commonJS((exports) => {
   })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/teams.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/teams.js
 var require_teams = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
@@ -1920,7 +1920,7 @@ var require_teams = __commonJS((exports) => {
   })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/user.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/user.js
 var require_user = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.NameplatePalette = exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
@@ -2008,7 +2008,7 @@ var require_user = __commonJS((exports) => {
   })(NameplatePalette || (exports.NameplatePalette = NameplatePalette = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/webhook.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/webhook.js
 var require_webhook = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.WebhookType = exports.ApplicationWebhookEventType = exports.ApplicationWebhookType = undefined;
@@ -2032,7 +2032,7 @@ var require_webhook = __commonJS((exports) => {
   })(WebhookType || (exports.WebhookType = WebhookType = {}));
 });
 
-// node_modules/discord-api-types/payloads/v10/index.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/index.js
 var require_v102 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -2077,7 +2077,7 @@ var require_v102 = __commonJS((exports) => {
   __exportStar(require_webhook(), exports);
 });
 
-// node_modules/discord-api-types/utils/internals.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/utils/internals.js
 var require_internals = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.urlSafeCharacters = undefined;
@@ -2091,7 +2091,7 @@ var require_internals = __commonJS((exports) => {
   };
 });
 
-// node_modules/discord-api-types/rest/common.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/common.js
 var require_common2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.Locale = exports.RESTJSONErrorCodes = undefined;
@@ -2360,7 +2360,7 @@ var require_common2 = __commonJS((exports) => {
   })(Locale || (exports.Locale = Locale = {}));
 });
 
-// node_modules/discord-api-types/rest/v10/channel.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/v10/channel.js
 var require_channel2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ReactionType = undefined;
@@ -2371,7 +2371,7 @@ var require_channel2 = __commonJS((exports) => {
   })(ReactionType || (exports.ReactionType = ReactionType = {}));
 });
 
-// node_modules/discord-api-types/rest/v10/monetization.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/v10/monetization.js
 var require_monetization2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.EntitlementOwnerType = undefined;
@@ -2382,7 +2382,7 @@ var require_monetization2 = __commonJS((exports) => {
   })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
 });
 
-// node_modules/discord-api-types/rest/v10/index.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/v10/index.js
 var require_v103 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -2899,7 +2899,7 @@ var require_v103 = __commonJS((exports) => {
   Object.freeze(exports.OAuth2Routes);
 });
 
-// node_modules/discord-api-types/rpc/common.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/rpc/common.js
 var require_common3 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.RPCCloseEventCodes = exports.RPCErrorCodes = exports.RelationshipType = exports.VoiceConnectionStates = exports.RPCVoiceShortcutKeyComboKeyType = exports.RPCVoiceSettingsModeType = exports.RPCDeviceType = undefined;
@@ -2988,7 +2988,7 @@ var require_common3 = __commonJS((exports) => {
   })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
 });
 
-// node_modules/discord-api-types/rpc/v10.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/rpc/v10.js
 var require_v104 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -3101,7 +3101,7 @@ var require_v104 = __commonJS((exports) => {
   })(RPCEvents || (exports.RPCEvents = RPCEvents = {}));
 });
 
-// node_modules/discord-api-types/utils/v10.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/utils/v10.js
 var require_v105 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.isDMInteraction = isDMInteraction;
@@ -3165,7 +3165,7 @@ var require_v105 = __commonJS((exports) => {
   }
 });
 
-// node_modules/discord-api-types/v10.js
+// node_modules/@discordjs/rest/node_modules/discord-api-types/v10.js
 var require_v106 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -6789,6 +6789,2469 @@ ${flattened}` : error.message || flattened || "Unknown Error";
   setDefaultStrategy((0, import_util2.shouldUseGlobalFetchAndWebSocket)() ? fetch : makeRequest);
 });
 
+// node_modules/discord-api-types/gateway/v10.js
+var require_v107 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
+  exports.GatewayVersion = "10";
+  var GatewayOpcodes;
+  (function(GatewayOpcodes2) {
+    GatewayOpcodes2[GatewayOpcodes2["Dispatch"] = 0] = "Dispatch";
+    GatewayOpcodes2[GatewayOpcodes2["Heartbeat"] = 1] = "Heartbeat";
+    GatewayOpcodes2[GatewayOpcodes2["Identify"] = 2] = "Identify";
+    GatewayOpcodes2[GatewayOpcodes2["PresenceUpdate"] = 3] = "PresenceUpdate";
+    GatewayOpcodes2[GatewayOpcodes2["VoiceStateUpdate"] = 4] = "VoiceStateUpdate";
+    GatewayOpcodes2[GatewayOpcodes2["Resume"] = 6] = "Resume";
+    GatewayOpcodes2[GatewayOpcodes2["Reconnect"] = 7] = "Reconnect";
+    GatewayOpcodes2[GatewayOpcodes2["RequestGuildMembers"] = 8] = "RequestGuildMembers";
+    GatewayOpcodes2[GatewayOpcodes2["InvalidSession"] = 9] = "InvalidSession";
+    GatewayOpcodes2[GatewayOpcodes2["Hello"] = 10] = "Hello";
+    GatewayOpcodes2[GatewayOpcodes2["HeartbeatAck"] = 11] = "HeartbeatAck";
+    GatewayOpcodes2[GatewayOpcodes2["RequestSoundboardSounds"] = 31] = "RequestSoundboardSounds";
+  })(GatewayOpcodes || (exports.GatewayOpcodes = GatewayOpcodes = {}));
+  var GatewayCloseCodes;
+  (function(GatewayCloseCodes2) {
+    GatewayCloseCodes2[GatewayCloseCodes2["UnknownError"] = 4000] = "UnknownError";
+    GatewayCloseCodes2[GatewayCloseCodes2["UnknownOpcode"] = 4001] = "UnknownOpcode";
+    GatewayCloseCodes2[GatewayCloseCodes2["DecodeError"] = 4002] = "DecodeError";
+    GatewayCloseCodes2[GatewayCloseCodes2["NotAuthenticated"] = 4003] = "NotAuthenticated";
+    GatewayCloseCodes2[GatewayCloseCodes2["AuthenticationFailed"] = 4004] = "AuthenticationFailed";
+    GatewayCloseCodes2[GatewayCloseCodes2["AlreadyAuthenticated"] = 4005] = "AlreadyAuthenticated";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidSeq"] = 4007] = "InvalidSeq";
+    GatewayCloseCodes2[GatewayCloseCodes2["RateLimited"] = 4008] = "RateLimited";
+    GatewayCloseCodes2[GatewayCloseCodes2["SessionTimedOut"] = 4009] = "SessionTimedOut";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidShard"] = 4010] = "InvalidShard";
+    GatewayCloseCodes2[GatewayCloseCodes2["ShardingRequired"] = 4011] = "ShardingRequired";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidAPIVersion"] = 4012] = "InvalidAPIVersion";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidIntents"] = 4013] = "InvalidIntents";
+    GatewayCloseCodes2[GatewayCloseCodes2["DisallowedIntents"] = 4014] = "DisallowedIntents";
+  })(GatewayCloseCodes || (exports.GatewayCloseCodes = GatewayCloseCodes = {}));
+  var GatewayIntentBits;
+  (function(GatewayIntentBits2) {
+    GatewayIntentBits2[GatewayIntentBits2["Guilds"] = 1] = "Guilds";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMembers"] = 2] = "GuildMembers";
+    GatewayIntentBits2[GatewayIntentBits2["GuildModeration"] = 4] = "GuildModeration";
+    GatewayIntentBits2[GatewayIntentBits2["GuildBans"] = 4] = "GuildBans";
+    GatewayIntentBits2[GatewayIntentBits2["GuildExpressions"] = 8] = "GuildExpressions";
+    GatewayIntentBits2[GatewayIntentBits2["GuildEmojisAndStickers"] = 8] = "GuildEmojisAndStickers";
+    GatewayIntentBits2[GatewayIntentBits2["GuildIntegrations"] = 16] = "GuildIntegrations";
+    GatewayIntentBits2[GatewayIntentBits2["GuildWebhooks"] = 32] = "GuildWebhooks";
+    GatewayIntentBits2[GatewayIntentBits2["GuildInvites"] = 64] = "GuildInvites";
+    GatewayIntentBits2[GatewayIntentBits2["GuildVoiceStates"] = 128] = "GuildVoiceStates";
+    GatewayIntentBits2[GatewayIntentBits2["GuildPresences"] = 256] = "GuildPresences";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessages"] = 512] = "GuildMessages";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessageReactions"] = 1024] = "GuildMessageReactions";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessageTyping"] = 2048] = "GuildMessageTyping";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessages"] = 4096] = "DirectMessages";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessageReactions"] = 8192] = "DirectMessageReactions";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessageTyping"] = 16384] = "DirectMessageTyping";
+    GatewayIntentBits2[GatewayIntentBits2["MessageContent"] = 32768] = "MessageContent";
+    GatewayIntentBits2[GatewayIntentBits2["GuildScheduledEvents"] = 65536] = "GuildScheduledEvents";
+    GatewayIntentBits2[GatewayIntentBits2["AutoModerationConfiguration"] = 1048576] = "AutoModerationConfiguration";
+    GatewayIntentBits2[GatewayIntentBits2["AutoModerationExecution"] = 2097152] = "AutoModerationExecution";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessagePolls"] = 16777216] = "GuildMessagePolls";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessagePolls"] = 33554432] = "DirectMessagePolls";
+  })(GatewayIntentBits || (exports.GatewayIntentBits = GatewayIntentBits = {}));
+  var GatewayDispatchEvents;
+  (function(GatewayDispatchEvents2) {
+    GatewayDispatchEvents2["ApplicationCommandPermissionsUpdate"] = "APPLICATION_COMMAND_PERMISSIONS_UPDATE";
+    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
+    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
+    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
+    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
+    GatewayDispatchEvents2["ChannelCreate"] = "CHANNEL_CREATE";
+    GatewayDispatchEvents2["ChannelDelete"] = "CHANNEL_DELETE";
+    GatewayDispatchEvents2["ChannelPinsUpdate"] = "CHANNEL_PINS_UPDATE";
+    GatewayDispatchEvents2["ChannelUpdate"] = "CHANNEL_UPDATE";
+    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
+    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
+    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
+    GatewayDispatchEvents2["GuildBanAdd"] = "GUILD_BAN_ADD";
+    GatewayDispatchEvents2["GuildBanRemove"] = "GUILD_BAN_REMOVE";
+    GatewayDispatchEvents2["GuildCreate"] = "GUILD_CREATE";
+    GatewayDispatchEvents2["GuildDelete"] = "GUILD_DELETE";
+    GatewayDispatchEvents2["GuildEmojisUpdate"] = "GUILD_EMOJIS_UPDATE";
+    GatewayDispatchEvents2["GuildIntegrationsUpdate"] = "GUILD_INTEGRATIONS_UPDATE";
+    GatewayDispatchEvents2["GuildMemberAdd"] = "GUILD_MEMBER_ADD";
+    GatewayDispatchEvents2["GuildMemberRemove"] = "GUILD_MEMBER_REMOVE";
+    GatewayDispatchEvents2["GuildMembersChunk"] = "GUILD_MEMBERS_CHUNK";
+    GatewayDispatchEvents2["GuildMemberUpdate"] = "GUILD_MEMBER_UPDATE";
+    GatewayDispatchEvents2["GuildRoleCreate"] = "GUILD_ROLE_CREATE";
+    GatewayDispatchEvents2["GuildRoleDelete"] = "GUILD_ROLE_DELETE";
+    GatewayDispatchEvents2["GuildRoleUpdate"] = "GUILD_ROLE_UPDATE";
+    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
+    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
+    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
+    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
+    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
+    GatewayDispatchEvents2["GuildSoundboardSoundCreate"] = "GUILD_SOUNDBOARD_SOUND_CREATE";
+    GatewayDispatchEvents2["GuildSoundboardSoundDelete"] = "GUILD_SOUNDBOARD_SOUND_DELETE";
+    GatewayDispatchEvents2["GuildSoundboardSoundsUpdate"] = "GUILD_SOUNDBOARD_SOUNDS_UPDATE";
+    GatewayDispatchEvents2["GuildSoundboardSoundUpdate"] = "GUILD_SOUNDBOARD_SOUND_UPDATE";
+    GatewayDispatchEvents2["SoundboardSounds"] = "SOUNDBOARD_SOUNDS";
+    GatewayDispatchEvents2["GuildStickersUpdate"] = "GUILD_STICKERS_UPDATE";
+    GatewayDispatchEvents2["GuildUpdate"] = "GUILD_UPDATE";
+    GatewayDispatchEvents2["IntegrationCreate"] = "INTEGRATION_CREATE";
+    GatewayDispatchEvents2["IntegrationDelete"] = "INTEGRATION_DELETE";
+    GatewayDispatchEvents2["IntegrationUpdate"] = "INTEGRATION_UPDATE";
+    GatewayDispatchEvents2["InteractionCreate"] = "INTERACTION_CREATE";
+    GatewayDispatchEvents2["InviteCreate"] = "INVITE_CREATE";
+    GatewayDispatchEvents2["InviteDelete"] = "INVITE_DELETE";
+    GatewayDispatchEvents2["MessageCreate"] = "MESSAGE_CREATE";
+    GatewayDispatchEvents2["MessageDelete"] = "MESSAGE_DELETE";
+    GatewayDispatchEvents2["MessageDeleteBulk"] = "MESSAGE_DELETE_BULK";
+    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
+    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
+    GatewayDispatchEvents2["MessageReactionAdd"] = "MESSAGE_REACTION_ADD";
+    GatewayDispatchEvents2["MessageReactionRemove"] = "MESSAGE_REACTION_REMOVE";
+    GatewayDispatchEvents2["MessageReactionRemoveAll"] = "MESSAGE_REACTION_REMOVE_ALL";
+    GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
+    GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
+    GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
+    GatewayDispatchEvents2["RateLimited"] = "RATE_LIMITED";
+    GatewayDispatchEvents2["Ready"] = "READY";
+    GatewayDispatchEvents2["Resumed"] = "RESUMED";
+    GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
+    GatewayDispatchEvents2["StageInstanceDelete"] = "STAGE_INSTANCE_DELETE";
+    GatewayDispatchEvents2["StageInstanceUpdate"] = "STAGE_INSTANCE_UPDATE";
+    GatewayDispatchEvents2["SubscriptionCreate"] = "SUBSCRIPTION_CREATE";
+    GatewayDispatchEvents2["SubscriptionDelete"] = "SUBSCRIPTION_DELETE";
+    GatewayDispatchEvents2["SubscriptionUpdate"] = "SUBSCRIPTION_UPDATE";
+    GatewayDispatchEvents2["ThreadCreate"] = "THREAD_CREATE";
+    GatewayDispatchEvents2["ThreadDelete"] = "THREAD_DELETE";
+    GatewayDispatchEvents2["ThreadListSync"] = "THREAD_LIST_SYNC";
+    GatewayDispatchEvents2["ThreadMembersUpdate"] = "THREAD_MEMBERS_UPDATE";
+    GatewayDispatchEvents2["ThreadMemberUpdate"] = "THREAD_MEMBER_UPDATE";
+    GatewayDispatchEvents2["ThreadUpdate"] = "THREAD_UPDATE";
+    GatewayDispatchEvents2["TypingStart"] = "TYPING_START";
+    GatewayDispatchEvents2["UserUpdate"] = "USER_UPDATE";
+    GatewayDispatchEvents2["VoiceChannelEffectSend"] = "VOICE_CHANNEL_EFFECT_SEND";
+    GatewayDispatchEvents2["VoiceServerUpdate"] = "VOICE_SERVER_UPDATE";
+    GatewayDispatchEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
+    GatewayDispatchEvents2["WebhooksUpdate"] = "WEBHOOKS_UPDATE";
+  })(GatewayDispatchEvents || (exports.GatewayDispatchEvents = GatewayDispatchEvents = {}));
+  var VoiceChannelEffectSendAnimationType;
+  (function(VoiceChannelEffectSendAnimationType2) {
+    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Premium"] = 0] = "Premium";
+    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Basic"] = 1] = "Basic";
+  })(VoiceChannelEffectSendAnimationType || (exports.VoiceChannelEffectSendAnimationType = VoiceChannelEffectSendAnimationType = {}));
+});
+
+// node_modules/discord-api-types/globals.js
+var require_globals2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.FormattingPatterns = undefined;
+  exports.FormattingPatterns = {
+    User: /<@(?<id>\d{17,20})>/,
+    UserWithNickname: /<@!(?<id>\d{17,20})>/,
+    UserWithOptionalNickname: /<@!?(?<id>\d{17,20})>/,
+    Channel: /<#(?<id>\d{17,20})>/,
+    Role: /<@&(?<id>\d{17,20})>/,
+    SlashCommand: /<\/(?<fullName>(?<name>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: (?<subcommandOrGroup>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?(?: (?<subcommand>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?):(?<id>\d{17,20})>/u,
+    Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRTdft]))?>/,
+    DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
+    StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/,
+    GuildNavigation: /<id:(?<type>customize|browse|guide|linked-roles)>/,
+    LinkedRole: /<id:linked-roles:(?<id>\d{17,20})>/
+  };
+  Object.freeze(exports.FormattingPatterns);
+});
+
+// node_modules/discord-api-types/payloads/common.js
+var require_common4 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.PermissionFlagsBits = undefined;
+  exports.PermissionFlagsBits = {
+    CreateInstantInvite: 1n << 0n,
+    KickMembers: 1n << 1n,
+    BanMembers: 1n << 2n,
+    Administrator: 1n << 3n,
+    ManageChannels: 1n << 4n,
+    ManageGuild: 1n << 5n,
+    AddReactions: 1n << 6n,
+    ViewAuditLog: 1n << 7n,
+    PrioritySpeaker: 1n << 8n,
+    Stream: 1n << 9n,
+    ViewChannel: 1n << 10n,
+    SendMessages: 1n << 11n,
+    SendTTSMessages: 1n << 12n,
+    ManageMessages: 1n << 13n,
+    EmbedLinks: 1n << 14n,
+    AttachFiles: 1n << 15n,
+    ReadMessageHistory: 1n << 16n,
+    MentionEveryone: 1n << 17n,
+    UseExternalEmojis: 1n << 18n,
+    ViewGuildInsights: 1n << 19n,
+    Connect: 1n << 20n,
+    Speak: 1n << 21n,
+    MuteMembers: 1n << 22n,
+    DeafenMembers: 1n << 23n,
+    MoveMembers: 1n << 24n,
+    UseVAD: 1n << 25n,
+    ChangeNickname: 1n << 26n,
+    ManageNicknames: 1n << 27n,
+    ManageRoles: 1n << 28n,
+    ManageWebhooks: 1n << 29n,
+    ManageEmojisAndStickers: 1n << 30n,
+    ManageGuildExpressions: 1n << 30n,
+    UseApplicationCommands: 1n << 31n,
+    RequestToSpeak: 1n << 32n,
+    ManageEvents: 1n << 33n,
+    ManageThreads: 1n << 34n,
+    CreatePublicThreads: 1n << 35n,
+    CreatePrivateThreads: 1n << 36n,
+    UseExternalStickers: 1n << 37n,
+    SendMessagesInThreads: 1n << 38n,
+    UseEmbeddedActivities: 1n << 39n,
+    ModerateMembers: 1n << 40n,
+    ViewCreatorMonetizationAnalytics: 1n << 41n,
+    UseSoundboard: 1n << 42n,
+    CreateGuildExpressions: 1n << 43n,
+    CreateEvents: 1n << 44n,
+    UseExternalSounds: 1n << 45n,
+    SendVoiceMessages: 1n << 46n,
+    SendPolls: 1n << 49n,
+    UseExternalApps: 1n << 50n,
+    PinMessages: 1n << 51n
+  };
+  Object.freeze(exports.PermissionFlagsBits);
+});
+
+// node_modules/discord-api-types/payloads/v10/application.js
+var require_application2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ApplicationWebhookEventStatus = exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
+  var ApplicationFlags;
+  (function(ApplicationFlags2) {
+    ApplicationFlags2[ApplicationFlags2["EmbeddedReleased"] = 2] = "EmbeddedReleased";
+    ApplicationFlags2[ApplicationFlags2["ManagedEmoji"] = 4] = "ManagedEmoji";
+    ApplicationFlags2[ApplicationFlags2["EmbeddedIAP"] = 8] = "EmbeddedIAP";
+    ApplicationFlags2[ApplicationFlags2["GroupDMCreate"] = 16] = "GroupDMCreate";
+    ApplicationFlags2[ApplicationFlags2["ApplicationAutoModerationRuleCreateBadge"] = 64] = "ApplicationAutoModerationRuleCreateBadge";
+    ApplicationFlags2[ApplicationFlags2["RPCHasConnected"] = 2048] = "RPCHasConnected";
+    ApplicationFlags2[ApplicationFlags2["GatewayPresence"] = 4096] = "GatewayPresence";
+    ApplicationFlags2[ApplicationFlags2["GatewayPresenceLimited"] = 8192] = "GatewayPresenceLimited";
+    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembers"] = 16384] = "GatewayGuildMembers";
+    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembersLimited"] = 32768] = "GatewayGuildMembersLimited";
+    ApplicationFlags2[ApplicationFlags2["VerificationPendingGuildLimit"] = 65536] = "VerificationPendingGuildLimit";
+    ApplicationFlags2[ApplicationFlags2["Embedded"] = 131072] = "Embedded";
+    ApplicationFlags2[ApplicationFlags2["GatewayMessageContent"] = 262144] = "GatewayMessageContent";
+    ApplicationFlags2[ApplicationFlags2["GatewayMessageContentLimited"] = 524288] = "GatewayMessageContentLimited";
+    ApplicationFlags2[ApplicationFlags2["EmbeddedFirstParty"] = 1048576] = "EmbeddedFirstParty";
+    ApplicationFlags2[ApplicationFlags2["ApplicationCommandBadge"] = 8388608] = "ApplicationCommandBadge";
+  })(ApplicationFlags || (exports.ApplicationFlags = ApplicationFlags = {}));
+  var ApplicationRoleConnectionMetadataType;
+  (function(ApplicationRoleConnectionMetadataType2) {
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerLessThanOrEqual"] = 1] = "IntegerLessThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerGreaterThanOrEqual"] = 2] = "IntegerGreaterThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerEqual"] = 3] = "IntegerEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerNotEqual"] = 4] = "IntegerNotEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeLessThanOrEqual"] = 5] = "DatetimeLessThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeGreaterThanOrEqual"] = 6] = "DatetimeGreaterThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanEqual"] = 7] = "BooleanEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanNotEqual"] = 8] = "BooleanNotEqual";
+  })(ApplicationRoleConnectionMetadataType || (exports.ApplicationRoleConnectionMetadataType = ApplicationRoleConnectionMetadataType = {}));
+  var ApplicationWebhookEventStatus;
+  (function(ApplicationWebhookEventStatus2) {
+    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Disabled"] = 1] = "Disabled";
+    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Enabled"] = 2] = "Enabled";
+    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["DisabledByDiscord"] = 3] = "DisabledByDiscord";
+  })(ApplicationWebhookEventStatus || (exports.ApplicationWebhookEventStatus = ApplicationWebhookEventStatus = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/auditLog.js
+var require_auditLog2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
+  var AuditLogEvent;
+  (function(AuditLogEvent2) {
+    AuditLogEvent2[AuditLogEvent2["GuildUpdate"] = 1] = "GuildUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelCreate"] = 10] = "ChannelCreate";
+    AuditLogEvent2[AuditLogEvent2["ChannelUpdate"] = 11] = "ChannelUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelDelete"] = 12] = "ChannelDelete";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteCreate"] = 13] = "ChannelOverwriteCreate";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteUpdate"] = 14] = "ChannelOverwriteUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteDelete"] = 15] = "ChannelOverwriteDelete";
+    AuditLogEvent2[AuditLogEvent2["MemberKick"] = 20] = "MemberKick";
+    AuditLogEvent2[AuditLogEvent2["MemberPrune"] = 21] = "MemberPrune";
+    AuditLogEvent2[AuditLogEvent2["MemberBanAdd"] = 22] = "MemberBanAdd";
+    AuditLogEvent2[AuditLogEvent2["MemberBanRemove"] = 23] = "MemberBanRemove";
+    AuditLogEvent2[AuditLogEvent2["MemberUpdate"] = 24] = "MemberUpdate";
+    AuditLogEvent2[AuditLogEvent2["MemberRoleUpdate"] = 25] = "MemberRoleUpdate";
+    AuditLogEvent2[AuditLogEvent2["MemberMove"] = 26] = "MemberMove";
+    AuditLogEvent2[AuditLogEvent2["MemberDisconnect"] = 27] = "MemberDisconnect";
+    AuditLogEvent2[AuditLogEvent2["BotAdd"] = 28] = "BotAdd";
+    AuditLogEvent2[AuditLogEvent2["RoleCreate"] = 30] = "RoleCreate";
+    AuditLogEvent2[AuditLogEvent2["RoleUpdate"] = 31] = "RoleUpdate";
+    AuditLogEvent2[AuditLogEvent2["RoleDelete"] = 32] = "RoleDelete";
+    AuditLogEvent2[AuditLogEvent2["InviteCreate"] = 40] = "InviteCreate";
+    AuditLogEvent2[AuditLogEvent2["InviteUpdate"] = 41] = "InviteUpdate";
+    AuditLogEvent2[AuditLogEvent2["InviteDelete"] = 42] = "InviteDelete";
+    AuditLogEvent2[AuditLogEvent2["WebhookCreate"] = 50] = "WebhookCreate";
+    AuditLogEvent2[AuditLogEvent2["WebhookUpdate"] = 51] = "WebhookUpdate";
+    AuditLogEvent2[AuditLogEvent2["WebhookDelete"] = 52] = "WebhookDelete";
+    AuditLogEvent2[AuditLogEvent2["EmojiCreate"] = 60] = "EmojiCreate";
+    AuditLogEvent2[AuditLogEvent2["EmojiUpdate"] = 61] = "EmojiUpdate";
+    AuditLogEvent2[AuditLogEvent2["EmojiDelete"] = 62] = "EmojiDelete";
+    AuditLogEvent2[AuditLogEvent2["MessageDelete"] = 72] = "MessageDelete";
+    AuditLogEvent2[AuditLogEvent2["MessageBulkDelete"] = 73] = "MessageBulkDelete";
+    AuditLogEvent2[AuditLogEvent2["MessagePin"] = 74] = "MessagePin";
+    AuditLogEvent2[AuditLogEvent2["MessageUnpin"] = 75] = "MessageUnpin";
+    AuditLogEvent2[AuditLogEvent2["IntegrationCreate"] = 80] = "IntegrationCreate";
+    AuditLogEvent2[AuditLogEvent2["IntegrationUpdate"] = 81] = "IntegrationUpdate";
+    AuditLogEvent2[AuditLogEvent2["IntegrationDelete"] = 82] = "IntegrationDelete";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceCreate"] = 83] = "StageInstanceCreate";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceUpdate"] = 84] = "StageInstanceUpdate";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceDelete"] = 85] = "StageInstanceDelete";
+    AuditLogEvent2[AuditLogEvent2["StickerCreate"] = 90] = "StickerCreate";
+    AuditLogEvent2[AuditLogEvent2["StickerUpdate"] = 91] = "StickerUpdate";
+    AuditLogEvent2[AuditLogEvent2["StickerDelete"] = 92] = "StickerDelete";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventCreate"] = 100] = "GuildScheduledEventCreate";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventUpdate"] = 101] = "GuildScheduledEventUpdate";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventDelete"] = 102] = "GuildScheduledEventDelete";
+    AuditLogEvent2[AuditLogEvent2["ThreadCreate"] = 110] = "ThreadCreate";
+    AuditLogEvent2[AuditLogEvent2["ThreadUpdate"] = 111] = "ThreadUpdate";
+    AuditLogEvent2[AuditLogEvent2["ThreadDelete"] = 112] = "ThreadDelete";
+    AuditLogEvent2[AuditLogEvent2["ApplicationCommandPermissionUpdate"] = 121] = "ApplicationCommandPermissionUpdate";
+    AuditLogEvent2[AuditLogEvent2["SoundboardSoundCreate"] = 130] = "SoundboardSoundCreate";
+    AuditLogEvent2[AuditLogEvent2["SoundboardSoundUpdate"] = 131] = "SoundboardSoundUpdate";
+    AuditLogEvent2[AuditLogEvent2["SoundboardSoundDelete"] = 132] = "SoundboardSoundDelete";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleCreate"] = 140] = "AutoModerationRuleCreate";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleUpdate"] = 141] = "AutoModerationRuleUpdate";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleDelete"] = 142] = "AutoModerationRuleDelete";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationBlockMessage"] = 143] = "AutoModerationBlockMessage";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationFlagToChannel"] = 144] = "AutoModerationFlagToChannel";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationUserCommunicationDisabled"] = 145] = "AutoModerationUserCommunicationDisabled";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationQuarantineUser"] = 146] = "AutoModerationQuarantineUser";
+    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationRequestCreated"] = 150] = "CreatorMonetizationRequestCreated";
+    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationTermsAccepted"] = 151] = "CreatorMonetizationTermsAccepted";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptCreate"] = 163] = "OnboardingPromptCreate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptUpdate"] = 164] = "OnboardingPromptUpdate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptDelete"] = 165] = "OnboardingPromptDelete";
+    AuditLogEvent2[AuditLogEvent2["OnboardingCreate"] = 166] = "OnboardingCreate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingUpdate"] = 167] = "OnboardingUpdate";
+    AuditLogEvent2[AuditLogEvent2["HomeSettingsCreate"] = 190] = "HomeSettingsCreate";
+    AuditLogEvent2[AuditLogEvent2["HomeSettingsUpdate"] = 191] = "HomeSettingsUpdate";
+  })(AuditLogEvent || (exports.AuditLogEvent = AuditLogEvent = {}));
+  var AuditLogOptionsType;
+  (function(AuditLogOptionsType2) {
+    AuditLogOptionsType2["Role"] = "0";
+    AuditLogOptionsType2["Member"] = "1";
+  })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/autoModeration.js
+var require_autoModeration2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
+  var AutoModerationRuleTriggerType;
+  (function(AutoModerationRuleTriggerType2) {
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Keyword"] = 1] = "Keyword";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Spam"] = 3] = "Spam";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["KeywordPreset"] = 4] = "KeywordPreset";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MentionSpam"] = 5] = "MentionSpam";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MemberProfile"] = 6] = "MemberProfile";
+  })(AutoModerationRuleTriggerType || (exports.AutoModerationRuleTriggerType = AutoModerationRuleTriggerType = {}));
+  var AutoModerationRuleKeywordPresetType;
+  (function(AutoModerationRuleKeywordPresetType2) {
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Profanity"] = 1] = "Profanity";
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["SexualContent"] = 2] = "SexualContent";
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Slurs"] = 3] = "Slurs";
+  })(AutoModerationRuleKeywordPresetType || (exports.AutoModerationRuleKeywordPresetType = AutoModerationRuleKeywordPresetType = {}));
+  var AutoModerationRuleEventType;
+  (function(AutoModerationRuleEventType2) {
+    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MessageSend"] = 1] = "MessageSend";
+    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MemberUpdate"] = 2] = "MemberUpdate";
+  })(AutoModerationRuleEventType || (exports.AutoModerationRuleEventType = AutoModerationRuleEventType = {}));
+  var AutoModerationActionType;
+  (function(AutoModerationActionType2) {
+    AutoModerationActionType2[AutoModerationActionType2["BlockMessage"] = 1] = "BlockMessage";
+    AutoModerationActionType2[AutoModerationActionType2["SendAlertMessage"] = 2] = "SendAlertMessage";
+    AutoModerationActionType2[AutoModerationActionType2["Timeout"] = 3] = "Timeout";
+    AutoModerationActionType2[AutoModerationActionType2["BlockMemberInteraction"] = 4] = "BlockMemberInteraction";
+  })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/channel.js
+var require_channel3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ChannelFlags = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
+  var SortOrderType;
+  (function(SortOrderType2) {
+    SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
+    SortOrderType2[SortOrderType2["CreationDate"] = 1] = "CreationDate";
+  })(SortOrderType || (exports.SortOrderType = SortOrderType = {}));
+  var ForumLayoutType;
+  (function(ForumLayoutType2) {
+    ForumLayoutType2[ForumLayoutType2["NotSet"] = 0] = "NotSet";
+    ForumLayoutType2[ForumLayoutType2["ListView"] = 1] = "ListView";
+    ForumLayoutType2[ForumLayoutType2["GalleryView"] = 2] = "GalleryView";
+  })(ForumLayoutType || (exports.ForumLayoutType = ForumLayoutType = {}));
+  var ChannelType;
+  (function(ChannelType2) {
+    ChannelType2[ChannelType2["GuildText"] = 0] = "GuildText";
+    ChannelType2[ChannelType2["DM"] = 1] = "DM";
+    ChannelType2[ChannelType2["GuildVoice"] = 2] = "GuildVoice";
+    ChannelType2[ChannelType2["GroupDM"] = 3] = "GroupDM";
+    ChannelType2[ChannelType2["GuildCategory"] = 4] = "GuildCategory";
+    ChannelType2[ChannelType2["GuildAnnouncement"] = 5] = "GuildAnnouncement";
+    ChannelType2[ChannelType2["AnnouncementThread"] = 10] = "AnnouncementThread";
+    ChannelType2[ChannelType2["PublicThread"] = 11] = "PublicThread";
+    ChannelType2[ChannelType2["PrivateThread"] = 12] = "PrivateThread";
+    ChannelType2[ChannelType2["GuildStageVoice"] = 13] = "GuildStageVoice";
+    ChannelType2[ChannelType2["GuildDirectory"] = 14] = "GuildDirectory";
+    ChannelType2[ChannelType2["GuildForum"] = 15] = "GuildForum";
+    ChannelType2[ChannelType2["GuildMedia"] = 16] = "GuildMedia";
+    ChannelType2[ChannelType2["GuildNews"] = 5] = "GuildNews";
+    ChannelType2[ChannelType2["GuildNewsThread"] = 10] = "GuildNewsThread";
+    ChannelType2[ChannelType2["GuildPublicThread"] = 11] = "GuildPublicThread";
+    ChannelType2[ChannelType2["GuildPrivateThread"] = 12] = "GuildPrivateThread";
+  })(ChannelType || (exports.ChannelType = ChannelType = {}));
+  var VideoQualityMode;
+  (function(VideoQualityMode2) {
+    VideoQualityMode2[VideoQualityMode2["Auto"] = 1] = "Auto";
+    VideoQualityMode2[VideoQualityMode2["Full"] = 2] = "Full";
+  })(VideoQualityMode || (exports.VideoQualityMode = VideoQualityMode = {}));
+  var OverwriteType;
+  (function(OverwriteType2) {
+    OverwriteType2[OverwriteType2["Role"] = 0] = "Role";
+    OverwriteType2[OverwriteType2["Member"] = 1] = "Member";
+  })(OverwriteType || (exports.OverwriteType = OverwriteType = {}));
+  var ThreadAutoArchiveDuration;
+  (function(ThreadAutoArchiveDuration2) {
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneHour"] = 60] = "OneHour";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneDay"] = 1440] = "OneDay";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["ThreeDays"] = 4320] = "ThreeDays";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneWeek"] = 10080] = "OneWeek";
+  })(ThreadAutoArchiveDuration || (exports.ThreadAutoArchiveDuration = ThreadAutoArchiveDuration = {}));
+  var ThreadMemberFlags;
+  (function(ThreadMemberFlags2) {
+    ThreadMemberFlags2[ThreadMemberFlags2["HasInteracted"] = 1] = "HasInteracted";
+    ThreadMemberFlags2[ThreadMemberFlags2["AllMessages"] = 2] = "AllMessages";
+    ThreadMemberFlags2[ThreadMemberFlags2["OnlyMentions"] = 4] = "OnlyMentions";
+    ThreadMemberFlags2[ThreadMemberFlags2["NoMessages"] = 8] = "NoMessages";
+  })(ThreadMemberFlags || (exports.ThreadMemberFlags = ThreadMemberFlags = {}));
+  var ChannelFlags;
+  (function(ChannelFlags2) {
+    ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
+    ChannelFlags2[ChannelFlags2["Pinned"] = 2] = "Pinned";
+    ChannelFlags2[ChannelFlags2["ActiveChannelsRemoved"] = 4] = "ActiveChannelsRemoved";
+    ChannelFlags2[ChannelFlags2["RequireTag"] = 16] = "RequireTag";
+    ChannelFlags2[ChannelFlags2["IsSpam"] = 32] = "IsSpam";
+    ChannelFlags2[ChannelFlags2["IsGuildResourceChannel"] = 128] = "IsGuildResourceChannel";
+    ChannelFlags2[ChannelFlags2["ClydeAI"] = 256] = "ClydeAI";
+    ChannelFlags2[ChannelFlags2["IsScheduledForDeletion"] = 512] = "IsScheduledForDeletion";
+    ChannelFlags2[ChannelFlags2["HideMediaDownloadOptions"] = 32768] = "HideMediaDownloadOptions";
+  })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/gateway.js
+var require_gateway2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ActivityFlags = exports.StatusDisplayType = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
+  var PresenceUpdateStatus;
+  (function(PresenceUpdateStatus2) {
+    PresenceUpdateStatus2["Online"] = "online";
+    PresenceUpdateStatus2["DoNotDisturb"] = "dnd";
+    PresenceUpdateStatus2["Idle"] = "idle";
+    PresenceUpdateStatus2["Invisible"] = "invisible";
+    PresenceUpdateStatus2["Offline"] = "offline";
+  })(PresenceUpdateStatus || (exports.PresenceUpdateStatus = PresenceUpdateStatus = {}));
+  var ActivityPlatform;
+  (function(ActivityPlatform2) {
+    ActivityPlatform2["Desktop"] = "desktop";
+    ActivityPlatform2["Xbox"] = "xbox";
+    ActivityPlatform2["Samsung"] = "samsung";
+    ActivityPlatform2["IOS"] = "ios";
+    ActivityPlatform2["Android"] = "android";
+    ActivityPlatform2["Embedded"] = "embedded";
+    ActivityPlatform2["PS4"] = "ps4";
+    ActivityPlatform2["PS5"] = "ps5";
+  })(ActivityPlatform || (exports.ActivityPlatform = ActivityPlatform = {}));
+  var ActivityType;
+  (function(ActivityType2) {
+    ActivityType2[ActivityType2["Playing"] = 0] = "Playing";
+    ActivityType2[ActivityType2["Streaming"] = 1] = "Streaming";
+    ActivityType2[ActivityType2["Listening"] = 2] = "Listening";
+    ActivityType2[ActivityType2["Watching"] = 3] = "Watching";
+    ActivityType2[ActivityType2["Custom"] = 4] = "Custom";
+    ActivityType2[ActivityType2["Competing"] = 5] = "Competing";
+  })(ActivityType || (exports.ActivityType = ActivityType = {}));
+  var StatusDisplayType;
+  (function(StatusDisplayType2) {
+    StatusDisplayType2[StatusDisplayType2["Name"] = 0] = "Name";
+    StatusDisplayType2[StatusDisplayType2["State"] = 1] = "State";
+    StatusDisplayType2[StatusDisplayType2["Details"] = 2] = "Details";
+  })(StatusDisplayType || (exports.StatusDisplayType = StatusDisplayType = {}));
+  var ActivityFlags;
+  (function(ActivityFlags2) {
+    ActivityFlags2[ActivityFlags2["Instance"] = 1] = "Instance";
+    ActivityFlags2[ActivityFlags2["Join"] = 2] = "Join";
+    ActivityFlags2[ActivityFlags2["Spectate"] = 4] = "Spectate";
+    ActivityFlags2[ActivityFlags2["JoinRequest"] = 8] = "JoinRequest";
+    ActivityFlags2[ActivityFlags2["Sync"] = 16] = "Sync";
+    ActivityFlags2[ActivityFlags2["Play"] = 32] = "Play";
+    ActivityFlags2[ActivityFlags2["PartyPrivacyFriends"] = 64] = "PartyPrivacyFriends";
+    ActivityFlags2[ActivityFlags2["PartyPrivacyVoiceChannel"] = 128] = "PartyPrivacyVoiceChannel";
+    ActivityFlags2[ActivityFlags2["Embedded"] = 256] = "Embedded";
+  })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/guild.js
+var require_guild2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
+  var GuildDefaultMessageNotifications;
+  (function(GuildDefaultMessageNotifications2) {
+    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["AllMessages"] = 0] = "AllMessages";
+    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["OnlyMentions"] = 1] = "OnlyMentions";
+  })(GuildDefaultMessageNotifications || (exports.GuildDefaultMessageNotifications = GuildDefaultMessageNotifications = {}));
+  var GuildExplicitContentFilter;
+  (function(GuildExplicitContentFilter2) {
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["Disabled"] = 0] = "Disabled";
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["MembersWithoutRoles"] = 1] = "MembersWithoutRoles";
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["AllMembers"] = 2] = "AllMembers";
+  })(GuildExplicitContentFilter || (exports.GuildExplicitContentFilter = GuildExplicitContentFilter = {}));
+  var GuildMFALevel;
+  (function(GuildMFALevel2) {
+    GuildMFALevel2[GuildMFALevel2["None"] = 0] = "None";
+    GuildMFALevel2[GuildMFALevel2["Elevated"] = 1] = "Elevated";
+  })(GuildMFALevel || (exports.GuildMFALevel = GuildMFALevel = {}));
+  var GuildNSFWLevel;
+  (function(GuildNSFWLevel2) {
+    GuildNSFWLevel2[GuildNSFWLevel2["Default"] = 0] = "Default";
+    GuildNSFWLevel2[GuildNSFWLevel2["Explicit"] = 1] = "Explicit";
+    GuildNSFWLevel2[GuildNSFWLevel2["Safe"] = 2] = "Safe";
+    GuildNSFWLevel2[GuildNSFWLevel2["AgeRestricted"] = 3] = "AgeRestricted";
+  })(GuildNSFWLevel || (exports.GuildNSFWLevel = GuildNSFWLevel = {}));
+  var GuildVerificationLevel;
+  (function(GuildVerificationLevel2) {
+    GuildVerificationLevel2[GuildVerificationLevel2["None"] = 0] = "None";
+    GuildVerificationLevel2[GuildVerificationLevel2["Low"] = 1] = "Low";
+    GuildVerificationLevel2[GuildVerificationLevel2["Medium"] = 2] = "Medium";
+    GuildVerificationLevel2[GuildVerificationLevel2["High"] = 3] = "High";
+    GuildVerificationLevel2[GuildVerificationLevel2["VeryHigh"] = 4] = "VeryHigh";
+  })(GuildVerificationLevel || (exports.GuildVerificationLevel = GuildVerificationLevel = {}));
+  var GuildPremiumTier;
+  (function(GuildPremiumTier2) {
+    GuildPremiumTier2[GuildPremiumTier2["None"] = 0] = "None";
+    GuildPremiumTier2[GuildPremiumTier2["Tier1"] = 1] = "Tier1";
+    GuildPremiumTier2[GuildPremiumTier2["Tier2"] = 2] = "Tier2";
+    GuildPremiumTier2[GuildPremiumTier2["Tier3"] = 3] = "Tier3";
+  })(GuildPremiumTier || (exports.GuildPremiumTier = GuildPremiumTier = {}));
+  var GuildHubType;
+  (function(GuildHubType2) {
+    GuildHubType2[GuildHubType2["Default"] = 0] = "Default";
+    GuildHubType2[GuildHubType2["HighSchool"] = 1] = "HighSchool";
+    GuildHubType2[GuildHubType2["College"] = 2] = "College";
+  })(GuildHubType || (exports.GuildHubType = GuildHubType = {}));
+  var GuildSystemChannelFlags;
+  (function(GuildSystemChannelFlags2) {
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotifications"] = 1] = "SuppressJoinNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressPremiumSubscriptions"] = 2] = "SuppressPremiumSubscriptions";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressGuildReminderNotifications"] = 4] = "SuppressGuildReminderNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotificationReplies"] = 8] = "SuppressJoinNotificationReplies";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotifications"] = 16] = "SuppressRoleSubscriptionPurchaseNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotificationReplies"] = 32] = "SuppressRoleSubscriptionPurchaseNotificationReplies";
+  })(GuildSystemChannelFlags || (exports.GuildSystemChannelFlags = GuildSystemChannelFlags = {}));
+  var GuildFeature;
+  (function(GuildFeature2) {
+    GuildFeature2["AnimatedBanner"] = "ANIMATED_BANNER";
+    GuildFeature2["AnimatedIcon"] = "ANIMATED_ICON";
+    GuildFeature2["ApplicationCommandPermissionsV2"] = "APPLICATION_COMMAND_PERMISSIONS_V2";
+    GuildFeature2["AutoModeration"] = "AUTO_MODERATION";
+    GuildFeature2["Banner"] = "BANNER";
+    GuildFeature2["Community"] = "COMMUNITY";
+    GuildFeature2["CreatorMonetizableProvisional"] = "CREATOR_MONETIZABLE_PROVISIONAL";
+    GuildFeature2["CreatorStorePage"] = "CREATOR_STORE_PAGE";
+    GuildFeature2["DeveloperSupportServer"] = "DEVELOPER_SUPPORT_SERVER";
+    GuildFeature2["Discoverable"] = "DISCOVERABLE";
+    GuildFeature2["Featurable"] = "FEATURABLE";
+    GuildFeature2["HasDirectoryEntry"] = "HAS_DIRECTORY_ENTRY";
+    GuildFeature2["Hub"] = "HUB";
+    GuildFeature2["InvitesDisabled"] = "INVITES_DISABLED";
+    GuildFeature2["InviteSplash"] = "INVITE_SPLASH";
+    GuildFeature2["LinkedToHub"] = "LINKED_TO_HUB";
+    GuildFeature2["MemberVerificationGateEnabled"] = "MEMBER_VERIFICATION_GATE_ENABLED";
+    GuildFeature2["MoreSoundboard"] = "MORE_SOUNDBOARD";
+    GuildFeature2["MonetizationEnabled"] = "MONETIZATION_ENABLED";
+    GuildFeature2["MoreStickers"] = "MORE_STICKERS";
+    GuildFeature2["News"] = "NEWS";
+    GuildFeature2["Partnered"] = "PARTNERED";
+    GuildFeature2["PreviewEnabled"] = "PREVIEW_ENABLED";
+    GuildFeature2["PrivateThreads"] = "PRIVATE_THREADS";
+    GuildFeature2["RaidAlertsDisabled"] = "RAID_ALERTS_DISABLED";
+    GuildFeature2["RelayEnabled"] = "RELAY_ENABLED";
+    GuildFeature2["RoleIcons"] = "ROLE_ICONS";
+    GuildFeature2["RoleSubscriptionsAvailableForPurchase"] = "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE";
+    GuildFeature2["RoleSubscriptionsEnabled"] = "ROLE_SUBSCRIPTIONS_ENABLED";
+    GuildFeature2["Soundboard"] = "SOUNDBOARD";
+    GuildFeature2["TicketedEventsEnabled"] = "TICKETED_EVENTS_ENABLED";
+    GuildFeature2["VanityURL"] = "VANITY_URL";
+    GuildFeature2["Verified"] = "VERIFIED";
+    GuildFeature2["VIPRegions"] = "VIP_REGIONS";
+    GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
+    GuildFeature2["GuildTags"] = "GUILD_TAGS";
+    GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
+    GuildFeature2["GuestsEnabled"] = "GUESTS_ENABLED";
+  })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
+  var GuildMemberFlags;
+  (function(GuildMemberFlags2) {
+    GuildMemberFlags2[GuildMemberFlags2["DidRejoin"] = 1] = "DidRejoin";
+    GuildMemberFlags2[GuildMemberFlags2["CompletedOnboarding"] = 2] = "CompletedOnboarding";
+    GuildMemberFlags2[GuildMemberFlags2["BypassesVerification"] = 4] = "BypassesVerification";
+    GuildMemberFlags2[GuildMemberFlags2["StartedOnboarding"] = 8] = "StartedOnboarding";
+    GuildMemberFlags2[GuildMemberFlags2["IsGuest"] = 16] = "IsGuest";
+    GuildMemberFlags2[GuildMemberFlags2["StartedHomeActions"] = 32] = "StartedHomeActions";
+    GuildMemberFlags2[GuildMemberFlags2["CompletedHomeActions"] = 64] = "CompletedHomeActions";
+    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedUsernameOrGuildNickname"] = 128] = "AutomodQuarantinedUsernameOrGuildNickname";
+    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedBio"] = 256] = "AutomodQuarantinedBio";
+    GuildMemberFlags2[GuildMemberFlags2["DmSettingsUpsellAcknowledged"] = 512] = "DmSettingsUpsellAcknowledged";
+    GuildMemberFlags2[GuildMemberFlags2["AutoModQuarantinedGuildTag"] = 1024] = "AutoModQuarantinedGuildTag";
+  })(GuildMemberFlags || (exports.GuildMemberFlags = GuildMemberFlags = {}));
+  var IntegrationExpireBehavior;
+  (function(IntegrationExpireBehavior2) {
+    IntegrationExpireBehavior2[IntegrationExpireBehavior2["RemoveRole"] = 0] = "RemoveRole";
+    IntegrationExpireBehavior2[IntegrationExpireBehavior2["Kick"] = 1] = "Kick";
+  })(IntegrationExpireBehavior || (exports.IntegrationExpireBehavior = IntegrationExpireBehavior = {}));
+  var GuildWidgetStyle;
+  (function(GuildWidgetStyle2) {
+    GuildWidgetStyle2["Shield"] = "shield";
+    GuildWidgetStyle2["Banner1"] = "banner1";
+    GuildWidgetStyle2["Banner2"] = "banner2";
+    GuildWidgetStyle2["Banner3"] = "banner3";
+    GuildWidgetStyle2["Banner4"] = "banner4";
+  })(GuildWidgetStyle || (exports.GuildWidgetStyle = GuildWidgetStyle = {}));
+  var MembershipScreeningFieldType;
+  (function(MembershipScreeningFieldType2) {
+    MembershipScreeningFieldType2["Terms"] = "TERMS";
+  })(MembershipScreeningFieldType || (exports.MembershipScreeningFieldType = MembershipScreeningFieldType = {}));
+  var GuildOnboardingMode;
+  (function(GuildOnboardingMode2) {
+    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingDefault"] = 0] = "OnboardingDefault";
+    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingAdvanced"] = 1] = "OnboardingAdvanced";
+  })(GuildOnboardingMode || (exports.GuildOnboardingMode = GuildOnboardingMode = {}));
+  var GuildOnboardingPromptType;
+  (function(GuildOnboardingPromptType2) {
+    GuildOnboardingPromptType2[GuildOnboardingPromptType2["MultipleChoice"] = 0] = "MultipleChoice";
+    GuildOnboardingPromptType2[GuildOnboardingPromptType2["Dropdown"] = 1] = "Dropdown";
+  })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
+var require_guildScheduledEvent2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
+  var GuildScheduledEventRecurrenceRuleFrequency;
+  (function(GuildScheduledEventRecurrenceRuleFrequency2) {
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Yearly"] = 0] = "Yearly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Monthly"] = 1] = "Monthly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Weekly"] = 2] = "Weekly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Daily"] = 3] = "Daily";
+  })(GuildScheduledEventRecurrenceRuleFrequency || (exports.GuildScheduledEventRecurrenceRuleFrequency = GuildScheduledEventRecurrenceRuleFrequency = {}));
+  var GuildScheduledEventRecurrenceRuleWeekday;
+  (function(GuildScheduledEventRecurrenceRuleWeekday2) {
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Monday"] = 0] = "Monday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Tuesday"] = 1] = "Tuesday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Wednesday"] = 2] = "Wednesday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Thursday"] = 3] = "Thursday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Friday"] = 4] = "Friday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Saturday"] = 5] = "Saturday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Sunday"] = 6] = "Sunday";
+  })(GuildScheduledEventRecurrenceRuleWeekday || (exports.GuildScheduledEventRecurrenceRuleWeekday = GuildScheduledEventRecurrenceRuleWeekday = {}));
+  var GuildScheduledEventRecurrenceRuleMonth;
+  (function(GuildScheduledEventRecurrenceRuleMonth2) {
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["January"] = 1] = "January";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["February"] = 2] = "February";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["March"] = 3] = "March";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["April"] = 4] = "April";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["May"] = 5] = "May";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["June"] = 6] = "June";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["July"] = 7] = "July";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["August"] = 8] = "August";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["September"] = 9] = "September";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["October"] = 10] = "October";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["November"] = 11] = "November";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["December"] = 12] = "December";
+  })(GuildScheduledEventRecurrenceRuleMonth || (exports.GuildScheduledEventRecurrenceRuleMonth = GuildScheduledEventRecurrenceRuleMonth = {}));
+  var GuildScheduledEventEntityType;
+  (function(GuildScheduledEventEntityType2) {
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["StageInstance"] = 1] = "StageInstance";
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["Voice"] = 2] = "Voice";
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["External"] = 3] = "External";
+  })(GuildScheduledEventEntityType || (exports.GuildScheduledEventEntityType = GuildScheduledEventEntityType = {}));
+  var GuildScheduledEventStatus;
+  (function(GuildScheduledEventStatus2) {
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Scheduled"] = 1] = "Scheduled";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Active"] = 2] = "Active";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Completed"] = 3] = "Completed";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Canceled"] = 4] = "Canceled";
+  })(GuildScheduledEventStatus || (exports.GuildScheduledEventStatus = GuildScheduledEventStatus = {}));
+  var GuildScheduledEventPrivacyLevel;
+  (function(GuildScheduledEventPrivacyLevel2) {
+    GuildScheduledEventPrivacyLevel2[GuildScheduledEventPrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
+  })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
+var require_shared2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ApplicationCommandOptionType = undefined;
+  var ApplicationCommandOptionType;
+  (function(ApplicationCommandOptionType2) {
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Subcommand"] = 1] = "Subcommand";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["SubcommandGroup"] = 2] = "SubcommandGroup";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["String"] = 3] = "String";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Integer"] = 4] = "Integer";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Boolean"] = 5] = "Boolean";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["User"] = 6] = "User";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Channel"] = 7] = "Channel";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Role"] = 8] = "Role";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Mentionable"] = 9] = "Mentionable";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Number"] = 10] = "Number";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Attachment"] = 11] = "Attachment";
+  })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
+var require_chatInput2 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_shared2(), exports);
+});
+
+// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
+var require_permissions3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
+  var ApplicationCommandPermissionType;
+  (function(ApplicationCommandPermissionType2) {
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Role"] = 1] = "Role";
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["User"] = 2] = "User";
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Channel"] = 3] = "Channel";
+  })(ApplicationCommandPermissionType || (exports.ApplicationCommandPermissionType = ApplicationCommandPermissionType = {}));
+  exports.APIApplicationCommandPermissionsConstant = {
+    Everyone: (guildId) => String(guildId),
+    AllChannels: (guildId) => String(BigInt(guildId) - 1n)
+  };
+});
+
+// node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
+var require_applicationCommands2 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.EntryPointCommandHandlerType = exports.InteractionContextType = exports.ApplicationIntegrationType = exports.ApplicationCommandType = undefined;
+  __exportStar(require_chatInput2(), exports);
+  __exportStar(require_permissions3(), exports);
+  var ApplicationCommandType;
+  (function(ApplicationCommandType2) {
+    ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
+    ApplicationCommandType2[ApplicationCommandType2["User"] = 2] = "User";
+    ApplicationCommandType2[ApplicationCommandType2["Message"] = 3] = "Message";
+    ApplicationCommandType2[ApplicationCommandType2["PrimaryEntryPoint"] = 4] = "PrimaryEntryPoint";
+  })(ApplicationCommandType || (exports.ApplicationCommandType = ApplicationCommandType = {}));
+  var ApplicationIntegrationType;
+  (function(ApplicationIntegrationType2) {
+    ApplicationIntegrationType2[ApplicationIntegrationType2["GuildInstall"] = 0] = "GuildInstall";
+    ApplicationIntegrationType2[ApplicationIntegrationType2["UserInstall"] = 1] = "UserInstall";
+  })(ApplicationIntegrationType || (exports.ApplicationIntegrationType = ApplicationIntegrationType = {}));
+  var InteractionContextType;
+  (function(InteractionContextType2) {
+    InteractionContextType2[InteractionContextType2["Guild"] = 0] = "Guild";
+    InteractionContextType2[InteractionContextType2["BotDM"] = 1] = "BotDM";
+    InteractionContextType2[InteractionContextType2["PrivateChannel"] = 2] = "PrivateChannel";
+  })(InteractionContextType || (exports.InteractionContextType = InteractionContextType = {}));
+  var EntryPointCommandHandlerType;
+  (function(EntryPointCommandHandlerType2) {
+    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["AppHandler"] = 1] = "AppHandler";
+    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["DiscordLaunchActivity"] = 2] = "DiscordLaunchActivity";
+  })(EntryPointCommandHandlerType || (exports.EntryPointCommandHandlerType = EntryPointCommandHandlerType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/_interactions/responses.js
+var require_responses2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.InteractionResponseType = exports.InteractionType = undefined;
+  var InteractionType;
+  (function(InteractionType2) {
+    InteractionType2[InteractionType2["Ping"] = 1] = "Ping";
+    InteractionType2[InteractionType2["ApplicationCommand"] = 2] = "ApplicationCommand";
+    InteractionType2[InteractionType2["MessageComponent"] = 3] = "MessageComponent";
+    InteractionType2[InteractionType2["ApplicationCommandAutocomplete"] = 4] = "ApplicationCommandAutocomplete";
+    InteractionType2[InteractionType2["ModalSubmit"] = 5] = "ModalSubmit";
+  })(InteractionType || (exports.InteractionType = InteractionType = {}));
+  var InteractionResponseType;
+  (function(InteractionResponseType2) {
+    InteractionResponseType2[InteractionResponseType2["Pong"] = 1] = "Pong";
+    InteractionResponseType2[InteractionResponseType2["ChannelMessageWithSource"] = 4] = "ChannelMessageWithSource";
+    InteractionResponseType2[InteractionResponseType2["DeferredChannelMessageWithSource"] = 5] = "DeferredChannelMessageWithSource";
+    InteractionResponseType2[InteractionResponseType2["DeferredMessageUpdate"] = 6] = "DeferredMessageUpdate";
+    InteractionResponseType2[InteractionResponseType2["UpdateMessage"] = 7] = "UpdateMessage";
+    InteractionResponseType2[InteractionResponseType2["ApplicationCommandAutocompleteResult"] = 8] = "ApplicationCommandAutocompleteResult";
+    InteractionResponseType2[InteractionResponseType2["Modal"] = 9] = "Modal";
+    InteractionResponseType2[InteractionResponseType2["PremiumRequired"] = 10] = "PremiumRequired";
+    InteractionResponseType2[InteractionResponseType2["LaunchActivity"] = 12] = "LaunchActivity";
+  })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/interactions.js
+var require_interactions2 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_applicationCommands2(), exports);
+  __exportStar(require_responses2(), exports);
+});
+
+// node_modules/discord-api-types/payloads/v10/invite.js
+var require_invite2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.InviteTargetType = exports.InviteType = exports.InviteFlags = undefined;
+  var InviteFlags;
+  (function(InviteFlags2) {
+    InviteFlags2[InviteFlags2["IsGuestInvite"] = 1] = "IsGuestInvite";
+  })(InviteFlags || (exports.InviteFlags = InviteFlags = {}));
+  var InviteType;
+  (function(InviteType2) {
+    InviteType2[InviteType2["Guild"] = 0] = "Guild";
+    InviteType2[InviteType2["GroupDM"] = 1] = "GroupDM";
+    InviteType2[InviteType2["Friend"] = 2] = "Friend";
+  })(InviteType || (exports.InviteType = InviteType = {}));
+  var InviteTargetType;
+  (function(InviteTargetType2) {
+    InviteTargetType2[InviteTargetType2["Stream"] = 1] = "Stream";
+    InviteTargetType2[InviteTargetType2["EmbeddedApplication"] = 2] = "EmbeddedApplication";
+  })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/message.js
+var require_message2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = undefined;
+  var MessageType;
+  (function(MessageType2) {
+    MessageType2[MessageType2["Default"] = 0] = "Default";
+    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
+    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
+    MessageType2[MessageType2["Call"] = 3] = "Call";
+    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
+    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
+    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
+    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
+    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
+    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
+    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
+    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
+    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
+    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
+    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
+    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
+    MessageType2[MessageType2["Reply"] = 19] = "Reply";
+    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
+    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
+    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
+    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
+    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
+    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
+    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
+    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
+    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
+    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
+    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
+    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
+    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
+    MessageType2[MessageType2["GuildIncidentAlertModeEnabled"] = 36] = "GuildIncidentAlertModeEnabled";
+    MessageType2[MessageType2["GuildIncidentAlertModeDisabled"] = 37] = "GuildIncidentAlertModeDisabled";
+    MessageType2[MessageType2["GuildIncidentReportRaid"] = 38] = "GuildIncidentReportRaid";
+    MessageType2[MessageType2["GuildIncidentReportFalseAlarm"] = 39] = "GuildIncidentReportFalseAlarm";
+    MessageType2[MessageType2["PurchaseNotification"] = 44] = "PurchaseNotification";
+    MessageType2[MessageType2["PollResult"] = 46] = "PollResult";
+  })(MessageType || (exports.MessageType = MessageType = {}));
+  var MessageActivityType;
+  (function(MessageActivityType2) {
+    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
+    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
+    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
+    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
+  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
+  var MessageReferenceType;
+  (function(MessageReferenceType2) {
+    MessageReferenceType2[MessageReferenceType2["Default"] = 0] = "Default";
+    MessageReferenceType2[MessageReferenceType2["Forward"] = 1] = "Forward";
+  })(MessageReferenceType || (exports.MessageReferenceType = MessageReferenceType = {}));
+  var MessageFlags;
+  (function(MessageFlags2) {
+    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
+    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
+    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
+    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
+    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
+    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
+    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
+    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
+    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
+    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
+    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
+    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
+    MessageFlags2[MessageFlags2["HasSnapshot"] = 16384] = "HasSnapshot";
+    MessageFlags2[MessageFlags2["IsComponentsV2"] = 32768] = "IsComponentsV2";
+  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
+  var EmbedType;
+  (function(EmbedType2) {
+    EmbedType2["Rich"] = "rich";
+    EmbedType2["Image"] = "image";
+    EmbedType2["Video"] = "video";
+    EmbedType2["GIFV"] = "gifv";
+    EmbedType2["Article"] = "article";
+    EmbedType2["Link"] = "link";
+    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
+    EmbedType2["PollResult"] = "poll_result";
+  })(EmbedType || (exports.EmbedType = EmbedType = {}));
+  var AttachmentFlags;
+  (function(AttachmentFlags2) {
+    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
+  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
+  var AllowedMentionsTypes;
+  (function(AllowedMentionsTypes2) {
+    AllowedMentionsTypes2["Everyone"] = "everyone";
+    AllowedMentionsTypes2["Role"] = "roles";
+    AllowedMentionsTypes2["User"] = "users";
+  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
+  var ComponentType;
+  (function(ComponentType2) {
+    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
+    ComponentType2[ComponentType2["Button"] = 2] = "Button";
+    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
+    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
+    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
+    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
+    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
+    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
+    ComponentType2[ComponentType2["Section"] = 9] = "Section";
+    ComponentType2[ComponentType2["TextDisplay"] = 10] = "TextDisplay";
+    ComponentType2[ComponentType2["Thumbnail"] = 11] = "Thumbnail";
+    ComponentType2[ComponentType2["MediaGallery"] = 12] = "MediaGallery";
+    ComponentType2[ComponentType2["File"] = 13] = "File";
+    ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
+    ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
+    ComponentType2[ComponentType2["Container"] = 17] = "Container";
+    ComponentType2[ComponentType2["Label"] = 18] = "Label";
+    ComponentType2[ComponentType2["FileUpload"] = 19] = "FileUpload";
+    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
+  })(ComponentType || (exports.ComponentType = ComponentType = {}));
+  var ButtonStyle;
+  (function(ButtonStyle2) {
+    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
+    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
+    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
+    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
+    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
+    ButtonStyle2[ButtonStyle2["Premium"] = 6] = "Premium";
+  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
+  var TextInputStyle;
+  (function(TextInputStyle2) {
+    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
+    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
+  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
+  var SelectMenuDefaultValueType;
+  (function(SelectMenuDefaultValueType2) {
+    SelectMenuDefaultValueType2["Channel"] = "channel";
+    SelectMenuDefaultValueType2["Role"] = "role";
+    SelectMenuDefaultValueType2["User"] = "user";
+  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
+  var UnfurledMediaItemLoadingState;
+  (function(UnfurledMediaItemLoadingState2) {
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Unknown"] = 0] = "Unknown";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Loading"] = 1] = "Loading";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedSuccess"] = 2] = "LoadedSuccess";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedNotFound"] = 3] = "LoadedNotFound";
+  })(UnfurledMediaItemLoadingState || (exports.UnfurledMediaItemLoadingState = UnfurledMediaItemLoadingState = {}));
+  var SeparatorSpacingSize;
+  (function(SeparatorSpacingSize2) {
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Small"] = 1] = "Small";
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Large"] = 2] = "Large";
+  })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/monetization.js
+var require_monetization3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
+  var EntitlementType;
+  (function(EntitlementType2) {
+    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
+    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
+    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
+    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
+    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
+    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
+    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
+    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
+  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
+  var SKUFlags;
+  (function(SKUFlags2) {
+    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
+    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
+    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
+  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
+  var SKUType;
+  (function(SKUType2) {
+    SKUType2[SKUType2["Durable"] = 2] = "Durable";
+    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
+    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
+    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
+  })(SKUType || (exports.SKUType = SKUType = {}));
+  var SubscriptionStatus;
+  (function(SubscriptionStatus2) {
+    SubscriptionStatus2[SubscriptionStatus2["Active"] = 0] = "Active";
+    SubscriptionStatus2[SubscriptionStatus2["Ending"] = 1] = "Ending";
+    SubscriptionStatus2[SubscriptionStatus2["Inactive"] = 2] = "Inactive";
+  })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/oauth2.js
+var require_oauth22 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.OAuth2Scopes = undefined;
+  var OAuth2Scopes;
+  (function(OAuth2Scopes2) {
+    OAuth2Scopes2["Bot"] = "bot";
+    OAuth2Scopes2["Connections"] = "connections";
+    OAuth2Scopes2["DMChannelsRead"] = "dm_channels.read";
+    OAuth2Scopes2["Email"] = "email";
+    OAuth2Scopes2["Identify"] = "identify";
+    OAuth2Scopes2["Guilds"] = "guilds";
+    OAuth2Scopes2["GuildsJoin"] = "guilds.join";
+    OAuth2Scopes2["GuildsMembersRead"] = "guilds.members.read";
+    OAuth2Scopes2["GroupDMJoins"] = "gdm.join";
+    OAuth2Scopes2["MessagesRead"] = "messages.read";
+    OAuth2Scopes2["RoleConnectionsWrite"] = "role_connections.write";
+    OAuth2Scopes2["RPC"] = "rpc";
+    OAuth2Scopes2["RPCActivitiesWrite"] = "rpc.activities.write";
+    OAuth2Scopes2["RPCVoiceRead"] = "rpc.voice.read";
+    OAuth2Scopes2["RPCVoiceWrite"] = "rpc.voice.write";
+    OAuth2Scopes2["RPCNotificationsRead"] = "rpc.notifications.read";
+    OAuth2Scopes2["WebhookIncoming"] = "webhook.incoming";
+    OAuth2Scopes2["Voice"] = "voice";
+    OAuth2Scopes2["ApplicationsBuildsUpload"] = "applications.builds.upload";
+    OAuth2Scopes2["ApplicationsBuildsRead"] = "applications.builds.read";
+    OAuth2Scopes2["ApplicationsStoreUpdate"] = "applications.store.update";
+    OAuth2Scopes2["ApplicationsEntitlements"] = "applications.entitlements";
+    OAuth2Scopes2["RelationshipsRead"] = "relationships.read";
+    OAuth2Scopes2["ActivitiesRead"] = "activities.read";
+    OAuth2Scopes2["ActivitiesWrite"] = "activities.write";
+    OAuth2Scopes2["ApplicationsCommands"] = "applications.commands";
+    OAuth2Scopes2["ApplicationsCommandsUpdate"] = "applications.commands.update";
+    OAuth2Scopes2["ApplicationCommandsPermissionsUpdate"] = "applications.commands.permissions.update";
+  })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/permissions.js
+var require_permissions4 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RoleFlags = undefined;
+  var RoleFlags;
+  (function(RoleFlags2) {
+    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
+  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/poll.js
+var require_poll2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.PollLayoutType = undefined;
+  var PollLayoutType;
+  (function(PollLayoutType2) {
+    PollLayoutType2[PollLayoutType2["Default"] = 1] = "Default";
+  })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/stageInstance.js
+var require_stageInstance2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.StageInstancePrivacyLevel = undefined;
+  var StageInstancePrivacyLevel;
+  (function(StageInstancePrivacyLevel2) {
+    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["Public"] = 1] = "Public";
+    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
+  })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/sticker.js
+var require_sticker2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.StickerFormatType = exports.StickerType = undefined;
+  var StickerType;
+  (function(StickerType2) {
+    StickerType2[StickerType2["Standard"] = 1] = "Standard";
+    StickerType2[StickerType2["Guild"] = 2] = "Guild";
+  })(StickerType || (exports.StickerType = StickerType = {}));
+  var StickerFormatType;
+  (function(StickerFormatType2) {
+    StickerFormatType2[StickerFormatType2["PNG"] = 1] = "PNG";
+    StickerFormatType2[StickerFormatType2["APNG"] = 2] = "APNG";
+    StickerFormatType2[StickerFormatType2["Lottie"] = 3] = "Lottie";
+    StickerFormatType2[StickerFormatType2["GIF"] = 4] = "GIF";
+  })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/teams.js
+var require_teams2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
+  var TeamMemberMembershipState;
+  (function(TeamMemberMembershipState2) {
+    TeamMemberMembershipState2[TeamMemberMembershipState2["Invited"] = 1] = "Invited";
+    TeamMemberMembershipState2[TeamMemberMembershipState2["Accepted"] = 2] = "Accepted";
+  })(TeamMemberMembershipState || (exports.TeamMemberMembershipState = TeamMemberMembershipState = {}));
+  var TeamMemberRole;
+  (function(TeamMemberRole2) {
+    TeamMemberRole2["Admin"] = "admin";
+    TeamMemberRole2["Developer"] = "developer";
+    TeamMemberRole2["ReadOnly"] = "read_only";
+  })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/user.js
+var require_user2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.NameplatePalette = exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
+  var UserFlags;
+  (function(UserFlags2) {
+    UserFlags2[UserFlags2["Staff"] = 1] = "Staff";
+    UserFlags2[UserFlags2["Partner"] = 2] = "Partner";
+    UserFlags2[UserFlags2["Hypesquad"] = 4] = "Hypesquad";
+    UserFlags2[UserFlags2["BugHunterLevel1"] = 8] = "BugHunterLevel1";
+    UserFlags2[UserFlags2["MFASMS"] = 16] = "MFASMS";
+    UserFlags2[UserFlags2["PremiumPromoDismissed"] = 32] = "PremiumPromoDismissed";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse1"] = 64] = "HypeSquadOnlineHouse1";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse2"] = 128] = "HypeSquadOnlineHouse2";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse3"] = 256] = "HypeSquadOnlineHouse3";
+    UserFlags2[UserFlags2["PremiumEarlySupporter"] = 512] = "PremiumEarlySupporter";
+    UserFlags2[UserFlags2["TeamPseudoUser"] = 1024] = "TeamPseudoUser";
+    UserFlags2[UserFlags2["HasUnreadUrgentMessages"] = 8192] = "HasUnreadUrgentMessages";
+    UserFlags2[UserFlags2["BugHunterLevel2"] = 16384] = "BugHunterLevel2";
+    UserFlags2[UserFlags2["VerifiedBot"] = 65536] = "VerifiedBot";
+    UserFlags2[UserFlags2["VerifiedDeveloper"] = 131072] = "VerifiedDeveloper";
+    UserFlags2[UserFlags2["CertifiedModerator"] = 262144] = "CertifiedModerator";
+    UserFlags2[UserFlags2["BotHTTPInteractions"] = 524288] = "BotHTTPInteractions";
+    UserFlags2[UserFlags2["Spammer"] = 1048576] = "Spammer";
+    UserFlags2[UserFlags2["DisablePremium"] = 2097152] = "DisablePremium";
+    UserFlags2[UserFlags2["ActiveDeveloper"] = 4194304] = "ActiveDeveloper";
+    UserFlags2[UserFlags2["Quarantined"] = 17592186044416] = "Quarantined";
+    UserFlags2[UserFlags2["Collaborator"] = 1125899906842624] = "Collaborator";
+    UserFlags2[UserFlags2["RestrictedCollaborator"] = 2251799813685248] = "RestrictedCollaborator";
+  })(UserFlags || (exports.UserFlags = UserFlags = {}));
+  var UserPremiumType;
+  (function(UserPremiumType2) {
+    UserPremiumType2[UserPremiumType2["None"] = 0] = "None";
+    UserPremiumType2[UserPremiumType2["NitroClassic"] = 1] = "NitroClassic";
+    UserPremiumType2[UserPremiumType2["Nitro"] = 2] = "Nitro";
+    UserPremiumType2[UserPremiumType2["NitroBasic"] = 3] = "NitroBasic";
+  })(UserPremiumType || (exports.UserPremiumType = UserPremiumType = {}));
+  var ConnectionService;
+  (function(ConnectionService2) {
+    ConnectionService2["AmazonMusic"] = "amazon-music";
+    ConnectionService2["BattleNet"] = "battlenet";
+    ConnectionService2["Bluesky"] = "bluesky";
+    ConnectionService2["BungieNet"] = "bungie";
+    ConnectionService2["Crunchyroll"] = "crunchyroll";
+    ConnectionService2["Domain"] = "domain";
+    ConnectionService2["eBay"] = "ebay";
+    ConnectionService2["EpicGames"] = "epicgames";
+    ConnectionService2["Facebook"] = "facebook";
+    ConnectionService2["GitHub"] = "github";
+    ConnectionService2["Instagram"] = "instagram";
+    ConnectionService2["LeagueOfLegends"] = "leagueoflegends";
+    ConnectionService2["Mastodon"] = "mastodon";
+    ConnectionService2["PayPal"] = "paypal";
+    ConnectionService2["PlayStationNetwork"] = "playstation";
+    ConnectionService2["Reddit"] = "reddit";
+    ConnectionService2["RiotGames"] = "riotgames";
+    ConnectionService2["Roblox"] = "roblox";
+    ConnectionService2["Spotify"] = "spotify";
+    ConnectionService2["Skype"] = "skype";
+    ConnectionService2["Steam"] = "steam";
+    ConnectionService2["TikTok"] = "tiktok";
+    ConnectionService2["Twitch"] = "twitch";
+    ConnectionService2["X"] = "twitter";
+    ConnectionService2["Twitter"] = "twitter";
+    ConnectionService2["Xbox"] = "xbox";
+    ConnectionService2["YouTube"] = "youtube";
+  })(ConnectionService || (exports.ConnectionService = ConnectionService = {}));
+  var ConnectionVisibility;
+  (function(ConnectionVisibility2) {
+    ConnectionVisibility2[ConnectionVisibility2["None"] = 0] = "None";
+    ConnectionVisibility2[ConnectionVisibility2["Everyone"] = 1] = "Everyone";
+  })(ConnectionVisibility || (exports.ConnectionVisibility = ConnectionVisibility = {}));
+  var NameplatePalette;
+  (function(NameplatePalette2) {
+    NameplatePalette2["Berry"] = "berry";
+    NameplatePalette2["BubbleGum"] = "bubble_gum";
+    NameplatePalette2["Clover"] = "clover";
+    NameplatePalette2["Cobalt"] = "cobalt";
+    NameplatePalette2["Crimson"] = "crimson";
+    NameplatePalette2["Forest"] = "forest";
+    NameplatePalette2["Lemon"] = "lemon";
+    NameplatePalette2["Sky"] = "sky";
+    NameplatePalette2["Teal"] = "teal";
+    NameplatePalette2["Violet"] = "violet";
+    NameplatePalette2["White"] = "white";
+  })(NameplatePalette || (exports.NameplatePalette = NameplatePalette = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/webhook.js
+var require_webhook2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.WebhookType = exports.ApplicationWebhookEventType = exports.ApplicationWebhookType = undefined;
+  var ApplicationWebhookType;
+  (function(ApplicationWebhookType2) {
+    ApplicationWebhookType2[ApplicationWebhookType2["Ping"] = 0] = "Ping";
+    ApplicationWebhookType2[ApplicationWebhookType2["Event"] = 1] = "Event";
+  })(ApplicationWebhookType || (exports.ApplicationWebhookType = ApplicationWebhookType = {}));
+  var ApplicationWebhookEventType;
+  (function(ApplicationWebhookEventType2) {
+    ApplicationWebhookEventType2["ApplicationAuthorized"] = "APPLICATION_AUTHORIZED";
+    ApplicationWebhookEventType2["ApplicationDeauthorized"] = "APPLICATION_DEAUTHORIZED";
+    ApplicationWebhookEventType2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    ApplicationWebhookEventType2["QuestUserEnrollment"] = "QUEST_USER_ENROLLMENT";
+  })(ApplicationWebhookEventType || (exports.ApplicationWebhookEventType = ApplicationWebhookEventType = {}));
+  var WebhookType;
+  (function(WebhookType2) {
+    WebhookType2[WebhookType2["Incoming"] = 1] = "Incoming";
+    WebhookType2[WebhookType2["ChannelFollower"] = 2] = "ChannelFollower";
+    WebhookType2[WebhookType2["Application"] = 3] = "Application";
+  })(WebhookType || (exports.WebhookType = WebhookType = {}));
+});
+
+// node_modules/discord-api-types/payloads/v10/index.js
+var require_v108 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_common4(), exports);
+  __exportStar(require_application2(), exports);
+  __exportStar(require_auditLog2(), exports);
+  __exportStar(require_autoModeration2(), exports);
+  __exportStar(require_channel3(), exports);
+  __exportStar(require_gateway2(), exports);
+  __exportStar(require_guild2(), exports);
+  __exportStar(require_guildScheduledEvent2(), exports);
+  __exportStar(require_interactions2(), exports);
+  __exportStar(require_invite2(), exports);
+  __exportStar(require_message2(), exports);
+  __exportStar(require_monetization3(), exports);
+  __exportStar(require_oauth22(), exports);
+  __exportStar(require_permissions4(), exports);
+  __exportStar(require_poll2(), exports);
+  __exportStar(require_stageInstance2(), exports);
+  __exportStar(require_sticker2(), exports);
+  __exportStar(require_teams2(), exports);
+  __exportStar(require_user2(), exports);
+  __exportStar(require_webhook2(), exports);
+});
+
+// node_modules/discord-api-types/utils/internals.js
+var require_internals2 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.urlSafeCharacters = undefined;
+  var pattern = /^[\d%A-Za-z-_]+$/g;
+  exports.urlSafeCharacters = {
+    test(input) {
+      const result = pattern.test(input);
+      pattern.lastIndex = 0;
+      return result;
+    }
+  };
+});
+
+// node_modules/discord-api-types/rest/common.js
+var require_common5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.Locale = exports.RESTJSONErrorCodes = undefined;
+  var RESTJSONErrorCodes;
+  (function(RESTJSONErrorCodes2) {
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GeneralError"] = 0] = "GeneralError";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAccount"] = 10001] = "UnknownAccount";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplication"] = 10002] = "UnknownApplication";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownChannel"] = 10003] = "UnknownChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuild"] = 10004] = "UnknownGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownIntegration"] = 10005] = "UnknownIntegration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInvite"] = 10006] = "UnknownInvite";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMember"] = 10007] = "UnknownMember";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMessage"] = 10008] = "UnknownMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPermissionOverwrite"] = 10009] = "UnknownPermissionOverwrite";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownProvider"] = 10010] = "UnknownProvider";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRole"] = 10011] = "UnknownRole";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownToken"] = 10012] = "UnknownToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownUser"] = 10013] = "UnknownUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEmoji"] = 10014] = "UnknownEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhook"] = 10015] = "UnknownWebhook";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhookService"] = 10016] = "UnknownWebhookService";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSession"] = 10020] = "UnknownSession";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAsset"] = 10021] = "UnknownAsset";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBan"] = 10026] = "UnknownBan";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSKU"] = 10027] = "UnknownSKU";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreListing"] = 10028] = "UnknownStoreListing";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEntitlement"] = 10029] = "UnknownEntitlement";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBuild"] = 10030] = "UnknownBuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownLobby"] = 10031] = "UnknownLobby";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBranch"] = 10032] = "UnknownBranch";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreDirectoryLayout"] = 10033] = "UnknownStoreDirectoryLayout";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRedistributable"] = 10036] = "UnknownRedistributable";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGiftCode"] = 10038] = "UnknownGiftCode";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStream"] = 10049] = "UnknownStream";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPremiumServerSubscribeCooldown"] = 10050] = "UnknownPremiumServerSubscribeCooldown";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildTemplate"] = 10057] = "UnknownGuildTemplate";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownDiscoverableServerCategory"] = 10059] = "UnknownDiscoverableServerCategory";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSticker"] = 10060] = "UnknownSticker";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStickerPack"] = 10061] = "UnknownStickerPack";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInteraction"] = 10062] = "UnknownInteraction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommand"] = 10063] = "UnknownApplicationCommand";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownVoiceState"] = 10065] = "UnknownVoiceState";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommandPermissions"] = 10066] = "UnknownApplicationCommandPermissions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStageInstance"] = 10067] = "UnknownStageInstance";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildMemberVerificationForm"] = 10068] = "UnknownGuildMemberVerificationForm";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildWelcomeScreen"] = 10069] = "UnknownGuildWelcomeScreen";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEvent"] = 10070] = "UnknownGuildScheduledEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEventUser"] = 10071] = "UnknownGuildScheduledEventUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownTag"] = 10087] = "UnknownTag";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSound"] = 10097] = "UnknownSound";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BotsCannotUseThisEndpoint"] = 20001] = "BotsCannotUseThisEndpoint";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyBotsCanUseThisEndpoint"] = 20002] = "OnlyBotsCanUseThisEndpoint";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ExplicitContentCannotBeSentToTheDesiredRecipient"] = 20009] = "ExplicitContentCannotBeSentToTheDesiredRecipient";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NotAuthorizedToPerformThisActionOnThisApplication"] = 20012] = "NotAuthorizedToPerformThisActionOnThisApplication";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ActionCannotBePerformedDueToSlowmodeRateLimit"] = 20016] = "ActionCannotBePerformedDueToSlowmodeRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheMazeIsntMeantForYou"] = 20017] = "TheMazeIsntMeantForYou";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyTheOwnerOfThisAccountCanPerformThisAction"] = 20018] = "OnlyTheOwnerOfThisAccountCanPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnnouncementEditLimitExceeded"] = 20022] = "AnnouncementEditLimitExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnderMinimumAge"] = 20024] = "UnderMinimumAge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelSendRateLimit"] = 20028] = "ChannelSendRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerSendRateLimit"] = 20029] = "ServerSendRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords"] = 20031] = "StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildPremiumSubscriptionLevelTooLow"] = 20035] = "GuildPremiumSubscriptionLevelTooLow";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildsReached"] = 30001] = "MaximumNumberOfGuildsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfFriendsReached"] = 30002] = "MaximumNumberOfFriendsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinsReachedForTheChannel"] = 30003] = "MaximumNumberOfPinsReachedForTheChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfRecipientsReached"] = 30004] = "MaximumNumberOfRecipientsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildRolesReached"] = 30005] = "MaximumNumberOfGuildRolesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksReached"] = 30007] = "MaximumNumberOfWebhooksReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEmojisReached"] = 30008] = "MaximumNumberOfEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfReactionsReached"] = 30010] = "MaximumNumberOfReactionsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGroupDMsReached"] = 30011] = "MaximumNumberOfGroupDMsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildChannelsReached"] = 30013] = "MaximumNumberOfGuildChannelsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAttachmentsInAMessageReached"] = 30015] = "MaximumNumberOfAttachmentsInAMessageReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfInvitesReached"] = 30016] = "MaximumNumberOfInvitesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAnimatedEmojisReached"] = 30018] = "MaximumNumberOfAnimatedEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerMembersReached"] = 30019] = "MaximumNumberOfServerMembersReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerCategoriesReached"] = 30030] = "MaximumNumberOfServerCategoriesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildAlreadyHasTemplate"] = 30031] = "GuildAlreadyHasTemplate";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfApplicationCommandsReached"] = 30032] = "MaximumNumberOfApplicationCommandsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumThreadParticipantsReached"] = 30033] = "MaximumThreadParticipantsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumDailyApplicationCommandCreatesReached"] = 30034] = "MaximumDailyApplicationCommandCreatesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfNonGuildMemberBansHasBeenExceeded"] = 30035] = "MaximumNumberOfNonGuildMemberBansHasBeenExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfBanFetchesHasBeenReached"] = 30037] = "MaximumNumberOfBanFetchesHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfUncompletedGuildScheduledEventsReached"] = 30038] = "MaximumNumberOfUncompletedGuildScheduledEventsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfStickersReached"] = 30039] = "MaximumNumberOfStickersReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPruneRequestsHasBeenReached"] = 30040] = "MaximumNumberOfPruneRequestsHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached"] = 30042] = "MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfSoundboardSoundsReached"] = 30045] = "MaximumNumberOfSoundboardSoundsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEditsToMessagesOlderThanOneHourReached"] = 30046] = "MaximumNumberOfEditsToMessagesOlderThanOneHourReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinnedThreadsInForumHasBeenReached"] = 30047] = "MaximumNumberOfPinnedThreadsInForumHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfTagsInForumHasBeenReached"] = 30048] = "MaximumNumberOfTagsInForumHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BitrateIsTooHighForChannelOfThisType"] = 30052] = "BitrateIsTooHighForChannelOfThisType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPremiumEmojisReached"] = 30056] = "MaximumNumberOfPremiumEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksPerGuildReached"] = 30058] = "MaximumNumberOfWebhooksPerGuildReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfChannelPermissionOverwritesReached"] = 30060] = "MaximumNumberOfChannelPermissionOverwritesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheChannelsForThisGuildAreTooLarge"] = 30061] = "TheChannelsForThisGuildAreTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["Unauthorized"] = 40001] = "Unauthorized";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VerifyYourAccount"] = 40002] = "VerifyYourAccount";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OpeningDirectMessagesTooFast"] = 40003] = "OpeningDirectMessagesTooFast";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SendMessagesHasBeenTemporarilyDisabled"] = 40004] = "SendMessagesHasBeenTemporarilyDisabled";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestEntityTooLarge"] = 40005] = "RequestEntityTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FeatureTemporarilyDisabledServerSide"] = 40006] = "FeatureTemporarilyDisabledServerSide";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserBannedFromThisGuild"] = 40007] = "UserBannedFromThisGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ConnectionHasBeenRevoked"] = 40012] = "ConnectionHasBeenRevoked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyConsumableSKUsCanBeConsumed"] = 40018] = "OnlyConsumableSKUsCanBeConsumed";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCanOnlyDeleteSandboxEntitlements"] = 40019] = "YouCanOnlyDeleteSandboxEntitlements";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TargetUserIsNotConnectedToVoice"] = 40032] = "TargetUserIsNotConnectedToVoice";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisMessageWasAlreadyCrossposted"] = 40033] = "ThisMessageWasAlreadyCrossposted";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationCommandWithThatNameAlreadyExists"] = 40041] = "ApplicationCommandWithThatNameAlreadyExists";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationInteractionFailedToSend"] = 40043] = "ApplicationInteractionFailedToSend";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAMessageInAForumChannel"] = 40058] = "CannotSendAMessageInAForumChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InteractionHasAlreadyBeenAcknowledged"] = 40060] = "InteractionHasAlreadyBeenAcknowledged";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagNamesMustBeUnique"] = 40061] = "TagNamesMustBeUnique";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServiceResourceIsBeingRateLimited"] = 40062] = "ServiceResourceIsBeingRateLimited";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThereAreNoTagsAvailableThatCanBeSetByNonModerators"] = 40066] = "ThereAreNoTagsAvailableThatCanBeSetByNonModerators";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagRequiredToCreateAForumPostInThisChannel"] = 40067] = "TagRequiredToCreateAForumPostInThisChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnEntitlementHasAlreadyBeenGrantedForThisResource"] = 40074] = "AnEntitlementHasAlreadyBeenGrantedForThisResource";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages"] = 40094] = "ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CloudflareIsBlockingYourRequest"] = 40333] = "CloudflareIsBlockingYourRequest";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingAccess"] = 50001] = "MissingAccess";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAccountType"] = 50002] = "InvalidAccountType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnDMChannel"] = 50003] = "CannotExecuteActionOnDMChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildWidgetDisabled"] = 50004] = "GuildWidgetDisabled";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditMessageAuthoredByAnotherUser"] = 50005] = "CannotEditMessageAuthoredByAnotherUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAnEmptyMessage"] = 50006] = "CannotSendAnEmptyMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesToThisUser"] = 50007] = "CannotSendMessagesToThisUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesInNonTextChannel"] = 50008] = "CannotSendMessagesInNonTextChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelVerificationLevelTooHighForYouToGainAccess"] = 50009] = "ChannelVerificationLevelTooHighForYouToGainAccess";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationDoesNotHaveBot"] = 50010] = "OAuth2ApplicationDoesNotHaveBot";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationLimitReached"] = 50011] = "OAuth2ApplicationLimitReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2State"] = 50012] = "InvalidOAuth2State";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingPermissions"] = 50013] = "MissingPermissions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidToken"] = 50014] = "InvalidToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoteWasTooLong"] = 50015] = "NoteWasTooLong";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedTooFewOrTooManyMessagesToDelete"] = 50016] = "ProvidedTooFewOrTooManyMessagesToDelete";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMFALevel"] = 50017] = "InvalidMFALevel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageCanOnlyBePinnedInTheChannelItWasSentIn"] = 50019] = "MessageCanOnlyBePinnedInTheChannelItWasSentIn";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteCodeInvalidOrTaken"] = 50020] = "InviteCodeInvalidOrTaken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnSystemMessage"] = 50021] = "CannotExecuteActionOnSystemMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnThisChannelType"] = 50024] = "CannotExecuteActionOnThisChannelType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2AccessToken"] = 50025] = "InvalidOAuth2AccessToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingRequiredOAuth2Scope"] = 50026] = "MissingRequiredOAuth2Scope";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidWebhookToken"] = 50027] = "InvalidWebhookToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRole"] = 50028] = "InvalidRole";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRecipients"] = 50033] = "InvalidRecipients";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OneOfTheMessagesProvidedWasTooOldForBulkDelete"] = 50034] = "OneOfTheMessagesProvidedWasTooOldForBulkDelete";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFormBodyOrContentType"] = 50035] = "InvalidFormBodyOrContentType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteAcceptedToGuildWithoutTheBotBeingIn"] = 50036] = "InviteAcceptedToGuildWithoutTheBotBeingIn";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActivityAction"] = 50039] = "InvalidActivityAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAPIVersion"] = 50041] = "InvalidAPIVersion";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FileUploadedExceedsMaximumSize"] = 50045] = "FileUploadedExceedsMaximumSize";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFileUploaded"] = 50046] = "InvalidFileUploaded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSelfRedeemThisGift"] = 50054] = "CannotSelfRedeemThisGift";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidGuild"] = 50055] = "InvalidGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidSKU"] = 50057] = "InvalidSKU";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRequestOrigin"] = 50067] = "InvalidRequestOrigin";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMessageType"] = 50068] = "InvalidMessageType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PaymentSourceRequiredToRedeemGift"] = 50070] = "PaymentSourceRequiredToRedeemGift";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotModifyASystemWebhook"] = 50073] = "CannotModifyASystemWebhook";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteChannelRequiredForCommunityGuilds"] = 50074] = "CannotDeleteChannelRequiredForCommunityGuilds";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditStickersWithinMessage"] = 50080] = "CannotEditStickersWithinMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidStickerSent"] = 50081] = "InvalidStickerSent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActionOnArchivedThread"] = 50083] = "InvalidActionOnArchivedThread";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidThreadNotificationSettings"] = 50084] = "InvalidThreadNotificationSettings";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ParameterEarlierThanCreation"] = 50085] = "ParameterEarlierThanCreation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CommunityServerChannelsMustBeTextChannels"] = 50086] = "CommunityServerChannelsMustBeTextChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor"] = 50091] = "TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNotAvailableInYourLocation"] = 50095] = "ServerNotAvailableInYourLocation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMonetizationEnabledToPerformThisAction"] = 50097] = "ServerNeedsMonetizationEnabledToPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMoreBoostsToPerformThisAction"] = 50101] = "ServerNeedsMoreBoostsToPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestBodyContainsInvalidJSON"] = 50109] = "RequestBodyContainsInvalidJSON";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileIsInvalid"] = 50110] = "ProvidedFileIsInvalid";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileTypeIsInvalid"] = 50123] = "ProvidedFileTypeIsInvalid";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDurationExceedsMaximumLength"] = 50124] = "ProvidedFileDurationExceedsMaximumLength";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnerCannotBePendingMember"] = 50131] = "OwnerCannotBePendingMember";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnershipCannotBeMovedToABotUser"] = 50132] = "OwnershipCannotBeMovedToABotUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToResizeAssetBelowTheMinimumSize"] = 50138] = "FailedToResizeAssetBelowTheMinimumSize";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji"] = 50144] = "CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotConvertBetweenPremiumEmojiAndNormalEmoji"] = 50145] = "CannotConvertBetweenPremiumEmojiAndNormalEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedFileNotFound"] = 50146] = "UploadedFileNotFound";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SpecifiedEmojiIsInvalid"] = 50151] = "SpecifiedEmojiIsInvalid";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesDoNotSupportAdditionalContent"] = 50159] = "VoiceMessagesDoNotSupportAdditionalContent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveASingleAudioAttachment"] = 50160] = "VoiceMessagesMustHaveASingleAudioAttachment";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveSupportingMetadata"] = 50161] = "VoiceMessagesMustHaveSupportingMetadata";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesCannotBeEdited"] = 50162] = "VoiceMessagesCannotBeEdited";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteGuildSubscriptionIntegration"] = 50163] = "CannotDeleteGuildSubscriptionIntegration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCannotSendVoiceMessagesInThisChannel"] = 50173] = "YouCannotSendVoiceMessagesInThisChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheUserAccountMustFirstBeVerified"] = 50178] = "TheUserAccountMustFirstBeVerified";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDoesNotHaveAValidDuration"] = 50192] = "ProvidedFileDoesNotHaveAValidDuration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouDoNotHavePermissionToSendThisSticker"] = 50600] = "YouDoNotHavePermissionToSendThisSticker";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TwoFactorAuthenticationIsRequired"] = 60003] = "TwoFactorAuthenticationIsRequired";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoUsersWithDiscordTagExist"] = 80004] = "NoUsersWithDiscordTagExist";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ReactionWasBlocked"] = 90001] = "ReactionWasBlocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserCannotUseBurstReactions"] = 90002] = "UserCannotUseBurstReactions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationNotYetAvailable"] = 110001] = "ApplicationNotYetAvailable";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["APIResourceOverloaded"] = 130000] = "APIResourceOverloaded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheStageIsAlreadyOpen"] = 150006] = "TheStageIsAlreadyOpen";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotReplyWithoutPermissionToReadMessageHistory"] = 160002] = "CannotReplyWithoutPermissionToReadMessageHistory";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadAlreadyCreatedForMessage"] = 160004] = "ThreadAlreadyCreatedForMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadLocked"] = 160005] = "ThreadLocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveThreads"] = 160006] = "MaximumActiveThreads";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveAnnouncementThreads"] = 160007] = "MaximumActiveAnnouncementThreads";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidJSONForUploadedLottieFile"] = 170001] = "InvalidJSONForUploadedLottieFile";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedLottiesCannotContainRasterizedImages"] = 170002] = "UploadedLottiesCannotContainRasterizedImages";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerMaximumFramerateExceeded"] = 170003] = "StickerMaximumFramerateExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFrameCountExceedsMaximumOf1000Frames"] = 170004] = "StickerFrameCountExceedsMaximumOf1000Frames";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["LottieAnimationMaximumDimensionsExceeded"] = 170005] = "LottieAnimationMaximumDimensionsExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFramerateIsTooSmallOrTooLarge"] = 170006] = "StickerFramerateIsTooSmallOrTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerAnimationDurationExceedsMaximumOf5Seconds"] = 170007] = "StickerAnimationDurationExceedsMaximumOf5Seconds";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateAFinishedEvent"] = 180000] = "CannotUpdateAFinishedEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToCreateStageNeededForStageEvent"] = 180002] = "FailedToCreateStageNeededForStageEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageWasBlockedByAutomaticModeration"] = 200000] = "MessageWasBlockedByAutomaticModeration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TitleWasBlockedByAutomaticModeration"] = 200001] = "TitleWasBlockedByAutomaticModeration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId"] = 220001] = "WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId"] = 220002] = "WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksCanOnlyCreateThreadsInForumChannels"] = 220003] = "WebhooksCanOnlyCreateThreadsInForumChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhookServicesCannotBeUsedInForumChannels"] = 220004] = "WebhookServicesCannotBeUsedInForumChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageBlockedByHarmfulLinksFilter"] = 240000] = "MessageBlockedByHarmfulLinksFilter";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEnableOnboardingRequirementsAreNotMet"] = 350000] = "CannotEnableOnboardingRequirementsAreNotMet";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateOnboardingWhileBelowRequirements"] = 350001] = "CannotUpdateOnboardingWhileBelowRequirements";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AccessToFileUploadsHasBeenLimitedForThisGuild"] = 400001] = "AccessToFileUploadsHasBeenLimitedForThisGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToBanUsers"] = 500000] = "FailedToBanUsers";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollVotingBlocked"] = 520000] = "PollVotingBlocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollExpired"] = 520001] = "PollExpired";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidChannelTypeForPollCreation"] = 520002] = "InvalidChannelTypeForPollCreation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditAPollMessage"] = 520003] = "CannotEditAPollMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUseAnEmojiIncludedWithThePoll"] = 520004] = "CannotUseAnEmojiIncludedWithThePoll";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExpireANonPollMessage"] = 520006] = "CannotExpireANonPollMessage";
+  })(RESTJSONErrorCodes || (exports.RESTJSONErrorCodes = RESTJSONErrorCodes = {}));
+  var Locale;
+  (function(Locale2) {
+    Locale2["Indonesian"] = "id";
+    Locale2["EnglishUS"] = "en-US";
+    Locale2["EnglishGB"] = "en-GB";
+    Locale2["Bulgarian"] = "bg";
+    Locale2["ChineseCN"] = "zh-CN";
+    Locale2["ChineseTW"] = "zh-TW";
+    Locale2["Croatian"] = "hr";
+    Locale2["Czech"] = "cs";
+    Locale2["Danish"] = "da";
+    Locale2["Dutch"] = "nl";
+    Locale2["Finnish"] = "fi";
+    Locale2["French"] = "fr";
+    Locale2["German"] = "de";
+    Locale2["Greek"] = "el";
+    Locale2["Hindi"] = "hi";
+    Locale2["Hungarian"] = "hu";
+    Locale2["Italian"] = "it";
+    Locale2["Japanese"] = "ja";
+    Locale2["Korean"] = "ko";
+    Locale2["Lithuanian"] = "lt";
+    Locale2["Norwegian"] = "no";
+    Locale2["Polish"] = "pl";
+    Locale2["PortugueseBR"] = "pt-BR";
+    Locale2["Romanian"] = "ro";
+    Locale2["Russian"] = "ru";
+    Locale2["SpanishES"] = "es-ES";
+    Locale2["SpanishLATAM"] = "es-419";
+    Locale2["Swedish"] = "sv-SE";
+    Locale2["Thai"] = "th";
+    Locale2["Turkish"] = "tr";
+    Locale2["Ukrainian"] = "uk";
+    Locale2["Vietnamese"] = "vi";
+  })(Locale || (exports.Locale = Locale = {}));
+});
+
+// node_modules/discord-api-types/rest/v10/channel.js
+var require_channel4 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ReactionType = undefined;
+  var ReactionType;
+  (function(ReactionType2) {
+    ReactionType2[ReactionType2["Normal"] = 0] = "Normal";
+    ReactionType2[ReactionType2["Super"] = 1] = "Super";
+  })(ReactionType || (exports.ReactionType = ReactionType = {}));
+});
+
+// node_modules/discord-api-types/rest/v10/monetization.js
+var require_monetization4 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.EntitlementOwnerType = undefined;
+  var EntitlementOwnerType;
+  (function(EntitlementOwnerType2) {
+    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
+    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
+  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
+});
+
+// node_modules/discord-api-types/rest/v10/index.js
+var require_v109 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
+  var internals_1 = require_internals2();
+  __exportStar(require_common5(), exports);
+  __exportStar(require_channel4(), exports);
+  __exportStar(require_monetization4(), exports);
+  exports.APIVersion = "10";
+  exports.Routes = {
+    applicationRoleConnectionMetadata(applicationId) {
+      return `/applications/${applicationId}/role-connections/metadata`;
+    },
+    guildAutoModerationRules(guildId) {
+      return `/guilds/${guildId}/auto-moderation/rules`;
+    },
+    guildAutoModerationRule(guildId, ruleId) {
+      return `/guilds/${guildId}/auto-moderation/rules/${ruleId}`;
+    },
+    guildAuditLog(guildId) {
+      return `/guilds/${guildId}/audit-logs`;
+    },
+    channel(channelId) {
+      return `/channels/${channelId}`;
+    },
+    channelMessages(channelId) {
+      return `/channels/${channelId}/messages`;
+    },
+    channelMessage(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}`;
+    },
+    channelMessageCrosspost(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}/crosspost`;
+    },
+    channelMessageOwnReaction(channelId, messageId, emoji) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/@me`;
+    },
+    channelMessageUserReaction(channelId, messageId, emoji, userId) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/${userId}`;
+    },
+    channelMessageReaction(channelId, messageId, emoji) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}`;
+    },
+    channelMessageAllReactions(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}/reactions`;
+    },
+    channelBulkDelete(channelId) {
+      return `/channels/${channelId}/messages/bulk-delete`;
+    },
+    channelPermission(channelId, overwriteId) {
+      return `/channels/${channelId}/permissions/${overwriteId}`;
+    },
+    channelInvites(channelId) {
+      return `/channels/${channelId}/invites`;
+    },
+    channelFollowers(channelId) {
+      return `/channels/${channelId}/followers`;
+    },
+    channelTyping(channelId) {
+      return `/channels/${channelId}/typing`;
+    },
+    channelMessagesPins(channelId) {
+      return `/channels/${channelId}/messages/pins`;
+    },
+    channelMessagesPin(channelId, messageId) {
+      return `/channels/${channelId}/messages/pins/${messageId}`;
+    },
+    channelPins(channelId) {
+      return `/channels/${channelId}/pins`;
+    },
+    channelPin(channelId, messageId) {
+      return `/channels/${channelId}/pins/${messageId}`;
+    },
+    channelRecipient(channelId, userId) {
+      return `/channels/${channelId}/recipients/${userId}`;
+    },
+    guildEmojis(guildId) {
+      return `/guilds/${guildId}/emojis`;
+    },
+    guildEmoji(guildId, emojiId) {
+      return `/guilds/${guildId}/emojis/${emojiId}`;
+    },
+    guilds() {
+      return "/guilds";
+    },
+    guild(guildId) {
+      return `/guilds/${guildId}`;
+    },
+    guildPreview(guildId) {
+      return `/guilds/${guildId}/preview`;
+    },
+    guildChannels(guildId) {
+      return `/guilds/${guildId}/channels`;
+    },
+    guildMember(guildId, userId = "@me") {
+      return `/guilds/${guildId}/members/${userId}`;
+    },
+    guildMembers(guildId) {
+      return `/guilds/${guildId}/members`;
+    },
+    guildMembersSearch(guildId) {
+      return `/guilds/${guildId}/members/search`;
+    },
+    guildCurrentMemberNickname(guildId) {
+      return `/guilds/${guildId}/members/@me/nick`;
+    },
+    guildMemberRole(guildId, memberId, roleId) {
+      return `/guilds/${guildId}/members/${memberId}/roles/${roleId}`;
+    },
+    guildMFA(guildId) {
+      return `/guilds/${guildId}/mfa`;
+    },
+    guildBans(guildId) {
+      return `/guilds/${guildId}/bans`;
+    },
+    guildBan(guildId, userId) {
+      return `/guilds/${guildId}/bans/${userId}`;
+    },
+    guildRoles(guildId) {
+      return `/guilds/${guildId}/roles`;
+    },
+    guildRole(guildId, roleId) {
+      return `/guilds/${guildId}/roles/${roleId}`;
+    },
+    guildPrune(guildId) {
+      return `/guilds/${guildId}/prune`;
+    },
+    guildVoiceRegions(guildId) {
+      return `/guilds/${guildId}/regions`;
+    },
+    guildInvites(guildId) {
+      return `/guilds/${guildId}/invites`;
+    },
+    guildIntegrations(guildId) {
+      return `/guilds/${guildId}/integrations`;
+    },
+    guildIntegration(guildId, integrationId) {
+      return `/guilds/${guildId}/integrations/${integrationId}`;
+    },
+    guildWidgetSettings(guildId) {
+      return `/guilds/${guildId}/widget`;
+    },
+    guildWidgetJSON(guildId) {
+      return `/guilds/${guildId}/widget.json`;
+    },
+    guildVanityUrl(guildId) {
+      return `/guilds/${guildId}/vanity-url`;
+    },
+    guildWidgetImage(guildId) {
+      return `/guilds/${guildId}/widget.png`;
+    },
+    invite(code) {
+      return `/invites/${code}`;
+    },
+    template(code) {
+      return `/guilds/templates/${code}`;
+    },
+    guildTemplates(guildId) {
+      return `/guilds/${guildId}/templates`;
+    },
+    guildTemplate(guildId, code) {
+      return `/guilds/${guildId}/templates/${code}`;
+    },
+    pollAnswerVoters(channelId, messageId, answerId) {
+      return `/channels/${channelId}/polls/${messageId}/answers/${answerId}`;
+    },
+    expirePoll(channelId, messageId) {
+      return `/channels/${channelId}/polls/${messageId}/expire`;
+    },
+    threads(parentId, messageId) {
+      const parts = ["", "channels", parentId];
+      if (messageId)
+        parts.push("messages", messageId);
+      parts.push("threads");
+      return parts.join("/");
+    },
+    guildActiveThreads(guildId) {
+      return `/guilds/${guildId}/threads/active`;
+    },
+    channelThreads(channelId, archivedStatus) {
+      return `/channels/${channelId}/threads/archived/${archivedStatus}`;
+    },
+    channelJoinedArchivedThreads(channelId) {
+      return `/channels/${channelId}/users/@me/threads/archived/private`;
+    },
+    threadMembers(threadId, userId) {
+      const parts = ["", "channels", threadId, "thread-members"];
+      if (userId)
+        parts.push(userId);
+      return parts.join("/");
+    },
+    user(userId = "@me") {
+      return `/users/${userId}`;
+    },
+    userApplicationRoleConnection(applicationId) {
+      return `/users/@me/applications/${applicationId}/role-connection`;
+    },
+    userGuilds() {
+      return `/users/@me/guilds`;
+    },
+    userGuildMember(guildId) {
+      return `/users/@me/guilds/${guildId}/member`;
+    },
+    userGuild(guildId) {
+      return `/users/@me/guilds/${guildId}`;
+    },
+    userChannels() {
+      return `/users/@me/channels`;
+    },
+    userConnections() {
+      return `/users/@me/connections`;
+    },
+    voiceRegions() {
+      return `/voice/regions`;
+    },
+    channelWebhooks(channelId) {
+      return `/channels/${channelId}/webhooks`;
+    },
+    guildWebhooks(guildId) {
+      return `/guilds/${guildId}/webhooks`;
+    },
+    webhook(webhookId, webhookToken) {
+      const parts = ["", "webhooks", webhookId];
+      if (webhookToken)
+        parts.push(webhookToken);
+      return parts.join("/");
+    },
+    webhookMessage(webhookId, webhookToken, messageId = "@original") {
+      return `/webhooks/${webhookId}/${webhookToken}/messages/${messageId}`;
+    },
+    webhookPlatform(webhookId, webhookToken, platform) {
+      return `/webhooks/${webhookId}/${webhookToken}/${platform}`;
+    },
+    gateway() {
+      return `/gateway`;
+    },
+    gatewayBot() {
+      return `/gateway/bot`;
+    },
+    oauth2CurrentApplication() {
+      return `/oauth2/applications/@me`;
+    },
+    oauth2CurrentAuthorization() {
+      return `/oauth2/@me`;
+    },
+    oauth2Authorization() {
+      return `/oauth2/authorize`;
+    },
+    oauth2TokenExchange() {
+      return `/oauth2/token`;
+    },
+    oauth2TokenRevocation() {
+      return `/oauth2/token/revoke`;
+    },
+    applicationCommands(applicationId) {
+      return `/applications/${applicationId}/commands`;
+    },
+    applicationCommand(applicationId, commandId) {
+      return `/applications/${applicationId}/commands/${commandId}`;
+    },
+    applicationGuildCommands(applicationId, guildId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands`;
+    },
+    applicationGuildCommand(applicationId, guildId, commandId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}`;
+    },
+    interactionCallback(interactionId, interactionToken) {
+      return `/interactions/${interactionId}/${interactionToken}/callback`;
+    },
+    guildMemberVerification(guildId) {
+      return `/guilds/${guildId}/member-verification`;
+    },
+    guildVoiceState(guildId, userId = "@me") {
+      return `/guilds/${guildId}/voice-states/${userId}`;
+    },
+    guildApplicationCommandsPermissions(applicationId, guildId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/permissions`;
+    },
+    applicationCommandPermissions(applicationId, guildId, commandId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}/permissions`;
+    },
+    guildWelcomeScreen(guildId) {
+      return `/guilds/${guildId}/welcome-screen`;
+    },
+    stageInstances() {
+      return `/stage-instances`;
+    },
+    stageInstance(channelId) {
+      return `/stage-instances/${channelId}`;
+    },
+    sticker(stickerId) {
+      return `/stickers/${stickerId}`;
+    },
+    stickerPacks() {
+      return "/sticker-packs";
+    },
+    stickerPack(packId) {
+      return `/sticker-packs/${packId}`;
+    },
+    nitroStickerPacks() {
+      return "/sticker-packs";
+    },
+    guildStickers(guildId) {
+      return `/guilds/${guildId}/stickers`;
+    },
+    guildSticker(guildId, stickerId) {
+      return `/guilds/${guildId}/stickers/${stickerId}`;
+    },
+    guildScheduledEvents(guildId) {
+      return `/guilds/${guildId}/scheduled-events`;
+    },
+    guildScheduledEvent(guildId, guildScheduledEventId) {
+      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}`;
+    },
+    guildScheduledEventUsers(guildId, guildScheduledEventId) {
+      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}/users`;
+    },
+    guildOnboarding(guildId) {
+      return `/guilds/${guildId}/onboarding`;
+    },
+    guildIncidentActions(guildId) {
+      return `/guilds/${guildId}/incident-actions`;
+    },
+    currentApplication() {
+      return "/applications/@me";
+    },
+    entitlements(applicationId) {
+      return `/applications/${applicationId}/entitlements`;
+    },
+    entitlement(applicationId, entitlementId) {
+      return `/applications/${applicationId}/entitlements/${entitlementId}`;
+    },
+    skus(applicationId) {
+      return `/applications/${applicationId}/skus`;
+    },
+    guildBulkBan(guildId) {
+      return `/guilds/${guildId}/bulk-ban`;
+    },
+    consumeEntitlement(applicationId, entitlementId) {
+      return `/applications/${applicationId}/entitlements/${entitlementId}/consume`;
+    },
+    applicationEmojis(applicationId) {
+      return `/applications/${applicationId}/emojis`;
+    },
+    applicationEmoji(applicationId, emojiId) {
+      return `/applications/${applicationId}/emojis/${emojiId}`;
+    },
+    skuSubscriptions(skuId) {
+      return `/skus/${skuId}/subscriptions`;
+    },
+    skuSubscription(skuId, subscriptionId) {
+      return `/skus/${skuId}/subscriptions/${subscriptionId}`;
+    },
+    sendSoundboardSound(channelId) {
+      return `/channels/${channelId}/send-soundboard-sound`;
+    },
+    soundboardDefaultSounds() {
+      return "/soundboard-default-sounds";
+    },
+    guildSoundboardSounds(guildId) {
+      return `/guilds/${guildId}/soundboard-sounds`;
+    },
+    guildSoundboardSound(guildId, soundId) {
+      return `/guilds/${guildId}/soundboard-sounds/${soundId}`;
+    }
+  };
+  for (const [key, fn] of Object.entries(exports.Routes)) {
+    exports.Routes[key] = (...args) => {
+      const escaped = args.map((arg) => {
+        if (arg) {
+          if (internals_1.urlSafeCharacters.test(String(arg))) {
+            return arg;
+          }
+          return encodeURIComponent(arg);
+        }
+        return arg;
+      });
+      return fn.call(null, ...escaped);
+    };
+  }
+  Object.freeze(exports.Routes);
+  exports.StickerPackApplicationId = "710982414301790216";
+  var ImageFormat;
+  (function(ImageFormat2) {
+    ImageFormat2["JPEG"] = "jpeg";
+    ImageFormat2["PNG"] = "png";
+    ImageFormat2["WebP"] = "webp";
+    ImageFormat2["GIF"] = "gif";
+    ImageFormat2["Lottie"] = "json";
+  })(ImageFormat || (exports.ImageFormat = ImageFormat = {}));
+  exports.CDNRoutes = {
+    emoji(emojiId, format) {
+      return `/emojis/${emojiId}.${format}`;
+    },
+    guildIcon(guildId, guildIcon, format) {
+      return `/icons/${guildId}/${guildIcon}.${format}`;
+    },
+    guildSplash(guildId, guildSplash, format) {
+      return `/splashes/${guildId}/${guildSplash}.${format}`;
+    },
+    guildDiscoverySplash(guildId, guildDiscoverySplash, format) {
+      return `/discovery-splashes/${guildId}/${guildDiscoverySplash}.${format}`;
+    },
+    guildBanner(guildId, guildBanner, format) {
+      return `/banners/${guildId}/${guildBanner}.${format}`;
+    },
+    userBanner(userId, userBanner, format) {
+      return `/banners/${userId}/${userBanner}.${format}`;
+    },
+    defaultUserAvatar(index) {
+      return `/embed/avatars/${index}.png`;
+    },
+    userAvatar(userId, userAvatar, format) {
+      return `/avatars/${userId}/${userAvatar}.${format}`;
+    },
+    guildMemberAvatar(guildId, userId, memberAvatar, format) {
+      return `/guilds/${guildId}/users/${userId}/avatars/${memberAvatar}.${format}`;
+    },
+    userAvatarDecoration(userId, userAvatarDecoration) {
+      return `/avatar-decorations/${userId}/${userAvatarDecoration}.png`;
+    },
+    avatarDecoration(avatarDecorationDataAsset) {
+      return `/avatar-decoration-presets/${avatarDecorationDataAsset}.png`;
+    },
+    applicationIcon(applicationId, applicationIcon, format) {
+      return `/app-icons/${applicationId}/${applicationIcon}.${format}`;
+    },
+    applicationCover(applicationId, applicationCoverImage, format) {
+      return `/app-icons/${applicationId}/${applicationCoverImage}.${format}`;
+    },
+    applicationAsset(applicationId, applicationAssetId, format) {
+      return `/app-assets/${applicationId}/${applicationAssetId}.${format}`;
+    },
+    achievementIcon(applicationId, achievementId, achievementIconHash, format) {
+      return `/app-assets/${applicationId}/achievements/${achievementId}/icons/${achievementIconHash}.${format}`;
+    },
+    stickerPackBanner(stickerPackBannerAssetId, format) {
+      return `/app-assets/${exports.StickerPackApplicationId}/store/${stickerPackBannerAssetId}.${format}`;
+    },
+    storePageAsset(applicationId, assetId, format = ImageFormat.PNG) {
+      return `/app-assets/${applicationId}/store/${assetId}.${format}`;
+    },
+    teamIcon(teamId, teamIcon, format) {
+      return `/team-icons/${teamId}/${teamIcon}.${format}`;
+    },
+    sticker(stickerId, format) {
+      return `/stickers/${stickerId}.${format}`;
+    },
+    roleIcon(roleId, roleIcon, format) {
+      return `/role-icons/${roleId}/${roleIcon}.${format}`;
+    },
+    guildScheduledEventCover(guildScheduledEventId, guildScheduledEventCoverImage, format) {
+      return `/guild-events/${guildScheduledEventId}/${guildScheduledEventCoverImage}.${format}`;
+    },
+    guildMemberBanner(guildId, userId, guildMemberBanner, format) {
+      return `/guilds/${guildId}/users/${userId}/banners/${guildMemberBanner}.${format}`;
+    },
+    soundboardSound(soundId) {
+      return `/soundboard-sounds/${soundId}`;
+    },
+    guildTagBadge(guildId, guildTagBadge, format) {
+      return `/guild-tag-badges/${guildId}/${guildTagBadge}.${format}`;
+    }
+  };
+  for (const [key, fn] of Object.entries(exports.CDNRoutes)) {
+    exports.CDNRoutes[key] = (...args) => {
+      const escaped = args.map((arg) => {
+        if (arg) {
+          if (internals_1.urlSafeCharacters.test(String(arg))) {
+            return arg;
+          }
+          return encodeURIComponent(arg);
+        }
+        return arg;
+      });
+      return fn.call(null, ...escaped);
+    };
+  }
+  Object.freeze(exports.CDNRoutes);
+  exports.RouteBases = {
+    api: `https://discord.com/api/v${exports.APIVersion}`,
+    cdn: "https://cdn.discordapp.com",
+    media: "https://media.discordapp.net",
+    invite: "https://discord.gg",
+    template: "https://discord.new",
+    gift: "https://discord.gift",
+    scheduledEvent: "https://discord.com/events"
+  };
+  Object.freeze(exports.RouteBases);
+  exports.OAuth2Routes = {
+    authorizationURL: `${exports.RouteBases.api}${exports.Routes.oauth2Authorization()}`,
+    tokenURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenExchange()}`,
+    tokenRevocationURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenRevocation()}`
+  };
+  Object.freeze(exports.OAuth2Routes);
+});
+
+// node_modules/discord-api-types/rpc/common.js
+var require_common6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RPCCloseEventCodes = exports.RPCErrorCodes = exports.RelationshipType = exports.VoiceConnectionStates = exports.RPCVoiceShortcutKeyComboKeyType = exports.RPCVoiceSettingsModeType = exports.RPCDeviceType = undefined;
+  var RPCDeviceType;
+  (function(RPCDeviceType2) {
+    RPCDeviceType2["AudioInput"] = "audioinput";
+    RPCDeviceType2["AudioOutput"] = "audiooutput";
+    RPCDeviceType2["VideoInput"] = "videoinput";
+  })(RPCDeviceType || (exports.RPCDeviceType = RPCDeviceType = {}));
+  var RPCVoiceSettingsModeType;
+  (function(RPCVoiceSettingsModeType2) {
+    RPCVoiceSettingsModeType2["PushToTalk"] = "PUSH_TO_TALK";
+    RPCVoiceSettingsModeType2["VoiceActivity"] = "VOICE_ACTIVITY";
+  })(RPCVoiceSettingsModeType || (exports.RPCVoiceSettingsModeType = RPCVoiceSettingsModeType = {}));
+  var RPCVoiceShortcutKeyComboKeyType;
+  (function(RPCVoiceShortcutKeyComboKeyType2) {
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardKey"] = 0] = "KeyboardKey";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["MouseButton"] = 1] = "MouseButton";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardModifierKey"] = 2] = "KeyboardModifierKey";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["GamepadButton"] = 3] = "GamepadButton";
+  })(RPCVoiceShortcutKeyComboKeyType || (exports.RPCVoiceShortcutKeyComboKeyType = RPCVoiceShortcutKeyComboKeyType = {}));
+  var VoiceConnectionStates;
+  (function(VoiceConnectionStates2) {
+    VoiceConnectionStates2["Disconnected"] = "DISCONNECTED";
+    VoiceConnectionStates2["AwaitingEndpoint"] = "AWAITING_ENDPOINT";
+    VoiceConnectionStates2["Authenticating"] = "AUTHENTICATING";
+    VoiceConnectionStates2["Connecting"] = "CONNECTING";
+    VoiceConnectionStates2["Connected"] = "CONNECTED";
+    VoiceConnectionStates2["VoiceDisconnected"] = "VOICE_DISCONNECTED";
+    VoiceConnectionStates2["VoiceConnecting"] = "VOICE_CONNECTING";
+    VoiceConnectionStates2["VoiceConnected"] = "VOICE_CONNECTED";
+    VoiceConnectionStates2["NoRoute"] = "NO_ROUTE";
+    VoiceConnectionStates2["IceChecking"] = "ICE_CHECKING";
+  })(VoiceConnectionStates || (exports.VoiceConnectionStates = VoiceConnectionStates = {}));
+  var RelationshipType;
+  (function(RelationshipType2) {
+    RelationshipType2[RelationshipType2["None"] = 0] = "None";
+    RelationshipType2[RelationshipType2["Friend"] = 1] = "Friend";
+    RelationshipType2[RelationshipType2["Blocked"] = 2] = "Blocked";
+    RelationshipType2[RelationshipType2["PendingIncoming"] = 3] = "PendingIncoming";
+    RelationshipType2[RelationshipType2["PendingOutgoing"] = 4] = "PendingOutgoing";
+    RelationshipType2[RelationshipType2["Implicit"] = 5] = "Implicit";
+  })(RelationshipType || (exports.RelationshipType = RelationshipType = {}));
+  var RPCErrorCodes;
+  (function(RPCErrorCodes2) {
+    RPCErrorCodes2[RPCErrorCodes2["UnknownError"] = 1000] = "UnknownError";
+    RPCErrorCodes2[RPCErrorCodes2["ServiceUnavailable"] = 1001] = "ServiceUnavailable";
+    RPCErrorCodes2[RPCErrorCodes2["TransactionAborted"] = 1002] = "TransactionAborted";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidPayload"] = 4000] = "InvalidPayload";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidCommand"] = 4002] = "InvalidCommand";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidGuild"] = 4003] = "InvalidGuild";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidEvent"] = 4004] = "InvalidEvent";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidChannel"] = 4005] = "InvalidChannel";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidPermissions"] = 4006] = "InvalidPermissions";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidClientId"] = 4007] = "InvalidClientId";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidOrigin"] = 4008] = "InvalidOrigin";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidToken"] = 4009] = "InvalidToken";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidUser"] = 4010] = "InvalidUser";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidInvite"] = 4011] = "InvalidInvite";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidActivityJoinRequest"] = 4012] = "InvalidActivityJoinRequest";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidEntitlement"] = 4013] = "InvalidEntitlement";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidGiftCode"] = 4014] = "InvalidGiftCode";
+    RPCErrorCodes2[RPCErrorCodes2["OAuth2Error"] = 5000] = "OAuth2Error";
+    RPCErrorCodes2[RPCErrorCodes2["SelectChannelTimedOut"] = 5001] = "SelectChannelTimedOut";
+    RPCErrorCodes2[RPCErrorCodes2["GetGuildTimedOut"] = 5002] = "GetGuildTimedOut";
+    RPCErrorCodes2[RPCErrorCodes2["SelectVoiceForceRequired"] = 5003] = "SelectVoiceForceRequired";
+    RPCErrorCodes2[RPCErrorCodes2["CaptureShortcutAlreadyListening"] = 5004] = "CaptureShortcutAlreadyListening";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidActivitySecret"] = 5005] = "InvalidActivitySecret";
+    RPCErrorCodes2[RPCErrorCodes2["NoEligibleActivity"] = 5006] = "NoEligibleActivity";
+    RPCErrorCodes2[RPCErrorCodes2["PurchaseCanceled"] = 5007] = "PurchaseCanceled";
+    RPCErrorCodes2[RPCErrorCodes2["PurchaseError"] = 5008] = "PurchaseError";
+    RPCErrorCodes2[RPCErrorCodes2["UnauthorizedForAchievement"] = 5009] = "UnauthorizedForAchievement";
+    RPCErrorCodes2[RPCErrorCodes2["RateLimited"] = 5010] = "RateLimited";
+  })(RPCErrorCodes || (exports.RPCErrorCodes = RPCErrorCodes = {}));
+  var RPCCloseEventCodes;
+  (function(RPCCloseEventCodes2) {
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseNormal"] = 1000] = "CloseNormal";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseUnsupported"] = 1003] = "CloseUnsupported";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseAbnormal"] = 1006] = "CloseAbnormal";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidClientId"] = 4000] = "InvalidClientId";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidOrigin"] = 4001] = "InvalidOrigin";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["RateLimited"] = 4002] = "RateLimited";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["TokenRevoked"] = 4003] = "TokenRevoked";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidVersion"] = 4004] = "InvalidVersion";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidEncoding"] = 4005] = "InvalidEncoding";
+  })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
+});
+
+// node_modules/discord-api-types/rpc/v10.js
+var require_v1010 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RPCEvents = exports.RPCCommands = exports.RPCVersion = undefined;
+  __exportStar(require_common6(), exports);
+  exports.RPCVersion = "1";
+  var RPCCommands;
+  (function(RPCCommands2) {
+    RPCCommands2["AcceptActivityInvite"] = "ACCEPT_ACTIVITY_INVITE";
+    RPCCommands2["ActivityInviteUser"] = "ACTIVITY_INVITE_USER";
+    RPCCommands2["Authenticate"] = "AUTHENTICATE";
+    RPCCommands2["Authorize"] = "AUTHORIZE";
+    RPCCommands2["BraintreePopupBridgeCallback"] = "BRAINTREE_POPUP_BRIDGE_CALLBACK";
+    RPCCommands2["BrowserHandoff"] = "BROWSER_HANDOFF";
+    RPCCommands2["CloseActivityJoinRequest"] = "CLOSE_ACTIVITY_JOIN_REQUEST";
+    RPCCommands2["ConnectionsCallback"] = "CONNECTIONS_CALLBACK";
+    RPCCommands2["CreateChannelInvite"] = "CREATE_CHANNEL_INVITE";
+    RPCCommands2["DeepLink"] = "DEEP_LINK";
+    RPCCommands2["Dispatch"] = "DISPATCH";
+    RPCCommands2["GetApplicationTicket"] = "GET_APPLICATION_TICKET";
+    RPCCommands2["GetChannel"] = "GET_CHANNEL";
+    RPCCommands2["GetChannels"] = "GET_CHANNELS";
+    RPCCommands2["GetEntitlementTicket"] = "GET_ENTITLEMENT_TICKET";
+    RPCCommands2["GetEntitlements"] = "GET_ENTITLEMENTS";
+    RPCCommands2["GetGuild"] = "GET_GUILD";
+    RPCCommands2["GetGuilds"] = "GET_GUILDS";
+    RPCCommands2["GetImage"] = "GET_IMAGE";
+    RPCCommands2["GetNetworkingConfig"] = "GET_NETWORKING_CONFIG";
+    RPCCommands2["GetRelationships"] = "GET_RELATIONSHIPS";
+    RPCCommands2["GetSelectedVoiceChannel"] = "GET_SELECTED_VOICE_CHANNEL";
+    RPCCommands2["GetSkus"] = "GET_SKUS";
+    RPCCommands2["GetUser"] = "GET_USER";
+    RPCCommands2["GetVoiceSettings"] = "GET_VOICE_SETTINGS";
+    RPCCommands2["GiftCodeBrowser"] = "GIFT_CODE_BROWSER";
+    RPCCommands2["GuildTemplateBrowser"] = "GUILD_TEMPLATE_BROWSER";
+    RPCCommands2["InviteBrowser"] = "INVITE_BROWSER";
+    RPCCommands2["NetworkingCreateToken"] = "NETWORKING_CREATE_TOKEN";
+    RPCCommands2["NetworkingPeerMetrics"] = "NETWORKING_PEER_METRICS";
+    RPCCommands2["NetworkingSystemMetrics"] = "NETWORKING_SYSTEM_METRICS";
+    RPCCommands2["OpenOverlayActivityInvite"] = "OPEN_OVERLAY_ACTIVITY_INVITE";
+    RPCCommands2["OpenOverlayGuildInvite"] = "OPEN_OVERLAY_GUILD_INVITE";
+    RPCCommands2["OpenOverlayVoiceSettings"] = "OPEN_OVERLAY_VOICE_SETTINGS";
+    RPCCommands2["Overlay"] = "OVERLAY";
+    RPCCommands2["SelectTextChannel"] = "SELECT_TEXT_CHANNEL";
+    RPCCommands2["SelectVoiceChannel"] = "SELECT_VOICE_CHANNEL";
+    RPCCommands2["SendActivityJoinInvite"] = "SEND_ACTIVITY_JOIN_INVITE";
+    RPCCommands2["SetActivity"] = "SET_ACTIVITY";
+    RPCCommands2["SetCertifiedDevices"] = "SET_CERTIFIED_DEVICES";
+    RPCCommands2["SetOverlayLocked"] = "SET_OVERLAY_LOCKED";
+    RPCCommands2["SetUserVoiceSettings"] = "SET_USER_VOICE_SETTINGS";
+    RPCCommands2["SetUserVoiceSettings2"] = "SET_USER_VOICE_SETTINGS_2";
+    RPCCommands2["SetVoiceSettings"] = "SET_VOICE_SETTINGS";
+    RPCCommands2["SetVoiceSettings2"] = "SET_VOICE_SETTINGS_2";
+    RPCCommands2["StartPurchase"] = "START_PURCHASE";
+    RPCCommands2["Subscribe"] = "SUBSCRIBE";
+    RPCCommands2["Unsubscribe"] = "UNSUBSCRIBE";
+    RPCCommands2["ValidateApplication"] = "VALIDATE_APPLICATION";
+  })(RPCCommands || (exports.RPCCommands = RPCCommands = {}));
+  var RPCEvents;
+  (function(RPCEvents2) {
+    RPCEvents2["ActivityInvite"] = "ACTIVITY_INVITE";
+    RPCEvents2["ActivityJoin"] = "ACTIVITY_JOIN";
+    RPCEvents2["ActivityJoinRequest"] = "ACTIVITY_JOIN_REQUEST";
+    RPCEvents2["ActivitySpectate"] = "ACTIVITY_SPECTATE";
+    RPCEvents2["ChannelCreate"] = "CHANNEL_CREATE";
+    RPCEvents2["CurrentUserUpdate"] = "CURRENT_USER_UPDATE";
+    RPCEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    RPCEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
+    RPCEvents2["Error"] = "ERROR";
+    RPCEvents2["GameJoin"] = "GAME_JOIN";
+    RPCEvents2["GameSpectate"] = "GAME_SPECTATE";
+    RPCEvents2["GuildCreate"] = "GUILD_CREATE";
+    RPCEvents2["GuildStatus"] = "GUILD_STATUS";
+    RPCEvents2["MessageCreate"] = "MESSAGE_CREATE";
+    RPCEvents2["MessageDelete"] = "MESSAGE_DELETE";
+    RPCEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
+    RPCEvents2["NotificationCreate"] = "NOTIFICATION_CREATE";
+    RPCEvents2["Overlay"] = "OVERLAY";
+    RPCEvents2["OverlayUpdate"] = "OVERLAY_UPDATE";
+    RPCEvents2["Ready"] = "READY";
+    RPCEvents2["RelationshipUpdate"] = "RELATIONSHIP_UPDATE";
+    RPCEvents2["SpeakingStart"] = "SPEAKING_START";
+    RPCEvents2["SpeakingStop"] = "SPEAKING_STOP";
+    RPCEvents2["VoiceChannelSelect"] = "VOICE_CHANNEL_SELECT";
+    RPCEvents2["VoiceConnectionStatus"] = "VOICE_CONNECTION_STATUS";
+    RPCEvents2["VoiceSettingsUpdate"] = "VOICE_SETTINGS_UPDATE";
+    RPCEvents2["VoiceSettingsUpdate2"] = "VOICE_SETTINGS_UPDATE_2";
+    RPCEvents2["VoiceStateCreate"] = "VOICE_STATE_CREATE";
+    RPCEvents2["VoiceStateDelete"] = "VOICE_STATE_DELETE";
+    RPCEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
+  })(RPCEvents || (exports.RPCEvents = RPCEvents = {}));
+});
+
+// node_modules/discord-api-types/utils/v10.js
+var require_v1011 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.isDMInteraction = isDMInteraction;
+  exports.isGuildInteraction = isGuildInteraction;
+  exports.isApplicationCommandDMInteraction = isApplicationCommandDMInteraction;
+  exports.isApplicationCommandGuildInteraction = isApplicationCommandGuildInteraction;
+  exports.isMessageComponentDMInteraction = isMessageComponentDMInteraction;
+  exports.isMessageComponentGuildInteraction = isMessageComponentGuildInteraction;
+  exports.isLinkButton = isLinkButton;
+  exports.isInteractionButton = isInteractionButton;
+  exports.isMessageComponentInteraction = isMessageComponentInteraction;
+  exports.isMessageComponentButtonInteraction = isMessageComponentButtonInteraction;
+  exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
+  exports.isChatInputApplicationCommandInteraction = isChatInputApplicationCommandInteraction;
+  exports.isContextMenuApplicationCommandInteraction = isContextMenuApplicationCommandInteraction;
+  var index_1 = require_v108();
+  function isDMInteraction(interaction) {
+    return Reflect.has(interaction, "user");
+  }
+  function isGuildInteraction(interaction) {
+    return Reflect.has(interaction, "guild_id");
+  }
+  function isApplicationCommandDMInteraction(interaction) {
+    return isDMInteraction(interaction);
+  }
+  function isApplicationCommandGuildInteraction(interaction) {
+    return isGuildInteraction(interaction);
+  }
+  function isMessageComponentDMInteraction(interaction) {
+    return isDMInteraction(interaction);
+  }
+  function isMessageComponentGuildInteraction(interaction) {
+    return isGuildInteraction(interaction);
+  }
+  function isLinkButton(component) {
+    return component.style === index_1.ButtonStyle.Link;
+  }
+  function isInteractionButton(component) {
+    return ![index_1.ButtonStyle.Link, index_1.ButtonStyle.Premium].includes(component.style);
+  }
+  function isMessageComponentInteraction(interaction) {
+    return interaction.type === index_1.InteractionType.MessageComponent;
+  }
+  function isMessageComponentButtonInteraction(interaction) {
+    return interaction.data.component_type === index_1.ComponentType.Button;
+  }
+  function isMessageComponentSelectMenuInteraction(interaction) {
+    return [
+      index_1.ComponentType.StringSelect,
+      index_1.ComponentType.UserSelect,
+      index_1.ComponentType.RoleSelect,
+      index_1.ComponentType.MentionableSelect,
+      index_1.ComponentType.ChannelSelect
+    ].includes(interaction.data.component_type);
+  }
+  function isChatInputApplicationCommandInteraction(interaction) {
+    return interaction.data.type === index_1.ApplicationCommandType.ChatInput;
+  }
+  function isContextMenuApplicationCommandInteraction(interaction) {
+    return interaction.data.type === index_1.ApplicationCommandType.Message || interaction.data.type === index_1.ApplicationCommandType.User;
+  }
+});
+
+// node_modules/discord-api-types/v10.js
+var require_v1012 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.Utils = undefined;
+  __exportStar(require_v107(), exports);
+  __exportStar(require_globals2(), exports);
+  __exportStar(require_v108(), exports);
+  __exportStar(require_v109(), exports);
+  __exportStar(require_v1010(), exports);
+  __exportStar(require_internals2(), exports);
+  exports.Utils = require_v1011();
+});
+
 // node_modules/discord.js/src/errors/ErrorCodes.js
 var require_ErrorCodes = __commonJS((exports, module) => {
   var keys = [
@@ -6898,6 +9361,8 @@ var require_ErrorCodes = __commonJS((exports, module) => {
     "AutocompleteInteractionOptionNoFocusedOption",
     "ModalSubmitInteractionFieldNotFound",
     "ModalSubmitInteractionFieldType",
+    "ModalSubmitInteractionFieldEmpty",
+    "ModalSubmitInteractionFieldInvalidChannelType",
     "InvalidMissingScopes",
     "InvalidScopesWithPermissions",
     "NotImplemented",
@@ -7020,6 +9485,8 @@ var require_Messages = __commonJS((exports, module) => {
     [DjsErrorCodes.AutocompleteInteractionOptionNoFocusedOption]: "No focused option for autocomplete interaction.",
     [DjsErrorCodes.ModalSubmitInteractionFieldNotFound]: (customId) => `Required field with custom id "${customId}" not found.`,
     [DjsErrorCodes.ModalSubmitInteractionFieldType]: (customId, type, expected) => `Field with custom id "${customId}" is of type: ${type}; expected ${expected}.`,
+    [DjsErrorCodes.ModalSubmitInteractionFieldEmpty]: (customId, type) => `Required field with custom id "${customId}" is of type: ${type}; expected a non-empty value.`,
+    [DjsErrorCodes.ModalSubmitInteractionFieldInvalidChannelType]: (customId, type, expected) => `The type of channel of the field with custom id "${customId}" is: ${type}; expected ${expected}.`,
     [DjsErrorCodes.InvalidMissingScopes]: "At least one valid scope must be provided for the invite",
     [DjsErrorCodes.InvalidScopesWithPermissions]: "Permissions cannot be set without the bot scope.",
     [DjsErrorCodes.NotImplemented]: (what, name) => `Method ${what} not implemented on ${name}.`,
@@ -7894,7 +10361,7 @@ var require_BitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/AttachmentFlagsBitField.js
 var require_AttachmentFlagsBitField = __commonJS((exports, module) => {
-  var { AttachmentFlags } = require_v106();
+  var { AttachmentFlags } = require_v1012();
   var BitField = require_BitField();
 
   class AttachmentFlagsBitField extends BitField {
@@ -8392,7 +10859,7 @@ var require_Base = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/ChannelFlagsBitField.js
 var require_ChannelFlagsBitField = __commonJS((exports, module) => {
-  var { ChannelFlags } = require_v106();
+  var { ChannelFlags } = require_v1012();
   var BitField = require_BitField();
 
   class ChannelFlagsBitField extends BitField {
@@ -8403,7 +10870,7 @@ var require_ChannelFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/Constants.js
 var require_Constants = __commonJS((exports) => {
-  var { ChannelType, MessageType, ComponentType, ImageFormat, StickerFormatType } = require_v106();
+  var { ChannelType, MessageType, ComponentType, ImageFormat, StickerFormatType } = require_v1012();
   exports.MaxBulkDeletableMessageAge = 1209600000;
   exports.SweeperKeys = [
     "autoModerationRules",
@@ -8497,7 +10964,7 @@ var require_Constants = __commonJS((exports) => {
 var require_BaseChannel = __commonJS((exports) => {
   var { channelLink, channelMention } = require_dist7();
   var { DiscordSnowflake } = require_cjs();
-  var { ChannelType, Routes } = require_v106();
+  var { ChannelType, Routes } = require_v1012();
   var Base = require_Base();
   var ChannelFlagsBitField = require_ChannelFlagsBitField();
   var { ThreadChannelTypes } = require_Constants();
@@ -8655,7 +11122,7 @@ var require_CachedManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/PermissionsBitField.js
 var require_PermissionsBitField = __commonJS((exports, module) => {
-  var { PermissionFlagsBits } = require_v106();
+  var { PermissionFlagsBits } = require_v1012();
   var BitField = require_BitField();
 
   class PermissionsBitField extends BitField {
@@ -8682,7 +11149,7 @@ var require_PermissionsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/RoleFlagsBitField.js
 var require_RoleFlagsBitField = __commonJS((exports, module) => {
-  var { RoleFlags } = require_v106();
+  var { RoleFlags } = require_v1012();
   var BitField = require_BitField();
 
   class RoleFlagsBitField extends BitField {
@@ -8695,7 +11162,7 @@ var require_RoleFlagsBitField = __commonJS((exports, module) => {
 var require_Role = __commonJS((exports) => {
   var { roleMention } = require_dist7();
   var { DiscordSnowflake } = require_cjs();
-  var { PermissionFlagsBits } = require_v106();
+  var { PermissionFlagsBits } = require_v1012();
   var Base = require_Base();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var PermissionsBitField = require_PermissionsBitField();
@@ -8860,7 +11327,7 @@ var require_Role = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/PermissionOverwrites.js
 var require_PermissionOverwrites = __commonJS((exports, module) => {
-  var { OverwriteType } = require_v106();
+  var { OverwriteType } = require_v1012();
   var Base = require_Base();
   var { Role } = require_Role();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -8949,7 +11416,7 @@ var require_PermissionOverwrites = __commonJS((exports, module) => {
 var require_PermissionOverwriteManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
-  var { OverwriteType, Routes } = require_v106();
+  var { OverwriteType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var PermissionOverwrites = require_PermissionOverwrites();
@@ -9016,7 +11483,7 @@ var require_PermissionOverwriteManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/GuildChannel.js
 var require_GuildChannel = __commonJS((exports, module) => {
   var { Snowflake } = require_cjs();
-  var { PermissionFlagsBits, ChannelType } = require_v106();
+  var { PermissionFlagsBits, ChannelType } = require_v1012();
   var { BaseChannel } = require_BaseChannel();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var PermissionOverwriteManager = require_PermissionOverwriteManager();
@@ -9236,7 +11703,7 @@ var require_GuildChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/SKUFlagsBitField.js
 var require_SKUFlagsBitField = __commonJS((exports) => {
-  var { SKUFlags } = require_v106();
+  var { SKUFlags } = require_v1012();
   var BitField = require_BitField();
 
   class SKUFlagsBitField extends BitField {
@@ -9269,7 +11736,7 @@ var require_Util = __commonJS((exports, module) => {
   var { parse } = __require("path");
   var process2 = __require("process");
   var { Collection } = require_dist6();
-  var { ChannelType, RouteBases, Routes } = require_v106();
+  var { ChannelType, RouteBases, Routes } = require_v1012();
   var { fetch: fetch2 } = __require("undici");
   var Colors = require_Colors();
   var { DiscordjsError, DiscordjsRangeError, DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -9650,7 +12117,7 @@ var require_package = __commonJS((exports, module) => {
   module.exports = {
     $schema: "https://json.schemastore.org/package.json",
     name: "discord.js",
-    version: "14.22.1",
+    version: "14.23.2",
     description: "A powerful library for interacting with the Discord API",
     main: "./src/index.js",
     types: "./typings/index.d.ts",
@@ -9702,19 +12169,19 @@ var require_package = __commonJS((exports, module) => {
     homepage: "https://discord.js.org",
     funding: "https://github.com/discordjs/discord.js?sponsor",
     dependencies: {
-      "@discordjs/builders": "^1.11.2",
+      "@discordjs/builders": "^1.12.1",
       "@discordjs/collection": "1.5.3",
       "@discordjs/formatters": "^0.6.1",
       "@discordjs/ws": "^1.2.3",
       "@sapphire/snowflake": "3.5.3",
-      "discord-api-types": "^0.38.16",
+      "discord-api-types": "^0.38.29",
       "fast-deep-equal": "3.1.3",
       "lodash.snakecase": "4.1.1",
       "magic-bytes.js": "^1.10.0",
       tslib: "^2.6.3",
       undici: "6.21.3",
-      "@discordjs/util": "^1.1.1",
-      "@discordjs/rest": "^2.6.0"
+      "@discordjs/rest": "^2.6.0",
+      "@discordjs/util": "^1.1.1"
     },
     devDependencies: {
       "@favware/cliff-jumper": "^4.1.0",
@@ -9874,7 +12341,7 @@ var require_Options = __commonJS((exports, module) => {
 var require_BaseClient = __commonJS((exports, module) => {
   var EventEmitter = __require("events");
   var { REST } = require_dist5();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var Options = require_Options();
   var { flatten } = require_Util();
@@ -9938,415 +12405,56 @@ var require_BaseClient = __commonJS((exports, module) => {
   module.exports = BaseClient;
 });
 
-// node_modules/discord.js/src/util/Enums.js
-var require_Enums = __commonJS((exports, module) => {
-  function createEnum(keys) {
-    const obj = {};
-    for (const [index, key] of keys.entries()) {
-      if (key === null)
-        continue;
-      obj[key] = index;
-      obj[index] = key;
-    }
-    return obj;
-  }
-  module.exports = { createEnum };
-});
+// node_modules/discord.js/src/structures/Emoji.js
+var require_Emoji = __commonJS((exports) => {
+  var process2 = __require("process");
+  var { formatEmoji } = require_dist7();
+  var { DiscordSnowflake } = require_cjs();
+  var Base = require_Base();
+  var deprecationEmittedForURL = false;
 
-// node_modules/discord.js/src/util/Partials.js
-var require_Partials = __commonJS((exports, module) => {
-  var { createEnum } = require_Enums();
-  module.exports = createEnum([
-    "User",
-    "Channel",
-    "GuildMember",
-    "Message",
-    "Reaction",
-    "GuildScheduledEvent",
-    "ThreadMember",
-    "SoundboardSound"
-  ]);
-});
-
-// node_modules/discord.js/src/client/actions/Action.js
-var require_Action = __commonJS((exports, module) => {
-  var Partials = require_Partials();
-
-  class GenericAction {
-    constructor(client) {
-      this.client = client;
+  class Emoji extends Base {
+    constructor(client, emoji) {
+      super(client);
+      this.animated = emoji.animated ?? null;
+      this.name = emoji.name ?? null;
+      this.id = emoji.id ?? null;
     }
-    handle(data) {
-      return data;
+    get identifier() {
+      if (this.id)
+        return `${this.animated ? "a:" : ""}${this.name}:${this.id}`;
+      return encodeURIComponent(this.name);
     }
-    getPayload(data, manager, id, partialType, cache) {
-      return this.client.options.partials.includes(partialType) ? manager._add(data, cache) : manager.cache.get(id);
+    imageURL(options) {
+      return this.id && this.client.rest.cdn.emoji(this.id, options);
     }
-    getChannel(data) {
-      const payloadData = {};
-      const id = data.channel_id ?? data.id;
-      if (!("recipients" in data)) {
-        const recipient = data.author ?? data.user ?? { id: data.user_id };
-        if (recipient.id !== this.client.user.id)
-          payloadData.recipients = [recipient];
+    get url() {
+      if (!deprecationEmittedForURL) {
+        process2.emitWarning("The Emoji#url getter is deprecated. Use Emoji#imageURL() instead.", "DeprecationWarning");
+        deprecationEmittedForURL = true;
       }
-      if (id !== undefined)
-        payloadData.id = id;
-      return data[this.client.actions.injectedChannel] ?? this.getPayload({ ...data, ...payloadData }, this.client.channels, id, Partials.Channel);
+      return this.imageURL({ extension: this.animated ? "gif" : "png" });
     }
-    getMessage(data, channel, cache) {
-      const id = data.message_id ?? data.id;
-      return data[this.client.actions.injectedMessage] ?? this.getPayload({
-        id,
-        channel_id: channel.id,
-        guild_id: data.guild_id ?? channel.guild?.id
-      }, channel.messages, id, Partials.Message, cache);
+    get createdTimestamp() {
+      return this.id && DiscordSnowflake.timestampFrom(this.id);
     }
-    getReaction(data, message, user) {
-      const id = data.emoji.id ?? decodeURIComponent(data.emoji.name);
-      return this.getPayload({
-        emoji: data.emoji,
-        count: message.partial ? null : 0,
-        me: user?.id === this.client.user.id
-      }, message.reactions, id, Partials.Reaction);
+    get createdAt() {
+      return this.id && new Date(this.createdTimestamp);
     }
-    getMember(data, guild) {
-      return this.getPayload(data, guild.members, data.user.id, Partials.GuildMember);
+    toString() {
+      return this.id ? formatEmoji({ animated: this.animated, id: this.id, name: this.name }) : this.name;
     }
-    getUser(data) {
-      const id = data.user_id;
-      return data[this.client.actions.injectedUser] ?? this.getPayload({ id }, this.client.users, id, Partials.User);
-    }
-    getUserFromMember(data) {
-      if (data.guild_id && data.member?.user) {
-        const guild = this.client.guilds.cache.get(data.guild_id);
-        if (guild) {
-          return guild.members._add(data.member).user;
-        } else {
-          return this.client.users._add(data.member.user);
-        }
-      }
-      return this.getUser(data);
-    }
-    getScheduledEvent(data, guild) {
-      const id = data.guild_scheduled_event_id ?? data.id;
-      return this.getPayload({ id, guild_id: data.guild_id ?? guild.id }, guild.scheduledEvents, id, Partials.GuildScheduledEvent);
-    }
-    getThreadMember(id, manager) {
-      return this.getPayload({ user_id: id }, manager, id, Partials.ThreadMember, false);
-    }
-    getSoundboardSound(data, guild) {
-      return this.getPayload(data, guild.soundboardSounds, data.sound_id, Partials.SoundboardSound);
-    }
-    spreadInjectedData(data) {
-      return Object.fromEntries(Object.getOwnPropertySymbols(data).map((symbol) => [symbol, data[symbol]]));
-    }
-  }
-  module.exports = GenericAction;
-});
-
-// node_modules/discord.js/src/util/Events.js
-var require_Events = __commonJS((exports, module) => {
-  module.exports = {
-    ApplicationCommandPermissionsUpdate: "applicationCommandPermissionsUpdate",
-    AutoModerationActionExecution: "autoModerationActionExecution",
-    AutoModerationRuleCreate: "autoModerationRuleCreate",
-    AutoModerationRuleDelete: "autoModerationRuleDelete",
-    AutoModerationRuleUpdate: "autoModerationRuleUpdate",
-    CacheSweep: "cacheSweep",
-    ChannelCreate: "channelCreate",
-    ChannelDelete: "channelDelete",
-    ChannelPinsUpdate: "channelPinsUpdate",
-    ChannelUpdate: "channelUpdate",
-    ClientReady: "clientReady",
-    Debug: "debug",
-    EntitlementCreate: "entitlementCreate",
-    EntitlementUpdate: "entitlementUpdate",
-    EntitlementDelete: "entitlementDelete",
-    Error: "error",
-    GuildAuditLogEntryCreate: "guildAuditLogEntryCreate",
-    GuildAvailable: "guildAvailable",
-    GuildBanAdd: "guildBanAdd",
-    GuildBanRemove: "guildBanRemove",
-    GuildCreate: "guildCreate",
-    GuildDelete: "guildDelete",
-    GuildEmojiCreate: "emojiCreate",
-    GuildEmojiDelete: "emojiDelete",
-    GuildEmojiUpdate: "emojiUpdate",
-    GuildIntegrationsUpdate: "guildIntegrationsUpdate",
-    GuildMemberAdd: "guildMemberAdd",
-    GuildMemberAvailable: "guildMemberAvailable",
-    GuildMemberRemove: "guildMemberRemove",
-    GuildMembersChunk: "guildMembersChunk",
-    GuildMemberUpdate: "guildMemberUpdate",
-    GuildRoleCreate: "roleCreate",
-    GuildRoleDelete: "roleDelete",
-    GuildRoleUpdate: "roleUpdate",
-    GuildScheduledEventCreate: "guildScheduledEventCreate",
-    GuildScheduledEventDelete: "guildScheduledEventDelete",
-    GuildScheduledEventUpdate: "guildScheduledEventUpdate",
-    GuildScheduledEventUserAdd: "guildScheduledEventUserAdd",
-    GuildScheduledEventUserRemove: "guildScheduledEventUserRemove",
-    GuildSoundboardSoundCreate: "guildSoundboardSoundCreate",
-    GuildSoundboardSoundDelete: "guildSoundboardSoundDelete",
-    GuildSoundboardSoundsUpdate: "guildSoundboardSoundsUpdate",
-    GuildSoundboardSoundUpdate: "guildSoundboardSoundUpdate",
-    GuildStickerCreate: "stickerCreate",
-    GuildStickerDelete: "stickerDelete",
-    GuildStickerUpdate: "stickerUpdate",
-    GuildUnavailable: "guildUnavailable",
-    GuildUpdate: "guildUpdate",
-    InteractionCreate: "interactionCreate",
-    Invalidated: "invalidated",
-    InviteCreate: "inviteCreate",
-    InviteDelete: "inviteDelete",
-    MessageBulkDelete: "messageDeleteBulk",
-    MessageCreate: "messageCreate",
-    MessageDelete: "messageDelete",
-    MessagePollVoteAdd: "messagePollVoteAdd",
-    MessagePollVoteRemove: "messagePollVoteRemove",
-    MessageReactionAdd: "messageReactionAdd",
-    MessageReactionRemove: "messageReactionRemove",
-    MessageReactionRemoveAll: "messageReactionRemoveAll",
-    MessageReactionRemoveEmoji: "messageReactionRemoveEmoji",
-    MessageUpdate: "messageUpdate",
-    PresenceUpdate: "presenceUpdate",
-    SoundboardSounds: "soundboardSounds",
-    Raw: "raw",
-    ShardDisconnect: "shardDisconnect",
-    ShardError: "shardError",
-    ShardReady: "shardReady",
-    ShardReconnecting: "shardReconnecting",
-    ShardResume: "shardResume",
-    StageInstanceCreate: "stageInstanceCreate",
-    StageInstanceDelete: "stageInstanceDelete",
-    StageInstanceUpdate: "stageInstanceUpdate",
-    SubscriptionCreate: "subscriptionCreate",
-    SubscriptionUpdate: "subscriptionUpdate",
-    SubscriptionDelete: "subscriptionDelete",
-    ThreadCreate: "threadCreate",
-    ThreadDelete: "threadDelete",
-    ThreadListSync: "threadListSync",
-    ThreadMembersUpdate: "threadMembersUpdate",
-    ThreadMemberUpdate: "threadMemberUpdate",
-    ThreadUpdate: "threadUpdate",
-    TypingStart: "typingStart",
-    UserUpdate: "userUpdate",
-    VoiceChannelEffectSend: "voiceChannelEffectSend",
-    VoiceServerUpdate: "voiceServerUpdate",
-    VoiceStateUpdate: "voiceStateUpdate",
-    Warn: "warn",
-    WebhooksUpdate: "webhooksUpdate"
-  };
-});
-
-// node_modules/discord.js/src/client/actions/ApplicationCommandPermissionsUpdate.js
-var require_ApplicationCommandPermissionsUpdate = __commonJS((exports, module) => {
-  var Action = require_Action();
-  var Events = require_Events();
-
-  class ApplicationCommandPermissionsUpdateAction extends Action {
-    handle(data) {
-      const client = this.client;
-      client.emit(Events.ApplicationCommandPermissionsUpdate, {
-        permissions: data.permissions,
-        id: data.id,
-        guildId: data.guild_id,
-        applicationId: data.application_id
+    toJSON() {
+      const json = super.toJSON({
+        guild: "guildId",
+        createdTimestamp: true,
+        identifier: true
       });
+      json.imageURL = this.imageURL();
+      return json;
     }
   }
-  module.exports = ApplicationCommandPermissionsUpdateAction;
-});
-
-// node_modules/discord.js/src/structures/AutoModerationActionExecution.js
-var require_AutoModerationActionExecution = __commonJS((exports, module) => {
-  var { _transformAPIAutoModerationAction } = require_Transformers();
-
-  class AutoModerationActionExecution {
-    constructor(data, guild) {
-      this.guild = guild;
-      this.action = _transformAPIAutoModerationAction(data.action);
-      this.ruleId = data.rule_id;
-      this.ruleTriggerType = data.rule_trigger_type;
-      this.userId = data.user_id;
-      this.channelId = data.channel_id ?? null;
-      this.messageId = data.message_id ?? null;
-      this.alertSystemMessageId = data.alert_system_message_id ?? null;
-      this.content = data.content;
-      this.matchedKeyword = data.matched_keyword ?? null;
-      this.matchedContent = data.matched_content ?? null;
-    }
-    get autoModerationRule() {
-      return this.guild.autoModerationRules.cache.get(this.ruleId) ?? null;
-    }
-    get channel() {
-      return this.guild.channels.cache.get(this.channelId) ?? null;
-    }
-    get user() {
-      return this.guild.client.users.cache.get(this.userId) ?? null;
-    }
-    get member() {
-      return this.guild.members.cache.get(this.userId) ?? null;
-    }
-  }
-  module.exports = AutoModerationActionExecution;
-});
-
-// node_modules/discord.js/src/client/actions/AutoModerationActionExecution.js
-var require_AutoModerationActionExecution2 = __commonJS((exports, module) => {
-  var Action = require_Action();
-  var AutoModerationActionExecution = require_AutoModerationActionExecution();
-  var Events = require_Events();
-
-  class AutoModerationActionExecutionAction extends Action {
-    handle(data) {
-      const { client } = this;
-      const guild = client.guilds.cache.get(data.guild_id);
-      if (guild) {
-        client.emit(Events.AutoModerationActionExecution, new AutoModerationActionExecution(data, guild));
-      }
-      return {};
-    }
-  }
-  module.exports = AutoModerationActionExecutionAction;
-});
-
-// node_modules/discord.js/src/client/actions/AutoModerationRuleCreate.js
-var require_AutoModerationRuleCreate = __commonJS((exports, module) => {
-  var Action = require_Action();
-  var Events = require_Events();
-
-  class AutoModerationRuleCreateAction extends Action {
-    handle(data) {
-      const { client } = this;
-      const guild = client.guilds.cache.get(data.guild_id);
-      if (guild) {
-        const autoModerationRule = guild.autoModerationRules._add(data);
-        client.emit(Events.AutoModerationRuleCreate, autoModerationRule);
-      }
-      return {};
-    }
-  }
-  module.exports = AutoModerationRuleCreateAction;
-});
-
-// node_modules/discord.js/src/client/actions/AutoModerationRuleDelete.js
-var require_AutoModerationRuleDelete = __commonJS((exports, module) => {
-  var Action = require_Action();
-  var Events = require_Events();
-
-  class AutoModerationRuleDeleteAction extends Action {
-    handle(data) {
-      const { client } = this;
-      const guild = client.guilds.cache.get(data.guild_id);
-      if (guild) {
-        const autoModerationRule = guild.autoModerationRules.cache.get(data.id);
-        if (autoModerationRule) {
-          guild.autoModerationRules.cache.delete(autoModerationRule.id);
-          client.emit(Events.AutoModerationRuleDelete, autoModerationRule);
-        }
-      }
-      return {};
-    }
-  }
-  module.exports = AutoModerationRuleDeleteAction;
-});
-
-// node_modules/discord.js/src/client/actions/AutoModerationRuleUpdate.js
-var require_AutoModerationRuleUpdate = __commonJS((exports, module) => {
-  var Action = require_Action();
-  var Events = require_Events();
-
-  class AutoModerationRuleUpdateAction extends Action {
-    handle(data) {
-      const { client } = this;
-      const guild = client.guilds.cache.get(data.guild_id);
-      if (guild) {
-        const oldAutoModerationRule = guild.autoModerationRules.cache.get(data.id)?._clone() ?? null;
-        const newAutoModerationRule = guild.autoModerationRules._add(data);
-        client.emit(Events.AutoModerationRuleUpdate, oldAutoModerationRule, newAutoModerationRule);
-      }
-      return {};
-    }
-  }
-  module.exports = AutoModerationRuleUpdateAction;
-});
-
-// node_modules/discord.js/src/client/actions/ChannelCreate.js
-var require_ChannelCreate = __commonJS((exports, module) => {
-  var Action = require_Action();
-  var Events = require_Events();
-
-  class ChannelCreateAction extends Action {
-    handle(data) {
-      const client = this.client;
-      const existing = client.channels.cache.has(data.id);
-      const channel = client.channels._add(data);
-      if (!existing && channel) {
-        client.emit(Events.ChannelCreate, channel);
-      }
-      return { channel };
-    }
-  }
-  module.exports = ChannelCreateAction;
-});
-
-// node_modules/discord.js/src/client/actions/ChannelDelete.js
-var require_ChannelDelete = __commonJS((exports, module) => {
-  var Action = require_Action();
-  var Events = require_Events();
-
-  class ChannelDeleteAction extends Action {
-    handle(data) {
-      const client = this.client;
-      const channel = client.channels.cache.get(data.id);
-      if (channel) {
-        client.channels._remove(channel.id);
-        client.emit(Events.ChannelDelete, channel);
-      }
-    }
-  }
-  module.exports = ChannelDeleteAction;
-});
-
-// node_modules/discord.js/src/managers/CategoryChannelChildManager.js
-var require_CategoryChannelChildManager = __commonJS((exports, module) => {
-  var DataManager = require_DataManager();
-  var GuildChannel = require_GuildChannel();
-
-  class CategoryChannelChildManager extends DataManager {
-    constructor(channel) {
-      super(channel.client, GuildChannel);
-      this.channel = channel;
-    }
-    get cache() {
-      return this.guild.channels.cache.filter((channel) => channel.parentId === this.channel.id);
-    }
-    get guild() {
-      return this.channel.guild;
-    }
-    create(options) {
-      return this.guild.channels.create({
-        ...options,
-        parent: this.channel.id
-      });
-    }
-  }
-  module.exports = CategoryChannelChildManager;
-});
-
-// node_modules/discord.js/src/structures/CategoryChannel.js
-var require_CategoryChannel = __commonJS((exports, module) => {
-  var GuildChannel = require_GuildChannel();
-  var CategoryChannelChildManager = require_CategoryChannelChildManager();
-
-  class CategoryChannel extends GuildChannel {
-    get children() {
-      return new CategoryChannelChildManager(this);
-    }
-  }
-  module.exports = CategoryChannel;
+  exports.Emoji = Emoji;
 });
 
 // node_modules/discord.js/src/structures/interfaces/Collector.js
@@ -10497,6 +12605,101 @@ var require_Collector = __commonJS((exports, module) => {
     dispose() {}
   }
   module.exports = Collector;
+});
+
+// node_modules/discord.js/src/util/Events.js
+var require_Events = __commonJS((exports, module) => {
+  module.exports = {
+    ApplicationCommandPermissionsUpdate: "applicationCommandPermissionsUpdate",
+    AutoModerationActionExecution: "autoModerationActionExecution",
+    AutoModerationRuleCreate: "autoModerationRuleCreate",
+    AutoModerationRuleDelete: "autoModerationRuleDelete",
+    AutoModerationRuleUpdate: "autoModerationRuleUpdate",
+    CacheSweep: "cacheSweep",
+    ChannelCreate: "channelCreate",
+    ChannelDelete: "channelDelete",
+    ChannelPinsUpdate: "channelPinsUpdate",
+    ChannelUpdate: "channelUpdate",
+    ClientReady: "clientReady",
+    Debug: "debug",
+    EntitlementCreate: "entitlementCreate",
+    EntitlementUpdate: "entitlementUpdate",
+    EntitlementDelete: "entitlementDelete",
+    Error: "error",
+    GuildAuditLogEntryCreate: "guildAuditLogEntryCreate",
+    GuildAvailable: "guildAvailable",
+    GuildBanAdd: "guildBanAdd",
+    GuildBanRemove: "guildBanRemove",
+    GuildCreate: "guildCreate",
+    GuildDelete: "guildDelete",
+    GuildEmojiCreate: "emojiCreate",
+    GuildEmojiDelete: "emojiDelete",
+    GuildEmojiUpdate: "emojiUpdate",
+    GuildIntegrationsUpdate: "guildIntegrationsUpdate",
+    GuildMemberAdd: "guildMemberAdd",
+    GuildMemberAvailable: "guildMemberAvailable",
+    GuildMemberRemove: "guildMemberRemove",
+    GuildMembersChunk: "guildMembersChunk",
+    GuildMemberUpdate: "guildMemberUpdate",
+    GuildRoleCreate: "roleCreate",
+    GuildRoleDelete: "roleDelete",
+    GuildRoleUpdate: "roleUpdate",
+    GuildScheduledEventCreate: "guildScheduledEventCreate",
+    GuildScheduledEventDelete: "guildScheduledEventDelete",
+    GuildScheduledEventUpdate: "guildScheduledEventUpdate",
+    GuildScheduledEventUserAdd: "guildScheduledEventUserAdd",
+    GuildScheduledEventUserRemove: "guildScheduledEventUserRemove",
+    GuildSoundboardSoundCreate: "guildSoundboardSoundCreate",
+    GuildSoundboardSoundDelete: "guildSoundboardSoundDelete",
+    GuildSoundboardSoundsUpdate: "guildSoundboardSoundsUpdate",
+    GuildSoundboardSoundUpdate: "guildSoundboardSoundUpdate",
+    GuildStickerCreate: "stickerCreate",
+    GuildStickerDelete: "stickerDelete",
+    GuildStickerUpdate: "stickerUpdate",
+    GuildUnavailable: "guildUnavailable",
+    GuildUpdate: "guildUpdate",
+    InteractionCreate: "interactionCreate",
+    Invalidated: "invalidated",
+    InviteCreate: "inviteCreate",
+    InviteDelete: "inviteDelete",
+    MessageBulkDelete: "messageDeleteBulk",
+    MessageCreate: "messageCreate",
+    MessageDelete: "messageDelete",
+    MessagePollVoteAdd: "messagePollVoteAdd",
+    MessagePollVoteRemove: "messagePollVoteRemove",
+    MessageReactionAdd: "messageReactionAdd",
+    MessageReactionRemove: "messageReactionRemove",
+    MessageReactionRemoveAll: "messageReactionRemoveAll",
+    MessageReactionRemoveEmoji: "messageReactionRemoveEmoji",
+    MessageUpdate: "messageUpdate",
+    PresenceUpdate: "presenceUpdate",
+    SoundboardSounds: "soundboardSounds",
+    Raw: "raw",
+    ShardDisconnect: "shardDisconnect",
+    ShardError: "shardError",
+    ShardReady: "shardReady",
+    ShardReconnecting: "shardReconnecting",
+    ShardResume: "shardResume",
+    StageInstanceCreate: "stageInstanceCreate",
+    StageInstanceDelete: "stageInstanceDelete",
+    StageInstanceUpdate: "stageInstanceUpdate",
+    SubscriptionCreate: "subscriptionCreate",
+    SubscriptionUpdate: "subscriptionUpdate",
+    SubscriptionDelete: "subscriptionDelete",
+    ThreadCreate: "threadCreate",
+    ThreadDelete: "threadDelete",
+    ThreadListSync: "threadListSync",
+    ThreadMembersUpdate: "threadMembersUpdate",
+    ThreadMemberUpdate: "threadMemberUpdate",
+    ThreadUpdate: "threadUpdate",
+    TypingStart: "typingStart",
+    UserUpdate: "userUpdate",
+    VoiceChannelEffectSend: "voiceChannelEffectSend",
+    VoiceServerUpdate: "voiceServerUpdate",
+    VoiceStateUpdate: "voiceStateUpdate",
+    Warn: "warn",
+    WebhooksUpdate: "webhooksUpdate"
+  };
 });
 
 // node_modules/discord.js/src/structures/InteractionCollector.js
@@ -10697,7 +12900,7 @@ var require_MessageCollector = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/GuildScheduledEvent.js
 var require_GuildScheduledEvent = __commonJS((exports) => {
   var { DiscordSnowflake } = require_cjs();
-  var { GuildScheduledEventStatus, GuildScheduledEventEntityType, RouteBases } = require_v106();
+  var { GuildScheduledEventStatus, GuildScheduledEventEntityType, RouteBases } = require_v1012();
   var Base = require_Base();
   var { DiscordjsError, ErrorCodes } = require_errors();
 
@@ -11058,11 +13261,22 @@ var require_InviteStageInstance = __commonJS((exports, module) => {
   module.exports = InviteStageInstance;
 });
 
+// node_modules/discord.js/src/util/InviteFlagsBitField.js
+var require_InviteFlagsBitField = __commonJS((exports) => {
+  var { InviteFlags } = require_v1012();
+  var BitField = require_BitField();
+
+  class InviteFlagsBitField extends BitField {
+    static Flags = InviteFlags;
+  }
+  exports.InviteFlagsBitField = InviteFlagsBitField;
+});
+
 // node_modules/discord.js/src/structures/BaseGuild.js
 var require_BaseGuild = __commonJS((exports, module) => {
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes, GuildFeature } = require_v106();
+  var { Routes, GuildFeature } = require_v1012();
   var Base = require_Base();
 
   class BaseGuild extends Base {
@@ -11151,58 +13365,6 @@ var require_AnonymousGuild = __commonJS((exports, module) => {
   module.exports = AnonymousGuild;
 });
 
-// node_modules/discord.js/src/structures/Emoji.js
-var require_Emoji = __commonJS((exports) => {
-  var process2 = __require("process");
-  var { formatEmoji } = require_dist7();
-  var { DiscordSnowflake } = require_cjs();
-  var Base = require_Base();
-  var deprecationEmittedForURL = false;
-
-  class Emoji extends Base {
-    constructor(client, emoji) {
-      super(client);
-      this.animated = emoji.animated ?? null;
-      this.name = emoji.name ?? null;
-      this.id = emoji.id ?? null;
-    }
-    get identifier() {
-      if (this.id)
-        return `${this.animated ? "a:" : ""}${this.name}:${this.id}`;
-      return encodeURIComponent(this.name);
-    }
-    imageURL(options) {
-      return this.id && this.client.rest.cdn.emoji(this.id, options);
-    }
-    get url() {
-      if (!deprecationEmittedForURL) {
-        process2.emitWarning("The Emoji#url getter is deprecated. Use Emoji#imageURL() instead.", "DeprecationWarning");
-        deprecationEmittedForURL = true;
-      }
-      return this.imageURL({ extension: this.animated ? "gif" : "png" });
-    }
-    get createdTimestamp() {
-      return this.id && DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return this.id && new Date(this.createdTimestamp);
-    }
-    toString() {
-      return this.id ? formatEmoji({ animated: this.animated, id: this.id, name: this.name }) : this.name;
-    }
-    toJSON() {
-      const json = super.toJSON({
-        guild: "guildId",
-        createdTimestamp: true,
-        identifier: true
-      });
-      json.imageURL = this.imageURL();
-      return json;
-    }
-  }
-  exports.Emoji = Emoji;
-});
-
 // node_modules/discord.js/src/structures/WelcomeChannel.js
 var require_WelcomeChannel = __commonJS((exports, module) => {
   var Base = require_Base();
@@ -11232,7 +13394,7 @@ var require_WelcomeChannel = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/WelcomeScreen.js
 var require_WelcomeScreen = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { GuildFeature } = require_v106();
+  var { GuildFeature } = require_v1012();
   var Base = require_Base();
   var WelcomeChannel = require_WelcomeChannel();
 
@@ -11270,12 +13432,13 @@ var require_InviteGuild = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Invite.js
 var require_Invite = __commonJS((exports, module) => {
-  var { RouteBases, Routes, PermissionFlagsBits } = require_v106();
+  var { RouteBases, Routes, PermissionFlagsBits } = require_v1012();
   var Base = require_Base();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
   var IntegrationApplication = require_IntegrationApplication();
   var InviteStageInstance = require_InviteStageInstance();
   var { DiscordjsError, ErrorCodes } = require_errors();
+  var { InviteFlagsBitField } = require_InviteFlagsBitField();
 
   class Invite extends Base {
     static InvitesPattern = /discord(?:(?:app)?\.com\/invite|\.gg(?:\/invite)?)\/(?<code>[\w-]{2,255})/i;
@@ -11374,6 +13537,11 @@ var require_Invite = __commonJS((exports, module) => {
       } else {
         this.guildScheduledEvent ??= null;
       }
+      if ("flags" in data) {
+        this.flags = new InviteFlagsBitField(data.flags).freeze();
+      } else {
+        this.flags ??= new InviteFlagsBitField().freeze();
+      }
     }
     get createdAt() {
       return this.createdTimestamp && new Date(this.createdTimestamp);
@@ -11427,7 +13595,7 @@ var require_Invite = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/GuildTemplate.js
 var require_GuildTemplate = __commonJS((exports, module) => {
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
-  var { RouteBases, Routes } = require_v106();
+  var { RouteBases, Routes } = require_v1012();
   var Base = require_Base();
   var { resolveImage } = require_DataResolver();
   var Events = require_Events();
@@ -11591,7 +13759,7 @@ var require_DataResolver = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/MessageFlagsBitField.js
 var require_MessageFlagsBitField = __commonJS((exports, module) => {
-  var { MessageFlags } = require_v106();
+  var { MessageFlags } = require_v1012();
   var BitField = require_BitField();
 
   class MessageFlagsBitField extends BitField {
@@ -11605,7 +13773,7 @@ var require_BaseInteraction = __commonJS((exports, module) => {
   var { deprecate } = __require("util");
   var { Collection } = require_dist6();
   var { DiscordSnowflake } = require_cjs();
-  var { InteractionType, ApplicationCommandType, ComponentType } = require_v106();
+  var { InteractionType, ApplicationCommandType, ComponentType } = require_v1012();
   var Base = require_Base();
   var { SelectMenuTypes } = require_Constants();
   var PermissionsBitField = require_PermissionsBitField();
@@ -11818,7 +13986,7 @@ var require_Team = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/ApplicationCommandPermissionsManager.js
 var require_ApplicationCommandPermissionsManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { ApplicationCommandPermissionType, RESTJSONErrorCodes, Routes } = require_v106();
+  var { ApplicationCommandPermissionType, RESTJSONErrorCodes, Routes } = require_v1012();
   var BaseManager = require_BaseManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -12056,7 +14224,7 @@ var require_fast_deep_equal = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/ApplicationCommand.js
 var require_ApplicationCommand = __commonJS((exports, module) => {
   var { DiscordSnowflake } = require_cjs();
-  var { ApplicationCommandOptionType } = require_v106();
+  var { ApplicationCommandOptionType } = require_v1012();
   var isEqual = require_fast_deep_equal();
   var Base = require_Base();
   var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
@@ -12276,7 +14444,7 @@ var require_ApplicationCommandManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { isJSONEncodable } = require_dist();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -12434,7 +14602,7 @@ var require_ApplicationEmoji = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/ApplicationEmojiManager.js
 var require_ApplicationEmojiManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var ApplicationEmoji = require_ApplicationEmoji();
@@ -12589,7 +14757,7 @@ var require_Entitlement = __commonJS((exports) => {
 var require_EntitlementManager = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes, EntitlementOwnerType } = require_v106();
+  var { Routes, EntitlementOwnerType } = require_v1012();
   var CachedManager = require_CachedManager();
   var { ErrorCodes, DiscordjsTypeError } = require_errors();
   var { Entitlement } = require_Entitlement();
@@ -12716,7 +14884,7 @@ var require_Subscription = __commonJS((exports) => {
 var require_SubscriptionManager = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Subscription } = require_Subscription();
@@ -12753,7 +14921,7 @@ var require_SubscriptionManager = __commonJS((exports) => {
 
 // node_modules/discord.js/src/util/ApplicationFlagsBitField.js
 var require_ApplicationFlagsBitField = __commonJS((exports, module) => {
-  var { ApplicationFlags } = require_v106();
+  var { ApplicationFlags } = require_v1012();
   var BitField = require_BitField();
 
   class ApplicationFlagsBitField extends BitField {
@@ -12765,7 +14933,7 @@ var require_ApplicationFlagsBitField = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/ClientApplication.js
 var require_ClientApplication = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var { ApplicationRoleConnectionMetadata } = require_ApplicationRoleConnectionMetadata();
   var { SKU } = require_SKU();
   var Team = require_Team();
@@ -17283,17 +19451,19 @@ var require_dist8 = __commonJS((exports, module) => {
     ChannelSelectMenuBuilder: () => ChannelSelectMenuBuilder,
     ComponentAssertions: () => Assertions_exports2,
     ComponentBuilder: () => ComponentBuilder,
-    ComponentsV2Assertions: () => Assertions_exports4,
+    ComponentsV2Assertions: () => Assertions_exports5,
     ContainerBuilder: () => ContainerBuilder,
-    ContextMenuCommandAssertions: () => Assertions_exports7,
+    ContextMenuCommandAssertions: () => Assertions_exports8,
     ContextMenuCommandBuilder: () => ContextMenuCommandBuilder,
     EmbedAssertions: () => Assertions_exports,
     EmbedBuilder: () => EmbedBuilder,
     FileBuilder: () => FileBuilder,
+    LabelAssertions: () => Assertions_exports4,
+    LabelBuilder: () => LabelBuilder,
     MediaGalleryBuilder: () => MediaGalleryBuilder,
     MediaGalleryItemBuilder: () => MediaGalleryItemBuilder,
     MentionableSelectMenuBuilder: () => MentionableSelectMenuBuilder,
-    ModalAssertions: () => Assertions_exports5,
+    ModalAssertions: () => Assertions_exports6,
     ModalBuilder: () => ModalBuilder,
     RoleSelectMenuBuilder: () => RoleSelectMenuBuilder,
     SectionBuilder: () => SectionBuilder,
@@ -17304,7 +19474,7 @@ var require_dist8 = __commonJS((exports, module) => {
     SharedSlashCommand: () => SharedSlashCommand,
     SharedSlashCommandOptions: () => SharedSlashCommandOptions,
     SharedSlashCommandSubcommands: () => SharedSlashCommandSubcommands,
-    SlashCommandAssertions: () => Assertions_exports6,
+    SlashCommandAssertions: () => Assertions_exports7,
     SlashCommandAttachmentOption: () => SlashCommandAttachmentOption,
     SlashCommandBooleanOption: () => SlashCommandBooleanOption,
     SlashCommandBuilder: () => SlashCommandBuilder,
@@ -17530,7 +19700,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredSelectMenuParameters: () => validateRequiredSelectMenuParameters
   });
   var import_shapeshift2 = require_cjs3();
-  var import_v10 = require_v106();
+  var import_v10 = require_v1012();
   var StringSelectMenuOptionBuilder = class {
     constructor(data = {}) {
       this.data = data;
@@ -17631,7 +19801,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   }
   __name(validateRequiredButtonParameters, "validateRequiredButtonParameters");
-  var import_v1019 = require_v106();
+  var import_v1022 = require_v1012();
   var ComponentBuilder = class {
     static {
       __name(this, "ComponentBuilder");
@@ -17649,8 +19819,8 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1018 = require_v106();
-  var import_v102 = require_v106();
+  var import_v1021 = require_v1012();
+  var import_v102 = require_v1012();
   var ButtonBuilder = class extends ComponentBuilder {
     static {
       __name(this, "ButtonBuilder");
@@ -17693,7 +19863,45 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v103 = require_v106();
+  var import_v1012 = require_v1012();
+  var import_v104 = require_v1012();
+  var Assertions_exports3 = {};
+  __export(Assertions_exports3, {
+    labelValidator: () => labelValidator,
+    maxLengthValidator: () => maxLengthValidator,
+    minLengthValidator: () => minLengthValidator,
+    placeholderValidator: () => placeholderValidator2,
+    requiredValidator: () => requiredValidator,
+    textInputPredicate: () => textInputPredicate,
+    textInputStyleValidator: () => textInputStyleValidator,
+    validateRequiredParameters: () => validateRequiredParameters,
+    valueValidator: () => valueValidator
+  });
+  var import_shapeshift3 = require_cjs3();
+  var import_v103 = require_v1012();
+  var textInputStyleValidator = import_shapeshift3.s.nativeEnum(import_v103.TextInputStyle).setValidationEnabled(isValidationEnabled);
+  var minLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(0).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var maxLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(1).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var requiredValidator = import_shapeshift3.s.boolean().setValidationEnabled(isValidationEnabled);
+  var valueValidator = import_shapeshift3.s.string().lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var placeholderValidator2 = import_shapeshift3.s.string().lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
+  var labelValidator = import_shapeshift3.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
+  var textInputPredicate = import_shapeshift3.s.object({
+    type: import_shapeshift3.s.literal(import_v103.ComponentType.TextInput),
+    custom_id: customIdValidator,
+    style: textInputStyleValidator,
+    id: idValidator.optional(),
+    min_length: minLengthValidator.optional(),
+    max_length: maxLengthValidator.optional(),
+    placeholder: placeholderValidator2.optional(),
+    value: valueValidator.optional(),
+    required: requiredValidator.optional()
+  }).setValidationEnabled(isValidationEnabled);
+  function validateRequiredParameters(customId, style) {
+    customIdValidator.parse(customId);
+    textInputStyleValidator.parse(style);
+  }
+  __name(validateRequiredParameters, "validateRequiredParameters");
   var BaseSelectMenuBuilder = class extends ComponentBuilder {
     static {
       __name(this, "BaseSelectMenuBuilder");
@@ -17718,6 +19926,10 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.disabled = disabledValidator.parse(disabled);
       return this;
     }
+    setRequired(required = true) {
+      this.data.required = requiredValidator.parse(required);
+      return this;
+    }
     toJSON() {
       customIdValidator.parse(this.data.custom_id);
       return {
@@ -17730,7 +19942,7 @@ var require_dist8 = __commonJS((exports, module) => {
       __name(this, "ChannelSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v103.ComponentType.ChannelSelect });
+      super({ ...data, type: import_v104.ComponentType.ChannelSelect });
     }
     addChannelTypes(...types) {
       const normalizedTypes = normalizeArray(types);
@@ -17750,7 +19962,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v103.SelectMenuDefaultValueType.Channel
+        type: import_v104.SelectMenuDefaultValueType.Channel
       })));
       return this;
     }
@@ -17759,7 +19971,7 @@ var require_dist8 = __commonJS((exports, module) => {
       optionsLengthValidator.parse(normalizedValues.length);
       this.data.default_values = normalizedValues.map((id) => ({
         id,
-        type: import_v103.SelectMenuDefaultValueType.Channel
+        type: import_v104.SelectMenuDefaultValueType.Channel
       }));
       return this;
     }
@@ -17770,13 +19982,13 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v104 = require_v106();
+  var import_v105 = require_v1012();
   var MentionableSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "MentionableSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v104.ComponentType.MentionableSelect });
+      super({ ...data, type: import_v105.ComponentType.MentionableSelect });
     }
     addDefaultRoles(...roles) {
       const normalizedValues = normalizeArray(roles);
@@ -17784,7 +19996,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v104.SelectMenuDefaultValueType.Role
+        type: import_v105.SelectMenuDefaultValueType.Role
       })));
       return this;
     }
@@ -17794,7 +20006,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v104.SelectMenuDefaultValueType.User
+        type: import_v105.SelectMenuDefaultValueType.User
       })));
       return this;
     }
@@ -17812,13 +20024,13 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v105 = require_v106();
+  var import_v106 = require_v1012();
   var RoleSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "RoleSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v105.ComponentType.RoleSelect });
+      super({ ...data, type: import_v106.ComponentType.RoleSelect });
     }
     addDefaultRoles(...roles) {
       const normalizedValues = normalizeArray(roles);
@@ -17826,7 +20038,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v105.SelectMenuDefaultValueType.Role
+        type: import_v106.SelectMenuDefaultValueType.Role
       })));
       return this;
     }
@@ -17835,12 +20047,12 @@ var require_dist8 = __commonJS((exports, module) => {
       optionsLengthValidator.parse(normalizedValues.length);
       this.data.default_values = normalizedValues.map((id) => ({
         id,
-        type: import_v105.SelectMenuDefaultValueType.Role
+        type: import_v106.SelectMenuDefaultValueType.Role
       }));
       return this;
     }
   };
-  var import_v106 = require_v106();
+  var import_v107 = require_v1012();
   var StringSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "StringSelectMenuBuilder");
@@ -17848,7 +20060,7 @@ var require_dist8 = __commonJS((exports, module) => {
     options;
     constructor(data) {
       const { options, ...initData } = data ?? {};
-      super({ ...initData, type: import_v106.ComponentType.StringSelect });
+      super({ ...initData, type: import_v107.ComponentType.StringSelect });
       this.options = options?.map((option) => new StringSelectMenuOptionBuilder(option)) ?? [];
     }
     addOptions(...options) {
@@ -17876,13 +20088,13 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v107 = require_v106();
+  var import_v108 = require_v1012();
   var UserSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "UserSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v107.ComponentType.UserSelect });
+      super({ ...data, type: import_v108.ComponentType.UserSelect });
     }
     addDefaultUsers(...users) {
       const normalizedValues = normalizeArray(users);
@@ -17890,7 +20102,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v107.SelectMenuDefaultValueType.User
+        type: import_v108.SelectMenuDefaultValueType.User
       })));
       return this;
     }
@@ -17899,40 +20111,14 @@ var require_dist8 = __commonJS((exports, module) => {
       optionsLengthValidator.parse(normalizedValues.length);
       this.data.default_values = normalizedValues.map((id) => ({
         id,
-        type: import_v107.SelectMenuDefaultValueType.User
+        type: import_v108.SelectMenuDefaultValueType.User
       }));
       return this;
     }
   };
   var import_util = require_dist();
-  var import_v109 = require_v106();
+  var import_v109 = require_v1012();
   var import_fast_deep_equal = __toESM2(require_fast_deep_equal());
-  var Assertions_exports3 = {};
-  __export(Assertions_exports3, {
-    labelValidator: () => labelValidator,
-    maxLengthValidator: () => maxLengthValidator,
-    minLengthValidator: () => minLengthValidator,
-    placeholderValidator: () => placeholderValidator2,
-    requiredValidator: () => requiredValidator,
-    textInputStyleValidator: () => textInputStyleValidator,
-    validateRequiredParameters: () => validateRequiredParameters,
-    valueValidator: () => valueValidator
-  });
-  var import_shapeshift3 = require_cjs3();
-  var import_v108 = require_v106();
-  var textInputStyleValidator = import_shapeshift3.s.nativeEnum(import_v108.TextInputStyle);
-  var minLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(0).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var maxLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(1).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var requiredValidator = import_shapeshift3.s.boolean();
-  var valueValidator = import_shapeshift3.s.string().lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var placeholderValidator2 = import_shapeshift3.s.string().lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
-  var labelValidator = import_shapeshift3.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
-  function validateRequiredParameters(customId, style, label) {
-    customIdValidator.parse(customId);
-    textInputStyleValidator.parse(style);
-    labelValidator.parse(label);
-  }
-  __name(validateRequiredParameters, "validateRequiredParameters");
   var TextInputBuilder = class extends ComponentBuilder {
     static {
       __name(this, "TextInputBuilder");
@@ -17973,7 +20159,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
     toJSON() {
-      validateRequiredParameters(this.data.custom_id, this.data.style, this.data.label);
+      validateRequiredParameters(this.data.custom_id, this.data.style);
       return {
         ...this.data
       };
@@ -17985,9 +20171,138 @@ var require_dist8 = __commonJS((exports, module) => {
       return (0, import_fast_deep_equal.default)(other, this.data);
     }
   };
-  var import_v1015 = require_v106();
   var Assertions_exports4 = {};
   __export(Assertions_exports4, {
+    labelPredicate: () => labelPredicate
+  });
+  var import_shapeshift5 = require_cjs3();
+  var import_v1011 = require_v1012();
+  var import_shapeshift4 = require_cjs3();
+  var import_v1010 = require_v1012();
+  var selectMenuBasePredicate = import_shapeshift4.s.object({
+    id: idValidator.optional(),
+    placeholder: import_shapeshift4.s.string().lengthLessThanOrEqual(150).optional(),
+    min_values: import_shapeshift4.s.number().greaterThanOrEqual(0).lessThanOrEqual(25).optional(),
+    max_values: import_shapeshift4.s.number().greaterThanOrEqual(0).lessThanOrEqual(25).optional(),
+    custom_id: customIdValidator,
+    disabled: import_shapeshift4.s.boolean().optional()
+  });
+  var selectMenuChannelPredicate = selectMenuBasePredicate.extend({
+    type: import_shapeshift4.s.literal(import_v1010.ComponentType.ChannelSelect),
+    channel_types: import_shapeshift4.s.nativeEnum(import_v1010.ChannelType).array().optional(),
+    default_values: import_shapeshift4.s.object({ id: import_shapeshift4.s.string(), type: import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.Channel) }).array().lengthLessThanOrEqual(25).optional()
+  }).setValidationEnabled(isValidationEnabled);
+  var selectMenuMentionablePredicate = selectMenuBasePredicate.extend({
+    type: import_shapeshift4.s.literal(import_v1010.ComponentType.MentionableSelect),
+    default_values: import_shapeshift4.s.object({
+      id: import_shapeshift4.s.string(),
+      type: import_shapeshift4.s.union([import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.Role), import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.User)])
+    }).array().lengthLessThanOrEqual(25).optional()
+  }).setValidationEnabled(isValidationEnabled);
+  var selectMenuRolePredicate = selectMenuBasePredicate.extend({
+    type: import_shapeshift4.s.literal(import_v1010.ComponentType.RoleSelect),
+    default_values: import_shapeshift4.s.object({ id: import_shapeshift4.s.string(), type: import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.Role) }).array().lengthLessThanOrEqual(25).optional()
+  }).setValidationEnabled(isValidationEnabled);
+  var selectMenuUserPredicate = selectMenuBasePredicate.extend({
+    type: import_shapeshift4.s.literal(import_v1010.ComponentType.UserSelect),
+    default_values: import_shapeshift4.s.object({ id: import_shapeshift4.s.string(), type: import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.User) }).array().lengthLessThanOrEqual(25).optional()
+  }).setValidationEnabled(isValidationEnabled);
+  var selectMenuStringOptionPredicate = import_shapeshift4.s.object({
+    label: labelValidator,
+    value: import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100),
+    description: import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).optional(),
+    emoji: emojiValidator.optional(),
+    default: import_shapeshift4.s.boolean().optional()
+  }).setValidationEnabled(isValidationEnabled);
+  var selectMenuStringPredicate = selectMenuBasePredicate.extend({
+    type: import_shapeshift4.s.literal(import_v1010.ComponentType.StringSelect),
+    options: selectMenuStringOptionPredicate.array().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(25)
+  }).reshape((value) => {
+    if (value.min_values !== undefined && value.options.length < value.min_values) {
+      return import_shapeshift4.Result.err(new RangeError(`The number of options must be greater than or equal to min_values`));
+    }
+    if (value.min_values !== undefined && value.max_values !== undefined && value.min_values > value.max_values) {
+      return import_shapeshift4.Result.err(new RangeError(`The maximum amount of options must be greater than or equal to the minimum amount of options`));
+    }
+    return import_shapeshift4.Result.ok(value);
+  }).setValidationEnabled(isValidationEnabled);
+  var labelPredicate = import_shapeshift5.s.object({
+    id: idValidator.optional(),
+    type: import_shapeshift5.s.literal(import_v1011.ComponentType.Label),
+    label: import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45),
+    description: import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).optional(),
+    component: import_shapeshift5.s.union([
+      textInputPredicate,
+      selectMenuUserPredicate,
+      selectMenuRolePredicate,
+      selectMenuMentionablePredicate,
+      selectMenuChannelPredicate,
+      selectMenuStringPredicate
+    ])
+  }).setValidationEnabled(isValidationEnabled);
+  var LabelBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "LabelBuilder");
+    }
+    data;
+    constructor(data = {}) {
+      super({ type: import_v1012.ComponentType.Label });
+      const { component, ...rest } = data;
+      this.data = {
+        ...rest,
+        component: component ? createComponentBuilder(component) : undefined,
+        type: import_v1012.ComponentType.Label
+      };
+    }
+    setLabel(label) {
+      this.data.label = label;
+      return this;
+    }
+    setDescription(description) {
+      this.data.description = description;
+      return this;
+    }
+    clearDescription() {
+      this.data.description = undefined;
+      return this;
+    }
+    setStringSelectMenuComponent(input) {
+      this.data.component = resolveBuilder(input, StringSelectMenuBuilder);
+      return this;
+    }
+    setUserSelectMenuComponent(input) {
+      this.data.component = resolveBuilder(input, UserSelectMenuBuilder);
+      return this;
+    }
+    setRoleSelectMenuComponent(input) {
+      this.data.component = resolveBuilder(input, RoleSelectMenuBuilder);
+      return this;
+    }
+    setMentionableSelectMenuComponent(input) {
+      this.data.component = resolveBuilder(input, MentionableSelectMenuBuilder);
+      return this;
+    }
+    setChannelSelectMenuComponent(input) {
+      this.data.component = resolveBuilder(input, ChannelSelectMenuBuilder);
+      return this;
+    }
+    setTextInputComponent(input) {
+      this.data.component = resolveBuilder(input, TextInputBuilder);
+      return this;
+    }
+    toJSON() {
+      const { component, ...rest } = this.data;
+      const data = {
+        ...rest,
+        component: component?.toJSON()
+      };
+      labelPredicate.parse(data);
+      return data;
+    }
+  };
+  var import_v1018 = require_v1012();
+  var Assertions_exports5 = {};
+  __export(Assertions_exports5, {
     accessoryPredicate: () => accessoryPredicate,
     assertReturnOfBuilder: () => assertReturnOfBuilder,
     containerColorPredicate: () => containerColorPredicate,
@@ -18000,16 +20315,16 @@ var require_dist8 = __commonJS((exports, module) => {
     unfurledMediaItemPredicate: () => unfurledMediaItemPredicate,
     validateComponentArray: () => validateComponentArray
   });
-  var import_shapeshift4 = require_cjs3();
-  var import_v1011 = require_v106();
-  var import_v1010 = require_v106();
+  var import_shapeshift6 = require_cjs3();
+  var import_v1014 = require_v1012();
+  var import_v1013 = require_v1012();
   var ThumbnailBuilder = class extends ComponentBuilder {
     static {
       __name(this, "ThumbnailBuilder");
     }
     constructor(data = {}) {
       super({
-        type: import_v1010.ComponentType.Thumbnail,
+        type: import_v1013.ComponentType.Thumbnail,
         ...data,
         media: data.media ? { url: data.media.url } : undefined
       });
@@ -18035,34 +20350,34 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data };
     }
   };
-  var unfurledMediaItemPredicate = import_shapeshift4.s.object({
-    url: import_shapeshift4.s.string().url({ allowedProtocols: ["http:", "https:", "attachment:"] }, { message: "Invalid protocol for media URL. Must be http:, https:, or attachment:" })
+  var unfurledMediaItemPredicate = import_shapeshift6.s.object({
+    url: import_shapeshift6.s.string().url({ allowedProtocols: ["http:", "https:", "attachment:"] }, { message: "Invalid protocol for media URL. Must be http:, https:, or attachment:" })
   }).setValidationEnabled(isValidationEnabled);
-  var descriptionPredicate2 = import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(1024).setValidationEnabled(isValidationEnabled);
-  var filePredicate = import_shapeshift4.s.object({
-    url: import_shapeshift4.s.string().url({ allowedProtocols: ["attachment:"] }, { message: "Invalid protocol for file URL. Must be attachment:" })
+  var descriptionPredicate2 = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(1024).setValidationEnabled(isValidationEnabled);
+  var filePredicate = import_shapeshift6.s.object({
+    url: import_shapeshift6.s.string().url({ allowedProtocols: ["attachment:"] }, { message: "Invalid protocol for file URL. Must be attachment:" })
   }).setValidationEnabled(isValidationEnabled);
-  var spoilerPredicate = import_shapeshift4.s.boolean();
-  var dividerPredicate = import_shapeshift4.s.boolean();
-  var spacingPredicate = import_shapeshift4.s.nativeEnum(import_v1011.SeparatorSpacingSize);
-  var textDisplayContentPredicate = import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var accessoryPredicate = import_shapeshift4.s.instance(ButtonBuilder).or(import_shapeshift4.s.instance(ThumbnailBuilder)).setValidationEnabled(isValidationEnabled);
+  var spoilerPredicate = import_shapeshift6.s.boolean();
+  var dividerPredicate = import_shapeshift6.s.boolean();
+  var spacingPredicate = import_shapeshift6.s.nativeEnum(import_v1014.SeparatorSpacingSize);
+  var textDisplayContentPredicate = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var accessoryPredicate = import_shapeshift6.s.instance(ButtonBuilder).or(import_shapeshift6.s.instance(ThumbnailBuilder)).setValidationEnabled(isValidationEnabled);
   var containerColorPredicate = colorPredicate.nullish();
   function assertReturnOfBuilder(input, ExpectedInstanceOf) {
-    import_shapeshift4.s.instance(ExpectedInstanceOf).setValidationEnabled(isValidationEnabled).parse(input);
+    import_shapeshift6.s.instance(ExpectedInstanceOf).setValidationEnabled(isValidationEnabled).parse(input);
   }
   __name(assertReturnOfBuilder, "assertReturnOfBuilder");
   function validateComponentArray(input, min, max, ExpectedInstanceOf) {
-    (ExpectedInstanceOf ? import_shapeshift4.s.instance(ExpectedInstanceOf) : import_shapeshift4.s.instance(ComponentBuilder)).array().lengthGreaterThanOrEqual(min).lengthLessThanOrEqual(max).setValidationEnabled(isValidationEnabled).parse(input);
+    (ExpectedInstanceOf ? import_shapeshift6.s.instance(ExpectedInstanceOf) : import_shapeshift6.s.instance(ComponentBuilder)).array().lengthGreaterThanOrEqual(min).lengthLessThanOrEqual(max).setValidationEnabled(isValidationEnabled).parse(input);
   }
   __name(validateComponentArray, "validateComponentArray");
-  var import_v1012 = require_v106();
+  var import_v1015 = require_v1012();
   var FileBuilder = class extends ComponentBuilder {
     static {
       __name(this, "FileBuilder");
     }
     constructor(data = {}) {
-      super({ type: import_v1012.ComponentType.File, ...data, file: data.file ? { url: data.file.url } : undefined });
+      super({ type: import_v1015.ComponentType.File, ...data, file: data.file ? { url: data.file.url } : undefined });
     }
     setSpoiler(spoiler = true) {
       this.data.spoiler = spoilerPredicate.parse(spoiler);
@@ -18077,14 +20392,14 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data, file: { ...this.data.file } };
     }
   };
-  var import_v1013 = require_v106();
+  var import_v1016 = require_v1012();
   var SeparatorBuilder = class extends ComponentBuilder {
     static {
       __name(this, "SeparatorBuilder");
     }
     constructor(data = {}) {
       super({
-        type: import_v1013.ComponentType.Separator,
+        type: import_v1016.ComponentType.Separator,
         ...data
       });
     }
@@ -18104,14 +20419,14 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data };
     }
   };
-  var import_v1014 = require_v106();
+  var import_v1017 = require_v1012();
   var TextDisplayBuilder = class extends ComponentBuilder {
     static {
       __name(this, "TextDisplayBuilder");
     }
     constructor(data = {}) {
       super({
-        type: import_v1014.ComponentType.TextDisplay,
+        type: import_v1017.ComponentType.TextDisplay,
         ...data
       });
     }
@@ -18130,7 +20445,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
     components;
     constructor({ components, ...data } = {}) {
-      super({ type: import_v1015.ComponentType.Container, ...data });
+      super({ type: import_v1018.ComponentType.Container, ...data });
       this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
     }
     setAccentColor(color) {
@@ -18186,7 +20501,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1016 = require_v106();
+  var import_v1019 = require_v1012();
   var MediaGalleryItemBuilder = class {
     static {
       __name(this, "MediaGalleryItemBuilder");
@@ -18222,7 +20537,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
     items;
     constructor({ items, ...data } = {}) {
-      super({ type: import_v1016.ComponentType.MediaGallery, ...data });
+      super({ type: import_v1019.ComponentType.MediaGallery, ...data });
       this.items = items?.map((item) => new MediaGalleryItemBuilder(item)) ?? [];
     }
     addItems(...items) {
@@ -18249,7 +20564,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1017 = require_v106();
+  var import_v1020 = require_v1012();
   var SectionBuilder = class extends ComponentBuilder {
     static {
       __name(this, "SectionBuilder");
@@ -18257,7 +20572,7 @@ var require_dist8 = __commonJS((exports, module) => {
     components;
     accessory;
     constructor({ components, accessory, ...data } = {}) {
-      super({ type: import_v1017.ComponentType.Section, ...data });
+      super({ type: import_v1020.ComponentType.Section, ...data });
       this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
       this.accessory = accessory ? createComponentBuilder(accessory) : undefined;
     }
@@ -18299,36 +20614,38 @@ var require_dist8 = __commonJS((exports, module) => {
       return data;
     }
     switch (data.type) {
-      case import_v1018.ComponentType.ActionRow:
+      case import_v1021.ComponentType.ActionRow:
         return new ActionRowBuilder(data);
-      case import_v1018.ComponentType.Button:
+      case import_v1021.ComponentType.Button:
         return new ButtonBuilder(data);
-      case import_v1018.ComponentType.StringSelect:
+      case import_v1021.ComponentType.StringSelect:
         return new StringSelectMenuBuilder(data);
-      case import_v1018.ComponentType.TextInput:
+      case import_v1021.ComponentType.TextInput:
         return new TextInputBuilder(data);
-      case import_v1018.ComponentType.UserSelect:
+      case import_v1021.ComponentType.UserSelect:
         return new UserSelectMenuBuilder(data);
-      case import_v1018.ComponentType.RoleSelect:
+      case import_v1021.ComponentType.RoleSelect:
         return new RoleSelectMenuBuilder(data);
-      case import_v1018.ComponentType.MentionableSelect:
+      case import_v1021.ComponentType.MentionableSelect:
         return new MentionableSelectMenuBuilder(data);
-      case import_v1018.ComponentType.ChannelSelect:
+      case import_v1021.ComponentType.ChannelSelect:
         return new ChannelSelectMenuBuilder(data);
-      case import_v1018.ComponentType.File:
+      case import_v1021.ComponentType.File:
         return new FileBuilder(data);
-      case import_v1018.ComponentType.Container:
+      case import_v1021.ComponentType.Container:
         return new ContainerBuilder(data);
-      case import_v1018.ComponentType.Section:
+      case import_v1021.ComponentType.Section:
         return new SectionBuilder(data);
-      case import_v1018.ComponentType.Separator:
+      case import_v1021.ComponentType.Separator:
         return new SeparatorBuilder(data);
-      case import_v1018.ComponentType.TextDisplay:
+      case import_v1021.ComponentType.TextDisplay:
         return new TextDisplayBuilder(data);
-      case import_v1018.ComponentType.Thumbnail:
+      case import_v1021.ComponentType.Thumbnail:
         return new ThumbnailBuilder(data);
-      case import_v1018.ComponentType.MediaGallery:
+      case import_v1021.ComponentType.MediaGallery:
         return new MediaGalleryBuilder(data);
+      case import_v1021.ComponentType.Label:
+        return new LabelBuilder(data);
       default:
         throw new Error(`Cannot properly serialize component type: ${data.type}`);
     }
@@ -18354,7 +20671,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
     components;
     constructor({ components, ...data } = {}) {
-      super({ type: import_v1019.ComponentType.ActionRow, ...data });
+      super({ type: import_v1022.ComponentType.ActionRow, ...data });
       this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
     }
     addComponents(...components) {
@@ -18372,15 +20689,16 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var Assertions_exports5 = {};
-  __export(Assertions_exports5, {
+  var import_v1023 = require_v1012();
+  var Assertions_exports6 = {};
+  __export(Assertions_exports6, {
     componentsValidator: () => componentsValidator,
     titleValidator: () => titleValidator,
     validateRequiredParameters: () => validateRequiredParameters2
   });
-  var import_shapeshift5 = require_cjs3();
-  var titleValidator = import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
-  var componentsValidator = import_shapeshift5.s.instance(ActionRowBuilder).array().lengthGreaterThanOrEqual(1).setValidationEnabled(isValidationEnabled);
+  var import_shapeshift7 = require_cjs3();
+  var titleValidator = import_shapeshift7.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
+  var componentsValidator = import_shapeshift7.s.union([import_shapeshift7.s.instance(ActionRowBuilder), import_shapeshift7.s.instance(LabelBuilder), import_shapeshift7.s.instance(TextDisplayBuilder)]).array().lengthGreaterThanOrEqual(1).setValidationEnabled(isValidationEnabled);
   function validateRequiredParameters2(customId, title, components) {
     customIdValidator.parse(customId);
     titleValidator.parse(title);
@@ -18406,7 +20724,57 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
     addComponents(...components) {
-      this.components.push(...normalizeArray(components).map((component) => component instanceof ActionRowBuilder ? component : new ActionRowBuilder(component)));
+      this.components.push(...normalizeArray(components).map((component, idx) => {
+        if (component instanceof ActionRowBuilder || component instanceof LabelBuilder || component instanceof TextDisplayBuilder) {
+          return component;
+        }
+        if (component instanceof TextInputBuilder) {
+          return new ActionRowBuilder().addComponents(component);
+        }
+        if ("type" in component) {
+          if (component.type === import_v1023.ComponentType.ActionRow) {
+            return new ActionRowBuilder(component);
+          }
+          if (component.type === import_v1023.ComponentType.Label) {
+            return new LabelBuilder(component);
+          }
+          if (component.type === import_v1023.ComponentType.TextDisplay) {
+            return new TextDisplayBuilder(component);
+          }
+          if (component.type === import_v1023.ComponentType.TextInput) {
+            return new ActionRowBuilder().addComponents(new TextInputBuilder(component));
+          }
+        }
+        throw new TypeError(`Invalid component passed in ModalBuilder.addComponents at index ${idx}!`);
+      }));
+      return this;
+    }
+    addLabelComponents(...components) {
+      const normalized = normalizeArray(components);
+      const resolved = normalized.map((label) => resolveBuilder(label, LabelBuilder));
+      this.components.push(...resolved);
+      return this;
+    }
+    addTextDisplayComponents(...components) {
+      const normalized = normalizeArray(components);
+      const resolved = normalized.map((row) => resolveBuilder(row, TextDisplayBuilder));
+      this.components.push(...resolved);
+      return this;
+    }
+    addActionRowComponents(...components) {
+      const normalized = normalizeArray(components);
+      const resolved = normalized.map((row) => resolveBuilder(row, ActionRowBuilder));
+      this.components.push(...resolved);
+      return this;
+    }
+    setLabelComponents(...components) {
+      const normalized = normalizeArray(components);
+      this.spliceLabelComponents(0, this.components.length, ...normalized);
+      return this;
+    }
+    spliceLabelComponents(index, deleteCount, ...labels) {
+      const resolved = labels.map((label) => resolveBuilder(label, LabelBuilder));
+      this.components.splice(index, deleteCount, ...resolved);
       return this;
     }
     setComponents(...components) {
@@ -18421,8 +20789,8 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var Assertions_exports6 = {};
-  __export(Assertions_exports6, {
+  var Assertions_exports7 = {};
+  __export(Assertions_exports7, {
     assertReturnOfBuilder: () => assertReturnOfBuilder2,
     contextsPredicate: () => contextsPredicate,
     integrationTypesPredicate: () => integrationTypesPredicate,
@@ -18440,20 +20808,20 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequired: () => validateRequired,
     validateRequiredParameters: () => validateRequiredParameters3
   });
-  var import_shapeshift6 = require_cjs3();
-  var import_v1020 = require_v106();
-  var namePredicate = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
+  var import_shapeshift8 = require_cjs3();
+  var import_v1024 = require_v1012();
+  var namePredicate = import_shapeshift8.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
   function validateName(name) {
     namePredicate.parse(name);
   }
   __name(validateName, "validateName");
-  var descriptionPredicate3 = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
-  var localePredicate = import_shapeshift6.s.nativeEnum(import_v1020.Locale);
+  var descriptionPredicate3 = import_shapeshift8.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
+  var localePredicate = import_shapeshift8.s.nativeEnum(import_v1024.Locale);
   function validateDescription(description) {
     descriptionPredicate3.parse(description);
   }
   __name(validateDescription, "validateDescription");
-  var maxArrayLengthPredicate = import_shapeshift6.s.unknown().array().lengthLessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
+  var maxArrayLengthPredicate = import_shapeshift8.s.unknown().array().lengthLessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
   function validateLocale(locale) {
     return localePredicate.parse(locale);
   }
@@ -18468,7 +20836,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateMaxOptionsLength(options);
   }
   __name(validateRequiredParameters3, "validateRequiredParameters");
-  var booleanPredicate = import_shapeshift6.s.boolean();
+  var booleanPredicate = import_shapeshift8.s.boolean();
   function validateDefaultPermission(value) {
     booleanPredicate.parse(value);
   }
@@ -18477,29 +20845,29 @@ var require_dist8 = __commonJS((exports, module) => {
     booleanPredicate.parse(required);
   }
   __name(validateRequired, "validateRequired");
-  var choicesLengthPredicate = import_shapeshift6.s.number().lessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
+  var choicesLengthPredicate = import_shapeshift8.s.number().lessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
   function validateChoicesLength(amountAdding, choices) {
     choicesLengthPredicate.parse((choices?.length ?? 0) + amountAdding);
   }
   __name(validateChoicesLength, "validateChoicesLength");
   function assertReturnOfBuilder2(input, ExpectedInstanceOf) {
-    import_shapeshift6.s.instance(ExpectedInstanceOf).parse(input);
+    import_shapeshift8.s.instance(ExpectedInstanceOf).parse(input);
   }
   __name(assertReturnOfBuilder2, "assertReturnOfBuilder");
-  var localizationMapPredicate = import_shapeshift6.s.object(Object.fromEntries(Object.values(import_v1020.Locale).map((locale) => [locale, import_shapeshift6.s.string().nullish()]))).strict().nullish().setValidationEnabled(isValidationEnabled);
+  var localizationMapPredicate = import_shapeshift8.s.object(Object.fromEntries(Object.values(import_v1024.Locale).map((locale) => [locale, import_shapeshift8.s.string().nullish()]))).strict().nullish().setValidationEnabled(isValidationEnabled);
   function validateLocalizationMap(value) {
     localizationMapPredicate.parse(value);
   }
   __name(validateLocalizationMap, "validateLocalizationMap");
-  var dmPermissionPredicate = import_shapeshift6.s.boolean().nullish();
+  var dmPermissionPredicate = import_shapeshift8.s.boolean().nullish();
   function validateDMPermission(value) {
     dmPermissionPredicate.parse(value);
   }
   __name(validateDMPermission, "validateDMPermission");
-  var memberPermissionPredicate = import_shapeshift6.s.union([
-    import_shapeshift6.s.bigint().transform((value) => value.toString()),
-    import_shapeshift6.s.number().safeInt().transform((value) => value.toString()),
-    import_shapeshift6.s.string().regex(/^\d+$/)
+  var memberPermissionPredicate = import_shapeshift8.s.union([
+    import_shapeshift8.s.bigint().transform((value) => value.toString()),
+    import_shapeshift8.s.number().safeInt().transform((value) => value.toString()),
+    import_shapeshift8.s.string().regex(/^\d+$/)
   ]).nullish();
   function validateDefaultMemberPermissions(permissions) {
     return memberPermissionPredicate.parse(permissions);
@@ -18509,8 +20877,8 @@ var require_dist8 = __commonJS((exports, module) => {
     booleanPredicate.parse(value);
   }
   __name(validateNSFW, "validateNSFW");
-  var contextsPredicate = import_shapeshift6.s.array(import_shapeshift6.s.nativeEnum(import_v1020.InteractionContextType).setValidationEnabled(isValidationEnabled));
-  var integrationTypesPredicate = import_shapeshift6.s.array(import_shapeshift6.s.nativeEnum(import_v1020.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
+  var contextsPredicate = import_shapeshift8.s.array(import_shapeshift8.s.nativeEnum(import_v1024.InteractionContextType).setValidationEnabled(isValidationEnabled));
+  var integrationTypesPredicate = import_shapeshift8.s.array(import_shapeshift8.s.nativeEnum(import_v1024.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
   var import_ts_mixer6 = require_cjs4();
   var SharedNameAndDescription = class {
     static {
@@ -18579,7 +20947,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1021 = require_v106();
+  var import_v1025 = require_v1012();
   var SharedSlashCommand = class {
     static {
       __name(this, "SharedSlashCommand");
@@ -18629,12 +20997,12 @@ var require_dist8 = __commonJS((exports, module) => {
       validateLocalizationMap(this.description_localizations);
       return {
         ...this,
-        type: import_v1021.ApplicationCommandType.ChatInput,
+        type: import_v1025.ApplicationCommandType.ChatInput,
         options: this.options.map((option) => option.toJSON())
       };
     }
   };
-  var import_v1022 = require_v106();
+  var import_v1026 = require_v1012();
   var ApplicationCommandOptionBase = class extends SharedNameAndDescription {
     static {
       __name(this, "ApplicationCommandOptionBase");
@@ -18656,40 +21024,40 @@ var require_dist8 = __commonJS((exports, module) => {
     static {
       __name(this, "SlashCommandAttachmentOption");
     }
-    type = import_v1022.ApplicationCommandOptionType.Attachment;
+    type = import_v1026.ApplicationCommandOptionType.Attachment;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_v1023 = require_v106();
+  var import_v1027 = require_v1012();
   var SlashCommandBooleanOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandBooleanOption");
     }
-    type = import_v1023.ApplicationCommandOptionType.Boolean;
+    type = import_v1027.ApplicationCommandOptionType.Boolean;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_v1025 = require_v106();
+  var import_v1029 = require_v1012();
   var import_ts_mixer = require_cjs4();
-  var import_shapeshift7 = require_cjs3();
-  var import_v1024 = require_v106();
+  var import_shapeshift9 = require_cjs3();
+  var import_v1028 = require_v1012();
   var allowedChannelTypes = [
-    import_v1024.ChannelType.GuildText,
-    import_v1024.ChannelType.GuildVoice,
-    import_v1024.ChannelType.GuildCategory,
-    import_v1024.ChannelType.GuildAnnouncement,
-    import_v1024.ChannelType.AnnouncementThread,
-    import_v1024.ChannelType.PublicThread,
-    import_v1024.ChannelType.PrivateThread,
-    import_v1024.ChannelType.GuildStageVoice,
-    import_v1024.ChannelType.GuildForum,
-    import_v1024.ChannelType.GuildMedia
+    import_v1028.ChannelType.GuildText,
+    import_v1028.ChannelType.GuildVoice,
+    import_v1028.ChannelType.GuildCategory,
+    import_v1028.ChannelType.GuildAnnouncement,
+    import_v1028.ChannelType.AnnouncementThread,
+    import_v1028.ChannelType.PublicThread,
+    import_v1028.ChannelType.PrivateThread,
+    import_v1028.ChannelType.GuildStageVoice,
+    import_v1028.ChannelType.GuildForum,
+    import_v1028.ChannelType.GuildMedia
   ];
-  var channelTypesPredicate = import_shapeshift7.s.array(import_shapeshift7.s.union(allowedChannelTypes.map((type) => import_shapeshift7.s.literal(type))));
+  var channelTypesPredicate = import_shapeshift9.s.array(import_shapeshift9.s.union(allowedChannelTypes.map((type) => import_shapeshift9.s.literal(type))));
   var ApplicationCommandOptionChannelTypesMixin = class {
     static {
       __name(this, "ApplicationCommandOptionChannelTypesMixin");
@@ -18704,7 +21072,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var SlashCommandChannelOption = class extends ApplicationCommandOptionBase {
-    type = import_v1025.ApplicationCommandOptionType.Channel;
+    type = import_v1029.ApplicationCommandOptionType.Channel;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
@@ -18714,8 +21082,8 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandChannelOption = __decorateClass([
     (0, import_ts_mixer.mix)(ApplicationCommandOptionChannelTypesMixin)
   ], SlashCommandChannelOption);
-  var import_shapeshift10 = require_cjs3();
-  var import_v1027 = require_v106();
+  var import_shapeshift12 = require_cjs3();
+  var import_v1031 = require_v1012();
   var import_ts_mixer2 = require_cjs4();
   var ApplicationCommandNumericOptionMinMaxValueMixin = class {
     static {
@@ -18724,8 +21092,8 @@ var require_dist8 = __commonJS((exports, module) => {
     max_value;
     min_value;
   };
-  var import_shapeshift8 = require_cjs3();
-  var booleanPredicate2 = import_shapeshift8.s.boolean();
+  var import_shapeshift10 = require_cjs3();
+  var booleanPredicate2 = import_shapeshift10.s.boolean();
   var ApplicationCommandOptionWithAutocompleteMixin = class {
     static {
       __name(this, "ApplicationCommandOptionWithAutocompleteMixin");
@@ -18741,14 +21109,14 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_shapeshift9 = require_cjs3();
-  var import_v1026 = require_v106();
-  var stringPredicate = import_shapeshift9.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
-  var numberPredicate = import_shapeshift9.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
-  var choicesPredicate = import_shapeshift9.s.object({
+  var import_shapeshift11 = require_cjs3();
+  var import_v1030 = require_v1012();
+  var stringPredicate = import_shapeshift11.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
+  var numberPredicate = import_shapeshift11.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
+  var choicesPredicate = import_shapeshift11.s.object({
     name: stringPredicate,
     name_localizations: localizationMapPredicate,
-    value: import_shapeshift9.s.union([stringPredicate, numberPredicate])
+    value: import_shapeshift11.s.union([stringPredicate, numberPredicate])
   }).array();
   var ApplicationCommandOptionWithChoicesMixin = class {
     static {
@@ -18767,7 +21135,7 @@ var require_dist8 = __commonJS((exports, module) => {
       }
       validateChoicesLength(normalizedChoices.length, this.choices);
       for (const { name, name_localizations, value } of normalizedChoices) {
-        if (this.type === import_v1026.ApplicationCommandOptionType.String) {
+        if (this.type === import_v1030.ApplicationCommandOptionType.String) {
           stringPredicate.parse(value);
         } else {
           numberPredicate.parse(value);
@@ -18787,9 +21155,9 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var numberValidator = import_shapeshift10.s.number().int();
+  var numberValidator = import_shapeshift12.s.number().int();
   var SlashCommandIntegerOption = class extends ApplicationCommandOptionBase {
-    type = import_v1027.ApplicationCommandOptionType.Integer;
+    type = import_v1031.ApplicationCommandOptionType.Integer;
     setMaxValue(max) {
       numberValidator.parse(max);
       Reflect.set(this, "max_value", max);
@@ -18812,23 +21180,23 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandIntegerOption = __decorateClass([
     (0, import_ts_mixer2.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandIntegerOption);
-  var import_v1028 = require_v106();
+  var import_v1032 = require_v1012();
   var SlashCommandMentionableOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandMentionableOption");
     }
-    type = import_v1028.ApplicationCommandOptionType.Mentionable;
+    type = import_v1032.ApplicationCommandOptionType.Mentionable;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_shapeshift11 = require_cjs3();
-  var import_v1029 = require_v106();
+  var import_shapeshift13 = require_cjs3();
+  var import_v1033 = require_v1012();
   var import_ts_mixer3 = require_cjs4();
-  var numberValidator2 = import_shapeshift11.s.number();
+  var numberValidator2 = import_shapeshift13.s.number();
   var SlashCommandNumberOption = class extends ApplicationCommandOptionBase {
-    type = import_v1029.ApplicationCommandOptionType.Number;
+    type = import_v1033.ApplicationCommandOptionType.Number;
     setMaxValue(max) {
       numberValidator2.parse(max);
       Reflect.set(this, "max_value", max);
@@ -18851,24 +21219,24 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandNumberOption = __decorateClass([
     (0, import_ts_mixer3.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandNumberOption);
-  var import_v1030 = require_v106();
+  var import_v1034 = require_v1012();
   var SlashCommandRoleOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandRoleOption");
     }
-    type = import_v1030.ApplicationCommandOptionType.Role;
+    type = import_v1034.ApplicationCommandOptionType.Role;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_shapeshift12 = require_cjs3();
-  var import_v1031 = require_v106();
+  var import_shapeshift14 = require_cjs3();
+  var import_v1035 = require_v1012();
   var import_ts_mixer4 = require_cjs4();
-  var minLengthValidator2 = import_shapeshift12.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
-  var maxLengthValidator2 = import_shapeshift12.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
+  var minLengthValidator2 = import_shapeshift14.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
+  var maxLengthValidator2 = import_shapeshift14.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
   var SlashCommandStringOption = class extends ApplicationCommandOptionBase {
-    type = import_v1031.ApplicationCommandOptionType.String;
+    type = import_v1035.ApplicationCommandOptionType.String;
     max_length;
     min_length;
     setMaxLength(max) {
@@ -18893,12 +21261,12 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandStringOption = __decorateClass([
     (0, import_ts_mixer4.mix)(ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandStringOption);
-  var import_v1032 = require_v106();
+  var import_v1036 = require_v1012();
   var SlashCommandUserOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandUserOption");
     }
-    type = import_v1032.ApplicationCommandOptionType.User;
+    type = import_v1036.ApplicationCommandOptionType.User;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
@@ -18945,7 +21313,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1033 = require_v106();
+  var import_v1037 = require_v1012();
   var import_ts_mixer5 = require_cjs4();
   var SlashCommandSubcommandGroupBuilder = class {
     name = undefined;
@@ -18962,7 +21330,7 @@ var require_dist8 = __commonJS((exports, module) => {
     toJSON() {
       validateRequiredParameters3(this.name, this.description, this.options);
       return {
-        type: import_v1033.ApplicationCommandOptionType.SubcommandGroup,
+        type: import_v1037.ApplicationCommandOptionType.SubcommandGroup,
         name: this.name,
         name_localizations: this.name_localizations,
         description: this.description,
@@ -18982,7 +21350,7 @@ var require_dist8 = __commonJS((exports, module) => {
     toJSON() {
       validateRequiredParameters3(this.name, this.description, this.options);
       return {
-        type: import_v1033.ApplicationCommandOptionType.Subcommand,
+        type: import_v1037.ApplicationCommandOptionType.Subcommand,
         name: this.name,
         name_localizations: this.name_localizations,
         description: this.description,
@@ -19034,8 +21402,8 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandBuilder = __decorateClass([
     (0, import_ts_mixer6.mix)(SharedSlashCommandOptions, SharedNameAndDescription, SharedSlashCommandSubcommands, SharedSlashCommand)
   ], SlashCommandBuilder);
-  var Assertions_exports7 = {};
-  __export(Assertions_exports7, {
+  var Assertions_exports8 = {};
+  __export(Assertions_exports8, {
     contextsPredicate: () => contextsPredicate2,
     integrationTypesPredicate: () => integrationTypesPredicate2,
     validateDMPermission: () => validateDMPermission2,
@@ -19045,11 +21413,11 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredParameters: () => validateRequiredParameters4,
     validateType: () => validateType
   });
-  var import_shapeshift13 = require_cjs3();
-  var import_v1034 = require_v106();
-  var namePredicate2 = import_shapeshift13.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/\S/).setValidationEnabled(isValidationEnabled);
-  var typePredicate = import_shapeshift13.s.union([import_shapeshift13.s.literal(import_v1034.ApplicationCommandType.User), import_shapeshift13.s.literal(import_v1034.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
-  var booleanPredicate3 = import_shapeshift13.s.boolean();
+  var import_shapeshift15 = require_cjs3();
+  var import_v1038 = require_v1012();
+  var namePredicate2 = import_shapeshift15.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/\S/).setValidationEnabled(isValidationEnabled);
+  var typePredicate = import_shapeshift15.s.union([import_shapeshift15.s.literal(import_v1038.ApplicationCommandType.User), import_shapeshift15.s.literal(import_v1038.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
+  var booleanPredicate3 = import_shapeshift15.s.boolean();
   function validateDefaultPermission2(value) {
     booleanPredicate3.parse(value);
   }
@@ -19067,22 +21435,22 @@ var require_dist8 = __commonJS((exports, module) => {
     validateType(type);
   }
   __name(validateRequiredParameters4, "validateRequiredParameters");
-  var dmPermissionPredicate2 = import_shapeshift13.s.boolean().nullish();
+  var dmPermissionPredicate2 = import_shapeshift15.s.boolean().nullish();
   function validateDMPermission2(value) {
     dmPermissionPredicate2.parse(value);
   }
   __name(validateDMPermission2, "validateDMPermission");
-  var memberPermissionPredicate2 = import_shapeshift13.s.union([
-    import_shapeshift13.s.bigint().transform((value) => value.toString()),
-    import_shapeshift13.s.number().safeInt().transform((value) => value.toString()),
-    import_shapeshift13.s.string().regex(/^\d+$/)
+  var memberPermissionPredicate2 = import_shapeshift15.s.union([
+    import_shapeshift15.s.bigint().transform((value) => value.toString()),
+    import_shapeshift15.s.number().safeInt().transform((value) => value.toString()),
+    import_shapeshift15.s.string().regex(/^\d+$/)
   ]).nullish();
   function validateDefaultMemberPermissions2(permissions) {
     return memberPermissionPredicate2.parse(permissions);
   }
   __name(validateDefaultMemberPermissions2, "validateDefaultMemberPermissions");
-  var contextsPredicate2 = import_shapeshift13.s.array(import_shapeshift13.s.nativeEnum(import_v1034.InteractionContextType).setValidationEnabled(isValidationEnabled));
-  var integrationTypesPredicate2 = import_shapeshift13.s.array(import_shapeshift13.s.nativeEnum(import_v1034.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
+  var contextsPredicate2 = import_shapeshift15.s.array(import_shapeshift15.s.nativeEnum(import_v1038.InteractionContextType).setValidationEnabled(isValidationEnabled));
+  var integrationTypesPredicate2 = import_shapeshift15.s.array(import_shapeshift15.s.nativeEnum(import_v1038.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
   var ContextMenuCommandBuilder = class {
     static {
       __name(this, "ContextMenuCommandBuilder");
@@ -19161,7 +21529,7 @@ var require_dist8 = __commonJS((exports, module) => {
     return (data.title?.length ?? 0) + (data.description?.length ?? 0) + (data.fields?.reduce((prev, curr) => prev + curr.name.length + curr.value.length, 0) ?? 0) + (data.footer?.text.length ?? 0) + (data.author?.name.length ?? 0);
   }
   __name(embedLength, "embedLength");
-  var version = "1.11.3";
+  var version = "1.12.2";
 });
 
 // node_modules/discord.js/src/structures/Embed.js
@@ -19265,7 +21633,7 @@ var require_Embed = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/MessageMentions.js
 var require_MessageMentions = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { FormattingPatterns } = require_v106();
+  var { FormattingPatterns } = require_v1012();
   var { flatten } = require_Util();
 
   class MessageMentions {
@@ -19407,89 +21775,6 @@ var require_MessageMentions = __commonJS((exports, module) => {
   module.exports = MessageMentions;
 });
 
-// node_modules/discord.js/src/structures/PollAnswer.js
-var require_PollAnswer = __commonJS((exports) => {
-  var Base = require_Base();
-  var { Emoji } = require_Emoji();
-
-  class PollAnswer extends Base {
-    constructor(client, data, poll) {
-      super(client);
-      Object.defineProperty(this, "poll", { value: poll });
-      this.id = data.answer_id;
-      this.text = data.poll_media.text ?? null;
-      Object.defineProperty(this, "_emoji", { value: data.poll_media.emoji ?? null });
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("count" in data) {
-        this.voteCount = data.count;
-      } else {
-        this.voteCount ??= 0;
-      }
-    }
-    get emoji() {
-      if (!this._emoji || !this._emoji.id && !this._emoji.name)
-        return null;
-      return this.client.emojis.cache.get(this._emoji.id) ?? new Emoji(this.client, this._emoji);
-    }
-    fetchVoters({ after, limit } = {}) {
-      return this.poll.message.channel.messages.fetchPollAnswerVoters({
-        messageId: this.poll.message.id,
-        answerId: this.id,
-        after,
-        limit
-      });
-    }
-  }
-  exports.PollAnswer = PollAnswer;
-});
-
-// node_modules/discord.js/src/structures/Poll.js
-var require_Poll = __commonJS((exports) => {
-  var { Collection } = require_dist6();
-  var Base = require_Base();
-  var { PollAnswer } = require_PollAnswer();
-  var { DiscordjsError } = require_DJSError();
-  var { ErrorCodes } = require_errors();
-
-  class Poll extends Base {
-    constructor(client, data, message) {
-      super(client);
-      Object.defineProperty(this, "message", { value: message });
-      this.question = {
-        text: data.question.text
-      };
-      this.answers = data.answers.reduce((acc, answer) => acc.set(answer.answer_id, new PollAnswer(this.client, answer, this)), new Collection);
-      this.expiresTimestamp = Date.parse(data.expiry);
-      this.allowMultiselect = data.allow_multiselect;
-      this.layoutType = data.layout_type;
-      this._patch(data);
-    }
-    _patch(data) {
-      if (data.results) {
-        this.resultsFinalized = data.results.is_finalized;
-        for (const answerResult of data.results.answer_counts) {
-          const answer = this.answers.get(answerResult.id);
-          answer?._patch(answerResult);
-        }
-      } else {
-        this.resultsFinalized ??= false;
-      }
-    }
-    get expiresAt() {
-      return new Date(this.expiresTimestamp);
-    }
-    async end() {
-      if (Date.now() > this.expiresTimestamp) {
-        throw new DiscordjsError(ErrorCodes.PollAlreadyExpired);
-      }
-      return this.message.channel.messages.endPoll(this.message.id);
-    }
-  }
-  exports.Poll = Poll;
-});
-
 // node_modules/discord.js/src/structures/ReactionCollector.js
 var require_ReactionCollector = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
@@ -19602,7 +21887,7 @@ var require_ReactionCollector = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/Sticker.js
 var require_Sticker = __commonJS((exports) => {
   var { DiscordSnowflake } = require_cjs();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var Base = require_Base();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var { StickerFormatExtensionMap } = require_Constants();
@@ -19805,7 +22090,7 @@ var require_GuildEmojiRoleManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/GuildEmoji.js
 var require_GuildEmoji = __commonJS((exports, module) => {
-  var { PermissionFlagsBits } = require_v106();
+  var { PermissionFlagsBits } = require_v1012();
   var BaseGuildEmoji = require_BaseGuildEmoji();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var GuildEmojiRoleManager = require_GuildEmojiRoleManager();
@@ -19881,208 +22166,11 @@ var require_ReactionEmoji = __commonJS((exports, module) => {
   module.exports = ReactionEmoji;
 });
 
-// node_modules/discord.js/src/util/UserFlagsBitField.js
-var require_UserFlagsBitField = __commonJS((exports, module) => {
-  var { UserFlags } = require_v106();
-  var BitField = require_BitField();
-
-  class UserFlagsBitField extends BitField {
-    static Flags = UserFlags;
-  }
-  module.exports = UserFlagsBitField;
-});
-
-// node_modules/discord.js/src/structures/User.js
-var require_User = __commonJS((exports, module) => {
-  var { userMention } = require_dist7();
-  var { calculateUserDefaultAvatarIndex } = require_dist5();
-  var { DiscordSnowflake } = require_cjs();
-  var Base = require_Base();
-  var TextBasedChannel = require_TextBasedChannel();
-  var { _transformCollectibles } = require_Transformers();
-  var UserFlagsBitField = require_UserFlagsBitField();
-  var { emitDeprecationWarningForUserFetchFlags } = require_Util();
-
-  class User extends Base {
-    constructor(client, data) {
-      super(client);
-      this.id = data.id;
-      this.bot = null;
-      this.system = null;
-      this.flags = null;
-      this._patch(data);
-    }
-    _patch(data) {
-      if ("username" in data) {
-        this.username = data.username;
-      } else {
-        this.username ??= null;
-      }
-      if ("global_name" in data) {
-        this.globalName = data.global_name;
-      } else {
-        this.globalName ??= null;
-      }
-      if ("bot" in data) {
-        this.bot = Boolean(data.bot);
-      } else if (!this.partial && typeof this.bot !== "boolean") {
-        this.bot = false;
-      }
-      if ("discriminator" in data) {
-        this.discriminator = data.discriminator;
-      } else {
-        this.discriminator ??= null;
-      }
-      if ("avatar" in data) {
-        this.avatar = data.avatar;
-      } else {
-        this.avatar ??= null;
-      }
-      if ("banner" in data) {
-        this.banner = data.banner;
-      } else if (this.banner !== null) {
-        this.banner ??= undefined;
-      }
-      if ("accent_color" in data) {
-        this.accentColor = data.accent_color;
-      } else if (this.accentColor !== null) {
-        this.accentColor ??= undefined;
-      }
-      if ("system" in data) {
-        this.system = Boolean(data.system);
-      } else if (!this.partial && typeof this.system !== "boolean") {
-        this.system = false;
-      }
-      if ("public_flags" in data) {
-        this.flags = new UserFlagsBitField(data.public_flags);
-      }
-      if ("avatar_decoration" in data) {
-        this.avatarDecoration = data.avatar_decoration;
-      } else {
-        this.avatarDecoration ??= null;
-      }
-      if ("avatar_decoration_data" in data) {
-        if (data.avatar_decoration_data) {
-          this.avatarDecorationData = {
-            asset: data.avatar_decoration_data.asset,
-            skuId: data.avatar_decoration_data.sku_id
-          };
-        } else {
-          this.avatarDecorationData = null;
-        }
-      } else {
-        this.avatarDecorationData ??= null;
-      }
-      if (data.collectibles) {
-        this.collectibles = _transformCollectibles(data.collectibles);
-      } else {
-        this.collectibles = null;
-      }
-      if ("primary_guild" in data) {
-        if (data.primary_guild) {
-          this.primaryGuild = {
-            identityGuildId: data.primary_guild.identity_guild_id,
-            identityEnabled: data.primary_guild.identity_enabled,
-            tag: data.primary_guild.tag,
-            badge: data.primary_guild.badge
-          };
-        } else {
-          this.primaryGuild = null;
-        }
-      } else {
-        this.primaryGuild ??= null;
-      }
-    }
-    get partial() {
-      return typeof this.username !== "string";
-    }
-    get createdTimestamp() {
-      return DiscordSnowflake.timestampFrom(this.id);
-    }
-    get createdAt() {
-      return new Date(this.createdTimestamp);
-    }
-    avatarURL(options = {}) {
-      return this.avatar && this.client.rest.cdn.avatar(this.id, this.avatar, options);
-    }
-    avatarDecorationURL(options = {}) {
-      if (this.avatarDecorationData) {
-        return this.client.rest.cdn.avatarDecoration(this.avatarDecorationData.asset);
-      }
-      return this.avatarDecoration && this.client.rest.cdn.avatarDecoration(this.id, this.avatarDecoration, options);
-    }
-    get defaultAvatarURL() {
-      const index = this.discriminator === "0" ? calculateUserDefaultAvatarIndex(this.id) : this.discriminator % 5;
-      return this.client.rest.cdn.defaultAvatar(index);
-    }
-    displayAvatarURL(options) {
-      return this.avatarURL(options) ?? this.defaultAvatarURL;
-    }
-    get hexAccentColor() {
-      if (typeof this.accentColor !== "number")
-        return this.accentColor;
-      return `#${this.accentColor.toString(16).padStart(6, "0")}`;
-    }
-    bannerURL(options = {}) {
-      return this.banner && this.client.rest.cdn.banner(this.id, this.banner, options);
-    }
-    guildTagBadgeURL(options = {}) {
-      return this.primaryGuild?.badge ? this.client.rest.cdn.guildTagBadge(this.primaryGuild.identityGuildId, this.primaryGuild.badge, options) : null;
-    }
-    get tag() {
-      return typeof this.username === "string" ? this.discriminator === "0" ? this.username : `${this.username}#${this.discriminator}` : null;
-    }
-    get displayName() {
-      return this.globalName ?? this.username;
-    }
-    get dmChannel() {
-      return this.client.users.dmChannel(this.id);
-    }
-    createDM(force = false) {
-      return this.client.users.createDM(this.id, { force });
-    }
-    deleteDM() {
-      return this.client.users.deleteDM(this.id);
-    }
-    equals(user) {
-      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.globalName && this.avatar === user.avatar && this.flags?.bitfield === user.flags?.bitfield && this.banner === user.banner && this.accentColor === user.accentColor && this.avatarDecoration === user.avatarDecoration && this.avatarDecorationData?.asset === user.avatarDecorationData?.asset && this.avatarDecorationData?.skuId === user.avatarDecorationData?.skuId && this.collectibles?.nameplate?.skuId === user.collectibles?.nameplate?.skuId && this.collectibles?.nameplate?.asset === user.collectibles?.nameplate?.asset && this.collectibles?.nameplate?.label === user.collectibles?.nameplate?.label && this.collectibles?.nameplate?.palette === user.collectibles?.nameplate?.palette && this.primaryGuild?.identityGuildId === user.primaryGuild?.identityGuildId && this.primaryGuild?.identityEnabled === user.primaryGuild?.identityEnabled && this.primaryGuild?.tag === user.primaryGuild?.tag && this.primaryGuild?.badge === user.primaryGuild?.badge;
-    }
-    _equals(user) {
-      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.global_name && this.avatar === user.avatar && this.flags?.bitfield === user.public_flags && ("banner" in user ? this.banner === user.banner : true) && ("accent_color" in user ? this.accentColor === user.accent_color : true) && ("avatar_decoration" in user ? this.avatarDecoration === user.avatar_decoration : true) && ("avatar_decoration_data" in user ? this.avatarDecorationData?.asset === user.avatar_decoration_data?.asset && this.avatarDecorationData?.skuId === user.avatar_decoration_data?.sku_id : true) && ("collectibles" in user ? this.collectibles?.nameplate?.skuId === user.collectibles?.nameplate?.sku_id && this.collectibles?.nameplate?.asset === user.collectibles?.nameplate?.asset && this.collectibles?.nameplate?.label === user.collectibles?.nameplate?.label && this.collectibles?.nameplate?.palette === user.collectibles?.nameplate?.palette : true) && ("primary_guild" in user ? this.primaryGuild?.identityGuildId === user.primary_guild?.identity_guild_id && this.primaryGuild?.identityEnabled === user.primary_guild?.identity_enabled && this.primaryGuild?.tag === user.primary_guild?.tag && this.primaryGuild?.badge === user.primary_guild?.badge : true);
-    }
-    fetchFlags(force = false) {
-      emitDeprecationWarningForUserFetchFlags(this.constructor.name);
-      return this.client.users.fetchFlags(this.id, { force });
-    }
-    fetch(force = true) {
-      return this.client.users.fetch(this.id, { force });
-    }
-    toString() {
-      return userMention(this.id);
-    }
-    toJSON(...props) {
-      const json = super.toJSON({
-        createdTimestamp: true,
-        defaultAvatarURL: true,
-        hexAccentColor: true,
-        tag: true
-      }, ...props);
-      json.avatarURL = this.avatarURL();
-      json.displayAvatarURL = this.displayAvatarURL();
-      json.bannerURL = this.banner ? this.bannerURL() : this.banner;
-      json.guildTagBadgeURL = this.guildTagBadgeURL();
-      return json;
-    }
-  }
-  TextBasedChannel.applyToClass(User);
-  module.exports = User;
-});
-
 // node_modules/discord.js/src/managers/ReactionUserManager.js
 var require_ReactionUserManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { ReactionType, Routes } = require_v106();
+  var { ReactionType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var User = require_User();
@@ -20119,7 +22207,7 @@ var require_ReactionUserManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/MessageReaction.js
 var require_MessageReaction = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var ApplicationEmoji = require_ApplicationEmoji();
   var GuildEmoji = require_GuildEmoji();
   var ReactionEmoji = require_ReactionEmoji();
@@ -20241,7 +22329,7 @@ var require_MessageReaction = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ReactionManager.js
 var require_ReactionManager = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var MessageReaction = require_MessageReaction();
 
@@ -20495,6 +22583,29 @@ var require_FileComponent = __commonJS((exports, module) => {
   module.exports = FileComponent;
 });
 
+// node_modules/discord.js/src/structures/LabelComponent.js
+var require_LabelComponent = __commonJS((exports, module) => {
+  var Component = require_Component();
+  var { createComponent } = require_Components();
+
+  class LabelComponent extends Component {
+    constructor({ component, ...data }) {
+      super(data);
+      this.component = createComponent(component);
+    }
+    get label() {
+      return this.data.label;
+    }
+    get description() {
+      return this.data.description ?? null;
+    }
+    toJSON() {
+      return { ...this.data, component: this.component.toJSON() };
+    }
+  }
+  module.exports = LabelComponent;
+});
+
 // node_modules/discord.js/src/structures/MediaGalleryItem.js
 var require_MediaGalleryItem = __commonJS((exports, module) => {
   var UnfurledMediaItem = require_UnfurledMediaItem();
@@ -20610,7 +22721,7 @@ var require_SectionComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SeparatorComponent.js
 var require_SeparatorComponent = __commonJS((exports, module) => {
-  var { SeparatorSpacingSize } = require_v106();
+  var { SeparatorSpacingSize } = require_v1012();
   var Component = require_Component();
 
   class SeparatorComponent extends Component {
@@ -20775,7 +22886,7 @@ var require_UserSelectMenuComponent = __commonJS((exports, module) => {
 // node_modules/discord.js/src/util/Components.js
 var require_Components = __commonJS((exports, module) => {
   var { ComponentBuilder } = require_dist8();
-  var { ComponentType } = require_v106();
+  var { ComponentType } = require_v1012();
   function createComponent(data) {
     return data instanceof Component ? data : new (ComponentTypeToComponent[data.type] ?? Component)(data);
   }
@@ -20807,6 +22918,7 @@ var require_Components = __commonJS((exports, module) => {
   var Component = require_Component();
   var ContainerComponent = require_ContainerComponent();
   var FileComponent = require_FileComponent();
+  var LabelComponent = require_LabelComponent();
   var MediaGalleryComponent = require_MediaGalleryComponent();
   var MentionableSelectMenuBuilder = require_MentionableSelectMenuBuilder();
   var MentionableSelectMenuComponent = require_MentionableSelectMenuComponent();
@@ -20837,7 +22949,8 @@ var require_Components = __commonJS((exports, module) => {
     [ComponentType.MediaGallery]: MediaGalleryComponent,
     [ComponentType.Section]: SectionComponent,
     [ComponentType.Separator]: SeparatorComponent,
-    [ComponentType.Thumbnail]: ThumbnailComponent
+    [ComponentType.Thumbnail]: ThumbnailComponent,
+    [ComponentType.Label]: LabelComponent
   };
   var ComponentTypeToBuilder = {
     [ComponentType.ActionRow]: ActionRowBuilder,
@@ -20863,7 +22976,7 @@ var require_Message = __commonJS((exports) => {
     MessageFlags,
     PermissionFlagsBits,
     MessageReferenceType
-  } = require_v106();
+  } = require_v1012();
   var Attachment = require_Attachment();
   var Base = require_Base();
   var ClientApplication = require_ClientApplication();
@@ -21055,7 +23168,11 @@ var require_Message = __commonJS((exports) => {
         this.interaction ??= null;
       }
       if (data.poll) {
-        this.poll = new Poll(this.client, data.poll, this);
+        if (this.poll) {
+          this.poll._patch(data.poll);
+        } else {
+          this.poll = new Poll(this.client, data.poll, this, this.channel);
+        }
       } else {
         this.poll ??= null;
       }
@@ -21344,7 +23461,7 @@ var require_Webhook = __commonJS((exports, module) => {
   var { makeURLSearchParams } = require_dist5();
   var { lazy } = require_dist();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes, WebhookType } = require_v106();
+  var { Routes, WebhookType } = require_v1012();
   var MessagePayload = require_MessagePayload();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var { resolveImage } = require_DataResolver();
@@ -21591,7 +23708,7 @@ var require_WebhookClient = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/VoiceState.js
 var require_VoiceState = __commonJS((exports, module) => {
-  var { ChannelType, Routes } = require_v106();
+  var { ChannelType, Routes } = require_v1012();
   var Base = require_Base();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -21728,7 +23845,7 @@ var require_VoiceState = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildMemberRoleManager.js
 var require_GuildMemberRoleManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var DataManager = require_DataManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Role } = require_Role();
@@ -21833,7 +23950,7 @@ var require_GuildMemberRoleManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/GuildMemberFlagsBitField.js
 var require_GuildMemberFlagsBitField = __commonJS((exports) => {
-  var { GuildMemberFlags } = require_v106();
+  var { GuildMemberFlags } = require_v1012();
   var BitField = require_BitField();
 
   class GuildMemberFlagsBitField extends BitField {
@@ -21844,7 +23961,7 @@ var require_GuildMemberFlagsBitField = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/GuildMember.js
 var require_GuildMember = __commonJS((exports) => {
-  var { PermissionFlagsBits } = require_v106();
+  var { PermissionFlagsBits } = require_v1012();
   var Base = require_Base();
   var VoiceState = require_VoiceState();
   var TextBasedChannel = require_TextBasedChannel();
@@ -22015,7 +24132,7 @@ var require_GuildMember = __commonJS((exports) => {
       return this.edit({ flags, reason });
     }
     setNickname(nick, reason) {
-      return this.edit({ nick, reason });
+      return this.user.id === this.client.user.id ? this.guild.members.editMe({ nick, reason }) : this.edit({ nick, reason });
     }
     createDM(force = false) {
       return this.user.createDM(force);
@@ -22068,7 +24185,7 @@ var require_MessageManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Message } = require_Message();
@@ -22227,7 +24344,7 @@ var require_MessagePayload = __commonJS((exports, module) => {
   var { Buffer: Buffer2 } = __require("buffer");
   var { lazy, isJSONEncodable } = require_dist();
   var { DiscordSnowflake } = require_cjs();
-  var { MessageFlags, MessageReferenceType } = require_v106();
+  var { MessageFlags, MessageReferenceType } = require_v1012();
   var { DiscordjsError, DiscordjsRangeError, ErrorCodes } = require_errors();
   var { resolveFile } = require_DataResolver();
   var MessageFlagsBitField = require_MessageFlagsBitField();
@@ -22441,7 +24558,7 @@ var require_GuildMessageManager = __commonJS((exports, module) => {
 var require_TextBasedChannel = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { DiscordSnowflake } = require_cjs();
-  var { InteractionType, Routes } = require_v106();
+  var { InteractionType, Routes } = require_v1012();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var { MaxBulkDeletableMessageAge } = require_Constants();
   var InteractionCollector = require_InteractionCollector();
@@ -22569,6 +24686,696 @@ var require_TextBasedChannel = __commonJS((exports, module) => {
   var GuildMessageManager = require_GuildMessageManager();
 });
 
+// node_modules/discord.js/src/util/UserFlagsBitField.js
+var require_UserFlagsBitField = __commonJS((exports, module) => {
+  var { UserFlags } = require_v1012();
+  var BitField = require_BitField();
+
+  class UserFlagsBitField extends BitField {
+    static Flags = UserFlags;
+  }
+  module.exports = UserFlagsBitField;
+});
+
+// node_modules/discord.js/src/structures/User.js
+var require_User = __commonJS((exports, module) => {
+  var { userMention } = require_dist7();
+  var { calculateUserDefaultAvatarIndex } = require_dist5();
+  var { DiscordSnowflake } = require_cjs();
+  var Base = require_Base();
+  var TextBasedChannel = require_TextBasedChannel();
+  var { _transformCollectibles } = require_Transformers();
+  var UserFlagsBitField = require_UserFlagsBitField();
+  var { emitDeprecationWarningForUserFetchFlags } = require_Util();
+
+  class User extends Base {
+    constructor(client, data) {
+      super(client);
+      this.id = data.id;
+      this.bot = null;
+      this.system = null;
+      this.flags = null;
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("username" in data) {
+        this.username = data.username;
+      } else {
+        this.username ??= null;
+      }
+      if ("global_name" in data) {
+        this.globalName = data.global_name;
+      } else {
+        this.globalName ??= null;
+      }
+      if ("bot" in data) {
+        this.bot = Boolean(data.bot);
+      } else if (!this.partial && typeof this.bot !== "boolean") {
+        this.bot = false;
+      }
+      if ("discriminator" in data) {
+        this.discriminator = data.discriminator;
+      } else {
+        this.discriminator ??= null;
+      }
+      if ("avatar" in data) {
+        this.avatar = data.avatar;
+      } else {
+        this.avatar ??= null;
+      }
+      if ("banner" in data) {
+        this.banner = data.banner;
+      } else if (this.banner !== null) {
+        this.banner ??= undefined;
+      }
+      if ("accent_color" in data) {
+        this.accentColor = data.accent_color;
+      } else if (this.accentColor !== null) {
+        this.accentColor ??= undefined;
+      }
+      if ("system" in data) {
+        this.system = Boolean(data.system);
+      } else if (!this.partial && typeof this.system !== "boolean") {
+        this.system = false;
+      }
+      if ("public_flags" in data) {
+        this.flags = new UserFlagsBitField(data.public_flags);
+      }
+      if ("avatar_decoration" in data) {
+        this.avatarDecoration = data.avatar_decoration;
+      } else {
+        this.avatarDecoration ??= null;
+      }
+      if ("avatar_decoration_data" in data) {
+        if (data.avatar_decoration_data) {
+          this.avatarDecorationData = {
+            asset: data.avatar_decoration_data.asset,
+            skuId: data.avatar_decoration_data.sku_id
+          };
+        } else {
+          this.avatarDecorationData = null;
+        }
+      } else {
+        this.avatarDecorationData ??= null;
+      }
+      if (data.collectibles) {
+        this.collectibles = _transformCollectibles(data.collectibles);
+      } else {
+        this.collectibles = null;
+      }
+      if ("primary_guild" in data) {
+        if (data.primary_guild) {
+          this.primaryGuild = {
+            identityGuildId: data.primary_guild.identity_guild_id,
+            identityEnabled: data.primary_guild.identity_enabled,
+            tag: data.primary_guild.tag,
+            badge: data.primary_guild.badge
+          };
+        } else {
+          this.primaryGuild = null;
+        }
+      } else {
+        this.primaryGuild ??= null;
+      }
+    }
+    get partial() {
+      return typeof this.username !== "string";
+    }
+    get createdTimestamp() {
+      return DiscordSnowflake.timestampFrom(this.id);
+    }
+    get createdAt() {
+      return new Date(this.createdTimestamp);
+    }
+    avatarURL(options = {}) {
+      return this.avatar && this.client.rest.cdn.avatar(this.id, this.avatar, options);
+    }
+    avatarDecorationURL(options = {}) {
+      if (this.avatarDecorationData) {
+        return this.client.rest.cdn.avatarDecoration(this.avatarDecorationData.asset);
+      }
+      return this.avatarDecoration && this.client.rest.cdn.avatarDecoration(this.id, this.avatarDecoration, options);
+    }
+    get defaultAvatarURL() {
+      const index = this.discriminator === "0" || this.discriminator === "0000" ? calculateUserDefaultAvatarIndex(this.id) : this.discriminator % 5;
+      return this.client.rest.cdn.defaultAvatar(index);
+    }
+    displayAvatarURL(options) {
+      return this.avatarURL(options) ?? this.defaultAvatarURL;
+    }
+    get hexAccentColor() {
+      if (typeof this.accentColor !== "number")
+        return this.accentColor;
+      return `#${this.accentColor.toString(16).padStart(6, "0")}`;
+    }
+    bannerURL(options = {}) {
+      return this.banner && this.client.rest.cdn.banner(this.id, this.banner, options);
+    }
+    guildTagBadgeURL(options = {}) {
+      return this.primaryGuild?.badge ? this.client.rest.cdn.guildTagBadge(this.primaryGuild.identityGuildId, this.primaryGuild.badge, options) : null;
+    }
+    get tag() {
+      return typeof this.username === "string" ? this.discriminator === "0" || this.discriminator === "0000" ? this.username : `${this.username}#${this.discriminator}` : null;
+    }
+    get displayName() {
+      return this.globalName ?? this.username;
+    }
+    get dmChannel() {
+      return this.client.users.dmChannel(this.id);
+    }
+    createDM(force = false) {
+      return this.client.users.createDM(this.id, { force });
+    }
+    deleteDM() {
+      return this.client.users.deleteDM(this.id);
+    }
+    equals(user) {
+      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.globalName && this.avatar === user.avatar && this.flags?.bitfield === user.flags?.bitfield && this.banner === user.banner && this.accentColor === user.accentColor && this.avatarDecoration === user.avatarDecoration && this.avatarDecorationData?.asset === user.avatarDecorationData?.asset && this.avatarDecorationData?.skuId === user.avatarDecorationData?.skuId && this.collectibles?.nameplate?.skuId === user.collectibles?.nameplate?.skuId && this.collectibles?.nameplate?.asset === user.collectibles?.nameplate?.asset && this.collectibles?.nameplate?.label === user.collectibles?.nameplate?.label && this.collectibles?.nameplate?.palette === user.collectibles?.nameplate?.palette && this.primaryGuild?.identityGuildId === user.primaryGuild?.identityGuildId && this.primaryGuild?.identityEnabled === user.primaryGuild?.identityEnabled && this.primaryGuild?.tag === user.primaryGuild?.tag && this.primaryGuild?.badge === user.primaryGuild?.badge;
+    }
+    _equals(user) {
+      return user && this.id === user.id && this.username === user.username && this.discriminator === user.discriminator && this.globalName === user.global_name && this.avatar === user.avatar && this.flags?.bitfield === user.public_flags && ("banner" in user ? this.banner === user.banner : true) && ("accent_color" in user ? this.accentColor === user.accent_color : true) && ("avatar_decoration" in user ? this.avatarDecoration === user.avatar_decoration : true) && ("avatar_decoration_data" in user ? this.avatarDecorationData?.asset === user.avatar_decoration_data?.asset && this.avatarDecorationData?.skuId === user.avatar_decoration_data?.sku_id : true) && ("collectibles" in user ? this.collectibles?.nameplate?.skuId === user.collectibles?.nameplate?.sku_id && this.collectibles?.nameplate?.asset === user.collectibles?.nameplate?.asset && this.collectibles?.nameplate?.label === user.collectibles?.nameplate?.label && this.collectibles?.nameplate?.palette === user.collectibles?.nameplate?.palette : true) && ("primary_guild" in user ? this.primaryGuild?.identityGuildId === user.primary_guild?.identity_guild_id && this.primaryGuild?.identityEnabled === user.primary_guild?.identity_enabled && this.primaryGuild?.tag === user.primary_guild?.tag && this.primaryGuild?.badge === user.primary_guild?.badge : true);
+    }
+    fetchFlags(force = false) {
+      emitDeprecationWarningForUserFetchFlags(this.constructor.name);
+      return this.client.users.fetchFlags(this.id, { force });
+    }
+    fetch(force = true) {
+      return this.client.users.fetch(this.id, { force });
+    }
+    toString() {
+      return userMention(this.id);
+    }
+    toJSON(...props) {
+      const json = super.toJSON({
+        createdTimestamp: true,
+        defaultAvatarURL: true,
+        hexAccentColor: true,
+        tag: true
+      }, ...props);
+      json.avatarURL = this.avatarURL();
+      json.displayAvatarURL = this.displayAvatarURL();
+      json.bannerURL = this.banner ? this.bannerURL() : this.banner;
+      json.guildTagBadgeURL = this.guildTagBadgeURL();
+      return json;
+    }
+  }
+  TextBasedChannel.applyToClass(User);
+  module.exports = User;
+});
+
+// node_modules/discord.js/src/managers/PollAnswerVoterManager.js
+var require_PollAnswerVoterManager = __commonJS((exports) => {
+  var { Collection } = require_dist6();
+  var { makeURLSearchParams } = require_dist5();
+  var { Routes } = require_v1012();
+  var CachedManager = require_CachedManager();
+  var User = require_User();
+
+  class PollAnswerVoterManager extends CachedManager {
+    constructor(answer) {
+      super(answer.client, User);
+      this.answer = answer;
+    }
+    async fetch({ after, limit } = {}) {
+      const poll = this.answer.poll;
+      const query = makeURLSearchParams({ limit, after });
+      const data = await this.client.rest.get(Routes.pollAnswerVoters(poll.channelId, poll.messageId, this.answer.id), {
+        query
+      });
+      return data.users.reduce((coll, rawUser) => {
+        const user = this.client.users._add(rawUser);
+        this.cache.set(user.id, user);
+        return coll.set(user.id, user);
+      }, new Collection);
+    }
+  }
+  exports.PollAnswerVoterManager = PollAnswerVoterManager;
+});
+
+// node_modules/discord.js/src/structures/PollAnswer.js
+var require_PollAnswer = __commonJS((exports) => {
+  var process2 = __require("process");
+  var Base = require_Base();
+  var { Emoji } = require_Emoji();
+  var { PollAnswerVoterManager } = require_PollAnswerVoterManager();
+  var deprecationEmittedForFetchVoters = false;
+
+  class PollAnswer extends Base {
+    constructor(client, data, poll) {
+      super(client);
+      Object.defineProperty(this, "poll", { value: poll });
+      this.id = data.answer_id;
+      this.voters = new PollAnswerVoterManager(this);
+      Object.defineProperty(this, "_emoji", { value: null, writable: true });
+      this._patch(data);
+    }
+    _patch(data) {
+      if ("count" in data) {
+        this.voteCount = data.count;
+      } else {
+        this.voteCount ??= this.voters.cache.size;
+      }
+      this.text ??= data.poll_media?.text ?? null;
+      if (data.poll_media?.emoji) {
+        this._emoji = data.poll_media.emoji;
+      }
+    }
+    get emoji() {
+      if (!this._emoji || !this._emoji.id && !this._emoji.name)
+        return null;
+      return this.client.emojis.cache.get(this._emoji.id) ?? new Emoji(this.client, this._emoji);
+    }
+    get partial() {
+      return this.poll.partial || this.text === null && this.emoji === null;
+    }
+    fetchVoters({ after, limit } = {}) {
+      if (!deprecationEmittedForFetchVoters) {
+        process2.emitWarning("PollAnswer#fetchVoters is deprecated. Use PollAnswer#voters#fetch instead.");
+        deprecationEmittedForFetchVoters = true;
+      }
+      return this.voters.fetch({ after, limit });
+    }
+  }
+  exports.PollAnswer = PollAnswer;
+});
+
+// node_modules/discord.js/src/structures/Poll.js
+var require_Poll = __commonJS((exports) => {
+  var { Collection } = require_dist6();
+  var Base = require_Base();
+  var { PollAnswer } = require_PollAnswer();
+  var { DiscordjsError } = require_DJSError();
+  var { ErrorCodes } = require_errors();
+
+  class Poll extends Base {
+    constructor(client, data, message, channel) {
+      super(client);
+      this.channelId = data.channel_id ?? channel.id;
+      Object.defineProperty(this, "channel", { value: channel });
+      this.messageId = data.message_id ?? message.id;
+      Object.defineProperty(this, "message", { value: message });
+      this.answers = new Collection;
+      this._patch(data);
+    }
+    _patch(data) {
+      if (data.answers) {
+        for (const answer of data.answers) {
+          const existing = this.answers.get(answer.answer_id);
+          if (existing) {
+            existing._patch(answer);
+          } else {
+            this.answers.set(answer.answer_id, new PollAnswer(this.client, answer, this));
+          }
+        }
+      }
+      if (data.results) {
+        this.resultsFinalized = data.results.is_finalized;
+        for (const answerResult of data.results.answer_counts) {
+          const answer = this.answers.get(answerResult.id);
+          answer?._patch(answerResult);
+        }
+      } else {
+        this.resultsFinalized ??= false;
+      }
+      if ("allow_multiselect" in data) {
+        this.allowMultiselect = data.allow_multiselect;
+      } else {
+        this.allowMultiselect ??= null;
+      }
+      if ("layout_type" in data) {
+        this.layoutType = data.layout_type;
+      } else {
+        this.layoutType ??= null;
+      }
+      if ("expiry" in data) {
+        this.expiresTimestamp = data.expiry && Date.parse(data.expiry);
+      } else {
+        this.expiresTimestamp ??= null;
+      }
+      if (data.question) {
+        this.question = {
+          text: data.question.text
+        };
+      } else {
+        this.question ??= {
+          text: null
+        };
+      }
+    }
+    get expiresAt() {
+      return this.expiresTimestamp && new Date(this.expiresTimestamp);
+    }
+    get partial() {
+      return this.allowMultiselect === null;
+    }
+    async fetch() {
+      await this.channel.messages.fetch(this.messageId);
+      return this;
+    }
+    async end() {
+      if (this.expiresTimestamp !== null && Date.now() > this.expiresTimestamp) {
+        throw new DiscordjsError(ErrorCodes.PollAlreadyExpired);
+      }
+      return this.channel.messages.endPoll(this.messageId);
+    }
+  }
+  exports.Poll = Poll;
+});
+
+// node_modules/discord.js/src/util/Enums.js
+var require_Enums = __commonJS((exports, module) => {
+  function createEnum(keys) {
+    const obj = {};
+    for (const [index, key] of keys.entries()) {
+      if (key === null)
+        continue;
+      obj[key] = index;
+      obj[index] = key;
+    }
+    return obj;
+  }
+  module.exports = { createEnum };
+});
+
+// node_modules/discord.js/src/util/Partials.js
+var require_Partials = __commonJS((exports, module) => {
+  var { createEnum } = require_Enums();
+  module.exports = createEnum([
+    "User",
+    "Channel",
+    "GuildMember",
+    "Message",
+    "Reaction",
+    "GuildScheduledEvent",
+    "ThreadMember",
+    "SoundboardSound",
+    "Poll",
+    "PollAnswer"
+  ]);
+});
+
+// node_modules/discord.js/src/client/actions/Action.js
+var require_Action = __commonJS((exports, module) => {
+  var { Poll } = require_Poll();
+  var { PollAnswer } = require_PollAnswer();
+  var Partials = require_Partials();
+
+  class GenericAction {
+    constructor(client) {
+      this.client = client;
+    }
+    handle(data) {
+      return data;
+    }
+    getPayload(data, manager, id, partialType, cache) {
+      return this.client.options.partials.includes(partialType) ? manager._add(data, cache) : manager.cache.get(id);
+    }
+    getChannel(data) {
+      const payloadData = {};
+      const id = data.channel_id ?? data.id;
+      if (!("recipients" in data)) {
+        const recipient = data.author ?? data.user ?? { id: data.user_id };
+        if (recipient.id !== this.client.user.id)
+          payloadData.recipients = [recipient];
+      }
+      if (id !== undefined)
+        payloadData.id = id;
+      return data[this.client.actions.injectedChannel] ?? this.getPayload({ ...data, ...payloadData }, this.client.channels, id, Partials.Channel);
+    }
+    getMessage(data, channel, cache) {
+      const id = data.message_id ?? data.id;
+      return data[this.client.actions.injectedMessage] ?? this.getPayload({
+        id,
+        channel_id: channel.id,
+        guild_id: data.guild_id ?? channel.guild?.id
+      }, channel.messages, id, Partials.Message, cache);
+    }
+    getPoll(data, message, channel) {
+      const includePollPartial = this.client.options.partials.includes(Partials.Poll);
+      const includePollAnswerPartial = this.client.options.partials.includes(Partials.PollAnswer);
+      if (message.partial && (!includePollPartial || !includePollAnswerPartial))
+        return null;
+      if (!message.poll && includePollPartial) {
+        message.poll = new Poll(this.client, data, message, channel);
+      }
+      if (message.poll && !message.poll.answers.has(data.answer_id) && includePollAnswerPartial) {
+        const pollAnswer = new PollAnswer(this.client, data, message.poll);
+        message.poll.answers.set(data.answer_id, pollAnswer);
+      }
+      return message.poll;
+    }
+    getReaction(data, message, user) {
+      const id = data.emoji.id ?? decodeURIComponent(data.emoji.name);
+      return this.getPayload({
+        emoji: data.emoji,
+        count: message.partial ? null : 0,
+        me: user?.id === this.client.user.id
+      }, message.reactions, id, Partials.Reaction);
+    }
+    getMember(data, guild) {
+      return this.getPayload(data, guild.members, data.user.id, Partials.GuildMember);
+    }
+    getUser(data) {
+      const id = data.user_id;
+      return data[this.client.actions.injectedUser] ?? this.getPayload({ id }, this.client.users, id, Partials.User);
+    }
+    getUserFromMember(data) {
+      if (data.guild_id && data.member?.user) {
+        const guild = this.client.guilds.cache.get(data.guild_id);
+        if (guild) {
+          return guild.members._add(data.member).user;
+        } else {
+          return this.client.users._add(data.member.user);
+        }
+      }
+      return this.getUser(data);
+    }
+    getScheduledEvent(data, guild) {
+      const id = data.guild_scheduled_event_id ?? data.id;
+      return this.getPayload({ id, guild_id: data.guild_id ?? guild.id }, guild.scheduledEvents, id, Partials.GuildScheduledEvent);
+    }
+    getThreadMember(id, manager) {
+      return this.getPayload({ user_id: id }, manager, id, Partials.ThreadMember, false);
+    }
+    getSoundboardSound(data, guild) {
+      return this.getPayload(data, guild.soundboardSounds, data.sound_id, Partials.SoundboardSound);
+    }
+    spreadInjectedData(data) {
+      return Object.fromEntries(Object.getOwnPropertySymbols(data).map((symbol) => [symbol, data[symbol]]));
+    }
+  }
+  module.exports = GenericAction;
+});
+
+// node_modules/discord.js/src/client/actions/ApplicationCommandPermissionsUpdate.js
+var require_ApplicationCommandPermissionsUpdate = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var Events = require_Events();
+
+  class ApplicationCommandPermissionsUpdateAction extends Action {
+    handle(data) {
+      const client = this.client;
+      client.emit(Events.ApplicationCommandPermissionsUpdate, {
+        permissions: data.permissions,
+        id: data.id,
+        guildId: data.guild_id,
+        applicationId: data.application_id
+      });
+    }
+  }
+  module.exports = ApplicationCommandPermissionsUpdateAction;
+});
+
+// node_modules/discord.js/src/structures/AutoModerationActionExecution.js
+var require_AutoModerationActionExecution = __commonJS((exports, module) => {
+  var { _transformAPIAutoModerationAction } = require_Transformers();
+
+  class AutoModerationActionExecution {
+    constructor(data, guild) {
+      this.guild = guild;
+      this.action = _transformAPIAutoModerationAction(data.action);
+      this.ruleId = data.rule_id;
+      this.ruleTriggerType = data.rule_trigger_type;
+      this.userId = data.user_id;
+      this.channelId = data.channel_id ?? null;
+      this.messageId = data.message_id ?? null;
+      this.alertSystemMessageId = data.alert_system_message_id ?? null;
+      this.content = data.content;
+      this.matchedKeyword = data.matched_keyword ?? null;
+      this.matchedContent = data.matched_content ?? null;
+    }
+    get autoModerationRule() {
+      return this.guild.autoModerationRules.cache.get(this.ruleId) ?? null;
+    }
+    get channel() {
+      return this.guild.channels.cache.get(this.channelId) ?? null;
+    }
+    get user() {
+      return this.guild.client.users.cache.get(this.userId) ?? null;
+    }
+    get member() {
+      return this.guild.members.cache.get(this.userId) ?? null;
+    }
+  }
+  module.exports = AutoModerationActionExecution;
+});
+
+// node_modules/discord.js/src/client/actions/AutoModerationActionExecution.js
+var require_AutoModerationActionExecution2 = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var AutoModerationActionExecution = require_AutoModerationActionExecution();
+  var Events = require_Events();
+
+  class AutoModerationActionExecutionAction extends Action {
+    handle(data) {
+      const { client } = this;
+      const guild = client.guilds.cache.get(data.guild_id);
+      if (guild) {
+        client.emit(Events.AutoModerationActionExecution, new AutoModerationActionExecution(data, guild));
+      }
+      return {};
+    }
+  }
+  module.exports = AutoModerationActionExecutionAction;
+});
+
+// node_modules/discord.js/src/client/actions/AutoModerationRuleCreate.js
+var require_AutoModerationRuleCreate = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var Events = require_Events();
+
+  class AutoModerationRuleCreateAction extends Action {
+    handle(data) {
+      const { client } = this;
+      const guild = client.guilds.cache.get(data.guild_id);
+      if (guild) {
+        const autoModerationRule = guild.autoModerationRules._add(data);
+        client.emit(Events.AutoModerationRuleCreate, autoModerationRule);
+      }
+      return {};
+    }
+  }
+  module.exports = AutoModerationRuleCreateAction;
+});
+
+// node_modules/discord.js/src/client/actions/AutoModerationRuleDelete.js
+var require_AutoModerationRuleDelete = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var Events = require_Events();
+
+  class AutoModerationRuleDeleteAction extends Action {
+    handle(data) {
+      const { client } = this;
+      const guild = client.guilds.cache.get(data.guild_id);
+      if (guild) {
+        const autoModerationRule = guild.autoModerationRules.cache.get(data.id);
+        if (autoModerationRule) {
+          guild.autoModerationRules.cache.delete(autoModerationRule.id);
+          client.emit(Events.AutoModerationRuleDelete, autoModerationRule);
+        }
+      }
+      return {};
+    }
+  }
+  module.exports = AutoModerationRuleDeleteAction;
+});
+
+// node_modules/discord.js/src/client/actions/AutoModerationRuleUpdate.js
+var require_AutoModerationRuleUpdate = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var Events = require_Events();
+
+  class AutoModerationRuleUpdateAction extends Action {
+    handle(data) {
+      const { client } = this;
+      const guild = client.guilds.cache.get(data.guild_id);
+      if (guild) {
+        const oldAutoModerationRule = guild.autoModerationRules.cache.get(data.id)?._clone() ?? null;
+        const newAutoModerationRule = guild.autoModerationRules._add(data);
+        client.emit(Events.AutoModerationRuleUpdate, oldAutoModerationRule, newAutoModerationRule);
+      }
+      return {};
+    }
+  }
+  module.exports = AutoModerationRuleUpdateAction;
+});
+
+// node_modules/discord.js/src/client/actions/ChannelCreate.js
+var require_ChannelCreate = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var Events = require_Events();
+
+  class ChannelCreateAction extends Action {
+    handle(data) {
+      const client = this.client;
+      const existing = client.channels.cache.has(data.id);
+      const channel = client.channels._add(data);
+      if (!existing && channel) {
+        client.emit(Events.ChannelCreate, channel);
+      }
+      return { channel };
+    }
+  }
+  module.exports = ChannelCreateAction;
+});
+
+// node_modules/discord.js/src/client/actions/ChannelDelete.js
+var require_ChannelDelete = __commonJS((exports, module) => {
+  var Action = require_Action();
+  var Events = require_Events();
+
+  class ChannelDeleteAction extends Action {
+    handle(data) {
+      const client = this.client;
+      const channel = client.channels.cache.get(data.id);
+      if (channel) {
+        client.channels._remove(channel.id);
+        client.emit(Events.ChannelDelete, channel);
+      }
+    }
+  }
+  module.exports = ChannelDeleteAction;
+});
+
+// node_modules/discord.js/src/managers/CategoryChannelChildManager.js
+var require_CategoryChannelChildManager = __commonJS((exports, module) => {
+  var DataManager = require_DataManager();
+  var GuildChannel = require_GuildChannel();
+
+  class CategoryChannelChildManager extends DataManager {
+    constructor(channel) {
+      super(channel.client, GuildChannel);
+      this.channel = channel;
+    }
+    get cache() {
+      return this.guild.channels.cache.filter((channel) => channel.parentId === this.channel.id);
+    }
+    get guild() {
+      return this.channel.guild;
+    }
+    create(options) {
+      return this.guild.channels.create({
+        ...options,
+        parent: this.channel.id
+      });
+    }
+  }
+  module.exports = CategoryChannelChildManager;
+});
+
+// node_modules/discord.js/src/structures/CategoryChannel.js
+var require_CategoryChannel = __commonJS((exports, module) => {
+  var GuildChannel = require_GuildChannel();
+  var CategoryChannelChildManager = require_CategoryChannelChildManager();
+
+  class CategoryChannel extends GuildChannel {
+    get children() {
+      return new CategoryChannelChildManager(this);
+    }
+  }
+  module.exports = CategoryChannel;
+});
+
 // node_modules/discord.js/src/managers/DMMessageManager.js
 var require_DMMessageManager = __commonJS((exports, module) => {
   var MessageManager = require_MessageManager();
@@ -22581,7 +25388,7 @@ var require_DMMessageManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/DMChannel.js
 var require_DMChannel = __commonJS((exports, module) => {
   var { userMention } = require_dist7();
-  var { ChannelType } = require_v106();
+  var { ChannelType } = require_v1012();
   var { BaseChannel } = require_BaseChannel();
   var TextBasedChannel = require_TextBasedChannel();
   var DMMessageManager = require_DMMessageManager();
@@ -22644,7 +25451,7 @@ var require_DMChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildForumThreadManager.js
 var require_GuildForumThreadManager = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var ThreadManager = require_ThreadManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var MessagePayload = require_MessagePayload();
@@ -22778,10 +25585,11 @@ var require_ThreadOnlyChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/ThreadMemberFlagsBitField.js
 var require_ThreadMemberFlagsBitField = __commonJS((exports, module) => {
+  var { ThreadMemberFlags } = require_v1012();
   var BitField = require_BitField();
 
   class ThreadMemberFlagsBitField extends BitField {
-    static Flags = {};
+    static Flags = ThreadMemberFlags;
   }
   module.exports = ThreadMemberFlagsBitField;
 });
@@ -22843,7 +25651,7 @@ var require_ThreadMemberManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var ThreadMember = require_ThreadMember();
@@ -22943,7 +25751,7 @@ var require_ThreadMemberManager = __commonJS((exports, module) => {
 var require_ThreadChannel = __commonJS((exports, module) => {
   var { DiscordAPIError } = require_dist5();
   var { lazy } = require_dist();
-  var { RESTJSONErrorCodes, ChannelFlags, ChannelType, PermissionFlagsBits, Routes } = require_v106();
+  var { RESTJSONErrorCodes, ChannelFlags, ChannelType, PermissionFlagsBits, Routes } = require_v1012();
   var { BaseChannel } = require_BaseChannel();
   var getThreadOnlyChannel = lazy(() => require_ThreadOnlyChannel());
   var TextBasedChannel = require_TextBasedChannel();
@@ -23179,7 +25987,7 @@ var require_ThreadChannel = __commonJS((exports, module) => {
 var require_ThreadManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var ThreadChannel = require_ThreadChannel();
@@ -23265,7 +26073,7 @@ var require_ThreadManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildTextThreadManager.js
 var require_GuildTextThreadManager = __commonJS((exports, module) => {
-  var { ChannelType, Routes } = require_v106();
+  var { ChannelType, Routes } = require_v1012();
   var ThreadManager = require_ThreadManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -23381,7 +26189,7 @@ var require_BaseGuildTextChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/NewsChannel.js
 var require_NewsChannel = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var BaseGuildTextChannel = require_BaseGuildTextChannel();
   var { DiscordjsError, ErrorCodes } = require_errors();
 
@@ -23400,7 +26208,7 @@ var require_NewsChannel = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/BaseGuildVoiceChannel.js
 var require_BaseGuildVoiceChannel = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { PermissionFlagsBits } = require_v106();
+  var { PermissionFlagsBits } = require_v1012();
   var GuildChannel = require_GuildChannel();
   var TextBasedChannel = require_TextBasedChannel();
   var GuildMessageManager = require_GuildMessageManager();
@@ -23543,7 +26351,7 @@ var require_TextChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/VoiceChannel.js
 var require_VoiceChannel = __commonJS((exports, module) => {
-  var { PermissionFlagsBits, Routes } = require_v106();
+  var { PermissionFlagsBits, Routes } = require_v1012();
   var BaseGuildVoiceChannel = require_BaseGuildVoiceChannel();
 
   class VoiceChannel extends BaseGuildVoiceChannel {
@@ -23694,7 +26502,7 @@ var require_MediaChannel = __commonJS((exports, module) => {
 // node_modules/discord.js/src/util/Channels.js
 var require_Channels = __commonJS((exports, module) => {
   var { lazy } = require_dist();
-  var { ChannelType } = require_v106();
+  var { ChannelType } = require_v1012();
   var getCategoryChannel = lazy(() => require_CategoryChannel());
   var getDMChannel = lazy(() => require_DMChannel());
   var getNewsChannel = lazy(() => require_NewsChannel());
@@ -24038,7 +26846,7 @@ var require_GuildOnboardingPrompt = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/Integration.js
 var require_Integration = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var Base = require_Base();
   var IntegrationApplication = require_IntegrationApplication();
 
@@ -24200,7 +27008,7 @@ var require_StageInstance = __commonJS((exports) => {
 // node_modules/discord.js/src/structures/GuildAuditLogsEntry.js
 var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
   var { DiscordSnowflake } = require_cjs();
-  var { AuditLogOptionsType, AuditLogEvent } = require_v106();
+  var { AuditLogOptionsType, AuditLogEvent } = require_v1012();
   var AutoModerationRule = require_AutoModerationRule();
   var { GuildOnboardingPrompt } = require_GuildOnboardingPrompt();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
@@ -25152,7 +27960,7 @@ var require_GuildUpdate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js
 var require_CommandInteractionOptionResolver = __commonJS((exports, module) => {
-  var { ApplicationCommandOptionType } = require_v106();
+  var { ApplicationCommandOptionType } = require_v1012();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
   class CommandInteractionOptionResolver {
@@ -25265,7 +28073,7 @@ var require_CommandInteractionOptionResolver = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/AutocompleteInteraction.js
 var require_AutocompleteInteraction = __commonJS((exports, module) => {
-  var { InteractionResponseType, Routes } = require_v106();
+  var { InteractionResponseType, Routes } = require_v1012();
   var BaseInteraction = require_BaseInteraction();
   var CommandInteractionOptionResolver = require_CommandInteractionOptionResolver();
   var { DiscordjsError, ErrorCodes } = require_errors();
@@ -25367,7 +28175,7 @@ var require_InteractionCallbackResponse = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/InteractionResponse.js
 var require_InteractionResponse = __commonJS((exports, module) => {
   var { DiscordSnowflake } = require_cjs();
-  var { InteractionType } = require_v106();
+  var { InteractionType } = require_v1012();
   var { DiscordjsError, ErrorCodes } = require_errors();
 
   class InteractionResponse {
@@ -25422,7 +28230,7 @@ var require_InteractionResponses = __commonJS((exports, module) => {
   var { deprecate } = __require("util");
   var { makeURLSearchParams } = require_dist5();
   var { isJSONEncodable } = require_dist();
-  var { InteractionResponseType, MessageFlags, Routes, InteractionType } = require_v106();
+  var { InteractionResponseType, MessageFlags, Routes, InteractionType } = require_v1012();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var MessageFlagsBitField = require_MessageFlagsBitField();
   var InteractionCallbackResponse = require_InteractionCallbackResponse();
@@ -25850,7 +28658,7 @@ var require_MentionableSelectMenuInteraction = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/ContextMenuCommandInteraction.js
 var require_ContextMenuCommandInteraction = __commonJS((exports, module) => {
   var { lazy } = require_dist();
-  var { ApplicationCommandOptionType } = require_v106();
+  var { ApplicationCommandOptionType } = require_v1012();
   var CommandInteraction = require_CommandInteraction();
   var CommandInteractionOptionResolver = require_CommandInteractionOptionResolver();
   var { transformResolved } = require_Util();
@@ -25896,14 +28704,21 @@ var require_MessageContextMenuCommandInteraction = __commonJS((exports, module) 
 // node_modules/discord.js/src/structures/ModalSubmitFields.js
 var require_ModalSubmitFields = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { ComponentType } = require_v106();
+  var { ComponentType } = require_v1012();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
   class ModalSubmitFields {
-    constructor(components) {
+    constructor(components, resolved) {
       this.components = components;
+      Object.defineProperty(this, "resolved", { value: resolved ? Object.freeze(resolved) : null });
       this.fields = components.reduce((accumulator, next) => {
-        next.components.forEach((component) => accumulator.set(component.customId, component));
+        if ("components" in next) {
+          for (const component of next.components)
+            accumulator.set(component.customId, component);
+        }
+        if ("component" in next) {
+          accumulator.set(next.component.customId, next.component);
+        }
         return accumulator;
       }, new Collection);
     }
@@ -25916,8 +28731,55 @@ var require_ModalSubmitFields = __commonJS((exports, module) => {
       }
       return field;
     }
+    _getTypedComponent(customId, allowedTypes, properties, required) {
+      const component = this.getField(customId);
+      if (!allowedTypes.includes(component.type)) {
+        throw new DiscordjsTypeError(ErrorCodes.ModalSubmitInteractionFieldNotFound, customId, component.type, allowedTypes.join(", "));
+      } else if (required && properties.every((prop) => component[prop] === null || component[prop] === undefined)) {
+        throw new DiscordjsTypeError(ErrorCodes.ModalSubmitInteractionFieldEmpty, customId, component.type);
+      }
+      return component;
+    }
     getTextInputValue(customId) {
-      return this.getField(customId, ComponentType.TextInput).value;
+      return this._getTypedComponent(customId, [ComponentType.TextInput]).value;
+    }
+    getStringSelectValues(customId) {
+      return this._getTypedComponent(customId, [ComponentType.StringSelect]).values;
+    }
+    getSelectedUsers(customId, required = false) {
+      const component = this._getTypedComponent(customId, [ComponentType.UserSelect, ComponentType.MentionableSelect], ["users"], required);
+      return component.users ?? null;
+    }
+    getSelectedRoles(customId, required = false) {
+      const component = this._getTypedComponent(customId, [ComponentType.RoleSelect, ComponentType.MentionableSelect], ["roles"], required);
+      return component.roles ?? null;
+    }
+    getSelectedChannels(customId, required = false, channelTypes = []) {
+      const component = this._getTypedComponent(customId, [ComponentType.ChannelSelect], ["channels"], required);
+      const channels = component.channels;
+      if (channels && channelTypes.length > 0) {
+        for (const channel of channels.values()) {
+          if (!channelTypes.includes(channel.type)) {
+            throw new DiscordjsTypeError(ErrorCodes.ModalSubmitInteractionComponentInvalidChannelType, customId, channel.type, channelTypes.join(", "));
+          }
+        }
+      }
+      return channels ?? null;
+    }
+    getSelectedMembers(customId) {
+      const component = this._getTypedComponent(customId, [ComponentType.UserSelect, ComponentType.MentionableSelect], ["members"], false);
+      return component.members ?? null;
+    }
+    getSelectedMentionables(customId, required = false) {
+      const component = this._getTypedComponent(customId, [ComponentType.MentionableSelect], ["users", "members", "roles"], required);
+      if (component.users || component.members || component.roles) {
+        return {
+          users: component.users ?? new Collection,
+          members: component.members ?? new Collection,
+          roles: component.roles ?? new Collection
+        };
+      }
+      return null;
     }
   }
   module.exports = ModalSubmitFields;
@@ -25925,11 +28787,13 @@ var require_ModalSubmitFields = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ModalSubmitInteraction.js
 var require_ModalSubmitInteraction = __commonJS((exports, module) => {
+  var { Collection } = require_dist6();
   var { lazy } = require_dist();
   var BaseInteraction = require_BaseInteraction();
   var InteractionWebhook = require_InteractionWebhook();
   var ModalSubmitFields = require_ModalSubmitFields();
   var InteractionResponses = require_InteractionResponses();
+  var { transformResolved } = require_Util();
   var getMessage = lazy(() => require_Message().Message);
 
   class ModalSubmitInteraction extends BaseInteraction {
@@ -25941,22 +28805,80 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
       } else {
         this.message = null;
       }
-      this.components = data.data.components?.map((component) => ModalSubmitInteraction.transformComponent(component));
-      this.fields = new ModalSubmitFields(this.components);
+      this.components = data.data.components?.map((component) => ModalSubmitInteraction.transformComponent(component, data.data.resolved, {
+        client: this.client,
+        guild: this.guild
+      }));
+      this.fields = new ModalSubmitFields(this.components, transformResolved({ client: this.client, guild: this.guild, channel: this.channel }, data.data.resolved));
       this.deferred = false;
       this.replied = false;
       this.ephemeral = null;
       this.webhook = new InteractionWebhook(this.client, this.applicationId, this.token);
     }
-    static transformComponent(rawComponent) {
-      return rawComponent.components ? {
+    static transformComponent(rawComponent, resolved, { client, guild } = {}) {
+      if ("components" in rawComponent) {
+        return {
+          type: rawComponent.type,
+          id: rawComponent.id,
+          components: rawComponent.components.map((component) => this.transformComponent(component, resolved, { client, guild }))
+        };
+      }
+      if ("component" in rawComponent) {
+        return {
+          type: rawComponent.type,
+          id: rawComponent.id,
+          component: this.transformComponent(rawComponent.component, resolved, { client, guild })
+        };
+      }
+      const data = {
         type: rawComponent.type,
-        components: rawComponent.components.map((component) => this.transformComponent(component))
-      } : {
-        value: rawComponent.value,
-        type: rawComponent.type,
-        customId: rawComponent.custom_id
+        id: rawComponent.id
       };
+      if ("custom_id" in rawComponent)
+        data.customId = rawComponent.custom_id;
+      if ("value" in rawComponent)
+        data.value = rawComponent.value;
+      if (rawComponent.values) {
+        data.values = rawComponent.values;
+        if (resolved) {
+          const { members, users, channels, roles } = resolved;
+          const valueSet = new Set(rawComponent.values);
+          if (users) {
+            data.users = new Collection;
+            for (const [id, user] of Object.entries(users)) {
+              if (valueSet.has(id)) {
+                data.users.set(id, client.users._add(user));
+              }
+            }
+          }
+          if (channels) {
+            data.channels = new Collection;
+            for (const [id, apiChannel] of Object.entries(channels)) {
+              if (valueSet.has(id)) {
+                data.channels.set(id, client.channels._add(apiChannel, guild) ?? apiChannel);
+              }
+            }
+          }
+          if (members) {
+            data.members = new Collection;
+            for (const [id, member] of Object.entries(members)) {
+              if (valueSet.has(id)) {
+                const user = users?.[id];
+                data.members.set(id, guild?.members._add({ user, ...member }) ?? member);
+              }
+            }
+          }
+          if (roles) {
+            data.roles = new Collection;
+            for (const [id, role] of Object.entries(roles)) {
+              if (valueSet.has(id)) {
+                data.roles.set(id, guild?.roles._add(role) ?? role);
+              }
+            }
+          }
+        }
+      }
+      return data;
     }
     isFromMessage() {
       return Boolean(this.message);
@@ -26063,7 +28985,7 @@ var require_UserSelectMenuInteraction = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/InteractionCreate.js
 var require_InteractionCreate = __commonJS((exports, module) => {
-  var { InteractionType, ComponentType, ApplicationCommandType } = require_v106();
+  var { InteractionType, ComponentType, ApplicationCommandType } = require_v1012();
   var Action = require_Action();
   var AutocompleteInteraction = require_AutocompleteInteraction();
   var ButtonInteraction = require_ButtonInteraction();
@@ -26305,10 +29227,16 @@ var require_MessagePollVoteAdd = __commonJS((exports, module) => {
       const message = this.getMessage(data, channel);
       if (!message)
         return false;
-      const { poll } = message;
-      const answer = poll?.answers.get(data.answer_id);
+      const poll = this.getPoll(data, message, channel);
+      if (!poll)
+        return false;
+      const answer = poll.answers.get(data.answer_id);
       if (!answer)
         return false;
+      const user = this.getUser(data);
+      if (user) {
+        answer.voters._add(user);
+      }
       answer.voteCount++;
       this.client.emit(Events.MessagePollVoteAdd, answer, data.user_id);
       return { poll };
@@ -26330,11 +29258,16 @@ var require_MessagePollVoteRemove = __commonJS((exports, module) => {
       const message = this.getMessage(data, channel);
       if (!message)
         return false;
-      const { poll } = message;
-      const answer = poll?.answers.get(data.answer_id);
+      const poll = this.getPoll(data, message, channel);
+      if (!poll)
+        return false;
+      const answer = poll.answers.get(data.answer_id);
       if (!answer)
         return false;
-      answer.voteCount--;
+      answer.voters.cache.delete(data.user_id);
+      if (answer.voteCount > 0) {
+        answer.voteCount--;
+      }
       this.client.emit(Events.MessagePollVoteRemove, answer, data.user_id);
       return { poll };
     }
@@ -26883,73 +29816,73 @@ var require_ActionsManager = __commonJS((exports, module) => {
     injectedMessage = Symbol("djs.actions.injectedMessage");
     constructor(client) {
       this.client = client;
-      this.register(require_ApplicationCommandPermissionsUpdate());
-      this.register(require_AutoModerationActionExecution2());
-      this.register(require_AutoModerationRuleCreate());
-      this.register(require_AutoModerationRuleDelete());
-      this.register(require_AutoModerationRuleUpdate());
-      this.register(require_ChannelCreate());
-      this.register(require_ChannelDelete());
-      this.register(require_ChannelUpdate());
-      this.register(require_EntitlementCreate());
-      this.register(require_EntitlementDelete());
-      this.register(require_EntitlementUpdate());
-      this.register(require_GuildAuditLogEntryCreate());
-      this.register(require_GuildBanAdd());
-      this.register(require_GuildBanRemove());
-      this.register(require_GuildChannelsPositionUpdate());
-      this.register(require_GuildDelete());
-      this.register(require_GuildEmojiCreate());
-      this.register(require_GuildEmojiDelete());
-      this.register(require_GuildEmojiUpdate());
-      this.register(require_GuildEmojisUpdate());
-      this.register(require_GuildIntegrationsUpdate());
-      this.register(require_GuildMemberRemove());
-      this.register(require_GuildMemberUpdate());
-      this.register(require_GuildRoleCreate());
-      this.register(require_GuildRoleDelete());
-      this.register(require_GuildRoleUpdate());
-      this.register(require_GuildRolesPositionUpdate());
-      this.register(require_GuildScheduledEventCreate());
-      this.register(require_GuildScheduledEventDelete());
-      this.register(require_GuildScheduledEventUpdate());
-      this.register(require_GuildScheduledEventUserAdd());
-      this.register(require_GuildScheduledEventUserRemove());
-      this.register(require_GuildSoundboardSoundDelete());
-      this.register(require_GuildStickerCreate());
-      this.register(require_GuildStickerDelete());
-      this.register(require_GuildStickerUpdate());
-      this.register(require_GuildStickersUpdate());
-      this.register(require_GuildUpdate());
-      this.register(require_InteractionCreate());
-      this.register(require_InviteCreate());
-      this.register(require_InviteDelete());
-      this.register(require_MessageCreate());
-      this.register(require_MessageDelete());
-      this.register(require_MessageDeleteBulk());
-      this.register(require_MessagePollVoteAdd());
-      this.register(require_MessagePollVoteRemove());
-      this.register(require_MessageReactionAdd());
-      this.register(require_MessageReactionRemove());
-      this.register(require_MessageReactionRemoveAll());
-      this.register(require_MessageReactionRemoveEmoji());
-      this.register(require_MessageUpdate());
-      this.register(require_PresenceUpdate());
-      this.register(require_StageInstanceCreate());
-      this.register(require_StageInstanceDelete());
-      this.register(require_StageInstanceUpdate());
-      this.register(require_ThreadCreate());
-      this.register(require_ThreadDelete());
-      this.register(require_ThreadListSync());
-      this.register(require_ThreadMemberUpdate());
-      this.register(require_ThreadMembersUpdate());
-      this.register(require_TypingStart());
-      this.register(require_UserUpdate());
-      this.register(require_VoiceStateUpdate());
-      this.register(require_WebhooksUpdate());
+      this.ApplicationCommandPermissionsUpdate = this.load(require_ApplicationCommandPermissionsUpdate());
+      this.AutoModerationActionExecution = this.load(require_AutoModerationActionExecution2());
+      this.AutoModerationRuleCreate = this.load(require_AutoModerationRuleCreate());
+      this.AutoModerationRuleDelete = this.load(require_AutoModerationRuleDelete());
+      this.AutoModerationRuleUpdate = this.load(require_AutoModerationRuleUpdate());
+      this.ChannelCreate = this.load(require_ChannelCreate());
+      this.ChannelDelete = this.load(require_ChannelDelete());
+      this.ChannelUpdate = this.load(require_ChannelUpdate());
+      this.EntitlementCreate = this.load(require_EntitlementCreate());
+      this.EntitlementDelete = this.load(require_EntitlementDelete());
+      this.EntitlementUpdate = this.load(require_EntitlementUpdate());
+      this.GuildAuditLogEntryCreate = this.load(require_GuildAuditLogEntryCreate());
+      this.GuildBanAdd = this.load(require_GuildBanAdd());
+      this.GuildBanRemove = this.load(require_GuildBanRemove());
+      this.GuildChannelsPositionUpdate = this.load(require_GuildChannelsPositionUpdate());
+      this.GuildDelete = this.load(require_GuildDelete());
+      this.GuildEmojiCreate = this.load(require_GuildEmojiCreate());
+      this.GuildEmojiDelete = this.load(require_GuildEmojiDelete());
+      this.GuildEmojiUpdate = this.load(require_GuildEmojiUpdate());
+      this.GuildEmojisUpdate = this.load(require_GuildEmojisUpdate());
+      this.GuildIntegrationsUpdate = this.load(require_GuildIntegrationsUpdate());
+      this.GuildMemberRemove = this.load(require_GuildMemberRemove());
+      this.GuildMemberUpdate = this.load(require_GuildMemberUpdate());
+      this.GuildRoleCreate = this.load(require_GuildRoleCreate());
+      this.GuildRoleDelete = this.load(require_GuildRoleDelete());
+      this.GuildRoleUpdate = this.load(require_GuildRoleUpdate());
+      this.GuildRolesPositionUpdate = this.load(require_GuildRolesPositionUpdate());
+      this.GuildScheduledEventCreate = this.load(require_GuildScheduledEventCreate());
+      this.GuildScheduledEventDelete = this.load(require_GuildScheduledEventDelete());
+      this.GuildScheduledEventUpdate = this.load(require_GuildScheduledEventUpdate());
+      this.GuildScheduledEventUserAdd = this.load(require_GuildScheduledEventUserAdd());
+      this.GuildScheduledEventUserRemove = this.load(require_GuildScheduledEventUserRemove());
+      this.GuildSoundboardSoundDelete = this.load(require_GuildSoundboardSoundDelete());
+      this.GuildStickerCreate = this.load(require_GuildStickerCreate());
+      this.GuildStickerDelete = this.load(require_GuildStickerDelete());
+      this.GuildStickerUpdate = this.load(require_GuildStickerUpdate());
+      this.GuildStickersUpdate = this.load(require_GuildStickersUpdate());
+      this.GuildUpdate = this.load(require_GuildUpdate());
+      this.InteractionCreate = this.load(require_InteractionCreate());
+      this.InviteCreate = this.load(require_InviteCreate());
+      this.InviteDelete = this.load(require_InviteDelete());
+      this.MessageCreate = this.load(require_MessageCreate());
+      this.MessageDelete = this.load(require_MessageDelete());
+      this.MessageDeleteBulk = this.load(require_MessageDeleteBulk());
+      this.MessagePollVoteAdd = this.load(require_MessagePollVoteAdd());
+      this.MessagePollVoteRemove = this.load(require_MessagePollVoteRemove());
+      this.MessageReactionAdd = this.load(require_MessageReactionAdd());
+      this.MessageReactionRemove = this.load(require_MessageReactionRemove());
+      this.MessageReactionRemoveAll = this.load(require_MessageReactionRemoveAll());
+      this.MessageReactionRemoveEmoji = this.load(require_MessageReactionRemoveEmoji());
+      this.MessageUpdate = this.load(require_MessageUpdate());
+      this.PresenceUpdate = this.load(require_PresenceUpdate());
+      this.StageInstanceCreate = this.load(require_StageInstanceCreate());
+      this.StageInstanceDelete = this.load(require_StageInstanceDelete());
+      this.StageInstanceUpdate = this.load(require_StageInstanceUpdate());
+      this.ThreadCreate = this.load(require_ThreadCreate());
+      this.ThreadDelete = this.load(require_ThreadDelete());
+      this.ThreadListSync = this.load(require_ThreadListSync());
+      this.ThreadMemberUpdate = this.load(require_ThreadMemberUpdate());
+      this.ThreadMembersUpdate = this.load(require_ThreadMembersUpdate());
+      this.TypingStart = this.load(require_TypingStart());
+      this.UserUpdate = this.load(require_UserUpdate());
+      this.VoiceStateUpdate = this.load(require_VoiceStateUpdate());
+      this.WebhooksUpdate = this.load(require_WebhooksUpdate());
     }
-    register(Action) {
-      this[Action.name.replace(/Action$/, "")] = new Action(this.client);
+    load(Action) {
+      return new Action(this.client);
     }
   }
   module.exports = ActionsManager;
@@ -27414,6 +30347,2467 @@ var require_dist9 = __commonJS((exports, module) => {
   var version = "2.1.1";
 });
 
+// node_modules/@discordjs/ws/node_modules/discord-api-types/gateway/v10.js
+var require_v1013 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
+  exports.GatewayVersion = "10";
+  var GatewayOpcodes;
+  (function(GatewayOpcodes2) {
+    GatewayOpcodes2[GatewayOpcodes2["Dispatch"] = 0] = "Dispatch";
+    GatewayOpcodes2[GatewayOpcodes2["Heartbeat"] = 1] = "Heartbeat";
+    GatewayOpcodes2[GatewayOpcodes2["Identify"] = 2] = "Identify";
+    GatewayOpcodes2[GatewayOpcodes2["PresenceUpdate"] = 3] = "PresenceUpdate";
+    GatewayOpcodes2[GatewayOpcodes2["VoiceStateUpdate"] = 4] = "VoiceStateUpdate";
+    GatewayOpcodes2[GatewayOpcodes2["Resume"] = 6] = "Resume";
+    GatewayOpcodes2[GatewayOpcodes2["Reconnect"] = 7] = "Reconnect";
+    GatewayOpcodes2[GatewayOpcodes2["RequestGuildMembers"] = 8] = "RequestGuildMembers";
+    GatewayOpcodes2[GatewayOpcodes2["InvalidSession"] = 9] = "InvalidSession";
+    GatewayOpcodes2[GatewayOpcodes2["Hello"] = 10] = "Hello";
+    GatewayOpcodes2[GatewayOpcodes2["HeartbeatAck"] = 11] = "HeartbeatAck";
+    GatewayOpcodes2[GatewayOpcodes2["RequestSoundboardSounds"] = 31] = "RequestSoundboardSounds";
+  })(GatewayOpcodes || (exports.GatewayOpcodes = GatewayOpcodes = {}));
+  var GatewayCloseCodes;
+  (function(GatewayCloseCodes2) {
+    GatewayCloseCodes2[GatewayCloseCodes2["UnknownError"] = 4000] = "UnknownError";
+    GatewayCloseCodes2[GatewayCloseCodes2["UnknownOpcode"] = 4001] = "UnknownOpcode";
+    GatewayCloseCodes2[GatewayCloseCodes2["DecodeError"] = 4002] = "DecodeError";
+    GatewayCloseCodes2[GatewayCloseCodes2["NotAuthenticated"] = 4003] = "NotAuthenticated";
+    GatewayCloseCodes2[GatewayCloseCodes2["AuthenticationFailed"] = 4004] = "AuthenticationFailed";
+    GatewayCloseCodes2[GatewayCloseCodes2["AlreadyAuthenticated"] = 4005] = "AlreadyAuthenticated";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidSeq"] = 4007] = "InvalidSeq";
+    GatewayCloseCodes2[GatewayCloseCodes2["RateLimited"] = 4008] = "RateLimited";
+    GatewayCloseCodes2[GatewayCloseCodes2["SessionTimedOut"] = 4009] = "SessionTimedOut";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidShard"] = 4010] = "InvalidShard";
+    GatewayCloseCodes2[GatewayCloseCodes2["ShardingRequired"] = 4011] = "ShardingRequired";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidAPIVersion"] = 4012] = "InvalidAPIVersion";
+    GatewayCloseCodes2[GatewayCloseCodes2["InvalidIntents"] = 4013] = "InvalidIntents";
+    GatewayCloseCodes2[GatewayCloseCodes2["DisallowedIntents"] = 4014] = "DisallowedIntents";
+  })(GatewayCloseCodes || (exports.GatewayCloseCodes = GatewayCloseCodes = {}));
+  var GatewayIntentBits;
+  (function(GatewayIntentBits2) {
+    GatewayIntentBits2[GatewayIntentBits2["Guilds"] = 1] = "Guilds";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMembers"] = 2] = "GuildMembers";
+    GatewayIntentBits2[GatewayIntentBits2["GuildModeration"] = 4] = "GuildModeration";
+    GatewayIntentBits2[GatewayIntentBits2["GuildBans"] = 4] = "GuildBans";
+    GatewayIntentBits2[GatewayIntentBits2["GuildExpressions"] = 8] = "GuildExpressions";
+    GatewayIntentBits2[GatewayIntentBits2["GuildEmojisAndStickers"] = 8] = "GuildEmojisAndStickers";
+    GatewayIntentBits2[GatewayIntentBits2["GuildIntegrations"] = 16] = "GuildIntegrations";
+    GatewayIntentBits2[GatewayIntentBits2["GuildWebhooks"] = 32] = "GuildWebhooks";
+    GatewayIntentBits2[GatewayIntentBits2["GuildInvites"] = 64] = "GuildInvites";
+    GatewayIntentBits2[GatewayIntentBits2["GuildVoiceStates"] = 128] = "GuildVoiceStates";
+    GatewayIntentBits2[GatewayIntentBits2["GuildPresences"] = 256] = "GuildPresences";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessages"] = 512] = "GuildMessages";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessageReactions"] = 1024] = "GuildMessageReactions";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessageTyping"] = 2048] = "GuildMessageTyping";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessages"] = 4096] = "DirectMessages";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessageReactions"] = 8192] = "DirectMessageReactions";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessageTyping"] = 16384] = "DirectMessageTyping";
+    GatewayIntentBits2[GatewayIntentBits2["MessageContent"] = 32768] = "MessageContent";
+    GatewayIntentBits2[GatewayIntentBits2["GuildScheduledEvents"] = 65536] = "GuildScheduledEvents";
+    GatewayIntentBits2[GatewayIntentBits2["AutoModerationConfiguration"] = 1048576] = "AutoModerationConfiguration";
+    GatewayIntentBits2[GatewayIntentBits2["AutoModerationExecution"] = 2097152] = "AutoModerationExecution";
+    GatewayIntentBits2[GatewayIntentBits2["GuildMessagePolls"] = 16777216] = "GuildMessagePolls";
+    GatewayIntentBits2[GatewayIntentBits2["DirectMessagePolls"] = 33554432] = "DirectMessagePolls";
+  })(GatewayIntentBits || (exports.GatewayIntentBits = GatewayIntentBits = {}));
+  var GatewayDispatchEvents;
+  (function(GatewayDispatchEvents2) {
+    GatewayDispatchEvents2["ApplicationCommandPermissionsUpdate"] = "APPLICATION_COMMAND_PERMISSIONS_UPDATE";
+    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
+    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
+    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
+    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
+    GatewayDispatchEvents2["ChannelCreate"] = "CHANNEL_CREATE";
+    GatewayDispatchEvents2["ChannelDelete"] = "CHANNEL_DELETE";
+    GatewayDispatchEvents2["ChannelPinsUpdate"] = "CHANNEL_PINS_UPDATE";
+    GatewayDispatchEvents2["ChannelUpdate"] = "CHANNEL_UPDATE";
+    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
+    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
+    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
+    GatewayDispatchEvents2["GuildBanAdd"] = "GUILD_BAN_ADD";
+    GatewayDispatchEvents2["GuildBanRemove"] = "GUILD_BAN_REMOVE";
+    GatewayDispatchEvents2["GuildCreate"] = "GUILD_CREATE";
+    GatewayDispatchEvents2["GuildDelete"] = "GUILD_DELETE";
+    GatewayDispatchEvents2["GuildEmojisUpdate"] = "GUILD_EMOJIS_UPDATE";
+    GatewayDispatchEvents2["GuildIntegrationsUpdate"] = "GUILD_INTEGRATIONS_UPDATE";
+    GatewayDispatchEvents2["GuildMemberAdd"] = "GUILD_MEMBER_ADD";
+    GatewayDispatchEvents2["GuildMemberRemove"] = "GUILD_MEMBER_REMOVE";
+    GatewayDispatchEvents2["GuildMembersChunk"] = "GUILD_MEMBERS_CHUNK";
+    GatewayDispatchEvents2["GuildMemberUpdate"] = "GUILD_MEMBER_UPDATE";
+    GatewayDispatchEvents2["GuildRoleCreate"] = "GUILD_ROLE_CREATE";
+    GatewayDispatchEvents2["GuildRoleDelete"] = "GUILD_ROLE_DELETE";
+    GatewayDispatchEvents2["GuildRoleUpdate"] = "GUILD_ROLE_UPDATE";
+    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
+    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
+    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
+    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
+    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
+    GatewayDispatchEvents2["GuildSoundboardSoundCreate"] = "GUILD_SOUNDBOARD_SOUND_CREATE";
+    GatewayDispatchEvents2["GuildSoundboardSoundDelete"] = "GUILD_SOUNDBOARD_SOUND_DELETE";
+    GatewayDispatchEvents2["GuildSoundboardSoundsUpdate"] = "GUILD_SOUNDBOARD_SOUNDS_UPDATE";
+    GatewayDispatchEvents2["GuildSoundboardSoundUpdate"] = "GUILD_SOUNDBOARD_SOUND_UPDATE";
+    GatewayDispatchEvents2["SoundboardSounds"] = "SOUNDBOARD_SOUNDS";
+    GatewayDispatchEvents2["GuildStickersUpdate"] = "GUILD_STICKERS_UPDATE";
+    GatewayDispatchEvents2["GuildUpdate"] = "GUILD_UPDATE";
+    GatewayDispatchEvents2["IntegrationCreate"] = "INTEGRATION_CREATE";
+    GatewayDispatchEvents2["IntegrationDelete"] = "INTEGRATION_DELETE";
+    GatewayDispatchEvents2["IntegrationUpdate"] = "INTEGRATION_UPDATE";
+    GatewayDispatchEvents2["InteractionCreate"] = "INTERACTION_CREATE";
+    GatewayDispatchEvents2["InviteCreate"] = "INVITE_CREATE";
+    GatewayDispatchEvents2["InviteDelete"] = "INVITE_DELETE";
+    GatewayDispatchEvents2["MessageCreate"] = "MESSAGE_CREATE";
+    GatewayDispatchEvents2["MessageDelete"] = "MESSAGE_DELETE";
+    GatewayDispatchEvents2["MessageDeleteBulk"] = "MESSAGE_DELETE_BULK";
+    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
+    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
+    GatewayDispatchEvents2["MessageReactionAdd"] = "MESSAGE_REACTION_ADD";
+    GatewayDispatchEvents2["MessageReactionRemove"] = "MESSAGE_REACTION_REMOVE";
+    GatewayDispatchEvents2["MessageReactionRemoveAll"] = "MESSAGE_REACTION_REMOVE_ALL";
+    GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
+    GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
+    GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
+    GatewayDispatchEvents2["Ready"] = "READY";
+    GatewayDispatchEvents2["Resumed"] = "RESUMED";
+    GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
+    GatewayDispatchEvents2["StageInstanceDelete"] = "STAGE_INSTANCE_DELETE";
+    GatewayDispatchEvents2["StageInstanceUpdate"] = "STAGE_INSTANCE_UPDATE";
+    GatewayDispatchEvents2["SubscriptionCreate"] = "SUBSCRIPTION_CREATE";
+    GatewayDispatchEvents2["SubscriptionDelete"] = "SUBSCRIPTION_DELETE";
+    GatewayDispatchEvents2["SubscriptionUpdate"] = "SUBSCRIPTION_UPDATE";
+    GatewayDispatchEvents2["ThreadCreate"] = "THREAD_CREATE";
+    GatewayDispatchEvents2["ThreadDelete"] = "THREAD_DELETE";
+    GatewayDispatchEvents2["ThreadListSync"] = "THREAD_LIST_SYNC";
+    GatewayDispatchEvents2["ThreadMembersUpdate"] = "THREAD_MEMBERS_UPDATE";
+    GatewayDispatchEvents2["ThreadMemberUpdate"] = "THREAD_MEMBER_UPDATE";
+    GatewayDispatchEvents2["ThreadUpdate"] = "THREAD_UPDATE";
+    GatewayDispatchEvents2["TypingStart"] = "TYPING_START";
+    GatewayDispatchEvents2["UserUpdate"] = "USER_UPDATE";
+    GatewayDispatchEvents2["VoiceChannelEffectSend"] = "VOICE_CHANNEL_EFFECT_SEND";
+    GatewayDispatchEvents2["VoiceServerUpdate"] = "VOICE_SERVER_UPDATE";
+    GatewayDispatchEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
+    GatewayDispatchEvents2["WebhooksUpdate"] = "WEBHOOKS_UPDATE";
+  })(GatewayDispatchEvents || (exports.GatewayDispatchEvents = GatewayDispatchEvents = {}));
+  var VoiceChannelEffectSendAnimationType;
+  (function(VoiceChannelEffectSendAnimationType2) {
+    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Premium"] = 0] = "Premium";
+    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Basic"] = 1] = "Basic";
+  })(VoiceChannelEffectSendAnimationType || (exports.VoiceChannelEffectSendAnimationType = VoiceChannelEffectSendAnimationType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/globals.js
+var require_globals3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.FormattingPatterns = undefined;
+  exports.FormattingPatterns = {
+    User: /<@(?<id>\d{17,20})>/,
+    UserWithNickname: /<@!(?<id>\d{17,20})>/,
+    UserWithOptionalNickname: /<@!?(?<id>\d{17,20})>/,
+    Channel: /<#(?<id>\d{17,20})>/,
+    Role: /<@&(?<id>\d{17,20})>/,
+    SlashCommand: /<\/(?<fullName>(?<name>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: (?<subcommandOrGroup>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?(?: (?<subcommand>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?):(?<id>\d{17,20})>/u,
+    Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
+    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRTdft]))?>/,
+    DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
+    StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/,
+    GuildNavigation: /<id:(?<type>customize|browse|guide|linked-roles)>/,
+    LinkedRole: /<id:linked-roles:(?<id>\d{17,20})>/
+  };
+  Object.freeze(exports.FormattingPatterns);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/common.js
+var require_common7 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.PermissionFlagsBits = undefined;
+  exports.PermissionFlagsBits = {
+    CreateInstantInvite: 1n << 0n,
+    KickMembers: 1n << 1n,
+    BanMembers: 1n << 2n,
+    Administrator: 1n << 3n,
+    ManageChannels: 1n << 4n,
+    ManageGuild: 1n << 5n,
+    AddReactions: 1n << 6n,
+    ViewAuditLog: 1n << 7n,
+    PrioritySpeaker: 1n << 8n,
+    Stream: 1n << 9n,
+    ViewChannel: 1n << 10n,
+    SendMessages: 1n << 11n,
+    SendTTSMessages: 1n << 12n,
+    ManageMessages: 1n << 13n,
+    EmbedLinks: 1n << 14n,
+    AttachFiles: 1n << 15n,
+    ReadMessageHistory: 1n << 16n,
+    MentionEveryone: 1n << 17n,
+    UseExternalEmojis: 1n << 18n,
+    ViewGuildInsights: 1n << 19n,
+    Connect: 1n << 20n,
+    Speak: 1n << 21n,
+    MuteMembers: 1n << 22n,
+    DeafenMembers: 1n << 23n,
+    MoveMembers: 1n << 24n,
+    UseVAD: 1n << 25n,
+    ChangeNickname: 1n << 26n,
+    ManageNicknames: 1n << 27n,
+    ManageRoles: 1n << 28n,
+    ManageWebhooks: 1n << 29n,
+    ManageEmojisAndStickers: 1n << 30n,
+    ManageGuildExpressions: 1n << 30n,
+    UseApplicationCommands: 1n << 31n,
+    RequestToSpeak: 1n << 32n,
+    ManageEvents: 1n << 33n,
+    ManageThreads: 1n << 34n,
+    CreatePublicThreads: 1n << 35n,
+    CreatePrivateThreads: 1n << 36n,
+    UseExternalStickers: 1n << 37n,
+    SendMessagesInThreads: 1n << 38n,
+    UseEmbeddedActivities: 1n << 39n,
+    ModerateMembers: 1n << 40n,
+    ViewCreatorMonetizationAnalytics: 1n << 41n,
+    UseSoundboard: 1n << 42n,
+    CreateGuildExpressions: 1n << 43n,
+    CreateEvents: 1n << 44n,
+    UseExternalSounds: 1n << 45n,
+    SendVoiceMessages: 1n << 46n,
+    SendPolls: 1n << 49n,
+    UseExternalApps: 1n << 50n,
+    PinMessages: 1n << 51n
+  };
+  Object.freeze(exports.PermissionFlagsBits);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/application.js
+var require_application3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ApplicationWebhookEventStatus = exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
+  var ApplicationFlags;
+  (function(ApplicationFlags2) {
+    ApplicationFlags2[ApplicationFlags2["EmbeddedReleased"] = 2] = "EmbeddedReleased";
+    ApplicationFlags2[ApplicationFlags2["ManagedEmoji"] = 4] = "ManagedEmoji";
+    ApplicationFlags2[ApplicationFlags2["EmbeddedIAP"] = 8] = "EmbeddedIAP";
+    ApplicationFlags2[ApplicationFlags2["GroupDMCreate"] = 16] = "GroupDMCreate";
+    ApplicationFlags2[ApplicationFlags2["ApplicationAutoModerationRuleCreateBadge"] = 64] = "ApplicationAutoModerationRuleCreateBadge";
+    ApplicationFlags2[ApplicationFlags2["RPCHasConnected"] = 2048] = "RPCHasConnected";
+    ApplicationFlags2[ApplicationFlags2["GatewayPresence"] = 4096] = "GatewayPresence";
+    ApplicationFlags2[ApplicationFlags2["GatewayPresenceLimited"] = 8192] = "GatewayPresenceLimited";
+    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembers"] = 16384] = "GatewayGuildMembers";
+    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembersLimited"] = 32768] = "GatewayGuildMembersLimited";
+    ApplicationFlags2[ApplicationFlags2["VerificationPendingGuildLimit"] = 65536] = "VerificationPendingGuildLimit";
+    ApplicationFlags2[ApplicationFlags2["Embedded"] = 131072] = "Embedded";
+    ApplicationFlags2[ApplicationFlags2["GatewayMessageContent"] = 262144] = "GatewayMessageContent";
+    ApplicationFlags2[ApplicationFlags2["GatewayMessageContentLimited"] = 524288] = "GatewayMessageContentLimited";
+    ApplicationFlags2[ApplicationFlags2["EmbeddedFirstParty"] = 1048576] = "EmbeddedFirstParty";
+    ApplicationFlags2[ApplicationFlags2["ApplicationCommandBadge"] = 8388608] = "ApplicationCommandBadge";
+  })(ApplicationFlags || (exports.ApplicationFlags = ApplicationFlags = {}));
+  var ApplicationRoleConnectionMetadataType;
+  (function(ApplicationRoleConnectionMetadataType2) {
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerLessThanOrEqual"] = 1] = "IntegerLessThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerGreaterThanOrEqual"] = 2] = "IntegerGreaterThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerEqual"] = 3] = "IntegerEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerNotEqual"] = 4] = "IntegerNotEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeLessThanOrEqual"] = 5] = "DatetimeLessThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeGreaterThanOrEqual"] = 6] = "DatetimeGreaterThanOrEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanEqual"] = 7] = "BooleanEqual";
+    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanNotEqual"] = 8] = "BooleanNotEqual";
+  })(ApplicationRoleConnectionMetadataType || (exports.ApplicationRoleConnectionMetadataType = ApplicationRoleConnectionMetadataType = {}));
+  var ApplicationWebhookEventStatus;
+  (function(ApplicationWebhookEventStatus2) {
+    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Disabled"] = 1] = "Disabled";
+    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Enabled"] = 2] = "Enabled";
+    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["DisabledByDiscord"] = 3] = "DisabledByDiscord";
+  })(ApplicationWebhookEventStatus || (exports.ApplicationWebhookEventStatus = ApplicationWebhookEventStatus = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/auditLog.js
+var require_auditLog3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
+  var AuditLogEvent;
+  (function(AuditLogEvent2) {
+    AuditLogEvent2[AuditLogEvent2["GuildUpdate"] = 1] = "GuildUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelCreate"] = 10] = "ChannelCreate";
+    AuditLogEvent2[AuditLogEvent2["ChannelUpdate"] = 11] = "ChannelUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelDelete"] = 12] = "ChannelDelete";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteCreate"] = 13] = "ChannelOverwriteCreate";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteUpdate"] = 14] = "ChannelOverwriteUpdate";
+    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteDelete"] = 15] = "ChannelOverwriteDelete";
+    AuditLogEvent2[AuditLogEvent2["MemberKick"] = 20] = "MemberKick";
+    AuditLogEvent2[AuditLogEvent2["MemberPrune"] = 21] = "MemberPrune";
+    AuditLogEvent2[AuditLogEvent2["MemberBanAdd"] = 22] = "MemberBanAdd";
+    AuditLogEvent2[AuditLogEvent2["MemberBanRemove"] = 23] = "MemberBanRemove";
+    AuditLogEvent2[AuditLogEvent2["MemberUpdate"] = 24] = "MemberUpdate";
+    AuditLogEvent2[AuditLogEvent2["MemberRoleUpdate"] = 25] = "MemberRoleUpdate";
+    AuditLogEvent2[AuditLogEvent2["MemberMove"] = 26] = "MemberMove";
+    AuditLogEvent2[AuditLogEvent2["MemberDisconnect"] = 27] = "MemberDisconnect";
+    AuditLogEvent2[AuditLogEvent2["BotAdd"] = 28] = "BotAdd";
+    AuditLogEvent2[AuditLogEvent2["RoleCreate"] = 30] = "RoleCreate";
+    AuditLogEvent2[AuditLogEvent2["RoleUpdate"] = 31] = "RoleUpdate";
+    AuditLogEvent2[AuditLogEvent2["RoleDelete"] = 32] = "RoleDelete";
+    AuditLogEvent2[AuditLogEvent2["InviteCreate"] = 40] = "InviteCreate";
+    AuditLogEvent2[AuditLogEvent2["InviteUpdate"] = 41] = "InviteUpdate";
+    AuditLogEvent2[AuditLogEvent2["InviteDelete"] = 42] = "InviteDelete";
+    AuditLogEvent2[AuditLogEvent2["WebhookCreate"] = 50] = "WebhookCreate";
+    AuditLogEvent2[AuditLogEvent2["WebhookUpdate"] = 51] = "WebhookUpdate";
+    AuditLogEvent2[AuditLogEvent2["WebhookDelete"] = 52] = "WebhookDelete";
+    AuditLogEvent2[AuditLogEvent2["EmojiCreate"] = 60] = "EmojiCreate";
+    AuditLogEvent2[AuditLogEvent2["EmojiUpdate"] = 61] = "EmojiUpdate";
+    AuditLogEvent2[AuditLogEvent2["EmojiDelete"] = 62] = "EmojiDelete";
+    AuditLogEvent2[AuditLogEvent2["MessageDelete"] = 72] = "MessageDelete";
+    AuditLogEvent2[AuditLogEvent2["MessageBulkDelete"] = 73] = "MessageBulkDelete";
+    AuditLogEvent2[AuditLogEvent2["MessagePin"] = 74] = "MessagePin";
+    AuditLogEvent2[AuditLogEvent2["MessageUnpin"] = 75] = "MessageUnpin";
+    AuditLogEvent2[AuditLogEvent2["IntegrationCreate"] = 80] = "IntegrationCreate";
+    AuditLogEvent2[AuditLogEvent2["IntegrationUpdate"] = 81] = "IntegrationUpdate";
+    AuditLogEvent2[AuditLogEvent2["IntegrationDelete"] = 82] = "IntegrationDelete";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceCreate"] = 83] = "StageInstanceCreate";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceUpdate"] = 84] = "StageInstanceUpdate";
+    AuditLogEvent2[AuditLogEvent2["StageInstanceDelete"] = 85] = "StageInstanceDelete";
+    AuditLogEvent2[AuditLogEvent2["StickerCreate"] = 90] = "StickerCreate";
+    AuditLogEvent2[AuditLogEvent2["StickerUpdate"] = 91] = "StickerUpdate";
+    AuditLogEvent2[AuditLogEvent2["StickerDelete"] = 92] = "StickerDelete";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventCreate"] = 100] = "GuildScheduledEventCreate";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventUpdate"] = 101] = "GuildScheduledEventUpdate";
+    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventDelete"] = 102] = "GuildScheduledEventDelete";
+    AuditLogEvent2[AuditLogEvent2["ThreadCreate"] = 110] = "ThreadCreate";
+    AuditLogEvent2[AuditLogEvent2["ThreadUpdate"] = 111] = "ThreadUpdate";
+    AuditLogEvent2[AuditLogEvent2["ThreadDelete"] = 112] = "ThreadDelete";
+    AuditLogEvent2[AuditLogEvent2["ApplicationCommandPermissionUpdate"] = 121] = "ApplicationCommandPermissionUpdate";
+    AuditLogEvent2[AuditLogEvent2["SoundboardSoundCreate"] = 130] = "SoundboardSoundCreate";
+    AuditLogEvent2[AuditLogEvent2["SoundboardSoundUpdate"] = 131] = "SoundboardSoundUpdate";
+    AuditLogEvent2[AuditLogEvent2["SoundboardSoundDelete"] = 132] = "SoundboardSoundDelete";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleCreate"] = 140] = "AutoModerationRuleCreate";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleUpdate"] = 141] = "AutoModerationRuleUpdate";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleDelete"] = 142] = "AutoModerationRuleDelete";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationBlockMessage"] = 143] = "AutoModerationBlockMessage";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationFlagToChannel"] = 144] = "AutoModerationFlagToChannel";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationUserCommunicationDisabled"] = 145] = "AutoModerationUserCommunicationDisabled";
+    AuditLogEvent2[AuditLogEvent2["AutoModerationQuarantineUser"] = 146] = "AutoModerationQuarantineUser";
+    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationRequestCreated"] = 150] = "CreatorMonetizationRequestCreated";
+    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationTermsAccepted"] = 151] = "CreatorMonetizationTermsAccepted";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptCreate"] = 163] = "OnboardingPromptCreate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptUpdate"] = 164] = "OnboardingPromptUpdate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingPromptDelete"] = 165] = "OnboardingPromptDelete";
+    AuditLogEvent2[AuditLogEvent2["OnboardingCreate"] = 166] = "OnboardingCreate";
+    AuditLogEvent2[AuditLogEvent2["OnboardingUpdate"] = 167] = "OnboardingUpdate";
+    AuditLogEvent2[AuditLogEvent2["HomeSettingsCreate"] = 190] = "HomeSettingsCreate";
+    AuditLogEvent2[AuditLogEvent2["HomeSettingsUpdate"] = 191] = "HomeSettingsUpdate";
+  })(AuditLogEvent || (exports.AuditLogEvent = AuditLogEvent = {}));
+  var AuditLogOptionsType;
+  (function(AuditLogOptionsType2) {
+    AuditLogOptionsType2["Role"] = "0";
+    AuditLogOptionsType2["Member"] = "1";
+  })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/autoModeration.js
+var require_autoModeration3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
+  var AutoModerationRuleTriggerType;
+  (function(AutoModerationRuleTriggerType2) {
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Keyword"] = 1] = "Keyword";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Spam"] = 3] = "Spam";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["KeywordPreset"] = 4] = "KeywordPreset";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MentionSpam"] = 5] = "MentionSpam";
+    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MemberProfile"] = 6] = "MemberProfile";
+  })(AutoModerationRuleTriggerType || (exports.AutoModerationRuleTriggerType = AutoModerationRuleTriggerType = {}));
+  var AutoModerationRuleKeywordPresetType;
+  (function(AutoModerationRuleKeywordPresetType2) {
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Profanity"] = 1] = "Profanity";
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["SexualContent"] = 2] = "SexualContent";
+    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Slurs"] = 3] = "Slurs";
+  })(AutoModerationRuleKeywordPresetType || (exports.AutoModerationRuleKeywordPresetType = AutoModerationRuleKeywordPresetType = {}));
+  var AutoModerationRuleEventType;
+  (function(AutoModerationRuleEventType2) {
+    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MessageSend"] = 1] = "MessageSend";
+    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MemberUpdate"] = 2] = "MemberUpdate";
+  })(AutoModerationRuleEventType || (exports.AutoModerationRuleEventType = AutoModerationRuleEventType = {}));
+  var AutoModerationActionType;
+  (function(AutoModerationActionType2) {
+    AutoModerationActionType2[AutoModerationActionType2["BlockMessage"] = 1] = "BlockMessage";
+    AutoModerationActionType2[AutoModerationActionType2["SendAlertMessage"] = 2] = "SendAlertMessage";
+    AutoModerationActionType2[AutoModerationActionType2["Timeout"] = 3] = "Timeout";
+    AutoModerationActionType2[AutoModerationActionType2["BlockMemberInteraction"] = 4] = "BlockMemberInteraction";
+  })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/channel.js
+var require_channel5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ChannelFlags = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
+  var SortOrderType;
+  (function(SortOrderType2) {
+    SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
+    SortOrderType2[SortOrderType2["CreationDate"] = 1] = "CreationDate";
+  })(SortOrderType || (exports.SortOrderType = SortOrderType = {}));
+  var ForumLayoutType;
+  (function(ForumLayoutType2) {
+    ForumLayoutType2[ForumLayoutType2["NotSet"] = 0] = "NotSet";
+    ForumLayoutType2[ForumLayoutType2["ListView"] = 1] = "ListView";
+    ForumLayoutType2[ForumLayoutType2["GalleryView"] = 2] = "GalleryView";
+  })(ForumLayoutType || (exports.ForumLayoutType = ForumLayoutType = {}));
+  var ChannelType;
+  (function(ChannelType2) {
+    ChannelType2[ChannelType2["GuildText"] = 0] = "GuildText";
+    ChannelType2[ChannelType2["DM"] = 1] = "DM";
+    ChannelType2[ChannelType2["GuildVoice"] = 2] = "GuildVoice";
+    ChannelType2[ChannelType2["GroupDM"] = 3] = "GroupDM";
+    ChannelType2[ChannelType2["GuildCategory"] = 4] = "GuildCategory";
+    ChannelType2[ChannelType2["GuildAnnouncement"] = 5] = "GuildAnnouncement";
+    ChannelType2[ChannelType2["AnnouncementThread"] = 10] = "AnnouncementThread";
+    ChannelType2[ChannelType2["PublicThread"] = 11] = "PublicThread";
+    ChannelType2[ChannelType2["PrivateThread"] = 12] = "PrivateThread";
+    ChannelType2[ChannelType2["GuildStageVoice"] = 13] = "GuildStageVoice";
+    ChannelType2[ChannelType2["GuildDirectory"] = 14] = "GuildDirectory";
+    ChannelType2[ChannelType2["GuildForum"] = 15] = "GuildForum";
+    ChannelType2[ChannelType2["GuildMedia"] = 16] = "GuildMedia";
+    ChannelType2[ChannelType2["GuildNews"] = 5] = "GuildNews";
+    ChannelType2[ChannelType2["GuildNewsThread"] = 10] = "GuildNewsThread";
+    ChannelType2[ChannelType2["GuildPublicThread"] = 11] = "GuildPublicThread";
+    ChannelType2[ChannelType2["GuildPrivateThread"] = 12] = "GuildPrivateThread";
+  })(ChannelType || (exports.ChannelType = ChannelType = {}));
+  var VideoQualityMode;
+  (function(VideoQualityMode2) {
+    VideoQualityMode2[VideoQualityMode2["Auto"] = 1] = "Auto";
+    VideoQualityMode2[VideoQualityMode2["Full"] = 2] = "Full";
+  })(VideoQualityMode || (exports.VideoQualityMode = VideoQualityMode = {}));
+  var OverwriteType;
+  (function(OverwriteType2) {
+    OverwriteType2[OverwriteType2["Role"] = 0] = "Role";
+    OverwriteType2[OverwriteType2["Member"] = 1] = "Member";
+  })(OverwriteType || (exports.OverwriteType = OverwriteType = {}));
+  var ThreadAutoArchiveDuration;
+  (function(ThreadAutoArchiveDuration2) {
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneHour"] = 60] = "OneHour";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneDay"] = 1440] = "OneDay";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["ThreeDays"] = 4320] = "ThreeDays";
+    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneWeek"] = 10080] = "OneWeek";
+  })(ThreadAutoArchiveDuration || (exports.ThreadAutoArchiveDuration = ThreadAutoArchiveDuration = {}));
+  var ThreadMemberFlags;
+  (function(ThreadMemberFlags2) {
+    ThreadMemberFlags2[ThreadMemberFlags2["HasInteracted"] = 1] = "HasInteracted";
+    ThreadMemberFlags2[ThreadMemberFlags2["AllMessages"] = 2] = "AllMessages";
+    ThreadMemberFlags2[ThreadMemberFlags2["OnlyMentions"] = 4] = "OnlyMentions";
+    ThreadMemberFlags2[ThreadMemberFlags2["NoMessages"] = 8] = "NoMessages";
+  })(ThreadMemberFlags || (exports.ThreadMemberFlags = ThreadMemberFlags = {}));
+  var ChannelFlags;
+  (function(ChannelFlags2) {
+    ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
+    ChannelFlags2[ChannelFlags2["Pinned"] = 2] = "Pinned";
+    ChannelFlags2[ChannelFlags2["ActiveChannelsRemoved"] = 4] = "ActiveChannelsRemoved";
+    ChannelFlags2[ChannelFlags2["RequireTag"] = 16] = "RequireTag";
+    ChannelFlags2[ChannelFlags2["IsSpam"] = 32] = "IsSpam";
+    ChannelFlags2[ChannelFlags2["IsGuildResourceChannel"] = 128] = "IsGuildResourceChannel";
+    ChannelFlags2[ChannelFlags2["ClydeAI"] = 256] = "ClydeAI";
+    ChannelFlags2[ChannelFlags2["IsScheduledForDeletion"] = 512] = "IsScheduledForDeletion";
+    ChannelFlags2[ChannelFlags2["HideMediaDownloadOptions"] = 32768] = "HideMediaDownloadOptions";
+  })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/gateway.js
+var require_gateway3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ActivityFlags = exports.StatusDisplayType = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
+  var PresenceUpdateStatus;
+  (function(PresenceUpdateStatus2) {
+    PresenceUpdateStatus2["Online"] = "online";
+    PresenceUpdateStatus2["DoNotDisturb"] = "dnd";
+    PresenceUpdateStatus2["Idle"] = "idle";
+    PresenceUpdateStatus2["Invisible"] = "invisible";
+    PresenceUpdateStatus2["Offline"] = "offline";
+  })(PresenceUpdateStatus || (exports.PresenceUpdateStatus = PresenceUpdateStatus = {}));
+  var ActivityPlatform;
+  (function(ActivityPlatform2) {
+    ActivityPlatform2["Desktop"] = "desktop";
+    ActivityPlatform2["Xbox"] = "xbox";
+    ActivityPlatform2["Samsung"] = "samsung";
+    ActivityPlatform2["IOS"] = "ios";
+    ActivityPlatform2["Android"] = "android";
+    ActivityPlatform2["Embedded"] = "embedded";
+    ActivityPlatform2["PS4"] = "ps4";
+    ActivityPlatform2["PS5"] = "ps5";
+  })(ActivityPlatform || (exports.ActivityPlatform = ActivityPlatform = {}));
+  var ActivityType;
+  (function(ActivityType2) {
+    ActivityType2[ActivityType2["Playing"] = 0] = "Playing";
+    ActivityType2[ActivityType2["Streaming"] = 1] = "Streaming";
+    ActivityType2[ActivityType2["Listening"] = 2] = "Listening";
+    ActivityType2[ActivityType2["Watching"] = 3] = "Watching";
+    ActivityType2[ActivityType2["Custom"] = 4] = "Custom";
+    ActivityType2[ActivityType2["Competing"] = 5] = "Competing";
+  })(ActivityType || (exports.ActivityType = ActivityType = {}));
+  var StatusDisplayType;
+  (function(StatusDisplayType2) {
+    StatusDisplayType2[StatusDisplayType2["Name"] = 0] = "Name";
+    StatusDisplayType2[StatusDisplayType2["State"] = 1] = "State";
+    StatusDisplayType2[StatusDisplayType2["Details"] = 2] = "Details";
+  })(StatusDisplayType || (exports.StatusDisplayType = StatusDisplayType = {}));
+  var ActivityFlags;
+  (function(ActivityFlags2) {
+    ActivityFlags2[ActivityFlags2["Instance"] = 1] = "Instance";
+    ActivityFlags2[ActivityFlags2["Join"] = 2] = "Join";
+    ActivityFlags2[ActivityFlags2["Spectate"] = 4] = "Spectate";
+    ActivityFlags2[ActivityFlags2["JoinRequest"] = 8] = "JoinRequest";
+    ActivityFlags2[ActivityFlags2["Sync"] = 16] = "Sync";
+    ActivityFlags2[ActivityFlags2["Play"] = 32] = "Play";
+    ActivityFlags2[ActivityFlags2["PartyPrivacyFriends"] = 64] = "PartyPrivacyFriends";
+    ActivityFlags2[ActivityFlags2["PartyPrivacyVoiceChannel"] = 128] = "PartyPrivacyVoiceChannel";
+    ActivityFlags2[ActivityFlags2["Embedded"] = 256] = "Embedded";
+  })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guild.js
+var require_guild3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
+  var GuildDefaultMessageNotifications;
+  (function(GuildDefaultMessageNotifications2) {
+    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["AllMessages"] = 0] = "AllMessages";
+    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["OnlyMentions"] = 1] = "OnlyMentions";
+  })(GuildDefaultMessageNotifications || (exports.GuildDefaultMessageNotifications = GuildDefaultMessageNotifications = {}));
+  var GuildExplicitContentFilter;
+  (function(GuildExplicitContentFilter2) {
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["Disabled"] = 0] = "Disabled";
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["MembersWithoutRoles"] = 1] = "MembersWithoutRoles";
+    GuildExplicitContentFilter2[GuildExplicitContentFilter2["AllMembers"] = 2] = "AllMembers";
+  })(GuildExplicitContentFilter || (exports.GuildExplicitContentFilter = GuildExplicitContentFilter = {}));
+  var GuildMFALevel;
+  (function(GuildMFALevel2) {
+    GuildMFALevel2[GuildMFALevel2["None"] = 0] = "None";
+    GuildMFALevel2[GuildMFALevel2["Elevated"] = 1] = "Elevated";
+  })(GuildMFALevel || (exports.GuildMFALevel = GuildMFALevel = {}));
+  var GuildNSFWLevel;
+  (function(GuildNSFWLevel2) {
+    GuildNSFWLevel2[GuildNSFWLevel2["Default"] = 0] = "Default";
+    GuildNSFWLevel2[GuildNSFWLevel2["Explicit"] = 1] = "Explicit";
+    GuildNSFWLevel2[GuildNSFWLevel2["Safe"] = 2] = "Safe";
+    GuildNSFWLevel2[GuildNSFWLevel2["AgeRestricted"] = 3] = "AgeRestricted";
+  })(GuildNSFWLevel || (exports.GuildNSFWLevel = GuildNSFWLevel = {}));
+  var GuildVerificationLevel;
+  (function(GuildVerificationLevel2) {
+    GuildVerificationLevel2[GuildVerificationLevel2["None"] = 0] = "None";
+    GuildVerificationLevel2[GuildVerificationLevel2["Low"] = 1] = "Low";
+    GuildVerificationLevel2[GuildVerificationLevel2["Medium"] = 2] = "Medium";
+    GuildVerificationLevel2[GuildVerificationLevel2["High"] = 3] = "High";
+    GuildVerificationLevel2[GuildVerificationLevel2["VeryHigh"] = 4] = "VeryHigh";
+  })(GuildVerificationLevel || (exports.GuildVerificationLevel = GuildVerificationLevel = {}));
+  var GuildPremiumTier;
+  (function(GuildPremiumTier2) {
+    GuildPremiumTier2[GuildPremiumTier2["None"] = 0] = "None";
+    GuildPremiumTier2[GuildPremiumTier2["Tier1"] = 1] = "Tier1";
+    GuildPremiumTier2[GuildPremiumTier2["Tier2"] = 2] = "Tier2";
+    GuildPremiumTier2[GuildPremiumTier2["Tier3"] = 3] = "Tier3";
+  })(GuildPremiumTier || (exports.GuildPremiumTier = GuildPremiumTier = {}));
+  var GuildHubType;
+  (function(GuildHubType2) {
+    GuildHubType2[GuildHubType2["Default"] = 0] = "Default";
+    GuildHubType2[GuildHubType2["HighSchool"] = 1] = "HighSchool";
+    GuildHubType2[GuildHubType2["College"] = 2] = "College";
+  })(GuildHubType || (exports.GuildHubType = GuildHubType = {}));
+  var GuildSystemChannelFlags;
+  (function(GuildSystemChannelFlags2) {
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotifications"] = 1] = "SuppressJoinNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressPremiumSubscriptions"] = 2] = "SuppressPremiumSubscriptions";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressGuildReminderNotifications"] = 4] = "SuppressGuildReminderNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotificationReplies"] = 8] = "SuppressJoinNotificationReplies";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotifications"] = 16] = "SuppressRoleSubscriptionPurchaseNotifications";
+    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotificationReplies"] = 32] = "SuppressRoleSubscriptionPurchaseNotificationReplies";
+  })(GuildSystemChannelFlags || (exports.GuildSystemChannelFlags = GuildSystemChannelFlags = {}));
+  var GuildFeature;
+  (function(GuildFeature2) {
+    GuildFeature2["AnimatedBanner"] = "ANIMATED_BANNER";
+    GuildFeature2["AnimatedIcon"] = "ANIMATED_ICON";
+    GuildFeature2["ApplicationCommandPermissionsV2"] = "APPLICATION_COMMAND_PERMISSIONS_V2";
+    GuildFeature2["AutoModeration"] = "AUTO_MODERATION";
+    GuildFeature2["Banner"] = "BANNER";
+    GuildFeature2["Community"] = "COMMUNITY";
+    GuildFeature2["CreatorMonetizableProvisional"] = "CREATOR_MONETIZABLE_PROVISIONAL";
+    GuildFeature2["CreatorStorePage"] = "CREATOR_STORE_PAGE";
+    GuildFeature2["DeveloperSupportServer"] = "DEVELOPER_SUPPORT_SERVER";
+    GuildFeature2["Discoverable"] = "DISCOVERABLE";
+    GuildFeature2["Featurable"] = "FEATURABLE";
+    GuildFeature2["HasDirectoryEntry"] = "HAS_DIRECTORY_ENTRY";
+    GuildFeature2["Hub"] = "HUB";
+    GuildFeature2["InvitesDisabled"] = "INVITES_DISABLED";
+    GuildFeature2["InviteSplash"] = "INVITE_SPLASH";
+    GuildFeature2["LinkedToHub"] = "LINKED_TO_HUB";
+    GuildFeature2["MemberVerificationGateEnabled"] = "MEMBER_VERIFICATION_GATE_ENABLED";
+    GuildFeature2["MoreSoundboard"] = "MORE_SOUNDBOARD";
+    GuildFeature2["MonetizationEnabled"] = "MONETIZATION_ENABLED";
+    GuildFeature2["MoreStickers"] = "MORE_STICKERS";
+    GuildFeature2["News"] = "NEWS";
+    GuildFeature2["Partnered"] = "PARTNERED";
+    GuildFeature2["PreviewEnabled"] = "PREVIEW_ENABLED";
+    GuildFeature2["PrivateThreads"] = "PRIVATE_THREADS";
+    GuildFeature2["RaidAlertsDisabled"] = "RAID_ALERTS_DISABLED";
+    GuildFeature2["RelayEnabled"] = "RELAY_ENABLED";
+    GuildFeature2["RoleIcons"] = "ROLE_ICONS";
+    GuildFeature2["RoleSubscriptionsAvailableForPurchase"] = "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE";
+    GuildFeature2["RoleSubscriptionsEnabled"] = "ROLE_SUBSCRIPTIONS_ENABLED";
+    GuildFeature2["Soundboard"] = "SOUNDBOARD";
+    GuildFeature2["TicketedEventsEnabled"] = "TICKETED_EVENTS_ENABLED";
+    GuildFeature2["VanityURL"] = "VANITY_URL";
+    GuildFeature2["Verified"] = "VERIFIED";
+    GuildFeature2["VIPRegions"] = "VIP_REGIONS";
+    GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
+    GuildFeature2["GuildTags"] = "GUILD_TAGS";
+    GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
+    GuildFeature2["GuestsEnabled"] = "GUESTS_ENABLED";
+  })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
+  var GuildMemberFlags;
+  (function(GuildMemberFlags2) {
+    GuildMemberFlags2[GuildMemberFlags2["DidRejoin"] = 1] = "DidRejoin";
+    GuildMemberFlags2[GuildMemberFlags2["CompletedOnboarding"] = 2] = "CompletedOnboarding";
+    GuildMemberFlags2[GuildMemberFlags2["BypassesVerification"] = 4] = "BypassesVerification";
+    GuildMemberFlags2[GuildMemberFlags2["StartedOnboarding"] = 8] = "StartedOnboarding";
+    GuildMemberFlags2[GuildMemberFlags2["IsGuest"] = 16] = "IsGuest";
+    GuildMemberFlags2[GuildMemberFlags2["StartedHomeActions"] = 32] = "StartedHomeActions";
+    GuildMemberFlags2[GuildMemberFlags2["CompletedHomeActions"] = 64] = "CompletedHomeActions";
+    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedUsernameOrGuildNickname"] = 128] = "AutomodQuarantinedUsernameOrGuildNickname";
+    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedBio"] = 256] = "AutomodQuarantinedBio";
+    GuildMemberFlags2[GuildMemberFlags2["DmSettingsUpsellAcknowledged"] = 512] = "DmSettingsUpsellAcknowledged";
+    GuildMemberFlags2[GuildMemberFlags2["AutoModQuarantinedGuildTag"] = 1024] = "AutoModQuarantinedGuildTag";
+  })(GuildMemberFlags || (exports.GuildMemberFlags = GuildMemberFlags = {}));
+  var IntegrationExpireBehavior;
+  (function(IntegrationExpireBehavior2) {
+    IntegrationExpireBehavior2[IntegrationExpireBehavior2["RemoveRole"] = 0] = "RemoveRole";
+    IntegrationExpireBehavior2[IntegrationExpireBehavior2["Kick"] = 1] = "Kick";
+  })(IntegrationExpireBehavior || (exports.IntegrationExpireBehavior = IntegrationExpireBehavior = {}));
+  var GuildWidgetStyle;
+  (function(GuildWidgetStyle2) {
+    GuildWidgetStyle2["Shield"] = "shield";
+    GuildWidgetStyle2["Banner1"] = "banner1";
+    GuildWidgetStyle2["Banner2"] = "banner2";
+    GuildWidgetStyle2["Banner3"] = "banner3";
+    GuildWidgetStyle2["Banner4"] = "banner4";
+  })(GuildWidgetStyle || (exports.GuildWidgetStyle = GuildWidgetStyle = {}));
+  var MembershipScreeningFieldType;
+  (function(MembershipScreeningFieldType2) {
+    MembershipScreeningFieldType2["Terms"] = "TERMS";
+  })(MembershipScreeningFieldType || (exports.MembershipScreeningFieldType = MembershipScreeningFieldType = {}));
+  var GuildOnboardingMode;
+  (function(GuildOnboardingMode2) {
+    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingDefault"] = 0] = "OnboardingDefault";
+    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingAdvanced"] = 1] = "OnboardingAdvanced";
+  })(GuildOnboardingMode || (exports.GuildOnboardingMode = GuildOnboardingMode = {}));
+  var GuildOnboardingPromptType;
+  (function(GuildOnboardingPromptType2) {
+    GuildOnboardingPromptType2[GuildOnboardingPromptType2["MultipleChoice"] = 0] = "MultipleChoice";
+    GuildOnboardingPromptType2[GuildOnboardingPromptType2["Dropdown"] = 1] = "Dropdown";
+  })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
+var require_guildScheduledEvent3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
+  var GuildScheduledEventRecurrenceRuleFrequency;
+  (function(GuildScheduledEventRecurrenceRuleFrequency2) {
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Yearly"] = 0] = "Yearly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Monthly"] = 1] = "Monthly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Weekly"] = 2] = "Weekly";
+    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Daily"] = 3] = "Daily";
+  })(GuildScheduledEventRecurrenceRuleFrequency || (exports.GuildScheduledEventRecurrenceRuleFrequency = GuildScheduledEventRecurrenceRuleFrequency = {}));
+  var GuildScheduledEventRecurrenceRuleWeekday;
+  (function(GuildScheduledEventRecurrenceRuleWeekday2) {
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Monday"] = 0] = "Monday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Tuesday"] = 1] = "Tuesday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Wednesday"] = 2] = "Wednesday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Thursday"] = 3] = "Thursday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Friday"] = 4] = "Friday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Saturday"] = 5] = "Saturday";
+    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Sunday"] = 6] = "Sunday";
+  })(GuildScheduledEventRecurrenceRuleWeekday || (exports.GuildScheduledEventRecurrenceRuleWeekday = GuildScheduledEventRecurrenceRuleWeekday = {}));
+  var GuildScheduledEventRecurrenceRuleMonth;
+  (function(GuildScheduledEventRecurrenceRuleMonth2) {
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["January"] = 1] = "January";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["February"] = 2] = "February";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["March"] = 3] = "March";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["April"] = 4] = "April";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["May"] = 5] = "May";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["June"] = 6] = "June";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["July"] = 7] = "July";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["August"] = 8] = "August";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["September"] = 9] = "September";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["October"] = 10] = "October";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["November"] = 11] = "November";
+    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["December"] = 12] = "December";
+  })(GuildScheduledEventRecurrenceRuleMonth || (exports.GuildScheduledEventRecurrenceRuleMonth = GuildScheduledEventRecurrenceRuleMonth = {}));
+  var GuildScheduledEventEntityType;
+  (function(GuildScheduledEventEntityType2) {
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["StageInstance"] = 1] = "StageInstance";
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["Voice"] = 2] = "Voice";
+    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["External"] = 3] = "External";
+  })(GuildScheduledEventEntityType || (exports.GuildScheduledEventEntityType = GuildScheduledEventEntityType = {}));
+  var GuildScheduledEventStatus;
+  (function(GuildScheduledEventStatus2) {
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Scheduled"] = 1] = "Scheduled";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Active"] = 2] = "Active";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Completed"] = 3] = "Completed";
+    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Canceled"] = 4] = "Canceled";
+  })(GuildScheduledEventStatus || (exports.GuildScheduledEventStatus = GuildScheduledEventStatus = {}));
+  var GuildScheduledEventPrivacyLevel;
+  (function(GuildScheduledEventPrivacyLevel2) {
+    GuildScheduledEventPrivacyLevel2[GuildScheduledEventPrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
+  })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
+var require_shared3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ApplicationCommandOptionType = undefined;
+  var ApplicationCommandOptionType;
+  (function(ApplicationCommandOptionType2) {
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Subcommand"] = 1] = "Subcommand";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["SubcommandGroup"] = 2] = "SubcommandGroup";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["String"] = 3] = "String";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Integer"] = 4] = "Integer";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Boolean"] = 5] = "Boolean";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["User"] = 6] = "User";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Channel"] = 7] = "Channel";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Role"] = 8] = "Role";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Mentionable"] = 9] = "Mentionable";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Number"] = 10] = "Number";
+    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Attachment"] = 11] = "Attachment";
+  })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
+var require_chatInput3 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_shared3(), exports);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
+var require_permissions5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
+  var ApplicationCommandPermissionType;
+  (function(ApplicationCommandPermissionType2) {
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Role"] = 1] = "Role";
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["User"] = 2] = "User";
+    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Channel"] = 3] = "Channel";
+  })(ApplicationCommandPermissionType || (exports.ApplicationCommandPermissionType = ApplicationCommandPermissionType = {}));
+  exports.APIApplicationCommandPermissionsConstant = {
+    Everyone: (guildId) => String(guildId),
+    AllChannels: (guildId) => String(BigInt(guildId) - 1n)
+  };
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
+var require_applicationCommands3 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.EntryPointCommandHandlerType = exports.InteractionContextType = exports.ApplicationIntegrationType = exports.ApplicationCommandType = undefined;
+  __exportStar(require_chatInput3(), exports);
+  __exportStar(require_permissions5(), exports);
+  var ApplicationCommandType;
+  (function(ApplicationCommandType2) {
+    ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
+    ApplicationCommandType2[ApplicationCommandType2["User"] = 2] = "User";
+    ApplicationCommandType2[ApplicationCommandType2["Message"] = 3] = "Message";
+    ApplicationCommandType2[ApplicationCommandType2["PrimaryEntryPoint"] = 4] = "PrimaryEntryPoint";
+  })(ApplicationCommandType || (exports.ApplicationCommandType = ApplicationCommandType = {}));
+  var ApplicationIntegrationType;
+  (function(ApplicationIntegrationType2) {
+    ApplicationIntegrationType2[ApplicationIntegrationType2["GuildInstall"] = 0] = "GuildInstall";
+    ApplicationIntegrationType2[ApplicationIntegrationType2["UserInstall"] = 1] = "UserInstall";
+  })(ApplicationIntegrationType || (exports.ApplicationIntegrationType = ApplicationIntegrationType = {}));
+  var InteractionContextType;
+  (function(InteractionContextType2) {
+    InteractionContextType2[InteractionContextType2["Guild"] = 0] = "Guild";
+    InteractionContextType2[InteractionContextType2["BotDM"] = 1] = "BotDM";
+    InteractionContextType2[InteractionContextType2["PrivateChannel"] = 2] = "PrivateChannel";
+  })(InteractionContextType || (exports.InteractionContextType = InteractionContextType = {}));
+  var EntryPointCommandHandlerType;
+  (function(EntryPointCommandHandlerType2) {
+    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["AppHandler"] = 1] = "AppHandler";
+    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["DiscordLaunchActivity"] = 2] = "DiscordLaunchActivity";
+  })(EntryPointCommandHandlerType || (exports.EntryPointCommandHandlerType = EntryPointCommandHandlerType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/responses.js
+var require_responses3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.InteractionResponseType = exports.InteractionType = undefined;
+  var InteractionType;
+  (function(InteractionType2) {
+    InteractionType2[InteractionType2["Ping"] = 1] = "Ping";
+    InteractionType2[InteractionType2["ApplicationCommand"] = 2] = "ApplicationCommand";
+    InteractionType2[InteractionType2["MessageComponent"] = 3] = "MessageComponent";
+    InteractionType2[InteractionType2["ApplicationCommandAutocomplete"] = 4] = "ApplicationCommandAutocomplete";
+    InteractionType2[InteractionType2["ModalSubmit"] = 5] = "ModalSubmit";
+  })(InteractionType || (exports.InteractionType = InteractionType = {}));
+  var InteractionResponseType;
+  (function(InteractionResponseType2) {
+    InteractionResponseType2[InteractionResponseType2["Pong"] = 1] = "Pong";
+    InteractionResponseType2[InteractionResponseType2["ChannelMessageWithSource"] = 4] = "ChannelMessageWithSource";
+    InteractionResponseType2[InteractionResponseType2["DeferredChannelMessageWithSource"] = 5] = "DeferredChannelMessageWithSource";
+    InteractionResponseType2[InteractionResponseType2["DeferredMessageUpdate"] = 6] = "DeferredMessageUpdate";
+    InteractionResponseType2[InteractionResponseType2["UpdateMessage"] = 7] = "UpdateMessage";
+    InteractionResponseType2[InteractionResponseType2["ApplicationCommandAutocompleteResult"] = 8] = "ApplicationCommandAutocompleteResult";
+    InteractionResponseType2[InteractionResponseType2["Modal"] = 9] = "Modal";
+    InteractionResponseType2[InteractionResponseType2["PremiumRequired"] = 10] = "PremiumRequired";
+    InteractionResponseType2[InteractionResponseType2["LaunchActivity"] = 12] = "LaunchActivity";
+  })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/interactions.js
+var require_interactions3 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_applicationCommands3(), exports);
+  __exportStar(require_responses3(), exports);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/invite.js
+var require_invite3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.InviteTargetType = exports.InviteType = exports.InviteFlags = undefined;
+  var InviteFlags;
+  (function(InviteFlags2) {
+    InviteFlags2[InviteFlags2["IsGuestInvite"] = 1] = "IsGuestInvite";
+  })(InviteFlags || (exports.InviteFlags = InviteFlags = {}));
+  var InviteType;
+  (function(InviteType2) {
+    InviteType2[InviteType2["Guild"] = 0] = "Guild";
+    InviteType2[InviteType2["GroupDM"] = 1] = "GroupDM";
+    InviteType2[InviteType2["Friend"] = 2] = "Friend";
+  })(InviteType || (exports.InviteType = InviteType = {}));
+  var InviteTargetType;
+  (function(InviteTargetType2) {
+    InviteTargetType2[InviteTargetType2["Stream"] = 1] = "Stream";
+    InviteTargetType2[InviteTargetType2["EmbeddedApplication"] = 2] = "EmbeddedApplication";
+  })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/message.js
+var require_message3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = undefined;
+  var MessageType;
+  (function(MessageType2) {
+    MessageType2[MessageType2["Default"] = 0] = "Default";
+    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
+    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
+    MessageType2[MessageType2["Call"] = 3] = "Call";
+    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
+    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
+    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
+    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
+    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
+    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
+    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
+    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
+    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
+    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
+    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
+    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
+    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
+    MessageType2[MessageType2["Reply"] = 19] = "Reply";
+    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
+    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
+    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
+    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
+    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
+    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
+    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
+    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
+    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
+    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
+    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
+    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
+    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
+    MessageType2[MessageType2["GuildIncidentAlertModeEnabled"] = 36] = "GuildIncidentAlertModeEnabled";
+    MessageType2[MessageType2["GuildIncidentAlertModeDisabled"] = 37] = "GuildIncidentAlertModeDisabled";
+    MessageType2[MessageType2["GuildIncidentReportRaid"] = 38] = "GuildIncidentReportRaid";
+    MessageType2[MessageType2["GuildIncidentReportFalseAlarm"] = 39] = "GuildIncidentReportFalseAlarm";
+    MessageType2[MessageType2["PurchaseNotification"] = 44] = "PurchaseNotification";
+    MessageType2[MessageType2["PollResult"] = 46] = "PollResult";
+  })(MessageType || (exports.MessageType = MessageType = {}));
+  var MessageActivityType;
+  (function(MessageActivityType2) {
+    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
+    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
+    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
+    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
+  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
+  var MessageReferenceType;
+  (function(MessageReferenceType2) {
+    MessageReferenceType2[MessageReferenceType2["Default"] = 0] = "Default";
+    MessageReferenceType2[MessageReferenceType2["Forward"] = 1] = "Forward";
+  })(MessageReferenceType || (exports.MessageReferenceType = MessageReferenceType = {}));
+  var MessageFlags;
+  (function(MessageFlags2) {
+    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
+    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
+    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
+    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
+    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
+    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
+    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
+    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
+    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
+    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
+    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
+    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
+    MessageFlags2[MessageFlags2["HasSnapshot"] = 16384] = "HasSnapshot";
+    MessageFlags2[MessageFlags2["IsComponentsV2"] = 32768] = "IsComponentsV2";
+  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
+  var EmbedType;
+  (function(EmbedType2) {
+    EmbedType2["Rich"] = "rich";
+    EmbedType2["Image"] = "image";
+    EmbedType2["Video"] = "video";
+    EmbedType2["GIFV"] = "gifv";
+    EmbedType2["Article"] = "article";
+    EmbedType2["Link"] = "link";
+    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
+    EmbedType2["PollResult"] = "poll_result";
+  })(EmbedType || (exports.EmbedType = EmbedType = {}));
+  var AttachmentFlags;
+  (function(AttachmentFlags2) {
+    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
+  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
+  var AllowedMentionsTypes;
+  (function(AllowedMentionsTypes2) {
+    AllowedMentionsTypes2["Everyone"] = "everyone";
+    AllowedMentionsTypes2["Role"] = "roles";
+    AllowedMentionsTypes2["User"] = "users";
+  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
+  var ComponentType;
+  (function(ComponentType2) {
+    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
+    ComponentType2[ComponentType2["Button"] = 2] = "Button";
+    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
+    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
+    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
+    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
+    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
+    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
+    ComponentType2[ComponentType2["Section"] = 9] = "Section";
+    ComponentType2[ComponentType2["TextDisplay"] = 10] = "TextDisplay";
+    ComponentType2[ComponentType2["Thumbnail"] = 11] = "Thumbnail";
+    ComponentType2[ComponentType2["MediaGallery"] = 12] = "MediaGallery";
+    ComponentType2[ComponentType2["File"] = 13] = "File";
+    ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
+    ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
+    ComponentType2[ComponentType2["Container"] = 17] = "Container";
+    ComponentType2[ComponentType2["Label"] = 18] = "Label";
+    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
+  })(ComponentType || (exports.ComponentType = ComponentType = {}));
+  var ButtonStyle;
+  (function(ButtonStyle2) {
+    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
+    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
+    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
+    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
+    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
+    ButtonStyle2[ButtonStyle2["Premium"] = 6] = "Premium";
+  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
+  var TextInputStyle;
+  (function(TextInputStyle2) {
+    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
+    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
+  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
+  var SelectMenuDefaultValueType;
+  (function(SelectMenuDefaultValueType2) {
+    SelectMenuDefaultValueType2["Channel"] = "channel";
+    SelectMenuDefaultValueType2["Role"] = "role";
+    SelectMenuDefaultValueType2["User"] = "user";
+  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
+  var UnfurledMediaItemLoadingState;
+  (function(UnfurledMediaItemLoadingState2) {
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Unknown"] = 0] = "Unknown";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Loading"] = 1] = "Loading";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedSuccess"] = 2] = "LoadedSuccess";
+    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedNotFound"] = 3] = "LoadedNotFound";
+  })(UnfurledMediaItemLoadingState || (exports.UnfurledMediaItemLoadingState = UnfurledMediaItemLoadingState = {}));
+  var SeparatorSpacingSize;
+  (function(SeparatorSpacingSize2) {
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Small"] = 1] = "Small";
+    SeparatorSpacingSize2[SeparatorSpacingSize2["Large"] = 2] = "Large";
+  })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/monetization.js
+var require_monetization5 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
+  var EntitlementType;
+  (function(EntitlementType2) {
+    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
+    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
+    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
+    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
+    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
+    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
+    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
+    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
+  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
+  var SKUFlags;
+  (function(SKUFlags2) {
+    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
+    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
+    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
+  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
+  var SKUType;
+  (function(SKUType2) {
+    SKUType2[SKUType2["Durable"] = 2] = "Durable";
+    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
+    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
+    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
+  })(SKUType || (exports.SKUType = SKUType = {}));
+  var SubscriptionStatus;
+  (function(SubscriptionStatus2) {
+    SubscriptionStatus2[SubscriptionStatus2["Active"] = 0] = "Active";
+    SubscriptionStatus2[SubscriptionStatus2["Ending"] = 1] = "Ending";
+    SubscriptionStatus2[SubscriptionStatus2["Inactive"] = 2] = "Inactive";
+  })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/oauth2.js
+var require_oauth23 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.OAuth2Scopes = undefined;
+  var OAuth2Scopes;
+  (function(OAuth2Scopes2) {
+    OAuth2Scopes2["Bot"] = "bot";
+    OAuth2Scopes2["Connections"] = "connections";
+    OAuth2Scopes2["DMChannelsRead"] = "dm_channels.read";
+    OAuth2Scopes2["Email"] = "email";
+    OAuth2Scopes2["Identify"] = "identify";
+    OAuth2Scopes2["Guilds"] = "guilds";
+    OAuth2Scopes2["GuildsJoin"] = "guilds.join";
+    OAuth2Scopes2["GuildsMembersRead"] = "guilds.members.read";
+    OAuth2Scopes2["GroupDMJoins"] = "gdm.join";
+    OAuth2Scopes2["MessagesRead"] = "messages.read";
+    OAuth2Scopes2["RoleConnectionsWrite"] = "role_connections.write";
+    OAuth2Scopes2["RPC"] = "rpc";
+    OAuth2Scopes2["RPCActivitiesWrite"] = "rpc.activities.write";
+    OAuth2Scopes2["RPCVoiceRead"] = "rpc.voice.read";
+    OAuth2Scopes2["RPCVoiceWrite"] = "rpc.voice.write";
+    OAuth2Scopes2["RPCNotificationsRead"] = "rpc.notifications.read";
+    OAuth2Scopes2["WebhookIncoming"] = "webhook.incoming";
+    OAuth2Scopes2["Voice"] = "voice";
+    OAuth2Scopes2["ApplicationsBuildsUpload"] = "applications.builds.upload";
+    OAuth2Scopes2["ApplicationsBuildsRead"] = "applications.builds.read";
+    OAuth2Scopes2["ApplicationsStoreUpdate"] = "applications.store.update";
+    OAuth2Scopes2["ApplicationsEntitlements"] = "applications.entitlements";
+    OAuth2Scopes2["RelationshipsRead"] = "relationships.read";
+    OAuth2Scopes2["ActivitiesRead"] = "activities.read";
+    OAuth2Scopes2["ActivitiesWrite"] = "activities.write";
+    OAuth2Scopes2["ApplicationsCommands"] = "applications.commands";
+    OAuth2Scopes2["ApplicationsCommandsUpdate"] = "applications.commands.update";
+    OAuth2Scopes2["ApplicationCommandsPermissionsUpdate"] = "applications.commands.permissions.update";
+  })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/permissions.js
+var require_permissions6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RoleFlags = undefined;
+  var RoleFlags;
+  (function(RoleFlags2) {
+    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
+  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/poll.js
+var require_poll3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.PollLayoutType = undefined;
+  var PollLayoutType;
+  (function(PollLayoutType2) {
+    PollLayoutType2[PollLayoutType2["Default"] = 1] = "Default";
+  })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/stageInstance.js
+var require_stageInstance3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.StageInstancePrivacyLevel = undefined;
+  var StageInstancePrivacyLevel;
+  (function(StageInstancePrivacyLevel2) {
+    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["Public"] = 1] = "Public";
+    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
+  })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/sticker.js
+var require_sticker3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.StickerFormatType = exports.StickerType = undefined;
+  var StickerType;
+  (function(StickerType2) {
+    StickerType2[StickerType2["Standard"] = 1] = "Standard";
+    StickerType2[StickerType2["Guild"] = 2] = "Guild";
+  })(StickerType || (exports.StickerType = StickerType = {}));
+  var StickerFormatType;
+  (function(StickerFormatType2) {
+    StickerFormatType2[StickerFormatType2["PNG"] = 1] = "PNG";
+    StickerFormatType2[StickerFormatType2["APNG"] = 2] = "APNG";
+    StickerFormatType2[StickerFormatType2["Lottie"] = 3] = "Lottie";
+    StickerFormatType2[StickerFormatType2["GIF"] = 4] = "GIF";
+  })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/teams.js
+var require_teams3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
+  var TeamMemberMembershipState;
+  (function(TeamMemberMembershipState2) {
+    TeamMemberMembershipState2[TeamMemberMembershipState2["Invited"] = 1] = "Invited";
+    TeamMemberMembershipState2[TeamMemberMembershipState2["Accepted"] = 2] = "Accepted";
+  })(TeamMemberMembershipState || (exports.TeamMemberMembershipState = TeamMemberMembershipState = {}));
+  var TeamMemberRole;
+  (function(TeamMemberRole2) {
+    TeamMemberRole2["Admin"] = "admin";
+    TeamMemberRole2["Developer"] = "developer";
+    TeamMemberRole2["ReadOnly"] = "read_only";
+  })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/user.js
+var require_user3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.NameplatePalette = exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
+  var UserFlags;
+  (function(UserFlags2) {
+    UserFlags2[UserFlags2["Staff"] = 1] = "Staff";
+    UserFlags2[UserFlags2["Partner"] = 2] = "Partner";
+    UserFlags2[UserFlags2["Hypesquad"] = 4] = "Hypesquad";
+    UserFlags2[UserFlags2["BugHunterLevel1"] = 8] = "BugHunterLevel1";
+    UserFlags2[UserFlags2["MFASMS"] = 16] = "MFASMS";
+    UserFlags2[UserFlags2["PremiumPromoDismissed"] = 32] = "PremiumPromoDismissed";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse1"] = 64] = "HypeSquadOnlineHouse1";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse2"] = 128] = "HypeSquadOnlineHouse2";
+    UserFlags2[UserFlags2["HypeSquadOnlineHouse3"] = 256] = "HypeSquadOnlineHouse3";
+    UserFlags2[UserFlags2["PremiumEarlySupporter"] = 512] = "PremiumEarlySupporter";
+    UserFlags2[UserFlags2["TeamPseudoUser"] = 1024] = "TeamPseudoUser";
+    UserFlags2[UserFlags2["HasUnreadUrgentMessages"] = 8192] = "HasUnreadUrgentMessages";
+    UserFlags2[UserFlags2["BugHunterLevel2"] = 16384] = "BugHunterLevel2";
+    UserFlags2[UserFlags2["VerifiedBot"] = 65536] = "VerifiedBot";
+    UserFlags2[UserFlags2["VerifiedDeveloper"] = 131072] = "VerifiedDeveloper";
+    UserFlags2[UserFlags2["CertifiedModerator"] = 262144] = "CertifiedModerator";
+    UserFlags2[UserFlags2["BotHTTPInteractions"] = 524288] = "BotHTTPInteractions";
+    UserFlags2[UserFlags2["Spammer"] = 1048576] = "Spammer";
+    UserFlags2[UserFlags2["DisablePremium"] = 2097152] = "DisablePremium";
+    UserFlags2[UserFlags2["ActiveDeveloper"] = 4194304] = "ActiveDeveloper";
+    UserFlags2[UserFlags2["Quarantined"] = 17592186044416] = "Quarantined";
+    UserFlags2[UserFlags2["Collaborator"] = 1125899906842624] = "Collaborator";
+    UserFlags2[UserFlags2["RestrictedCollaborator"] = 2251799813685248] = "RestrictedCollaborator";
+  })(UserFlags || (exports.UserFlags = UserFlags = {}));
+  var UserPremiumType;
+  (function(UserPremiumType2) {
+    UserPremiumType2[UserPremiumType2["None"] = 0] = "None";
+    UserPremiumType2[UserPremiumType2["NitroClassic"] = 1] = "NitroClassic";
+    UserPremiumType2[UserPremiumType2["Nitro"] = 2] = "Nitro";
+    UserPremiumType2[UserPremiumType2["NitroBasic"] = 3] = "NitroBasic";
+  })(UserPremiumType || (exports.UserPremiumType = UserPremiumType = {}));
+  var ConnectionService;
+  (function(ConnectionService2) {
+    ConnectionService2["AmazonMusic"] = "amazon-music";
+    ConnectionService2["BattleNet"] = "battlenet";
+    ConnectionService2["Bluesky"] = "bluesky";
+    ConnectionService2["BungieNet"] = "bungie";
+    ConnectionService2["Crunchyroll"] = "crunchyroll";
+    ConnectionService2["Domain"] = "domain";
+    ConnectionService2["eBay"] = "ebay";
+    ConnectionService2["EpicGames"] = "epicgames";
+    ConnectionService2["Facebook"] = "facebook";
+    ConnectionService2["GitHub"] = "github";
+    ConnectionService2["Instagram"] = "instagram";
+    ConnectionService2["LeagueOfLegends"] = "leagueoflegends";
+    ConnectionService2["Mastodon"] = "mastodon";
+    ConnectionService2["PayPal"] = "paypal";
+    ConnectionService2["PlayStationNetwork"] = "playstation";
+    ConnectionService2["Reddit"] = "reddit";
+    ConnectionService2["RiotGames"] = "riotgames";
+    ConnectionService2["Roblox"] = "roblox";
+    ConnectionService2["Spotify"] = "spotify";
+    ConnectionService2["Skype"] = "skype";
+    ConnectionService2["Steam"] = "steam";
+    ConnectionService2["TikTok"] = "tiktok";
+    ConnectionService2["Twitch"] = "twitch";
+    ConnectionService2["X"] = "twitter";
+    ConnectionService2["Twitter"] = "twitter";
+    ConnectionService2["Xbox"] = "xbox";
+    ConnectionService2["YouTube"] = "youtube";
+  })(ConnectionService || (exports.ConnectionService = ConnectionService = {}));
+  var ConnectionVisibility;
+  (function(ConnectionVisibility2) {
+    ConnectionVisibility2[ConnectionVisibility2["None"] = 0] = "None";
+    ConnectionVisibility2[ConnectionVisibility2["Everyone"] = 1] = "Everyone";
+  })(ConnectionVisibility || (exports.ConnectionVisibility = ConnectionVisibility = {}));
+  var NameplatePalette;
+  (function(NameplatePalette2) {
+    NameplatePalette2["Berry"] = "berry";
+    NameplatePalette2["BubbleGum"] = "bubble_gum";
+    NameplatePalette2["Clover"] = "clover";
+    NameplatePalette2["Cobalt"] = "cobalt";
+    NameplatePalette2["Crimson"] = "crimson";
+    NameplatePalette2["Forest"] = "forest";
+    NameplatePalette2["Lemon"] = "lemon";
+    NameplatePalette2["Sky"] = "sky";
+    NameplatePalette2["Teal"] = "teal";
+    NameplatePalette2["Violet"] = "violet";
+    NameplatePalette2["White"] = "white";
+  })(NameplatePalette || (exports.NameplatePalette = NameplatePalette = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/webhook.js
+var require_webhook3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.WebhookType = exports.ApplicationWebhookEventType = exports.ApplicationWebhookType = undefined;
+  var ApplicationWebhookType;
+  (function(ApplicationWebhookType2) {
+    ApplicationWebhookType2[ApplicationWebhookType2["Ping"] = 0] = "Ping";
+    ApplicationWebhookType2[ApplicationWebhookType2["Event"] = 1] = "Event";
+  })(ApplicationWebhookType || (exports.ApplicationWebhookType = ApplicationWebhookType = {}));
+  var ApplicationWebhookEventType;
+  (function(ApplicationWebhookEventType2) {
+    ApplicationWebhookEventType2["ApplicationAuthorized"] = "APPLICATION_AUTHORIZED";
+    ApplicationWebhookEventType2["ApplicationDeauthorized"] = "APPLICATION_DEAUTHORIZED";
+    ApplicationWebhookEventType2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    ApplicationWebhookEventType2["QuestUserEnrollment"] = "QUEST_USER_ENROLLMENT";
+  })(ApplicationWebhookEventType || (exports.ApplicationWebhookEventType = ApplicationWebhookEventType = {}));
+  var WebhookType;
+  (function(WebhookType2) {
+    WebhookType2[WebhookType2["Incoming"] = 1] = "Incoming";
+    WebhookType2[WebhookType2["ChannelFollower"] = 2] = "ChannelFollower";
+    WebhookType2[WebhookType2["Application"] = 3] = "Application";
+  })(WebhookType || (exports.WebhookType = WebhookType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/index.js
+var require_v1014 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  __exportStar(require_common7(), exports);
+  __exportStar(require_application3(), exports);
+  __exportStar(require_auditLog3(), exports);
+  __exportStar(require_autoModeration3(), exports);
+  __exportStar(require_channel5(), exports);
+  __exportStar(require_gateway3(), exports);
+  __exportStar(require_guild3(), exports);
+  __exportStar(require_guildScheduledEvent3(), exports);
+  __exportStar(require_interactions3(), exports);
+  __exportStar(require_invite3(), exports);
+  __exportStar(require_message3(), exports);
+  __exportStar(require_monetization5(), exports);
+  __exportStar(require_oauth23(), exports);
+  __exportStar(require_permissions6(), exports);
+  __exportStar(require_poll3(), exports);
+  __exportStar(require_stageInstance3(), exports);
+  __exportStar(require_sticker3(), exports);
+  __exportStar(require_teams3(), exports);
+  __exportStar(require_user3(), exports);
+  __exportStar(require_webhook3(), exports);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/utils/internals.js
+var require_internals3 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.urlSafeCharacters = undefined;
+  var pattern = /^[\d%A-Za-z-_]+$/g;
+  exports.urlSafeCharacters = {
+    test(input) {
+      const result = pattern.test(input);
+      pattern.lastIndex = 0;
+      return result;
+    }
+  };
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/common.js
+var require_common8 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.Locale = exports.RESTJSONErrorCodes = undefined;
+  var RESTJSONErrorCodes;
+  (function(RESTJSONErrorCodes2) {
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GeneralError"] = 0] = "GeneralError";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAccount"] = 10001] = "UnknownAccount";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplication"] = 10002] = "UnknownApplication";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownChannel"] = 10003] = "UnknownChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuild"] = 10004] = "UnknownGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownIntegration"] = 10005] = "UnknownIntegration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInvite"] = 10006] = "UnknownInvite";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMember"] = 10007] = "UnknownMember";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMessage"] = 10008] = "UnknownMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPermissionOverwrite"] = 10009] = "UnknownPermissionOverwrite";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownProvider"] = 10010] = "UnknownProvider";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRole"] = 10011] = "UnknownRole";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownToken"] = 10012] = "UnknownToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownUser"] = 10013] = "UnknownUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEmoji"] = 10014] = "UnknownEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhook"] = 10015] = "UnknownWebhook";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhookService"] = 10016] = "UnknownWebhookService";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSession"] = 10020] = "UnknownSession";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAsset"] = 10021] = "UnknownAsset";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBan"] = 10026] = "UnknownBan";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSKU"] = 10027] = "UnknownSKU";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreListing"] = 10028] = "UnknownStoreListing";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEntitlement"] = 10029] = "UnknownEntitlement";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBuild"] = 10030] = "UnknownBuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownLobby"] = 10031] = "UnknownLobby";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBranch"] = 10032] = "UnknownBranch";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreDirectoryLayout"] = 10033] = "UnknownStoreDirectoryLayout";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRedistributable"] = 10036] = "UnknownRedistributable";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGiftCode"] = 10038] = "UnknownGiftCode";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStream"] = 10049] = "UnknownStream";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPremiumServerSubscribeCooldown"] = 10050] = "UnknownPremiumServerSubscribeCooldown";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildTemplate"] = 10057] = "UnknownGuildTemplate";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownDiscoverableServerCategory"] = 10059] = "UnknownDiscoverableServerCategory";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSticker"] = 10060] = "UnknownSticker";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStickerPack"] = 10061] = "UnknownStickerPack";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInteraction"] = 10062] = "UnknownInteraction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommand"] = 10063] = "UnknownApplicationCommand";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownVoiceState"] = 10065] = "UnknownVoiceState";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommandPermissions"] = 10066] = "UnknownApplicationCommandPermissions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStageInstance"] = 10067] = "UnknownStageInstance";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildMemberVerificationForm"] = 10068] = "UnknownGuildMemberVerificationForm";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildWelcomeScreen"] = 10069] = "UnknownGuildWelcomeScreen";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEvent"] = 10070] = "UnknownGuildScheduledEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEventUser"] = 10071] = "UnknownGuildScheduledEventUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownTag"] = 10087] = "UnknownTag";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSound"] = 10097] = "UnknownSound";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BotsCannotUseThisEndpoint"] = 20001] = "BotsCannotUseThisEndpoint";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyBotsCanUseThisEndpoint"] = 20002] = "OnlyBotsCanUseThisEndpoint";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ExplicitContentCannotBeSentToTheDesiredRecipient"] = 20009] = "ExplicitContentCannotBeSentToTheDesiredRecipient";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NotAuthorizedToPerformThisActionOnThisApplication"] = 20012] = "NotAuthorizedToPerformThisActionOnThisApplication";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ActionCannotBePerformedDueToSlowmodeRateLimit"] = 20016] = "ActionCannotBePerformedDueToSlowmodeRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheMazeIsntMeantForYou"] = 20017] = "TheMazeIsntMeantForYou";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyTheOwnerOfThisAccountCanPerformThisAction"] = 20018] = "OnlyTheOwnerOfThisAccountCanPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnnouncementEditLimitExceeded"] = 20022] = "AnnouncementEditLimitExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnderMinimumAge"] = 20024] = "UnderMinimumAge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelSendRateLimit"] = 20028] = "ChannelSendRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerSendRateLimit"] = 20029] = "ServerSendRateLimit";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords"] = 20031] = "StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildPremiumSubscriptionLevelTooLow"] = 20035] = "GuildPremiumSubscriptionLevelTooLow";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildsReached"] = 30001] = "MaximumNumberOfGuildsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfFriendsReached"] = 30002] = "MaximumNumberOfFriendsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinsReachedForTheChannel"] = 30003] = "MaximumNumberOfPinsReachedForTheChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfRecipientsReached"] = 30004] = "MaximumNumberOfRecipientsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildRolesReached"] = 30005] = "MaximumNumberOfGuildRolesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksReached"] = 30007] = "MaximumNumberOfWebhooksReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEmojisReached"] = 30008] = "MaximumNumberOfEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfReactionsReached"] = 30010] = "MaximumNumberOfReactionsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGroupDMsReached"] = 30011] = "MaximumNumberOfGroupDMsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildChannelsReached"] = 30013] = "MaximumNumberOfGuildChannelsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAttachmentsInAMessageReached"] = 30015] = "MaximumNumberOfAttachmentsInAMessageReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfInvitesReached"] = 30016] = "MaximumNumberOfInvitesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAnimatedEmojisReached"] = 30018] = "MaximumNumberOfAnimatedEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerMembersReached"] = 30019] = "MaximumNumberOfServerMembersReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerCategoriesReached"] = 30030] = "MaximumNumberOfServerCategoriesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildAlreadyHasTemplate"] = 30031] = "GuildAlreadyHasTemplate";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfApplicationCommandsReached"] = 30032] = "MaximumNumberOfApplicationCommandsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumThreadParticipantsReached"] = 30033] = "MaximumThreadParticipantsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumDailyApplicationCommandCreatesReached"] = 30034] = "MaximumDailyApplicationCommandCreatesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfNonGuildMemberBansHasBeenExceeded"] = 30035] = "MaximumNumberOfNonGuildMemberBansHasBeenExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfBanFetchesHasBeenReached"] = 30037] = "MaximumNumberOfBanFetchesHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfUncompletedGuildScheduledEventsReached"] = 30038] = "MaximumNumberOfUncompletedGuildScheduledEventsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfStickersReached"] = 30039] = "MaximumNumberOfStickersReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPruneRequestsHasBeenReached"] = 30040] = "MaximumNumberOfPruneRequestsHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached"] = 30042] = "MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfSoundboardSoundsReached"] = 30045] = "MaximumNumberOfSoundboardSoundsReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEditsToMessagesOlderThanOneHourReached"] = 30046] = "MaximumNumberOfEditsToMessagesOlderThanOneHourReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinnedThreadsInForumHasBeenReached"] = 30047] = "MaximumNumberOfPinnedThreadsInForumHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfTagsInForumHasBeenReached"] = 30048] = "MaximumNumberOfTagsInForumHasBeenReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BitrateIsTooHighForChannelOfThisType"] = 30052] = "BitrateIsTooHighForChannelOfThisType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPremiumEmojisReached"] = 30056] = "MaximumNumberOfPremiumEmojisReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksPerGuildReached"] = 30058] = "MaximumNumberOfWebhooksPerGuildReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfChannelPermissionOverwritesReached"] = 30060] = "MaximumNumberOfChannelPermissionOverwritesReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheChannelsForThisGuildAreTooLarge"] = 30061] = "TheChannelsForThisGuildAreTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["Unauthorized"] = 40001] = "Unauthorized";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VerifyYourAccount"] = 40002] = "VerifyYourAccount";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OpeningDirectMessagesTooFast"] = 40003] = "OpeningDirectMessagesTooFast";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SendMessagesHasBeenTemporarilyDisabled"] = 40004] = "SendMessagesHasBeenTemporarilyDisabled";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestEntityTooLarge"] = 40005] = "RequestEntityTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FeatureTemporarilyDisabledServerSide"] = 40006] = "FeatureTemporarilyDisabledServerSide";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserBannedFromThisGuild"] = 40007] = "UserBannedFromThisGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ConnectionHasBeenRevoked"] = 40012] = "ConnectionHasBeenRevoked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyConsumableSKUsCanBeConsumed"] = 40018] = "OnlyConsumableSKUsCanBeConsumed";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCanOnlyDeleteSandboxEntitlements"] = 40019] = "YouCanOnlyDeleteSandboxEntitlements";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TargetUserIsNotConnectedToVoice"] = 40032] = "TargetUserIsNotConnectedToVoice";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisMessageWasAlreadyCrossposted"] = 40033] = "ThisMessageWasAlreadyCrossposted";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationCommandWithThatNameAlreadyExists"] = 40041] = "ApplicationCommandWithThatNameAlreadyExists";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationInteractionFailedToSend"] = 40043] = "ApplicationInteractionFailedToSend";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAMessageInAForumChannel"] = 40058] = "CannotSendAMessageInAForumChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InteractionHasAlreadyBeenAcknowledged"] = 40060] = "InteractionHasAlreadyBeenAcknowledged";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagNamesMustBeUnique"] = 40061] = "TagNamesMustBeUnique";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServiceResourceIsBeingRateLimited"] = 40062] = "ServiceResourceIsBeingRateLimited";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThereAreNoTagsAvailableThatCanBeSetByNonModerators"] = 40066] = "ThereAreNoTagsAvailableThatCanBeSetByNonModerators";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagRequiredToCreateAForumPostInThisChannel"] = 40067] = "TagRequiredToCreateAForumPostInThisChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnEntitlementHasAlreadyBeenGrantedForThisResource"] = 40074] = "AnEntitlementHasAlreadyBeenGrantedForThisResource";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages"] = 40094] = "ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CloudflareIsBlockingYourRequest"] = 40333] = "CloudflareIsBlockingYourRequest";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingAccess"] = 50001] = "MissingAccess";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAccountType"] = 50002] = "InvalidAccountType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnDMChannel"] = 50003] = "CannotExecuteActionOnDMChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildWidgetDisabled"] = 50004] = "GuildWidgetDisabled";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditMessageAuthoredByAnotherUser"] = 50005] = "CannotEditMessageAuthoredByAnotherUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAnEmptyMessage"] = 50006] = "CannotSendAnEmptyMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesToThisUser"] = 50007] = "CannotSendMessagesToThisUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesInNonTextChannel"] = 50008] = "CannotSendMessagesInNonTextChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelVerificationLevelTooHighForYouToGainAccess"] = 50009] = "ChannelVerificationLevelTooHighForYouToGainAccess";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationDoesNotHaveBot"] = 50010] = "OAuth2ApplicationDoesNotHaveBot";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationLimitReached"] = 50011] = "OAuth2ApplicationLimitReached";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2State"] = 50012] = "InvalidOAuth2State";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingPermissions"] = 50013] = "MissingPermissions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidToken"] = 50014] = "InvalidToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoteWasTooLong"] = 50015] = "NoteWasTooLong";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedTooFewOrTooManyMessagesToDelete"] = 50016] = "ProvidedTooFewOrTooManyMessagesToDelete";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMFALevel"] = 50017] = "InvalidMFALevel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageCanOnlyBePinnedInTheChannelItWasSentIn"] = 50019] = "MessageCanOnlyBePinnedInTheChannelItWasSentIn";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteCodeInvalidOrTaken"] = 50020] = "InviteCodeInvalidOrTaken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnSystemMessage"] = 50021] = "CannotExecuteActionOnSystemMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnThisChannelType"] = 50024] = "CannotExecuteActionOnThisChannelType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2AccessToken"] = 50025] = "InvalidOAuth2AccessToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingRequiredOAuth2Scope"] = 50026] = "MissingRequiredOAuth2Scope";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidWebhookToken"] = 50027] = "InvalidWebhookToken";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRole"] = 50028] = "InvalidRole";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRecipients"] = 50033] = "InvalidRecipients";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OneOfTheMessagesProvidedWasTooOldForBulkDelete"] = 50034] = "OneOfTheMessagesProvidedWasTooOldForBulkDelete";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFormBodyOrContentType"] = 50035] = "InvalidFormBodyOrContentType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteAcceptedToGuildWithoutTheBotBeingIn"] = 50036] = "InviteAcceptedToGuildWithoutTheBotBeingIn";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActivityAction"] = 50039] = "InvalidActivityAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAPIVersion"] = 50041] = "InvalidAPIVersion";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FileUploadedExceedsMaximumSize"] = 50045] = "FileUploadedExceedsMaximumSize";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFileUploaded"] = 50046] = "InvalidFileUploaded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSelfRedeemThisGift"] = 50054] = "CannotSelfRedeemThisGift";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidGuild"] = 50055] = "InvalidGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidSKU"] = 50057] = "InvalidSKU";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRequestOrigin"] = 50067] = "InvalidRequestOrigin";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMessageType"] = 50068] = "InvalidMessageType";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PaymentSourceRequiredToRedeemGift"] = 50070] = "PaymentSourceRequiredToRedeemGift";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotModifyASystemWebhook"] = 50073] = "CannotModifyASystemWebhook";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteChannelRequiredForCommunityGuilds"] = 50074] = "CannotDeleteChannelRequiredForCommunityGuilds";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditStickersWithinMessage"] = 50080] = "CannotEditStickersWithinMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidStickerSent"] = 50081] = "InvalidStickerSent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActionOnArchivedThread"] = 50083] = "InvalidActionOnArchivedThread";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidThreadNotificationSettings"] = 50084] = "InvalidThreadNotificationSettings";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ParameterEarlierThanCreation"] = 50085] = "ParameterEarlierThanCreation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CommunityServerChannelsMustBeTextChannels"] = 50086] = "CommunityServerChannelsMustBeTextChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor"] = 50091] = "TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNotAvailableInYourLocation"] = 50095] = "ServerNotAvailableInYourLocation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMonetizationEnabledToPerformThisAction"] = 50097] = "ServerNeedsMonetizationEnabledToPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMoreBoostsToPerformThisAction"] = 50101] = "ServerNeedsMoreBoostsToPerformThisAction";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestBodyContainsInvalidJSON"] = 50109] = "RequestBodyContainsInvalidJSON";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileIsInvalid"] = 50110] = "ProvidedFileIsInvalid";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileTypeIsInvalid"] = 50123] = "ProvidedFileTypeIsInvalid";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDurationExceedsMaximumLength"] = 50124] = "ProvidedFileDurationExceedsMaximumLength";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnerCannotBePendingMember"] = 50131] = "OwnerCannotBePendingMember";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnershipCannotBeMovedToABotUser"] = 50132] = "OwnershipCannotBeMovedToABotUser";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToResizeAssetBelowTheMinimumSize"] = 50138] = "FailedToResizeAssetBelowTheMinimumSize";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji"] = 50144] = "CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotConvertBetweenPremiumEmojiAndNormalEmoji"] = 50145] = "CannotConvertBetweenPremiumEmojiAndNormalEmoji";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedFileNotFound"] = 50146] = "UploadedFileNotFound";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SpecifiedEmojiIsInvalid"] = 50151] = "SpecifiedEmojiIsInvalid";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesDoNotSupportAdditionalContent"] = 50159] = "VoiceMessagesDoNotSupportAdditionalContent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveASingleAudioAttachment"] = 50160] = "VoiceMessagesMustHaveASingleAudioAttachment";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveSupportingMetadata"] = 50161] = "VoiceMessagesMustHaveSupportingMetadata";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesCannotBeEdited"] = 50162] = "VoiceMessagesCannotBeEdited";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteGuildSubscriptionIntegration"] = 50163] = "CannotDeleteGuildSubscriptionIntegration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCannotSendVoiceMessagesInThisChannel"] = 50173] = "YouCannotSendVoiceMessagesInThisChannel";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheUserAccountMustFirstBeVerified"] = 50178] = "TheUserAccountMustFirstBeVerified";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDoesNotHaveAValidDuration"] = 50192] = "ProvidedFileDoesNotHaveAValidDuration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouDoNotHavePermissionToSendThisSticker"] = 50600] = "YouDoNotHavePermissionToSendThisSticker";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TwoFactorAuthenticationIsRequired"] = 60003] = "TwoFactorAuthenticationIsRequired";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoUsersWithDiscordTagExist"] = 80004] = "NoUsersWithDiscordTagExist";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ReactionWasBlocked"] = 90001] = "ReactionWasBlocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserCannotUseBurstReactions"] = 90002] = "UserCannotUseBurstReactions";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationNotYetAvailable"] = 110001] = "ApplicationNotYetAvailable";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["APIResourceOverloaded"] = 130000] = "APIResourceOverloaded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheStageIsAlreadyOpen"] = 150006] = "TheStageIsAlreadyOpen";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotReplyWithoutPermissionToReadMessageHistory"] = 160002] = "CannotReplyWithoutPermissionToReadMessageHistory";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadAlreadyCreatedForMessage"] = 160004] = "ThreadAlreadyCreatedForMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadLocked"] = 160005] = "ThreadLocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveThreads"] = 160006] = "MaximumActiveThreads";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveAnnouncementThreads"] = 160007] = "MaximumActiveAnnouncementThreads";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidJSONForUploadedLottieFile"] = 170001] = "InvalidJSONForUploadedLottieFile";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedLottiesCannotContainRasterizedImages"] = 170002] = "UploadedLottiesCannotContainRasterizedImages";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerMaximumFramerateExceeded"] = 170003] = "StickerMaximumFramerateExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFrameCountExceedsMaximumOf1000Frames"] = 170004] = "StickerFrameCountExceedsMaximumOf1000Frames";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["LottieAnimationMaximumDimensionsExceeded"] = 170005] = "LottieAnimationMaximumDimensionsExceeded";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFramerateIsTooSmallOrTooLarge"] = 170006] = "StickerFramerateIsTooSmallOrTooLarge";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerAnimationDurationExceedsMaximumOf5Seconds"] = 170007] = "StickerAnimationDurationExceedsMaximumOf5Seconds";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateAFinishedEvent"] = 180000] = "CannotUpdateAFinishedEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToCreateStageNeededForStageEvent"] = 180002] = "FailedToCreateStageNeededForStageEvent";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageWasBlockedByAutomaticModeration"] = 200000] = "MessageWasBlockedByAutomaticModeration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TitleWasBlockedByAutomaticModeration"] = 200001] = "TitleWasBlockedByAutomaticModeration";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId"] = 220001] = "WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId"] = 220002] = "WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksCanOnlyCreateThreadsInForumChannels"] = 220003] = "WebhooksCanOnlyCreateThreadsInForumChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhookServicesCannotBeUsedInForumChannels"] = 220004] = "WebhookServicesCannotBeUsedInForumChannels";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageBlockedByHarmfulLinksFilter"] = 240000] = "MessageBlockedByHarmfulLinksFilter";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEnableOnboardingRequirementsAreNotMet"] = 350000] = "CannotEnableOnboardingRequirementsAreNotMet";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateOnboardingWhileBelowRequirements"] = 350001] = "CannotUpdateOnboardingWhileBelowRequirements";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AccessToFileUploadsHasBeenLimitedForThisGuild"] = 400001] = "AccessToFileUploadsHasBeenLimitedForThisGuild";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToBanUsers"] = 500000] = "FailedToBanUsers";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollVotingBlocked"] = 520000] = "PollVotingBlocked";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollExpired"] = 520001] = "PollExpired";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidChannelTypeForPollCreation"] = 520002] = "InvalidChannelTypeForPollCreation";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditAPollMessage"] = 520003] = "CannotEditAPollMessage";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUseAnEmojiIncludedWithThePoll"] = 520004] = "CannotUseAnEmojiIncludedWithThePoll";
+    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExpireANonPollMessage"] = 520006] = "CannotExpireANonPollMessage";
+  })(RESTJSONErrorCodes || (exports.RESTJSONErrorCodes = RESTJSONErrorCodes = {}));
+  var Locale;
+  (function(Locale2) {
+    Locale2["Indonesian"] = "id";
+    Locale2["EnglishUS"] = "en-US";
+    Locale2["EnglishGB"] = "en-GB";
+    Locale2["Bulgarian"] = "bg";
+    Locale2["ChineseCN"] = "zh-CN";
+    Locale2["ChineseTW"] = "zh-TW";
+    Locale2["Croatian"] = "hr";
+    Locale2["Czech"] = "cs";
+    Locale2["Danish"] = "da";
+    Locale2["Dutch"] = "nl";
+    Locale2["Finnish"] = "fi";
+    Locale2["French"] = "fr";
+    Locale2["German"] = "de";
+    Locale2["Greek"] = "el";
+    Locale2["Hindi"] = "hi";
+    Locale2["Hungarian"] = "hu";
+    Locale2["Italian"] = "it";
+    Locale2["Japanese"] = "ja";
+    Locale2["Korean"] = "ko";
+    Locale2["Lithuanian"] = "lt";
+    Locale2["Norwegian"] = "no";
+    Locale2["Polish"] = "pl";
+    Locale2["PortugueseBR"] = "pt-BR";
+    Locale2["Romanian"] = "ro";
+    Locale2["Russian"] = "ru";
+    Locale2["SpanishES"] = "es-ES";
+    Locale2["SpanishLATAM"] = "es-419";
+    Locale2["Swedish"] = "sv-SE";
+    Locale2["Thai"] = "th";
+    Locale2["Turkish"] = "tr";
+    Locale2["Ukrainian"] = "uk";
+    Locale2["Vietnamese"] = "vi";
+  })(Locale || (exports.Locale = Locale = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/channel.js
+var require_channel6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.ReactionType = undefined;
+  var ReactionType;
+  (function(ReactionType2) {
+    ReactionType2[ReactionType2["Normal"] = 0] = "Normal";
+    ReactionType2[ReactionType2["Super"] = 1] = "Super";
+  })(ReactionType || (exports.ReactionType = ReactionType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/monetization.js
+var require_monetization6 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.EntitlementOwnerType = undefined;
+  var EntitlementOwnerType;
+  (function(EntitlementOwnerType2) {
+    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
+    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
+  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/index.js
+var require_v1015 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
+  var internals_1 = require_internals3();
+  __exportStar(require_common8(), exports);
+  __exportStar(require_channel6(), exports);
+  __exportStar(require_monetization6(), exports);
+  exports.APIVersion = "10";
+  exports.Routes = {
+    applicationRoleConnectionMetadata(applicationId) {
+      return `/applications/${applicationId}/role-connections/metadata`;
+    },
+    guildAutoModerationRules(guildId) {
+      return `/guilds/${guildId}/auto-moderation/rules`;
+    },
+    guildAutoModerationRule(guildId, ruleId) {
+      return `/guilds/${guildId}/auto-moderation/rules/${ruleId}`;
+    },
+    guildAuditLog(guildId) {
+      return `/guilds/${guildId}/audit-logs`;
+    },
+    channel(channelId) {
+      return `/channels/${channelId}`;
+    },
+    channelMessages(channelId) {
+      return `/channels/${channelId}/messages`;
+    },
+    channelMessage(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}`;
+    },
+    channelMessageCrosspost(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}/crosspost`;
+    },
+    channelMessageOwnReaction(channelId, messageId, emoji) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/@me`;
+    },
+    channelMessageUserReaction(channelId, messageId, emoji, userId) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/${userId}`;
+    },
+    channelMessageReaction(channelId, messageId, emoji) {
+      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}`;
+    },
+    channelMessageAllReactions(channelId, messageId) {
+      return `/channels/${channelId}/messages/${messageId}/reactions`;
+    },
+    channelBulkDelete(channelId) {
+      return `/channels/${channelId}/messages/bulk-delete`;
+    },
+    channelPermission(channelId, overwriteId) {
+      return `/channels/${channelId}/permissions/${overwriteId}`;
+    },
+    channelInvites(channelId) {
+      return `/channels/${channelId}/invites`;
+    },
+    channelFollowers(channelId) {
+      return `/channels/${channelId}/followers`;
+    },
+    channelTyping(channelId) {
+      return `/channels/${channelId}/typing`;
+    },
+    channelMessagesPins(channelId) {
+      return `/channels/${channelId}/messages/pins`;
+    },
+    channelMessagesPin(channelId, messageId) {
+      return `/channels/${channelId}/messages/pins/${messageId}`;
+    },
+    channelPins(channelId) {
+      return `/channels/${channelId}/pins`;
+    },
+    channelPin(channelId, messageId) {
+      return `/channels/${channelId}/pins/${messageId}`;
+    },
+    channelRecipient(channelId, userId) {
+      return `/channels/${channelId}/recipients/${userId}`;
+    },
+    guildEmojis(guildId) {
+      return `/guilds/${guildId}/emojis`;
+    },
+    guildEmoji(guildId, emojiId) {
+      return `/guilds/${guildId}/emojis/${emojiId}`;
+    },
+    guilds() {
+      return "/guilds";
+    },
+    guild(guildId) {
+      return `/guilds/${guildId}`;
+    },
+    guildPreview(guildId) {
+      return `/guilds/${guildId}/preview`;
+    },
+    guildChannels(guildId) {
+      return `/guilds/${guildId}/channels`;
+    },
+    guildMember(guildId, userId = "@me") {
+      return `/guilds/${guildId}/members/${userId}`;
+    },
+    guildMembers(guildId) {
+      return `/guilds/${guildId}/members`;
+    },
+    guildMembersSearch(guildId) {
+      return `/guilds/${guildId}/members/search`;
+    },
+    guildCurrentMemberNickname(guildId) {
+      return `/guilds/${guildId}/members/@me/nick`;
+    },
+    guildMemberRole(guildId, memberId, roleId) {
+      return `/guilds/${guildId}/members/${memberId}/roles/${roleId}`;
+    },
+    guildMFA(guildId) {
+      return `/guilds/${guildId}/mfa`;
+    },
+    guildBans(guildId) {
+      return `/guilds/${guildId}/bans`;
+    },
+    guildBan(guildId, userId) {
+      return `/guilds/${guildId}/bans/${userId}`;
+    },
+    guildRoles(guildId) {
+      return `/guilds/${guildId}/roles`;
+    },
+    guildRole(guildId, roleId) {
+      return `/guilds/${guildId}/roles/${roleId}`;
+    },
+    guildPrune(guildId) {
+      return `/guilds/${guildId}/prune`;
+    },
+    guildVoiceRegions(guildId) {
+      return `/guilds/${guildId}/regions`;
+    },
+    guildInvites(guildId) {
+      return `/guilds/${guildId}/invites`;
+    },
+    guildIntegrations(guildId) {
+      return `/guilds/${guildId}/integrations`;
+    },
+    guildIntegration(guildId, integrationId) {
+      return `/guilds/${guildId}/integrations/${integrationId}`;
+    },
+    guildWidgetSettings(guildId) {
+      return `/guilds/${guildId}/widget`;
+    },
+    guildWidgetJSON(guildId) {
+      return `/guilds/${guildId}/widget.json`;
+    },
+    guildVanityUrl(guildId) {
+      return `/guilds/${guildId}/vanity-url`;
+    },
+    guildWidgetImage(guildId) {
+      return `/guilds/${guildId}/widget.png`;
+    },
+    invite(code) {
+      return `/invites/${code}`;
+    },
+    template(code) {
+      return `/guilds/templates/${code}`;
+    },
+    guildTemplates(guildId) {
+      return `/guilds/${guildId}/templates`;
+    },
+    guildTemplate(guildId, code) {
+      return `/guilds/${guildId}/templates/${code}`;
+    },
+    pollAnswerVoters(channelId, messageId, answerId) {
+      return `/channels/${channelId}/polls/${messageId}/answers/${answerId}`;
+    },
+    expirePoll(channelId, messageId) {
+      return `/channels/${channelId}/polls/${messageId}/expire`;
+    },
+    threads(parentId, messageId) {
+      const parts = ["", "channels", parentId];
+      if (messageId)
+        parts.push("messages", messageId);
+      parts.push("threads");
+      return parts.join("/");
+    },
+    guildActiveThreads(guildId) {
+      return `/guilds/${guildId}/threads/active`;
+    },
+    channelThreads(channelId, archivedStatus) {
+      return `/channels/${channelId}/threads/archived/${archivedStatus}`;
+    },
+    channelJoinedArchivedThreads(channelId) {
+      return `/channels/${channelId}/users/@me/threads/archived/private`;
+    },
+    threadMembers(threadId, userId) {
+      const parts = ["", "channels", threadId, "thread-members"];
+      if (userId)
+        parts.push(userId);
+      return parts.join("/");
+    },
+    user(userId = "@me") {
+      return `/users/${userId}`;
+    },
+    userApplicationRoleConnection(applicationId) {
+      return `/users/@me/applications/${applicationId}/role-connection`;
+    },
+    userGuilds() {
+      return `/users/@me/guilds`;
+    },
+    userGuildMember(guildId) {
+      return `/users/@me/guilds/${guildId}/member`;
+    },
+    userGuild(guildId) {
+      return `/users/@me/guilds/${guildId}`;
+    },
+    userChannels() {
+      return `/users/@me/channels`;
+    },
+    userConnections() {
+      return `/users/@me/connections`;
+    },
+    voiceRegions() {
+      return `/voice/regions`;
+    },
+    channelWebhooks(channelId) {
+      return `/channels/${channelId}/webhooks`;
+    },
+    guildWebhooks(guildId) {
+      return `/guilds/${guildId}/webhooks`;
+    },
+    webhook(webhookId, webhookToken) {
+      const parts = ["", "webhooks", webhookId];
+      if (webhookToken)
+        parts.push(webhookToken);
+      return parts.join("/");
+    },
+    webhookMessage(webhookId, webhookToken, messageId = "@original") {
+      return `/webhooks/${webhookId}/${webhookToken}/messages/${messageId}`;
+    },
+    webhookPlatform(webhookId, webhookToken, platform) {
+      return `/webhooks/${webhookId}/${webhookToken}/${platform}`;
+    },
+    gateway() {
+      return `/gateway`;
+    },
+    gatewayBot() {
+      return `/gateway/bot`;
+    },
+    oauth2CurrentApplication() {
+      return `/oauth2/applications/@me`;
+    },
+    oauth2CurrentAuthorization() {
+      return `/oauth2/@me`;
+    },
+    oauth2Authorization() {
+      return `/oauth2/authorize`;
+    },
+    oauth2TokenExchange() {
+      return `/oauth2/token`;
+    },
+    oauth2TokenRevocation() {
+      return `/oauth2/token/revoke`;
+    },
+    applicationCommands(applicationId) {
+      return `/applications/${applicationId}/commands`;
+    },
+    applicationCommand(applicationId, commandId) {
+      return `/applications/${applicationId}/commands/${commandId}`;
+    },
+    applicationGuildCommands(applicationId, guildId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands`;
+    },
+    applicationGuildCommand(applicationId, guildId, commandId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}`;
+    },
+    interactionCallback(interactionId, interactionToken) {
+      return `/interactions/${interactionId}/${interactionToken}/callback`;
+    },
+    guildMemberVerification(guildId) {
+      return `/guilds/${guildId}/member-verification`;
+    },
+    guildVoiceState(guildId, userId = "@me") {
+      return `/guilds/${guildId}/voice-states/${userId}`;
+    },
+    guildApplicationCommandsPermissions(applicationId, guildId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/permissions`;
+    },
+    applicationCommandPermissions(applicationId, guildId, commandId) {
+      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}/permissions`;
+    },
+    guildWelcomeScreen(guildId) {
+      return `/guilds/${guildId}/welcome-screen`;
+    },
+    stageInstances() {
+      return `/stage-instances`;
+    },
+    stageInstance(channelId) {
+      return `/stage-instances/${channelId}`;
+    },
+    sticker(stickerId) {
+      return `/stickers/${stickerId}`;
+    },
+    stickerPacks() {
+      return "/sticker-packs";
+    },
+    stickerPack(packId) {
+      return `/sticker-packs/${packId}`;
+    },
+    nitroStickerPacks() {
+      return "/sticker-packs";
+    },
+    guildStickers(guildId) {
+      return `/guilds/${guildId}/stickers`;
+    },
+    guildSticker(guildId, stickerId) {
+      return `/guilds/${guildId}/stickers/${stickerId}`;
+    },
+    guildScheduledEvents(guildId) {
+      return `/guilds/${guildId}/scheduled-events`;
+    },
+    guildScheduledEvent(guildId, guildScheduledEventId) {
+      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}`;
+    },
+    guildScheduledEventUsers(guildId, guildScheduledEventId) {
+      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}/users`;
+    },
+    guildOnboarding(guildId) {
+      return `/guilds/${guildId}/onboarding`;
+    },
+    guildIncidentActions(guildId) {
+      return `/guilds/${guildId}/incident-actions`;
+    },
+    currentApplication() {
+      return "/applications/@me";
+    },
+    entitlements(applicationId) {
+      return `/applications/${applicationId}/entitlements`;
+    },
+    entitlement(applicationId, entitlementId) {
+      return `/applications/${applicationId}/entitlements/${entitlementId}`;
+    },
+    skus(applicationId) {
+      return `/applications/${applicationId}/skus`;
+    },
+    guildBulkBan(guildId) {
+      return `/guilds/${guildId}/bulk-ban`;
+    },
+    consumeEntitlement(applicationId, entitlementId) {
+      return `/applications/${applicationId}/entitlements/${entitlementId}/consume`;
+    },
+    applicationEmojis(applicationId) {
+      return `/applications/${applicationId}/emojis`;
+    },
+    applicationEmoji(applicationId, emojiId) {
+      return `/applications/${applicationId}/emojis/${emojiId}`;
+    },
+    skuSubscriptions(skuId) {
+      return `/skus/${skuId}/subscriptions`;
+    },
+    skuSubscription(skuId, subscriptionId) {
+      return `/skus/${skuId}/subscriptions/${subscriptionId}`;
+    },
+    sendSoundboardSound(channelId) {
+      return `/channels/${channelId}/send-soundboard-sound`;
+    },
+    soundboardDefaultSounds() {
+      return "/soundboard-default-sounds";
+    },
+    guildSoundboardSounds(guildId) {
+      return `/guilds/${guildId}/soundboard-sounds`;
+    },
+    guildSoundboardSound(guildId, soundId) {
+      return `/guilds/${guildId}/soundboard-sounds/${soundId}`;
+    }
+  };
+  for (const [key, fn] of Object.entries(exports.Routes)) {
+    exports.Routes[key] = (...args) => {
+      const escaped = args.map((arg) => {
+        if (arg) {
+          if (internals_1.urlSafeCharacters.test(String(arg))) {
+            return arg;
+          }
+          return encodeURIComponent(arg);
+        }
+        return arg;
+      });
+      return fn.call(null, ...escaped);
+    };
+  }
+  Object.freeze(exports.Routes);
+  exports.StickerPackApplicationId = "710982414301790216";
+  var ImageFormat;
+  (function(ImageFormat2) {
+    ImageFormat2["JPEG"] = "jpeg";
+    ImageFormat2["PNG"] = "png";
+    ImageFormat2["WebP"] = "webp";
+    ImageFormat2["GIF"] = "gif";
+    ImageFormat2["Lottie"] = "json";
+  })(ImageFormat || (exports.ImageFormat = ImageFormat = {}));
+  exports.CDNRoutes = {
+    emoji(emojiId, format) {
+      return `/emojis/${emojiId}.${format}`;
+    },
+    guildIcon(guildId, guildIcon, format) {
+      return `/icons/${guildId}/${guildIcon}.${format}`;
+    },
+    guildSplash(guildId, guildSplash, format) {
+      return `/splashes/${guildId}/${guildSplash}.${format}`;
+    },
+    guildDiscoverySplash(guildId, guildDiscoverySplash, format) {
+      return `/discovery-splashes/${guildId}/${guildDiscoverySplash}.${format}`;
+    },
+    guildBanner(guildId, guildBanner, format) {
+      return `/banners/${guildId}/${guildBanner}.${format}`;
+    },
+    userBanner(userId, userBanner, format) {
+      return `/banners/${userId}/${userBanner}.${format}`;
+    },
+    defaultUserAvatar(index) {
+      return `/embed/avatars/${index}.png`;
+    },
+    userAvatar(userId, userAvatar, format) {
+      return `/avatars/${userId}/${userAvatar}.${format}`;
+    },
+    guildMemberAvatar(guildId, userId, memberAvatar, format) {
+      return `/guilds/${guildId}/users/${userId}/avatars/${memberAvatar}.${format}`;
+    },
+    userAvatarDecoration(userId, userAvatarDecoration) {
+      return `/avatar-decorations/${userId}/${userAvatarDecoration}.png`;
+    },
+    avatarDecoration(avatarDecorationDataAsset) {
+      return `/avatar-decoration-presets/${avatarDecorationDataAsset}.png`;
+    },
+    applicationIcon(applicationId, applicationIcon, format) {
+      return `/app-icons/${applicationId}/${applicationIcon}.${format}`;
+    },
+    applicationCover(applicationId, applicationCoverImage, format) {
+      return `/app-icons/${applicationId}/${applicationCoverImage}.${format}`;
+    },
+    applicationAsset(applicationId, applicationAssetId, format) {
+      return `/app-assets/${applicationId}/${applicationAssetId}.${format}`;
+    },
+    achievementIcon(applicationId, achievementId, achievementIconHash, format) {
+      return `/app-assets/${applicationId}/achievements/${achievementId}/icons/${achievementIconHash}.${format}`;
+    },
+    stickerPackBanner(stickerPackBannerAssetId, format) {
+      return `/app-assets/${exports.StickerPackApplicationId}/store/${stickerPackBannerAssetId}.${format}`;
+    },
+    storePageAsset(applicationId, assetId, format = ImageFormat.PNG) {
+      return `/app-assets/${applicationId}/store/${assetId}.${format}`;
+    },
+    teamIcon(teamId, teamIcon, format) {
+      return `/team-icons/${teamId}/${teamIcon}.${format}`;
+    },
+    sticker(stickerId, format) {
+      return `/stickers/${stickerId}.${format}`;
+    },
+    roleIcon(roleId, roleIcon, format) {
+      return `/role-icons/${roleId}/${roleIcon}.${format}`;
+    },
+    guildScheduledEventCover(guildScheduledEventId, guildScheduledEventCoverImage, format) {
+      return `/guild-events/${guildScheduledEventId}/${guildScheduledEventCoverImage}.${format}`;
+    },
+    guildMemberBanner(guildId, userId, guildMemberBanner, format) {
+      return `/guilds/${guildId}/users/${userId}/banners/${guildMemberBanner}.${format}`;
+    },
+    soundboardSound(soundId) {
+      return `/soundboard-sounds/${soundId}`;
+    },
+    guildTagBadge(guildId, guildTagBadge, format) {
+      return `/guild-tag-badges/${guildId}/${guildTagBadge}.${format}`;
+    }
+  };
+  for (const [key, fn] of Object.entries(exports.CDNRoutes)) {
+    exports.CDNRoutes[key] = (...args) => {
+      const escaped = args.map((arg) => {
+        if (arg) {
+          if (internals_1.urlSafeCharacters.test(String(arg))) {
+            return arg;
+          }
+          return encodeURIComponent(arg);
+        }
+        return arg;
+      });
+      return fn.call(null, ...escaped);
+    };
+  }
+  Object.freeze(exports.CDNRoutes);
+  exports.RouteBases = {
+    api: `https://discord.com/api/v${exports.APIVersion}`,
+    cdn: "https://cdn.discordapp.com",
+    media: "https://media.discordapp.net",
+    invite: "https://discord.gg",
+    template: "https://discord.new",
+    gift: "https://discord.gift",
+    scheduledEvent: "https://discord.com/events"
+  };
+  Object.freeze(exports.RouteBases);
+  exports.OAuth2Routes = {
+    authorizationURL: `${exports.RouteBases.api}${exports.Routes.oauth2Authorization()}`,
+    tokenURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenExchange()}`,
+    tokenRevocationURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenRevocation()}`
+  };
+  Object.freeze(exports.OAuth2Routes);
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/common.js
+var require_common9 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RPCCloseEventCodes = exports.RPCErrorCodes = exports.RelationshipType = exports.VoiceConnectionStates = exports.RPCVoiceShortcutKeyComboKeyType = exports.RPCVoiceSettingsModeType = exports.RPCDeviceType = undefined;
+  var RPCDeviceType;
+  (function(RPCDeviceType2) {
+    RPCDeviceType2["AudioInput"] = "audioinput";
+    RPCDeviceType2["AudioOutput"] = "audiooutput";
+    RPCDeviceType2["VideoInput"] = "videoinput";
+  })(RPCDeviceType || (exports.RPCDeviceType = RPCDeviceType = {}));
+  var RPCVoiceSettingsModeType;
+  (function(RPCVoiceSettingsModeType2) {
+    RPCVoiceSettingsModeType2["PushToTalk"] = "PUSH_TO_TALK";
+    RPCVoiceSettingsModeType2["VoiceActivity"] = "VOICE_ACTIVITY";
+  })(RPCVoiceSettingsModeType || (exports.RPCVoiceSettingsModeType = RPCVoiceSettingsModeType = {}));
+  var RPCVoiceShortcutKeyComboKeyType;
+  (function(RPCVoiceShortcutKeyComboKeyType2) {
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardKey"] = 0] = "KeyboardKey";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["MouseButton"] = 1] = "MouseButton";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardModifierKey"] = 2] = "KeyboardModifierKey";
+    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["GamepadButton"] = 3] = "GamepadButton";
+  })(RPCVoiceShortcutKeyComboKeyType || (exports.RPCVoiceShortcutKeyComboKeyType = RPCVoiceShortcutKeyComboKeyType = {}));
+  var VoiceConnectionStates;
+  (function(VoiceConnectionStates2) {
+    VoiceConnectionStates2["Disconnected"] = "DISCONNECTED";
+    VoiceConnectionStates2["AwaitingEndpoint"] = "AWAITING_ENDPOINT";
+    VoiceConnectionStates2["Authenticating"] = "AUTHENTICATING";
+    VoiceConnectionStates2["Connecting"] = "CONNECTING";
+    VoiceConnectionStates2["Connected"] = "CONNECTED";
+    VoiceConnectionStates2["VoiceDisconnected"] = "VOICE_DISCONNECTED";
+    VoiceConnectionStates2["VoiceConnecting"] = "VOICE_CONNECTING";
+    VoiceConnectionStates2["VoiceConnected"] = "VOICE_CONNECTED";
+    VoiceConnectionStates2["NoRoute"] = "NO_ROUTE";
+    VoiceConnectionStates2["IceChecking"] = "ICE_CHECKING";
+  })(VoiceConnectionStates || (exports.VoiceConnectionStates = VoiceConnectionStates = {}));
+  var RelationshipType;
+  (function(RelationshipType2) {
+    RelationshipType2[RelationshipType2["None"] = 0] = "None";
+    RelationshipType2[RelationshipType2["Friend"] = 1] = "Friend";
+    RelationshipType2[RelationshipType2["Blocked"] = 2] = "Blocked";
+    RelationshipType2[RelationshipType2["PendingIncoming"] = 3] = "PendingIncoming";
+    RelationshipType2[RelationshipType2["PendingOutgoing"] = 4] = "PendingOutgoing";
+    RelationshipType2[RelationshipType2["Implicit"] = 5] = "Implicit";
+  })(RelationshipType || (exports.RelationshipType = RelationshipType = {}));
+  var RPCErrorCodes;
+  (function(RPCErrorCodes2) {
+    RPCErrorCodes2[RPCErrorCodes2["UnknownError"] = 1000] = "UnknownError";
+    RPCErrorCodes2[RPCErrorCodes2["ServiceUnavailable"] = 1001] = "ServiceUnavailable";
+    RPCErrorCodes2[RPCErrorCodes2["TransactionAborted"] = 1002] = "TransactionAborted";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidPayload"] = 4000] = "InvalidPayload";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidCommand"] = 4002] = "InvalidCommand";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidGuild"] = 4003] = "InvalidGuild";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidEvent"] = 4004] = "InvalidEvent";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidChannel"] = 4005] = "InvalidChannel";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidPermissions"] = 4006] = "InvalidPermissions";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidClientId"] = 4007] = "InvalidClientId";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidOrigin"] = 4008] = "InvalidOrigin";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidToken"] = 4009] = "InvalidToken";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidUser"] = 4010] = "InvalidUser";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidInvite"] = 4011] = "InvalidInvite";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidActivityJoinRequest"] = 4012] = "InvalidActivityJoinRequest";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidEntitlement"] = 4013] = "InvalidEntitlement";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidGiftCode"] = 4014] = "InvalidGiftCode";
+    RPCErrorCodes2[RPCErrorCodes2["OAuth2Error"] = 5000] = "OAuth2Error";
+    RPCErrorCodes2[RPCErrorCodes2["SelectChannelTimedOut"] = 5001] = "SelectChannelTimedOut";
+    RPCErrorCodes2[RPCErrorCodes2["GetGuildTimedOut"] = 5002] = "GetGuildTimedOut";
+    RPCErrorCodes2[RPCErrorCodes2["SelectVoiceForceRequired"] = 5003] = "SelectVoiceForceRequired";
+    RPCErrorCodes2[RPCErrorCodes2["CaptureShortcutAlreadyListening"] = 5004] = "CaptureShortcutAlreadyListening";
+    RPCErrorCodes2[RPCErrorCodes2["InvalidActivitySecret"] = 5005] = "InvalidActivitySecret";
+    RPCErrorCodes2[RPCErrorCodes2["NoEligibleActivity"] = 5006] = "NoEligibleActivity";
+    RPCErrorCodes2[RPCErrorCodes2["PurchaseCanceled"] = 5007] = "PurchaseCanceled";
+    RPCErrorCodes2[RPCErrorCodes2["PurchaseError"] = 5008] = "PurchaseError";
+    RPCErrorCodes2[RPCErrorCodes2["UnauthorizedForAchievement"] = 5009] = "UnauthorizedForAchievement";
+    RPCErrorCodes2[RPCErrorCodes2["RateLimited"] = 5010] = "RateLimited";
+  })(RPCErrorCodes || (exports.RPCErrorCodes = RPCErrorCodes = {}));
+  var RPCCloseEventCodes;
+  (function(RPCCloseEventCodes2) {
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseNormal"] = 1000] = "CloseNormal";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseUnsupported"] = 1003] = "CloseUnsupported";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseAbnormal"] = 1006] = "CloseAbnormal";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidClientId"] = 4000] = "InvalidClientId";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidOrigin"] = 4001] = "InvalidOrigin";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["RateLimited"] = 4002] = "RateLimited";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["TokenRevoked"] = 4003] = "TokenRevoked";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidVersion"] = 4004] = "InvalidVersion";
+    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidEncoding"] = 4005] = "InvalidEncoding";
+  })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/v10.js
+var require_v1016 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.RPCEvents = exports.RPCCommands = exports.RPCVersion = undefined;
+  __exportStar(require_common9(), exports);
+  exports.RPCVersion = "1";
+  var RPCCommands;
+  (function(RPCCommands2) {
+    RPCCommands2["AcceptActivityInvite"] = "ACCEPT_ACTIVITY_INVITE";
+    RPCCommands2["ActivityInviteUser"] = "ACTIVITY_INVITE_USER";
+    RPCCommands2["Authenticate"] = "AUTHENTICATE";
+    RPCCommands2["Authorize"] = "AUTHORIZE";
+    RPCCommands2["BraintreePopupBridgeCallback"] = "BRAINTREE_POPUP_BRIDGE_CALLBACK";
+    RPCCommands2["BrowserHandoff"] = "BROWSER_HANDOFF";
+    RPCCommands2["CloseActivityJoinRequest"] = "CLOSE_ACTIVITY_JOIN_REQUEST";
+    RPCCommands2["ConnectionsCallback"] = "CONNECTIONS_CALLBACK";
+    RPCCommands2["CreateChannelInvite"] = "CREATE_CHANNEL_INVITE";
+    RPCCommands2["DeepLink"] = "DEEP_LINK";
+    RPCCommands2["Dispatch"] = "DISPATCH";
+    RPCCommands2["GetApplicationTicket"] = "GET_APPLICATION_TICKET";
+    RPCCommands2["GetChannel"] = "GET_CHANNEL";
+    RPCCommands2["GetChannels"] = "GET_CHANNELS";
+    RPCCommands2["GetEntitlementTicket"] = "GET_ENTITLEMENT_TICKET";
+    RPCCommands2["GetEntitlements"] = "GET_ENTITLEMENTS";
+    RPCCommands2["GetGuild"] = "GET_GUILD";
+    RPCCommands2["GetGuilds"] = "GET_GUILDS";
+    RPCCommands2["GetImage"] = "GET_IMAGE";
+    RPCCommands2["GetNetworkingConfig"] = "GET_NETWORKING_CONFIG";
+    RPCCommands2["GetRelationships"] = "GET_RELATIONSHIPS";
+    RPCCommands2["GetSelectedVoiceChannel"] = "GET_SELECTED_VOICE_CHANNEL";
+    RPCCommands2["GetSkus"] = "GET_SKUS";
+    RPCCommands2["GetUser"] = "GET_USER";
+    RPCCommands2["GetVoiceSettings"] = "GET_VOICE_SETTINGS";
+    RPCCommands2["GiftCodeBrowser"] = "GIFT_CODE_BROWSER";
+    RPCCommands2["GuildTemplateBrowser"] = "GUILD_TEMPLATE_BROWSER";
+    RPCCommands2["InviteBrowser"] = "INVITE_BROWSER";
+    RPCCommands2["NetworkingCreateToken"] = "NETWORKING_CREATE_TOKEN";
+    RPCCommands2["NetworkingPeerMetrics"] = "NETWORKING_PEER_METRICS";
+    RPCCommands2["NetworkingSystemMetrics"] = "NETWORKING_SYSTEM_METRICS";
+    RPCCommands2["OpenOverlayActivityInvite"] = "OPEN_OVERLAY_ACTIVITY_INVITE";
+    RPCCommands2["OpenOverlayGuildInvite"] = "OPEN_OVERLAY_GUILD_INVITE";
+    RPCCommands2["OpenOverlayVoiceSettings"] = "OPEN_OVERLAY_VOICE_SETTINGS";
+    RPCCommands2["Overlay"] = "OVERLAY";
+    RPCCommands2["SelectTextChannel"] = "SELECT_TEXT_CHANNEL";
+    RPCCommands2["SelectVoiceChannel"] = "SELECT_VOICE_CHANNEL";
+    RPCCommands2["SendActivityJoinInvite"] = "SEND_ACTIVITY_JOIN_INVITE";
+    RPCCommands2["SetActivity"] = "SET_ACTIVITY";
+    RPCCommands2["SetCertifiedDevices"] = "SET_CERTIFIED_DEVICES";
+    RPCCommands2["SetOverlayLocked"] = "SET_OVERLAY_LOCKED";
+    RPCCommands2["SetUserVoiceSettings"] = "SET_USER_VOICE_SETTINGS";
+    RPCCommands2["SetUserVoiceSettings2"] = "SET_USER_VOICE_SETTINGS_2";
+    RPCCommands2["SetVoiceSettings"] = "SET_VOICE_SETTINGS";
+    RPCCommands2["SetVoiceSettings2"] = "SET_VOICE_SETTINGS_2";
+    RPCCommands2["StartPurchase"] = "START_PURCHASE";
+    RPCCommands2["Subscribe"] = "SUBSCRIBE";
+    RPCCommands2["Unsubscribe"] = "UNSUBSCRIBE";
+    RPCCommands2["ValidateApplication"] = "VALIDATE_APPLICATION";
+  })(RPCCommands || (exports.RPCCommands = RPCCommands = {}));
+  var RPCEvents;
+  (function(RPCEvents2) {
+    RPCEvents2["ActivityInvite"] = "ACTIVITY_INVITE";
+    RPCEvents2["ActivityJoin"] = "ACTIVITY_JOIN";
+    RPCEvents2["ActivityJoinRequest"] = "ACTIVITY_JOIN_REQUEST";
+    RPCEvents2["ActivitySpectate"] = "ACTIVITY_SPECTATE";
+    RPCEvents2["ChannelCreate"] = "CHANNEL_CREATE";
+    RPCEvents2["CurrentUserUpdate"] = "CURRENT_USER_UPDATE";
+    RPCEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    RPCEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
+    RPCEvents2["Error"] = "ERROR";
+    RPCEvents2["GameJoin"] = "GAME_JOIN";
+    RPCEvents2["GameSpectate"] = "GAME_SPECTATE";
+    RPCEvents2["GuildCreate"] = "GUILD_CREATE";
+    RPCEvents2["GuildStatus"] = "GUILD_STATUS";
+    RPCEvents2["MessageCreate"] = "MESSAGE_CREATE";
+    RPCEvents2["MessageDelete"] = "MESSAGE_DELETE";
+    RPCEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
+    RPCEvents2["NotificationCreate"] = "NOTIFICATION_CREATE";
+    RPCEvents2["Overlay"] = "OVERLAY";
+    RPCEvents2["OverlayUpdate"] = "OVERLAY_UPDATE";
+    RPCEvents2["Ready"] = "READY";
+    RPCEvents2["RelationshipUpdate"] = "RELATIONSHIP_UPDATE";
+    RPCEvents2["SpeakingStart"] = "SPEAKING_START";
+    RPCEvents2["SpeakingStop"] = "SPEAKING_STOP";
+    RPCEvents2["VoiceChannelSelect"] = "VOICE_CHANNEL_SELECT";
+    RPCEvents2["VoiceConnectionStatus"] = "VOICE_CONNECTION_STATUS";
+    RPCEvents2["VoiceSettingsUpdate"] = "VOICE_SETTINGS_UPDATE";
+    RPCEvents2["VoiceSettingsUpdate2"] = "VOICE_SETTINGS_UPDATE_2";
+    RPCEvents2["VoiceStateCreate"] = "VOICE_STATE_CREATE";
+    RPCEvents2["VoiceStateDelete"] = "VOICE_STATE_DELETE";
+    RPCEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
+  })(RPCEvents || (exports.RPCEvents = RPCEvents = {}));
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/utils/v10.js
+var require_v1017 = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.isDMInteraction = isDMInteraction;
+  exports.isGuildInteraction = isGuildInteraction;
+  exports.isApplicationCommandDMInteraction = isApplicationCommandDMInteraction;
+  exports.isApplicationCommandGuildInteraction = isApplicationCommandGuildInteraction;
+  exports.isMessageComponentDMInteraction = isMessageComponentDMInteraction;
+  exports.isMessageComponentGuildInteraction = isMessageComponentGuildInteraction;
+  exports.isLinkButton = isLinkButton;
+  exports.isInteractionButton = isInteractionButton;
+  exports.isMessageComponentInteraction = isMessageComponentInteraction;
+  exports.isMessageComponentButtonInteraction = isMessageComponentButtonInteraction;
+  exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
+  exports.isChatInputApplicationCommandInteraction = isChatInputApplicationCommandInteraction;
+  exports.isContextMenuApplicationCommandInteraction = isContextMenuApplicationCommandInteraction;
+  var index_1 = require_v1014();
+  function isDMInteraction(interaction) {
+    return Reflect.has(interaction, "user");
+  }
+  function isGuildInteraction(interaction) {
+    return Reflect.has(interaction, "guild_id");
+  }
+  function isApplicationCommandDMInteraction(interaction) {
+    return isDMInteraction(interaction);
+  }
+  function isApplicationCommandGuildInteraction(interaction) {
+    return isGuildInteraction(interaction);
+  }
+  function isMessageComponentDMInteraction(interaction) {
+    return isDMInteraction(interaction);
+  }
+  function isMessageComponentGuildInteraction(interaction) {
+    return isGuildInteraction(interaction);
+  }
+  function isLinkButton(component) {
+    return component.style === index_1.ButtonStyle.Link;
+  }
+  function isInteractionButton(component) {
+    return ![index_1.ButtonStyle.Link, index_1.ButtonStyle.Premium].includes(component.style);
+  }
+  function isMessageComponentInteraction(interaction) {
+    return interaction.type === index_1.InteractionType.MessageComponent;
+  }
+  function isMessageComponentButtonInteraction(interaction) {
+    return interaction.data.component_type === index_1.ComponentType.Button;
+  }
+  function isMessageComponentSelectMenuInteraction(interaction) {
+    return [
+      index_1.ComponentType.StringSelect,
+      index_1.ComponentType.UserSelect,
+      index_1.ComponentType.RoleSelect,
+      index_1.ComponentType.MentionableSelect,
+      index_1.ComponentType.ChannelSelect
+    ].includes(interaction.data.component_type);
+  }
+  function isChatInputApplicationCommandInteraction(interaction) {
+    return interaction.data.type === index_1.ApplicationCommandType.ChatInput;
+  }
+  function isContextMenuApplicationCommandInteraction(interaction) {
+    return interaction.data.type === index_1.ApplicationCommandType.Message || interaction.data.type === index_1.ApplicationCommandType.User;
+  }
+});
+
+// node_modules/@discordjs/ws/node_modules/discord-api-types/v10.js
+var require_v1018 = __commonJS((exports) => {
+  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() {
+        return m[k];
+      } };
+    }
+    Object.defineProperty(o, k2, desc);
+  } : function(o, m, k, k2) {
+    if (k2 === undefined)
+      k2 = k;
+    o[k2] = m[k];
+  });
+  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+    for (var p in m)
+      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
+        __createBinding(exports2, m, p);
+  };
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.Utils = undefined;
+  __exportStar(require_v1013(), exports);
+  __exportStar(require_globals3(), exports);
+  __exportStar(require_v1014(), exports);
+  __exportStar(require_v1015(), exports);
+  __exportStar(require_v1016(), exports);
+  __exportStar(require_internals3(), exports);
+  exports.Utils = require_v1017();
+});
+
 // node_modules/@discordjs/ws/dist/index.js
 var require_dist10 = __commonJS((exports, module) => {
   var __dirname = "C:\\Code\\Base\\JavaScript-TypeScript\\Templates\\Discord-Bot\\node_modules\\@discordjs\\ws\\dist";
@@ -27834,12 +33228,12 @@ var require_dist10 = __commonJS((exports, module) => {
   var import_util2 = require_dist();
   var import_async_queue2 = require_cjs2();
   var import_async_event_emitter = require_dist3();
-  var import_v102 = require_v106();
+  var import_v102 = require_v1018();
   var import_ws = __require("ws");
   var import_node_process = __toESM2(__require("process"));
   var import_collection4 = require_dist9();
   var import_util = require_dist();
-  var import_v10 = require_v106();
+  var import_v10 = require_v1018();
   var import_promises = __require("timers/promises");
   var import_collection3 = require_dist9();
   var import_async_queue = require_cjs2();
@@ -28676,7 +34070,7 @@ var require_dist10 = __commonJS((exports, module) => {
   var import_util3 = require_dist();
   var import_util4 = require_dist();
   var import_async_event_emitter2 = require_dist3();
-  var import_v103 = require_v106();
+  var import_v103 = require_v1018();
   (0, import_util4.polyfillDispose)();
   var WebSocketManager = class extends import_async_event_emitter2.AsyncEventEmitter {
     static {
@@ -28779,7 +34173,7 @@ var require_WebSocketShard = __commonJS((exports, module) => {
   var EventEmitter = __require("events");
   var process2 = __require("process");
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
-  var { GatewayIntentBits } = require_v106();
+  var { GatewayIntentBits } = require_v1012();
   var Status = require_Status();
   var WebSocketShardEvents = require_WebSocketShardEvents();
   var deprecationEmittedForImportant = false;
@@ -29293,7 +34687,7 @@ var require_PRESENCE_UPDATE = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ClientUser.js
 var require_ClientUser = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var User = require_User();
   var { resolveImage } = require_DataResolver();
 
@@ -29663,7 +35057,7 @@ var require_WebSocketManager = __commonJS((exports, module) => {
     CompressionMethod,
     CloseCodes
   } = require_dist10();
-  var { GatewayCloseCodes, GatewayDispatchEvents } = require_v106();
+  var { GatewayCloseCodes, GatewayDispatchEvents } = require_v1012();
   var WebSocketShard = require_WebSocketShard();
   var PacketHandlers = require_handlers();
   var { DiscordjsError, ErrorCodes } = require_errors();
@@ -29936,7 +35330,7 @@ var require_BaseGuildEmojiManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/ChannelManager.js
 var require_ChannelManager = __commonJS((exports, module) => {
   var process2 = __require("process");
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { BaseChannel } = require_BaseChannel();
   var { createChannel } = require_Channels();
@@ -30273,7 +35667,7 @@ var require_GuildPreviewEmoji = __commonJS((exports, module) => {
 var require_GuildPreview = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var Base = require_Base();
   var GuildPreviewEmoji = require_GuildPreviewEmoji();
   var { Sticker } = require_Sticker();
@@ -30359,7 +35753,7 @@ var require_GuildPreview = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/AutoModerationRuleManager.js
 var require_AutoModerationRuleManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var AutoModerationRule = require_AutoModerationRule();
 
@@ -30492,7 +35886,7 @@ var require_GuildBanManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var GuildBan = require_GuildBan();
@@ -30591,7 +35985,7 @@ var require_GuildBanManager = __commonJS((exports, module) => {
 var require_GuildChannelManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
-  var { ChannelType, Routes } = require_v106();
+  var { ChannelType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var GuildTextThreadManager = require_GuildTextThreadManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -30832,7 +36226,7 @@ var require_GuildChannelManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildEmojiManager.js
 var require_GuildEmojiManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes, PermissionFlagsBits } = require_v106();
+  var { Routes, PermissionFlagsBits } = require_v1012();
   var BaseGuildEmojiManager = require_BaseGuildEmojiManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
   var { resolveImage } = require_DataResolver();
@@ -30932,7 +36326,7 @@ var require_GuildEmojiManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildInviteManager.js
 var require_GuildInviteManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var Invite = require_Invite();
@@ -31019,19 +36413,22 @@ var require_GuildInviteManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildMemberManager.js
 var require_GuildMemberManager = __commonJS((exports, module) => {
+  var { process: process2 } = __require("process");
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes, GatewayOpcodes } = require_v106();
+  var { Routes, GatewayOpcodes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, DiscordjsTypeError, DiscordjsRangeError, ErrorCodes } = require_errors();
   var BaseGuildVoiceChannel = require_BaseGuildVoiceChannel();
   var { GuildMember } = require_GuildMember();
   var { Role } = require_Role();
+  var { resolveImage } = require_DataResolver();
   var Events = require_Events();
   var { GuildMemberFlagsBitField } = require_GuildMemberFlagsBitField();
   var Partials = require_Partials();
+  var deprecatedEmittedForEditSoleNickname = false;
 
   class GuildMemberManager extends CachedManager {
     constructor(guild, iterable) {
@@ -31200,17 +36597,32 @@ var require_GuildMemberManager = __commonJS((exports, module) => {
       let endpoint;
       if (id === this.client.user.id) {
         const keys = Object.keys(options);
-        if (keys.length === 1 && keys[0] === "nick")
-          endpoint = Routes.guildMember(this.guild.id);
-        else
-          endpoint = Routes.guildMember(this.guild.id, id);
-      } else {
-        endpoint = Routes.guildMember(this.guild.id, id);
+        if (keys.length === 1 && keys[0] === "nick") {
+          endpoint = Routes.guildMember(this.guild.id, "@me");
+          if (!deprecatedEmittedForEditSoleNickname) {
+            process2.emitWarning("You should use GuildMemberManager#editMe() when changing your nickname. Due to Discord's API changes, GuildMemberManager#edit() will end up requiring MANAGE_NICKNAMES in v15.", "DeprecationWarning");
+            deprecatedEmittedForEditSoleNickname = true;
+          }
+        }
       }
+      endpoint ??= Routes.guildMember(this.guild.id, id);
       const d = await this.client.rest.patch(endpoint, { body: options, reason });
       const clone = this.cache.get(id)?._clone();
       clone?._patch(d);
       return clone ?? this._add(d, false);
+    }
+    async editMe({ reason, ...options }) {
+      const data = await this.client.rest.patch(Routes.guildMember(this.guild.id, "@me"), {
+        body: {
+          ...options,
+          banner: options.banner && await resolveImage(options.banner),
+          avatar: options.avatar && await resolveImage(options.avatar)
+        },
+        reason
+      });
+      const clone = this.me?._clone();
+      clone?._patch(data);
+      return clone ?? this._add(data, false);
     }
     async prune({ days, dry = false, count: compute_prune_count, roles = [], reason } = {}) {
       if (typeof days !== "number")
@@ -31269,7 +36681,7 @@ var require_GuildMemberManager = __commonJS((exports, module) => {
 var require_GuildScheduledEventManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { GuildScheduledEventEntityType, Routes } = require_v106();
+  var { GuildScheduledEventEntityType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
@@ -31505,7 +36917,7 @@ var require_SoundboardSound = __commonJS((exports) => {
 var require_GuildSoundboardSoundManager = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { lazy } = require_dist();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { SoundboardSound } = require_SoundboardSound();
@@ -31591,7 +37003,7 @@ var require_GuildSoundboardSoundManager = __commonJS((exports) => {
 // node_modules/discord.js/src/managers/GuildStickerManager.js
 var require_GuildStickerManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var MessagePayload = require_MessagePayload();
@@ -31668,7 +37080,7 @@ var require_GuildStickerManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/ActivityFlagsBitField.js
 var require_ActivityFlagsBitField = __commonJS((exports, module) => {
-  var { ActivityFlags } = require_v106();
+  var { ActivityFlags } = require_v1012();
   var BitField = require_BitField();
 
   class ActivityFlagsBitField extends BitField {
@@ -31846,7 +37258,7 @@ var require_RoleManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { DiscordAPIError } = require_dist5();
-  var { RESTJSONErrorCodes, Routes } = require_v106();
+  var { RESTJSONErrorCodes, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Role } = require_Role();
@@ -32044,7 +37456,7 @@ var require_RoleManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/StageInstanceManager.js
 var require_StageInstanceManager = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var { StageInstance } = require_StageInstance();
@@ -32117,7 +37529,7 @@ var require_StageInstanceManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/VoiceStateManager.js
 var require_VoiceStateManager = __commonJS((exports, module) => {
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var VoiceState = require_VoiceState();
 
@@ -32151,7 +37563,7 @@ var require_VoiceStateManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/SystemChannelFlagsBitField.js
 var require_SystemChannelFlagsBitField = __commonJS((exports, module) => {
-  var { GuildSystemChannelFlags } = require_v106();
+  var { GuildSystemChannelFlags } = require_v1012();
   var BitField = require_BitField();
 
   class SystemChannelFlagsBitField extends BitField {
@@ -32165,7 +37577,7 @@ var require_Guild = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
-  var { ChannelType, GuildPremiumTier, Routes, GuildFeature } = require_v106();
+  var { ChannelType, GuildPremiumTier, Routes, GuildFeature } = require_v1012();
   var AnonymousGuild = require_AnonymousGuild();
   var GuildAuditLogs = require_GuildAuditLogs();
   var { GuildOnboarding } = require_GuildOnboarding();
@@ -32783,7 +38195,7 @@ var require_GuildManager = __commonJS((exports, module) => {
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { GatewayOpcodes, Routes, RouteBases } = require_v106();
+  var { GatewayOpcodes, Routes, RouteBases } = require_v1012();
   var CachedManager = require_CachedManager();
   var { ErrorCodes, DiscordjsError } = require_errors();
   var ShardClientUtil = require_ShardClientUtil();
@@ -32977,7 +38389,7 @@ var require_GuildManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/UserManager.js
 var require_UserManager = __commonJS((exports, module) => {
-  var { ChannelType, Routes } = require_v106();
+  var { ChannelType, Routes } = require_v1012();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var { GuildMember } = require_GuildMember();
@@ -33051,7 +38463,7 @@ var require_UserManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ClientPresence.js
 var require_ClientPresence = __commonJS((exports, module) => {
-  var { GatewayOpcodes, ActivityType } = require_v106();
+  var { GatewayOpcodes, ActivityType } = require_v1012();
   var { Presence } = require_Presence();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -33192,7 +38604,7 @@ var require_WidgetMember = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/Widget.js
 var require_Widget = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v106();
+  var { Routes } = require_v1012();
   var Base = require_Base();
   var WidgetMember = require_WidgetMember();
 
@@ -33235,7 +38647,7 @@ var require_Widget = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/IntentsBitField.js
 var require_IntentsBitField = __commonJS((exports, module) => {
-  var { GatewayIntentBits } = require_v106();
+  var { GatewayIntentBits } = require_v1012();
   var BitField = require_BitField();
 
   class IntentsBitField extends BitField {
@@ -33502,7 +38914,7 @@ var require_Client = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { OAuth2Scopes, Routes } = require_v106();
+  var { OAuth2Scopes, Routes } = require_v1012();
   var BaseClient = require_BaseClient();
   var ActionsManager = require_ActionsManager();
   var ClientVoiceManager = require_ClientVoiceManager();
@@ -34490,6 +39902,7 @@ var require_src = __commonJS((exports) => {
   exports.Formatters = require_Formatters();
   exports.GuildMemberFlagsBitField = require_GuildMemberFlagsBitField().GuildMemberFlagsBitField;
   exports.IntentsBitField = require_IntentsBitField();
+  exports.InviteFlagsBitField = require_InviteFlagsBitField().InviteFlagsBitField;
   exports.LimitedCollection = require_LimitedCollection();
   exports.MessageFlagsBitField = require_MessageFlagsBitField();
   exports.Options = require_Options();
@@ -34535,6 +39948,7 @@ var require_src = __commonJS((exports) => {
   exports.GuildTextThreadManager = require_GuildTextThreadManager();
   exports.MessageManager = require_MessageManager();
   exports.PermissionOverwriteManager = require_PermissionOverwriteManager();
+  exports.PollAnswerVoterManager = require_PollAnswerVoterManager().PollAnswerVoterManager;
   exports.PresenceManager = require_PresenceManager();
   exports.ReactionManager = require_ReactionManager();
   exports.ReactionUserManager = require_ReactionUserManager();
@@ -34612,6 +40026,7 @@ var require_src = __commonJS((exports) => {
   exports.Invite = require_Invite();
   exports.InviteStageInstance = require_InviteStageInstance();
   exports.InviteGuild = require_InviteGuild();
+  exports.LabelComponent = require_LabelComponent();
   exports.Message = require_Message().Message;
   exports.Attachment = require_Attachment();
   exports.AttachmentBuilder = require_AttachmentBuilder();
@@ -34693,7 +40108,7 @@ var require_src = __commonJS((exports) => {
   exports.WidgetMember = require_WidgetMember();
   exports.WelcomeChannel = require_WelcomeChannel();
   exports.WelcomeScreen = require_WelcomeScreen();
-  __exportStar(require_v106(), exports);
+  __exportStar(require_v1012(), exports);
   __exportStar(require_dist8(), exports);
   __exportStar(require_dist7(), exports);
   __exportStar(require_dist5(), exports);
