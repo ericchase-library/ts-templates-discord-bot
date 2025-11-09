@@ -6952,7 +6952,7 @@ var require_globals2 = __commonJS((exports) => {
     Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
     AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
     StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRTdft]))?>/,
+    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRSTdfst]))?>/,
     DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
     StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/,
     GuildNavigation: /<id:(?<type>customize|browse|guide|linked-roles)>/,
@@ -7398,6 +7398,7 @@ var require_guild2 = __commonJS((exports) => {
     GuildFeature2["GuildTags"] = "GUILD_TAGS";
     GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
     GuildFeature2["GuestsEnabled"] = "GUESTS_ENABLED";
+    GuildFeature2["PinPermissionMigrationComplete"] = "PIN_PERMISSION_MIGRATION_COMPLETE";
   })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
   var GuildMemberFlags;
   (function(GuildMemberFlags2) {
@@ -8076,6 +8077,8 @@ var require_webhook2 = __commonJS((exports) => {
     ApplicationWebhookEventType2["ApplicationAuthorized"] = "APPLICATION_AUTHORIZED";
     ApplicationWebhookEventType2["ApplicationDeauthorized"] = "APPLICATION_DEAUTHORIZED";
     ApplicationWebhookEventType2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    ApplicationWebhookEventType2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
+    ApplicationWebhookEventType2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
     ApplicationWebhookEventType2["QuestUserEnrollment"] = "QUEST_USER_ENROLLMENT";
   })(ApplicationWebhookEventType || (exports.ApplicationWebhookEventType = ApplicationWebhookEventType = {}));
   var WebhookType;
@@ -8579,6 +8582,9 @@ var require_v109 = __commonJS((exports) => {
     },
     guildRole(guildId, roleId) {
       return `/guilds/${guildId}/roles/${roleId}`;
+    },
+    guildRoleMemberCounts(guildId) {
+      return `/guilds/${guildId}/roles/member-counts`;
     },
     guildPrune(guildId) {
       return `/guilds/${guildId}/prune`;
@@ -12117,7 +12123,7 @@ var require_package = __commonJS((exports, module) => {
   module.exports = {
     $schema: "https://json.schemastore.org/package.json",
     name: "discord.js",
-    version: "14.23.2",
+    version: "14.24.2",
     description: "A powerful library for interacting with the Discord API",
     main: "./src/index.js",
     types: "./typings/index.d.ts",
@@ -12169,12 +12175,12 @@ var require_package = __commonJS((exports, module) => {
     homepage: "https://discord.js.org",
     funding: "https://github.com/discordjs/discord.js?sponsor",
     dependencies: {
-      "@discordjs/builders": "^1.12.1",
+      "@discordjs/builders": "^1.13.0",
       "@discordjs/collection": "1.5.3",
       "@discordjs/formatters": "^0.6.1",
       "@discordjs/ws": "^1.2.3",
       "@sapphire/snowflake": "3.5.3",
-      "discord-api-types": "^0.38.29",
+      "discord-api-types": "^0.38.31",
       "fast-deep-equal": "3.1.3",
       "lodash.snakecase": "4.1.1",
       "magic-bytes.js": "^1.10.0",
@@ -12199,8 +12205,8 @@ var require_package = __commonJS((exports, module) => {
       turbo: "^2.0.14",
       typescript: "~5.5.4",
       "@discordjs/api-extractor": "^7.38.1",
-      "@discordjs/docgen": "^0.12.1",
-      "@discordjs/scripts": "^0.1.0"
+      "@discordjs/scripts": "^0.1.0",
+      "@discordjs/docgen": "^0.12.1"
     },
     engines: {
       node: ">=18"
@@ -19451,19 +19457,21 @@ var require_dist8 = __commonJS((exports, module) => {
     ChannelSelectMenuBuilder: () => ChannelSelectMenuBuilder,
     ComponentAssertions: () => Assertions_exports2,
     ComponentBuilder: () => ComponentBuilder,
-    ComponentsV2Assertions: () => Assertions_exports5,
+    ComponentsV2Assertions: () => Assertions_exports6,
     ContainerBuilder: () => ContainerBuilder,
-    ContextMenuCommandAssertions: () => Assertions_exports8,
+    ContextMenuCommandAssertions: () => Assertions_exports9,
     ContextMenuCommandBuilder: () => ContextMenuCommandBuilder,
     EmbedAssertions: () => Assertions_exports,
     EmbedBuilder: () => EmbedBuilder,
     FileBuilder: () => FileBuilder,
-    LabelAssertions: () => Assertions_exports4,
+    FileUploadAssertions: () => Assertions_exports3,
+    FileUploadBuilder: () => FileUploadBuilder,
+    LabelAssertions: () => Assertions_exports5,
     LabelBuilder: () => LabelBuilder,
     MediaGalleryBuilder: () => MediaGalleryBuilder,
     MediaGalleryItemBuilder: () => MediaGalleryItemBuilder,
     MentionableSelectMenuBuilder: () => MentionableSelectMenuBuilder,
-    ModalAssertions: () => Assertions_exports6,
+    ModalAssertions: () => Assertions_exports7,
     ModalBuilder: () => ModalBuilder,
     RoleSelectMenuBuilder: () => RoleSelectMenuBuilder,
     SectionBuilder: () => SectionBuilder,
@@ -19474,7 +19482,7 @@ var require_dist8 = __commonJS((exports, module) => {
     SharedSlashCommand: () => SharedSlashCommand,
     SharedSlashCommandOptions: () => SharedSlashCommandOptions,
     SharedSlashCommandSubcommands: () => SharedSlashCommandSubcommands,
-    SlashCommandAssertions: () => Assertions_exports7,
+    SlashCommandAssertions: () => Assertions_exports8,
     SlashCommandAttachmentOption: () => SlashCommandAttachmentOption,
     SlashCommandBooleanOption: () => SlashCommandBooleanOption,
     SlashCommandBuilder: () => SlashCommandBuilder,
@@ -19490,7 +19498,7 @@ var require_dist8 = __commonJS((exports, module) => {
     StringSelectMenuBuilder: () => StringSelectMenuBuilder,
     StringSelectMenuOptionBuilder: () => StringSelectMenuOptionBuilder,
     TextDisplayBuilder: () => TextDisplayBuilder,
-    TextInputAssertions: () => Assertions_exports3,
+    TextInputAssertions: () => Assertions_exports4,
     TextInputBuilder: () => TextInputBuilder,
     ThumbnailBuilder: () => ThumbnailBuilder,
     UserSelectMenuBuilder: () => UserSelectMenuBuilder,
@@ -19801,7 +19809,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   }
   __name(validateRequiredButtonParameters, "validateRequiredButtonParameters");
-  var import_v1022 = require_v1012();
+  var import_v1024 = require_v1012();
   var ComponentBuilder = class {
     static {
       __name(this, "ComponentBuilder");
@@ -19819,7 +19827,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1021 = require_v1012();
+  var import_v1023 = require_v1012();
   var import_v102 = require_v1012();
   var ButtonBuilder = class extends ComponentBuilder {
     static {
@@ -19863,10 +19871,61 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1012 = require_v1012();
   var import_v104 = require_v1012();
   var Assertions_exports3 = {};
   __export(Assertions_exports3, {
+    fileUploadPredicate: () => fileUploadPredicate
+  });
+  var import_shapeshift3 = require_cjs3();
+  var import_v103 = require_v1012();
+  var fileUploadPredicate = import_shapeshift3.s.object({
+    type: import_shapeshift3.s.literal(import_v103.ComponentType.FileUpload),
+    id: idValidator.optional(),
+    custom_id: customIdValidator,
+    min_values: import_shapeshift3.s.number().greaterThanOrEqual(0).lessThanOrEqual(10).optional(),
+    max_values: import_shapeshift3.s.number().greaterThanOrEqual(1).lessThanOrEqual(10).optional(),
+    required: import_shapeshift3.s.boolean().optional()
+  });
+  var FileUploadBuilder = class extends ComponentBuilder {
+    static {
+      __name(this, "FileUploadBuilder");
+    }
+    constructor(data = {}) {
+      super({ type: import_v104.ComponentType.FileUpload, ...data });
+    }
+    setCustomId(customId) {
+      this.data.custom_id = customId;
+      return this;
+    }
+    setMinValues(minValues) {
+      this.data.min_values = minValues;
+      return this;
+    }
+    clearMinValues() {
+      this.data.min_values = undefined;
+      return this;
+    }
+    setMaxValues(maxValues) {
+      this.data.max_values = maxValues;
+      return this;
+    }
+    clearMaxValues() {
+      this.data.max_values = undefined;
+      return this;
+    }
+    setRequired(required = true) {
+      this.data.required = required;
+      return this;
+    }
+    toJSON() {
+      fileUploadPredicate.parse(this.data);
+      return this.data;
+    }
+  };
+  var import_v1014 = require_v1012();
+  var import_v106 = require_v1012();
+  var Assertions_exports4 = {};
+  __export(Assertions_exports4, {
     labelValidator: () => labelValidator,
     maxLengthValidator: () => maxLengthValidator,
     minLengthValidator: () => minLengthValidator,
@@ -19877,17 +19936,17 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredParameters: () => validateRequiredParameters,
     valueValidator: () => valueValidator
   });
-  var import_shapeshift3 = require_cjs3();
-  var import_v103 = require_v1012();
-  var textInputStyleValidator = import_shapeshift3.s.nativeEnum(import_v103.TextInputStyle).setValidationEnabled(isValidationEnabled);
-  var minLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(0).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var maxLengthValidator = import_shapeshift3.s.number().int().greaterThanOrEqual(1).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var requiredValidator = import_shapeshift3.s.boolean().setValidationEnabled(isValidationEnabled);
-  var valueValidator = import_shapeshift3.s.string().lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var placeholderValidator2 = import_shapeshift3.s.string().lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
-  var labelValidator = import_shapeshift3.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
-  var textInputPredicate = import_shapeshift3.s.object({
-    type: import_shapeshift3.s.literal(import_v103.ComponentType.TextInput),
+  var import_shapeshift4 = require_cjs3();
+  var import_v105 = require_v1012();
+  var textInputStyleValidator = import_shapeshift4.s.nativeEnum(import_v105.TextInputStyle).setValidationEnabled(isValidationEnabled);
+  var minLengthValidator = import_shapeshift4.s.number().int().greaterThanOrEqual(0).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var maxLengthValidator = import_shapeshift4.s.number().int().greaterThanOrEqual(1).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var requiredValidator = import_shapeshift4.s.boolean().setValidationEnabled(isValidationEnabled);
+  var valueValidator = import_shapeshift4.s.string().lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var placeholderValidator2 = import_shapeshift4.s.string().lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
+  var labelValidator = import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
+  var textInputPredicate = import_shapeshift4.s.object({
+    type: import_shapeshift4.s.literal(import_v105.ComponentType.TextInput),
     custom_id: customIdValidator,
     style: textInputStyleValidator,
     id: idValidator.optional(),
@@ -19942,7 +20001,7 @@ var require_dist8 = __commonJS((exports, module) => {
       __name(this, "ChannelSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v104.ComponentType.ChannelSelect });
+      super({ ...data, type: import_v106.ComponentType.ChannelSelect });
     }
     addChannelTypes(...types) {
       const normalizedTypes = normalizeArray(types);
@@ -19962,7 +20021,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v104.SelectMenuDefaultValueType.Channel
+        type: import_v106.SelectMenuDefaultValueType.Channel
       })));
       return this;
     }
@@ -19971,7 +20030,7 @@ var require_dist8 = __commonJS((exports, module) => {
       optionsLengthValidator.parse(normalizedValues.length);
       this.data.default_values = normalizedValues.map((id) => ({
         id,
-        type: import_v104.SelectMenuDefaultValueType.Channel
+        type: import_v106.SelectMenuDefaultValueType.Channel
       }));
       return this;
     }
@@ -19982,13 +20041,13 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v105 = require_v1012();
+  var import_v107 = require_v1012();
   var MentionableSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "MentionableSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v105.ComponentType.MentionableSelect });
+      super({ ...data, type: import_v107.ComponentType.MentionableSelect });
     }
     addDefaultRoles(...roles) {
       const normalizedValues = normalizeArray(roles);
@@ -19996,7 +20055,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v105.SelectMenuDefaultValueType.Role
+        type: import_v107.SelectMenuDefaultValueType.Role
       })));
       return this;
     }
@@ -20006,7 +20065,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v105.SelectMenuDefaultValueType.User
+        type: import_v107.SelectMenuDefaultValueType.User
       })));
       return this;
     }
@@ -20024,13 +20083,13 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v106 = require_v1012();
+  var import_v108 = require_v1012();
   var RoleSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "RoleSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v106.ComponentType.RoleSelect });
+      super({ ...data, type: import_v108.ComponentType.RoleSelect });
     }
     addDefaultRoles(...roles) {
       const normalizedValues = normalizeArray(roles);
@@ -20038,7 +20097,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v106.SelectMenuDefaultValueType.Role
+        type: import_v108.SelectMenuDefaultValueType.Role
       })));
       return this;
     }
@@ -20047,12 +20106,12 @@ var require_dist8 = __commonJS((exports, module) => {
       optionsLengthValidator.parse(normalizedValues.length);
       this.data.default_values = normalizedValues.map((id) => ({
         id,
-        type: import_v106.SelectMenuDefaultValueType.Role
+        type: import_v108.SelectMenuDefaultValueType.Role
       }));
       return this;
     }
   };
-  var import_v107 = require_v1012();
+  var import_v109 = require_v1012();
   var StringSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "StringSelectMenuBuilder");
@@ -20060,7 +20119,7 @@ var require_dist8 = __commonJS((exports, module) => {
     options;
     constructor(data) {
       const { options, ...initData } = data ?? {};
-      super({ ...initData, type: import_v107.ComponentType.StringSelect });
+      super({ ...initData, type: import_v109.ComponentType.StringSelect });
       this.options = options?.map((option) => new StringSelectMenuOptionBuilder(option)) ?? [];
     }
     addOptions(...options) {
@@ -20088,13 +20147,13 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v108 = require_v1012();
+  var import_v1010 = require_v1012();
   var UserSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "UserSelectMenuBuilder");
     }
     constructor(data) {
-      super({ ...data, type: import_v108.ComponentType.UserSelect });
+      super({ ...data, type: import_v1010.ComponentType.UserSelect });
     }
     addDefaultUsers(...users) {
       const normalizedValues = normalizeArray(users);
@@ -20102,7 +20161,7 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.default_values ??= [];
       this.data.default_values.push(...normalizedValues.map((id) => ({
         id,
-        type: import_v108.SelectMenuDefaultValueType.User
+        type: import_v1010.SelectMenuDefaultValueType.User
       })));
       return this;
     }
@@ -20111,20 +20170,20 @@ var require_dist8 = __commonJS((exports, module) => {
       optionsLengthValidator.parse(normalizedValues.length);
       this.data.default_values = normalizedValues.map((id) => ({
         id,
-        type: import_v108.SelectMenuDefaultValueType.User
+        type: import_v1010.SelectMenuDefaultValueType.User
       }));
       return this;
     }
   };
   var import_util = require_dist();
-  var import_v109 = require_v1012();
+  var import_v1011 = require_v1012();
   var import_fast_deep_equal = __toESM2(require_fast_deep_equal());
   var TextInputBuilder = class extends ComponentBuilder {
     static {
       __name(this, "TextInputBuilder");
     }
     constructor(data) {
-      super({ type: import_v109.ComponentType.TextInput, ...data });
+      super({ type: import_v1011.ComponentType.TextInput, ...data });
     }
     setCustomId(customId) {
       this.data.custom_id = customIdValidator.parse(customId);
@@ -20171,73 +20230,74 @@ var require_dist8 = __commonJS((exports, module) => {
       return (0, import_fast_deep_equal.default)(other, this.data);
     }
   };
-  var Assertions_exports4 = {};
-  __export(Assertions_exports4, {
+  var Assertions_exports5 = {};
+  __export(Assertions_exports5, {
     labelPredicate: () => labelPredicate
   });
+  var import_shapeshift6 = require_cjs3();
+  var import_v1013 = require_v1012();
   var import_shapeshift5 = require_cjs3();
-  var import_v1011 = require_v1012();
-  var import_shapeshift4 = require_cjs3();
-  var import_v1010 = require_v1012();
-  var selectMenuBasePredicate = import_shapeshift4.s.object({
+  var import_v1012 = require_v1012();
+  var selectMenuBasePredicate = import_shapeshift5.s.object({
     id: idValidator.optional(),
-    placeholder: import_shapeshift4.s.string().lengthLessThanOrEqual(150).optional(),
-    min_values: import_shapeshift4.s.number().greaterThanOrEqual(0).lessThanOrEqual(25).optional(),
-    max_values: import_shapeshift4.s.number().greaterThanOrEqual(0).lessThanOrEqual(25).optional(),
+    placeholder: import_shapeshift5.s.string().lengthLessThanOrEqual(150).optional(),
+    min_values: import_shapeshift5.s.number().greaterThanOrEqual(0).lessThanOrEqual(25).optional(),
+    max_values: import_shapeshift5.s.number().greaterThanOrEqual(0).lessThanOrEqual(25).optional(),
     custom_id: customIdValidator,
-    disabled: import_shapeshift4.s.boolean().optional()
+    disabled: import_shapeshift5.s.boolean().optional()
   });
   var selectMenuChannelPredicate = selectMenuBasePredicate.extend({
-    type: import_shapeshift4.s.literal(import_v1010.ComponentType.ChannelSelect),
-    channel_types: import_shapeshift4.s.nativeEnum(import_v1010.ChannelType).array().optional(),
-    default_values: import_shapeshift4.s.object({ id: import_shapeshift4.s.string(), type: import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.Channel) }).array().lengthLessThanOrEqual(25).optional()
+    type: import_shapeshift5.s.literal(import_v1012.ComponentType.ChannelSelect),
+    channel_types: import_shapeshift5.s.nativeEnum(import_v1012.ChannelType).array().optional(),
+    default_values: import_shapeshift5.s.object({ id: import_shapeshift5.s.string(), type: import_shapeshift5.s.literal(import_v1012.SelectMenuDefaultValueType.Channel) }).array().lengthLessThanOrEqual(25).optional()
   }).setValidationEnabled(isValidationEnabled);
   var selectMenuMentionablePredicate = selectMenuBasePredicate.extend({
-    type: import_shapeshift4.s.literal(import_v1010.ComponentType.MentionableSelect),
-    default_values: import_shapeshift4.s.object({
-      id: import_shapeshift4.s.string(),
-      type: import_shapeshift4.s.union([import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.Role), import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.User)])
+    type: import_shapeshift5.s.literal(import_v1012.ComponentType.MentionableSelect),
+    default_values: import_shapeshift5.s.object({
+      id: import_shapeshift5.s.string(),
+      type: import_shapeshift5.s.union([import_shapeshift5.s.literal(import_v1012.SelectMenuDefaultValueType.Role), import_shapeshift5.s.literal(import_v1012.SelectMenuDefaultValueType.User)])
     }).array().lengthLessThanOrEqual(25).optional()
   }).setValidationEnabled(isValidationEnabled);
   var selectMenuRolePredicate = selectMenuBasePredicate.extend({
-    type: import_shapeshift4.s.literal(import_v1010.ComponentType.RoleSelect),
-    default_values: import_shapeshift4.s.object({ id: import_shapeshift4.s.string(), type: import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.Role) }).array().lengthLessThanOrEqual(25).optional()
+    type: import_shapeshift5.s.literal(import_v1012.ComponentType.RoleSelect),
+    default_values: import_shapeshift5.s.object({ id: import_shapeshift5.s.string(), type: import_shapeshift5.s.literal(import_v1012.SelectMenuDefaultValueType.Role) }).array().lengthLessThanOrEqual(25).optional()
   }).setValidationEnabled(isValidationEnabled);
   var selectMenuUserPredicate = selectMenuBasePredicate.extend({
-    type: import_shapeshift4.s.literal(import_v1010.ComponentType.UserSelect),
-    default_values: import_shapeshift4.s.object({ id: import_shapeshift4.s.string(), type: import_shapeshift4.s.literal(import_v1010.SelectMenuDefaultValueType.User) }).array().lengthLessThanOrEqual(25).optional()
+    type: import_shapeshift5.s.literal(import_v1012.ComponentType.UserSelect),
+    default_values: import_shapeshift5.s.object({ id: import_shapeshift5.s.string(), type: import_shapeshift5.s.literal(import_v1012.SelectMenuDefaultValueType.User) }).array().lengthLessThanOrEqual(25).optional()
   }).setValidationEnabled(isValidationEnabled);
-  var selectMenuStringOptionPredicate = import_shapeshift4.s.object({
+  var selectMenuStringOptionPredicate = import_shapeshift5.s.object({
     label: labelValidator,
-    value: import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100),
-    description: import_shapeshift4.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).optional(),
+    value: import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100),
+    description: import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).optional(),
     emoji: emojiValidator.optional(),
-    default: import_shapeshift4.s.boolean().optional()
+    default: import_shapeshift5.s.boolean().optional()
   }).setValidationEnabled(isValidationEnabled);
   var selectMenuStringPredicate = selectMenuBasePredicate.extend({
-    type: import_shapeshift4.s.literal(import_v1010.ComponentType.StringSelect),
+    type: import_shapeshift5.s.literal(import_v1012.ComponentType.StringSelect),
     options: selectMenuStringOptionPredicate.array().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(25)
   }).reshape((value) => {
     if (value.min_values !== undefined && value.options.length < value.min_values) {
-      return import_shapeshift4.Result.err(new RangeError(`The number of options must be greater than or equal to min_values`));
+      return import_shapeshift5.Result.err(new RangeError(`The number of options must be greater than or equal to min_values`));
     }
     if (value.min_values !== undefined && value.max_values !== undefined && value.min_values > value.max_values) {
-      return import_shapeshift4.Result.err(new RangeError(`The maximum amount of options must be greater than or equal to the minimum amount of options`));
+      return import_shapeshift5.Result.err(new RangeError(`The maximum amount of options must be greater than or equal to the minimum amount of options`));
     }
-    return import_shapeshift4.Result.ok(value);
+    return import_shapeshift5.Result.ok(value);
   }).setValidationEnabled(isValidationEnabled);
-  var labelPredicate = import_shapeshift5.s.object({
+  var labelPredicate = import_shapeshift6.s.object({
     id: idValidator.optional(),
-    type: import_shapeshift5.s.literal(import_v1011.ComponentType.Label),
-    label: import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45),
-    description: import_shapeshift5.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).optional(),
-    component: import_shapeshift5.s.union([
+    type: import_shapeshift6.s.literal(import_v1013.ComponentType.Label),
+    label: import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45),
+    description: import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).optional(),
+    component: import_shapeshift6.s.union([
       textInputPredicate,
       selectMenuUserPredicate,
       selectMenuRolePredicate,
       selectMenuMentionablePredicate,
       selectMenuChannelPredicate,
-      selectMenuStringPredicate
+      selectMenuStringPredicate,
+      fileUploadPredicate
     ])
   }).setValidationEnabled(isValidationEnabled);
   var LabelBuilder = class extends ComponentBuilder {
@@ -20246,12 +20306,12 @@ var require_dist8 = __commonJS((exports, module) => {
     }
     data;
     constructor(data = {}) {
-      super({ type: import_v1012.ComponentType.Label });
+      super({ type: import_v1014.ComponentType.Label });
       const { component, ...rest } = data;
       this.data = {
         ...rest,
         component: component ? createComponentBuilder(component) : undefined,
-        type: import_v1012.ComponentType.Label
+        type: import_v1014.ComponentType.Label
       };
     }
     setLabel(label) {
@@ -20290,6 +20350,10 @@ var require_dist8 = __commonJS((exports, module) => {
       this.data.component = resolveBuilder(input, TextInputBuilder);
       return this;
     }
+    setFileUploadComponent(input) {
+      this.data.component = resolveBuilder(input, FileUploadBuilder);
+      return this;
+    }
     toJSON() {
       const { component, ...rest } = this.data;
       const data = {
@@ -20300,9 +20364,9 @@ var require_dist8 = __commonJS((exports, module) => {
       return data;
     }
   };
-  var import_v1018 = require_v1012();
-  var Assertions_exports5 = {};
-  __export(Assertions_exports5, {
+  var import_v1020 = require_v1012();
+  var Assertions_exports6 = {};
+  __export(Assertions_exports6, {
     accessoryPredicate: () => accessoryPredicate,
     assertReturnOfBuilder: () => assertReturnOfBuilder,
     containerColorPredicate: () => containerColorPredicate,
@@ -20315,16 +20379,16 @@ var require_dist8 = __commonJS((exports, module) => {
     unfurledMediaItemPredicate: () => unfurledMediaItemPredicate,
     validateComponentArray: () => validateComponentArray
   });
-  var import_shapeshift6 = require_cjs3();
-  var import_v1014 = require_v1012();
-  var import_v1013 = require_v1012();
+  var import_shapeshift7 = require_cjs3();
+  var import_v1016 = require_v1012();
+  var import_v1015 = require_v1012();
   var ThumbnailBuilder = class extends ComponentBuilder {
     static {
       __name(this, "ThumbnailBuilder");
     }
     constructor(data = {}) {
       super({
-        type: import_v1013.ComponentType.Thumbnail,
+        type: import_v1015.ComponentType.Thumbnail,
         ...data,
         media: data.media ? { url: data.media.url } : undefined
       });
@@ -20350,34 +20414,34 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data };
     }
   };
-  var unfurledMediaItemPredicate = import_shapeshift6.s.object({
-    url: import_shapeshift6.s.string().url({ allowedProtocols: ["http:", "https:", "attachment:"] }, { message: "Invalid protocol for media URL. Must be http:, https:, or attachment:" })
+  var unfurledMediaItemPredicate = import_shapeshift7.s.object({
+    url: import_shapeshift7.s.string().url({ allowedProtocols: ["http:", "https:", "attachment:"] }, { message: "Invalid protocol for media URL. Must be http:, https:, or attachment:" })
   }).setValidationEnabled(isValidationEnabled);
-  var descriptionPredicate2 = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(1024).setValidationEnabled(isValidationEnabled);
-  var filePredicate = import_shapeshift6.s.object({
-    url: import_shapeshift6.s.string().url({ allowedProtocols: ["attachment:"] }, { message: "Invalid protocol for file URL. Must be attachment:" })
+  var descriptionPredicate2 = import_shapeshift7.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(1024).setValidationEnabled(isValidationEnabled);
+  var filePredicate = import_shapeshift7.s.object({
+    url: import_shapeshift7.s.string().url({ allowedProtocols: ["attachment:"] }, { message: "Invalid protocol for file URL. Must be attachment:" })
   }).setValidationEnabled(isValidationEnabled);
-  var spoilerPredicate = import_shapeshift6.s.boolean();
-  var dividerPredicate = import_shapeshift6.s.boolean();
-  var spacingPredicate = import_shapeshift6.s.nativeEnum(import_v1014.SeparatorSpacingSize);
-  var textDisplayContentPredicate = import_shapeshift6.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
-  var accessoryPredicate = import_shapeshift6.s.instance(ButtonBuilder).or(import_shapeshift6.s.instance(ThumbnailBuilder)).setValidationEnabled(isValidationEnabled);
+  var spoilerPredicate = import_shapeshift7.s.boolean();
+  var dividerPredicate = import_shapeshift7.s.boolean();
+  var spacingPredicate = import_shapeshift7.s.nativeEnum(import_v1016.SeparatorSpacingSize);
+  var textDisplayContentPredicate = import_shapeshift7.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
+  var accessoryPredicate = import_shapeshift7.s.instance(ButtonBuilder).or(import_shapeshift7.s.instance(ThumbnailBuilder)).setValidationEnabled(isValidationEnabled);
   var containerColorPredicate = colorPredicate.nullish();
   function assertReturnOfBuilder(input, ExpectedInstanceOf) {
-    import_shapeshift6.s.instance(ExpectedInstanceOf).setValidationEnabled(isValidationEnabled).parse(input);
+    import_shapeshift7.s.instance(ExpectedInstanceOf).setValidationEnabled(isValidationEnabled).parse(input);
   }
   __name(assertReturnOfBuilder, "assertReturnOfBuilder");
   function validateComponentArray(input, min, max, ExpectedInstanceOf) {
-    (ExpectedInstanceOf ? import_shapeshift6.s.instance(ExpectedInstanceOf) : import_shapeshift6.s.instance(ComponentBuilder)).array().lengthGreaterThanOrEqual(min).lengthLessThanOrEqual(max).setValidationEnabled(isValidationEnabled).parse(input);
+    (ExpectedInstanceOf ? import_shapeshift7.s.instance(ExpectedInstanceOf) : import_shapeshift7.s.instance(ComponentBuilder)).array().lengthGreaterThanOrEqual(min).lengthLessThanOrEqual(max).setValidationEnabled(isValidationEnabled).parse(input);
   }
   __name(validateComponentArray, "validateComponentArray");
-  var import_v1015 = require_v1012();
+  var import_v1017 = require_v1012();
   var FileBuilder = class extends ComponentBuilder {
     static {
       __name(this, "FileBuilder");
     }
     constructor(data = {}) {
-      super({ type: import_v1015.ComponentType.File, ...data, file: data.file ? { url: data.file.url } : undefined });
+      super({ type: import_v1017.ComponentType.File, ...data, file: data.file ? { url: data.file.url } : undefined });
     }
     setSpoiler(spoiler = true) {
       this.data.spoiler = spoilerPredicate.parse(spoiler);
@@ -20392,14 +20456,14 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data, file: { ...this.data.file } };
     }
   };
-  var import_v1016 = require_v1012();
+  var import_v1018 = require_v1012();
   var SeparatorBuilder = class extends ComponentBuilder {
     static {
       __name(this, "SeparatorBuilder");
     }
     constructor(data = {}) {
       super({
-        type: import_v1016.ComponentType.Separator,
+        type: import_v1018.ComponentType.Separator,
         ...data
       });
     }
@@ -20419,14 +20483,14 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data };
     }
   };
-  var import_v1017 = require_v1012();
+  var import_v1019 = require_v1012();
   var TextDisplayBuilder = class extends ComponentBuilder {
     static {
       __name(this, "TextDisplayBuilder");
     }
     constructor(data = {}) {
       super({
-        type: import_v1017.ComponentType.TextDisplay,
+        type: import_v1019.ComponentType.TextDisplay,
         ...data
       });
     }
@@ -20445,7 +20509,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
     components;
     constructor({ components, ...data } = {}) {
-      super({ type: import_v1018.ComponentType.Container, ...data });
+      super({ type: import_v1020.ComponentType.Container, ...data });
       this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
     }
     setAccentColor(color) {
@@ -20501,7 +20565,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1019 = require_v1012();
+  var import_v1021 = require_v1012();
   var MediaGalleryItemBuilder = class {
     static {
       __name(this, "MediaGalleryItemBuilder");
@@ -20537,7 +20601,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
     items;
     constructor({ items, ...data } = {}) {
-      super({ type: import_v1019.ComponentType.MediaGallery, ...data });
+      super({ type: import_v1021.ComponentType.MediaGallery, ...data });
       this.items = items?.map((item) => new MediaGalleryItemBuilder(item)) ?? [];
     }
     addItems(...items) {
@@ -20564,7 +20628,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1020 = require_v1012();
+  var import_v1022 = require_v1012();
   var SectionBuilder = class extends ComponentBuilder {
     static {
       __name(this, "SectionBuilder");
@@ -20572,7 +20636,7 @@ var require_dist8 = __commonJS((exports, module) => {
     components;
     accessory;
     constructor({ components, accessory, ...data } = {}) {
-      super({ type: import_v1020.ComponentType.Section, ...data });
+      super({ type: import_v1022.ComponentType.Section, ...data });
       this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
       this.accessory = accessory ? createComponentBuilder(accessory) : undefined;
     }
@@ -20614,38 +20678,40 @@ var require_dist8 = __commonJS((exports, module) => {
       return data;
     }
     switch (data.type) {
-      case import_v1021.ComponentType.ActionRow:
+      case import_v1023.ComponentType.ActionRow:
         return new ActionRowBuilder(data);
-      case import_v1021.ComponentType.Button:
+      case import_v1023.ComponentType.Button:
         return new ButtonBuilder(data);
-      case import_v1021.ComponentType.StringSelect:
+      case import_v1023.ComponentType.StringSelect:
         return new StringSelectMenuBuilder(data);
-      case import_v1021.ComponentType.TextInput:
+      case import_v1023.ComponentType.TextInput:
         return new TextInputBuilder(data);
-      case import_v1021.ComponentType.UserSelect:
+      case import_v1023.ComponentType.UserSelect:
         return new UserSelectMenuBuilder(data);
-      case import_v1021.ComponentType.RoleSelect:
+      case import_v1023.ComponentType.RoleSelect:
         return new RoleSelectMenuBuilder(data);
-      case import_v1021.ComponentType.MentionableSelect:
+      case import_v1023.ComponentType.MentionableSelect:
         return new MentionableSelectMenuBuilder(data);
-      case import_v1021.ComponentType.ChannelSelect:
+      case import_v1023.ComponentType.ChannelSelect:
         return new ChannelSelectMenuBuilder(data);
-      case import_v1021.ComponentType.File:
+      case import_v1023.ComponentType.File:
         return new FileBuilder(data);
-      case import_v1021.ComponentType.Container:
+      case import_v1023.ComponentType.Container:
         return new ContainerBuilder(data);
-      case import_v1021.ComponentType.Section:
+      case import_v1023.ComponentType.Section:
         return new SectionBuilder(data);
-      case import_v1021.ComponentType.Separator:
+      case import_v1023.ComponentType.Separator:
         return new SeparatorBuilder(data);
-      case import_v1021.ComponentType.TextDisplay:
+      case import_v1023.ComponentType.TextDisplay:
         return new TextDisplayBuilder(data);
-      case import_v1021.ComponentType.Thumbnail:
+      case import_v1023.ComponentType.Thumbnail:
         return new ThumbnailBuilder(data);
-      case import_v1021.ComponentType.MediaGallery:
+      case import_v1023.ComponentType.MediaGallery:
         return new MediaGalleryBuilder(data);
-      case import_v1021.ComponentType.Label:
+      case import_v1023.ComponentType.Label:
         return new LabelBuilder(data);
+      case import_v1023.ComponentType.FileUpload:
+        return new FileUploadBuilder(data);
       default:
         throw new Error(`Cannot properly serialize component type: ${data.type}`);
     }
@@ -20671,7 +20737,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
     components;
     constructor({ components, ...data } = {}) {
-      super({ type: import_v1022.ComponentType.ActionRow, ...data });
+      super({ type: import_v1024.ComponentType.ActionRow, ...data });
       this.components = components?.map((component) => createComponentBuilder(component)) ?? [];
     }
     addComponents(...components) {
@@ -20689,16 +20755,16 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1023 = require_v1012();
-  var Assertions_exports6 = {};
-  __export(Assertions_exports6, {
+  var import_v1025 = require_v1012();
+  var Assertions_exports7 = {};
+  __export(Assertions_exports7, {
     componentsValidator: () => componentsValidator,
     titleValidator: () => titleValidator,
     validateRequiredParameters: () => validateRequiredParameters2
   });
-  var import_shapeshift7 = require_cjs3();
-  var titleValidator = import_shapeshift7.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
-  var componentsValidator = import_shapeshift7.s.union([import_shapeshift7.s.instance(ActionRowBuilder), import_shapeshift7.s.instance(LabelBuilder), import_shapeshift7.s.instance(TextDisplayBuilder)]).array().lengthGreaterThanOrEqual(1).setValidationEnabled(isValidationEnabled);
+  var import_shapeshift8 = require_cjs3();
+  var titleValidator = import_shapeshift8.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(45).setValidationEnabled(isValidationEnabled);
+  var componentsValidator = import_shapeshift8.s.union([import_shapeshift8.s.instance(ActionRowBuilder), import_shapeshift8.s.instance(LabelBuilder), import_shapeshift8.s.instance(TextDisplayBuilder)]).array().lengthGreaterThanOrEqual(1).setValidationEnabled(isValidationEnabled);
   function validateRequiredParameters2(customId, title, components) {
     customIdValidator.parse(customId);
     titleValidator.parse(title);
@@ -20732,16 +20798,16 @@ var require_dist8 = __commonJS((exports, module) => {
           return new ActionRowBuilder().addComponents(component);
         }
         if ("type" in component) {
-          if (component.type === import_v1023.ComponentType.ActionRow) {
+          if (component.type === import_v1025.ComponentType.ActionRow) {
             return new ActionRowBuilder(component);
           }
-          if (component.type === import_v1023.ComponentType.Label) {
+          if (component.type === import_v1025.ComponentType.Label) {
             return new LabelBuilder(component);
           }
-          if (component.type === import_v1023.ComponentType.TextDisplay) {
+          if (component.type === import_v1025.ComponentType.TextDisplay) {
             return new TextDisplayBuilder(component);
           }
-          if (component.type === import_v1023.ComponentType.TextInput) {
+          if (component.type === import_v1025.ComponentType.TextInput) {
             return new ActionRowBuilder().addComponents(new TextInputBuilder(component));
           }
         }
@@ -20789,8 +20855,8 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var Assertions_exports7 = {};
-  __export(Assertions_exports7, {
+  var Assertions_exports8 = {};
+  __export(Assertions_exports8, {
     assertReturnOfBuilder: () => assertReturnOfBuilder2,
     contextsPredicate: () => contextsPredicate,
     integrationTypesPredicate: () => integrationTypesPredicate,
@@ -20808,20 +20874,20 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequired: () => validateRequired,
     validateRequiredParameters: () => validateRequiredParameters3
   });
-  var import_shapeshift8 = require_cjs3();
-  var import_v1024 = require_v1012();
-  var namePredicate = import_shapeshift8.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
+  var import_shapeshift9 = require_cjs3();
+  var import_v1026 = require_v1012();
+  var namePredicate = import_shapeshift9.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
   function validateName(name) {
     namePredicate.parse(name);
   }
   __name(validateName, "validateName");
-  var descriptionPredicate3 = import_shapeshift8.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
-  var localePredicate = import_shapeshift8.s.nativeEnum(import_v1024.Locale);
+  var descriptionPredicate3 = import_shapeshift9.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100).setValidationEnabled(isValidationEnabled);
+  var localePredicate = import_shapeshift9.s.nativeEnum(import_v1026.Locale);
   function validateDescription(description) {
     descriptionPredicate3.parse(description);
   }
   __name(validateDescription, "validateDescription");
-  var maxArrayLengthPredicate = import_shapeshift8.s.unknown().array().lengthLessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
+  var maxArrayLengthPredicate = import_shapeshift9.s.unknown().array().lengthLessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
   function validateLocale(locale) {
     return localePredicate.parse(locale);
   }
@@ -20836,7 +20902,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateMaxOptionsLength(options);
   }
   __name(validateRequiredParameters3, "validateRequiredParameters");
-  var booleanPredicate = import_shapeshift8.s.boolean();
+  var booleanPredicate = import_shapeshift9.s.boolean();
   function validateDefaultPermission(value) {
     booleanPredicate.parse(value);
   }
@@ -20845,29 +20911,29 @@ var require_dist8 = __commonJS((exports, module) => {
     booleanPredicate.parse(required);
   }
   __name(validateRequired, "validateRequired");
-  var choicesLengthPredicate = import_shapeshift8.s.number().lessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
+  var choicesLengthPredicate = import_shapeshift9.s.number().lessThanOrEqual(25).setValidationEnabled(isValidationEnabled);
   function validateChoicesLength(amountAdding, choices) {
     choicesLengthPredicate.parse((choices?.length ?? 0) + amountAdding);
   }
   __name(validateChoicesLength, "validateChoicesLength");
   function assertReturnOfBuilder2(input, ExpectedInstanceOf) {
-    import_shapeshift8.s.instance(ExpectedInstanceOf).parse(input);
+    import_shapeshift9.s.instance(ExpectedInstanceOf).parse(input);
   }
   __name(assertReturnOfBuilder2, "assertReturnOfBuilder");
-  var localizationMapPredicate = import_shapeshift8.s.object(Object.fromEntries(Object.values(import_v1024.Locale).map((locale) => [locale, import_shapeshift8.s.string().nullish()]))).strict().nullish().setValidationEnabled(isValidationEnabled);
+  var localizationMapPredicate = import_shapeshift9.s.object(Object.fromEntries(Object.values(import_v1026.Locale).map((locale) => [locale, import_shapeshift9.s.string().nullish()]))).strict().nullish().setValidationEnabled(isValidationEnabled);
   function validateLocalizationMap(value) {
     localizationMapPredicate.parse(value);
   }
   __name(validateLocalizationMap, "validateLocalizationMap");
-  var dmPermissionPredicate = import_shapeshift8.s.boolean().nullish();
+  var dmPermissionPredicate = import_shapeshift9.s.boolean().nullish();
   function validateDMPermission(value) {
     dmPermissionPredicate.parse(value);
   }
   __name(validateDMPermission, "validateDMPermission");
-  var memberPermissionPredicate = import_shapeshift8.s.union([
-    import_shapeshift8.s.bigint().transform((value) => value.toString()),
-    import_shapeshift8.s.number().safeInt().transform((value) => value.toString()),
-    import_shapeshift8.s.string().regex(/^\d+$/)
+  var memberPermissionPredicate = import_shapeshift9.s.union([
+    import_shapeshift9.s.bigint().transform((value) => value.toString()),
+    import_shapeshift9.s.number().safeInt().transform((value) => value.toString()),
+    import_shapeshift9.s.string().regex(/^\d+$/)
   ]).nullish();
   function validateDefaultMemberPermissions(permissions) {
     return memberPermissionPredicate.parse(permissions);
@@ -20877,8 +20943,8 @@ var require_dist8 = __commonJS((exports, module) => {
     booleanPredicate.parse(value);
   }
   __name(validateNSFW, "validateNSFW");
-  var contextsPredicate = import_shapeshift8.s.array(import_shapeshift8.s.nativeEnum(import_v1024.InteractionContextType).setValidationEnabled(isValidationEnabled));
-  var integrationTypesPredicate = import_shapeshift8.s.array(import_shapeshift8.s.nativeEnum(import_v1024.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
+  var contextsPredicate = import_shapeshift9.s.array(import_shapeshift9.s.nativeEnum(import_v1026.InteractionContextType).setValidationEnabled(isValidationEnabled));
+  var integrationTypesPredicate = import_shapeshift9.s.array(import_shapeshift9.s.nativeEnum(import_v1026.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
   var import_ts_mixer6 = require_cjs4();
   var SharedNameAndDescription = class {
     static {
@@ -20947,7 +21013,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1025 = require_v1012();
+  var import_v1027 = require_v1012();
   var SharedSlashCommand = class {
     static {
       __name(this, "SharedSlashCommand");
@@ -20997,12 +21063,12 @@ var require_dist8 = __commonJS((exports, module) => {
       validateLocalizationMap(this.description_localizations);
       return {
         ...this,
-        type: import_v1025.ApplicationCommandType.ChatInput,
+        type: import_v1027.ApplicationCommandType.ChatInput,
         options: this.options.map((option) => option.toJSON())
       };
     }
   };
-  var import_v1026 = require_v1012();
+  var import_v1028 = require_v1012();
   var ApplicationCommandOptionBase = class extends SharedNameAndDescription {
     static {
       __name(this, "ApplicationCommandOptionBase");
@@ -21024,40 +21090,40 @@ var require_dist8 = __commonJS((exports, module) => {
     static {
       __name(this, "SlashCommandAttachmentOption");
     }
-    type = import_v1026.ApplicationCommandOptionType.Attachment;
-    toJSON() {
-      this.runRequiredValidations();
-      return { ...this };
-    }
-  };
-  var import_v1027 = require_v1012();
-  var SlashCommandBooleanOption = class extends ApplicationCommandOptionBase {
-    static {
-      __name(this, "SlashCommandBooleanOption");
-    }
-    type = import_v1027.ApplicationCommandOptionType.Boolean;
+    type = import_v1028.ApplicationCommandOptionType.Attachment;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
   var import_v1029 = require_v1012();
+  var SlashCommandBooleanOption = class extends ApplicationCommandOptionBase {
+    static {
+      __name(this, "SlashCommandBooleanOption");
+    }
+    type = import_v1029.ApplicationCommandOptionType.Boolean;
+    toJSON() {
+      this.runRequiredValidations();
+      return { ...this };
+    }
+  };
+  var import_v1031 = require_v1012();
   var import_ts_mixer = require_cjs4();
-  var import_shapeshift9 = require_cjs3();
-  var import_v1028 = require_v1012();
+  var import_shapeshift10 = require_cjs3();
+  var import_v1030 = require_v1012();
   var allowedChannelTypes = [
-    import_v1028.ChannelType.GuildText,
-    import_v1028.ChannelType.GuildVoice,
-    import_v1028.ChannelType.GuildCategory,
-    import_v1028.ChannelType.GuildAnnouncement,
-    import_v1028.ChannelType.AnnouncementThread,
-    import_v1028.ChannelType.PublicThread,
-    import_v1028.ChannelType.PrivateThread,
-    import_v1028.ChannelType.GuildStageVoice,
-    import_v1028.ChannelType.GuildForum,
-    import_v1028.ChannelType.GuildMedia
+    import_v1030.ChannelType.GuildText,
+    import_v1030.ChannelType.GuildVoice,
+    import_v1030.ChannelType.GuildCategory,
+    import_v1030.ChannelType.GuildAnnouncement,
+    import_v1030.ChannelType.AnnouncementThread,
+    import_v1030.ChannelType.PublicThread,
+    import_v1030.ChannelType.PrivateThread,
+    import_v1030.ChannelType.GuildStageVoice,
+    import_v1030.ChannelType.GuildForum,
+    import_v1030.ChannelType.GuildMedia
   ];
-  var channelTypesPredicate = import_shapeshift9.s.array(import_shapeshift9.s.union(allowedChannelTypes.map((type) => import_shapeshift9.s.literal(type))));
+  var channelTypesPredicate = import_shapeshift10.s.array(import_shapeshift10.s.union(allowedChannelTypes.map((type) => import_shapeshift10.s.literal(type))));
   var ApplicationCommandOptionChannelTypesMixin = class {
     static {
       __name(this, "ApplicationCommandOptionChannelTypesMixin");
@@ -21072,7 +21138,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var SlashCommandChannelOption = class extends ApplicationCommandOptionBase {
-    type = import_v1029.ApplicationCommandOptionType.Channel;
+    type = import_v1031.ApplicationCommandOptionType.Channel;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
@@ -21082,8 +21148,8 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandChannelOption = __decorateClass([
     (0, import_ts_mixer.mix)(ApplicationCommandOptionChannelTypesMixin)
   ], SlashCommandChannelOption);
-  var import_shapeshift12 = require_cjs3();
-  var import_v1031 = require_v1012();
+  var import_shapeshift13 = require_cjs3();
+  var import_v1033 = require_v1012();
   var import_ts_mixer2 = require_cjs4();
   var ApplicationCommandNumericOptionMinMaxValueMixin = class {
     static {
@@ -21092,8 +21158,8 @@ var require_dist8 = __commonJS((exports, module) => {
     max_value;
     min_value;
   };
-  var import_shapeshift10 = require_cjs3();
-  var booleanPredicate2 = import_shapeshift10.s.boolean();
+  var import_shapeshift11 = require_cjs3();
+  var booleanPredicate2 = import_shapeshift11.s.boolean();
   var ApplicationCommandOptionWithAutocompleteMixin = class {
     static {
       __name(this, "ApplicationCommandOptionWithAutocompleteMixin");
@@ -21109,14 +21175,14 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_shapeshift11 = require_cjs3();
-  var import_v1030 = require_v1012();
-  var stringPredicate = import_shapeshift11.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
-  var numberPredicate = import_shapeshift11.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
-  var choicesPredicate = import_shapeshift11.s.object({
+  var import_shapeshift12 = require_cjs3();
+  var import_v1032 = require_v1012();
+  var stringPredicate = import_shapeshift12.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
+  var numberPredicate = import_shapeshift12.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
+  var choicesPredicate = import_shapeshift12.s.object({
     name: stringPredicate,
     name_localizations: localizationMapPredicate,
-    value: import_shapeshift11.s.union([stringPredicate, numberPredicate])
+    value: import_shapeshift12.s.union([stringPredicate, numberPredicate])
   }).array();
   var ApplicationCommandOptionWithChoicesMixin = class {
     static {
@@ -21135,7 +21201,7 @@ var require_dist8 = __commonJS((exports, module) => {
       }
       validateChoicesLength(normalizedChoices.length, this.choices);
       for (const { name, name_localizations, value } of normalizedChoices) {
-        if (this.type === import_v1030.ApplicationCommandOptionType.String) {
+        if (this.type === import_v1032.ApplicationCommandOptionType.String) {
           stringPredicate.parse(value);
         } else {
           numberPredicate.parse(value);
@@ -21155,9 +21221,9 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var numberValidator = import_shapeshift12.s.number().int();
+  var numberValidator = import_shapeshift13.s.number().int();
   var SlashCommandIntegerOption = class extends ApplicationCommandOptionBase {
-    type = import_v1031.ApplicationCommandOptionType.Integer;
+    type = import_v1033.ApplicationCommandOptionType.Integer;
     setMaxValue(max) {
       numberValidator.parse(max);
       Reflect.set(this, "max_value", max);
@@ -21180,23 +21246,23 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandIntegerOption = __decorateClass([
     (0, import_ts_mixer2.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandIntegerOption);
-  var import_v1032 = require_v1012();
+  var import_v1034 = require_v1012();
   var SlashCommandMentionableOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandMentionableOption");
     }
-    type = import_v1032.ApplicationCommandOptionType.Mentionable;
+    type = import_v1034.ApplicationCommandOptionType.Mentionable;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_shapeshift13 = require_cjs3();
-  var import_v1033 = require_v1012();
+  var import_shapeshift14 = require_cjs3();
+  var import_v1035 = require_v1012();
   var import_ts_mixer3 = require_cjs4();
-  var numberValidator2 = import_shapeshift13.s.number();
+  var numberValidator2 = import_shapeshift14.s.number();
   var SlashCommandNumberOption = class extends ApplicationCommandOptionBase {
-    type = import_v1033.ApplicationCommandOptionType.Number;
+    type = import_v1035.ApplicationCommandOptionType.Number;
     setMaxValue(max) {
       numberValidator2.parse(max);
       Reflect.set(this, "max_value", max);
@@ -21219,24 +21285,24 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandNumberOption = __decorateClass([
     (0, import_ts_mixer3.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandNumberOption);
-  var import_v1034 = require_v1012();
+  var import_v1036 = require_v1012();
   var SlashCommandRoleOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandRoleOption");
     }
-    type = import_v1034.ApplicationCommandOptionType.Role;
+    type = import_v1036.ApplicationCommandOptionType.Role;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
     }
   };
-  var import_shapeshift14 = require_cjs3();
-  var import_v1035 = require_v1012();
+  var import_shapeshift15 = require_cjs3();
+  var import_v1037 = require_v1012();
   var import_ts_mixer4 = require_cjs4();
-  var minLengthValidator2 = import_shapeshift14.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
-  var maxLengthValidator2 = import_shapeshift14.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
+  var minLengthValidator2 = import_shapeshift15.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
+  var maxLengthValidator2 = import_shapeshift15.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
   var SlashCommandStringOption = class extends ApplicationCommandOptionBase {
-    type = import_v1035.ApplicationCommandOptionType.String;
+    type = import_v1037.ApplicationCommandOptionType.String;
     max_length;
     min_length;
     setMaxLength(max) {
@@ -21261,12 +21327,12 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandStringOption = __decorateClass([
     (0, import_ts_mixer4.mix)(ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandStringOption);
-  var import_v1036 = require_v1012();
+  var import_v1038 = require_v1012();
   var SlashCommandUserOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandUserOption");
     }
-    type = import_v1036.ApplicationCommandOptionType.User;
+    type = import_v1038.ApplicationCommandOptionType.User;
     toJSON() {
       this.runRequiredValidations();
       return { ...this };
@@ -21313,7 +21379,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1037 = require_v1012();
+  var import_v1039 = require_v1012();
   var import_ts_mixer5 = require_cjs4();
   var SlashCommandSubcommandGroupBuilder = class {
     name = undefined;
@@ -21330,7 +21396,7 @@ var require_dist8 = __commonJS((exports, module) => {
     toJSON() {
       validateRequiredParameters3(this.name, this.description, this.options);
       return {
-        type: import_v1037.ApplicationCommandOptionType.SubcommandGroup,
+        type: import_v1039.ApplicationCommandOptionType.SubcommandGroup,
         name: this.name,
         name_localizations: this.name_localizations,
         description: this.description,
@@ -21350,7 +21416,7 @@ var require_dist8 = __commonJS((exports, module) => {
     toJSON() {
       validateRequiredParameters3(this.name, this.description, this.options);
       return {
-        type: import_v1037.ApplicationCommandOptionType.Subcommand,
+        type: import_v1039.ApplicationCommandOptionType.Subcommand,
         name: this.name,
         name_localizations: this.name_localizations,
         description: this.description,
@@ -21402,8 +21468,8 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandBuilder = __decorateClass([
     (0, import_ts_mixer6.mix)(SharedSlashCommandOptions, SharedNameAndDescription, SharedSlashCommandSubcommands, SharedSlashCommand)
   ], SlashCommandBuilder);
-  var Assertions_exports8 = {};
-  __export(Assertions_exports8, {
+  var Assertions_exports9 = {};
+  __export(Assertions_exports9, {
     contextsPredicate: () => contextsPredicate2,
     integrationTypesPredicate: () => integrationTypesPredicate2,
     validateDMPermission: () => validateDMPermission2,
@@ -21413,11 +21479,11 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredParameters: () => validateRequiredParameters4,
     validateType: () => validateType
   });
-  var import_shapeshift15 = require_cjs3();
-  var import_v1038 = require_v1012();
-  var namePredicate2 = import_shapeshift15.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/\S/).setValidationEnabled(isValidationEnabled);
-  var typePredicate = import_shapeshift15.s.union([import_shapeshift15.s.literal(import_v1038.ApplicationCommandType.User), import_shapeshift15.s.literal(import_v1038.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
-  var booleanPredicate3 = import_shapeshift15.s.boolean();
+  var import_shapeshift16 = require_cjs3();
+  var import_v1040 = require_v1012();
+  var namePredicate2 = import_shapeshift16.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/\S/).setValidationEnabled(isValidationEnabled);
+  var typePredicate = import_shapeshift16.s.union([import_shapeshift16.s.literal(import_v1040.ApplicationCommandType.User), import_shapeshift16.s.literal(import_v1040.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
+  var booleanPredicate3 = import_shapeshift16.s.boolean();
   function validateDefaultPermission2(value) {
     booleanPredicate3.parse(value);
   }
@@ -21435,22 +21501,22 @@ var require_dist8 = __commonJS((exports, module) => {
     validateType(type);
   }
   __name(validateRequiredParameters4, "validateRequiredParameters");
-  var dmPermissionPredicate2 = import_shapeshift15.s.boolean().nullish();
+  var dmPermissionPredicate2 = import_shapeshift16.s.boolean().nullish();
   function validateDMPermission2(value) {
     dmPermissionPredicate2.parse(value);
   }
   __name(validateDMPermission2, "validateDMPermission");
-  var memberPermissionPredicate2 = import_shapeshift15.s.union([
-    import_shapeshift15.s.bigint().transform((value) => value.toString()),
-    import_shapeshift15.s.number().safeInt().transform((value) => value.toString()),
-    import_shapeshift15.s.string().regex(/^\d+$/)
+  var memberPermissionPredicate2 = import_shapeshift16.s.union([
+    import_shapeshift16.s.bigint().transform((value) => value.toString()),
+    import_shapeshift16.s.number().safeInt().transform((value) => value.toString()),
+    import_shapeshift16.s.string().regex(/^\d+$/)
   ]).nullish();
   function validateDefaultMemberPermissions2(permissions) {
     return memberPermissionPredicate2.parse(permissions);
   }
   __name(validateDefaultMemberPermissions2, "validateDefaultMemberPermissions");
-  var contextsPredicate2 = import_shapeshift15.s.array(import_shapeshift15.s.nativeEnum(import_v1038.InteractionContextType).setValidationEnabled(isValidationEnabled));
-  var integrationTypesPredicate2 = import_shapeshift15.s.array(import_shapeshift15.s.nativeEnum(import_v1038.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
+  var contextsPredicate2 = import_shapeshift16.s.array(import_shapeshift16.s.nativeEnum(import_v1040.InteractionContextType).setValidationEnabled(isValidationEnabled));
+  var integrationTypesPredicate2 = import_shapeshift16.s.array(import_shapeshift16.s.nativeEnum(import_v1040.ApplicationIntegrationType).setValidationEnabled(isValidationEnabled));
   var ContextMenuCommandBuilder = class {
     static {
       __name(this, "ContextMenuCommandBuilder");
@@ -21529,7 +21595,7 @@ var require_dist8 = __commonJS((exports, module) => {
     return (data.title?.length ?? 0) + (data.description?.length ?? 0) + (data.fields?.reduce((prev, curr) => prev + curr.name.length + curr.value.length, 0) ?? 0) + (data.footer?.text.length ?? 0) + (data.author?.name.length ?? 0);
   }
   __name(embedLength, "embedLength");
-  var version = "1.12.2";
+  var version = "1.13.0";
 });
 
 // node_modules/discord.js/src/structures/Embed.js
@@ -23300,7 +23366,16 @@ var require_Message = __commonJS((exports) => {
     }
     get pinnable() {
       const { channel } = this;
-      return Boolean(!this.system && (!this.guild || channel?.viewable && channel?.permissionsFor(this.client.user)?.has(PermissionFlagsBits.ManageMessages, false)));
+      if (this.system)
+        return false;
+      if (!this.guild)
+        return true;
+      if (!channel || channel.isVoiceBased() || !channel.viewable)
+        return false;
+      const permissions = channel?.permissionsFor(this.client.user);
+      if (!permissions)
+        return false;
+      return permissions.has(PermissionFlagsBits.ReadMessageHistory | PermissionFlagsBits.PinMessages) || permissions.has(PermissionFlagsBits.ReadMessageHistory | PermissionFlagsBits.ManageMessages);
     }
     async fetchReference() {
       if (!this.reference)
@@ -23974,7 +24049,6 @@ var require_GuildMember = __commonJS((exports) => {
     constructor(client, data, guild) {
       super(client);
       this.guild = guild;
-      this.joinedTimestamp = null;
       this.premiumSinceTimestamp = null;
       this.nickname = null;
       this.pending = null;
@@ -23999,8 +24073,11 @@ var require_GuildMember = __commonJS((exports) => {
       } else {
         this.banner ??= null;
       }
-      if ("joined_at" in data)
-        this.joinedTimestamp = Date.parse(data.joined_at);
+      if ("joined_at" in data) {
+        this.joinedTimestamp = data.joined_at && Date.parse(data.joined_at);
+      } else {
+        this.joinedTimestamp ??= null;
+      }
       if ("premium_since" in data) {
         this.premiumSinceTimestamp = data.premium_since ? Date.parse(data.premium_since) : null;
       }
@@ -28781,6 +28858,9 @@ var require_ModalSubmitFields = __commonJS((exports, module) => {
       }
       return null;
     }
+    getUploadedFiles(customId, required = false) {
+      return this._getTypedComponent(customId, [ComponentType.FileUpload], ["attachments"], required).attachments ?? null;
+    }
   }
   module.exports = ModalSubmitFields;
 });
@@ -28795,6 +28875,7 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
   var InteractionResponses = require_InteractionResponses();
   var { transformResolved } = require_Util();
   var getMessage = lazy(() => require_Message().Message);
+  var getAttachment = lazy(() => require_Attachment());
 
   class ModalSubmitInteraction extends BaseInteraction {
     constructor(client, data) {
@@ -28841,7 +28922,7 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
       if (rawComponent.values) {
         data.values = rawComponent.values;
         if (resolved) {
-          const { members, users, channels, roles } = resolved;
+          const { members, users, channels, roles, attachments } = resolved;
           const valueSet = new Set(rawComponent.values);
           if (users) {
             data.users = new Collection;
@@ -28873,6 +28954,14 @@ var require_ModalSubmitInteraction = __commonJS((exports, module) => {
             for (const [id, role] of Object.entries(roles)) {
               if (valueSet.has(id)) {
                 data.roles.set(id, guild?.roles._add(role) ?? role);
+              }
+            }
+          }
+          if (attachments) {
+            data.attachments = new Collection;
+            for (const [id, attachment] of Object.entries(attachments)) {
+              if (valueSet.has(id)) {
+                data.attachments.set(id, new (getAttachment())(attachment));
               }
             }
           }
