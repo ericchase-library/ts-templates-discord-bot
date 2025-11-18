@@ -737,7 +737,7 @@ var require_tslib = __commonJS((exports, module) => {
   });
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/gateway/v10.js
+// node_modules/discord-api-types/gateway/v10.js
 var require_v10 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
@@ -857,6 +857,7 @@ var require_v10 = __commonJS((exports) => {
     GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
     GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
     GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
+    GatewayDispatchEvents2["RateLimited"] = "RATE_LIMITED";
     GatewayDispatchEvents2["Ready"] = "READY";
     GatewayDispatchEvents2["Resumed"] = "RESUMED";
     GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
@@ -885,7 +886,7 @@ var require_v10 = __commonJS((exports) => {
   })(VoiceChannelEffectSendAnimationType || (exports.VoiceChannelEffectSendAnimationType = VoiceChannelEffectSendAnimationType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/globals.js
+// node_modules/discord-api-types/globals.js
 var require_globals = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.FormattingPatterns = undefined;
@@ -899,7 +900,7 @@ var require_globals = __commonJS((exports) => {
     Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
     AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
     StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRTdft]))?>/,
+    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRSTdfst]))?>/,
     DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
     StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/,
     GuildNavigation: /<id:(?<type>customize|browse|guide|linked-roles)>/,
@@ -908,7 +909,7 @@ var require_globals = __commonJS((exports) => {
   Object.freeze(exports.FormattingPatterns);
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/common.js
+// node_modules/discord-api-types/payloads/common.js
 var require_common = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.PermissionFlagsBits = undefined;
@@ -963,12 +964,13 @@ var require_common = __commonJS((exports) => {
     SendVoiceMessages: 1n << 46n,
     SendPolls: 1n << 49n,
     UseExternalApps: 1n << 50n,
-    PinMessages: 1n << 51n
+    PinMessages: 1n << 51n,
+    BypassSlowmode: 1n << 52n
   };
   Object.freeze(exports.PermissionFlagsBits);
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/application.js
+// node_modules/discord-api-types/payloads/v10/application.js
 var require_application = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ApplicationWebhookEventStatus = exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
@@ -1010,7 +1012,7 @@ var require_application = __commonJS((exports) => {
   })(ApplicationWebhookEventStatus || (exports.ApplicationWebhookEventStatus = ApplicationWebhookEventStatus = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/auditLog.js
+// node_modules/discord-api-types/payloads/v10/auditLog.js
 var require_auditLog = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
@@ -1091,7 +1093,7 @@ var require_auditLog = __commonJS((exports) => {
   })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/autoModeration.js
+// node_modules/discord-api-types/payloads/v10/autoModeration.js
 var require_autoModeration = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
@@ -1123,7 +1125,7 @@ var require_autoModeration = __commonJS((exports) => {
   })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/channel.js
+// node_modules/discord-api-types/payloads/v10/channel.js
 var require_channel = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ChannelFlags = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
@@ -1196,7 +1198,7 @@ var require_channel = __commonJS((exports) => {
   })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/gateway.js
+// node_modules/discord-api-types/payloads/v10/gateway.js
 var require_gateway = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ActivityFlags = exports.StatusDisplayType = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
@@ -1248,7 +1250,7 @@ var require_gateway = __commonJS((exports) => {
   })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/guild.js
+// node_modules/discord-api-types/payloads/v10/guild.js
 var require_guild = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
@@ -1345,6 +1347,7 @@ var require_guild = __commonJS((exports) => {
     GuildFeature2["GuildTags"] = "GUILD_TAGS";
     GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
     GuildFeature2["GuestsEnabled"] = "GUESTS_ENABLED";
+    GuildFeature2["PinPermissionMigrationComplete"] = "PIN_PERMISSION_MIGRATION_COMPLETE";
   })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
   var GuildMemberFlags;
   (function(GuildMemberFlags2) {
@@ -1389,7 +1392,7 @@ var require_guild = __commonJS((exports) => {
   })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
+// node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
 var require_guildScheduledEvent = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
@@ -1444,7 +1447,7 @@ var require_guildScheduledEvent = __commonJS((exports) => {
   })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
+// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
 var require_shared = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ApplicationCommandOptionType = undefined;
@@ -1464,7 +1467,7 @@ var require_shared = __commonJS((exports) => {
   })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
+// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
 var require_chatInput = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -1490,7 +1493,7 @@ var require_chatInput = __commonJS((exports) => {
   __exportStar(require_shared(), exports);
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
+// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
 var require_permissions = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
@@ -1506,7 +1509,7 @@ var require_permissions = __commonJS((exports) => {
   };
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
+// node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
 var require_applicationCommands = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -1557,7 +1560,7 @@ var require_applicationCommands = __commonJS((exports) => {
   })(EntryPointCommandHandlerType || (exports.EntryPointCommandHandlerType = EntryPointCommandHandlerType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/_interactions/responses.js
+// node_modules/discord-api-types/payloads/v10/_interactions/responses.js
 var require_responses = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.InteractionResponseType = exports.InteractionType = undefined;
@@ -1583,7 +1586,7 @@ var require_responses = __commonJS((exports) => {
   })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/interactions.js
+// node_modules/discord-api-types/payloads/v10/interactions.js
 var require_interactions = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -1610,7 +1613,7 @@ var require_interactions = __commonJS((exports) => {
   __exportStar(require_responses(), exports);
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/invite.js
+// node_modules/discord-api-types/payloads/v10/invite.js
 var require_invite = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.InviteTargetType = exports.InviteType = exports.InviteFlags = undefined;
@@ -1631,7 +1634,7 @@ var require_invite = __commonJS((exports) => {
   })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/message.js
+// node_modules/discord-api-types/payloads/v10/message.js
 var require_message = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = undefined;
@@ -1745,6 +1748,7 @@ var require_message = __commonJS((exports) => {
     ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
     ComponentType2[ComponentType2["Container"] = 17] = "Container";
     ComponentType2[ComponentType2["Label"] = 18] = "Label";
+    ComponentType2[ComponentType2["FileUpload"] = 19] = "FileUpload";
     ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
   })(ComponentType || (exports.ComponentType = ComponentType = {}));
   var ButtonStyle;
@@ -1781,7 +1785,7 @@ var require_message = __commonJS((exports) => {
   })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/monetization.js
+// node_modules/discord-api-types/payloads/v10/monetization.js
 var require_monetization = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
@@ -1817,7 +1821,7 @@ var require_monetization = __commonJS((exports) => {
   })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/oauth2.js
+// node_modules/discord-api-types/payloads/v10/oauth2.js
 var require_oauth2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.OAuth2Scopes = undefined;
@@ -1854,7 +1858,7 @@ var require_oauth2 = __commonJS((exports) => {
   })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/permissions.js
+// node_modules/discord-api-types/payloads/v10/permissions.js
 var require_permissions2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.RoleFlags = undefined;
@@ -1864,7 +1868,7 @@ var require_permissions2 = __commonJS((exports) => {
   })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/poll.js
+// node_modules/discord-api-types/payloads/v10/poll.js
 var require_poll = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.PollLayoutType = undefined;
@@ -1874,7 +1878,7 @@ var require_poll = __commonJS((exports) => {
   })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/stageInstance.js
+// node_modules/discord-api-types/payloads/v10/stageInstance.js
 var require_stageInstance = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.StageInstancePrivacyLevel = undefined;
@@ -1885,7 +1889,7 @@ var require_stageInstance = __commonJS((exports) => {
   })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/sticker.js
+// node_modules/discord-api-types/payloads/v10/sticker.js
 var require_sticker = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.StickerFormatType = exports.StickerType = undefined;
@@ -1903,7 +1907,7 @@ var require_sticker = __commonJS((exports) => {
   })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/teams.js
+// node_modules/discord-api-types/payloads/v10/teams.js
 var require_teams = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
@@ -1920,7 +1924,7 @@ var require_teams = __commonJS((exports) => {
   })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/user.js
+// node_modules/discord-api-types/payloads/v10/user.js
 var require_user = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.NameplatePalette = exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
@@ -2008,7 +2012,7 @@ var require_user = __commonJS((exports) => {
   })(NameplatePalette || (exports.NameplatePalette = NameplatePalette = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/webhook.js
+// node_modules/discord-api-types/payloads/v10/webhook.js
 var require_webhook = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.WebhookType = exports.ApplicationWebhookEventType = exports.ApplicationWebhookType = undefined;
@@ -2022,6 +2026,8 @@ var require_webhook = __commonJS((exports) => {
     ApplicationWebhookEventType2["ApplicationAuthorized"] = "APPLICATION_AUTHORIZED";
     ApplicationWebhookEventType2["ApplicationDeauthorized"] = "APPLICATION_DEAUTHORIZED";
     ApplicationWebhookEventType2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
+    ApplicationWebhookEventType2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
+    ApplicationWebhookEventType2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
     ApplicationWebhookEventType2["QuestUserEnrollment"] = "QUEST_USER_ENROLLMENT";
   })(ApplicationWebhookEventType || (exports.ApplicationWebhookEventType = ApplicationWebhookEventType = {}));
   var WebhookType;
@@ -2032,7 +2038,7 @@ var require_webhook = __commonJS((exports) => {
   })(WebhookType || (exports.WebhookType = WebhookType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/payloads/v10/index.js
+// node_modules/discord-api-types/payloads/v10/index.js
 var require_v102 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -2077,7 +2083,7 @@ var require_v102 = __commonJS((exports) => {
   __exportStar(require_webhook(), exports);
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/utils/internals.js
+// node_modules/discord-api-types/utils/internals.js
 var require_internals = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.urlSafeCharacters = undefined;
@@ -2091,7 +2097,7 @@ var require_internals = __commonJS((exports) => {
   };
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/common.js
+// node_modules/discord-api-types/rest/common.js
 var require_common2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.Locale = exports.RESTJSONErrorCodes = undefined;
@@ -2360,7 +2366,7 @@ var require_common2 = __commonJS((exports) => {
   })(Locale || (exports.Locale = Locale = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/v10/channel.js
+// node_modules/discord-api-types/rest/v10/channel.js
 var require_channel2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.ReactionType = undefined;
@@ -2371,7 +2377,7 @@ var require_channel2 = __commonJS((exports) => {
   })(ReactionType || (exports.ReactionType = ReactionType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/v10/monetization.js
+// node_modules/discord-api-types/rest/v10/monetization.js
 var require_monetization2 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.EntitlementOwnerType = undefined;
@@ -2382,7 +2388,7 @@ var require_monetization2 = __commonJS((exports) => {
   })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/rest/v10/index.js
+// node_modules/discord-api-types/rest/v10/index.js
 var require_v103 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -2525,6 +2531,9 @@ var require_v103 = __commonJS((exports) => {
     },
     guildRole(guildId, roleId) {
       return `/guilds/${guildId}/roles/${roleId}`;
+    },
+    guildRoleMemberCounts(guildId) {
+      return `/guilds/${guildId}/roles/member-counts`;
     },
     guildPrune(guildId) {
       return `/guilds/${guildId}/prune`;
@@ -2899,7 +2908,7 @@ var require_v103 = __commonJS((exports) => {
   Object.freeze(exports.OAuth2Routes);
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/rpc/common.js
+// node_modules/discord-api-types/rpc/common.js
 var require_common3 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.RPCCloseEventCodes = exports.RPCErrorCodes = exports.RelationshipType = exports.VoiceConnectionStates = exports.RPCVoiceShortcutKeyComboKeyType = exports.RPCVoiceSettingsModeType = exports.RPCDeviceType = undefined;
@@ -2988,7 +2997,7 @@ var require_common3 = __commonJS((exports) => {
   })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/rpc/v10.js
+// node_modules/discord-api-types/rpc/v10.js
 var require_v104 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -3101,7 +3110,7 @@ var require_v104 = __commonJS((exports) => {
   })(RPCEvents || (exports.RPCEvents = RPCEvents = {}));
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/utils/v10.js
+// node_modules/discord-api-types/utils/v10.js
 var require_v105 = __commonJS((exports) => {
   Object.defineProperty(exports, "__esModule", { value: true });
   exports.isDMInteraction = isDMInteraction;
@@ -3112,6 +3121,7 @@ var require_v105 = __commonJS((exports) => {
   exports.isMessageComponentGuildInteraction = isMessageComponentGuildInteraction;
   exports.isLinkButton = isLinkButton;
   exports.isInteractionButton = isInteractionButton;
+  exports.isModalSubmitInteraction = isModalSubmitInteraction;
   exports.isMessageComponentInteraction = isMessageComponentInteraction;
   exports.isMessageComponentButtonInteraction = isMessageComponentButtonInteraction;
   exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
@@ -3142,6 +3152,9 @@ var require_v105 = __commonJS((exports) => {
   function isInteractionButton(component) {
     return ![index_1.ButtonStyle.Link, index_1.ButtonStyle.Premium].includes(component.style);
   }
+  function isModalSubmitInteraction(interaction) {
+    return interaction.type === index_1.InteractionType.ModalSubmit;
+  }
   function isMessageComponentInteraction(interaction) {
     return interaction.type === index_1.InteractionType.MessageComponent;
   }
@@ -3165,7 +3178,7 @@ var require_v105 = __commonJS((exports) => {
   }
 });
 
-// node_modules/@discordjs/rest/node_modules/discord-api-types/v10.js
+// node_modules/discord-api-types/v10.js
 var require_v106 = __commonJS((exports) => {
   var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined)
@@ -3735,11 +3748,19 @@ var require_cjs = __commonJS((exports) => {
 
 // node_modules/@vladfrangu/async_event_emitter/dist/index.cjs
 var require_dist3 = __commonJS((exports, module) => {
+  var __create2 = Object.create;
   var __defProp2 = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
   var __getOwnPropNames2 = Object.getOwnPropertyNames;
+  var __getProtoOf2 = Object.getPrototypeOf;
   var __hasOwnProp2 = Object.prototype.hasOwnProperty;
   var __name = (target, value) => __defProp2(target, "name", { value, configurable: true });
+  var __esm = (fn, res) => function __init() {
+    return fn && (res = (0, fn[__getOwnPropNames2(fn)[0]])(fn = 0)), res;
+  };
+  var __commonJS2 = (cb, mod) => function __require() {
+    return mod || (0, cb[__getOwnPropNames2(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  };
   var __export = (target, all) => {
     for (var name in all)
       __defProp2(target, name, { get: all[name], enumerable: true });
@@ -3752,13 +3773,2396 @@ var require_dist3 = __commonJS((exports, module) => {
     }
     return to;
   };
+  var __toESM2 = (mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target, mod));
   var __toCommonJS = (mod) => __copyProps(__defProp2({}, "__esModule", { value: true }), mod);
+  var init_cjs_shims = __esm({
+    "node_modules/tsup/assets/cjs_shims.js"() {}
+  });
+  var require_inspect = __commonJS2({
+    "node_modules/node-inspect-extracted/dist/inspect.js"(exports2, module2) {
+      init_cjs_shims();
+      (function(t, e) {
+        typeof exports2 == "object" && typeof module2 == "object" ? module2.exports = e() : typeof define == "function" && define.amd ? define([], e) : typeof exports2 == "object" ? exports2.util = e() : t.util = e();
+      })(exports2, () => (() => {
+        var t = { 22: (t2) => {
+          t2.exports = { CHAR_DOT: 46, CHAR_FORWARD_SLASH: 47, CHAR_BACKWARD_SLASH: 92 };
+        }, 24: (t2) => {
+          t2.exports = URL;
+        }, 33: (t2, e2, r) => {
+          function n(t3) {
+            return n = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, n(t3);
+          }
+          __name(n, "n");
+          function o(t3, e3) {
+            var r2 = typeof Symbol != "undefined" && t3[Symbol.iterator] || t3["@@iterator"];
+            if (!r2) {
+              if (Array.isArray(t3) || (r2 = function(t4, e4) {
+                if (t4) {
+                  if (typeof t4 == "string")
+                    return a(t4, e4);
+                  var r3 = {}.toString.call(t4).slice(8, -1);
+                  return r3 === "Object" && t4.constructor && (r3 = t4.constructor.name), r3 === "Map" || r3 === "Set" ? Array.from(t4) : r3 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r3) ? a(t4, e4) : undefined;
+                }
+              }(t3)) || e3 && t3 && typeof t3.length == "number") {
+                r2 && (t3 = r2);
+                var n2 = 0, o2 = /* @__PURE__ */ __name(function() {}, "o");
+                return { s: o2, n: /* @__PURE__ */ __name(function() {
+                  return n2 >= t3.length ? { done: true } : { done: false, value: t3[n2++] };
+                }, "n"), e: /* @__PURE__ */ __name(function(t4) {
+                  throw t4;
+                }, "e"), f: o2 };
+              }
+              throw new TypeError(`Invalid attempt to iterate non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+            }
+            var i2, c2 = true, u2 = false;
+            return { s: /* @__PURE__ */ __name(function() {
+              r2 = r2.call(t3);
+            }, "s"), n: /* @__PURE__ */ __name(function() {
+              var t4 = r2.next();
+              return c2 = t4.done, t4;
+            }, "n"), e: /* @__PURE__ */ __name(function(t4) {
+              u2 = true, i2 = t4;
+            }, "e"), f: /* @__PURE__ */ __name(function() {
+              try {
+                c2 || r2.return == null || r2.return();
+              } finally {
+                if (u2)
+                  throw i2;
+              }
+            }, "f") };
+          }
+          __name(o, "o");
+          function a(t3, e3) {
+            (e3 == null || e3 > t3.length) && (e3 = t3.length);
+            for (var r2 = 0, n2 = Array(e3);r2 < e3; r2++)
+              n2[r2] = t3[r2];
+            return n2;
+          }
+          __name(a, "a");
+          function i(t3, e3) {
+            var r2 = Object.keys(t3);
+            if (Object.getOwnPropertySymbols) {
+              var n2 = Object.getOwnPropertySymbols(t3);
+              e3 && (n2 = n2.filter(function(e4) {
+                return Object.getOwnPropertyDescriptor(t3, e4).enumerable;
+              })), r2.push.apply(r2, n2);
+            }
+            return r2;
+          }
+          __name(i, "i");
+          function c(t3) {
+            for (var e3 = 1;e3 < arguments.length; e3++) {
+              var r2 = arguments[e3] != null ? arguments[e3] : {};
+              e3 % 2 ? i(Object(r2), true).forEach(function(e4) {
+                u(t3, e4, r2[e4]);
+              }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t3, Object.getOwnPropertyDescriptors(r2)) : i(Object(r2)).forEach(function(e4) {
+                Object.defineProperty(t3, e4, Object.getOwnPropertyDescriptor(r2, e4));
+              });
+            }
+            return t3;
+          }
+          __name(c, "c");
+          function u(t3, e3, r2) {
+            return (e3 = function(t4) {
+              var e4 = function(t5) {
+                if (n(t5) != "object" || !t5)
+                  return t5;
+                var e5 = t5[Symbol.toPrimitive];
+                if (e5 !== undefined) {
+                  var r3 = e5.call(t5, "string");
+                  if (n(r3) != "object")
+                    return r3;
+                  throw new TypeError("@@toPrimitive must return a primitive value.");
+                }
+                return String(t5);
+              }(t4);
+              return n(e4) == "symbol" ? e4 : e4 + "";
+            }(e3)) in t3 ? Object.defineProperty(t3, e3, { value: r2, enumerable: true, configurable: true, writable: true }) : t3[e3] = r2, t3;
+          }
+          __name(u, "u");
+          var l, f, s, y = r(425), p = y.AggregateError, g = y.AggregateErrorPrototype, v = y.Array, h = y.ArrayBuffer, d = y.ArrayBufferPrototype, b = y.ArrayIsArray, m = y.ArrayPrototype, S = y.ArrayPrototypeFilter, P = y.ArrayPrototypeForEach, x = y.ArrayPrototypeIncludes, w = y.ArrayPrototypeIndexOf, A = y.ArrayPrototypeJoin, O = y.ArrayPrototypeMap, _ = y.ArrayPrototypePop, j = y.ArrayPrototypePush, E = y.ArrayPrototypePushApply, k = y.ArrayPrototypeSlice, I = y.ArrayPrototypeSort, R = y.ArrayPrototypeSplice, L = y.ArrayPrototypeUnshift, T = y.BigIntPrototypeValueOf, B = y.Boolean, z = y.BooleanPrototype, M = y.BooleanPrototypeValueOf, C = y.DataView, D = y.DataViewPrototype, N = y.Date, F = y.DatePrototype, W = y.DatePrototypeGetTime, H = y.DatePrototypeToISOString, U = y.DatePrototypeToString, G = y.Error, V = y.ErrorPrototype, Z = y.ErrorPrototypeToString, $ = y.Function, Y = y.FunctionPrototype, q = y.FunctionPrototypeBind, J = y.FunctionPrototypeCall, K = y.FunctionPrototypeSymbolHasInstance, Q = y.FunctionPrototypeToString, X = y.JSONStringify, tt = y.Map, et = y.MapPrototype, rt = y.MapPrototypeEntries, nt = y.MapPrototypeGetSize, ot = y.MathFloor, at = y.MathMax, it = y.MathMin, ct = y.MathRound, ut = y.MathSqrt, lt = y.MathTrunc, ft = y.Number, st = y.NumberIsFinite, yt = y.NumberIsNaN, pt = y.NumberParseFloat, gt = y.NumberParseInt, vt = y.NumberPrototype, ht = y.NumberPrototypeToString, dt = y.NumberPrototypeValueOf, bt = y.Object, mt = y.ObjectAssign, St = y.ObjectDefineProperty, Pt = y.ObjectGetOwnPropertyDescriptor, xt = y.ObjectGetOwnPropertyNames, wt = y.ObjectGetOwnPropertySymbols, At = y.ObjectGetPrototypeOf, Ot = y.ObjectIs, _t = y.ObjectKeys, jt = y.ObjectPrototype, Et = y.ObjectPrototypeHasOwnProperty, kt = y.ObjectPrototypePropertyIsEnumerable, It = y.ObjectSeal, Rt = y.ObjectSetPrototypeOf, Lt = y.Promise, Tt = y.PromisePrototype, Bt = y.RangeError, zt = y.RangeErrorPrototype, Mt = y.ReflectApply, Ct = y.ReflectOwnKeys, Dt = y.RegExp, Nt = y.RegExpPrototype, Ft = y.RegExpPrototypeExec, Wt = y.RegExpPrototypeSymbolReplace, Ht = y.RegExpPrototypeSymbolSplit, Ut = y.RegExpPrototypeToString, Gt = y.SafeMap, Vt = y.SafeSet, Zt = y.SafeStringIterator, $t = y.Set, Yt = y.SetPrototype, qt = y.SetPrototypeGetSize, Jt = y.SetPrototypeValues, Kt = y.String, Qt = y.StringPrototype, Xt = y.StringPrototypeCharCodeAt, te = y.StringPrototypeCodePointAt, ee = y.StringPrototypeEndsWith, re = y.StringPrototypeIncludes, ne = y.StringPrototypeIndexOf, oe = y.StringPrototypeLastIndexOf, ae = y.StringPrototypeNormalize, ie = y.StringPrototypePadEnd, ce = y.StringPrototypePadStart, ue = y.StringPrototypeRepeat, le = y.StringPrototypeReplace, fe = y.StringPrototypeReplaceAll, se = y.StringPrototypeSlice, ye = y.StringPrototypeSplit, pe = y.StringPrototypeStartsWith, ge = y.StringPrototypeToLowerCase, ve = y.StringPrototypeTrim, he = y.StringPrototypeValueOf, de = y.SymbolIterator, be = y.SymbolPrototypeToString, me = y.SymbolPrototypeValueOf, Se = y.SymbolToPrimitive, Pe = y.SymbolToStringTag, xe = y.TypeError, we = y.TypeErrorPrototype, Ae = y.TypedArray, Oe = y.TypedArrayPrototype, _e = y.TypedArrayPrototypeGetLength, je = y.TypedArrayPrototypeGetSymbolToStringTag, Ee = y.Uint8Array, ke = y.WeakMap, Ie = y.WeakMapPrototype, Re = y.WeakSet, Le = y.WeakSetPrototype, Te = y.globalThis, Be = y.internalBinding, ze = y.uncurryThis, Me = r(153), Ce = Me.constants, De = Ce.ALL_PROPERTIES, Ne = Ce.ONLY_ENUMERABLE, Fe = Ce.kPending, We = Ce.kRejected, He = Me.getOwnNonIndexProperties, Ue = Me.getPromiseDetails, Ge = Me.getProxyDetails, Ve = Me.previewEntries, Ze = Me.getConstructorName, $e = Me.getExternalValue, Ye = Me.Proxy, qe = r(923), Je = qe.customInspectSymbol, Ke = qe.isError, Qe = qe.join, Xe = qe.removeColors, tr = r(924).isStackOverflowError, er = r(617), rr = er.isAsyncFunction, nr = er.isGeneratorFunction, or = er.isAnyArrayBuffer, ar = er.isArrayBuffer, ir = er.isArgumentsObject, cr = er.isBoxedPrimitive, ur = er.isDataView, lr = er.isExternal, fr = er.isMap, sr = er.isMapIterator, yr = er.isModuleNamespaceObject, pr = er.isNativeError, gr = er.isPromise, vr = er.isSet, hr = er.isSetIterator, dr = er.isWeakMap, br = er.isWeakSet, mr = er.isRegExp, Sr = er.isDate, Pr = er.isTypedArray, xr = er.isStringObject, wr = er.isNumberObject, Ar = er.isBooleanObject, Or = er.isBigIntObject, _r = r(229), jr = r(705).BuiltinModule, Er = r(116), kr = Er.validateObject, Ir = Er.validateString, Rr = Er.kValidateObjectAllowArray;
+          function Lr(t3) {
+            return (f = f || r(802)).pathToFileURL(t3).href;
+          }
+          __name(Lr, "Lr");
+          var Tr, Br, zr, Mr, Cr, Dr = new Vt(S(xt(Te), function(t3) {
+            return Ft(/^[A-Z][a-zA-Z0-9]+$/, t3) !== null;
+          })), Nr = /* @__PURE__ */ __name(function(t3) {
+            return t3 === undefined && t3 !== undefined;
+          }, "Nr"), Fr = It({ showHidden: false, depth: 2, colors: false, customInspect: true, showProxy: false, maxArrayLength: 100, maxStringLength: 1e4, breakLength: 80, compact: 3, sorted: false, getters: false, numericSeparator: false });
+          try {
+            Tr = new Dt("[\\x00-\\x1f\\x27\\x5c\\x7f-\\x9f]|[\\ud800-\\udbff](?![\\udc00-\\udfff])|(?<![\\ud800-\\udbff])[\\udc00-\\udfff]"), Br = new Dt("[\x00-\\x1f\\x27\\x5c\\x7f-\\x9f]|[\\ud800-\\udbff](?![\\udc00-\\udfff])|(?<![\\ud800-\\udbff])[\\udc00-\\udfff]", "g"), zr = new Dt("[\\x00-\\x1f\\x5c\\x7f-\\x9f]|[\\ud800-\\udbff](?![\\udc00-\\udfff])|(?<![\\ud800-\\udbff])[\\udc00-\\udfff]"), Mr = new Dt("[\\x00-\\x1f\\x5c\\x7f-\\x9f]|[\\ud800-\\udbff](?![\\udc00-\\udfff])|(?<![\\ud800-\\udbff])[\\udc00-\\udfff]", "g");
+            var Wr = new Dt("(?<=\\n)");
+            Cr = /* @__PURE__ */ __name(function(t3) {
+              return Ht(Wr, t3);
+            }, "Cr");
+          } catch (t3) {
+            Tr = /[\x00-\x1f\x27\x5c\x7f-\x9f]/, Br = /[\x00-\x1f\x27\x5c\x7f-\x9f]/g, zr = /[\x00-\x1f\x5c\x7f-\x9f]/, Mr = /[\x00-\x1f\x5c\x7f-\x9f]/g, Cr = /* @__PURE__ */ __name(function(t4) {
+              var e3 = Ht(/\n/, t4), r2 = _(e3), n2 = O(e3, function(t5) {
+                return t5 + `
+`;
+              });
+              return r2 !== "" && n2.push(r2), n2;
+            }, "Cr");
+          }
+          var Hr, Ur = /^[a-zA-Z_][a-zA-Z_0-9]*$/, Gr = /^(0|[1-9][0-9]*)$/, Vr = /^ {4}at (?:[^/\\(]+ \(|)node:(.+):\d+:\d+\)?$/, Zr = /^(\s+[^(]*?)\s*{/, $r = /(\/\/.*?\n)|(\/\*(.|\n)*?\*\/)/g, Yr = ["\\x00", "\\x01", "\\x02", "\\x03", "\\x04", "\\x05", "\\x06", "\\x07", "\\b", "\\t", "\\n", "\\x0B", "\\f", "\\r", "\\x0E", "\\x0F", "\\x10", "\\x11", "\\x12", "\\x13", "\\x14", "\\x15", "\\x16", "\\x17", "\\x18", "\\x19", "\\x1A", "\\x1B", "\\x1C", "\\x1D", "\\x1E", "\\x1F", "", "", "", "", "", "", "", "\\'", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "\\\\", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "\\x7F", "\\x80", "\\x81", "\\x82", "\\x83", "\\x84", "\\x85", "\\x86", "\\x87", "\\x88", "\\x89", "\\x8A", "\\x8B", "\\x8C", "\\x8D", "\\x8E", "\\x8F", "\\x90", "\\x91", "\\x92", "\\x93", "\\x94", "\\x95", "\\x96", "\\x97", "\\x98", "\\x99", "\\x9A", "\\x9B", "\\x9C", "\\x9D", "\\x9E", "\\x9F"], qr = new Dt("[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:(?:;[-a-zA-Z\\d\\/\\#&.:=?%@~_]+)*|[a-zA-Z\\d]+(?:;[-a-zA-Z\\d\\/\\#&.:=?%@~_]*)*)?(?:\\u0007|\\u001B\\u005C|\\u009C))|(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-nq-uy=><~]))", "g");
+          function Jr(t3, e3) {
+            var r2 = { budget: {}, indentationLvl: 0, seen: [], currentDepth: 0, stylize: on, showHidden: Fr.showHidden, depth: Fr.depth, colors: Fr.colors, customInspect: Fr.customInspect, showProxy: Fr.showProxy, maxArrayLength: Fr.maxArrayLength, maxStringLength: Fr.maxStringLength, breakLength: Fr.breakLength, compact: Fr.compact, sorted: Fr.sorted, getters: Fr.getters, numericSeparator: Fr.numericSeparator };
+            if (arguments.length > 1) {
+              if (arguments.length > 2 && (arguments[2] !== undefined && (r2.depth = arguments[2]), arguments.length > 3 && arguments[3] !== undefined && (r2.colors = arguments[3])), typeof e3 == "boolean")
+                r2.showHidden = e3;
+              else if (e3)
+                for (var n2 = _t(e3), o2 = 0;o2 < n2.length; ++o2) {
+                  var a2 = n2[o2];
+                  Et(Fr, a2) || a2 === "stylize" ? r2[a2] = e3[a2] : r2.userOptions === undefined && (r2.userOptions = e3);
+                }
+            }
+            return r2.colors && (r2.stylize = nn), r2.maxArrayLength === null && (r2.maxArrayLength = 1 / 0), r2.maxStringLength === null && (r2.maxStringLength = 1 / 0), gn(r2, t3, 0);
+          }
+          __name(Jr, "Jr");
+          Jr.custom = Je, St(Jr, "defaultOptions", { __proto__: null, get: /* @__PURE__ */ __name(function() {
+            return Fr;
+          }, "get"), set: /* @__PURE__ */ __name(function(t3) {
+            return kr(t3, "options"), mt(Fr, t3);
+          }, "set") });
+          var Kr = 39, Qr = 49;
+          function Xr(t3, e3) {
+            St(Jr.colors, e3, { __proto__: null, get: /* @__PURE__ */ __name(function() {
+              return this[t3];
+            }, "get"), set: /* @__PURE__ */ __name(function(e4) {
+              this[t3] = e4;
+            }, "set"), configurable: true, enumerable: false });
+          }
+          __name(Xr, "Xr");
+          function tn(t3, e3) {
+            return e3 === -1 ? '"'.concat(t3, '"') : e3 === -2 ? "`".concat(t3, "`") : "'".concat(t3, "'");
+          }
+          __name(tn, "tn");
+          function en(t3) {
+            var e3 = Xt(t3);
+            return Yr.length > e3 ? Yr[e3] : "\\u".concat(ht(e3, 16));
+          }
+          __name(en, "en");
+          function rn(t3) {
+            var e3 = Tr, r2 = Br, n2 = 39;
+            if (re(t3, "'") && (re(t3, '"') ? re(t3, "`") || re(t3, "${") || (n2 = -2) : n2 = -1, n2 !== 39 && (e3 = zr, r2 = Mr)), t3.length < 5000 && Ft(e3, t3) === null)
+              return tn(t3, n2);
+            if (t3.length > 100)
+              return tn(t3 = Wt(r2, t3, en), n2);
+            for (var o2 = "", a2 = 0, i2 = 0;i2 < t3.length; i2++) {
+              var c2 = Xt(t3, i2);
+              if (c2 === n2 || c2 === 92 || c2 < 32 || c2 > 126 && c2 < 160)
+                o2 += a2 === i2 ? Yr[c2] : "".concat(se(t3, a2, i2)).concat(Yr[c2]), a2 = i2 + 1;
+              else if (c2 >= 55296 && c2 <= 57343) {
+                if (c2 <= 56319 && i2 + 1 < t3.length) {
+                  var u2 = Xt(t3, i2 + 1);
+                  if (u2 >= 56320 && u2 <= 57343) {
+                    i2++;
+                    continue;
+                  }
+                }
+                o2 += "".concat(se(t3, a2, i2), "\\u").concat(ht(c2, 16)), a2 = i2 + 1;
+              }
+            }
+            return a2 !== t3.length && (o2 += se(t3, a2)), tn(o2, n2);
+          }
+          __name(rn, "rn");
+          function nn(t3, e3) {
+            var r2 = Jr.styles[e3];
+            if (r2 !== undefined) {
+              var n2 = Jr.colors[r2];
+              if (n2 !== undefined)
+                return "\x1B[".concat(n2[0], "m").concat(t3, "\x1B[").concat(n2[1], "m");
+            }
+            return t3;
+          }
+          __name(nn, "nn");
+          function on(t3) {
+            return t3;
+          }
+          __name(on, "on");
+          function an() {
+            return [];
+          }
+          __name(an, "an");
+          function cn(t3, e3) {
+            try {
+              return t3 instanceof e3;
+            } catch (t4) {
+              return false;
+            }
+          }
+          __name(cn, "cn");
+          Jr.colors = { __proto__: null, reset: [0, 0], bold: [1, 22], dim: [2, 22], italic: [3, 23], underline: [4, 24], blink: [5, 25], inverse: [7, 27], hidden: [8, 28], strikethrough: [9, 29], doubleunderline: [21, 24], black: [30, Kr], red: [31, Kr], green: [32, Kr], yellow: [33, Kr], blue: [34, Kr], magenta: [35, Kr], cyan: [36, Kr], white: [37, Kr], bgBlack: [40, Qr], bgRed: [41, Qr], bgGreen: [42, Qr], bgYellow: [43, Qr], bgBlue: [44, Qr], bgMagenta: [45, Qr], bgCyan: [46, Qr], bgWhite: [47, Qr], framed: [51, 54], overlined: [53, 55], gray: [90, Kr], redBright: [91, Kr], greenBright: [92, Kr], yellowBright: [93, Kr], blueBright: [94, Kr], magentaBright: [95, Kr], cyanBright: [96, Kr], whiteBright: [97, Kr], bgGray: [100, Qr], bgRedBright: [101, Qr], bgGreenBright: [102, Qr], bgYellowBright: [103, Qr], bgBlueBright: [104, Qr], bgMagentaBright: [105, Qr], bgCyanBright: [106, Qr], bgWhiteBright: [107, Qr] }, Xr("gray", "grey"), Xr("gray", "blackBright"), Xr("bgGray", "bgGrey"), Xr("bgGray", "bgBlackBright"), Xr("dim", "faint"), Xr("strikethrough", "crossedout"), Xr("strikethrough", "strikeThrough"), Xr("strikethrough", "crossedOut"), Xr("hidden", "conceal"), Xr("inverse", "swapColors"), Xr("inverse", "swapcolors"), Xr("doubleunderline", "doubleUnderline"), Jr.styles = mt({ __proto__: null }, { special: "cyan", number: "yellow", bigint: "yellow", boolean: "yellow", undefined: "grey", null: "bold", string: "green", symbol: "green", date: "magenta", regexp: "red", module: "underline" });
+          var un = new Gt().set(m, { name: "Array", constructor: v }).set(d, { name: "ArrayBuffer", constructor: h }).set(Y, { name: "Function", constructor: $ }).set(et, { name: "Map", constructor: tt }).set(Yt, { name: "Set", constructor: $t }).set(jt, { name: "Object", constructor: bt }).set(Oe, { name: "TypedArray", constructor: Ae }).set(Nt, { name: "RegExp", constructor: Dt }).set(F, { name: "Date", constructor: N }).set(D, { name: "DataView", constructor: C }).set(V, { name: "Error", constructor: G }).set(g, { name: "AggregateError", constructor: p }).set(zt, { name: "RangeError", constructor: Bt }).set(we, { name: "TypeError", constructor: xe }).set(z, { name: "Boolean", constructor: B }).set(vt, { name: "Number", constructor: ft }).set(Qt, { name: "String", constructor: Kt }).set(Tt, { name: "Promise", constructor: Lt }).set(Ie, { name: "WeakMap", constructor: ke }).set(Le, { name: "WeakSet", constructor: Re });
+          function ln(t3, e3, r2, n2) {
+            for (var o2, a2 = t3;t3 || Nr(t3); ) {
+              var i2 = un.get(t3);
+              if (i2 !== undefined) {
+                var { name: u2, constructor: l2 } = i2;
+                if (K(l2, a2))
+                  return n2 !== undefined && o2 !== t3 && fn(e3, a2, o2 || a2, r2, n2), u2;
+              }
+              var f2 = Pt(t3, "constructor");
+              if (f2 !== undefined && typeof f2.value == "function" && f2.value.name !== "" && cn(a2, f2.value))
+                return n2 === undefined || o2 === t3 && Dr.has(f2.value.name) || fn(e3, a2, o2 || a2, r2, n2), Kt(f2.value.name);
+              t3 = At(t3), o2 === undefined && (o2 = t3);
+            }
+            if (o2 === null)
+              return null;
+            var s2 = Ze(a2);
+            if (r2 > e3.depth && e3.depth !== null)
+              return "".concat(s2, " <Complex prototype>");
+            var y2 = ln(o2, e3, r2 + 1, n2);
+            return y2 === null ? "".concat(s2, " <").concat(Jr(o2, c(c({}, e3), {}, { customInspect: false, depth: -1 })), ">") : "".concat(s2, " <").concat(y2, ">");
+          }
+          __name(ln, "ln");
+          function fn(t3, e3, r2, n2, a2) {
+            var i2, c2, u2 = 0;
+            do {
+              if (u2 !== 0 || e3 === r2) {
+                if ((r2 = At(r2)) === null)
+                  return;
+                var l2 = Pt(r2, "constructor");
+                if (l2 !== undefined && typeof l2.value == "function" && Dr.has(l2.value.name))
+                  return;
+              }
+              u2 === 0 ? c2 = new Vt : P(i2, function(t4) {
+                return c2.add(t4);
+              }), i2 = Ct(r2), j(t3.seen, e3);
+              var f2, s2 = o(i2);
+              try {
+                for (s2.s();!(f2 = s2.n()).done; ) {
+                  var y2 = f2.value;
+                  if (!(y2 === "constructor" || Et(e3, y2) || u2 !== 0 && c2.has(y2))) {
+                    var p2 = Pt(r2, y2);
+                    if (typeof p2.value != "function") {
+                      var g2 = Nn(t3, r2, n2, y2, 0, p2, e3);
+                      t3.colors ? j(a2, "\x1B[2m".concat(g2, "\x1B[22m")) : j(a2, g2);
+                    }
+                  }
+                }
+              } catch (t4) {
+                s2.e(t4);
+              } finally {
+                s2.f();
+              }
+              _(t3.seen);
+            } while (++u2 !== 3);
+          }
+          __name(fn, "fn");
+          function sn(t3, e3, r2) {
+            var n2 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "";
+            return t3 === null ? e3 !== "" && r2 !== e3 ? "[".concat(r2).concat(n2, ": null prototype] [").concat(e3, "] ") : "[".concat(r2).concat(n2, ": null prototype] ") : e3 !== "" && t3 !== e3 ? "".concat(t3).concat(n2, " [").concat(e3, "] ") : "".concat(t3).concat(n2, " ");
+          }
+          __name(sn, "sn");
+          function yn(t3, e3) {
+            var r2, n2 = wt(t3);
+            if (e3)
+              r2 = xt(t3), n2.length !== 0 && E(r2, n2);
+            else {
+              try {
+                r2 = _t(t3);
+              } catch (e4) {
+                _r(pr(e4) && e4.name === "ReferenceError" && yr(t3)), r2 = xt(t3);
+              }
+              n2.length !== 0 && E(r2, S(n2, function(e4) {
+                return kt(t3, e4);
+              }));
+            }
+            return r2;
+          }
+          __name(yn, "yn");
+          function pn(t3, e3, r2) {
+            var n2 = "";
+            return e3 === null && (n2 = Ze(t3)) === r2 && (n2 = "Object"), sn(e3, r2, n2);
+          }
+          __name(pn, "pn");
+          function gn(t3, e3, a2, i2) {
+            if (n(e3) !== "object" && typeof e3 != "function" && !Nr(e3))
+              return An(t3.stylize, e3, t3);
+            if (e3 === null)
+              return t3.stylize("null", "null");
+            var u2 = e3, l2 = Ge(e3, !!t3.showProxy);
+            if (l2 !== undefined) {
+              if (l2 === null || l2[0] === null)
+                return t3.stylize("<Revoked Proxy>", "special");
+              if (t3.showProxy)
+                return function(t4, e4, r2) {
+                  if (r2 > t4.depth && t4.depth !== null)
+                    return t4.stylize("Proxy [Array]", "special");
+                  r2 += 1, t4.indentationLvl += 2;
+                  var n2 = [gn(t4, e4[0], r2), gn(t4, e4[1], r2)];
+                  return t4.indentationLvl -= 2, Wn(t4, n2, "", ["Proxy [", "]"], 2, r2);
+                }(t3, l2, a2);
+              e3 = l2;
+            }
+            if (t3.customInspect) {
+              var p2, g2 = e3[Je];
+              if (typeof g2 == "function" && g2 !== Jr && ((p2 = Pt(e3, "constructor")) === null || p2 === undefined || (p2 = p2.value) === null || p2 === undefined ? undefined : p2.prototype) !== e3) {
+                var v2 = t3.depth === null ? null : t3.depth - a2, h2 = l2 !== undefined || !K(bt, u2), d2 = J(g2, u2, v2, function(t4, e4) {
+                  var r2 = c({ stylize: t4.stylize, showHidden: t4.showHidden, depth: t4.depth, colors: t4.colors, customInspect: t4.customInspect, showProxy: t4.showProxy, maxArrayLength: t4.maxArrayLength, maxStringLength: t4.maxStringLength, breakLength: t4.breakLength, compact: t4.compact, sorted: t4.sorted, getters: t4.getters, numericSeparator: t4.numericSeparator }, t4.userOptions);
+                  if (e4) {
+                    Rt(r2, null);
+                    var a3, i3 = o(_t(r2));
+                    try {
+                      for (i3.s();!(a3 = i3.n()).done; ) {
+                        var u3 = a3.value;
+                        n(r2[u3]) !== "object" && typeof r2[u3] != "function" || r2[u3] === null || delete r2[u3];
+                      }
+                    } catch (t5) {
+                      i3.e(t5);
+                    } finally {
+                      i3.f();
+                    }
+                    r2.stylize = Rt(function(e5, r3) {
+                      var n2;
+                      try {
+                        n2 = "".concat(t4.stylize(e5, r3));
+                      } catch (t5) {}
+                      return typeof n2 != "string" ? e5 : n2;
+                    }, null);
+                  }
+                  return r2;
+                }(t3, h2), Jr);
+                if (d2 !== u2)
+                  return typeof d2 != "string" ? gn(t3, d2, a2) : fe(d2, `
+`, `
+`.concat(ue(" ", t3.indentationLvl)));
+              }
+            }
+            if (t3.seen.includes(e3)) {
+              var m2 = 1;
+              return t3.circular === undefined ? (t3.circular = new Gt, t3.circular.set(e3, m2)) : (m2 = t3.circular.get(e3)) === undefined && (m2 = t3.circular.size + 1, t3.circular.set(e3, m2)), t3.stylize("[Circular *".concat(m2, "]"), "special");
+            }
+            return function(t4, e4, n2, a3) {
+              var i3, c2;
+              t4.showHidden && (n2 <= t4.depth || t4.depth === null) && (c2 = []);
+              var u3 = ln(e4, t4, n2, c2);
+              c2 !== undefined && c2.length === 0 && (c2 = undefined);
+              var l3 = e4[Pe];
+              (typeof l3 != "string" || l3 !== "" && (t4.showHidden ? Et : kt)(e4, Pe)) && (l3 = "");
+              var p3, g3, v3 = "", h3 = an, d3 = true, m3 = 0, S2 = t4.showHidden ? De : Ne, P2 = 0;
+              if (de in e4 || u3 === null)
+                if (d3 = false, b(e4)) {
+                  var O2 = u3 !== "Array" || l3 !== "" ? sn(u3, l3, "Array", "(".concat(e4.length, ")")) : "";
+                  if (i3 = He(e4, S2), p3 = ["".concat(O2, "["), "]"], e4.length === 0 && i3.length === 0 && c2 === undefined)
+                    return "".concat(p3[0], "]");
+                  P2 = 2, h3 = En;
+                } else if (vr(e4)) {
+                  var _2 = qt(e4), B2 = sn(u3, l3, "Set", "(".concat(_2, ")"));
+                  if (i3 = yn(e4, t4.showHidden), h3 = q(In, null, u3 !== null ? e4 : Jt(e4)), _2 === 0 && i3.length === 0 && c2 === undefined)
+                    return "".concat(B2, "{}");
+                  p3 = ["".concat(B2, "{"), "}"];
+                } else if (fr(e4)) {
+                  var z2 = nt(e4), C2 = sn(u3, l3, "Map", "(".concat(z2, ")"));
+                  if (i3 = yn(e4, t4.showHidden), h3 = q(Rn, null, u3 !== null ? e4 : rt(e4)), z2 === 0 && i3.length === 0 && c2 === undefined)
+                    return "".concat(C2, "{}");
+                  p3 = ["".concat(C2, "{"), "}"];
+                } else if (Pr(e4)) {
+                  i3 = He(e4, S2);
+                  var D2 = e4, N2 = "";
+                  u3 === null && (N2 = je(e4), D2 = new y[N2](e4));
+                  var F2 = _e(e4), G2 = sn(u3, l3, N2, "(".concat(F2, ")"));
+                  if (p3 = ["".concat(G2, "["), "]"], e4.length === 0 && i3.length === 0 && !t4.showHidden)
+                    return "".concat(p3[0], "]");
+                  h3 = q(kn, null, D2, F2), P2 = 2;
+                } else
+                  sr(e4) ? (i3 = yn(e4, t4.showHidden), p3 = vn("Map", l3), h3 = q(Cn, null, p3)) : hr(e4) ? (i3 = yn(e4, t4.showHidden), p3 = vn("Set", l3), h3 = q(Cn, null, p3)) : d3 = true;
+              if (d3) {
+                if (i3 = yn(e4, t4.showHidden), p3 = ["{", "}"], typeof e4 == "function") {
+                  if (v3 = function(t5, e5, r2, n3) {
+                    var o2 = Q(e5);
+                    if (pe(o2, "class") && o2[o2.length - 1] === "}") {
+                      var a4 = se(o2, 5, -1), i4 = ne(a4, "{");
+                      if (i4 !== -1 && (!re(se(a4, 0, i4), "(") || Ft(Zr, Wt($r, a4)) !== null))
+                        return function(t6, e6, r3) {
+                          var n4 = Et(t6, "name") && t6.name || "(anonymous)", o3 = "class ".concat(n4);
+                          if (e6 !== "Function" && e6 !== null && (o3 += " [".concat(e6, "]")), r3 !== "" && e6 !== r3 && (o3 += " [".concat(r3, "]")), e6 !== null) {
+                            var a5 = At(t6).name;
+                            a5 && (o3 += " extends ".concat(a5));
+                          } else
+                            o3 += " extends [null prototype]";
+                          return "[".concat(o3, "]");
+                        }(e5, r2, n3);
+                    }
+                    var c3 = "Function";
+                    nr(e5) && (c3 = "Generator".concat(c3)), rr(e5) && (c3 = "Async".concat(c3));
+                    var u4 = "[".concat(c3);
+                    return r2 === null && (u4 += " (null prototype)"), e5.name === "" ? u4 += " (anonymous)" : u4 += ": ".concat(typeof e5.name == "string" ? e5.name : gn(t5, e5.name)), u4 += "]", r2 !== c3 && r2 !== null && (u4 += " ".concat(r2)), n3 !== "" && r2 !== n3 && (u4 += " [".concat(n3, "]")), u4;
+                  }(t4, e4, u3, l3), i3.length === 0 && c2 === undefined)
+                    return t4.stylize(v3, "special");
+                } else if (u3 === "Object") {
+                  if (ir(e4) ? p3[0] = "[Arguments] {" : l3 !== "" && (p3[0] = "".concat(sn(u3, l3, "Object"), "{")), i3.length === 0 && c2 === undefined)
+                    return "".concat(p3[0], "}");
+                } else if (mr(e4)) {
+                  v3 = Ut(u3 !== null ? e4 : new Dt(e4));
+                  var V2 = sn(u3, l3, "RegExp");
+                  if (V2 !== "RegExp " && (v3 = "".concat(V2).concat(v3)), i3.length === 0 && c2 === undefined || n2 > t4.depth && t4.depth !== null)
+                    return t4.stylize(v3, "regexp");
+                } else if (Sr(e4)) {
+                  v3 = yt(W(e4)) ? U(e4) : H(e4);
+                  var Z2 = sn(u3, l3, "Date");
+                  if (Z2 !== "Date " && (v3 = "".concat(Z2).concat(v3)), i3.length === 0 && c2 === undefined)
+                    return t4.stylize(v3, "date");
+                } else if (Ke(e4)) {
+                  if (v3 = function(t5, e5, r2, n3, a4) {
+                    var i4 = t5.name != null ? t5.name : "Error", c3 = dn(n3, t5);
+                    (function(t6, e6, r3, n4) {
+                      if (!t6.showHidden && e6.length !== 0)
+                        for (var o2 = 0, a5 = ["name", "message", "stack"];o2 < a5.length; o2++) {
+                          var i5 = a5[o2], c4 = w(e6, i5);
+                          c4 === -1 || typeof r3[i5] == "string" && !re(n4, r3[i5]) || R(e6, c4, 1);
+                        }
+                    })(n3, a4, t5, c3), !("cause" in t5) || a4.length !== 0 && x(a4, "cause") || j(a4, "cause"), !b(t5.errors) || a4.length !== 0 && x(a4, "errors") || j(a4, "errors"), c3 = function(t6, e6, r3, n4) {
+                      var o2 = r3.length;
+                      if (typeof r3 != "string" && (t6 = le(t6, "".concat(r3), "".concat(r3, " [").concat(se(sn(e6, n4, "Error"), 0, -1), "]"))), e6 === null || ee(r3, "Error") && pe(t6, r3) && (t6.length === o2 || t6[o2] === ":" || t6[o2] === `
+`)) {
+                        var a5 = "Error";
+                        if (e6 === null) {
+                          var i5 = Ft(/^([A-Z][a-z_ A-Z0-9[\]()-]+)(?::|\n {4}at)/, t6) || Ft(/^([a-z_A-Z0-9-]*Error)$/, t6);
+                          o2 = (a5 = (i5 == null ? undefined : i5[1]) || "").length, a5 = a5 || "Error";
+                        }
+                        var c4 = se(sn(e6, n4, a5), 0, -1);
+                        r3 !== c4 && (t6 = re(c4, r3) ? o2 === 0 ? "".concat(c4, ": ").concat(t6) : "".concat(c4).concat(se(t6, o2)) : "".concat(c4, " [").concat(r3, "]").concat(se(t6, o2)));
+                      }
+                      return t6;
+                    }(c3, e5, i4, r2);
+                    var u4 = t5.message && ne(c3, t5.message) || -1;
+                    u4 !== -1 && (u4 += t5.message.length);
+                    var l4 = ne(c3, `
+    at`, u4);
+                    if (l4 === -1)
+                      c3 = "[".concat(c3, "]");
+                    else {
+                      var f2 = se(c3, 0, l4), s2 = function(t6, e6, r3) {
+                        var n4, o2 = ye(r3, `
+`);
+                        try {
+                          n4 = e6.cause;
+                        } catch (t7) {}
+                        if (n4 != null && Ke(n4)) {
+                          var a5 = dn(t6, n4), i5 = ne(a5, `
+    at`);
+                          if (i5 !== -1) {
+                            var c4 = hn(o2, ye(se(a5, i5 + 1), `
+`)), u5 = c4.len, l5 = c4.offset;
+                            if (u5 > 0) {
+                              var f3 = u5 - 2, s3 = "    ... ".concat(f3, " lines matching cause stack trace ...");
+                              o2.splice(l5 + 1, f3, t6.stylize(s3, "undefined"));
+                            }
+                          }
+                        }
+                        return o2;
+                      }(n3, t5, se(c3, l4 + 1));
+                      if (n3.colors) {
+                        var y2, p4, g4 = function() {
+                          var t6;
+                          try {
+                            t6 = process.cwd();
+                          } catch (t7) {
+                            return;
+                          }
+                          return t6;
+                        }(), v4 = o(s2);
+                        try {
+                          for (v4.s();!(p4 = v4.n()).done; ) {
+                            var h4 = p4.value, d4 = Ft(Vr, h4);
+                            if (d4 !== null && jr.exists(d4[1]))
+                              f2 += `
+`.concat(n3.stylize(h4, "undefined"));
+                            else {
+                              if (f2 += `
+`, h4 = bn(n3, h4), g4 !== undefined) {
+                                var m4 = mn(n3, h4, g4);
+                                m4 === h4 && (m4 = mn(n3, h4, y2 = y2 || Lr(g4))), h4 = m4;
+                              }
+                              f2 += h4;
+                            }
+                          }
+                        } catch (t6) {
+                          v4.e(t6);
+                        } finally {
+                          v4.f();
+                        }
+                      } else
+                        f2 += `
+`.concat(A(s2, `
+`));
+                      c3 = f2;
+                    }
+                    if (n3.indentationLvl !== 0) {
+                      var S3 = ue(" ", n3.indentationLvl);
+                      c3 = fe(c3, `
+`, `
+`.concat(S3));
+                    }
+                    return c3;
+                  }(e4, u3, l3, t4, i3), i3.length === 0 && c2 === undefined)
+                    return v3;
+                } else if (or(e4)) {
+                  var $2 = sn(u3, l3, ar(e4) ? "ArrayBuffer" : "SharedArrayBuffer");
+                  if (a3 === undefined)
+                    h3 = jn;
+                  else if (i3.length === 0 && c2 === undefined)
+                    return $2 + "{ byteLength: ".concat(xn(t4.stylize, e4.byteLength, false), " }");
+                  p3[0] = "".concat($2, "{"), L(i3, "byteLength");
+                } else if (ur(e4))
+                  p3[0] = "".concat(sn(u3, l3, "DataView"), "{"), L(i3, "byteLength", "byteOffset", "buffer");
+                else if (gr(e4))
+                  p3[0] = "".concat(sn(u3, l3, "Promise"), "{"), h3 = Dn;
+                else if (br(e4))
+                  p3[0] = "".concat(sn(u3, l3, "WeakSet"), "{"), h3 = t4.showHidden ? zn : Bn;
+                else if (dr(e4))
+                  p3[0] = "".concat(sn(u3, l3, "WeakMap"), "{"), h3 = t4.showHidden ? Mn : Bn;
+                else if (yr(e4))
+                  p3[0] = "".concat(sn(u3, l3, "Module"), "{"), h3 = On.bind(null, i3);
+                else if (cr(e4)) {
+                  if (v3 = function(t5, e5, r2, n3, o2) {
+                    var a4, i4;
+                    wr(t5) ? (a4 = dt, i4 = "Number") : xr(t5) ? (a4 = he, i4 = "String", r2.splice(0, t5.length)) : Ar(t5) ? (a4 = M, i4 = "Boolean") : Or(t5) ? (a4 = T, i4 = "BigInt") : (a4 = me, i4 = "Symbol");
+                    var c3 = "[".concat(i4);
+                    return i4 !== n3 && (c3 += n3 === null ? " (null prototype)" : " (".concat(n3, ")")), c3 += ": ".concat(An(on, a4(t5), e5), "]"), o2 !== "" && o2 !== n3 && (c3 += " [".concat(o2, "]")), r2.length !== 0 || e5.stylize === on ? c3 : e5.stylize(c3, ge(i4));
+                  }(e4, t4, i3, u3, l3), i3.length === 0 && c2 === undefined)
+                    return v3;
+                } else if (!function(t5) {
+                  return f = f || r(802), typeof t5.href == "string" && t5 instanceof f.URL;
+                }(e4) || n2 > t4.depth && t4.depth !== null) {
+                  if (i3.length === 0 && c2 === undefined) {
+                    if (lr(e4)) {
+                      var Y2 = $e(e4).toString(16);
+                      return t4.stylize("[External: ".concat(Y2, "]"), "special");
+                    }
+                    return "".concat(pn(e4, u3, l3), "{}");
+                  }
+                  p3[0] = "".concat(pn(e4, u3, l3), "{");
+                } else if (i3 = function(t5) {
+                  return s = s || wt(new f.URL("http://user:pass@localhost:8080/?foo=bar#baz")), t5.filter(function(t6) {
+                    return s[t6] === -1;
+                  });
+                }(i3), v3 = e4.href, i3.length === 0 && c2 === undefined)
+                  return v3;
+              }
+              if (n2 > t4.depth && t4.depth !== null) {
+                var J2 = se(pn(e4, u3, l3), 0, -1);
+                return u3 !== null && (J2 = "[".concat(J2, "]")), t4.stylize(J2, "special");
+              }
+              n2 += 1, t4.seen.push(e4), t4.currentDepth = n2;
+              var K2 = t4.indentationLvl;
+              try {
+                for (g3 = h3(t4, e4, n2), m3 = 0;m3 < i3.length; m3++)
+                  j(g3, Nn(t4, e4, n2, i3[m3], P2));
+                c2 !== undefined && E(g3, c2);
+              } catch (r2) {
+                if (!tr(r2))
+                  throw r2;
+                return function(t5, e5, r3, n3) {
+                  return t5.seen.pop(), t5.indentationLvl = n3, t5.stylize("[".concat(r3, ": Inspection interrupted ") + "prematurely. Maximum call stack size exceeded.]", "special");
+                }(t4, 0, se(pn(e4, u3, l3), 0, -1), K2);
+              }
+              if (t4.circular !== undefined) {
+                var X2 = t4.circular.get(e4);
+                if (X2 !== undefined) {
+                  var tt2 = t4.stylize("<ref *".concat(X2, ">"), "special");
+                  t4.compact !== true ? v3 = v3 === "" ? tt2 : "".concat(tt2, " ").concat(v3) : p3[0] = "".concat(tt2, " ").concat(p3[0]);
+                }
+              }
+              if (t4.seen.pop(), t4.sorted) {
+                var et2 = t4.sorted === true ? undefined : t4.sorted;
+                if (P2 === 0)
+                  I(g3, et2);
+                else if (i3.length > 1) {
+                  var ot2 = I(k(g3, g3.length - i3.length), et2);
+                  L(ot2, g3, g3.length - i3.length, i3.length), Mt(R, null, ot2);
+                }
+              }
+              var at2 = Wn(t4, g3, v3, p3, P2, n2, e4), it2 = (t4.budget[t4.indentationLvl] || 0) + at2.length;
+              return t4.budget[t4.indentationLvl] = it2, it2 > Math.pow(2, 27) && (t4.depth = -1), at2;
+            }(t3, e3, a2, i2);
+          }
+          __name(gn, "gn");
+          function vn(t3, e3) {
+            return e3 !== "".concat(t3, " Iterator") && (e3 !== "" && (e3 += "] ["), e3 += "".concat(t3, " Iterator")), ["[".concat(e3, "] {"), "}"];
+          }
+          __name(vn, "vn");
+          function hn(t3, e3) {
+            for (var r2 = 0;r2 < t3.length - 3; r2++) {
+              var n2 = w(e3, t3[r2]);
+              if (n2 !== -1) {
+                var o2 = e3.length - n2;
+                if (o2 > 3) {
+                  for (var a2 = 1, i2 = it(t3.length - r2, o2);i2 > a2 && t3[r2 + a2] === e3[n2 + a2]; )
+                    a2++;
+                  if (a2 > 3)
+                    return { len: a2, offset: r2 };
+                }
+              }
+            }
+            return { len: 0, offset: 0 };
+          }
+          __name(hn, "hn");
+          function dn(t3, e3) {
+            if (e3.stack) {
+              if (typeof e3.stack == "string")
+                return e3.stack;
+              t3.seen.push(e3), t3.indentationLvl += 4;
+              var r2 = gn(t3, e3.stack);
+              return t3.indentationLvl -= 4, t3.seen.pop(), "".concat(Z(e3), `
+    `).concat(r2);
+            }
+            return Z(e3);
+          }
+          __name(dn, "dn");
+          function bn(t3, e3) {
+            for (var r2 = "", n2 = 0, o2 = 0;; ) {
+              var a2 = ne(e3, "node_modules", o2);
+              if (a2 === -1)
+                break;
+              var i2 = e3[a2 - 1], c2 = e3[a2 + 12];
+              if (c2 !== "/" && c2 !== "\\" || i2 !== "/" && i2 !== "\\")
+                o2 = a2 + 1;
+              else {
+                var u2 = a2 + 13;
+                r2 += se(e3, n2, u2);
+                var l2 = ne(e3, i2, u2);
+                e3[u2] === "@" && (l2 = ne(e3, i2, l2 + 1));
+                var f2 = se(e3, u2, l2);
+                r2 += t3.stylize(f2, "module"), n2 = l2, o2 = l2;
+              }
+            }
+            return n2 !== 0 && (e3 = r2 + se(e3, n2)), e3;
+          }
+          __name(bn, "bn");
+          function mn(t3, e3, r2) {
+            var n2 = ne(e3, r2), o2 = "", a2 = r2.length;
+            if (n2 !== -1) {
+              se(e3, n2 - 7, n2) === "file://" && (a2 += 7, n2 -= 7);
+              var i2 = e3[n2 - 1] === "(" ? n2 - 1 : n2, c2 = i2 !== n2 && ee(e3, ")") ? -1 : e3.length, u2 = n2 + a2 + 1, l2 = se(e3, i2, u2);
+              o2 += se(e3, 0, i2), o2 += t3.stylize(l2, "undefined"), o2 += se(e3, u2, c2), c2 === -1 && (o2 += t3.stylize(")", "undefined"));
+            } else
+              o2 += e3;
+            return o2;
+          }
+          __name(mn, "mn");
+          function Sn(t3) {
+            var e3 = "", r2 = t3.length;
+            _r(r2 !== 0);
+            for (var n2 = t3[0] === "-" ? 1 : 0;r2 >= n2 + 4; r2 -= 3)
+              e3 = "_".concat(se(t3, r2 - 3, r2)).concat(e3);
+            return r2 === t3.length ? t3 : "".concat(se(t3, 0, r2)).concat(e3);
+          }
+          __name(Sn, "Sn");
+          var Pn = /* @__PURE__ */ __name(function(t3) {
+            return "... ".concat(t3, " more item").concat(t3 > 1 ? "s" : "");
+          }, "Pn");
+          function xn(t3, e3, r2) {
+            if (!r2)
+              return Ot(e3, -0) ? t3("-0", "number") : t3("".concat(e3), "number");
+            var n2 = lt(e3), o2 = Kt(n2);
+            return n2 === e3 ? !st(e3) || re(o2, "e") ? t3(o2, "number") : t3("".concat(Sn(o2)), "number") : yt(e3) ? t3(o2, "number") : t3("".concat(Sn(o2), ".").concat(function(t4) {
+              for (var e4 = "", r3 = 0;r3 < t4.length - 3; r3 += 3)
+                e4 += "".concat(se(t4, r3, r3 + 3), "_");
+              return r3 === 0 ? t4 : "".concat(e4).concat(se(t4, r3));
+            }(se(Kt(e3), o2.length + 1))), "number");
+          }
+          __name(xn, "xn");
+          function wn(t3, e3, r2) {
+            var n2 = Kt(e3);
+            return t3("".concat(r2 ? Sn(n2) : n2, "n"), "bigint");
+          }
+          __name(wn, "wn");
+          function An(t3, e3, r2) {
+            if (typeof e3 == "string") {
+              var n2 = "";
+              if (e3.length > r2.maxStringLength) {
+                var o2 = e3.length - r2.maxStringLength;
+                e3 = se(e3, 0, r2.maxStringLength), n2 = "... ".concat(o2, " more character").concat(o2 > 1 ? "s" : "");
+              }
+              return r2.compact !== true && e3.length > 16 && e3.length > r2.breakLength - r2.indentationLvl - 4 ? A(O(Cr(e3), function(e4) {
+                return t3(rn(e4), "string");
+              }), ` +
+`.concat(ue(" ", r2.indentationLvl + 2))) + n2 : t3(rn(e3), "string") + n2;
+            }
+            return typeof e3 == "number" ? xn(t3, e3, r2.numericSeparator) : typeof e3 == "bigint" ? wn(t3, e3, r2.numericSeparator) : typeof e3 == "boolean" ? t3("".concat(e3), "boolean") : e3 === undefined ? t3("undefined", "undefined") : t3(be(e3), "symbol");
+          }
+          __name(An, "An");
+          function On(t3, e3, r2, n2) {
+            for (var o2 = new v(t3.length), a2 = 0;a2 < t3.length; a2++)
+              try {
+                o2[a2] = Nn(e3, r2, n2, t3[a2], 0);
+              } catch (r3) {
+                _r(pr(r3) && r3.name === "ReferenceError");
+                var i2 = u({}, t3[a2], "");
+                o2[a2] = Nn(e3, i2, n2, t3[a2], 0);
+                var c2 = oe(o2[a2], " ");
+                o2[a2] = se(o2[a2], 0, c2 + 1) + e3.stylize("<uninitialized>", "special");
+              }
+            return t3.length = 0, o2;
+          }
+          __name(On, "On");
+          function _n(t3, e3, r2, n2, o2, a2) {
+            for (var i2 = _t(e3), c2 = a2;a2 < i2.length && o2.length < n2; a2++) {
+              var u2 = i2[a2], l2 = +u2;
+              if (l2 > Math.pow(2, 32) - 2)
+                break;
+              if ("".concat(c2) !== u2) {
+                if (Ft(Gr, u2) === null)
+                  break;
+                var f2 = l2 - c2, s2 = f2 > 1 ? "s" : "", y2 = "<".concat(f2, " empty item").concat(s2, ">");
+                if (j(o2, t3.stylize(y2, "undefined")), c2 = l2, o2.length === n2)
+                  break;
+              }
+              j(o2, Nn(t3, e3, r2, u2, 1)), c2++;
+            }
+            var p2 = e3.length - c2;
+            if (o2.length !== n2) {
+              if (p2 > 0) {
+                var g2 = p2 > 1 ? "s" : "", v2 = "<".concat(p2, " empty item").concat(g2, ">");
+                j(o2, t3.stylize(v2, "undefined"));
+              }
+            } else
+              p2 > 0 && j(o2, Pn(p2));
+            return o2;
+          }
+          __name(_n, "_n");
+          function jn(t3, e3) {
+            var n2;
+            try {
+              n2 = new Ee(e3);
+            } catch (e4) {
+              return [t3.stylize("(detached)", "special")];
+            }
+            l === undefined && (l = ze(r(883).h.prototype.hexSlice));
+            var o2 = ve(Wt(/(.{2})/g, l(n2, 0, it(t3.maxArrayLength, n2.length)), "$1 ")), a2 = n2.length - t3.maxArrayLength;
+            return a2 > 0 && (o2 += " ... ".concat(a2, " more byte").concat(a2 > 1 ? "s" : "")), ["".concat(t3.stylize("[Uint8Contents]", "special"), ": <").concat(o2, ">")];
+          }
+          __name(jn, "jn");
+          function En(t3, e3, r2) {
+            for (var n2 = e3.length, o2 = it(at(0, t3.maxArrayLength), n2), a2 = n2 - o2, i2 = [], c2 = 0;c2 < o2; c2++) {
+              if (!Et(e3, c2))
+                return _n(t3, e3, r2, o2, i2, c2);
+              j(i2, Nn(t3, e3, r2, c2, 1));
+            }
+            return a2 > 0 && j(i2, Pn(a2)), i2;
+          }
+          __name(En, "En");
+          function kn(t3, e3, r2, n2, o2) {
+            for (var a2 = it(at(0, r2.maxArrayLength), e3), i2 = t3.length - a2, c2 = new v(a2), u2 = t3.length > 0 && typeof t3[0] == "number" ? xn : wn, l2 = 0;l2 < a2; ++l2)
+              c2[l2] = u2(r2.stylize, t3[l2], r2.numericSeparator);
+            if (i2 > 0 && (c2[a2] = Pn(i2)), r2.showHidden) {
+              r2.indentationLvl += 2;
+              for (var f2 = 0, s2 = ["BYTES_PER_ELEMENT", "length", "byteLength", "byteOffset", "buffer"];f2 < s2.length; f2++) {
+                var y2 = s2[f2], p2 = gn(r2, t3[y2], o2, true);
+                j(c2, "[".concat(y2, "]: ").concat(p2));
+              }
+              r2.indentationLvl -= 2;
+            }
+            return c2;
+          }
+          __name(kn, "kn");
+          function In(t3, e3, r2, n2) {
+            var a2 = t3.size, i2 = it(at(0, e3.maxArrayLength), a2), c2 = a2 - i2, u2 = [];
+            e3.indentationLvl += 2;
+            var l2, f2 = 0, s2 = o(t3);
+            try {
+              for (s2.s();!(l2 = s2.n()).done; ) {
+                var y2 = l2.value;
+                if (f2 >= i2)
+                  break;
+                j(u2, gn(e3, y2, n2)), f2++;
+              }
+            } catch (t4) {
+              s2.e(t4);
+            } finally {
+              s2.f();
+            }
+            return c2 > 0 && j(u2, Pn(c2)), e3.indentationLvl -= 2, u2;
+          }
+          __name(In, "In");
+          function Rn(t3, e3, r2, n2) {
+            var a2 = t3.size, i2 = it(at(0, e3.maxArrayLength), a2), c2 = a2 - i2, u2 = [];
+            e3.indentationLvl += 2;
+            var l2, f2 = 0, s2 = o(t3);
+            try {
+              for (s2.s();!(l2 = s2.n()).done; ) {
+                var y2 = l2.value, p2 = y2[0], g2 = y2[1];
+                if (f2 >= i2)
+                  break;
+                j(u2, "".concat(gn(e3, p2, n2), " => ").concat(gn(e3, g2, n2))), f2++;
+              }
+            } catch (t4) {
+              s2.e(t4);
+            } finally {
+              s2.f();
+            }
+            return c2 > 0 && j(u2, Pn(c2)), e3.indentationLvl -= 2, u2;
+          }
+          __name(Rn, "Rn");
+          function Ln(t3, e3, r2, n2) {
+            var o2 = at(t3.maxArrayLength, 0), a2 = it(o2, r2.length), i2 = new v(a2);
+            t3.indentationLvl += 2;
+            for (var c2 = 0;c2 < a2; c2++)
+              i2[c2] = gn(t3, r2[c2], e3);
+            t3.indentationLvl -= 2, n2 !== 0 || t3.sorted || I(i2);
+            var u2 = r2.length - a2;
+            return u2 > 0 && j(i2, Pn(u2)), i2;
+          }
+          __name(Ln, "Ln");
+          function Tn(t3, e3, r2, n2) {
+            var o2 = at(t3.maxArrayLength, 0), a2 = r2.length / 2, i2 = a2 - o2, c2 = it(o2, a2), u2 = new v(c2), l2 = 0;
+            if (t3.indentationLvl += 2, n2 === 0) {
+              for (;l2 < c2; l2++) {
+                var f2 = 2 * l2;
+                u2[l2] = "".concat(gn(t3, r2[f2], e3), " => ").concat(gn(t3, r2[f2 + 1], e3));
+              }
+              t3.sorted || I(u2);
+            } else
+              for (;l2 < c2; l2++) {
+                var s2 = 2 * l2, y2 = [gn(t3, r2[s2], e3), gn(t3, r2[s2 + 1], e3)];
+                u2[l2] = Wn(t3, y2, "", ["[", "]"], 2, e3);
+              }
+            return t3.indentationLvl -= 2, i2 > 0 && j(u2, Pn(i2)), u2;
+          }
+          __name(Tn, "Tn");
+          function Bn(t3) {
+            return [t3.stylize("<items unknown>", "special")];
+          }
+          __name(Bn, "Bn");
+          function zn(t3, e3, r2) {
+            return Ln(t3, r2, Ve(e3), 0);
+          }
+          __name(zn, "zn");
+          function Mn(t3, e3, r2) {
+            return Tn(t3, r2, Ve(e3), 0);
+          }
+          __name(Mn, "Mn");
+          function Cn(t3, e3, r2, n2) {
+            var o2 = Ve(r2, true), a2 = o2[0];
+            return o2[1] ? (t3[0] = Wt(/ Iterator] {$/, t3[0], " Entries] {"), Tn(e3, n2, a2, 2)) : Ln(e3, n2, a2, 1);
+          }
+          __name(Cn, "Cn");
+          function Dn(t3, e3, r2) {
+            var n2, o2 = Ue(e3), a2 = o2[0], i2 = o2[1];
+            if (a2 === Fe)
+              n2 = [t3.stylize("<pending>", "special")];
+            else {
+              t3.indentationLvl += 2;
+              var c2 = gn(t3, i2, r2);
+              t3.indentationLvl -= 2, n2 = [a2 === We ? "".concat(t3.stylize("<rejected>", "special"), " ").concat(c2) : c2];
+            }
+            return n2;
+          }
+          __name(Dn, "Dn");
+          function Nn(t3, e3, r2, o2, a2, i2) {
+            var c2, u2, l2 = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : e3, f2 = " ";
+            if ((i2 = i2 || Pt(e3, o2) || { value: e3[o2], enumerable: true }).value !== undefined) {
+              var s2 = t3.compact !== true || a2 !== 0 ? 2 : 3;
+              t3.indentationLvl += s2, u2 = gn(t3, i2.value, r2), s2 === 3 && t3.breakLength < Hr(u2, t3.colors) && (f2 = `
+`.concat(ue(" ", t3.indentationLvl))), t3.indentationLvl -= s2;
+            } else if (i2.get !== undefined) {
+              var y2 = i2.set !== undefined ? "Getter/Setter" : "Getter", p2 = t3.stylize, g2 = "special";
+              if (t3.getters && (t3.getters === true || t3.getters === "get" && i2.set === undefined || t3.getters === "set" && i2.set !== undefined))
+                try {
+                  var v2 = J(i2.get, l2);
+                  if (t3.indentationLvl += 2, v2 === null)
+                    u2 = "".concat(p2("[".concat(y2, ":"), g2), " ").concat(p2("null", "null")).concat(p2("]", g2));
+                  else if (n(v2) === "object")
+                    u2 = "".concat(p2("[".concat(y2, "]"), g2), " ").concat(gn(t3, v2, r2));
+                  else {
+                    var h2 = An(p2, v2, t3);
+                    u2 = "".concat(p2("[".concat(y2, ":"), g2), " ").concat(h2).concat(p2("]", g2));
+                  }
+                  t3.indentationLvl -= 2;
+                } catch (t4) {
+                  var d2 = "<Inspection threw (".concat(t4.message, ")>");
+                  u2 = "".concat(p2("[".concat(y2, ":"), g2), " ").concat(d2).concat(p2("]", g2));
+                }
+              else
+                u2 = t3.stylize("[".concat(y2, "]"), g2);
+            } else
+              u2 = i2.set !== undefined ? t3.stylize("[Setter]", "special") : t3.stylize("undefined", "undefined");
+            if (a2 === 1)
+              return u2;
+            if (n(o2) === "symbol") {
+              var b2 = Wt(Br, be(o2), en);
+              c2 = t3.stylize(b2, "symbol");
+            } else
+              c2 = Ft(Ur, o2) !== null ? o2 === "__proto__" ? "['__proto__']" : t3.stylize(o2, "name") : t3.stylize(rn(o2), "string");
+            return i2.enumerable === false && (c2 = "[".concat(c2, "]")), "".concat(c2, ":").concat(f2).concat(u2);
+          }
+          __name(Nn, "Nn");
+          function Fn(t3, e3, r2, n2) {
+            var o2 = e3.length + r2;
+            if (o2 + e3.length > t3.breakLength)
+              return false;
+            for (var a2 = 0;a2 < e3.length; a2++)
+              if (t3.colors ? o2 += Xe(e3[a2]).length : o2 += e3[a2].length, o2 > t3.breakLength)
+                return false;
+            return n2 === "" || !re(n2, `
+`);
+          }
+          __name(Fn, "Fn");
+          function Wn(t3, e3, r2, n2, o2, a2, i2) {
+            if (t3.compact !== true) {
+              if (typeof t3.compact == "number" && t3.compact >= 1) {
+                var c2 = e3.length;
+                if (o2 === 2 && c2 > 6 && (e3 = function(t4, e4, r3) {
+                  var n3 = 0, o3 = 0, a3 = 0, i3 = e4.length;
+                  t4.maxArrayLength < e4.length && i3--;
+                  for (var c3 = new v(i3);a3 < i3; a3++) {
+                    var u3 = Hr(e4[a3], t4.colors);
+                    c3[a3] = u3, n3 += u3 + 2, o3 < u3 && (o3 = u3);
+                  }
+                  var l3 = o3 + 2;
+                  if (3 * l3 + t4.indentationLvl < t4.breakLength && (n3 / l3 > 5 || o3 <= 6)) {
+                    var f3 = ut(l3 - n3 / e4.length), s3 = at(l3 - 3 - f3, 1), y2 = it(ct(ut(2.5 * s3 * i3) / s3), ot((t4.breakLength - t4.indentationLvl) / l3), 4 * t4.compact, 15);
+                    if (y2 <= 1)
+                      return e4;
+                    for (var p2 = [], g2 = [], h2 = 0;h2 < y2; h2++) {
+                      for (var d2 = 0, b2 = h2;b2 < e4.length; b2 += y2)
+                        c3[b2] > d2 && (d2 = c3[b2]);
+                      d2 += 2, g2[h2] = d2;
+                    }
+                    var m2 = ce;
+                    if (r3 !== undefined) {
+                      for (var S2 = 0;S2 < e4.length; S2++)
+                        if (typeof r3[S2] != "number" && typeof r3[S2] != "bigint") {
+                          m2 = ie;
+                          break;
+                        }
+                    }
+                    for (var P2 = 0;P2 < i3; P2 += y2) {
+                      for (var x2 = it(P2 + y2, i3), w2 = "", A2 = P2;A2 < x2 - 1; A2++) {
+                        var O2 = g2[A2 - P2] + e4[A2].length - c3[A2];
+                        w2 += m2("".concat(e4[A2], ", "), O2, " ");
+                      }
+                      if (m2 === ce) {
+                        var _2 = g2[A2 - P2] + e4[A2].length - c3[A2] - 2;
+                        w2 += ce(e4[A2], _2, " ");
+                      } else
+                        w2 += e4[A2];
+                      j(p2, w2);
+                    }
+                    t4.maxArrayLength < e4.length && j(p2, e4[i3]), e4 = p2;
+                  }
+                  return e4;
+                }(t3, e3, i2)), t3.currentDepth - a2 < t3.compact && c2 === e3.length && Fn(t3, e3, e3.length + t3.indentationLvl + n2[0].length + r2.length + 10, r2)) {
+                  var u2 = Qe(e3, ", ");
+                  if (!re(u2, `
+`))
+                    return "".concat(r2 ? "".concat(r2, " ") : "").concat(n2[0], " ").concat(u2) + " ".concat(n2[1]);
+                }
+              }
+              var l2 = `
+`.concat(ue(" ", t3.indentationLvl));
+              return "".concat(r2 ? "".concat(r2, " ") : "").concat(n2[0]).concat(l2, "  ") + "".concat(Qe(e3, ",".concat(l2, "  "))).concat(l2).concat(n2[1]);
+            }
+            if (Fn(t3, e3, 0, r2))
+              return "".concat(n2[0]).concat(r2 ? " ".concat(r2) : "", " ").concat(Qe(e3, ", "), " ") + n2[1];
+            var f2 = ue(" ", t3.indentationLvl), s2 = r2 === "" && n2[0].length === 1 ? " " : "".concat(r2 ? " ".concat(r2) : "", `
+`).concat(f2, "  ");
+            return "".concat(n2[0]).concat(s2).concat(Qe(e3, `,
+`.concat(f2, "  ")), " ").concat(n2[1]);
+          }
+          __name(Wn, "Wn");
+          function Hn(t3) {
+            var e3 = Ge(t3, false);
+            if (e3 !== undefined) {
+              if (e3 === null)
+                return true;
+              t3 = e3;
+            }
+            var r2 = Et, n2 = Et;
+            if (typeof t3.toString != "function") {
+              if (typeof t3[Se] != "function")
+                return true;
+              if (Et(t3, Se))
+                return false;
+              r2 = Un;
+            } else {
+              if (Et(t3, "toString"))
+                return false;
+              if (typeof t3[Se] != "function")
+                n2 = Un;
+              else if (Et(t3, Se))
+                return false;
+            }
+            var o2 = t3;
+            do {
+              o2 = At(o2);
+            } while (!r2(o2, "toString") && !n2(o2, Se));
+            var a2 = Pt(o2, "constructor");
+            return a2 !== undefined && typeof a2.value == "function" && Dr.has(a2.value.name);
+          }
+          __name(Hn, "Hn");
+          function Un() {
+            return false;
+          }
+          __name(Un, "Un");
+          var Gn, Vn = /* @__PURE__ */ __name(function(t3) {
+            return ye(t3.message, `
+`, 1)[0];
+          }, "Vn");
+          function Zn(t3) {
+            try {
+              return X(t3);
+            } catch (t4) {
+              if (!Gn)
+                try {
+                  var e3 = {};
+                  e3.a = e3, X(e3);
+                } catch (t5) {
+                  Gn = Vn(t5);
+                }
+              if (t4.name === "TypeError" && Vn(t4) === Gn)
+                return "[Circular]";
+              throw t4;
+            }
+          }
+          __name(Zn, "Zn");
+          function $n(t3, e3) {
+            var r2;
+            return xn(on, t3, (r2 = e3 == null ? undefined : e3.numericSeparator) !== null && r2 !== undefined ? r2 : Fr.numericSeparator);
+          }
+          __name($n, "$n");
+          function Yn(t3, e3) {
+            var r2;
+            return wn(on, t3, (r2 = e3 == null ? undefined : e3.numericSeparator) !== null && r2 !== undefined ? r2 : Fr.numericSeparator);
+          }
+          __name(Yn, "Yn");
+          function qn(t3, e3) {
+            var r2 = e3[0], o2 = 0, a2 = "", i2 = "";
+            if (typeof r2 == "string") {
+              if (e3.length === 1)
+                return r2;
+              for (var u2, l2 = 0, f2 = 0;f2 < r2.length - 1; f2++)
+                if (Xt(r2, f2) === 37) {
+                  var s2 = Xt(r2, ++f2);
+                  if (o2 + 1 !== e3.length) {
+                    switch (s2) {
+                      case 115:
+                        var y2 = e3[++o2];
+                        u2 = typeof y2 == "number" ? $n(y2, t3) : typeof y2 == "bigint" ? Yn(y2, t3) : n(y2) === "object" && y2 !== null && Hn(y2) ? Jr(y2, c(c({}, t3), {}, { compact: 3, colors: false, depth: 0 })) : Kt(y2);
+                        break;
+                      case 106:
+                        u2 = Zn(e3[++o2]);
+                        break;
+                      case 100:
+                        var p2 = e3[++o2];
+                        u2 = typeof p2 == "bigint" ? Yn(p2, t3) : n(p2) === "symbol" ? "NaN" : $n(ft(p2), t3);
+                        break;
+                      case 79:
+                        u2 = Jr(e3[++o2], t3);
+                        break;
+                      case 111:
+                        u2 = Jr(e3[++o2], c(c({}, t3), {}, { showHidden: true, showProxy: true, depth: 4 }));
+                        break;
+                      case 105:
+                        var g2 = e3[++o2];
+                        u2 = typeof g2 == "bigint" ? Yn(g2, t3) : n(g2) === "symbol" ? "NaN" : $n(gt(g2), t3);
+                        break;
+                      case 102:
+                        var v2 = e3[++o2];
+                        u2 = n(v2) === "symbol" ? "NaN" : $n(pt(v2), t3);
+                        break;
+                      case 99:
+                        o2 += 1, u2 = "";
+                        break;
+                      case 37:
+                        a2 += se(r2, l2, f2), l2 = f2 + 1;
+                        continue;
+                      default:
+                        continue;
+                    }
+                    l2 !== f2 - 1 && (a2 += se(r2, l2, f2 - 1)), a2 += u2, l2 = f2 + 1;
+                  } else
+                    s2 === 37 && (a2 += se(r2, l2, f2), l2 = f2 + 1);
+                }
+              l2 !== 0 && (o2++, i2 = " ", l2 < r2.length && (a2 += se(r2, l2)));
+            }
+            for (;o2 < e3.length; ) {
+              var h2 = e3[o2];
+              a2 += i2, a2 += typeof h2 != "string" ? Jr(h2, t3) : h2, i2 = " ", o2++;
+            }
+            return a2;
+          }
+          __name(qn, "qn");
+          function Jn(t3) {
+            return t3 <= 31 || t3 >= 127 && t3 <= 159 || t3 >= 768 && t3 <= 879 || t3 >= 8203 && t3 <= 8207 || t3 >= 8400 && t3 <= 8447 || t3 >= 65024 && t3 <= 65039 || t3 >= 65056 && t3 <= 65071 || t3 >= 917760 && t3 <= 917999;
+          }
+          __name(Jn, "Jn");
+          if (Be("config").hasIntl)
+            _r(false);
+          else {
+            Hr = /* @__PURE__ */ __name(function(t3) {
+              var e3 = 0;
+              (!(arguments.length > 1 && arguments[1] !== undefined) || arguments[1]) && (t3 = Qn(t3)), t3 = ae(t3, "NFC");
+              var r2, n2 = o(new Zt(t3));
+              try {
+                for (n2.s();!(r2 = n2.n()).done; ) {
+                  var a2 = r2.value, i2 = te(a2, 0);
+                  Kn(i2) ? e3 += 2 : Jn(i2) || e3++;
+                }
+              } catch (t4) {
+                n2.e(t4);
+              } finally {
+                n2.f();
+              }
+              return e3;
+            }, "Hr");
+            var Kn = /* @__PURE__ */ __name(function(t3) {
+              return t3 >= 4352 && (t3 <= 4447 || t3 === 9001 || t3 === 9002 || t3 >= 11904 && t3 <= 12871 && t3 !== 12351 || t3 >= 12880 && t3 <= 19903 || t3 >= 19968 && t3 <= 42182 || t3 >= 43360 && t3 <= 43388 || t3 >= 44032 && t3 <= 55203 || t3 >= 63744 && t3 <= 64255 || t3 >= 65040 && t3 <= 65049 || t3 >= 65072 && t3 <= 65131 || t3 >= 65281 && t3 <= 65376 || t3 >= 65504 && t3 <= 65510 || t3 >= 110592 && t3 <= 110593 || t3 >= 127488 && t3 <= 127569 || t3 >= 127744 && t3 <= 128591 || t3 >= 131072 && t3 <= 262141);
+            }, "Kn");
+          }
+          function Qn(t3) {
+            return Ir(t3, "str"), Wt(qr, t3, "");
+          }
+          __name(Qn, "Qn");
+          var Xn = { 34: "&quot;", 38: "&amp;", 39: "&apos;", 60: "&lt;", 62: "&gt;", 160: "&nbsp;" };
+          function to(t3) {
+            return t3.replace(/[\u0000-\u002F\u003A-\u0040\u005B-\u0060\u007B-\u00FF]/g, function(t4) {
+              var e3 = Kt(t4.charCodeAt(0));
+              return Xn[e3] || "&#" + e3 + ";";
+            });
+          }
+          __name(to, "to");
+          t2.exports = { identicalSequenceRange: hn, inspect: Jr, inspectDefaultOptions: Fr, format: /* @__PURE__ */ __name(function() {
+            for (var t3 = arguments.length, e3 = new Array(t3), r2 = 0;r2 < t3; r2++)
+              e3[r2] = arguments[r2];
+            return qn(undefined, e3);
+          }, "format"), formatWithOptions: /* @__PURE__ */ __name(function(t3) {
+            kr(t3, "inspectOptions", Rr);
+            for (var e3 = arguments.length, r2 = new Array(e3 > 1 ? e3 - 1 : 0), n2 = 1;n2 < e3; n2++)
+              r2[n2 - 1] = arguments[n2];
+            return qn(t3, r2);
+          }, "formatWithOptions"), getStringWidth: Hr, stripVTControlCharacters: Qn, isZeroWidthCodePoint: Jn, stylizeWithColor: nn, stylizeWithHTML: /* @__PURE__ */ __name(function(t3, e3) {
+            var r2 = Jr.styles[e3];
+            return r2 !== undefined ? '<span style="color:'.concat(r2, ';">').concat(to(t3), "</span>") : to(t3);
+          }, "stylizeWithHTML"), Proxy: Ye };
+        }, 116: (t2, e2, r) => {
+          function n(t3) {
+            return n = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, n(t3);
+          }
+          __name(n, "n");
+          var o = r(425).ArrayIsArray, a = r(924), i = a.hideStackFrames, c = a.codes.ERR_INVALID_ARG_TYPE, u = i(function(t3, e3) {
+            var r2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+            if (r2 === 0) {
+              if (t3 === null || o(t3))
+                throw new c(e3, "Object", t3);
+              if (n(t3) !== "object")
+                throw new c(e3, "Object", t3);
+            } else {
+              if (!(1 & r2) && t3 === null)
+                throw new c(e3, "Object", t3);
+              if (!(2 & r2) && o(t3))
+                throw new c(e3, "Object", t3);
+              var a2 = !(4 & r2), i2 = n(t3);
+              if (i2 !== "object" && (a2 || i2 !== "function"))
+                throw new c(e3, "Object", t3);
+            }
+          });
+          t2.exports = { kValidateObjectNone: 0, kValidateObjectAllowNullable: 1, kValidateObjectAllowArray: 2, kValidateObjectAllowFunction: 4, validateObject: u, validateString: /* @__PURE__ */ __name(function(t3, e3) {
+            if (typeof t3 != "string")
+              throw new c(e3, "string", t3);
+          }, "validateString") };
+        }, 153: (t2, e2, r) => {
+          function n(t3) {
+            return n = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, n(t3);
+          }
+          __name(n, "n");
+          function o(t3, e3) {
+            return function(t4) {
+              if (Array.isArray(t4))
+                return t4;
+            }(t3) || function(t4, e4) {
+              var r2 = t4 == null ? null : typeof Symbol != "undefined" && t4[Symbol.iterator] || t4["@@iterator"];
+              if (r2 != null) {
+                var n2, o2, a2, i2, c2 = [], u2 = true, l2 = false;
+                try {
+                  if (a2 = (r2 = r2.call(t4)).next, e4 === 0) {
+                    if (Object(r2) !== r2)
+                      return;
+                    u2 = false;
+                  } else
+                    for (;!(u2 = (n2 = a2.call(r2)).done) && (c2.push(n2.value), c2.length !== e4); u2 = true)
+                      ;
+                } catch (t5) {
+                  l2 = true, o2 = t5;
+                } finally {
+                  try {
+                    if (!u2 && r2.return != null && (i2 = r2.return(), Object(i2) !== i2))
+                      return;
+                  } finally {
+                    if (l2)
+                      throw o2;
+                  }
+                }
+                return c2;
+              }
+            }(t3, e3) || i(t3, e3) || function() {
+              throw new TypeError(`Invalid attempt to destructure non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+            }();
+          }
+          __name(o, "o");
+          function a(t3, e3) {
+            var r2 = typeof Symbol != "undefined" && t3[Symbol.iterator] || t3["@@iterator"];
+            if (!r2) {
+              if (Array.isArray(t3) || (r2 = i(t3)) || e3 && t3 && typeof t3.length == "number") {
+                r2 && (t3 = r2);
+                var n2 = 0, o2 = /* @__PURE__ */ __name(function() {}, "o");
+                return { s: o2, n: /* @__PURE__ */ __name(function() {
+                  return n2 >= t3.length ? { done: true } : { done: false, value: t3[n2++] };
+                }, "n"), e: /* @__PURE__ */ __name(function(t4) {
+                  throw t4;
+                }, "e"), f: o2 };
+              }
+              throw new TypeError(`Invalid attempt to iterate non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+            }
+            var a2, c2 = true, u2 = false;
+            return { s: /* @__PURE__ */ __name(function() {
+              r2 = r2.call(t3);
+            }, "s"), n: /* @__PURE__ */ __name(function() {
+              var t4 = r2.next();
+              return c2 = t4.done, t4;
+            }, "n"), e: /* @__PURE__ */ __name(function(t4) {
+              u2 = true, a2 = t4;
+            }, "e"), f: /* @__PURE__ */ __name(function() {
+              try {
+                c2 || r2.return == null || r2.return();
+              } finally {
+                if (u2)
+                  throw a2;
+              }
+            }, "f") };
+          }
+          __name(a, "a");
+          function i(t3, e3) {
+            if (t3) {
+              if (typeof t3 == "string")
+                return c(t3, e3);
+              var r2 = {}.toString.call(t3).slice(8, -1);
+              return r2 === "Object" && t3.constructor && (r2 = t3.constructor.name), r2 === "Map" || r2 === "Set" ? Array.from(t3) : r2 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r2) ? c(t3, e3) : undefined;
+            }
+          }
+          __name(i, "i");
+          function c(t3, e3) {
+            (e3 == null || e3 > t3.length) && (e3 = t3.length);
+            for (var r2 = 0, n2 = Array(e3);r2 < e3; r2++)
+              n2[r2] = t3[r2];
+            return n2;
+          }
+          __name(c, "c");
+          var u = r(425), l = u.BigInt, f = u.Error, s = u.NumberParseInt, y = u.ObjectEntries, p = u.ObjectGetOwnPropertyDescriptor, g = u.ObjectGetOwnPropertyDescriptors, v = u.ObjectGetOwnPropertySymbols, h = u.ObjectPrototypeToString, d = u.Symbol, b = r(569), m = d("kPending"), S = d("kRejected");
+          t2.exports = { constants: { kPending: m, kRejected: S, ALL_PROPERTIES: 0, ONLY_ENUMERABLE: 2 }, getOwnNonIndexProperties: /* @__PURE__ */ __name(function(t3) {
+            var e3, r2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2, n2 = g(t3), i2 = [], c2 = a(y(n2));
+            try {
+              for (c2.s();!(e3 = c2.n()).done; ) {
+                var u2 = o(e3.value, 2), l2 = u2[0], f2 = u2[1];
+                if (!/^(0|[1-9][0-9]*)$/.test(l2) || s(l2, 10) >= Math.pow(2, 32) - 1) {
+                  if (r2 === 2 && !f2.enumerable)
+                    continue;
+                  i2.push(l2);
+                }
+              }
+            } catch (t4) {
+              c2.e(t4);
+            } finally {
+              c2.f();
+            }
+            var h2, d2 = a(v(t3));
+            try {
+              for (d2.s();!(h2 = d2.n()).done; ) {
+                var b2 = h2.value, m2 = p(t3, b2);
+                (r2 !== 2 || m2.enumerable) && i2.push(b2);
+              }
+            } catch (t4) {
+              d2.e(t4);
+            } finally {
+              d2.f();
+            }
+            return i2;
+          }, "getOwnNonIndexProperties"), getPromiseDetails: /* @__PURE__ */ __name(function() {
+            return [m, undefined];
+          }, "getPromiseDetails"), getProxyDetails: b.getProxyDetails, Proxy: b.Proxy, previewEntries: /* @__PURE__ */ __name(function(t3) {
+            return [[], false];
+          }, "previewEntries"), getConstructorName: /* @__PURE__ */ __name(function(t3) {
+            var e3;
+            if (!t3 || n(t3) !== "object")
+              throw new f("Invalid object");
+            if ((e3 = t3.constructor) !== null && e3 !== undefined && e3.name)
+              return t3.constructor.name;
+            var r2 = h(t3).match(/^\[object ([^\]]+)\]/);
+            return r2 ? r2[1] : "Object";
+          }, "getConstructorName"), getExternalValue: /* @__PURE__ */ __name(function() {
+            return l(0);
+          }, "getExternalValue") };
+        }, 229: (t2, e2, r) => {
+          var n;
+          function o() {
+            return n = n != null ? n : r(924).codes.ERR_INTERNAL_ASSERTION;
+          }
+          __name(o, "o");
+          function a(t3, e3) {
+            if (!t3)
+              throw new (o())(e3);
+          }
+          __name(a, "a");
+          a.fail = function(t3) {
+            throw new (o())(t3);
+          }, t2.exports = a;
+        }, 370: (t2, e2, r) => {
+          var n = r(425), o = n.StringPrototypeCharCodeAt, a = n.StringPrototypeLastIndexOf, i = n.StringPrototypeSlice, c = r(22), u = c.CHAR_DOT, l = c.CHAR_FORWARD_SLASH, f = r(116).validateString;
+          function s(t3) {
+            return t3 === l;
+          }
+          __name(s, "s");
+          function y(t3, e3, r2, n2) {
+            for (var c2 = "", f2 = 0, s2 = -1, y2 = 0, p = 0, g = 0;g <= t3.length; ++g) {
+              if (g < t3.length)
+                p = o(t3, g);
+              else {
+                if (n2(p))
+                  break;
+                p = l;
+              }
+              if (n2(p)) {
+                if (s2 === g - 1 || y2 === 1)
+                  ;
+                else if (y2 === 2) {
+                  if (c2.length < 2 || f2 !== 2 || o(c2, c2.length - 1) !== u || o(c2, c2.length - 2) !== u) {
+                    if (c2.length > 2) {
+                      var v = a(c2, r2);
+                      v === -1 ? (c2 = "", f2 = 0) : f2 = (c2 = i(c2, 0, v)).length - 1 - a(c2, r2), s2 = g, y2 = 0;
+                      continue;
+                    }
+                    if (c2.length !== 0) {
+                      c2 = "", f2 = 0, s2 = g, y2 = 0;
+                      continue;
+                    }
+                  }
+                  e3 && (c2 += c2.length > 0 ? "".concat(r2, "..") : "..", f2 = 2);
+                } else
+                  c2.length > 0 ? c2 += "".concat(r2).concat(i(t3, s2 + 1, g)) : c2 = i(t3, s2 + 1, g), f2 = g - s2 - 1;
+                s2 = g, y2 = 0;
+              } else
+                p === u && y2 !== -1 ? ++y2 : y2 = -1;
+            }
+            return c2;
+          }
+          __name(y, "y");
+          t2.exports = { isPosixPathSeparator: s, normalizeString: y, resolve: /* @__PURE__ */ __name(function() {
+            if ((arguments.length === 0 || arguments.length === 1 && ((arguments.length <= 0 ? undefined : arguments[0]) === "" || (arguments.length <= 0 ? undefined : arguments[0]) === ".")) && o("/", 0) === l)
+              return "/";
+            for (var t3 = "", e3 = false, r2 = arguments.length - 1;r2 >= 0 && !e3; r2--) {
+              var n2 = r2 < 0 || arguments.length <= r2 ? undefined : arguments[r2];
+              f(n2, "paths[".concat(r2, "]")), n2.length !== 0 && (t3 = "".concat(n2, "/").concat(t3), e3 = o(n2, 0) === l);
+            }
+            return e3 || (t3 = "".concat("/", "/").concat(t3), e3 = o("/", 0) === l), t3 = y(t3, !e3, "/", s), e3 ? "/".concat(t3) : t3.length > 0 ? t3 : ".";
+          }, "resolve") };
+        }, 425: (t2) => {
+          function e2() {
+            var t3, n2, o2 = typeof Symbol == "function" ? Symbol : {}, a2 = o2.iterator || "@@iterator", i2 = o2.toStringTag || "@@toStringTag";
+            function c2(e3, o3, a3, i3) {
+              var c3 = o3 && o3.prototype instanceof l2 ? o3 : l2, f3 = Object.create(c3.prototype);
+              return r(f3, "_invoke", function(e4, r2, o4) {
+                var a4, i4, c4, l3 = 0, f4 = o4 || [], s3 = false, y3 = { p: 0, n: 0, v: t3, a: p3, f: p3.bind(t3, 4), d: /* @__PURE__ */ __name(function(e5, r3) {
+                  return a4 = e5, i4 = 0, c4 = t3, y3.n = r3, u2;
+                }, "d") };
+                function p3(e5, r3) {
+                  for (i4 = e5, c4 = r3, n2 = 0;!s3 && l3 && !o5 && n2 < f4.length; n2++) {
+                    var o5, a5 = f4[n2], p4 = y3.p, g3 = a5[2];
+                    e5 > 3 ? (o5 = g3 === r3) && (c4 = a5[(i4 = a5[4]) ? 5 : (i4 = 3, 3)], a5[4] = a5[5] = t3) : a5[0] <= p4 && ((o5 = e5 < 2 && p4 < a5[1]) ? (i4 = 0, y3.v = r3, y3.n = a5[1]) : p4 < g3 && (o5 = e5 < 3 || a5[0] > r3 || r3 > g3) && (a5[4] = e5, a5[5] = r3, y3.n = g3, i4 = 0));
+                  }
+                  if (o5 || e5 > 1)
+                    return u2;
+                  throw s3 = true, r3;
+                }
+                __name(p3, "p");
+                return function(o5, f5, g3) {
+                  if (l3 > 1)
+                    throw TypeError("Generator is already running");
+                  for (s3 && f5 === 1 && p3(f5, g3), i4 = f5, c4 = g3;(n2 = i4 < 2 ? t3 : c4) || !s3; ) {
+                    a4 || (i4 ? i4 < 3 ? (i4 > 1 && (y3.n = -1), p3(i4, c4)) : y3.n = c4 : y3.v = c4);
+                    try {
+                      if (l3 = 2, a4) {
+                        if (i4 || (o5 = "next"), n2 = a4[o5]) {
+                          if (!(n2 = n2.call(a4, c4)))
+                            throw TypeError("iterator result is not an object");
+                          if (!n2.done)
+                            return n2;
+                          c4 = n2.value, i4 < 2 && (i4 = 0);
+                        } else
+                          i4 === 1 && (n2 = a4.return) && n2.call(a4), i4 < 2 && (c4 = TypeError("The iterator does not provide a '" + o5 + "' method"), i4 = 1);
+                        a4 = t3;
+                      } else if ((n2 = (s3 = y3.n < 0) ? c4 : e4.call(r2, y3)) !== u2)
+                        break;
+                    } catch (e5) {
+                      a4 = t3, i4 = 1, c4 = e5;
+                    } finally {
+                      l3 = 1;
+                    }
+                  }
+                  return { value: n2, done: s3 };
+                };
+              }(e3, a3, i3), true), f3;
+            }
+            __name(c2, "c");
+            var u2 = {};
+            function l2() {}
+            __name(l2, "l");
+            function f2() {}
+            __name(f2, "f");
+            function s2() {}
+            __name(s2, "s");
+            n2 = Object.getPrototypeOf;
+            var y2 = [][a2] ? n2(n2([][a2]())) : (r(n2 = {}, a2, function() {
+              return this;
+            }), n2), p2 = s2.prototype = l2.prototype = Object.create(y2);
+            function g2(t4) {
+              return Object.setPrototypeOf ? Object.setPrototypeOf(t4, s2) : (t4.__proto__ = s2, r(t4, i2, "GeneratorFunction")), t4.prototype = Object.create(p2), t4;
+            }
+            __name(g2, "g");
+            return f2.prototype = s2, r(p2, "constructor", s2), r(s2, "constructor", f2), f2.displayName = "GeneratorFunction", r(s2, i2, "GeneratorFunction"), r(p2), r(p2, i2, "Generator"), r(p2, a2, function() {
+              return this;
+            }), r(p2, "toString", function() {
+              return "[object Generator]";
+            }), (e2 = /* @__PURE__ */ __name(function() {
+              return { w: c2, m: g2 };
+            }, "e"))();
+          }
+          __name(e2, "e");
+          function r(t3, e3, n2, o2) {
+            var a2 = Object.defineProperty;
+            try {
+              a2({}, "", {});
+            } catch (t4) {
+              a2 = 0;
+            }
+            r = /* @__PURE__ */ __name(function(t4, e4, n3, o3) {
+              function i2(e5, n4) {
+                r(t4, e5, function(t5) {
+                  return this._invoke(e5, n4, t5);
+                });
+              }
+              __name(i2, "i");
+              e4 ? a2 ? a2(t4, e4, { value: n3, enumerable: !o3, configurable: !o3, writable: !o3 }) : t4[e4] = n3 : (i2("next", 0), i2("throw", 1), i2("return", 2));
+            }, "r"), r(t3, e3, n2, o2);
+          }
+          __name(r, "r");
+          function n(t3, e3, r2) {
+            return e3 = a(e3), function(t4, e4) {
+              if (e4 && (d(e4) == "object" || typeof e4 == "function"))
+                return e4;
+              if (e4 !== undefined)
+                throw new TypeError("Derived constructors may only return object or undefined");
+              return function(t5) {
+                if (t5 === undefined)
+                  throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return t5;
+              }(t4);
+            }(t3, o() ? Reflect.construct(e3, r2 || [], a(t3).constructor) : e3.apply(t3, r2));
+          }
+          __name(n, "n");
+          function o() {
+            try {
+              var t3 = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}));
+            } catch (t4) {}
+            return (o = /* @__PURE__ */ __name(function() {
+              return !!t3;
+            }, "o"))();
+          }
+          __name(o, "o");
+          function a(t3) {
+            return a = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function(t4) {
+              return t4.__proto__ || Object.getPrototypeOf(t4);
+            }, a(t3);
+          }
+          __name(a, "a");
+          function i(t3, e3) {
+            if (typeof e3 != "function" && e3 !== null)
+              throw new TypeError("Super expression must either be null or a function");
+            t3.prototype = Object.create(e3 && e3.prototype, { constructor: { value: t3, writable: true, configurable: true } }), Object.defineProperty(t3, "prototype", { writable: false }), e3 && c(t3, e3);
+          }
+          __name(i, "i");
+          function c(t3, e3) {
+            return c = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(t4, e4) {
+              return t4.__proto__ = e4, t4;
+            }, c(t3, e3);
+          }
+          __name(c, "c");
+          function u(t3, e3) {
+            if (!(t3 instanceof e3))
+              throw new TypeError("Cannot call a class as a function");
+          }
+          __name(u, "u");
+          function l(t3, e3) {
+            for (var r2 = 0;r2 < e3.length; r2++) {
+              var n2 = e3[r2];
+              n2.enumerable = n2.enumerable || false, n2.configurable = true, "value" in n2 && (n2.writable = true), Object.defineProperty(t3, g(n2.key), n2);
+            }
+          }
+          __name(l, "l");
+          function f(t3, e3, r2) {
+            return e3 && l(t3.prototype, e3), r2 && l(t3, r2), Object.defineProperty(t3, "prototype", { writable: false }), t3;
+          }
+          __name(f, "f");
+          function s(t3, e3) {
+            var r2 = Object.keys(t3);
+            if (Object.getOwnPropertySymbols) {
+              var n2 = Object.getOwnPropertySymbols(t3);
+              e3 && (n2 = n2.filter(function(e4) {
+                return Object.getOwnPropertyDescriptor(t3, e4).enumerable;
+              })), r2.push.apply(r2, n2);
+            }
+            return r2;
+          }
+          __name(s, "s");
+          function y(t3) {
+            for (var e3 = 1;e3 < arguments.length; e3++) {
+              var r2 = arguments[e3] != null ? arguments[e3] : {};
+              e3 % 2 ? s(Object(r2), true).forEach(function(e4) {
+                p(t3, e4, r2[e4]);
+              }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t3, Object.getOwnPropertyDescriptors(r2)) : s(Object(r2)).forEach(function(e4) {
+                Object.defineProperty(t3, e4, Object.getOwnPropertyDescriptor(r2, e4));
+              });
+            }
+            return t3;
+          }
+          __name(y, "y");
+          function p(t3, e3, r2) {
+            return (e3 = g(e3)) in t3 ? Object.defineProperty(t3, e3, { value: r2, enumerable: true, configurable: true, writable: true }) : t3[e3] = r2, t3;
+          }
+          __name(p, "p");
+          function g(t3) {
+            var e3 = function(t4) {
+              if (d(t4) != "object" || !t4)
+                return t4;
+              var e4 = t4[Symbol.toPrimitive];
+              if (e4 !== undefined) {
+                var r2 = e4.call(t4, "string");
+                if (d(r2) != "object")
+                  return r2;
+                throw new TypeError("@@toPrimitive must return a primitive value.");
+              }
+              return String(t4);
+            }(t3);
+            return d(e3) == "symbol" ? e3 : e3 + "";
+          }
+          __name(g, "g");
+          function v(t3, e3) {
+            var r2 = typeof Symbol != "undefined" && t3[Symbol.iterator] || t3["@@iterator"];
+            if (!r2) {
+              if (Array.isArray(t3) || (r2 = function(t4, e4) {
+                if (t4) {
+                  if (typeof t4 == "string")
+                    return h(t4, e4);
+                  var r3 = {}.toString.call(t4).slice(8, -1);
+                  return r3 === "Object" && t4.constructor && (r3 = t4.constructor.name), r3 === "Map" || r3 === "Set" ? Array.from(t4) : r3 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r3) ? h(t4, e4) : undefined;
+                }
+              }(t3)) || e3 && t3 && typeof t3.length == "number") {
+                r2 && (t3 = r2);
+                var n2 = 0, o2 = /* @__PURE__ */ __name(function() {}, "o");
+                return { s: o2, n: /* @__PURE__ */ __name(function() {
+                  return n2 >= t3.length ? { done: true } : { done: false, value: t3[n2++] };
+                }, "n"), e: /* @__PURE__ */ __name(function(t4) {
+                  throw t4;
+                }, "e"), f: o2 };
+              }
+              throw new TypeError(`Invalid attempt to iterate non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+            }
+            var a2, i2 = true, c2 = false;
+            return { s: /* @__PURE__ */ __name(function() {
+              r2 = r2.call(t3);
+            }, "s"), n: /* @__PURE__ */ __name(function() {
+              var t4 = r2.next();
+              return i2 = t4.done, t4;
+            }, "n"), e: /* @__PURE__ */ __name(function(t4) {
+              c2 = true, a2 = t4;
+            }, "e"), f: /* @__PURE__ */ __name(function() {
+              try {
+                i2 || r2.return == null || r2.return();
+              } finally {
+                if (c2)
+                  throw a2;
+              }
+            }, "f") };
+          }
+          __name(v, "v");
+          function h(t3, e3) {
+            (e3 == null || e3 > t3.length) && (e3 = t3.length);
+            for (var r2 = 0, n2 = Array(e3);r2 < e3; r2++)
+              n2[r2] = t3[r2];
+            return n2;
+          }
+          __name(h, "h");
+          function d(t3) {
+            return d = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, d(t3);
+          }
+          __name(d, "d");
+          function b(t3) {
+            return function() {
+              return new m(t3.apply(this, arguments));
+            };
+          }
+          __name(b, "b");
+          function m(t3) {
+            var e3, r2;
+            function n2(e4, r3) {
+              try {
+                var a2 = t3[e4](r3), i2 = a2.value, c2 = i2 instanceof S;
+                Promise.resolve(c2 ? i2.v : i2).then(function(r4) {
+                  if (c2) {
+                    var u2 = e4 === "return" ? "return" : "next";
+                    if (!i2.k || r4.done)
+                      return n2(u2, r4);
+                    r4 = t3[u2](r4).value;
+                  }
+                  o2(a2.done ? "return" : "normal", r4);
+                }, function(t4) {
+                  n2("throw", t4);
+                });
+              } catch (t4) {
+                o2("throw", t4);
+              }
+            }
+            __name(n2, "n");
+            function o2(t4, o3) {
+              switch (t4) {
+                case "return":
+                  e3.resolve({ value: o3, done: true });
+                  break;
+                case "throw":
+                  e3.reject(o3);
+                  break;
+                default:
+                  e3.resolve({ value: o3, done: false });
+              }
+              (e3 = e3.next) ? n2(e3.key, e3.arg) : r2 = null;
+            }
+            __name(o2, "o");
+            this._invoke = function(t4, o3) {
+              return new Promise(function(a2, i2) {
+                var c2 = { key: t4, arg: o3, resolve: a2, reject: i2, next: null };
+                r2 ? r2 = r2.next = c2 : (e3 = r2 = c2, n2(t4, o3));
+              });
+            }, typeof t3.return != "function" && (this.return = undefined);
+          }
+          __name(m, "m");
+          function S(t3, e3) {
+            this.v = t3, this.k = e3;
+          }
+          __name(S, "S");
+          m.prototype[typeof Symbol == "function" && Symbol.asyncIterator || "@@asyncIterator"] = function() {
+            return this;
+          }, m.prototype.next = function(t3) {
+            return this._invoke("next", t3);
+          }, m.prototype.throw = function(t3) {
+            return this._invoke("throw", t3);
+          }, m.prototype.return = function(t3) {
+            return this._invoke("return", t3);
+          };
+          var P = { __proto__: null }, x = Reflect.defineProperty, w = Reflect.getOwnPropertyDescriptor, A = Reflect.ownKeys, O = Function.prototype, _ = O.apply, j = O.bind, E = O.call, k = j.bind(E);
+          P.uncurryThis = k;
+          var I = j.bind(_);
+          P.applyBind = I;
+          var R = ["ArrayOf", "ArrayPrototypePush", "ArrayPrototypeUnshift", "MathHypot", "MathMax", "MathMin", "StringFromCharCode", "StringFromCodePoint", "StringPrototypeConcat", "TypedArrayOf"];
+          function L(t3) {
+            return d(t3) === "symbol" ? "Symbol".concat(t3.description[7].toUpperCase()).concat(t3.description.slice(8)) : "".concat(t3[0].toUpperCase()).concat(t3.slice(1));
+          }
+          __name(L, "L");
+          function T(t3, e3, r2, n2) {
+            var { enumerable: o2, get: a2, set: i2 } = n2;
+            x(t3, "".concat(e3, "Get").concat(r2), { __proto__: null, value: k(a2), enumerable: o2 }), i2 !== undefined && x(t3, "".concat(e3, "Set").concat(r2), { __proto__: null, value: k(i2), enumerable: o2 });
+          }
+          __name(T, "T");
+          function B(t3, e3, r2) {
+            var n2, o2 = v(A(t3));
+            try {
+              for (o2.s();!(n2 = o2.n()).done; ) {
+                var a2 = n2.value, i2 = L(a2), c2 = w(t3, a2);
+                if ("get" in c2)
+                  T(e3, r2, i2, c2);
+                else {
+                  var u2 = "".concat(r2).concat(i2);
+                  x(e3, u2, y({ __proto__: null }, c2)), R.includes(u2) && x(e3, "".concat(u2, "Apply"), { __proto__: null, value: I(c2.value, t3) });
+                }
+              }
+            } catch (t4) {
+              o2.e(t4);
+            } finally {
+              o2.f();
+            }
+          }
+          __name(B, "B");
+          function z(t3, e3, r2) {
+            var n2, o2 = v(A(t3));
+            try {
+              for (o2.s();!(n2 = o2.n()).done; ) {
+                var a2 = n2.value, i2 = L(a2), c2 = w(t3, a2);
+                if ("get" in c2)
+                  T(e3, r2, i2, c2);
+                else {
+                  var u2 = c2.value;
+                  typeof u2 == "function" && (c2.value = k(u2));
+                  var l2 = "".concat(r2).concat(i2);
+                  x(e3, l2, y({ __proto__: null }, c2)), R.includes(l2) && x(e3, "".concat(l2, "Apply"), { __proto__: null, value: I(u2) });
+                }
+              }
+            } catch (t4) {
+              o2.e(t4);
+            } finally {
+              o2.f();
+            }
+          }
+          __name(z, "z");
+          ["Proxy", "globalThis"].forEach(function(t3) {
+            P[t3] = globalThis[t3];
+          }), [decodeURI, decodeURIComponent, encodeURI, encodeURIComponent].forEach(function(t3) {
+            P[t3.name] = t3;
+          }), [escape, eval, unescape].forEach(function(t3) {
+            P[t3.name] = t3;
+          }), ["Atomics", "JSON", "Math", "Proxy", "Reflect"].forEach(function(t3) {
+            B(globalThis[t3], P, t3);
+          }), ["AggregateError", "Array", "ArrayBuffer", "BigInt", "BigInt64Array", "BigUint64Array", "Boolean", "DataView", "Date", "Error", "EvalError", "FinalizationRegistry", "Float32Array", "Float64Array", "Function", "Int16Array", "Int32Array", "Int8Array", "Map", "Number", "Object", "RangeError", "ReferenceError", "RegExp", "Set", "String", "Symbol", "SyntaxError", "TypeError", "URIError", "Uint16Array", "Uint32Array", "Uint8Array", "Uint8ClampedArray", "WeakMap", "WeakRef", "WeakSet"].forEach(function(t3) {
+            var e3 = globalThis[t3];
+            e3 && (P[t3] = e3, B(e3, P, t3), z(e3.prototype, P, "".concat(t3, "Prototype")));
+          }), ["Promise"].forEach(function(t3) {
+            var e3 = globalThis[t3];
+            P[t3] = e3, function(t4, e4, r2) {
+              var n2, o2 = v(A(t4));
+              try {
+                for (o2.s();!(n2 = o2.n()).done; ) {
+                  var a2 = n2.value, i2 = L(a2), c2 = w(t4, a2);
+                  if ("get" in c2)
+                    T(e4, r2, i2, c2);
+                  else {
+                    var u2 = c2.value;
+                    typeof u2 == "function" && (c2.value = u2.bind(t4));
+                    var l2 = "".concat(r2).concat(i2);
+                    x(e4, l2, y({ __proto__: null }, c2));
+                  }
+                }
+              } catch (t5) {
+                o2.e(t5);
+              } finally {
+                o2.f();
+              }
+            }(e3, P, t3), z(e3.prototype, P, "".concat(t3, "Prototype"));
+          }), [{ name: "TypedArray", original: Reflect.getPrototypeOf(Uint8Array) }, { name: "ArrayIterator", original: { prototype: Reflect.getPrototypeOf(Array.prototype[Symbol.iterator]()) } }, { name: "StringIterator", original: { prototype: Reflect.getPrototypeOf(String.prototype[Symbol.iterator]()) } }].forEach(function(t3) {
+            var { name: e3, original: r2 } = t3;
+            P[e3] = r2, z(r2, P, e3), z(r2.prototype, P, "".concat(e3, "Prototype"));
+          }), P.IteratorPrototype = Reflect.getPrototypeOf(P.ArrayIteratorPrototype);
+          var { ArrayPrototypeForEach: M, FinalizationRegistry: C, FunctionPrototypeCall: D, Map: N, ObjectFreeze: F, ObjectSetPrototypeOf: W, RegExp: H, Set: U, SymbolIterator: G, WeakMap: V, WeakRef: Z, WeakSet: $ } = P, Y = /* @__PURE__ */ __name(function(t3, e3) {
+            var r2 = function() {
+              return f(/* @__PURE__ */ __name(function e4(r3) {
+                u(this, e4), this._iterator = t3(r3);
+              }, "e"), [{ key: "next", value: /* @__PURE__ */ __name(function() {
+                return e3(this._iterator);
+              }, "value") }, { key: G, value: /* @__PURE__ */ __name(function() {
+                return this;
+              }, "value") }]);
+            }();
+            return W(r2.prototype, null), F(r2.prototype), F(r2), r2;
+          }, "Y");
+          P.SafeArrayIterator = Y(P.ArrayPrototypeSymbolIterator, P.ArrayIteratorPrototypeNext), P.SafeStringIterator = Y(P.StringPrototypeSymbolIterator, P.StringIteratorPrototypeNext);
+          var q = /* @__PURE__ */ __name(function(t3, e3) {
+            M(A(t3), function(r2) {
+              w(e3, r2) || x(e3, r2, y({ __proto__: null }, w(t3, r2)));
+            });
+          }, "q"), J = /* @__PURE__ */ __name(function(t3, e3) {
+            if (G in t3.prototype) {
+              var r2, n2 = new t3;
+              M(A(t3.prototype), function(o2) {
+                if (!w(e3.prototype, o2)) {
+                  var a2, i2 = w(t3.prototype, o2);
+                  if (typeof i2.value == "function" && i2.value.length === 0 && G in ((a2 = D(i2.value, n2)) !== null && a2 !== undefined ? a2 : {})) {
+                    var c2 = k(i2.value);
+                    r2 = r2 || k(c2(n2).next);
+                    var u2 = Y(c2, r2);
+                    i2.value = function() {
+                      return new u2(this);
+                    };
+                  }
+                  x(e3.prototype, o2, y({ __proto__: null }, i2));
+                }
+              });
+            } else
+              q(t3.prototype, e3.prototype);
+            return q(t3, e3), W(e3.prototype, null), F(e3.prototype), F(e3), e3;
+          }, "J");
+          P.makeSafe = J, P.SafeMap = J(N, function(t3) {
+            function e3(t4) {
+              return u(this, e3), n(this, e3, [t4]);
+            }
+            __name(e3, "e");
+            return i(e3, t3), f(e3);
+          }(N)), P.SafeWeakMap = J(V, function(t3) {
+            function e3(t4) {
+              return u(this, e3), n(this, e3, [t4]);
+            }
+            __name(e3, "e");
+            return i(e3, t3), f(e3);
+          }(V)), P.SafeSet = J(U, function(t3) {
+            function e3(t4) {
+              return u(this, e3), n(this, e3, [t4]);
+            }
+            __name(e3, "e");
+            return i(e3, t3), f(e3);
+          }(U)), P.SafeWeakSet = J($, function(t3) {
+            function e3(t4) {
+              return u(this, e3), n(this, e3, [t4]);
+            }
+            __name(e3, "e");
+            return i(e3, t3), f(e3);
+          }($)), P.SafeFinalizationRegistry = J(C, function(t3) {
+            function e3(t4) {
+              return u(this, e3), n(this, e3, [t4]);
+            }
+            __name(e3, "e");
+            return i(e3, t3), f(e3);
+          }(C)), P.SafeWeakRef = J(Z, function(t3) {
+            function e3(t4) {
+              return u(this, e3), n(this, e3, [t4]);
+            }
+            __name(e3, "e");
+            return i(e3, t3), f(e3);
+          }(Z)), P.AsyncIteratorPrototype = P.ReflectGetPrototypeOf(b(e2().m(/* @__PURE__ */ __name(function t3() {
+            return e2().w(function(t4) {
+              for (;; )
+                if (t4.n === 0)
+                  return t4.a(2);
+            }, t3);
+          }, "t")))).prototype, P.internalBinding = function(t3) {
+            if (t3 === "config")
+              return { hasIntl: false };
+            throw new Error('unknown module: "'.concat(t3, '"'));
+          }, P._stringPrototypeReplaceAll = function(t3, e3, r2) {
+            return Object.prototype.toString.call(e3).toLowerCase() === "[object regexp]" ? t3.replace(e3, r2) : t3.replace(new H(e3, "g"), r2);
+          }, P.StringPrototypeReplaceAll = P.StringPrototypeReplaceAll || P._stringPrototypeReplaceAll, W(P, null), F(P), t2.exports = P;
+        }, 569: (t2, e2, r) => {
+          function n(t3) {
+            return n = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, n(t3);
+          }
+          __name(n, "n");
+          function o(t3, e3) {
+            for (var r2 = 0;r2 < e3.length; r2++) {
+              var n2 = e3[r2];
+              n2.enumerable = n2.enumerable || false, n2.configurable = true, "value" in n2 && (n2.writable = true), Object.defineProperty(t3, a(n2.key), n2);
+            }
+          }
+          __name(o, "o");
+          function a(t3) {
+            var e3 = function(t4) {
+              if (n(t4) != "object" || !t4)
+                return t4;
+              var e4 = t4[Symbol.toPrimitive];
+              if (e4 !== undefined) {
+                var r2 = e4.call(t4, "string");
+                if (n(r2) != "object")
+                  return r2;
+                throw new TypeError("@@toPrimitive must return a primitive value.");
+              }
+              return String(t4);
+            }(t3);
+            return n(e3) == "symbol" ? e3 : e3 + "";
+          }
+          __name(a, "a");
+          var i = r(425), c = i.Proxy, u = i.ProxyRevocable, l = new (0, i.SafeWeakMap), f = function() {
+            return t3 = /* @__PURE__ */ __name(function t4(e4, r2) {
+              (function(t5, e5) {
+                if (!(t5 instanceof e5))
+                  throw new TypeError("Cannot call a class as a function");
+              })(this, t4);
+              var n2 = new c(e4, r2);
+              return l.set(n2, [e4, r2]), n2;
+            }, "t"), e3 = [{ key: "getProxyDetails", value: /* @__PURE__ */ __name(function(t4) {
+              var e4 = !(arguments.length > 1 && arguments[1] !== undefined) || arguments[1], r2 = l.get(t4);
+              if (r2)
+                return e4 ? r2 : r2[0];
+            }, "value") }, { key: "revocable", value: /* @__PURE__ */ __name(function(t4, e4) {
+              var r2 = u(t4, e4);
+              l.set(r2.proxy, [t4, e4]);
+              var n2 = r2.revoke;
+              return r2.revoke = function() {
+                l.set(r2.proxy, [null, null]), n2();
+              }, r2;
+            }, "value") }], null, e3 && o(t3, e3), Object.defineProperty(t3, "prototype", { writable: false }), t3;
+            var t3, e3;
+          }();
+          t2.exports = { getProxyDetails: f.getProxyDetails.bind(f), Proxy: f };
+        }, 617: (t2, e2, r) => {
+          function n(t3) {
+            return n = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, n(t3);
+          }
+          __name(n, "n");
+          var o = r(425), a = o.ArrayIsArray, i = o.BigInt, c = o.Boolean, u = o.DatePrototype, l = o.Error, f = o.FunctionPrototype, s = o.MapPrototypeHas, y = o.Number, p = o.ObjectDefineProperty, g = o.ObjectGetOwnPropertyDescriptor, v = o.ObjectGetPrototypeOf, h = o.ObjectIsFrozen, d = o.ObjectPrototype, b = o.SetPrototypeHas, m = o.String, S = o.Symbol, P = o.SymbolToStringTag, x = o.globalThis, w = r(153).getConstructorName;
+          function A(t3) {
+            for (var e3 = arguments.length, r2 = new Array(e3 > 1 ? e3 - 1 : 0), o2 = 1;o2 < e3; o2++)
+              r2[o2 - 1] = arguments[o2];
+            for (var a2 = 0, i2 = r2;a2 < i2.length; a2++) {
+              var c2 = i2[a2], u2 = x[c2];
+              if (u2 && t3 instanceof u2)
+                return true;
+            }
+            for (;t3; ) {
+              if (n(t3) !== "object")
+                return false;
+              if (r2.indexOf(w(t3)) >= 0)
+                return true;
+              t3 = v(t3);
+            }
+            return false;
+          }
+          __name(A, "A");
+          function O(t3) {
+            return function(e3) {
+              if (!A(e3, t3.name))
+                return false;
+              try {
+                t3.prototype.valueOf.call(e3);
+              } catch (t4) {
+                return false;
+              }
+              return true;
+            };
+          }
+          __name(O, "O");
+          n(x) !== "object" && (p(d, "__magic__", { get: /* @__PURE__ */ __name(function() {
+            return this;
+          }, "get"), configurable: true }), __magic__.globalThis = __magic__, delete d.__magic__);
+          var _ = O(m), j = O(y), E = O(c), k = O(i), I = O(S);
+          t2.exports = { isAsyncFunction: /* @__PURE__ */ __name(function(t3) {
+            return typeof t3 == "function" && f.toString.call(t3).startsWith("async");
+          }, "isAsyncFunction"), isGeneratorFunction: /* @__PURE__ */ __name(function(t3) {
+            return typeof t3 == "function" && f.toString.call(t3).match(/^(async\s+)?function *\*/);
+          }, "isGeneratorFunction"), isAnyArrayBuffer: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "ArrayBuffer", "SharedArrayBuffer");
+          }, "isAnyArrayBuffer"), isArrayBuffer: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "ArrayBuffer");
+          }, "isArrayBuffer"), isArgumentsObject: /* @__PURE__ */ __name(function(t3) {
+            if (t3 !== null && n(t3) === "object" && !a(t3) && typeof t3.length == "number" && t3.length === (0 | t3.length) && t3.length >= 0) {
+              var e3 = g(t3, "callee");
+              return e3 && !e3.enumerable;
+            }
+            return false;
+          }, "isArgumentsObject"), isBoxedPrimitive: /* @__PURE__ */ __name(function(t3) {
+            return j(t3) || _(t3) || E(t3) || k(t3) || I(t3);
+          }, "isBoxedPrimitive"), isDataView: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "DataView");
+          }, "isDataView"), isExternal: /* @__PURE__ */ __name(function(t3) {
+            return n(t3) === "object" && h(t3) && v(t3) == null;
+          }, "isExternal"), isMap: /* @__PURE__ */ __name(function(t3) {
+            if (!A(t3, "Map"))
+              return false;
+            try {
+              s(t3);
+            } catch (t4) {
+              return false;
+            }
+            return true;
+          }, "isMap"), isMapIterator: /* @__PURE__ */ __name(function(t3) {
+            return d.toString.call(v(t3)) === "[object Map Iterator]";
+          }, "isMapIterator"), isModuleNamespaceObject: /* @__PURE__ */ __name(function(t3) {
+            return t3 && n(t3) === "object" && t3[P] === "Module";
+          }, "isModuleNamespaceObject"), isNativeError: /* @__PURE__ */ __name(function(t3) {
+            return t3 instanceof l && A(t3, "Error", "EvalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError", "AggregateError");
+          }, "isNativeError"), isPromise: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "Promise");
+          }, "isPromise"), isSet: /* @__PURE__ */ __name(function(t3) {
+            if (!A(t3, "Set"))
+              return false;
+            try {
+              b(t3);
+            } catch (t4) {
+              return false;
+            }
+            return true;
+          }, "isSet"), isSetIterator: /* @__PURE__ */ __name(function(t3) {
+            return d.toString.call(v(t3)) === "[object Set Iterator]";
+          }, "isSetIterator"), isWeakMap: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "WeakMap");
+          }, "isWeakMap"), isWeakSet: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "WeakSet");
+          }, "isWeakSet"), isRegExp: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "RegExp");
+          }, "isRegExp"), isDate: /* @__PURE__ */ __name(function(t3) {
+            if (A(t3, "Date"))
+              try {
+                return u.getTime.call(t3), true;
+              } catch (t4) {}
+            return false;
+          }, "isDate"), isTypedArray: /* @__PURE__ */ __name(function(t3) {
+            return A(t3, "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Uint16Array", "Int32Array", "Uint32Array", "Float32Array", "Float64Array", "BigInt64Array", "BigUint64Array");
+          }, "isTypedArray"), isStringObject: _, isNumberObject: j, isBooleanObject: E, isBigIntObject: k, isSymbolObject: I };
+        }, 705: (t2) => {
+          var e2 = ["_http_agent", "_http_client", "_http_common", "_http_incoming", "_http_outgoing", "_http_server", "_stream_duplex", "_stream_passthrough", "_stream_readable", "_stream_transform", "_stream_wrap", "_stream_writable", "_tls_common", "_tls_wrap", "assert", "assert/strict", "async_hooks", "buffer", "child_process", "cluster", "console", "constants", "crypto", "dgram", "diagnostics_channel", "dns", "dns/promises", "domain", "events", "fs", "fs/promises", "http", "http2", "https", "inspector", "module", "Module", "net", "os", "path", "path/posix", "path/win32", "perf_hooks", "process", "punycode", "querystring", "readline", "readline/promises", "repl", "stream", "stream/consumers", "stream/promises", "stream/web", "string_decoder", "sys", "timers", "timers/promises", "tls", "trace_events", "tty", "url", "util", "util/types", "v8", "vm", "wasi", "worker_threads", "zlib"];
+          t2.exports.BuiltinModule = { exists: /* @__PURE__ */ __name(function(t3) {
+            return t3.startsWith("internal/") || e2.indexOf(t3) !== -1;
+          }, "exists") };
+        }, 802: (t2, e2, r) => {
+          var n = r(425), o = n.StringPrototypeCharCodeAt, a = n.StringPrototypeIncludes, i = n.StringPrototypeReplace, c = r(24), u = r(22).CHAR_FORWARD_SLASH, l = r(370), f = /%/g, s = /\\/g, y = /\n/g, p = /\r/g, g = /\t/g;
+          t2.exports = { pathToFileURL: /* @__PURE__ */ __name(function(t3) {
+            var e3 = new c("file://"), r2 = l.resolve(t3);
+            return o(t3, t3.length - 1) === u && r2[r2.length - 1] !== l.sep && (r2 += "/"), e3.pathname = function(t4) {
+              return a(t4, "%") && (t4 = i(t4, f, "%25")), a(t4, "\\") && (t4 = i(t4, s, "%5C")), a(t4, `
+`) && (t4 = i(t4, y, "%0A")), a(t4, "\r") && (t4 = i(t4, p, "%0D")), a(t4, "\t") && (t4 = i(t4, g, "%09")), t4;
+            }(r2), e3;
+          }, "pathToFileURL"), URL: c };
+        }, 883: (t2, e2, r) => {
+          function n(t3) {
+            return n = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, n(t3);
+          }
+          __name(n, "n");
+          function o(t3, e3) {
+            for (var r2 = 0;r2 < e3.length; r2++) {
+              var n2 = e3[r2];
+              n2.enumerable = n2.enumerable || false, n2.configurable = true, "value" in n2 && (n2.writable = true), Object.defineProperty(t3, a(n2.key), n2);
+            }
+          }
+          __name(o, "o");
+          function a(t3) {
+            var e3 = function(t4) {
+              if (n(t4) != "object" || !t4)
+                return t4;
+              var e4 = t4[Symbol.toPrimitive];
+              if (e4 !== undefined) {
+                var r2 = e4.call(t4, "string");
+                if (n(r2) != "object")
+                  return r2;
+                throw new TypeError("@@toPrimitive must return a primitive value.");
+              }
+              return String(t4);
+            }(t3);
+            return n(e3) == "symbol" ? e3 : e3 + "";
+          }
+          __name(a, "a");
+          var i = r(425).ArrayPrototypeMap, c = function() {
+            return t3 = /* @__PURE__ */ __name(function t4() {
+              (function(t5, e4) {
+                if (!(t5 instanceof e4))
+                  throw new TypeError("Cannot call a class as a function");
+              })(this, t4);
+            }, "t"), e3 = [{ key: "hexSlice", value: /* @__PURE__ */ __name(function() {
+              var t4 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0, e4 = arguments.length > 1 ? arguments[1] : undefined;
+              return i(this.slice(t4, e4), function(t5) {
+                return ("00" + t5.toString(16)).slice(-2);
+              }).join("");
+            }, "value") }], e3 && o(t3.prototype, e3), Object.defineProperty(t3, "prototype", { writable: false }), t3;
+            var t3, e3;
+          }();
+          e2.h = c;
+        }, 923: (t2, e2, r) => {
+          var n = r(425), o = n.ArrayPrototypeJoin, a = n.Error, i = n.StringPrototypeReplace, c = n.SymbolFor, u = /\u001b\[\d\d?m/g;
+          t2.exports = { customInspectSymbol: c("nodejs.util.inspect.custom"), isError: /* @__PURE__ */ __name(function(t3) {
+            return t3 instanceof a;
+          }, "isError"), join: o, removeColors: /* @__PURE__ */ __name(function(t3) {
+            return i(t3, u, "");
+          }, "removeColors") };
+        }, 924: (t2, e2, r) => {
+          function n(t3, e3) {
+            (e3 == null || e3 > t3.length) && (e3 = t3.length);
+            for (var r2 = 0, n2 = Array(e3);r2 < e3; r2++)
+              n2[r2] = t3[r2];
+            return n2;
+          }
+          __name(n, "n");
+          function o(t3) {
+            return o = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t4) {
+              return typeof t4;
+            } : function(t4) {
+              return t4 && typeof Symbol == "function" && t4.constructor === Symbol && t4 !== Symbol.prototype ? "symbol" : typeof t4;
+            }, o(t3);
+          }
+          __name(o, "o");
+          function a(t3, e3) {
+            for (var r2 = 0;r2 < e3.length; r2++) {
+              var n2 = e3[r2];
+              n2.enumerable = n2.enumerable || false, n2.configurable = true, "value" in n2 && (n2.writable = true), Object.defineProperty(t3, i(n2.key), n2);
+            }
+          }
+          __name(a, "a");
+          function i(t3) {
+            var e3 = function(t4) {
+              if (o(t4) != "object" || !t4)
+                return t4;
+              var e4 = t4[Symbol.toPrimitive];
+              if (e4 !== undefined) {
+                var r2 = e4.call(t4, "string");
+                if (o(r2) != "object")
+                  return r2;
+                throw new TypeError("@@toPrimitive must return a primitive value.");
+              }
+              return String(t4);
+            }(t3);
+            return o(e3) == "symbol" ? e3 : e3 + "";
+          }
+          __name(i, "i");
+          function c() {
+            try {
+              var t3 = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}));
+            } catch (t4) {}
+            return (c = /* @__PURE__ */ __name(function() {
+              return !!t3;
+            }, "c"))();
+          }
+          __name(c, "c");
+          function u(t3) {
+            return u = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function(t4) {
+              return t4.__proto__ || Object.getPrototypeOf(t4);
+            }, u(t3);
+          }
+          __name(u, "u");
+          function l(t3, e3) {
+            return l = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(t4, e4) {
+              return t4.__proto__ = e4, t4;
+            }, l(t3, e3);
+          }
+          __name(l, "l");
+          var f, s, y = r(425), p = y.ArrayIsArray, g = y.ArrayPrototypeIncludes, v = y.ArrayPrototypeIndexOf, h = y.ArrayPrototypeJoin, d = y.ArrayPrototypePush, b = y.ArrayPrototypeSlice, m = y.ArrayPrototypeSplice, S = y.Error, P = y.ErrorCaptureStackTrace, x = y.JSONStringify, w = y.ObjectDefineProperty, A = y.ReflectApply, O = y.RegExpPrototypeExec, _ = y.SafeMap, j = y.SafeWeakMap, E = y.String, k = y.StringPrototypeEndsWith, I = y.StringPrototypeIncludes, R = y.StringPrototypeIndexOf, L = y.StringPrototypeSlice, T = y.StringPrototypeToLowerCase, B = y.Symbol, z = y.TypeError, M = B("kIsNodeError"), C = new _, D = {}, N = /^[A-Z][a-zA-Z0-9]*$/, F = ["string", "function", "number", "object", "Function", "Object", "boolean", "bigint", "symbol"], W = new j, H = r(229), U = null;
+          function G(t3, e3) {
+            var r2 = function(t4) {
+              function r3() {
+                var t5, n3, a2, l2;
+                (function(t6, e4) {
+                  if (!(t6 instanceof e4))
+                    throw new TypeError("Cannot call a class as a function");
+                })(this, r3), t5 = function(t6, e4, r4) {
+                  return e4 = u(e4), function(t7, e5) {
+                    if (e5 && (o(e5) == "object" || typeof e5 == "function"))
+                      return e5;
+                    if (e5 !== undefined)
+                      throw new TypeError("Derived constructors may only return object or undefined");
+                    return function(t8) {
+                      if (t8 === undefined)
+                        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                      return t8;
+                    }(t7);
+                  }(t6, c() ? Reflect.construct(e4, r4 || [], u(t6).constructor) : e4.apply(t6, r4));
+                }(this, r3), n3 = t5, l2 = e3, (a2 = i(a2 = "code")) in n3 ? Object.defineProperty(n3, a2, { value: l2, enumerable: true, configurable: true, writable: true }) : n3[a2] = l2;
+                for (var f3 = arguments.length, s3 = new Array(f3), y2 = 0;y2 < f3; y2++)
+                  s3[y2] = arguments[y2];
+                return w(t5, "message", { __proto__: null, value: Z(e3, s3, t5), enumerable: false, writable: true, configurable: true }), t5;
+              }
+              __name(r3, "r");
+              return function(t5, e4) {
+                if (typeof e4 != "function" && e4 !== null)
+                  throw new TypeError("Super expression must either be null or a function");
+                t5.prototype = Object.create(e4 && e4.prototype, { constructor: { value: t5, writable: true, configurable: true } }), Object.defineProperty(t5, "prototype", { writable: false }), e4 && l(t5, e4);
+              }(r3, t4), n2 = r3, (f2 = [{ key: "toString", value: /* @__PURE__ */ __name(function() {
+                return "".concat(this.name, " [").concat(e3, "]: ").concat(this.message);
+              }, "value") }]) && a(n2.prototype, f2), s2 && a(n2, s2), Object.defineProperty(n2, "prototype", { writable: false }), n2;
+              var n2, f2, s2;
+            }(t3);
+            return r2;
+          }
+          __name(G, "G");
+          function V(t3, e3, r2) {
+            C.set(t3, e3);
+            var n2 = G(r2, t3);
+            D[t3] = n2;
+          }
+          __name(V, "V");
+          function Z(t3, e3, r2) {
+            var n2 = C.get(t3);
+            if (typeof n2 == "function")
+              return H(n2.length <= e3.length, "Code: ".concat(t3, "; The provided arguments length (").concat(e3.length, ") does not ") + "match the required ones (".concat(n2.length, ").")), A(n2, r2, e3);
+          }
+          __name(Z, "Z");
+          var $ = B("kEnhanceStackBeforeInspector");
+          function Y(t3) {
+            if (t3 === null)
+              return "null";
+            if (t3 === undefined)
+              return "undefined";
+            switch (o(t3)) {
+              case "bigint":
+                return "type bigint (".concat(t3, "n)");
+              case "number":
+                return t3 === 0 ? 1 / t3 == -1 / 0 ? "type number (-0)" : "type number (0)" : t3 != t3 ? "type number (NaN)" : t3 === 1 / 0 ? "type number (Infinity)" : t3 === -1 / 0 ? "type number (-Infinity)" : "type number (".concat(t3, ")");
+              case "boolean":
+                return t3 ? "type boolean (true)" : "type boolean (false)";
+              case "symbol":
+                return "type symbol (".concat(E(t3), ")");
+              case "function":
+                return "function ".concat(t3.name);
+              case "object":
+                return t3.constructor && "name" in t3.constructor ? "an instance of ".concat(t3.constructor.name) : "".concat((U = U || r(33)).inspect(t3, { depth: -1 }));
+              case "string":
+                return t3.length > 28 && (t3 = "".concat(L(t3, 0, 25), "...")), R(t3, "'") === -1 ? "type string ('".concat(t3, "')") : "type string (".concat(x(t3), ")");
+            }
+          }
+          __name(Y, "Y");
+          function q(t3) {
+            var e3 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "and";
+            switch (t3.length) {
+              case 0:
+                return "";
+              case 1:
+                return "".concat(t3[0]);
+              case 2:
+                return "".concat(t3[0], " ").concat(e3, " ").concat(t3[1]);
+              case 3:
+                return "".concat(t3[0], ", ").concat(t3[1], ", ").concat(e3, " ").concat(t3[2]);
+              default:
+                return "".concat(h(b(t3, 0, -1), ", "), ", ").concat(e3, " ").concat(t3[t3.length - 1]);
+            }
+          }
+          __name(q, "q");
+          t2.exports = { codes: D, determineSpecificType: Y, E: V, formatList: q, getMessage: Z, hideStackFrames: /* @__PURE__ */ __name(function(t3) {
+            function e3() {
+              try {
+                for (var r2 = arguments.length, n2 = new Array(r2), o2 = 0;o2 < r2; o2++)
+                  n2[o2] = arguments[o2];
+                return A(t3, this, n2);
+              } catch (t4) {
+                throw S.stackTraceLimit && P(t4, e3), t4;
+              }
+            }
+            __name(e3, "e");
+            return e3.withoutStackTrace = t3, e3;
+          }, "hideStackFrames"), isStackOverflowError: /* @__PURE__ */ __name(function(t3) {
+            if (s === undefined)
+              try {
+                var e3 = /* @__PURE__ */ __name(function() {
+                  e3();
+                }, "e");
+                e3();
+              } catch (t4) {
+                s = t4.message, f = t4.name;
+              }
+            return t3 && t3.name === f && t3.message === s;
+          }, "isStackOverflowError"), kEnhanceStackBeforeInspector: $, kIsNodeError: M, overrideStackTrace: W }, V("ERR_INTERNAL_ASSERTION", function(t3) {
+            var e3 = `This is caused by either a bug in Node.js or incorrect usage of Node.js internals.
+Please open an issue with this stack trace at https://github.com/nodejs/node/issues
+`;
+            return t3 === undefined ? e3 : "".concat(t3, `
+`).concat(e3);
+          }, S), V("ERR_INVALID_ARG_TYPE", function(t3, e3, r2) {
+            H(typeof t3 == "string", "'name' must be a string"), p(e3) || (e3 = [e3]);
+            var o2 = "The ";
+            if (k(t3, " argument"))
+              o2 += "".concat(t3, " ");
+            else {
+              var a2 = I(t3, ".") ? "property" : "argument";
+              o2 += '"'.concat(t3, '" ').concat(a2, " ");
+            }
+            o2 += "must be ";
+            var i2, c2 = [], u2 = [], l2 = [], f2 = function(t4, e4) {
+              var r3 = typeof Symbol != "undefined" && t4[Symbol.iterator] || t4["@@iterator"];
+              if (!r3) {
+                if (Array.isArray(t4) || (r3 = function(t5, e5) {
+                  if (t5) {
+                    if (typeof t5 == "string")
+                      return n(t5, e5);
+                    var r4 = {}.toString.call(t5).slice(8, -1);
+                    return r4 === "Object" && t5.constructor && (r4 = t5.constructor.name), r4 === "Map" || r4 === "Set" ? Array.from(t5) : r4 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r4) ? n(t5, e5) : undefined;
+                  }
+                }(t4)) || e4 && t4 && typeof t4.length == "number") {
+                  r3 && (t4 = r3);
+                  var o3 = 0, a3 = /* @__PURE__ */ __name(function() {}, "a");
+                  return { s: a3, n: /* @__PURE__ */ __name(function() {
+                    return o3 >= t4.length ? { done: true } : { done: false, value: t4[o3++] };
+                  }, "n"), e: /* @__PURE__ */ __name(function(t5) {
+                    throw t5;
+                  }, "e"), f: a3 };
+                }
+                throw new TypeError(`Invalid attempt to iterate non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+              }
+              var i3, c3 = true, u3 = false;
+              return { s: /* @__PURE__ */ __name(function() {
+                r3 = r3.call(t4);
+              }, "s"), n: /* @__PURE__ */ __name(function() {
+                var t5 = r3.next();
+                return c3 = t5.done, t5;
+              }, "n"), e: /* @__PURE__ */ __name(function(t5) {
+                u3 = true, i3 = t5;
+              }, "e"), f: /* @__PURE__ */ __name(function() {
+                try {
+                  c3 || r3.return == null || r3.return();
+                } finally {
+                  if (u3)
+                    throw i3;
+                }
+              }, "f") };
+            }(e3);
+            try {
+              for (f2.s();!(i2 = f2.n()).done; ) {
+                var s2 = i2.value;
+                H(typeof s2 == "string", "All expected entries have to be of type string"), g(F, s2) ? d(c2, T(s2)) : O(N, s2) !== null ? d(u2, s2) : (H(s2 !== "object", 'The value "object" should be written as "Object"'), d(l2, s2));
+              }
+            } catch (t4) {
+              f2.e(t4);
+            } finally {
+              f2.f();
+            }
+            if (u2.length > 0) {
+              var y2 = v(c2, "object");
+              y2 !== -1 && (m(c2, y2, 1), d(u2, "Object"));
+            }
+            return c2.length > 0 && (o2 += "".concat(c2.length > 1 ? "one of type" : "of type", " ").concat(q(c2, "or")), (u2.length > 0 || l2.length > 0) && (o2 += " or ")), u2.length > 0 && (o2 += "an instance of ".concat(q(u2, "or")), l2.length > 0 && (o2 += " or ")), l2.length > 0 && (l2.length > 1 ? o2 += "one of ".concat(q(l2, "or")) : (T(l2[0]) !== l2[0] && (o2 += "an "), o2 += "".concat(l2[0]))), o2 + ". Received ".concat(Y(r2));
+          }, z);
+        } }, e = {};
+        return (/* @__PURE__ */ __name(function r(n) {
+          var o = e[n];
+          if (o !== undefined)
+            return o.exports;
+          var a = e[n] = { exports: {} };
+          return t[n](a, a.exports, r), a.exports;
+        }, "r"))(33);
+      })());
+    }
+  });
   var src_exports = {};
   __export(src_exports, {
     AbortError: () => AbortError,
     AsyncEventEmitter: () => AsyncEventEmitter
   });
   module.exports = __toCommonJS(src_exports);
+  init_cjs_shims();
+  init_cjs_shims();
+  var import_inspect = __toESM2(require_inspect(), 1);
+  var {
+    inspect,
+    format,
+    formatWithOptions,
+    stripVTControlCharacters,
+    stylizeWithColor,
+    stylizeWithHTML,
+    Proxy: Proxy2
+  } = import_inspect.default;
   function validateListener(input) {
     if (typeof input !== "function") {
       throw new TypeError(`The listener argument must be a function. Received ${typeof input}`);
@@ -3837,6 +6241,9 @@ Emitted 'error' event${ctorInfo} at:
   }
   __name(enhanceStackTrace, "enhanceStackTrace");
   var brandSymbol = Symbol.for("async-event-emitter.ts-brand");
+  var kCapturePromiseRejections = Symbol.for("async-event-emitter.ts-capture-promise-rejections");
+  var _a;
+  _a = kCapturePromiseRejections;
   var _AsyncEventEmitter = class _AsyncEventEmitter2 {
     constructor() {
       this._events = {
@@ -3846,6 +6253,7 @@ Emitted 'error' event${ctorInfo} at:
       this._maxListeners = 10;
       this._internalPromiseMap = /* @__PURE__ */ new Map;
       this._wrapperId = 0n;
+      this[_a] = true;
     }
     addListener(eventName, listener) {
       validateListener(listener);
@@ -4005,7 +6413,12 @@ Emitted 'error' event${ctorInfo} at:
           } catch {}
           throw er;
         }
-        const stringifiedError = String(er);
+        let stringifiedError;
+        try {
+          stringifiedError = inspect(er);
+        } catch {
+          stringifiedError = String(er);
+        }
         const err = new Error(`Unhandled 'error' event emitted, received ${stringifiedError}`);
         err.context = er;
         throw err;
@@ -4284,20 +6697,22 @@ Emitted 'error' event${ctorInfo} at:
   __name(_AbortError, "AbortError");
   var AbortError = _AbortError;
   function handleMaybeAsync(emitter, result) {
+    if (!emitter[kCapturePromiseRejections]) {
+      return;
+    }
     try {
       const the = result.then;
       const fin = result.finally;
+      let handledPromise = result;
       if (typeof the === "function") {
-        the.call(result, undefined, (error) => {
-          setTimeout(() => {
-            emitter.emit("error", error);
-          }, 0);
+        handledPromise = the.call(result, undefined, (error) => {
+          emitErrorFromRejectionHandler(emitter, error);
         });
       }
       if (typeof fin === "function") {
         const promiseId = String(++emitter["_wrapperId"]);
         emitter["_internalPromiseMap"].set(promiseId, result);
-        fin.call(result, /* @__PURE__ */ __name(function final() {
+        fin.call(handledPromise, /* @__PURE__ */ __name(function final() {
           emitter["_internalPromiseMap"].delete(promiseId);
         }, "final"));
       }
@@ -4306,6 +6721,22 @@ Emitted 'error' event${ctorInfo} at:
     }
   }
   __name(handleMaybeAsync, "handleMaybeAsync");
+  function emitErrorFromRejectionHandler(emitter, error) {
+    setTimeout(() => {
+      try {
+        emitter[kCapturePromiseRejections] = false;
+        emitter.emit("error", error);
+      } finally {
+        emitter[kCapturePromiseRejections] = true;
+      }
+    }, 0);
+  }
+  __name(emitErrorFromRejectionHandler, "emitErrorFromRejectionHandler");
+  /*! Bundled license information:
+  
+  node-inspect-extracted/dist/inspect.js:
+    (*! For license information please see inspect.js.LICENSE.txt *)
+  */
 });
 
 // node_modules/magic-bytes.js/dist/model/toHex.js
@@ -6789,2475 +9220,6 @@ ${flattened}` : error.message || flattened || "Unknown Error";
   setDefaultStrategy((0, import_util2.shouldUseGlobalFetchAndWebSocket)() ? fetch : makeRequest);
 });
 
-// node_modules/discord-api-types/gateway/v10.js
-var require_v107 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
-  exports.GatewayVersion = "10";
-  var GatewayOpcodes;
-  (function(GatewayOpcodes2) {
-    GatewayOpcodes2[GatewayOpcodes2["Dispatch"] = 0] = "Dispatch";
-    GatewayOpcodes2[GatewayOpcodes2["Heartbeat"] = 1] = "Heartbeat";
-    GatewayOpcodes2[GatewayOpcodes2["Identify"] = 2] = "Identify";
-    GatewayOpcodes2[GatewayOpcodes2["PresenceUpdate"] = 3] = "PresenceUpdate";
-    GatewayOpcodes2[GatewayOpcodes2["VoiceStateUpdate"] = 4] = "VoiceStateUpdate";
-    GatewayOpcodes2[GatewayOpcodes2["Resume"] = 6] = "Resume";
-    GatewayOpcodes2[GatewayOpcodes2["Reconnect"] = 7] = "Reconnect";
-    GatewayOpcodes2[GatewayOpcodes2["RequestGuildMembers"] = 8] = "RequestGuildMembers";
-    GatewayOpcodes2[GatewayOpcodes2["InvalidSession"] = 9] = "InvalidSession";
-    GatewayOpcodes2[GatewayOpcodes2["Hello"] = 10] = "Hello";
-    GatewayOpcodes2[GatewayOpcodes2["HeartbeatAck"] = 11] = "HeartbeatAck";
-    GatewayOpcodes2[GatewayOpcodes2["RequestSoundboardSounds"] = 31] = "RequestSoundboardSounds";
-  })(GatewayOpcodes || (exports.GatewayOpcodes = GatewayOpcodes = {}));
-  var GatewayCloseCodes;
-  (function(GatewayCloseCodes2) {
-    GatewayCloseCodes2[GatewayCloseCodes2["UnknownError"] = 4000] = "UnknownError";
-    GatewayCloseCodes2[GatewayCloseCodes2["UnknownOpcode"] = 4001] = "UnknownOpcode";
-    GatewayCloseCodes2[GatewayCloseCodes2["DecodeError"] = 4002] = "DecodeError";
-    GatewayCloseCodes2[GatewayCloseCodes2["NotAuthenticated"] = 4003] = "NotAuthenticated";
-    GatewayCloseCodes2[GatewayCloseCodes2["AuthenticationFailed"] = 4004] = "AuthenticationFailed";
-    GatewayCloseCodes2[GatewayCloseCodes2["AlreadyAuthenticated"] = 4005] = "AlreadyAuthenticated";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidSeq"] = 4007] = "InvalidSeq";
-    GatewayCloseCodes2[GatewayCloseCodes2["RateLimited"] = 4008] = "RateLimited";
-    GatewayCloseCodes2[GatewayCloseCodes2["SessionTimedOut"] = 4009] = "SessionTimedOut";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidShard"] = 4010] = "InvalidShard";
-    GatewayCloseCodes2[GatewayCloseCodes2["ShardingRequired"] = 4011] = "ShardingRequired";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidAPIVersion"] = 4012] = "InvalidAPIVersion";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidIntents"] = 4013] = "InvalidIntents";
-    GatewayCloseCodes2[GatewayCloseCodes2["DisallowedIntents"] = 4014] = "DisallowedIntents";
-  })(GatewayCloseCodes || (exports.GatewayCloseCodes = GatewayCloseCodes = {}));
-  var GatewayIntentBits;
-  (function(GatewayIntentBits2) {
-    GatewayIntentBits2[GatewayIntentBits2["Guilds"] = 1] = "Guilds";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMembers"] = 2] = "GuildMembers";
-    GatewayIntentBits2[GatewayIntentBits2["GuildModeration"] = 4] = "GuildModeration";
-    GatewayIntentBits2[GatewayIntentBits2["GuildBans"] = 4] = "GuildBans";
-    GatewayIntentBits2[GatewayIntentBits2["GuildExpressions"] = 8] = "GuildExpressions";
-    GatewayIntentBits2[GatewayIntentBits2["GuildEmojisAndStickers"] = 8] = "GuildEmojisAndStickers";
-    GatewayIntentBits2[GatewayIntentBits2["GuildIntegrations"] = 16] = "GuildIntegrations";
-    GatewayIntentBits2[GatewayIntentBits2["GuildWebhooks"] = 32] = "GuildWebhooks";
-    GatewayIntentBits2[GatewayIntentBits2["GuildInvites"] = 64] = "GuildInvites";
-    GatewayIntentBits2[GatewayIntentBits2["GuildVoiceStates"] = 128] = "GuildVoiceStates";
-    GatewayIntentBits2[GatewayIntentBits2["GuildPresences"] = 256] = "GuildPresences";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessages"] = 512] = "GuildMessages";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessageReactions"] = 1024] = "GuildMessageReactions";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessageTyping"] = 2048] = "GuildMessageTyping";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessages"] = 4096] = "DirectMessages";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessageReactions"] = 8192] = "DirectMessageReactions";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessageTyping"] = 16384] = "DirectMessageTyping";
-    GatewayIntentBits2[GatewayIntentBits2["MessageContent"] = 32768] = "MessageContent";
-    GatewayIntentBits2[GatewayIntentBits2["GuildScheduledEvents"] = 65536] = "GuildScheduledEvents";
-    GatewayIntentBits2[GatewayIntentBits2["AutoModerationConfiguration"] = 1048576] = "AutoModerationConfiguration";
-    GatewayIntentBits2[GatewayIntentBits2["AutoModerationExecution"] = 2097152] = "AutoModerationExecution";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessagePolls"] = 16777216] = "GuildMessagePolls";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessagePolls"] = 33554432] = "DirectMessagePolls";
-  })(GatewayIntentBits || (exports.GatewayIntentBits = GatewayIntentBits = {}));
-  var GatewayDispatchEvents;
-  (function(GatewayDispatchEvents2) {
-    GatewayDispatchEvents2["ApplicationCommandPermissionsUpdate"] = "APPLICATION_COMMAND_PERMISSIONS_UPDATE";
-    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
-    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
-    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
-    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
-    GatewayDispatchEvents2["ChannelCreate"] = "CHANNEL_CREATE";
-    GatewayDispatchEvents2["ChannelDelete"] = "CHANNEL_DELETE";
-    GatewayDispatchEvents2["ChannelPinsUpdate"] = "CHANNEL_PINS_UPDATE";
-    GatewayDispatchEvents2["ChannelUpdate"] = "CHANNEL_UPDATE";
-    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
-    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
-    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
-    GatewayDispatchEvents2["GuildBanAdd"] = "GUILD_BAN_ADD";
-    GatewayDispatchEvents2["GuildBanRemove"] = "GUILD_BAN_REMOVE";
-    GatewayDispatchEvents2["GuildCreate"] = "GUILD_CREATE";
-    GatewayDispatchEvents2["GuildDelete"] = "GUILD_DELETE";
-    GatewayDispatchEvents2["GuildEmojisUpdate"] = "GUILD_EMOJIS_UPDATE";
-    GatewayDispatchEvents2["GuildIntegrationsUpdate"] = "GUILD_INTEGRATIONS_UPDATE";
-    GatewayDispatchEvents2["GuildMemberAdd"] = "GUILD_MEMBER_ADD";
-    GatewayDispatchEvents2["GuildMemberRemove"] = "GUILD_MEMBER_REMOVE";
-    GatewayDispatchEvents2["GuildMembersChunk"] = "GUILD_MEMBERS_CHUNK";
-    GatewayDispatchEvents2["GuildMemberUpdate"] = "GUILD_MEMBER_UPDATE";
-    GatewayDispatchEvents2["GuildRoleCreate"] = "GUILD_ROLE_CREATE";
-    GatewayDispatchEvents2["GuildRoleDelete"] = "GUILD_ROLE_DELETE";
-    GatewayDispatchEvents2["GuildRoleUpdate"] = "GUILD_ROLE_UPDATE";
-    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
-    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
-    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
-    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
-    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
-    GatewayDispatchEvents2["GuildSoundboardSoundCreate"] = "GUILD_SOUNDBOARD_SOUND_CREATE";
-    GatewayDispatchEvents2["GuildSoundboardSoundDelete"] = "GUILD_SOUNDBOARD_SOUND_DELETE";
-    GatewayDispatchEvents2["GuildSoundboardSoundsUpdate"] = "GUILD_SOUNDBOARD_SOUNDS_UPDATE";
-    GatewayDispatchEvents2["GuildSoundboardSoundUpdate"] = "GUILD_SOUNDBOARD_SOUND_UPDATE";
-    GatewayDispatchEvents2["SoundboardSounds"] = "SOUNDBOARD_SOUNDS";
-    GatewayDispatchEvents2["GuildStickersUpdate"] = "GUILD_STICKERS_UPDATE";
-    GatewayDispatchEvents2["GuildUpdate"] = "GUILD_UPDATE";
-    GatewayDispatchEvents2["IntegrationCreate"] = "INTEGRATION_CREATE";
-    GatewayDispatchEvents2["IntegrationDelete"] = "INTEGRATION_DELETE";
-    GatewayDispatchEvents2["IntegrationUpdate"] = "INTEGRATION_UPDATE";
-    GatewayDispatchEvents2["InteractionCreate"] = "INTERACTION_CREATE";
-    GatewayDispatchEvents2["InviteCreate"] = "INVITE_CREATE";
-    GatewayDispatchEvents2["InviteDelete"] = "INVITE_DELETE";
-    GatewayDispatchEvents2["MessageCreate"] = "MESSAGE_CREATE";
-    GatewayDispatchEvents2["MessageDelete"] = "MESSAGE_DELETE";
-    GatewayDispatchEvents2["MessageDeleteBulk"] = "MESSAGE_DELETE_BULK";
-    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
-    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
-    GatewayDispatchEvents2["MessageReactionAdd"] = "MESSAGE_REACTION_ADD";
-    GatewayDispatchEvents2["MessageReactionRemove"] = "MESSAGE_REACTION_REMOVE";
-    GatewayDispatchEvents2["MessageReactionRemoveAll"] = "MESSAGE_REACTION_REMOVE_ALL";
-    GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
-    GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
-    GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
-    GatewayDispatchEvents2["RateLimited"] = "RATE_LIMITED";
-    GatewayDispatchEvents2["Ready"] = "READY";
-    GatewayDispatchEvents2["Resumed"] = "RESUMED";
-    GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
-    GatewayDispatchEvents2["StageInstanceDelete"] = "STAGE_INSTANCE_DELETE";
-    GatewayDispatchEvents2["StageInstanceUpdate"] = "STAGE_INSTANCE_UPDATE";
-    GatewayDispatchEvents2["SubscriptionCreate"] = "SUBSCRIPTION_CREATE";
-    GatewayDispatchEvents2["SubscriptionDelete"] = "SUBSCRIPTION_DELETE";
-    GatewayDispatchEvents2["SubscriptionUpdate"] = "SUBSCRIPTION_UPDATE";
-    GatewayDispatchEvents2["ThreadCreate"] = "THREAD_CREATE";
-    GatewayDispatchEvents2["ThreadDelete"] = "THREAD_DELETE";
-    GatewayDispatchEvents2["ThreadListSync"] = "THREAD_LIST_SYNC";
-    GatewayDispatchEvents2["ThreadMembersUpdate"] = "THREAD_MEMBERS_UPDATE";
-    GatewayDispatchEvents2["ThreadMemberUpdate"] = "THREAD_MEMBER_UPDATE";
-    GatewayDispatchEvents2["ThreadUpdate"] = "THREAD_UPDATE";
-    GatewayDispatchEvents2["TypingStart"] = "TYPING_START";
-    GatewayDispatchEvents2["UserUpdate"] = "USER_UPDATE";
-    GatewayDispatchEvents2["VoiceChannelEffectSend"] = "VOICE_CHANNEL_EFFECT_SEND";
-    GatewayDispatchEvents2["VoiceServerUpdate"] = "VOICE_SERVER_UPDATE";
-    GatewayDispatchEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
-    GatewayDispatchEvents2["WebhooksUpdate"] = "WEBHOOKS_UPDATE";
-  })(GatewayDispatchEvents || (exports.GatewayDispatchEvents = GatewayDispatchEvents = {}));
-  var VoiceChannelEffectSendAnimationType;
-  (function(VoiceChannelEffectSendAnimationType2) {
-    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Premium"] = 0] = "Premium";
-    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Basic"] = 1] = "Basic";
-  })(VoiceChannelEffectSendAnimationType || (exports.VoiceChannelEffectSendAnimationType = VoiceChannelEffectSendAnimationType = {}));
-});
-
-// node_modules/discord-api-types/globals.js
-var require_globals2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.FormattingPatterns = undefined;
-  exports.FormattingPatterns = {
-    User: /<@(?<id>\d{17,20})>/,
-    UserWithNickname: /<@!(?<id>\d{17,20})>/,
-    UserWithOptionalNickname: /<@!?(?<id>\d{17,20})>/,
-    Channel: /<#(?<id>\d{17,20})>/,
-    Role: /<@&(?<id>\d{17,20})>/,
-    SlashCommand: /<\/(?<fullName>(?<name>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: (?<subcommandOrGroup>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?(?: (?<subcommand>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?):(?<id>\d{17,20})>/u,
-    Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRSTdfst]))?>/,
-    DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
-    StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/,
-    GuildNavigation: /<id:(?<type>customize|browse|guide|linked-roles)>/,
-    LinkedRole: /<id:linked-roles:(?<id>\d{17,20})>/
-  };
-  Object.freeze(exports.FormattingPatterns);
-});
-
-// node_modules/discord-api-types/payloads/common.js
-var require_common4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.PermissionFlagsBits = undefined;
-  exports.PermissionFlagsBits = {
-    CreateInstantInvite: 1n << 0n,
-    KickMembers: 1n << 1n,
-    BanMembers: 1n << 2n,
-    Administrator: 1n << 3n,
-    ManageChannels: 1n << 4n,
-    ManageGuild: 1n << 5n,
-    AddReactions: 1n << 6n,
-    ViewAuditLog: 1n << 7n,
-    PrioritySpeaker: 1n << 8n,
-    Stream: 1n << 9n,
-    ViewChannel: 1n << 10n,
-    SendMessages: 1n << 11n,
-    SendTTSMessages: 1n << 12n,
-    ManageMessages: 1n << 13n,
-    EmbedLinks: 1n << 14n,
-    AttachFiles: 1n << 15n,
-    ReadMessageHistory: 1n << 16n,
-    MentionEveryone: 1n << 17n,
-    UseExternalEmojis: 1n << 18n,
-    ViewGuildInsights: 1n << 19n,
-    Connect: 1n << 20n,
-    Speak: 1n << 21n,
-    MuteMembers: 1n << 22n,
-    DeafenMembers: 1n << 23n,
-    MoveMembers: 1n << 24n,
-    UseVAD: 1n << 25n,
-    ChangeNickname: 1n << 26n,
-    ManageNicknames: 1n << 27n,
-    ManageRoles: 1n << 28n,
-    ManageWebhooks: 1n << 29n,
-    ManageEmojisAndStickers: 1n << 30n,
-    ManageGuildExpressions: 1n << 30n,
-    UseApplicationCommands: 1n << 31n,
-    RequestToSpeak: 1n << 32n,
-    ManageEvents: 1n << 33n,
-    ManageThreads: 1n << 34n,
-    CreatePublicThreads: 1n << 35n,
-    CreatePrivateThreads: 1n << 36n,
-    UseExternalStickers: 1n << 37n,
-    SendMessagesInThreads: 1n << 38n,
-    UseEmbeddedActivities: 1n << 39n,
-    ModerateMembers: 1n << 40n,
-    ViewCreatorMonetizationAnalytics: 1n << 41n,
-    UseSoundboard: 1n << 42n,
-    CreateGuildExpressions: 1n << 43n,
-    CreateEvents: 1n << 44n,
-    UseExternalSounds: 1n << 45n,
-    SendVoiceMessages: 1n << 46n,
-    SendPolls: 1n << 49n,
-    UseExternalApps: 1n << 50n,
-    PinMessages: 1n << 51n
-  };
-  Object.freeze(exports.PermissionFlagsBits);
-});
-
-// node_modules/discord-api-types/payloads/v10/application.js
-var require_application2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ApplicationWebhookEventStatus = exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
-  var ApplicationFlags;
-  (function(ApplicationFlags2) {
-    ApplicationFlags2[ApplicationFlags2["EmbeddedReleased"] = 2] = "EmbeddedReleased";
-    ApplicationFlags2[ApplicationFlags2["ManagedEmoji"] = 4] = "ManagedEmoji";
-    ApplicationFlags2[ApplicationFlags2["EmbeddedIAP"] = 8] = "EmbeddedIAP";
-    ApplicationFlags2[ApplicationFlags2["GroupDMCreate"] = 16] = "GroupDMCreate";
-    ApplicationFlags2[ApplicationFlags2["ApplicationAutoModerationRuleCreateBadge"] = 64] = "ApplicationAutoModerationRuleCreateBadge";
-    ApplicationFlags2[ApplicationFlags2["RPCHasConnected"] = 2048] = "RPCHasConnected";
-    ApplicationFlags2[ApplicationFlags2["GatewayPresence"] = 4096] = "GatewayPresence";
-    ApplicationFlags2[ApplicationFlags2["GatewayPresenceLimited"] = 8192] = "GatewayPresenceLimited";
-    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembers"] = 16384] = "GatewayGuildMembers";
-    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembersLimited"] = 32768] = "GatewayGuildMembersLimited";
-    ApplicationFlags2[ApplicationFlags2["VerificationPendingGuildLimit"] = 65536] = "VerificationPendingGuildLimit";
-    ApplicationFlags2[ApplicationFlags2["Embedded"] = 131072] = "Embedded";
-    ApplicationFlags2[ApplicationFlags2["GatewayMessageContent"] = 262144] = "GatewayMessageContent";
-    ApplicationFlags2[ApplicationFlags2["GatewayMessageContentLimited"] = 524288] = "GatewayMessageContentLimited";
-    ApplicationFlags2[ApplicationFlags2["EmbeddedFirstParty"] = 1048576] = "EmbeddedFirstParty";
-    ApplicationFlags2[ApplicationFlags2["ApplicationCommandBadge"] = 8388608] = "ApplicationCommandBadge";
-  })(ApplicationFlags || (exports.ApplicationFlags = ApplicationFlags = {}));
-  var ApplicationRoleConnectionMetadataType;
-  (function(ApplicationRoleConnectionMetadataType2) {
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerLessThanOrEqual"] = 1] = "IntegerLessThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerGreaterThanOrEqual"] = 2] = "IntegerGreaterThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerEqual"] = 3] = "IntegerEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerNotEqual"] = 4] = "IntegerNotEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeLessThanOrEqual"] = 5] = "DatetimeLessThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeGreaterThanOrEqual"] = 6] = "DatetimeGreaterThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanEqual"] = 7] = "BooleanEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanNotEqual"] = 8] = "BooleanNotEqual";
-  })(ApplicationRoleConnectionMetadataType || (exports.ApplicationRoleConnectionMetadataType = ApplicationRoleConnectionMetadataType = {}));
-  var ApplicationWebhookEventStatus;
-  (function(ApplicationWebhookEventStatus2) {
-    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Disabled"] = 1] = "Disabled";
-    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Enabled"] = 2] = "Enabled";
-    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["DisabledByDiscord"] = 3] = "DisabledByDiscord";
-  })(ApplicationWebhookEventStatus || (exports.ApplicationWebhookEventStatus = ApplicationWebhookEventStatus = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/auditLog.js
-var require_auditLog2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
-  var AuditLogEvent;
-  (function(AuditLogEvent2) {
-    AuditLogEvent2[AuditLogEvent2["GuildUpdate"] = 1] = "GuildUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelCreate"] = 10] = "ChannelCreate";
-    AuditLogEvent2[AuditLogEvent2["ChannelUpdate"] = 11] = "ChannelUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelDelete"] = 12] = "ChannelDelete";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteCreate"] = 13] = "ChannelOverwriteCreate";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteUpdate"] = 14] = "ChannelOverwriteUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteDelete"] = 15] = "ChannelOverwriteDelete";
-    AuditLogEvent2[AuditLogEvent2["MemberKick"] = 20] = "MemberKick";
-    AuditLogEvent2[AuditLogEvent2["MemberPrune"] = 21] = "MemberPrune";
-    AuditLogEvent2[AuditLogEvent2["MemberBanAdd"] = 22] = "MemberBanAdd";
-    AuditLogEvent2[AuditLogEvent2["MemberBanRemove"] = 23] = "MemberBanRemove";
-    AuditLogEvent2[AuditLogEvent2["MemberUpdate"] = 24] = "MemberUpdate";
-    AuditLogEvent2[AuditLogEvent2["MemberRoleUpdate"] = 25] = "MemberRoleUpdate";
-    AuditLogEvent2[AuditLogEvent2["MemberMove"] = 26] = "MemberMove";
-    AuditLogEvent2[AuditLogEvent2["MemberDisconnect"] = 27] = "MemberDisconnect";
-    AuditLogEvent2[AuditLogEvent2["BotAdd"] = 28] = "BotAdd";
-    AuditLogEvent2[AuditLogEvent2["RoleCreate"] = 30] = "RoleCreate";
-    AuditLogEvent2[AuditLogEvent2["RoleUpdate"] = 31] = "RoleUpdate";
-    AuditLogEvent2[AuditLogEvent2["RoleDelete"] = 32] = "RoleDelete";
-    AuditLogEvent2[AuditLogEvent2["InviteCreate"] = 40] = "InviteCreate";
-    AuditLogEvent2[AuditLogEvent2["InviteUpdate"] = 41] = "InviteUpdate";
-    AuditLogEvent2[AuditLogEvent2["InviteDelete"] = 42] = "InviteDelete";
-    AuditLogEvent2[AuditLogEvent2["WebhookCreate"] = 50] = "WebhookCreate";
-    AuditLogEvent2[AuditLogEvent2["WebhookUpdate"] = 51] = "WebhookUpdate";
-    AuditLogEvent2[AuditLogEvent2["WebhookDelete"] = 52] = "WebhookDelete";
-    AuditLogEvent2[AuditLogEvent2["EmojiCreate"] = 60] = "EmojiCreate";
-    AuditLogEvent2[AuditLogEvent2["EmojiUpdate"] = 61] = "EmojiUpdate";
-    AuditLogEvent2[AuditLogEvent2["EmojiDelete"] = 62] = "EmojiDelete";
-    AuditLogEvent2[AuditLogEvent2["MessageDelete"] = 72] = "MessageDelete";
-    AuditLogEvent2[AuditLogEvent2["MessageBulkDelete"] = 73] = "MessageBulkDelete";
-    AuditLogEvent2[AuditLogEvent2["MessagePin"] = 74] = "MessagePin";
-    AuditLogEvent2[AuditLogEvent2["MessageUnpin"] = 75] = "MessageUnpin";
-    AuditLogEvent2[AuditLogEvent2["IntegrationCreate"] = 80] = "IntegrationCreate";
-    AuditLogEvent2[AuditLogEvent2["IntegrationUpdate"] = 81] = "IntegrationUpdate";
-    AuditLogEvent2[AuditLogEvent2["IntegrationDelete"] = 82] = "IntegrationDelete";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceCreate"] = 83] = "StageInstanceCreate";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceUpdate"] = 84] = "StageInstanceUpdate";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceDelete"] = 85] = "StageInstanceDelete";
-    AuditLogEvent2[AuditLogEvent2["StickerCreate"] = 90] = "StickerCreate";
-    AuditLogEvent2[AuditLogEvent2["StickerUpdate"] = 91] = "StickerUpdate";
-    AuditLogEvent2[AuditLogEvent2["StickerDelete"] = 92] = "StickerDelete";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventCreate"] = 100] = "GuildScheduledEventCreate";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventUpdate"] = 101] = "GuildScheduledEventUpdate";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventDelete"] = 102] = "GuildScheduledEventDelete";
-    AuditLogEvent2[AuditLogEvent2["ThreadCreate"] = 110] = "ThreadCreate";
-    AuditLogEvent2[AuditLogEvent2["ThreadUpdate"] = 111] = "ThreadUpdate";
-    AuditLogEvent2[AuditLogEvent2["ThreadDelete"] = 112] = "ThreadDelete";
-    AuditLogEvent2[AuditLogEvent2["ApplicationCommandPermissionUpdate"] = 121] = "ApplicationCommandPermissionUpdate";
-    AuditLogEvent2[AuditLogEvent2["SoundboardSoundCreate"] = 130] = "SoundboardSoundCreate";
-    AuditLogEvent2[AuditLogEvent2["SoundboardSoundUpdate"] = 131] = "SoundboardSoundUpdate";
-    AuditLogEvent2[AuditLogEvent2["SoundboardSoundDelete"] = 132] = "SoundboardSoundDelete";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleCreate"] = 140] = "AutoModerationRuleCreate";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleUpdate"] = 141] = "AutoModerationRuleUpdate";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleDelete"] = 142] = "AutoModerationRuleDelete";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationBlockMessage"] = 143] = "AutoModerationBlockMessage";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationFlagToChannel"] = 144] = "AutoModerationFlagToChannel";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationUserCommunicationDisabled"] = 145] = "AutoModerationUserCommunicationDisabled";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationQuarantineUser"] = 146] = "AutoModerationQuarantineUser";
-    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationRequestCreated"] = 150] = "CreatorMonetizationRequestCreated";
-    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationTermsAccepted"] = 151] = "CreatorMonetizationTermsAccepted";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptCreate"] = 163] = "OnboardingPromptCreate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptUpdate"] = 164] = "OnboardingPromptUpdate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptDelete"] = 165] = "OnboardingPromptDelete";
-    AuditLogEvent2[AuditLogEvent2["OnboardingCreate"] = 166] = "OnboardingCreate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingUpdate"] = 167] = "OnboardingUpdate";
-    AuditLogEvent2[AuditLogEvent2["HomeSettingsCreate"] = 190] = "HomeSettingsCreate";
-    AuditLogEvent2[AuditLogEvent2["HomeSettingsUpdate"] = 191] = "HomeSettingsUpdate";
-  })(AuditLogEvent || (exports.AuditLogEvent = AuditLogEvent = {}));
-  var AuditLogOptionsType;
-  (function(AuditLogOptionsType2) {
-    AuditLogOptionsType2["Role"] = "0";
-    AuditLogOptionsType2["Member"] = "1";
-  })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/autoModeration.js
-var require_autoModeration2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
-  var AutoModerationRuleTriggerType;
-  (function(AutoModerationRuleTriggerType2) {
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Keyword"] = 1] = "Keyword";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Spam"] = 3] = "Spam";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["KeywordPreset"] = 4] = "KeywordPreset";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MentionSpam"] = 5] = "MentionSpam";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MemberProfile"] = 6] = "MemberProfile";
-  })(AutoModerationRuleTriggerType || (exports.AutoModerationRuleTriggerType = AutoModerationRuleTriggerType = {}));
-  var AutoModerationRuleKeywordPresetType;
-  (function(AutoModerationRuleKeywordPresetType2) {
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Profanity"] = 1] = "Profanity";
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["SexualContent"] = 2] = "SexualContent";
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Slurs"] = 3] = "Slurs";
-  })(AutoModerationRuleKeywordPresetType || (exports.AutoModerationRuleKeywordPresetType = AutoModerationRuleKeywordPresetType = {}));
-  var AutoModerationRuleEventType;
-  (function(AutoModerationRuleEventType2) {
-    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MessageSend"] = 1] = "MessageSend";
-    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MemberUpdate"] = 2] = "MemberUpdate";
-  })(AutoModerationRuleEventType || (exports.AutoModerationRuleEventType = AutoModerationRuleEventType = {}));
-  var AutoModerationActionType;
-  (function(AutoModerationActionType2) {
-    AutoModerationActionType2[AutoModerationActionType2["BlockMessage"] = 1] = "BlockMessage";
-    AutoModerationActionType2[AutoModerationActionType2["SendAlertMessage"] = 2] = "SendAlertMessage";
-    AutoModerationActionType2[AutoModerationActionType2["Timeout"] = 3] = "Timeout";
-    AutoModerationActionType2[AutoModerationActionType2["BlockMemberInteraction"] = 4] = "BlockMemberInteraction";
-  })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/channel.js
-var require_channel3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ChannelFlags = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
-  var SortOrderType;
-  (function(SortOrderType2) {
-    SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
-    SortOrderType2[SortOrderType2["CreationDate"] = 1] = "CreationDate";
-  })(SortOrderType || (exports.SortOrderType = SortOrderType = {}));
-  var ForumLayoutType;
-  (function(ForumLayoutType2) {
-    ForumLayoutType2[ForumLayoutType2["NotSet"] = 0] = "NotSet";
-    ForumLayoutType2[ForumLayoutType2["ListView"] = 1] = "ListView";
-    ForumLayoutType2[ForumLayoutType2["GalleryView"] = 2] = "GalleryView";
-  })(ForumLayoutType || (exports.ForumLayoutType = ForumLayoutType = {}));
-  var ChannelType;
-  (function(ChannelType2) {
-    ChannelType2[ChannelType2["GuildText"] = 0] = "GuildText";
-    ChannelType2[ChannelType2["DM"] = 1] = "DM";
-    ChannelType2[ChannelType2["GuildVoice"] = 2] = "GuildVoice";
-    ChannelType2[ChannelType2["GroupDM"] = 3] = "GroupDM";
-    ChannelType2[ChannelType2["GuildCategory"] = 4] = "GuildCategory";
-    ChannelType2[ChannelType2["GuildAnnouncement"] = 5] = "GuildAnnouncement";
-    ChannelType2[ChannelType2["AnnouncementThread"] = 10] = "AnnouncementThread";
-    ChannelType2[ChannelType2["PublicThread"] = 11] = "PublicThread";
-    ChannelType2[ChannelType2["PrivateThread"] = 12] = "PrivateThread";
-    ChannelType2[ChannelType2["GuildStageVoice"] = 13] = "GuildStageVoice";
-    ChannelType2[ChannelType2["GuildDirectory"] = 14] = "GuildDirectory";
-    ChannelType2[ChannelType2["GuildForum"] = 15] = "GuildForum";
-    ChannelType2[ChannelType2["GuildMedia"] = 16] = "GuildMedia";
-    ChannelType2[ChannelType2["GuildNews"] = 5] = "GuildNews";
-    ChannelType2[ChannelType2["GuildNewsThread"] = 10] = "GuildNewsThread";
-    ChannelType2[ChannelType2["GuildPublicThread"] = 11] = "GuildPublicThread";
-    ChannelType2[ChannelType2["GuildPrivateThread"] = 12] = "GuildPrivateThread";
-  })(ChannelType || (exports.ChannelType = ChannelType = {}));
-  var VideoQualityMode;
-  (function(VideoQualityMode2) {
-    VideoQualityMode2[VideoQualityMode2["Auto"] = 1] = "Auto";
-    VideoQualityMode2[VideoQualityMode2["Full"] = 2] = "Full";
-  })(VideoQualityMode || (exports.VideoQualityMode = VideoQualityMode = {}));
-  var OverwriteType;
-  (function(OverwriteType2) {
-    OverwriteType2[OverwriteType2["Role"] = 0] = "Role";
-    OverwriteType2[OverwriteType2["Member"] = 1] = "Member";
-  })(OverwriteType || (exports.OverwriteType = OverwriteType = {}));
-  var ThreadAutoArchiveDuration;
-  (function(ThreadAutoArchiveDuration2) {
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneHour"] = 60] = "OneHour";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneDay"] = 1440] = "OneDay";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["ThreeDays"] = 4320] = "ThreeDays";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneWeek"] = 10080] = "OneWeek";
-  })(ThreadAutoArchiveDuration || (exports.ThreadAutoArchiveDuration = ThreadAutoArchiveDuration = {}));
-  var ThreadMemberFlags;
-  (function(ThreadMemberFlags2) {
-    ThreadMemberFlags2[ThreadMemberFlags2["HasInteracted"] = 1] = "HasInteracted";
-    ThreadMemberFlags2[ThreadMemberFlags2["AllMessages"] = 2] = "AllMessages";
-    ThreadMemberFlags2[ThreadMemberFlags2["OnlyMentions"] = 4] = "OnlyMentions";
-    ThreadMemberFlags2[ThreadMemberFlags2["NoMessages"] = 8] = "NoMessages";
-  })(ThreadMemberFlags || (exports.ThreadMemberFlags = ThreadMemberFlags = {}));
-  var ChannelFlags;
-  (function(ChannelFlags2) {
-    ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
-    ChannelFlags2[ChannelFlags2["Pinned"] = 2] = "Pinned";
-    ChannelFlags2[ChannelFlags2["ActiveChannelsRemoved"] = 4] = "ActiveChannelsRemoved";
-    ChannelFlags2[ChannelFlags2["RequireTag"] = 16] = "RequireTag";
-    ChannelFlags2[ChannelFlags2["IsSpam"] = 32] = "IsSpam";
-    ChannelFlags2[ChannelFlags2["IsGuildResourceChannel"] = 128] = "IsGuildResourceChannel";
-    ChannelFlags2[ChannelFlags2["ClydeAI"] = 256] = "ClydeAI";
-    ChannelFlags2[ChannelFlags2["IsScheduledForDeletion"] = 512] = "IsScheduledForDeletion";
-    ChannelFlags2[ChannelFlags2["HideMediaDownloadOptions"] = 32768] = "HideMediaDownloadOptions";
-  })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/gateway.js
-var require_gateway2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ActivityFlags = exports.StatusDisplayType = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
-  var PresenceUpdateStatus;
-  (function(PresenceUpdateStatus2) {
-    PresenceUpdateStatus2["Online"] = "online";
-    PresenceUpdateStatus2["DoNotDisturb"] = "dnd";
-    PresenceUpdateStatus2["Idle"] = "idle";
-    PresenceUpdateStatus2["Invisible"] = "invisible";
-    PresenceUpdateStatus2["Offline"] = "offline";
-  })(PresenceUpdateStatus || (exports.PresenceUpdateStatus = PresenceUpdateStatus = {}));
-  var ActivityPlatform;
-  (function(ActivityPlatform2) {
-    ActivityPlatform2["Desktop"] = "desktop";
-    ActivityPlatform2["Xbox"] = "xbox";
-    ActivityPlatform2["Samsung"] = "samsung";
-    ActivityPlatform2["IOS"] = "ios";
-    ActivityPlatform2["Android"] = "android";
-    ActivityPlatform2["Embedded"] = "embedded";
-    ActivityPlatform2["PS4"] = "ps4";
-    ActivityPlatform2["PS5"] = "ps5";
-  })(ActivityPlatform || (exports.ActivityPlatform = ActivityPlatform = {}));
-  var ActivityType;
-  (function(ActivityType2) {
-    ActivityType2[ActivityType2["Playing"] = 0] = "Playing";
-    ActivityType2[ActivityType2["Streaming"] = 1] = "Streaming";
-    ActivityType2[ActivityType2["Listening"] = 2] = "Listening";
-    ActivityType2[ActivityType2["Watching"] = 3] = "Watching";
-    ActivityType2[ActivityType2["Custom"] = 4] = "Custom";
-    ActivityType2[ActivityType2["Competing"] = 5] = "Competing";
-  })(ActivityType || (exports.ActivityType = ActivityType = {}));
-  var StatusDisplayType;
-  (function(StatusDisplayType2) {
-    StatusDisplayType2[StatusDisplayType2["Name"] = 0] = "Name";
-    StatusDisplayType2[StatusDisplayType2["State"] = 1] = "State";
-    StatusDisplayType2[StatusDisplayType2["Details"] = 2] = "Details";
-  })(StatusDisplayType || (exports.StatusDisplayType = StatusDisplayType = {}));
-  var ActivityFlags;
-  (function(ActivityFlags2) {
-    ActivityFlags2[ActivityFlags2["Instance"] = 1] = "Instance";
-    ActivityFlags2[ActivityFlags2["Join"] = 2] = "Join";
-    ActivityFlags2[ActivityFlags2["Spectate"] = 4] = "Spectate";
-    ActivityFlags2[ActivityFlags2["JoinRequest"] = 8] = "JoinRequest";
-    ActivityFlags2[ActivityFlags2["Sync"] = 16] = "Sync";
-    ActivityFlags2[ActivityFlags2["Play"] = 32] = "Play";
-    ActivityFlags2[ActivityFlags2["PartyPrivacyFriends"] = 64] = "PartyPrivacyFriends";
-    ActivityFlags2[ActivityFlags2["PartyPrivacyVoiceChannel"] = 128] = "PartyPrivacyVoiceChannel";
-    ActivityFlags2[ActivityFlags2["Embedded"] = 256] = "Embedded";
-  })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/guild.js
-var require_guild2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
-  var GuildDefaultMessageNotifications;
-  (function(GuildDefaultMessageNotifications2) {
-    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["AllMessages"] = 0] = "AllMessages";
-    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["OnlyMentions"] = 1] = "OnlyMentions";
-  })(GuildDefaultMessageNotifications || (exports.GuildDefaultMessageNotifications = GuildDefaultMessageNotifications = {}));
-  var GuildExplicitContentFilter;
-  (function(GuildExplicitContentFilter2) {
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["Disabled"] = 0] = "Disabled";
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["MembersWithoutRoles"] = 1] = "MembersWithoutRoles";
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["AllMembers"] = 2] = "AllMembers";
-  })(GuildExplicitContentFilter || (exports.GuildExplicitContentFilter = GuildExplicitContentFilter = {}));
-  var GuildMFALevel;
-  (function(GuildMFALevel2) {
-    GuildMFALevel2[GuildMFALevel2["None"] = 0] = "None";
-    GuildMFALevel2[GuildMFALevel2["Elevated"] = 1] = "Elevated";
-  })(GuildMFALevel || (exports.GuildMFALevel = GuildMFALevel = {}));
-  var GuildNSFWLevel;
-  (function(GuildNSFWLevel2) {
-    GuildNSFWLevel2[GuildNSFWLevel2["Default"] = 0] = "Default";
-    GuildNSFWLevel2[GuildNSFWLevel2["Explicit"] = 1] = "Explicit";
-    GuildNSFWLevel2[GuildNSFWLevel2["Safe"] = 2] = "Safe";
-    GuildNSFWLevel2[GuildNSFWLevel2["AgeRestricted"] = 3] = "AgeRestricted";
-  })(GuildNSFWLevel || (exports.GuildNSFWLevel = GuildNSFWLevel = {}));
-  var GuildVerificationLevel;
-  (function(GuildVerificationLevel2) {
-    GuildVerificationLevel2[GuildVerificationLevel2["None"] = 0] = "None";
-    GuildVerificationLevel2[GuildVerificationLevel2["Low"] = 1] = "Low";
-    GuildVerificationLevel2[GuildVerificationLevel2["Medium"] = 2] = "Medium";
-    GuildVerificationLevel2[GuildVerificationLevel2["High"] = 3] = "High";
-    GuildVerificationLevel2[GuildVerificationLevel2["VeryHigh"] = 4] = "VeryHigh";
-  })(GuildVerificationLevel || (exports.GuildVerificationLevel = GuildVerificationLevel = {}));
-  var GuildPremiumTier;
-  (function(GuildPremiumTier2) {
-    GuildPremiumTier2[GuildPremiumTier2["None"] = 0] = "None";
-    GuildPremiumTier2[GuildPremiumTier2["Tier1"] = 1] = "Tier1";
-    GuildPremiumTier2[GuildPremiumTier2["Tier2"] = 2] = "Tier2";
-    GuildPremiumTier2[GuildPremiumTier2["Tier3"] = 3] = "Tier3";
-  })(GuildPremiumTier || (exports.GuildPremiumTier = GuildPremiumTier = {}));
-  var GuildHubType;
-  (function(GuildHubType2) {
-    GuildHubType2[GuildHubType2["Default"] = 0] = "Default";
-    GuildHubType2[GuildHubType2["HighSchool"] = 1] = "HighSchool";
-    GuildHubType2[GuildHubType2["College"] = 2] = "College";
-  })(GuildHubType || (exports.GuildHubType = GuildHubType = {}));
-  var GuildSystemChannelFlags;
-  (function(GuildSystemChannelFlags2) {
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotifications"] = 1] = "SuppressJoinNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressPremiumSubscriptions"] = 2] = "SuppressPremiumSubscriptions";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressGuildReminderNotifications"] = 4] = "SuppressGuildReminderNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotificationReplies"] = 8] = "SuppressJoinNotificationReplies";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotifications"] = 16] = "SuppressRoleSubscriptionPurchaseNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotificationReplies"] = 32] = "SuppressRoleSubscriptionPurchaseNotificationReplies";
-  })(GuildSystemChannelFlags || (exports.GuildSystemChannelFlags = GuildSystemChannelFlags = {}));
-  var GuildFeature;
-  (function(GuildFeature2) {
-    GuildFeature2["AnimatedBanner"] = "ANIMATED_BANNER";
-    GuildFeature2["AnimatedIcon"] = "ANIMATED_ICON";
-    GuildFeature2["ApplicationCommandPermissionsV2"] = "APPLICATION_COMMAND_PERMISSIONS_V2";
-    GuildFeature2["AutoModeration"] = "AUTO_MODERATION";
-    GuildFeature2["Banner"] = "BANNER";
-    GuildFeature2["Community"] = "COMMUNITY";
-    GuildFeature2["CreatorMonetizableProvisional"] = "CREATOR_MONETIZABLE_PROVISIONAL";
-    GuildFeature2["CreatorStorePage"] = "CREATOR_STORE_PAGE";
-    GuildFeature2["DeveloperSupportServer"] = "DEVELOPER_SUPPORT_SERVER";
-    GuildFeature2["Discoverable"] = "DISCOVERABLE";
-    GuildFeature2["Featurable"] = "FEATURABLE";
-    GuildFeature2["HasDirectoryEntry"] = "HAS_DIRECTORY_ENTRY";
-    GuildFeature2["Hub"] = "HUB";
-    GuildFeature2["InvitesDisabled"] = "INVITES_DISABLED";
-    GuildFeature2["InviteSplash"] = "INVITE_SPLASH";
-    GuildFeature2["LinkedToHub"] = "LINKED_TO_HUB";
-    GuildFeature2["MemberVerificationGateEnabled"] = "MEMBER_VERIFICATION_GATE_ENABLED";
-    GuildFeature2["MoreSoundboard"] = "MORE_SOUNDBOARD";
-    GuildFeature2["MonetizationEnabled"] = "MONETIZATION_ENABLED";
-    GuildFeature2["MoreStickers"] = "MORE_STICKERS";
-    GuildFeature2["News"] = "NEWS";
-    GuildFeature2["Partnered"] = "PARTNERED";
-    GuildFeature2["PreviewEnabled"] = "PREVIEW_ENABLED";
-    GuildFeature2["PrivateThreads"] = "PRIVATE_THREADS";
-    GuildFeature2["RaidAlertsDisabled"] = "RAID_ALERTS_DISABLED";
-    GuildFeature2["RelayEnabled"] = "RELAY_ENABLED";
-    GuildFeature2["RoleIcons"] = "ROLE_ICONS";
-    GuildFeature2["RoleSubscriptionsAvailableForPurchase"] = "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE";
-    GuildFeature2["RoleSubscriptionsEnabled"] = "ROLE_SUBSCRIPTIONS_ENABLED";
-    GuildFeature2["Soundboard"] = "SOUNDBOARD";
-    GuildFeature2["TicketedEventsEnabled"] = "TICKETED_EVENTS_ENABLED";
-    GuildFeature2["VanityURL"] = "VANITY_URL";
-    GuildFeature2["Verified"] = "VERIFIED";
-    GuildFeature2["VIPRegions"] = "VIP_REGIONS";
-    GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
-    GuildFeature2["GuildTags"] = "GUILD_TAGS";
-    GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
-    GuildFeature2["GuestsEnabled"] = "GUESTS_ENABLED";
-    GuildFeature2["PinPermissionMigrationComplete"] = "PIN_PERMISSION_MIGRATION_COMPLETE";
-  })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
-  var GuildMemberFlags;
-  (function(GuildMemberFlags2) {
-    GuildMemberFlags2[GuildMemberFlags2["DidRejoin"] = 1] = "DidRejoin";
-    GuildMemberFlags2[GuildMemberFlags2["CompletedOnboarding"] = 2] = "CompletedOnboarding";
-    GuildMemberFlags2[GuildMemberFlags2["BypassesVerification"] = 4] = "BypassesVerification";
-    GuildMemberFlags2[GuildMemberFlags2["StartedOnboarding"] = 8] = "StartedOnboarding";
-    GuildMemberFlags2[GuildMemberFlags2["IsGuest"] = 16] = "IsGuest";
-    GuildMemberFlags2[GuildMemberFlags2["StartedHomeActions"] = 32] = "StartedHomeActions";
-    GuildMemberFlags2[GuildMemberFlags2["CompletedHomeActions"] = 64] = "CompletedHomeActions";
-    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedUsernameOrGuildNickname"] = 128] = "AutomodQuarantinedUsernameOrGuildNickname";
-    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedBio"] = 256] = "AutomodQuarantinedBio";
-    GuildMemberFlags2[GuildMemberFlags2["DmSettingsUpsellAcknowledged"] = 512] = "DmSettingsUpsellAcknowledged";
-    GuildMemberFlags2[GuildMemberFlags2["AutoModQuarantinedGuildTag"] = 1024] = "AutoModQuarantinedGuildTag";
-  })(GuildMemberFlags || (exports.GuildMemberFlags = GuildMemberFlags = {}));
-  var IntegrationExpireBehavior;
-  (function(IntegrationExpireBehavior2) {
-    IntegrationExpireBehavior2[IntegrationExpireBehavior2["RemoveRole"] = 0] = "RemoveRole";
-    IntegrationExpireBehavior2[IntegrationExpireBehavior2["Kick"] = 1] = "Kick";
-  })(IntegrationExpireBehavior || (exports.IntegrationExpireBehavior = IntegrationExpireBehavior = {}));
-  var GuildWidgetStyle;
-  (function(GuildWidgetStyle2) {
-    GuildWidgetStyle2["Shield"] = "shield";
-    GuildWidgetStyle2["Banner1"] = "banner1";
-    GuildWidgetStyle2["Banner2"] = "banner2";
-    GuildWidgetStyle2["Banner3"] = "banner3";
-    GuildWidgetStyle2["Banner4"] = "banner4";
-  })(GuildWidgetStyle || (exports.GuildWidgetStyle = GuildWidgetStyle = {}));
-  var MembershipScreeningFieldType;
-  (function(MembershipScreeningFieldType2) {
-    MembershipScreeningFieldType2["Terms"] = "TERMS";
-  })(MembershipScreeningFieldType || (exports.MembershipScreeningFieldType = MembershipScreeningFieldType = {}));
-  var GuildOnboardingMode;
-  (function(GuildOnboardingMode2) {
-    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingDefault"] = 0] = "OnboardingDefault";
-    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingAdvanced"] = 1] = "OnboardingAdvanced";
-  })(GuildOnboardingMode || (exports.GuildOnboardingMode = GuildOnboardingMode = {}));
-  var GuildOnboardingPromptType;
-  (function(GuildOnboardingPromptType2) {
-    GuildOnboardingPromptType2[GuildOnboardingPromptType2["MultipleChoice"] = 0] = "MultipleChoice";
-    GuildOnboardingPromptType2[GuildOnboardingPromptType2["Dropdown"] = 1] = "Dropdown";
-  })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
-var require_guildScheduledEvent2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
-  var GuildScheduledEventRecurrenceRuleFrequency;
-  (function(GuildScheduledEventRecurrenceRuleFrequency2) {
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Yearly"] = 0] = "Yearly";
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Monthly"] = 1] = "Monthly";
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Weekly"] = 2] = "Weekly";
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Daily"] = 3] = "Daily";
-  })(GuildScheduledEventRecurrenceRuleFrequency || (exports.GuildScheduledEventRecurrenceRuleFrequency = GuildScheduledEventRecurrenceRuleFrequency = {}));
-  var GuildScheduledEventRecurrenceRuleWeekday;
-  (function(GuildScheduledEventRecurrenceRuleWeekday2) {
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Monday"] = 0] = "Monday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Tuesday"] = 1] = "Tuesday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Wednesday"] = 2] = "Wednesday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Thursday"] = 3] = "Thursday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Friday"] = 4] = "Friday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Saturday"] = 5] = "Saturday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Sunday"] = 6] = "Sunday";
-  })(GuildScheduledEventRecurrenceRuleWeekday || (exports.GuildScheduledEventRecurrenceRuleWeekday = GuildScheduledEventRecurrenceRuleWeekday = {}));
-  var GuildScheduledEventRecurrenceRuleMonth;
-  (function(GuildScheduledEventRecurrenceRuleMonth2) {
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["January"] = 1] = "January";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["February"] = 2] = "February";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["March"] = 3] = "March";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["April"] = 4] = "April";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["May"] = 5] = "May";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["June"] = 6] = "June";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["July"] = 7] = "July";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["August"] = 8] = "August";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["September"] = 9] = "September";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["October"] = 10] = "October";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["November"] = 11] = "November";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["December"] = 12] = "December";
-  })(GuildScheduledEventRecurrenceRuleMonth || (exports.GuildScheduledEventRecurrenceRuleMonth = GuildScheduledEventRecurrenceRuleMonth = {}));
-  var GuildScheduledEventEntityType;
-  (function(GuildScheduledEventEntityType2) {
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["StageInstance"] = 1] = "StageInstance";
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["Voice"] = 2] = "Voice";
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["External"] = 3] = "External";
-  })(GuildScheduledEventEntityType || (exports.GuildScheduledEventEntityType = GuildScheduledEventEntityType = {}));
-  var GuildScheduledEventStatus;
-  (function(GuildScheduledEventStatus2) {
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Scheduled"] = 1] = "Scheduled";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Active"] = 2] = "Active";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Completed"] = 3] = "Completed";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Canceled"] = 4] = "Canceled";
-  })(GuildScheduledEventStatus || (exports.GuildScheduledEventStatus = GuildScheduledEventStatus = {}));
-  var GuildScheduledEventPrivacyLevel;
-  (function(GuildScheduledEventPrivacyLevel2) {
-    GuildScheduledEventPrivacyLevel2[GuildScheduledEventPrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
-  })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
-var require_shared2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ApplicationCommandOptionType = undefined;
-  var ApplicationCommandOptionType;
-  (function(ApplicationCommandOptionType2) {
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Subcommand"] = 1] = "Subcommand";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["SubcommandGroup"] = 2] = "SubcommandGroup";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["String"] = 3] = "String";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Integer"] = 4] = "Integer";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Boolean"] = 5] = "Boolean";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["User"] = 6] = "User";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Channel"] = 7] = "Channel";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Role"] = 8] = "Role";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Mentionable"] = 9] = "Mentionable";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Number"] = 10] = "Number";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Attachment"] = 11] = "Attachment";
-  })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
-var require_chatInput2 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_shared2(), exports);
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
-var require_permissions3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
-  var ApplicationCommandPermissionType;
-  (function(ApplicationCommandPermissionType2) {
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Role"] = 1] = "Role";
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["User"] = 2] = "User";
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Channel"] = 3] = "Channel";
-  })(ApplicationCommandPermissionType || (exports.ApplicationCommandPermissionType = ApplicationCommandPermissionType = {}));
-  exports.APIApplicationCommandPermissionsConstant = {
-    Everyone: (guildId) => String(guildId),
-    AllChannels: (guildId) => String(BigInt(guildId) - 1n)
-  };
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
-var require_applicationCommands2 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.EntryPointCommandHandlerType = exports.InteractionContextType = exports.ApplicationIntegrationType = exports.ApplicationCommandType = undefined;
-  __exportStar(require_chatInput2(), exports);
-  __exportStar(require_permissions3(), exports);
-  var ApplicationCommandType;
-  (function(ApplicationCommandType2) {
-    ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
-    ApplicationCommandType2[ApplicationCommandType2["User"] = 2] = "User";
-    ApplicationCommandType2[ApplicationCommandType2["Message"] = 3] = "Message";
-    ApplicationCommandType2[ApplicationCommandType2["PrimaryEntryPoint"] = 4] = "PrimaryEntryPoint";
-  })(ApplicationCommandType || (exports.ApplicationCommandType = ApplicationCommandType = {}));
-  var ApplicationIntegrationType;
-  (function(ApplicationIntegrationType2) {
-    ApplicationIntegrationType2[ApplicationIntegrationType2["GuildInstall"] = 0] = "GuildInstall";
-    ApplicationIntegrationType2[ApplicationIntegrationType2["UserInstall"] = 1] = "UserInstall";
-  })(ApplicationIntegrationType || (exports.ApplicationIntegrationType = ApplicationIntegrationType = {}));
-  var InteractionContextType;
-  (function(InteractionContextType2) {
-    InteractionContextType2[InteractionContextType2["Guild"] = 0] = "Guild";
-    InteractionContextType2[InteractionContextType2["BotDM"] = 1] = "BotDM";
-    InteractionContextType2[InteractionContextType2["PrivateChannel"] = 2] = "PrivateChannel";
-  })(InteractionContextType || (exports.InteractionContextType = InteractionContextType = {}));
-  var EntryPointCommandHandlerType;
-  (function(EntryPointCommandHandlerType2) {
-    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["AppHandler"] = 1] = "AppHandler";
-    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["DiscordLaunchActivity"] = 2] = "DiscordLaunchActivity";
-  })(EntryPointCommandHandlerType || (exports.EntryPointCommandHandlerType = EntryPointCommandHandlerType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/_interactions/responses.js
-var require_responses2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.InteractionResponseType = exports.InteractionType = undefined;
-  var InteractionType;
-  (function(InteractionType2) {
-    InteractionType2[InteractionType2["Ping"] = 1] = "Ping";
-    InteractionType2[InteractionType2["ApplicationCommand"] = 2] = "ApplicationCommand";
-    InteractionType2[InteractionType2["MessageComponent"] = 3] = "MessageComponent";
-    InteractionType2[InteractionType2["ApplicationCommandAutocomplete"] = 4] = "ApplicationCommandAutocomplete";
-    InteractionType2[InteractionType2["ModalSubmit"] = 5] = "ModalSubmit";
-  })(InteractionType || (exports.InteractionType = InteractionType = {}));
-  var InteractionResponseType;
-  (function(InteractionResponseType2) {
-    InteractionResponseType2[InteractionResponseType2["Pong"] = 1] = "Pong";
-    InteractionResponseType2[InteractionResponseType2["ChannelMessageWithSource"] = 4] = "ChannelMessageWithSource";
-    InteractionResponseType2[InteractionResponseType2["DeferredChannelMessageWithSource"] = 5] = "DeferredChannelMessageWithSource";
-    InteractionResponseType2[InteractionResponseType2["DeferredMessageUpdate"] = 6] = "DeferredMessageUpdate";
-    InteractionResponseType2[InteractionResponseType2["UpdateMessage"] = 7] = "UpdateMessage";
-    InteractionResponseType2[InteractionResponseType2["ApplicationCommandAutocompleteResult"] = 8] = "ApplicationCommandAutocompleteResult";
-    InteractionResponseType2[InteractionResponseType2["Modal"] = 9] = "Modal";
-    InteractionResponseType2[InteractionResponseType2["PremiumRequired"] = 10] = "PremiumRequired";
-    InteractionResponseType2[InteractionResponseType2["LaunchActivity"] = 12] = "LaunchActivity";
-  })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/interactions.js
-var require_interactions2 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_applicationCommands2(), exports);
-  __exportStar(require_responses2(), exports);
-});
-
-// node_modules/discord-api-types/payloads/v10/invite.js
-var require_invite2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.InviteTargetType = exports.InviteType = exports.InviteFlags = undefined;
-  var InviteFlags;
-  (function(InviteFlags2) {
-    InviteFlags2[InviteFlags2["IsGuestInvite"] = 1] = "IsGuestInvite";
-  })(InviteFlags || (exports.InviteFlags = InviteFlags = {}));
-  var InviteType;
-  (function(InviteType2) {
-    InviteType2[InviteType2["Guild"] = 0] = "Guild";
-    InviteType2[InviteType2["GroupDM"] = 1] = "GroupDM";
-    InviteType2[InviteType2["Friend"] = 2] = "Friend";
-  })(InviteType || (exports.InviteType = InviteType = {}));
-  var InviteTargetType;
-  (function(InviteTargetType2) {
-    InviteTargetType2[InviteTargetType2["Stream"] = 1] = "Stream";
-    InviteTargetType2[InviteTargetType2["EmbeddedApplication"] = 2] = "EmbeddedApplication";
-  })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/message.js
-var require_message2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = undefined;
-  var MessageType;
-  (function(MessageType2) {
-    MessageType2[MessageType2["Default"] = 0] = "Default";
-    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
-    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
-    MessageType2[MessageType2["Call"] = 3] = "Call";
-    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
-    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
-    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
-    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
-    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
-    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
-    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
-    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
-    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
-    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
-    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
-    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
-    MessageType2[MessageType2["Reply"] = 19] = "Reply";
-    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
-    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
-    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
-    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
-    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
-    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
-    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
-    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
-    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
-    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
-    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
-    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
-    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
-    MessageType2[MessageType2["GuildIncidentAlertModeEnabled"] = 36] = "GuildIncidentAlertModeEnabled";
-    MessageType2[MessageType2["GuildIncidentAlertModeDisabled"] = 37] = "GuildIncidentAlertModeDisabled";
-    MessageType2[MessageType2["GuildIncidentReportRaid"] = 38] = "GuildIncidentReportRaid";
-    MessageType2[MessageType2["GuildIncidentReportFalseAlarm"] = 39] = "GuildIncidentReportFalseAlarm";
-    MessageType2[MessageType2["PurchaseNotification"] = 44] = "PurchaseNotification";
-    MessageType2[MessageType2["PollResult"] = 46] = "PollResult";
-  })(MessageType || (exports.MessageType = MessageType = {}));
-  var MessageActivityType;
-  (function(MessageActivityType2) {
-    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
-    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
-    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
-    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
-  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
-  var MessageReferenceType;
-  (function(MessageReferenceType2) {
-    MessageReferenceType2[MessageReferenceType2["Default"] = 0] = "Default";
-    MessageReferenceType2[MessageReferenceType2["Forward"] = 1] = "Forward";
-  })(MessageReferenceType || (exports.MessageReferenceType = MessageReferenceType = {}));
-  var MessageFlags;
-  (function(MessageFlags2) {
-    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
-    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
-    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
-    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
-    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
-    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
-    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
-    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
-    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
-    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
-    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
-    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
-    MessageFlags2[MessageFlags2["HasSnapshot"] = 16384] = "HasSnapshot";
-    MessageFlags2[MessageFlags2["IsComponentsV2"] = 32768] = "IsComponentsV2";
-  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
-  var EmbedType;
-  (function(EmbedType2) {
-    EmbedType2["Rich"] = "rich";
-    EmbedType2["Image"] = "image";
-    EmbedType2["Video"] = "video";
-    EmbedType2["GIFV"] = "gifv";
-    EmbedType2["Article"] = "article";
-    EmbedType2["Link"] = "link";
-    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
-    EmbedType2["PollResult"] = "poll_result";
-  })(EmbedType || (exports.EmbedType = EmbedType = {}));
-  var AttachmentFlags;
-  (function(AttachmentFlags2) {
-    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
-  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
-  var AllowedMentionsTypes;
-  (function(AllowedMentionsTypes2) {
-    AllowedMentionsTypes2["Everyone"] = "everyone";
-    AllowedMentionsTypes2["Role"] = "roles";
-    AllowedMentionsTypes2["User"] = "users";
-  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
-  var ComponentType;
-  (function(ComponentType2) {
-    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
-    ComponentType2[ComponentType2["Button"] = 2] = "Button";
-    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
-    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
-    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
-    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
-    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
-    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
-    ComponentType2[ComponentType2["Section"] = 9] = "Section";
-    ComponentType2[ComponentType2["TextDisplay"] = 10] = "TextDisplay";
-    ComponentType2[ComponentType2["Thumbnail"] = 11] = "Thumbnail";
-    ComponentType2[ComponentType2["MediaGallery"] = 12] = "MediaGallery";
-    ComponentType2[ComponentType2["File"] = 13] = "File";
-    ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
-    ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
-    ComponentType2[ComponentType2["Container"] = 17] = "Container";
-    ComponentType2[ComponentType2["Label"] = 18] = "Label";
-    ComponentType2[ComponentType2["FileUpload"] = 19] = "FileUpload";
-    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
-  })(ComponentType || (exports.ComponentType = ComponentType = {}));
-  var ButtonStyle;
-  (function(ButtonStyle2) {
-    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
-    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
-    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
-    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
-    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
-    ButtonStyle2[ButtonStyle2["Premium"] = 6] = "Premium";
-  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
-  var TextInputStyle;
-  (function(TextInputStyle2) {
-    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
-    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
-  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
-  var SelectMenuDefaultValueType;
-  (function(SelectMenuDefaultValueType2) {
-    SelectMenuDefaultValueType2["Channel"] = "channel";
-    SelectMenuDefaultValueType2["Role"] = "role";
-    SelectMenuDefaultValueType2["User"] = "user";
-  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
-  var UnfurledMediaItemLoadingState;
-  (function(UnfurledMediaItemLoadingState2) {
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Unknown"] = 0] = "Unknown";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Loading"] = 1] = "Loading";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedSuccess"] = 2] = "LoadedSuccess";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedNotFound"] = 3] = "LoadedNotFound";
-  })(UnfurledMediaItemLoadingState || (exports.UnfurledMediaItemLoadingState = UnfurledMediaItemLoadingState = {}));
-  var SeparatorSpacingSize;
-  (function(SeparatorSpacingSize2) {
-    SeparatorSpacingSize2[SeparatorSpacingSize2["Small"] = 1] = "Small";
-    SeparatorSpacingSize2[SeparatorSpacingSize2["Large"] = 2] = "Large";
-  })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/monetization.js
-var require_monetization3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
-  var EntitlementType;
-  (function(EntitlementType2) {
-    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
-    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
-    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
-    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
-    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
-    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
-    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
-    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
-  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
-  var SKUFlags;
-  (function(SKUFlags2) {
-    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
-    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
-    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
-  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
-  var SKUType;
-  (function(SKUType2) {
-    SKUType2[SKUType2["Durable"] = 2] = "Durable";
-    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
-    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
-    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
-  })(SKUType || (exports.SKUType = SKUType = {}));
-  var SubscriptionStatus;
-  (function(SubscriptionStatus2) {
-    SubscriptionStatus2[SubscriptionStatus2["Active"] = 0] = "Active";
-    SubscriptionStatus2[SubscriptionStatus2["Ending"] = 1] = "Ending";
-    SubscriptionStatus2[SubscriptionStatus2["Inactive"] = 2] = "Inactive";
-  })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/oauth2.js
-var require_oauth22 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.OAuth2Scopes = undefined;
-  var OAuth2Scopes;
-  (function(OAuth2Scopes2) {
-    OAuth2Scopes2["Bot"] = "bot";
-    OAuth2Scopes2["Connections"] = "connections";
-    OAuth2Scopes2["DMChannelsRead"] = "dm_channels.read";
-    OAuth2Scopes2["Email"] = "email";
-    OAuth2Scopes2["Identify"] = "identify";
-    OAuth2Scopes2["Guilds"] = "guilds";
-    OAuth2Scopes2["GuildsJoin"] = "guilds.join";
-    OAuth2Scopes2["GuildsMembersRead"] = "guilds.members.read";
-    OAuth2Scopes2["GroupDMJoins"] = "gdm.join";
-    OAuth2Scopes2["MessagesRead"] = "messages.read";
-    OAuth2Scopes2["RoleConnectionsWrite"] = "role_connections.write";
-    OAuth2Scopes2["RPC"] = "rpc";
-    OAuth2Scopes2["RPCActivitiesWrite"] = "rpc.activities.write";
-    OAuth2Scopes2["RPCVoiceRead"] = "rpc.voice.read";
-    OAuth2Scopes2["RPCVoiceWrite"] = "rpc.voice.write";
-    OAuth2Scopes2["RPCNotificationsRead"] = "rpc.notifications.read";
-    OAuth2Scopes2["WebhookIncoming"] = "webhook.incoming";
-    OAuth2Scopes2["Voice"] = "voice";
-    OAuth2Scopes2["ApplicationsBuildsUpload"] = "applications.builds.upload";
-    OAuth2Scopes2["ApplicationsBuildsRead"] = "applications.builds.read";
-    OAuth2Scopes2["ApplicationsStoreUpdate"] = "applications.store.update";
-    OAuth2Scopes2["ApplicationsEntitlements"] = "applications.entitlements";
-    OAuth2Scopes2["RelationshipsRead"] = "relationships.read";
-    OAuth2Scopes2["ActivitiesRead"] = "activities.read";
-    OAuth2Scopes2["ActivitiesWrite"] = "activities.write";
-    OAuth2Scopes2["ApplicationsCommands"] = "applications.commands";
-    OAuth2Scopes2["ApplicationsCommandsUpdate"] = "applications.commands.update";
-    OAuth2Scopes2["ApplicationCommandsPermissionsUpdate"] = "applications.commands.permissions.update";
-  })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/permissions.js
-var require_permissions4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RoleFlags = undefined;
-  var RoleFlags;
-  (function(RoleFlags2) {
-    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
-  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/poll.js
-var require_poll2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.PollLayoutType = undefined;
-  var PollLayoutType;
-  (function(PollLayoutType2) {
-    PollLayoutType2[PollLayoutType2["Default"] = 1] = "Default";
-  })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/stageInstance.js
-var require_stageInstance2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.StageInstancePrivacyLevel = undefined;
-  var StageInstancePrivacyLevel;
-  (function(StageInstancePrivacyLevel2) {
-    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["Public"] = 1] = "Public";
-    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
-  })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/sticker.js
-var require_sticker2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.StickerFormatType = exports.StickerType = undefined;
-  var StickerType;
-  (function(StickerType2) {
-    StickerType2[StickerType2["Standard"] = 1] = "Standard";
-    StickerType2[StickerType2["Guild"] = 2] = "Guild";
-  })(StickerType || (exports.StickerType = StickerType = {}));
-  var StickerFormatType;
-  (function(StickerFormatType2) {
-    StickerFormatType2[StickerFormatType2["PNG"] = 1] = "PNG";
-    StickerFormatType2[StickerFormatType2["APNG"] = 2] = "APNG";
-    StickerFormatType2[StickerFormatType2["Lottie"] = 3] = "Lottie";
-    StickerFormatType2[StickerFormatType2["GIF"] = 4] = "GIF";
-  })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/teams.js
-var require_teams2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
-  var TeamMemberMembershipState;
-  (function(TeamMemberMembershipState2) {
-    TeamMemberMembershipState2[TeamMemberMembershipState2["Invited"] = 1] = "Invited";
-    TeamMemberMembershipState2[TeamMemberMembershipState2["Accepted"] = 2] = "Accepted";
-  })(TeamMemberMembershipState || (exports.TeamMemberMembershipState = TeamMemberMembershipState = {}));
-  var TeamMemberRole;
-  (function(TeamMemberRole2) {
-    TeamMemberRole2["Admin"] = "admin";
-    TeamMemberRole2["Developer"] = "developer";
-    TeamMemberRole2["ReadOnly"] = "read_only";
-  })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/user.js
-var require_user2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.NameplatePalette = exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
-  var UserFlags;
-  (function(UserFlags2) {
-    UserFlags2[UserFlags2["Staff"] = 1] = "Staff";
-    UserFlags2[UserFlags2["Partner"] = 2] = "Partner";
-    UserFlags2[UserFlags2["Hypesquad"] = 4] = "Hypesquad";
-    UserFlags2[UserFlags2["BugHunterLevel1"] = 8] = "BugHunterLevel1";
-    UserFlags2[UserFlags2["MFASMS"] = 16] = "MFASMS";
-    UserFlags2[UserFlags2["PremiumPromoDismissed"] = 32] = "PremiumPromoDismissed";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse1"] = 64] = "HypeSquadOnlineHouse1";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse2"] = 128] = "HypeSquadOnlineHouse2";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse3"] = 256] = "HypeSquadOnlineHouse3";
-    UserFlags2[UserFlags2["PremiumEarlySupporter"] = 512] = "PremiumEarlySupporter";
-    UserFlags2[UserFlags2["TeamPseudoUser"] = 1024] = "TeamPseudoUser";
-    UserFlags2[UserFlags2["HasUnreadUrgentMessages"] = 8192] = "HasUnreadUrgentMessages";
-    UserFlags2[UserFlags2["BugHunterLevel2"] = 16384] = "BugHunterLevel2";
-    UserFlags2[UserFlags2["VerifiedBot"] = 65536] = "VerifiedBot";
-    UserFlags2[UserFlags2["VerifiedDeveloper"] = 131072] = "VerifiedDeveloper";
-    UserFlags2[UserFlags2["CertifiedModerator"] = 262144] = "CertifiedModerator";
-    UserFlags2[UserFlags2["BotHTTPInteractions"] = 524288] = "BotHTTPInteractions";
-    UserFlags2[UserFlags2["Spammer"] = 1048576] = "Spammer";
-    UserFlags2[UserFlags2["DisablePremium"] = 2097152] = "DisablePremium";
-    UserFlags2[UserFlags2["ActiveDeveloper"] = 4194304] = "ActiveDeveloper";
-    UserFlags2[UserFlags2["Quarantined"] = 17592186044416] = "Quarantined";
-    UserFlags2[UserFlags2["Collaborator"] = 1125899906842624] = "Collaborator";
-    UserFlags2[UserFlags2["RestrictedCollaborator"] = 2251799813685248] = "RestrictedCollaborator";
-  })(UserFlags || (exports.UserFlags = UserFlags = {}));
-  var UserPremiumType;
-  (function(UserPremiumType2) {
-    UserPremiumType2[UserPremiumType2["None"] = 0] = "None";
-    UserPremiumType2[UserPremiumType2["NitroClassic"] = 1] = "NitroClassic";
-    UserPremiumType2[UserPremiumType2["Nitro"] = 2] = "Nitro";
-    UserPremiumType2[UserPremiumType2["NitroBasic"] = 3] = "NitroBasic";
-  })(UserPremiumType || (exports.UserPremiumType = UserPremiumType = {}));
-  var ConnectionService;
-  (function(ConnectionService2) {
-    ConnectionService2["AmazonMusic"] = "amazon-music";
-    ConnectionService2["BattleNet"] = "battlenet";
-    ConnectionService2["Bluesky"] = "bluesky";
-    ConnectionService2["BungieNet"] = "bungie";
-    ConnectionService2["Crunchyroll"] = "crunchyroll";
-    ConnectionService2["Domain"] = "domain";
-    ConnectionService2["eBay"] = "ebay";
-    ConnectionService2["EpicGames"] = "epicgames";
-    ConnectionService2["Facebook"] = "facebook";
-    ConnectionService2["GitHub"] = "github";
-    ConnectionService2["Instagram"] = "instagram";
-    ConnectionService2["LeagueOfLegends"] = "leagueoflegends";
-    ConnectionService2["Mastodon"] = "mastodon";
-    ConnectionService2["PayPal"] = "paypal";
-    ConnectionService2["PlayStationNetwork"] = "playstation";
-    ConnectionService2["Reddit"] = "reddit";
-    ConnectionService2["RiotGames"] = "riotgames";
-    ConnectionService2["Roblox"] = "roblox";
-    ConnectionService2["Spotify"] = "spotify";
-    ConnectionService2["Skype"] = "skype";
-    ConnectionService2["Steam"] = "steam";
-    ConnectionService2["TikTok"] = "tiktok";
-    ConnectionService2["Twitch"] = "twitch";
-    ConnectionService2["X"] = "twitter";
-    ConnectionService2["Twitter"] = "twitter";
-    ConnectionService2["Xbox"] = "xbox";
-    ConnectionService2["YouTube"] = "youtube";
-  })(ConnectionService || (exports.ConnectionService = ConnectionService = {}));
-  var ConnectionVisibility;
-  (function(ConnectionVisibility2) {
-    ConnectionVisibility2[ConnectionVisibility2["None"] = 0] = "None";
-    ConnectionVisibility2[ConnectionVisibility2["Everyone"] = 1] = "Everyone";
-  })(ConnectionVisibility || (exports.ConnectionVisibility = ConnectionVisibility = {}));
-  var NameplatePalette;
-  (function(NameplatePalette2) {
-    NameplatePalette2["Berry"] = "berry";
-    NameplatePalette2["BubbleGum"] = "bubble_gum";
-    NameplatePalette2["Clover"] = "clover";
-    NameplatePalette2["Cobalt"] = "cobalt";
-    NameplatePalette2["Crimson"] = "crimson";
-    NameplatePalette2["Forest"] = "forest";
-    NameplatePalette2["Lemon"] = "lemon";
-    NameplatePalette2["Sky"] = "sky";
-    NameplatePalette2["Teal"] = "teal";
-    NameplatePalette2["Violet"] = "violet";
-    NameplatePalette2["White"] = "white";
-  })(NameplatePalette || (exports.NameplatePalette = NameplatePalette = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/webhook.js
-var require_webhook2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.WebhookType = exports.ApplicationWebhookEventType = exports.ApplicationWebhookType = undefined;
-  var ApplicationWebhookType;
-  (function(ApplicationWebhookType2) {
-    ApplicationWebhookType2[ApplicationWebhookType2["Ping"] = 0] = "Ping";
-    ApplicationWebhookType2[ApplicationWebhookType2["Event"] = 1] = "Event";
-  })(ApplicationWebhookType || (exports.ApplicationWebhookType = ApplicationWebhookType = {}));
-  var ApplicationWebhookEventType;
-  (function(ApplicationWebhookEventType2) {
-    ApplicationWebhookEventType2["ApplicationAuthorized"] = "APPLICATION_AUTHORIZED";
-    ApplicationWebhookEventType2["ApplicationDeauthorized"] = "APPLICATION_DEAUTHORIZED";
-    ApplicationWebhookEventType2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    ApplicationWebhookEventType2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
-    ApplicationWebhookEventType2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
-    ApplicationWebhookEventType2["QuestUserEnrollment"] = "QUEST_USER_ENROLLMENT";
-  })(ApplicationWebhookEventType || (exports.ApplicationWebhookEventType = ApplicationWebhookEventType = {}));
-  var WebhookType;
-  (function(WebhookType2) {
-    WebhookType2[WebhookType2["Incoming"] = 1] = "Incoming";
-    WebhookType2[WebhookType2["ChannelFollower"] = 2] = "ChannelFollower";
-    WebhookType2[WebhookType2["Application"] = 3] = "Application";
-  })(WebhookType || (exports.WebhookType = WebhookType = {}));
-});
-
-// node_modules/discord-api-types/payloads/v10/index.js
-var require_v108 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common4(), exports);
-  __exportStar(require_application2(), exports);
-  __exportStar(require_auditLog2(), exports);
-  __exportStar(require_autoModeration2(), exports);
-  __exportStar(require_channel3(), exports);
-  __exportStar(require_gateway2(), exports);
-  __exportStar(require_guild2(), exports);
-  __exportStar(require_guildScheduledEvent2(), exports);
-  __exportStar(require_interactions2(), exports);
-  __exportStar(require_invite2(), exports);
-  __exportStar(require_message2(), exports);
-  __exportStar(require_monetization3(), exports);
-  __exportStar(require_oauth22(), exports);
-  __exportStar(require_permissions4(), exports);
-  __exportStar(require_poll2(), exports);
-  __exportStar(require_stageInstance2(), exports);
-  __exportStar(require_sticker2(), exports);
-  __exportStar(require_teams2(), exports);
-  __exportStar(require_user2(), exports);
-  __exportStar(require_webhook2(), exports);
-});
-
-// node_modules/discord-api-types/utils/internals.js
-var require_internals2 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.urlSafeCharacters = undefined;
-  var pattern = /^[\d%A-Za-z-_]+$/g;
-  exports.urlSafeCharacters = {
-    test(input) {
-      const result = pattern.test(input);
-      pattern.lastIndex = 0;
-      return result;
-    }
-  };
-});
-
-// node_modules/discord-api-types/rest/common.js
-var require_common5 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.Locale = exports.RESTJSONErrorCodes = undefined;
-  var RESTJSONErrorCodes;
-  (function(RESTJSONErrorCodes2) {
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GeneralError"] = 0] = "GeneralError";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAccount"] = 10001] = "UnknownAccount";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplication"] = 10002] = "UnknownApplication";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownChannel"] = 10003] = "UnknownChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuild"] = 10004] = "UnknownGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownIntegration"] = 10005] = "UnknownIntegration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInvite"] = 10006] = "UnknownInvite";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMember"] = 10007] = "UnknownMember";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMessage"] = 10008] = "UnknownMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPermissionOverwrite"] = 10009] = "UnknownPermissionOverwrite";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownProvider"] = 10010] = "UnknownProvider";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRole"] = 10011] = "UnknownRole";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownToken"] = 10012] = "UnknownToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownUser"] = 10013] = "UnknownUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEmoji"] = 10014] = "UnknownEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhook"] = 10015] = "UnknownWebhook";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhookService"] = 10016] = "UnknownWebhookService";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSession"] = 10020] = "UnknownSession";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAsset"] = 10021] = "UnknownAsset";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBan"] = 10026] = "UnknownBan";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSKU"] = 10027] = "UnknownSKU";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreListing"] = 10028] = "UnknownStoreListing";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEntitlement"] = 10029] = "UnknownEntitlement";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBuild"] = 10030] = "UnknownBuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownLobby"] = 10031] = "UnknownLobby";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBranch"] = 10032] = "UnknownBranch";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreDirectoryLayout"] = 10033] = "UnknownStoreDirectoryLayout";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRedistributable"] = 10036] = "UnknownRedistributable";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGiftCode"] = 10038] = "UnknownGiftCode";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStream"] = 10049] = "UnknownStream";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPremiumServerSubscribeCooldown"] = 10050] = "UnknownPremiumServerSubscribeCooldown";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildTemplate"] = 10057] = "UnknownGuildTemplate";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownDiscoverableServerCategory"] = 10059] = "UnknownDiscoverableServerCategory";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSticker"] = 10060] = "UnknownSticker";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStickerPack"] = 10061] = "UnknownStickerPack";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInteraction"] = 10062] = "UnknownInteraction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommand"] = 10063] = "UnknownApplicationCommand";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownVoiceState"] = 10065] = "UnknownVoiceState";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommandPermissions"] = 10066] = "UnknownApplicationCommandPermissions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStageInstance"] = 10067] = "UnknownStageInstance";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildMemberVerificationForm"] = 10068] = "UnknownGuildMemberVerificationForm";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildWelcomeScreen"] = 10069] = "UnknownGuildWelcomeScreen";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEvent"] = 10070] = "UnknownGuildScheduledEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEventUser"] = 10071] = "UnknownGuildScheduledEventUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownTag"] = 10087] = "UnknownTag";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSound"] = 10097] = "UnknownSound";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BotsCannotUseThisEndpoint"] = 20001] = "BotsCannotUseThisEndpoint";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyBotsCanUseThisEndpoint"] = 20002] = "OnlyBotsCanUseThisEndpoint";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ExplicitContentCannotBeSentToTheDesiredRecipient"] = 20009] = "ExplicitContentCannotBeSentToTheDesiredRecipient";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NotAuthorizedToPerformThisActionOnThisApplication"] = 20012] = "NotAuthorizedToPerformThisActionOnThisApplication";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ActionCannotBePerformedDueToSlowmodeRateLimit"] = 20016] = "ActionCannotBePerformedDueToSlowmodeRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheMazeIsntMeantForYou"] = 20017] = "TheMazeIsntMeantForYou";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyTheOwnerOfThisAccountCanPerformThisAction"] = 20018] = "OnlyTheOwnerOfThisAccountCanPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnnouncementEditLimitExceeded"] = 20022] = "AnnouncementEditLimitExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnderMinimumAge"] = 20024] = "UnderMinimumAge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelSendRateLimit"] = 20028] = "ChannelSendRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerSendRateLimit"] = 20029] = "ServerSendRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords"] = 20031] = "StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildPremiumSubscriptionLevelTooLow"] = 20035] = "GuildPremiumSubscriptionLevelTooLow";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildsReached"] = 30001] = "MaximumNumberOfGuildsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfFriendsReached"] = 30002] = "MaximumNumberOfFriendsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinsReachedForTheChannel"] = 30003] = "MaximumNumberOfPinsReachedForTheChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfRecipientsReached"] = 30004] = "MaximumNumberOfRecipientsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildRolesReached"] = 30005] = "MaximumNumberOfGuildRolesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksReached"] = 30007] = "MaximumNumberOfWebhooksReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEmojisReached"] = 30008] = "MaximumNumberOfEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfReactionsReached"] = 30010] = "MaximumNumberOfReactionsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGroupDMsReached"] = 30011] = "MaximumNumberOfGroupDMsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildChannelsReached"] = 30013] = "MaximumNumberOfGuildChannelsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAttachmentsInAMessageReached"] = 30015] = "MaximumNumberOfAttachmentsInAMessageReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfInvitesReached"] = 30016] = "MaximumNumberOfInvitesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAnimatedEmojisReached"] = 30018] = "MaximumNumberOfAnimatedEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerMembersReached"] = 30019] = "MaximumNumberOfServerMembersReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerCategoriesReached"] = 30030] = "MaximumNumberOfServerCategoriesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildAlreadyHasTemplate"] = 30031] = "GuildAlreadyHasTemplate";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfApplicationCommandsReached"] = 30032] = "MaximumNumberOfApplicationCommandsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumThreadParticipantsReached"] = 30033] = "MaximumThreadParticipantsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumDailyApplicationCommandCreatesReached"] = 30034] = "MaximumDailyApplicationCommandCreatesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfNonGuildMemberBansHasBeenExceeded"] = 30035] = "MaximumNumberOfNonGuildMemberBansHasBeenExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfBanFetchesHasBeenReached"] = 30037] = "MaximumNumberOfBanFetchesHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfUncompletedGuildScheduledEventsReached"] = 30038] = "MaximumNumberOfUncompletedGuildScheduledEventsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfStickersReached"] = 30039] = "MaximumNumberOfStickersReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPruneRequestsHasBeenReached"] = 30040] = "MaximumNumberOfPruneRequestsHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached"] = 30042] = "MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfSoundboardSoundsReached"] = 30045] = "MaximumNumberOfSoundboardSoundsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEditsToMessagesOlderThanOneHourReached"] = 30046] = "MaximumNumberOfEditsToMessagesOlderThanOneHourReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinnedThreadsInForumHasBeenReached"] = 30047] = "MaximumNumberOfPinnedThreadsInForumHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfTagsInForumHasBeenReached"] = 30048] = "MaximumNumberOfTagsInForumHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BitrateIsTooHighForChannelOfThisType"] = 30052] = "BitrateIsTooHighForChannelOfThisType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPremiumEmojisReached"] = 30056] = "MaximumNumberOfPremiumEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksPerGuildReached"] = 30058] = "MaximumNumberOfWebhooksPerGuildReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfChannelPermissionOverwritesReached"] = 30060] = "MaximumNumberOfChannelPermissionOverwritesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheChannelsForThisGuildAreTooLarge"] = 30061] = "TheChannelsForThisGuildAreTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["Unauthorized"] = 40001] = "Unauthorized";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VerifyYourAccount"] = 40002] = "VerifyYourAccount";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OpeningDirectMessagesTooFast"] = 40003] = "OpeningDirectMessagesTooFast";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SendMessagesHasBeenTemporarilyDisabled"] = 40004] = "SendMessagesHasBeenTemporarilyDisabled";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestEntityTooLarge"] = 40005] = "RequestEntityTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FeatureTemporarilyDisabledServerSide"] = 40006] = "FeatureTemporarilyDisabledServerSide";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserBannedFromThisGuild"] = 40007] = "UserBannedFromThisGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ConnectionHasBeenRevoked"] = 40012] = "ConnectionHasBeenRevoked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyConsumableSKUsCanBeConsumed"] = 40018] = "OnlyConsumableSKUsCanBeConsumed";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCanOnlyDeleteSandboxEntitlements"] = 40019] = "YouCanOnlyDeleteSandboxEntitlements";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TargetUserIsNotConnectedToVoice"] = 40032] = "TargetUserIsNotConnectedToVoice";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisMessageWasAlreadyCrossposted"] = 40033] = "ThisMessageWasAlreadyCrossposted";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationCommandWithThatNameAlreadyExists"] = 40041] = "ApplicationCommandWithThatNameAlreadyExists";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationInteractionFailedToSend"] = 40043] = "ApplicationInteractionFailedToSend";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAMessageInAForumChannel"] = 40058] = "CannotSendAMessageInAForumChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InteractionHasAlreadyBeenAcknowledged"] = 40060] = "InteractionHasAlreadyBeenAcknowledged";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagNamesMustBeUnique"] = 40061] = "TagNamesMustBeUnique";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServiceResourceIsBeingRateLimited"] = 40062] = "ServiceResourceIsBeingRateLimited";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThereAreNoTagsAvailableThatCanBeSetByNonModerators"] = 40066] = "ThereAreNoTagsAvailableThatCanBeSetByNonModerators";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagRequiredToCreateAForumPostInThisChannel"] = 40067] = "TagRequiredToCreateAForumPostInThisChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnEntitlementHasAlreadyBeenGrantedForThisResource"] = 40074] = "AnEntitlementHasAlreadyBeenGrantedForThisResource";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages"] = 40094] = "ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CloudflareIsBlockingYourRequest"] = 40333] = "CloudflareIsBlockingYourRequest";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingAccess"] = 50001] = "MissingAccess";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAccountType"] = 50002] = "InvalidAccountType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnDMChannel"] = 50003] = "CannotExecuteActionOnDMChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildWidgetDisabled"] = 50004] = "GuildWidgetDisabled";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditMessageAuthoredByAnotherUser"] = 50005] = "CannotEditMessageAuthoredByAnotherUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAnEmptyMessage"] = 50006] = "CannotSendAnEmptyMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesToThisUser"] = 50007] = "CannotSendMessagesToThisUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesInNonTextChannel"] = 50008] = "CannotSendMessagesInNonTextChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelVerificationLevelTooHighForYouToGainAccess"] = 50009] = "ChannelVerificationLevelTooHighForYouToGainAccess";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationDoesNotHaveBot"] = 50010] = "OAuth2ApplicationDoesNotHaveBot";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationLimitReached"] = 50011] = "OAuth2ApplicationLimitReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2State"] = 50012] = "InvalidOAuth2State";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingPermissions"] = 50013] = "MissingPermissions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidToken"] = 50014] = "InvalidToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoteWasTooLong"] = 50015] = "NoteWasTooLong";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedTooFewOrTooManyMessagesToDelete"] = 50016] = "ProvidedTooFewOrTooManyMessagesToDelete";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMFALevel"] = 50017] = "InvalidMFALevel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageCanOnlyBePinnedInTheChannelItWasSentIn"] = 50019] = "MessageCanOnlyBePinnedInTheChannelItWasSentIn";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteCodeInvalidOrTaken"] = 50020] = "InviteCodeInvalidOrTaken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnSystemMessage"] = 50021] = "CannotExecuteActionOnSystemMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnThisChannelType"] = 50024] = "CannotExecuteActionOnThisChannelType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2AccessToken"] = 50025] = "InvalidOAuth2AccessToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingRequiredOAuth2Scope"] = 50026] = "MissingRequiredOAuth2Scope";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidWebhookToken"] = 50027] = "InvalidWebhookToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRole"] = 50028] = "InvalidRole";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRecipients"] = 50033] = "InvalidRecipients";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OneOfTheMessagesProvidedWasTooOldForBulkDelete"] = 50034] = "OneOfTheMessagesProvidedWasTooOldForBulkDelete";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFormBodyOrContentType"] = 50035] = "InvalidFormBodyOrContentType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteAcceptedToGuildWithoutTheBotBeingIn"] = 50036] = "InviteAcceptedToGuildWithoutTheBotBeingIn";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActivityAction"] = 50039] = "InvalidActivityAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAPIVersion"] = 50041] = "InvalidAPIVersion";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FileUploadedExceedsMaximumSize"] = 50045] = "FileUploadedExceedsMaximumSize";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFileUploaded"] = 50046] = "InvalidFileUploaded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSelfRedeemThisGift"] = 50054] = "CannotSelfRedeemThisGift";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidGuild"] = 50055] = "InvalidGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidSKU"] = 50057] = "InvalidSKU";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRequestOrigin"] = 50067] = "InvalidRequestOrigin";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMessageType"] = 50068] = "InvalidMessageType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PaymentSourceRequiredToRedeemGift"] = 50070] = "PaymentSourceRequiredToRedeemGift";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotModifyASystemWebhook"] = 50073] = "CannotModifyASystemWebhook";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteChannelRequiredForCommunityGuilds"] = 50074] = "CannotDeleteChannelRequiredForCommunityGuilds";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditStickersWithinMessage"] = 50080] = "CannotEditStickersWithinMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidStickerSent"] = 50081] = "InvalidStickerSent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActionOnArchivedThread"] = 50083] = "InvalidActionOnArchivedThread";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidThreadNotificationSettings"] = 50084] = "InvalidThreadNotificationSettings";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ParameterEarlierThanCreation"] = 50085] = "ParameterEarlierThanCreation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CommunityServerChannelsMustBeTextChannels"] = 50086] = "CommunityServerChannelsMustBeTextChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor"] = 50091] = "TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNotAvailableInYourLocation"] = 50095] = "ServerNotAvailableInYourLocation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMonetizationEnabledToPerformThisAction"] = 50097] = "ServerNeedsMonetizationEnabledToPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMoreBoostsToPerformThisAction"] = 50101] = "ServerNeedsMoreBoostsToPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestBodyContainsInvalidJSON"] = 50109] = "RequestBodyContainsInvalidJSON";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileIsInvalid"] = 50110] = "ProvidedFileIsInvalid";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileTypeIsInvalid"] = 50123] = "ProvidedFileTypeIsInvalid";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDurationExceedsMaximumLength"] = 50124] = "ProvidedFileDurationExceedsMaximumLength";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnerCannotBePendingMember"] = 50131] = "OwnerCannotBePendingMember";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnershipCannotBeMovedToABotUser"] = 50132] = "OwnershipCannotBeMovedToABotUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToResizeAssetBelowTheMinimumSize"] = 50138] = "FailedToResizeAssetBelowTheMinimumSize";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji"] = 50144] = "CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotConvertBetweenPremiumEmojiAndNormalEmoji"] = 50145] = "CannotConvertBetweenPremiumEmojiAndNormalEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedFileNotFound"] = 50146] = "UploadedFileNotFound";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SpecifiedEmojiIsInvalid"] = 50151] = "SpecifiedEmojiIsInvalid";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesDoNotSupportAdditionalContent"] = 50159] = "VoiceMessagesDoNotSupportAdditionalContent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveASingleAudioAttachment"] = 50160] = "VoiceMessagesMustHaveASingleAudioAttachment";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveSupportingMetadata"] = 50161] = "VoiceMessagesMustHaveSupportingMetadata";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesCannotBeEdited"] = 50162] = "VoiceMessagesCannotBeEdited";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteGuildSubscriptionIntegration"] = 50163] = "CannotDeleteGuildSubscriptionIntegration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCannotSendVoiceMessagesInThisChannel"] = 50173] = "YouCannotSendVoiceMessagesInThisChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheUserAccountMustFirstBeVerified"] = 50178] = "TheUserAccountMustFirstBeVerified";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDoesNotHaveAValidDuration"] = 50192] = "ProvidedFileDoesNotHaveAValidDuration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouDoNotHavePermissionToSendThisSticker"] = 50600] = "YouDoNotHavePermissionToSendThisSticker";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TwoFactorAuthenticationIsRequired"] = 60003] = "TwoFactorAuthenticationIsRequired";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoUsersWithDiscordTagExist"] = 80004] = "NoUsersWithDiscordTagExist";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ReactionWasBlocked"] = 90001] = "ReactionWasBlocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserCannotUseBurstReactions"] = 90002] = "UserCannotUseBurstReactions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationNotYetAvailable"] = 110001] = "ApplicationNotYetAvailable";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["APIResourceOverloaded"] = 130000] = "APIResourceOverloaded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheStageIsAlreadyOpen"] = 150006] = "TheStageIsAlreadyOpen";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotReplyWithoutPermissionToReadMessageHistory"] = 160002] = "CannotReplyWithoutPermissionToReadMessageHistory";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadAlreadyCreatedForMessage"] = 160004] = "ThreadAlreadyCreatedForMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadLocked"] = 160005] = "ThreadLocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveThreads"] = 160006] = "MaximumActiveThreads";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveAnnouncementThreads"] = 160007] = "MaximumActiveAnnouncementThreads";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidJSONForUploadedLottieFile"] = 170001] = "InvalidJSONForUploadedLottieFile";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedLottiesCannotContainRasterizedImages"] = 170002] = "UploadedLottiesCannotContainRasterizedImages";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerMaximumFramerateExceeded"] = 170003] = "StickerMaximumFramerateExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFrameCountExceedsMaximumOf1000Frames"] = 170004] = "StickerFrameCountExceedsMaximumOf1000Frames";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["LottieAnimationMaximumDimensionsExceeded"] = 170005] = "LottieAnimationMaximumDimensionsExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFramerateIsTooSmallOrTooLarge"] = 170006] = "StickerFramerateIsTooSmallOrTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerAnimationDurationExceedsMaximumOf5Seconds"] = 170007] = "StickerAnimationDurationExceedsMaximumOf5Seconds";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateAFinishedEvent"] = 180000] = "CannotUpdateAFinishedEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToCreateStageNeededForStageEvent"] = 180002] = "FailedToCreateStageNeededForStageEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageWasBlockedByAutomaticModeration"] = 200000] = "MessageWasBlockedByAutomaticModeration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TitleWasBlockedByAutomaticModeration"] = 200001] = "TitleWasBlockedByAutomaticModeration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId"] = 220001] = "WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId"] = 220002] = "WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksCanOnlyCreateThreadsInForumChannels"] = 220003] = "WebhooksCanOnlyCreateThreadsInForumChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhookServicesCannotBeUsedInForumChannels"] = 220004] = "WebhookServicesCannotBeUsedInForumChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageBlockedByHarmfulLinksFilter"] = 240000] = "MessageBlockedByHarmfulLinksFilter";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEnableOnboardingRequirementsAreNotMet"] = 350000] = "CannotEnableOnboardingRequirementsAreNotMet";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateOnboardingWhileBelowRequirements"] = 350001] = "CannotUpdateOnboardingWhileBelowRequirements";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AccessToFileUploadsHasBeenLimitedForThisGuild"] = 400001] = "AccessToFileUploadsHasBeenLimitedForThisGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToBanUsers"] = 500000] = "FailedToBanUsers";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollVotingBlocked"] = 520000] = "PollVotingBlocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollExpired"] = 520001] = "PollExpired";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidChannelTypeForPollCreation"] = 520002] = "InvalidChannelTypeForPollCreation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditAPollMessage"] = 520003] = "CannotEditAPollMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUseAnEmojiIncludedWithThePoll"] = 520004] = "CannotUseAnEmojiIncludedWithThePoll";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExpireANonPollMessage"] = 520006] = "CannotExpireANonPollMessage";
-  })(RESTJSONErrorCodes || (exports.RESTJSONErrorCodes = RESTJSONErrorCodes = {}));
-  var Locale;
-  (function(Locale2) {
-    Locale2["Indonesian"] = "id";
-    Locale2["EnglishUS"] = "en-US";
-    Locale2["EnglishGB"] = "en-GB";
-    Locale2["Bulgarian"] = "bg";
-    Locale2["ChineseCN"] = "zh-CN";
-    Locale2["ChineseTW"] = "zh-TW";
-    Locale2["Croatian"] = "hr";
-    Locale2["Czech"] = "cs";
-    Locale2["Danish"] = "da";
-    Locale2["Dutch"] = "nl";
-    Locale2["Finnish"] = "fi";
-    Locale2["French"] = "fr";
-    Locale2["German"] = "de";
-    Locale2["Greek"] = "el";
-    Locale2["Hindi"] = "hi";
-    Locale2["Hungarian"] = "hu";
-    Locale2["Italian"] = "it";
-    Locale2["Japanese"] = "ja";
-    Locale2["Korean"] = "ko";
-    Locale2["Lithuanian"] = "lt";
-    Locale2["Norwegian"] = "no";
-    Locale2["Polish"] = "pl";
-    Locale2["PortugueseBR"] = "pt-BR";
-    Locale2["Romanian"] = "ro";
-    Locale2["Russian"] = "ru";
-    Locale2["SpanishES"] = "es-ES";
-    Locale2["SpanishLATAM"] = "es-419";
-    Locale2["Swedish"] = "sv-SE";
-    Locale2["Thai"] = "th";
-    Locale2["Turkish"] = "tr";
-    Locale2["Ukrainian"] = "uk";
-    Locale2["Vietnamese"] = "vi";
-  })(Locale || (exports.Locale = Locale = {}));
-});
-
-// node_modules/discord-api-types/rest/v10/channel.js
-var require_channel4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ReactionType = undefined;
-  var ReactionType;
-  (function(ReactionType2) {
-    ReactionType2[ReactionType2["Normal"] = 0] = "Normal";
-    ReactionType2[ReactionType2["Super"] = 1] = "Super";
-  })(ReactionType || (exports.ReactionType = ReactionType = {}));
-});
-
-// node_modules/discord-api-types/rest/v10/monetization.js
-var require_monetization4 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.EntitlementOwnerType = undefined;
-  var EntitlementOwnerType;
-  (function(EntitlementOwnerType2) {
-    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
-    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
-  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
-});
-
-// node_modules/discord-api-types/rest/v10/index.js
-var require_v109 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
-  var internals_1 = require_internals2();
-  __exportStar(require_common5(), exports);
-  __exportStar(require_channel4(), exports);
-  __exportStar(require_monetization4(), exports);
-  exports.APIVersion = "10";
-  exports.Routes = {
-    applicationRoleConnectionMetadata(applicationId) {
-      return `/applications/${applicationId}/role-connections/metadata`;
-    },
-    guildAutoModerationRules(guildId) {
-      return `/guilds/${guildId}/auto-moderation/rules`;
-    },
-    guildAutoModerationRule(guildId, ruleId) {
-      return `/guilds/${guildId}/auto-moderation/rules/${ruleId}`;
-    },
-    guildAuditLog(guildId) {
-      return `/guilds/${guildId}/audit-logs`;
-    },
-    channel(channelId) {
-      return `/channels/${channelId}`;
-    },
-    channelMessages(channelId) {
-      return `/channels/${channelId}/messages`;
-    },
-    channelMessage(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}`;
-    },
-    channelMessageCrosspost(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}/crosspost`;
-    },
-    channelMessageOwnReaction(channelId, messageId, emoji) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/@me`;
-    },
-    channelMessageUserReaction(channelId, messageId, emoji, userId) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/${userId}`;
-    },
-    channelMessageReaction(channelId, messageId, emoji) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}`;
-    },
-    channelMessageAllReactions(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}/reactions`;
-    },
-    channelBulkDelete(channelId) {
-      return `/channels/${channelId}/messages/bulk-delete`;
-    },
-    channelPermission(channelId, overwriteId) {
-      return `/channels/${channelId}/permissions/${overwriteId}`;
-    },
-    channelInvites(channelId) {
-      return `/channels/${channelId}/invites`;
-    },
-    channelFollowers(channelId) {
-      return `/channels/${channelId}/followers`;
-    },
-    channelTyping(channelId) {
-      return `/channels/${channelId}/typing`;
-    },
-    channelMessagesPins(channelId) {
-      return `/channels/${channelId}/messages/pins`;
-    },
-    channelMessagesPin(channelId, messageId) {
-      return `/channels/${channelId}/messages/pins/${messageId}`;
-    },
-    channelPins(channelId) {
-      return `/channels/${channelId}/pins`;
-    },
-    channelPin(channelId, messageId) {
-      return `/channels/${channelId}/pins/${messageId}`;
-    },
-    channelRecipient(channelId, userId) {
-      return `/channels/${channelId}/recipients/${userId}`;
-    },
-    guildEmojis(guildId) {
-      return `/guilds/${guildId}/emojis`;
-    },
-    guildEmoji(guildId, emojiId) {
-      return `/guilds/${guildId}/emojis/${emojiId}`;
-    },
-    guilds() {
-      return "/guilds";
-    },
-    guild(guildId) {
-      return `/guilds/${guildId}`;
-    },
-    guildPreview(guildId) {
-      return `/guilds/${guildId}/preview`;
-    },
-    guildChannels(guildId) {
-      return `/guilds/${guildId}/channels`;
-    },
-    guildMember(guildId, userId = "@me") {
-      return `/guilds/${guildId}/members/${userId}`;
-    },
-    guildMembers(guildId) {
-      return `/guilds/${guildId}/members`;
-    },
-    guildMembersSearch(guildId) {
-      return `/guilds/${guildId}/members/search`;
-    },
-    guildCurrentMemberNickname(guildId) {
-      return `/guilds/${guildId}/members/@me/nick`;
-    },
-    guildMemberRole(guildId, memberId, roleId) {
-      return `/guilds/${guildId}/members/${memberId}/roles/${roleId}`;
-    },
-    guildMFA(guildId) {
-      return `/guilds/${guildId}/mfa`;
-    },
-    guildBans(guildId) {
-      return `/guilds/${guildId}/bans`;
-    },
-    guildBan(guildId, userId) {
-      return `/guilds/${guildId}/bans/${userId}`;
-    },
-    guildRoles(guildId) {
-      return `/guilds/${guildId}/roles`;
-    },
-    guildRole(guildId, roleId) {
-      return `/guilds/${guildId}/roles/${roleId}`;
-    },
-    guildRoleMemberCounts(guildId) {
-      return `/guilds/${guildId}/roles/member-counts`;
-    },
-    guildPrune(guildId) {
-      return `/guilds/${guildId}/prune`;
-    },
-    guildVoiceRegions(guildId) {
-      return `/guilds/${guildId}/regions`;
-    },
-    guildInvites(guildId) {
-      return `/guilds/${guildId}/invites`;
-    },
-    guildIntegrations(guildId) {
-      return `/guilds/${guildId}/integrations`;
-    },
-    guildIntegration(guildId, integrationId) {
-      return `/guilds/${guildId}/integrations/${integrationId}`;
-    },
-    guildWidgetSettings(guildId) {
-      return `/guilds/${guildId}/widget`;
-    },
-    guildWidgetJSON(guildId) {
-      return `/guilds/${guildId}/widget.json`;
-    },
-    guildVanityUrl(guildId) {
-      return `/guilds/${guildId}/vanity-url`;
-    },
-    guildWidgetImage(guildId) {
-      return `/guilds/${guildId}/widget.png`;
-    },
-    invite(code) {
-      return `/invites/${code}`;
-    },
-    template(code) {
-      return `/guilds/templates/${code}`;
-    },
-    guildTemplates(guildId) {
-      return `/guilds/${guildId}/templates`;
-    },
-    guildTemplate(guildId, code) {
-      return `/guilds/${guildId}/templates/${code}`;
-    },
-    pollAnswerVoters(channelId, messageId, answerId) {
-      return `/channels/${channelId}/polls/${messageId}/answers/${answerId}`;
-    },
-    expirePoll(channelId, messageId) {
-      return `/channels/${channelId}/polls/${messageId}/expire`;
-    },
-    threads(parentId, messageId) {
-      const parts = ["", "channels", parentId];
-      if (messageId)
-        parts.push("messages", messageId);
-      parts.push("threads");
-      return parts.join("/");
-    },
-    guildActiveThreads(guildId) {
-      return `/guilds/${guildId}/threads/active`;
-    },
-    channelThreads(channelId, archivedStatus) {
-      return `/channels/${channelId}/threads/archived/${archivedStatus}`;
-    },
-    channelJoinedArchivedThreads(channelId) {
-      return `/channels/${channelId}/users/@me/threads/archived/private`;
-    },
-    threadMembers(threadId, userId) {
-      const parts = ["", "channels", threadId, "thread-members"];
-      if (userId)
-        parts.push(userId);
-      return parts.join("/");
-    },
-    user(userId = "@me") {
-      return `/users/${userId}`;
-    },
-    userApplicationRoleConnection(applicationId) {
-      return `/users/@me/applications/${applicationId}/role-connection`;
-    },
-    userGuilds() {
-      return `/users/@me/guilds`;
-    },
-    userGuildMember(guildId) {
-      return `/users/@me/guilds/${guildId}/member`;
-    },
-    userGuild(guildId) {
-      return `/users/@me/guilds/${guildId}`;
-    },
-    userChannels() {
-      return `/users/@me/channels`;
-    },
-    userConnections() {
-      return `/users/@me/connections`;
-    },
-    voiceRegions() {
-      return `/voice/regions`;
-    },
-    channelWebhooks(channelId) {
-      return `/channels/${channelId}/webhooks`;
-    },
-    guildWebhooks(guildId) {
-      return `/guilds/${guildId}/webhooks`;
-    },
-    webhook(webhookId, webhookToken) {
-      const parts = ["", "webhooks", webhookId];
-      if (webhookToken)
-        parts.push(webhookToken);
-      return parts.join("/");
-    },
-    webhookMessage(webhookId, webhookToken, messageId = "@original") {
-      return `/webhooks/${webhookId}/${webhookToken}/messages/${messageId}`;
-    },
-    webhookPlatform(webhookId, webhookToken, platform) {
-      return `/webhooks/${webhookId}/${webhookToken}/${platform}`;
-    },
-    gateway() {
-      return `/gateway`;
-    },
-    gatewayBot() {
-      return `/gateway/bot`;
-    },
-    oauth2CurrentApplication() {
-      return `/oauth2/applications/@me`;
-    },
-    oauth2CurrentAuthorization() {
-      return `/oauth2/@me`;
-    },
-    oauth2Authorization() {
-      return `/oauth2/authorize`;
-    },
-    oauth2TokenExchange() {
-      return `/oauth2/token`;
-    },
-    oauth2TokenRevocation() {
-      return `/oauth2/token/revoke`;
-    },
-    applicationCommands(applicationId) {
-      return `/applications/${applicationId}/commands`;
-    },
-    applicationCommand(applicationId, commandId) {
-      return `/applications/${applicationId}/commands/${commandId}`;
-    },
-    applicationGuildCommands(applicationId, guildId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands`;
-    },
-    applicationGuildCommand(applicationId, guildId, commandId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}`;
-    },
-    interactionCallback(interactionId, interactionToken) {
-      return `/interactions/${interactionId}/${interactionToken}/callback`;
-    },
-    guildMemberVerification(guildId) {
-      return `/guilds/${guildId}/member-verification`;
-    },
-    guildVoiceState(guildId, userId = "@me") {
-      return `/guilds/${guildId}/voice-states/${userId}`;
-    },
-    guildApplicationCommandsPermissions(applicationId, guildId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/permissions`;
-    },
-    applicationCommandPermissions(applicationId, guildId, commandId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}/permissions`;
-    },
-    guildWelcomeScreen(guildId) {
-      return `/guilds/${guildId}/welcome-screen`;
-    },
-    stageInstances() {
-      return `/stage-instances`;
-    },
-    stageInstance(channelId) {
-      return `/stage-instances/${channelId}`;
-    },
-    sticker(stickerId) {
-      return `/stickers/${stickerId}`;
-    },
-    stickerPacks() {
-      return "/sticker-packs";
-    },
-    stickerPack(packId) {
-      return `/sticker-packs/${packId}`;
-    },
-    nitroStickerPacks() {
-      return "/sticker-packs";
-    },
-    guildStickers(guildId) {
-      return `/guilds/${guildId}/stickers`;
-    },
-    guildSticker(guildId, stickerId) {
-      return `/guilds/${guildId}/stickers/${stickerId}`;
-    },
-    guildScheduledEvents(guildId) {
-      return `/guilds/${guildId}/scheduled-events`;
-    },
-    guildScheduledEvent(guildId, guildScheduledEventId) {
-      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}`;
-    },
-    guildScheduledEventUsers(guildId, guildScheduledEventId) {
-      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}/users`;
-    },
-    guildOnboarding(guildId) {
-      return `/guilds/${guildId}/onboarding`;
-    },
-    guildIncidentActions(guildId) {
-      return `/guilds/${guildId}/incident-actions`;
-    },
-    currentApplication() {
-      return "/applications/@me";
-    },
-    entitlements(applicationId) {
-      return `/applications/${applicationId}/entitlements`;
-    },
-    entitlement(applicationId, entitlementId) {
-      return `/applications/${applicationId}/entitlements/${entitlementId}`;
-    },
-    skus(applicationId) {
-      return `/applications/${applicationId}/skus`;
-    },
-    guildBulkBan(guildId) {
-      return `/guilds/${guildId}/bulk-ban`;
-    },
-    consumeEntitlement(applicationId, entitlementId) {
-      return `/applications/${applicationId}/entitlements/${entitlementId}/consume`;
-    },
-    applicationEmojis(applicationId) {
-      return `/applications/${applicationId}/emojis`;
-    },
-    applicationEmoji(applicationId, emojiId) {
-      return `/applications/${applicationId}/emojis/${emojiId}`;
-    },
-    skuSubscriptions(skuId) {
-      return `/skus/${skuId}/subscriptions`;
-    },
-    skuSubscription(skuId, subscriptionId) {
-      return `/skus/${skuId}/subscriptions/${subscriptionId}`;
-    },
-    sendSoundboardSound(channelId) {
-      return `/channels/${channelId}/send-soundboard-sound`;
-    },
-    soundboardDefaultSounds() {
-      return "/soundboard-default-sounds";
-    },
-    guildSoundboardSounds(guildId) {
-      return `/guilds/${guildId}/soundboard-sounds`;
-    },
-    guildSoundboardSound(guildId, soundId) {
-      return `/guilds/${guildId}/soundboard-sounds/${soundId}`;
-    }
-  };
-  for (const [key, fn] of Object.entries(exports.Routes)) {
-    exports.Routes[key] = (...args) => {
-      const escaped = args.map((arg) => {
-        if (arg) {
-          if (internals_1.urlSafeCharacters.test(String(arg))) {
-            return arg;
-          }
-          return encodeURIComponent(arg);
-        }
-        return arg;
-      });
-      return fn.call(null, ...escaped);
-    };
-  }
-  Object.freeze(exports.Routes);
-  exports.StickerPackApplicationId = "710982414301790216";
-  var ImageFormat;
-  (function(ImageFormat2) {
-    ImageFormat2["JPEG"] = "jpeg";
-    ImageFormat2["PNG"] = "png";
-    ImageFormat2["WebP"] = "webp";
-    ImageFormat2["GIF"] = "gif";
-    ImageFormat2["Lottie"] = "json";
-  })(ImageFormat || (exports.ImageFormat = ImageFormat = {}));
-  exports.CDNRoutes = {
-    emoji(emojiId, format) {
-      return `/emojis/${emojiId}.${format}`;
-    },
-    guildIcon(guildId, guildIcon, format) {
-      return `/icons/${guildId}/${guildIcon}.${format}`;
-    },
-    guildSplash(guildId, guildSplash, format) {
-      return `/splashes/${guildId}/${guildSplash}.${format}`;
-    },
-    guildDiscoverySplash(guildId, guildDiscoverySplash, format) {
-      return `/discovery-splashes/${guildId}/${guildDiscoverySplash}.${format}`;
-    },
-    guildBanner(guildId, guildBanner, format) {
-      return `/banners/${guildId}/${guildBanner}.${format}`;
-    },
-    userBanner(userId, userBanner, format) {
-      return `/banners/${userId}/${userBanner}.${format}`;
-    },
-    defaultUserAvatar(index) {
-      return `/embed/avatars/${index}.png`;
-    },
-    userAvatar(userId, userAvatar, format) {
-      return `/avatars/${userId}/${userAvatar}.${format}`;
-    },
-    guildMemberAvatar(guildId, userId, memberAvatar, format) {
-      return `/guilds/${guildId}/users/${userId}/avatars/${memberAvatar}.${format}`;
-    },
-    userAvatarDecoration(userId, userAvatarDecoration) {
-      return `/avatar-decorations/${userId}/${userAvatarDecoration}.png`;
-    },
-    avatarDecoration(avatarDecorationDataAsset) {
-      return `/avatar-decoration-presets/${avatarDecorationDataAsset}.png`;
-    },
-    applicationIcon(applicationId, applicationIcon, format) {
-      return `/app-icons/${applicationId}/${applicationIcon}.${format}`;
-    },
-    applicationCover(applicationId, applicationCoverImage, format) {
-      return `/app-icons/${applicationId}/${applicationCoverImage}.${format}`;
-    },
-    applicationAsset(applicationId, applicationAssetId, format) {
-      return `/app-assets/${applicationId}/${applicationAssetId}.${format}`;
-    },
-    achievementIcon(applicationId, achievementId, achievementIconHash, format) {
-      return `/app-assets/${applicationId}/achievements/${achievementId}/icons/${achievementIconHash}.${format}`;
-    },
-    stickerPackBanner(stickerPackBannerAssetId, format) {
-      return `/app-assets/${exports.StickerPackApplicationId}/store/${stickerPackBannerAssetId}.${format}`;
-    },
-    storePageAsset(applicationId, assetId, format = ImageFormat.PNG) {
-      return `/app-assets/${applicationId}/store/${assetId}.${format}`;
-    },
-    teamIcon(teamId, teamIcon, format) {
-      return `/team-icons/${teamId}/${teamIcon}.${format}`;
-    },
-    sticker(stickerId, format) {
-      return `/stickers/${stickerId}.${format}`;
-    },
-    roleIcon(roleId, roleIcon, format) {
-      return `/role-icons/${roleId}/${roleIcon}.${format}`;
-    },
-    guildScheduledEventCover(guildScheduledEventId, guildScheduledEventCoverImage, format) {
-      return `/guild-events/${guildScheduledEventId}/${guildScheduledEventCoverImage}.${format}`;
-    },
-    guildMemberBanner(guildId, userId, guildMemberBanner, format) {
-      return `/guilds/${guildId}/users/${userId}/banners/${guildMemberBanner}.${format}`;
-    },
-    soundboardSound(soundId) {
-      return `/soundboard-sounds/${soundId}`;
-    },
-    guildTagBadge(guildId, guildTagBadge, format) {
-      return `/guild-tag-badges/${guildId}/${guildTagBadge}.${format}`;
-    }
-  };
-  for (const [key, fn] of Object.entries(exports.CDNRoutes)) {
-    exports.CDNRoutes[key] = (...args) => {
-      const escaped = args.map((arg) => {
-        if (arg) {
-          if (internals_1.urlSafeCharacters.test(String(arg))) {
-            return arg;
-          }
-          return encodeURIComponent(arg);
-        }
-        return arg;
-      });
-      return fn.call(null, ...escaped);
-    };
-  }
-  Object.freeze(exports.CDNRoutes);
-  exports.RouteBases = {
-    api: `https://discord.com/api/v${exports.APIVersion}`,
-    cdn: "https://cdn.discordapp.com",
-    media: "https://media.discordapp.net",
-    invite: "https://discord.gg",
-    template: "https://discord.new",
-    gift: "https://discord.gift",
-    scheduledEvent: "https://discord.com/events"
-  };
-  Object.freeze(exports.RouteBases);
-  exports.OAuth2Routes = {
-    authorizationURL: `${exports.RouteBases.api}${exports.Routes.oauth2Authorization()}`,
-    tokenURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenExchange()}`,
-    tokenRevocationURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenRevocation()}`
-  };
-  Object.freeze(exports.OAuth2Routes);
-});
-
-// node_modules/discord-api-types/rpc/common.js
-var require_common6 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RPCCloseEventCodes = exports.RPCErrorCodes = exports.RelationshipType = exports.VoiceConnectionStates = exports.RPCVoiceShortcutKeyComboKeyType = exports.RPCVoiceSettingsModeType = exports.RPCDeviceType = undefined;
-  var RPCDeviceType;
-  (function(RPCDeviceType2) {
-    RPCDeviceType2["AudioInput"] = "audioinput";
-    RPCDeviceType2["AudioOutput"] = "audiooutput";
-    RPCDeviceType2["VideoInput"] = "videoinput";
-  })(RPCDeviceType || (exports.RPCDeviceType = RPCDeviceType = {}));
-  var RPCVoiceSettingsModeType;
-  (function(RPCVoiceSettingsModeType2) {
-    RPCVoiceSettingsModeType2["PushToTalk"] = "PUSH_TO_TALK";
-    RPCVoiceSettingsModeType2["VoiceActivity"] = "VOICE_ACTIVITY";
-  })(RPCVoiceSettingsModeType || (exports.RPCVoiceSettingsModeType = RPCVoiceSettingsModeType = {}));
-  var RPCVoiceShortcutKeyComboKeyType;
-  (function(RPCVoiceShortcutKeyComboKeyType2) {
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardKey"] = 0] = "KeyboardKey";
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["MouseButton"] = 1] = "MouseButton";
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardModifierKey"] = 2] = "KeyboardModifierKey";
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["GamepadButton"] = 3] = "GamepadButton";
-  })(RPCVoiceShortcutKeyComboKeyType || (exports.RPCVoiceShortcutKeyComboKeyType = RPCVoiceShortcutKeyComboKeyType = {}));
-  var VoiceConnectionStates;
-  (function(VoiceConnectionStates2) {
-    VoiceConnectionStates2["Disconnected"] = "DISCONNECTED";
-    VoiceConnectionStates2["AwaitingEndpoint"] = "AWAITING_ENDPOINT";
-    VoiceConnectionStates2["Authenticating"] = "AUTHENTICATING";
-    VoiceConnectionStates2["Connecting"] = "CONNECTING";
-    VoiceConnectionStates2["Connected"] = "CONNECTED";
-    VoiceConnectionStates2["VoiceDisconnected"] = "VOICE_DISCONNECTED";
-    VoiceConnectionStates2["VoiceConnecting"] = "VOICE_CONNECTING";
-    VoiceConnectionStates2["VoiceConnected"] = "VOICE_CONNECTED";
-    VoiceConnectionStates2["NoRoute"] = "NO_ROUTE";
-    VoiceConnectionStates2["IceChecking"] = "ICE_CHECKING";
-  })(VoiceConnectionStates || (exports.VoiceConnectionStates = VoiceConnectionStates = {}));
-  var RelationshipType;
-  (function(RelationshipType2) {
-    RelationshipType2[RelationshipType2["None"] = 0] = "None";
-    RelationshipType2[RelationshipType2["Friend"] = 1] = "Friend";
-    RelationshipType2[RelationshipType2["Blocked"] = 2] = "Blocked";
-    RelationshipType2[RelationshipType2["PendingIncoming"] = 3] = "PendingIncoming";
-    RelationshipType2[RelationshipType2["PendingOutgoing"] = 4] = "PendingOutgoing";
-    RelationshipType2[RelationshipType2["Implicit"] = 5] = "Implicit";
-  })(RelationshipType || (exports.RelationshipType = RelationshipType = {}));
-  var RPCErrorCodes;
-  (function(RPCErrorCodes2) {
-    RPCErrorCodes2[RPCErrorCodes2["UnknownError"] = 1000] = "UnknownError";
-    RPCErrorCodes2[RPCErrorCodes2["ServiceUnavailable"] = 1001] = "ServiceUnavailable";
-    RPCErrorCodes2[RPCErrorCodes2["TransactionAborted"] = 1002] = "TransactionAborted";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidPayload"] = 4000] = "InvalidPayload";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidCommand"] = 4002] = "InvalidCommand";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidGuild"] = 4003] = "InvalidGuild";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidEvent"] = 4004] = "InvalidEvent";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidChannel"] = 4005] = "InvalidChannel";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidPermissions"] = 4006] = "InvalidPermissions";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidClientId"] = 4007] = "InvalidClientId";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidOrigin"] = 4008] = "InvalidOrigin";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidToken"] = 4009] = "InvalidToken";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidUser"] = 4010] = "InvalidUser";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidInvite"] = 4011] = "InvalidInvite";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidActivityJoinRequest"] = 4012] = "InvalidActivityJoinRequest";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidEntitlement"] = 4013] = "InvalidEntitlement";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidGiftCode"] = 4014] = "InvalidGiftCode";
-    RPCErrorCodes2[RPCErrorCodes2["OAuth2Error"] = 5000] = "OAuth2Error";
-    RPCErrorCodes2[RPCErrorCodes2["SelectChannelTimedOut"] = 5001] = "SelectChannelTimedOut";
-    RPCErrorCodes2[RPCErrorCodes2["GetGuildTimedOut"] = 5002] = "GetGuildTimedOut";
-    RPCErrorCodes2[RPCErrorCodes2["SelectVoiceForceRequired"] = 5003] = "SelectVoiceForceRequired";
-    RPCErrorCodes2[RPCErrorCodes2["CaptureShortcutAlreadyListening"] = 5004] = "CaptureShortcutAlreadyListening";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidActivitySecret"] = 5005] = "InvalidActivitySecret";
-    RPCErrorCodes2[RPCErrorCodes2["NoEligibleActivity"] = 5006] = "NoEligibleActivity";
-    RPCErrorCodes2[RPCErrorCodes2["PurchaseCanceled"] = 5007] = "PurchaseCanceled";
-    RPCErrorCodes2[RPCErrorCodes2["PurchaseError"] = 5008] = "PurchaseError";
-    RPCErrorCodes2[RPCErrorCodes2["UnauthorizedForAchievement"] = 5009] = "UnauthorizedForAchievement";
-    RPCErrorCodes2[RPCErrorCodes2["RateLimited"] = 5010] = "RateLimited";
-  })(RPCErrorCodes || (exports.RPCErrorCodes = RPCErrorCodes = {}));
-  var RPCCloseEventCodes;
-  (function(RPCCloseEventCodes2) {
-    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseNormal"] = 1000] = "CloseNormal";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseUnsupported"] = 1003] = "CloseUnsupported";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseAbnormal"] = 1006] = "CloseAbnormal";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidClientId"] = 4000] = "InvalidClientId";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidOrigin"] = 4001] = "InvalidOrigin";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["RateLimited"] = 4002] = "RateLimited";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["TokenRevoked"] = 4003] = "TokenRevoked";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidVersion"] = 4004] = "InvalidVersion";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidEncoding"] = 4005] = "InvalidEncoding";
-  })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
-});
-
-// node_modules/discord-api-types/rpc/v10.js
-var require_v1010 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RPCEvents = exports.RPCCommands = exports.RPCVersion = undefined;
-  __exportStar(require_common6(), exports);
-  exports.RPCVersion = "1";
-  var RPCCommands;
-  (function(RPCCommands2) {
-    RPCCommands2["AcceptActivityInvite"] = "ACCEPT_ACTIVITY_INVITE";
-    RPCCommands2["ActivityInviteUser"] = "ACTIVITY_INVITE_USER";
-    RPCCommands2["Authenticate"] = "AUTHENTICATE";
-    RPCCommands2["Authorize"] = "AUTHORIZE";
-    RPCCommands2["BraintreePopupBridgeCallback"] = "BRAINTREE_POPUP_BRIDGE_CALLBACK";
-    RPCCommands2["BrowserHandoff"] = "BROWSER_HANDOFF";
-    RPCCommands2["CloseActivityJoinRequest"] = "CLOSE_ACTIVITY_JOIN_REQUEST";
-    RPCCommands2["ConnectionsCallback"] = "CONNECTIONS_CALLBACK";
-    RPCCommands2["CreateChannelInvite"] = "CREATE_CHANNEL_INVITE";
-    RPCCommands2["DeepLink"] = "DEEP_LINK";
-    RPCCommands2["Dispatch"] = "DISPATCH";
-    RPCCommands2["GetApplicationTicket"] = "GET_APPLICATION_TICKET";
-    RPCCommands2["GetChannel"] = "GET_CHANNEL";
-    RPCCommands2["GetChannels"] = "GET_CHANNELS";
-    RPCCommands2["GetEntitlementTicket"] = "GET_ENTITLEMENT_TICKET";
-    RPCCommands2["GetEntitlements"] = "GET_ENTITLEMENTS";
-    RPCCommands2["GetGuild"] = "GET_GUILD";
-    RPCCommands2["GetGuilds"] = "GET_GUILDS";
-    RPCCommands2["GetImage"] = "GET_IMAGE";
-    RPCCommands2["GetNetworkingConfig"] = "GET_NETWORKING_CONFIG";
-    RPCCommands2["GetRelationships"] = "GET_RELATIONSHIPS";
-    RPCCommands2["GetSelectedVoiceChannel"] = "GET_SELECTED_VOICE_CHANNEL";
-    RPCCommands2["GetSkus"] = "GET_SKUS";
-    RPCCommands2["GetUser"] = "GET_USER";
-    RPCCommands2["GetVoiceSettings"] = "GET_VOICE_SETTINGS";
-    RPCCommands2["GiftCodeBrowser"] = "GIFT_CODE_BROWSER";
-    RPCCommands2["GuildTemplateBrowser"] = "GUILD_TEMPLATE_BROWSER";
-    RPCCommands2["InviteBrowser"] = "INVITE_BROWSER";
-    RPCCommands2["NetworkingCreateToken"] = "NETWORKING_CREATE_TOKEN";
-    RPCCommands2["NetworkingPeerMetrics"] = "NETWORKING_PEER_METRICS";
-    RPCCommands2["NetworkingSystemMetrics"] = "NETWORKING_SYSTEM_METRICS";
-    RPCCommands2["OpenOverlayActivityInvite"] = "OPEN_OVERLAY_ACTIVITY_INVITE";
-    RPCCommands2["OpenOverlayGuildInvite"] = "OPEN_OVERLAY_GUILD_INVITE";
-    RPCCommands2["OpenOverlayVoiceSettings"] = "OPEN_OVERLAY_VOICE_SETTINGS";
-    RPCCommands2["Overlay"] = "OVERLAY";
-    RPCCommands2["SelectTextChannel"] = "SELECT_TEXT_CHANNEL";
-    RPCCommands2["SelectVoiceChannel"] = "SELECT_VOICE_CHANNEL";
-    RPCCommands2["SendActivityJoinInvite"] = "SEND_ACTIVITY_JOIN_INVITE";
-    RPCCommands2["SetActivity"] = "SET_ACTIVITY";
-    RPCCommands2["SetCertifiedDevices"] = "SET_CERTIFIED_DEVICES";
-    RPCCommands2["SetOverlayLocked"] = "SET_OVERLAY_LOCKED";
-    RPCCommands2["SetUserVoiceSettings"] = "SET_USER_VOICE_SETTINGS";
-    RPCCommands2["SetUserVoiceSettings2"] = "SET_USER_VOICE_SETTINGS_2";
-    RPCCommands2["SetVoiceSettings"] = "SET_VOICE_SETTINGS";
-    RPCCommands2["SetVoiceSettings2"] = "SET_VOICE_SETTINGS_2";
-    RPCCommands2["StartPurchase"] = "START_PURCHASE";
-    RPCCommands2["Subscribe"] = "SUBSCRIBE";
-    RPCCommands2["Unsubscribe"] = "UNSUBSCRIBE";
-    RPCCommands2["ValidateApplication"] = "VALIDATE_APPLICATION";
-  })(RPCCommands || (exports.RPCCommands = RPCCommands = {}));
-  var RPCEvents;
-  (function(RPCEvents2) {
-    RPCEvents2["ActivityInvite"] = "ACTIVITY_INVITE";
-    RPCEvents2["ActivityJoin"] = "ACTIVITY_JOIN";
-    RPCEvents2["ActivityJoinRequest"] = "ACTIVITY_JOIN_REQUEST";
-    RPCEvents2["ActivitySpectate"] = "ACTIVITY_SPECTATE";
-    RPCEvents2["ChannelCreate"] = "CHANNEL_CREATE";
-    RPCEvents2["CurrentUserUpdate"] = "CURRENT_USER_UPDATE";
-    RPCEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    RPCEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
-    RPCEvents2["Error"] = "ERROR";
-    RPCEvents2["GameJoin"] = "GAME_JOIN";
-    RPCEvents2["GameSpectate"] = "GAME_SPECTATE";
-    RPCEvents2["GuildCreate"] = "GUILD_CREATE";
-    RPCEvents2["GuildStatus"] = "GUILD_STATUS";
-    RPCEvents2["MessageCreate"] = "MESSAGE_CREATE";
-    RPCEvents2["MessageDelete"] = "MESSAGE_DELETE";
-    RPCEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
-    RPCEvents2["NotificationCreate"] = "NOTIFICATION_CREATE";
-    RPCEvents2["Overlay"] = "OVERLAY";
-    RPCEvents2["OverlayUpdate"] = "OVERLAY_UPDATE";
-    RPCEvents2["Ready"] = "READY";
-    RPCEvents2["RelationshipUpdate"] = "RELATIONSHIP_UPDATE";
-    RPCEvents2["SpeakingStart"] = "SPEAKING_START";
-    RPCEvents2["SpeakingStop"] = "SPEAKING_STOP";
-    RPCEvents2["VoiceChannelSelect"] = "VOICE_CHANNEL_SELECT";
-    RPCEvents2["VoiceConnectionStatus"] = "VOICE_CONNECTION_STATUS";
-    RPCEvents2["VoiceSettingsUpdate"] = "VOICE_SETTINGS_UPDATE";
-    RPCEvents2["VoiceSettingsUpdate2"] = "VOICE_SETTINGS_UPDATE_2";
-    RPCEvents2["VoiceStateCreate"] = "VOICE_STATE_CREATE";
-    RPCEvents2["VoiceStateDelete"] = "VOICE_STATE_DELETE";
-    RPCEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
-  })(RPCEvents || (exports.RPCEvents = RPCEvents = {}));
-});
-
-// node_modules/discord-api-types/utils/v10.js
-var require_v1011 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.isDMInteraction = isDMInteraction;
-  exports.isGuildInteraction = isGuildInteraction;
-  exports.isApplicationCommandDMInteraction = isApplicationCommandDMInteraction;
-  exports.isApplicationCommandGuildInteraction = isApplicationCommandGuildInteraction;
-  exports.isMessageComponentDMInteraction = isMessageComponentDMInteraction;
-  exports.isMessageComponentGuildInteraction = isMessageComponentGuildInteraction;
-  exports.isLinkButton = isLinkButton;
-  exports.isInteractionButton = isInteractionButton;
-  exports.isMessageComponentInteraction = isMessageComponentInteraction;
-  exports.isMessageComponentButtonInteraction = isMessageComponentButtonInteraction;
-  exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
-  exports.isChatInputApplicationCommandInteraction = isChatInputApplicationCommandInteraction;
-  exports.isContextMenuApplicationCommandInteraction = isContextMenuApplicationCommandInteraction;
-  var index_1 = require_v108();
-  function isDMInteraction(interaction) {
-    return Reflect.has(interaction, "user");
-  }
-  function isGuildInteraction(interaction) {
-    return Reflect.has(interaction, "guild_id");
-  }
-  function isApplicationCommandDMInteraction(interaction) {
-    return isDMInteraction(interaction);
-  }
-  function isApplicationCommandGuildInteraction(interaction) {
-    return isGuildInteraction(interaction);
-  }
-  function isMessageComponentDMInteraction(interaction) {
-    return isDMInteraction(interaction);
-  }
-  function isMessageComponentGuildInteraction(interaction) {
-    return isGuildInteraction(interaction);
-  }
-  function isLinkButton(component) {
-    return component.style === index_1.ButtonStyle.Link;
-  }
-  function isInteractionButton(component) {
-    return ![index_1.ButtonStyle.Link, index_1.ButtonStyle.Premium].includes(component.style);
-  }
-  function isMessageComponentInteraction(interaction) {
-    return interaction.type === index_1.InteractionType.MessageComponent;
-  }
-  function isMessageComponentButtonInteraction(interaction) {
-    return interaction.data.component_type === index_1.ComponentType.Button;
-  }
-  function isMessageComponentSelectMenuInteraction(interaction) {
-    return [
-      index_1.ComponentType.StringSelect,
-      index_1.ComponentType.UserSelect,
-      index_1.ComponentType.RoleSelect,
-      index_1.ComponentType.MentionableSelect,
-      index_1.ComponentType.ChannelSelect
-    ].includes(interaction.data.component_type);
-  }
-  function isChatInputApplicationCommandInteraction(interaction) {
-    return interaction.data.type === index_1.ApplicationCommandType.ChatInput;
-  }
-  function isContextMenuApplicationCommandInteraction(interaction) {
-    return interaction.data.type === index_1.ApplicationCommandType.Message || interaction.data.type === index_1.ApplicationCommandType.User;
-  }
-});
-
-// node_modules/discord-api-types/v10.js
-var require_v1012 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.Utils = undefined;
-  __exportStar(require_v107(), exports);
-  __exportStar(require_globals2(), exports);
-  __exportStar(require_v108(), exports);
-  __exportStar(require_v109(), exports);
-  __exportStar(require_v1010(), exports);
-  __exportStar(require_internals2(), exports);
-  exports.Utils = require_v1011();
-});
-
 // node_modules/discord.js/src/errors/ErrorCodes.js
 var require_ErrorCodes = __commonJS((exports, module) => {
   var keys = [
@@ -10367,7 +10329,7 @@ var require_BitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/AttachmentFlagsBitField.js
 var require_AttachmentFlagsBitField = __commonJS((exports, module) => {
-  var { AttachmentFlags } = require_v1012();
+  var { AttachmentFlags } = require_v106();
   var BitField = require_BitField();
 
   class AttachmentFlagsBitField extends BitField {
@@ -10528,7 +10490,7 @@ var require_dist7 = __commonJS((exports, module) => {
       spoiler: spoiler2 = true,
       codeBlockContent = true,
       inlineCodeContent = true,
-      escape = true,
+      escape: escape2 = true,
       heading: heading2 = false,
       bulletedList = false,
       numberedList = false,
@@ -10546,7 +10508,7 @@ var require_dist7 = __commonJS((exports, module) => {
           strikethrough: strikethrough2,
           spoiler: spoiler2,
           inlineCodeContent,
-          escape,
+          escape: escape2,
           heading: heading2,
           bulletedList,
           numberedList,
@@ -10565,7 +10527,7 @@ var require_dist7 = __commonJS((exports, module) => {
           underline: underline2,
           strikethrough: strikethrough2,
           spoiler: spoiler2,
-          escape,
+          escape: escape2,
           heading: heading2,
           bulletedList,
           numberedList,
@@ -10574,7 +10536,7 @@ var require_dist7 = __commonJS((exports, module) => {
       }).join(inlineCode2 ? "\\`" : "`");
     }
     let res = text;
-    if (escape)
+    if (escape2)
       res = escapeEscape(res);
     if (inlineCode2)
       res = escapeInlineCode(res);
@@ -10865,7 +10827,7 @@ var require_Base = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/ChannelFlagsBitField.js
 var require_ChannelFlagsBitField = __commonJS((exports, module) => {
-  var { ChannelFlags } = require_v1012();
+  var { ChannelFlags } = require_v106();
   var BitField = require_BitField();
 
   class ChannelFlagsBitField extends BitField {
@@ -10876,7 +10838,7 @@ var require_ChannelFlagsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/Constants.js
 var require_Constants = __commonJS((exports) => {
-  var { ChannelType, MessageType, ComponentType, ImageFormat, StickerFormatType } = require_v1012();
+  var { ChannelType, MessageType, ComponentType, ImageFormat, StickerFormatType } = require_v106();
   exports.MaxBulkDeletableMessageAge = 1209600000;
   exports.SweeperKeys = [
     "autoModerationRules",
@@ -10970,7 +10932,7 @@ var require_Constants = __commonJS((exports) => {
 var require_BaseChannel = __commonJS((exports) => {
   var { channelLink, channelMention } = require_dist7();
   var { DiscordSnowflake } = require_cjs();
-  var { ChannelType, Routes } = require_v1012();
+  var { ChannelType, Routes } = require_v106();
   var Base = require_Base();
   var ChannelFlagsBitField = require_ChannelFlagsBitField();
   var { ThreadChannelTypes } = require_Constants();
@@ -11128,7 +11090,7 @@ var require_CachedManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/PermissionsBitField.js
 var require_PermissionsBitField = __commonJS((exports, module) => {
-  var { PermissionFlagsBits } = require_v1012();
+  var { PermissionFlagsBits } = require_v106();
   var BitField = require_BitField();
 
   class PermissionsBitField extends BitField {
@@ -11155,7 +11117,7 @@ var require_PermissionsBitField = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/RoleFlagsBitField.js
 var require_RoleFlagsBitField = __commonJS((exports, module) => {
-  var { RoleFlags } = require_v1012();
+  var { RoleFlags } = require_v106();
   var BitField = require_BitField();
 
   class RoleFlagsBitField extends BitField {
@@ -11168,7 +11130,7 @@ var require_RoleFlagsBitField = __commonJS((exports, module) => {
 var require_Role = __commonJS((exports) => {
   var { roleMention } = require_dist7();
   var { DiscordSnowflake } = require_cjs();
-  var { PermissionFlagsBits } = require_v1012();
+  var { PermissionFlagsBits } = require_v106();
   var Base = require_Base();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var PermissionsBitField = require_PermissionsBitField();
@@ -11333,7 +11295,7 @@ var require_Role = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/PermissionOverwrites.js
 var require_PermissionOverwrites = __commonJS((exports, module) => {
-  var { OverwriteType } = require_v1012();
+  var { OverwriteType } = require_v106();
   var Base = require_Base();
   var { Role } = require_Role();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -11422,7 +11384,7 @@ var require_PermissionOverwrites = __commonJS((exports, module) => {
 var require_PermissionOverwriteManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
-  var { OverwriteType, Routes } = require_v1012();
+  var { OverwriteType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var PermissionOverwrites = require_PermissionOverwrites();
@@ -11489,7 +11451,7 @@ var require_PermissionOverwriteManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/GuildChannel.js
 var require_GuildChannel = __commonJS((exports, module) => {
   var { Snowflake } = require_cjs();
-  var { PermissionFlagsBits, ChannelType } = require_v1012();
+  var { PermissionFlagsBits, ChannelType } = require_v106();
   var { BaseChannel } = require_BaseChannel();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var PermissionOverwriteManager = require_PermissionOverwriteManager();
@@ -11709,7 +11671,7 @@ var require_GuildChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/SKUFlagsBitField.js
 var require_SKUFlagsBitField = __commonJS((exports) => {
-  var { SKUFlags } = require_v1012();
+  var { SKUFlags } = require_v106();
   var BitField = require_BitField();
 
   class SKUFlagsBitField extends BitField {
@@ -11742,7 +11704,7 @@ var require_Util = __commonJS((exports, module) => {
   var { parse } = __require("path");
   var process2 = __require("process");
   var { Collection } = require_dist6();
-  var { ChannelType, RouteBases, Routes } = require_v1012();
+  var { ChannelType, RouteBases, Routes } = require_v106();
   var { fetch: fetch2 } = __require("undici");
   var Colors = require_Colors();
   var { DiscordjsError, DiscordjsRangeError, DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -12347,7 +12309,7 @@ var require_Options = __commonJS((exports, module) => {
 var require_BaseClient = __commonJS((exports, module) => {
   var EventEmitter = __require("events");
   var { REST } = require_dist5();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var Options = require_Options();
   var { flatten } = require_Util();
@@ -12906,7 +12868,7 @@ var require_MessageCollector = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/GuildScheduledEvent.js
 var require_GuildScheduledEvent = __commonJS((exports) => {
   var { DiscordSnowflake } = require_cjs();
-  var { GuildScheduledEventStatus, GuildScheduledEventEntityType, RouteBases } = require_v1012();
+  var { GuildScheduledEventStatus, GuildScheduledEventEntityType, RouteBases } = require_v106();
   var Base = require_Base();
   var { DiscordjsError, ErrorCodes } = require_errors();
 
@@ -13269,7 +13231,7 @@ var require_InviteStageInstance = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/InviteFlagsBitField.js
 var require_InviteFlagsBitField = __commonJS((exports) => {
-  var { InviteFlags } = require_v1012();
+  var { InviteFlags } = require_v106();
   var BitField = require_BitField();
 
   class InviteFlagsBitField extends BitField {
@@ -13282,7 +13244,7 @@ var require_InviteFlagsBitField = __commonJS((exports) => {
 var require_BaseGuild = __commonJS((exports, module) => {
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes, GuildFeature } = require_v1012();
+  var { Routes, GuildFeature } = require_v106();
   var Base = require_Base();
 
   class BaseGuild extends Base {
@@ -13400,7 +13362,7 @@ var require_WelcomeChannel = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/WelcomeScreen.js
 var require_WelcomeScreen = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { GuildFeature } = require_v1012();
+  var { GuildFeature } = require_v106();
   var Base = require_Base();
   var WelcomeChannel = require_WelcomeChannel();
 
@@ -13438,7 +13400,7 @@ var require_InviteGuild = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/Invite.js
 var require_Invite = __commonJS((exports, module) => {
-  var { RouteBases, Routes, PermissionFlagsBits } = require_v1012();
+  var { RouteBases, Routes, PermissionFlagsBits } = require_v106();
   var Base = require_Base();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
   var IntegrationApplication = require_IntegrationApplication();
@@ -13601,7 +13563,7 @@ var require_Invite = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/GuildTemplate.js
 var require_GuildTemplate = __commonJS((exports, module) => {
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
-  var { RouteBases, Routes } = require_v1012();
+  var { RouteBases, Routes } = require_v106();
   var Base = require_Base();
   var { resolveImage } = require_DataResolver();
   var Events = require_Events();
@@ -13765,7 +13727,7 @@ var require_DataResolver = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/MessageFlagsBitField.js
 var require_MessageFlagsBitField = __commonJS((exports, module) => {
-  var { MessageFlags } = require_v1012();
+  var { MessageFlags } = require_v106();
   var BitField = require_BitField();
 
   class MessageFlagsBitField extends BitField {
@@ -13779,7 +13741,7 @@ var require_BaseInteraction = __commonJS((exports, module) => {
   var { deprecate } = __require("util");
   var { Collection } = require_dist6();
   var { DiscordSnowflake } = require_cjs();
-  var { InteractionType, ApplicationCommandType, ComponentType } = require_v1012();
+  var { InteractionType, ApplicationCommandType, ComponentType } = require_v106();
   var Base = require_Base();
   var { SelectMenuTypes } = require_Constants();
   var PermissionsBitField = require_PermissionsBitField();
@@ -13992,7 +13954,7 @@ var require_Team = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/ApplicationCommandPermissionsManager.js
 var require_ApplicationCommandPermissionsManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { ApplicationCommandPermissionType, RESTJSONErrorCodes, Routes } = require_v1012();
+  var { ApplicationCommandPermissionType, RESTJSONErrorCodes, Routes } = require_v106();
   var BaseManager = require_BaseManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -14230,7 +14192,7 @@ var require_fast_deep_equal = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/ApplicationCommand.js
 var require_ApplicationCommand = __commonJS((exports, module) => {
   var { DiscordSnowflake } = require_cjs();
-  var { ApplicationCommandOptionType } = require_v1012();
+  var { ApplicationCommandOptionType } = require_v106();
   var isEqual = require_fast_deep_equal();
   var Base = require_Base();
   var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
@@ -14450,7 +14412,7 @@ var require_ApplicationCommandManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { isJSONEncodable } = require_dist();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var ApplicationCommandPermissionsManager = require_ApplicationCommandPermissionsManager();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -14608,7 +14570,7 @@ var require_ApplicationEmoji = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/ApplicationEmojiManager.js
 var require_ApplicationEmojiManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var ApplicationEmoji = require_ApplicationEmoji();
@@ -14763,7 +14725,7 @@ var require_Entitlement = __commonJS((exports) => {
 var require_EntitlementManager = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes, EntitlementOwnerType } = require_v1012();
+  var { Routes, EntitlementOwnerType } = require_v106();
   var CachedManager = require_CachedManager();
   var { ErrorCodes, DiscordjsTypeError } = require_errors();
   var { Entitlement } = require_Entitlement();
@@ -14890,7 +14852,7 @@ var require_Subscription = __commonJS((exports) => {
 var require_SubscriptionManager = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Subscription } = require_Subscription();
@@ -14927,7 +14889,7 @@ var require_SubscriptionManager = __commonJS((exports) => {
 
 // node_modules/discord.js/src/util/ApplicationFlagsBitField.js
 var require_ApplicationFlagsBitField = __commonJS((exports, module) => {
-  var { ApplicationFlags } = require_v1012();
+  var { ApplicationFlags } = require_v106();
   var BitField = require_BitField();
 
   class ApplicationFlagsBitField extends BitField {
@@ -14939,7 +14901,7 @@ var require_ApplicationFlagsBitField = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/ClientApplication.js
 var require_ClientApplication = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var { ApplicationRoleConnectionMetadata } = require_ApplicationRoleConnectionMetadata();
   var { SKU } = require_SKU();
   var Team = require_Team();
@@ -19708,7 +19670,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredSelectMenuParameters: () => validateRequiredSelectMenuParameters
   });
   var import_shapeshift2 = require_cjs3();
-  var import_v10 = require_v1012();
+  var import_v10 = require_v106();
   var StringSelectMenuOptionBuilder = class {
     constructor(data = {}) {
       this.data = data;
@@ -19809,7 +19771,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   }
   __name(validateRequiredButtonParameters, "validateRequiredButtonParameters");
-  var import_v1024 = require_v1012();
+  var import_v1024 = require_v106();
   var ComponentBuilder = class {
     static {
       __name(this, "ComponentBuilder");
@@ -19827,8 +19789,8 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1023 = require_v1012();
-  var import_v102 = require_v1012();
+  var import_v1023 = require_v106();
+  var import_v102 = require_v106();
   var ButtonBuilder = class extends ComponentBuilder {
     static {
       __name(this, "ButtonBuilder");
@@ -19871,13 +19833,13 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v104 = require_v1012();
+  var import_v104 = require_v106();
   var Assertions_exports3 = {};
   __export(Assertions_exports3, {
     fileUploadPredicate: () => fileUploadPredicate
   });
   var import_shapeshift3 = require_cjs3();
-  var import_v103 = require_v1012();
+  var import_v103 = require_v106();
   var fileUploadPredicate = import_shapeshift3.s.object({
     type: import_shapeshift3.s.literal(import_v103.ComponentType.FileUpload),
     id: idValidator.optional(),
@@ -19922,8 +19884,8 @@ var require_dist8 = __commonJS((exports, module) => {
       return this.data;
     }
   };
-  var import_v1014 = require_v1012();
-  var import_v106 = require_v1012();
+  var import_v1014 = require_v106();
+  var import_v106 = require_v106();
   var Assertions_exports4 = {};
   __export(Assertions_exports4, {
     labelValidator: () => labelValidator,
@@ -19937,7 +19899,7 @@ var require_dist8 = __commonJS((exports, module) => {
     valueValidator: () => valueValidator
   });
   var import_shapeshift4 = require_cjs3();
-  var import_v105 = require_v1012();
+  var import_v105 = require_v106();
   var textInputStyleValidator = import_shapeshift4.s.nativeEnum(import_v105.TextInputStyle).setValidationEnabled(isValidationEnabled);
   var minLengthValidator = import_shapeshift4.s.number().int().greaterThanOrEqual(0).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
   var maxLengthValidator = import_shapeshift4.s.number().int().greaterThanOrEqual(1).lessThanOrEqual(4000).setValidationEnabled(isValidationEnabled);
@@ -20041,7 +20003,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v107 = require_v1012();
+  var import_v107 = require_v106();
   var MentionableSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "MentionableSelectMenuBuilder");
@@ -20083,7 +20045,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v108 = require_v1012();
+  var import_v108 = require_v106();
   var RoleSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "RoleSelectMenuBuilder");
@@ -20111,7 +20073,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v109 = require_v1012();
+  var import_v109 = require_v106();
   var StringSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "StringSelectMenuBuilder");
@@ -20147,7 +20109,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1010 = require_v1012();
+  var import_v1010 = require_v106();
   var UserSelectMenuBuilder = class extends BaseSelectMenuBuilder {
     static {
       __name(this, "UserSelectMenuBuilder");
@@ -20176,7 +20138,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_util = require_dist();
-  var import_v1011 = require_v1012();
+  var import_v1011 = require_v106();
   var import_fast_deep_equal = __toESM2(require_fast_deep_equal());
   var TextInputBuilder = class extends ComponentBuilder {
     static {
@@ -20235,9 +20197,9 @@ var require_dist8 = __commonJS((exports, module) => {
     labelPredicate: () => labelPredicate
   });
   var import_shapeshift6 = require_cjs3();
-  var import_v1013 = require_v1012();
+  var import_v1013 = require_v106();
   var import_shapeshift5 = require_cjs3();
-  var import_v1012 = require_v1012();
+  var import_v1012 = require_v106();
   var selectMenuBasePredicate = import_shapeshift5.s.object({
     id: idValidator.optional(),
     placeholder: import_shapeshift5.s.string().lengthLessThanOrEqual(150).optional(),
@@ -20364,7 +20326,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return data;
     }
   };
-  var import_v1020 = require_v1012();
+  var import_v1020 = require_v106();
   var Assertions_exports6 = {};
   __export(Assertions_exports6, {
     accessoryPredicate: () => accessoryPredicate,
@@ -20380,8 +20342,8 @@ var require_dist8 = __commonJS((exports, module) => {
     validateComponentArray: () => validateComponentArray
   });
   var import_shapeshift7 = require_cjs3();
-  var import_v1016 = require_v1012();
-  var import_v1015 = require_v1012();
+  var import_v1016 = require_v106();
+  var import_v1015 = require_v106();
   var ThumbnailBuilder = class extends ComponentBuilder {
     static {
       __name(this, "ThumbnailBuilder");
@@ -20435,7 +20397,7 @@ var require_dist8 = __commonJS((exports, module) => {
     (ExpectedInstanceOf ? import_shapeshift7.s.instance(ExpectedInstanceOf) : import_shapeshift7.s.instance(ComponentBuilder)).array().lengthGreaterThanOrEqual(min).lengthLessThanOrEqual(max).setValidationEnabled(isValidationEnabled).parse(input);
   }
   __name(validateComponentArray, "validateComponentArray");
-  var import_v1017 = require_v1012();
+  var import_v1017 = require_v106();
   var FileBuilder = class extends ComponentBuilder {
     static {
       __name(this, "FileBuilder");
@@ -20456,7 +20418,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data, file: { ...this.data.file } };
     }
   };
-  var import_v1018 = require_v1012();
+  var import_v1018 = require_v106();
   var SeparatorBuilder = class extends ComponentBuilder {
     static {
       __name(this, "SeparatorBuilder");
@@ -20483,7 +20445,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this.data };
     }
   };
-  var import_v1019 = require_v1012();
+  var import_v1019 = require_v106();
   var TextDisplayBuilder = class extends ComponentBuilder {
     static {
       __name(this, "TextDisplayBuilder");
@@ -20565,7 +20527,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1021 = require_v1012();
+  var import_v1021 = require_v106();
   var MediaGalleryItemBuilder = class {
     static {
       __name(this, "MediaGalleryItemBuilder");
@@ -20628,7 +20590,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1022 = require_v1012();
+  var import_v1022 = require_v106();
   var SectionBuilder = class extends ComponentBuilder {
     static {
       __name(this, "SectionBuilder");
@@ -20755,7 +20717,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1025 = require_v1012();
+  var import_v1025 = require_v106();
   var Assertions_exports7 = {};
   __export(Assertions_exports7, {
     componentsValidator: () => componentsValidator,
@@ -20875,7 +20837,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateRequiredParameters: () => validateRequiredParameters3
   });
   var import_shapeshift9 = require_cjs3();
-  var import_v1026 = require_v1012();
+  var import_v1026 = require_v106();
   var namePredicate = import_shapeshift9.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u).setValidationEnabled(isValidationEnabled);
   function validateName(name) {
     namePredicate.parse(name);
@@ -21013,7 +20975,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1027 = require_v1012();
+  var import_v1027 = require_v106();
   var SharedSlashCommand = class {
     static {
       __name(this, "SharedSlashCommand");
@@ -21068,7 +21030,7 @@ var require_dist8 = __commonJS((exports, module) => {
       };
     }
   };
-  var import_v1028 = require_v1012();
+  var import_v1028 = require_v106();
   var ApplicationCommandOptionBase = class extends SharedNameAndDescription {
     static {
       __name(this, "ApplicationCommandOptionBase");
@@ -21096,7 +21058,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this };
     }
   };
-  var import_v1029 = require_v1012();
+  var import_v1029 = require_v106();
   var SlashCommandBooleanOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandBooleanOption");
@@ -21107,10 +21069,10 @@ var require_dist8 = __commonJS((exports, module) => {
       return { ...this };
     }
   };
-  var import_v1031 = require_v1012();
+  var import_v1031 = require_v106();
   var import_ts_mixer = require_cjs4();
   var import_shapeshift10 = require_cjs3();
-  var import_v1030 = require_v1012();
+  var import_v1030 = require_v106();
   var allowedChannelTypes = [
     import_v1030.ChannelType.GuildText,
     import_v1030.ChannelType.GuildVoice,
@@ -21149,7 +21111,7 @@ var require_dist8 = __commonJS((exports, module) => {
     (0, import_ts_mixer.mix)(ApplicationCommandOptionChannelTypesMixin)
   ], SlashCommandChannelOption);
   var import_shapeshift13 = require_cjs3();
-  var import_v1033 = require_v1012();
+  var import_v1033 = require_v106();
   var import_ts_mixer2 = require_cjs4();
   var ApplicationCommandNumericOptionMinMaxValueMixin = class {
     static {
@@ -21176,7 +21138,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_shapeshift12 = require_cjs3();
-  var import_v1032 = require_v1012();
+  var import_v1032 = require_v106();
   var stringPredicate = import_shapeshift12.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(100);
   var numberPredicate = import_shapeshift12.s.number().greaterThan(Number.NEGATIVE_INFINITY).lessThan(Number.POSITIVE_INFINITY);
   var choicesPredicate = import_shapeshift12.s.object({
@@ -21246,7 +21208,7 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandIntegerOption = __decorateClass([
     (0, import_ts_mixer2.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandIntegerOption);
-  var import_v1034 = require_v1012();
+  var import_v1034 = require_v106();
   var SlashCommandMentionableOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandMentionableOption");
@@ -21258,7 +21220,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_shapeshift14 = require_cjs3();
-  var import_v1035 = require_v1012();
+  var import_v1035 = require_v106();
   var import_ts_mixer3 = require_cjs4();
   var numberValidator2 = import_shapeshift14.s.number();
   var SlashCommandNumberOption = class extends ApplicationCommandOptionBase {
@@ -21285,7 +21247,7 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandNumberOption = __decorateClass([
     (0, import_ts_mixer3.mix)(ApplicationCommandNumericOptionMinMaxValueMixin, ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandNumberOption);
-  var import_v1036 = require_v1012();
+  var import_v1036 = require_v106();
   var SlashCommandRoleOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandRoleOption");
@@ -21297,7 +21259,7 @@ var require_dist8 = __commonJS((exports, module) => {
     }
   };
   var import_shapeshift15 = require_cjs3();
-  var import_v1037 = require_v1012();
+  var import_v1037 = require_v106();
   var import_ts_mixer4 = require_cjs4();
   var minLengthValidator2 = import_shapeshift15.s.number().greaterThanOrEqual(0).lessThanOrEqual(6000);
   var maxLengthValidator2 = import_shapeshift15.s.number().greaterThanOrEqual(1).lessThanOrEqual(6000);
@@ -21327,7 +21289,7 @@ var require_dist8 = __commonJS((exports, module) => {
   SlashCommandStringOption = __decorateClass([
     (0, import_ts_mixer4.mix)(ApplicationCommandOptionWithAutocompleteMixin, ApplicationCommandOptionWithChoicesMixin)
   ], SlashCommandStringOption);
-  var import_v1038 = require_v1012();
+  var import_v1038 = require_v106();
   var SlashCommandUserOption = class extends ApplicationCommandOptionBase {
     static {
       __name(this, "SlashCommandUserOption");
@@ -21379,7 +21341,7 @@ var require_dist8 = __commonJS((exports, module) => {
       return this;
     }
   };
-  var import_v1039 = require_v1012();
+  var import_v1039 = require_v106();
   var import_ts_mixer5 = require_cjs4();
   var SlashCommandSubcommandGroupBuilder = class {
     name = undefined;
@@ -21480,7 +21442,7 @@ var require_dist8 = __commonJS((exports, module) => {
     validateType: () => validateType
   });
   var import_shapeshift16 = require_cjs3();
-  var import_v1040 = require_v1012();
+  var import_v1040 = require_v106();
   var namePredicate2 = import_shapeshift16.s.string().lengthGreaterThanOrEqual(1).lengthLessThanOrEqual(32).regex(/\S/).setValidationEnabled(isValidationEnabled);
   var typePredicate = import_shapeshift16.s.union([import_shapeshift16.s.literal(import_v1040.ApplicationCommandType.User), import_shapeshift16.s.literal(import_v1040.ApplicationCommandType.Message)]).setValidationEnabled(isValidationEnabled);
   var booleanPredicate3 = import_shapeshift16.s.boolean();
@@ -21699,7 +21661,7 @@ var require_Embed = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/MessageMentions.js
 var require_MessageMentions = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { FormattingPatterns } = require_v1012();
+  var { FormattingPatterns } = require_v106();
   var { flatten } = require_Util();
 
   class MessageMentions {
@@ -21953,7 +21915,7 @@ var require_ReactionCollector = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/Sticker.js
 var require_Sticker = __commonJS((exports) => {
   var { DiscordSnowflake } = require_cjs();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var Base = require_Base();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var { StickerFormatExtensionMap } = require_Constants();
@@ -22156,7 +22118,7 @@ var require_GuildEmojiRoleManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/GuildEmoji.js
 var require_GuildEmoji = __commonJS((exports, module) => {
-  var { PermissionFlagsBits } = require_v1012();
+  var { PermissionFlagsBits } = require_v106();
   var BaseGuildEmoji = require_BaseGuildEmoji();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var GuildEmojiRoleManager = require_GuildEmojiRoleManager();
@@ -22236,7 +22198,7 @@ var require_ReactionEmoji = __commonJS((exports, module) => {
 var require_ReactionUserManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { ReactionType, Routes } = require_v1012();
+  var { ReactionType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var User = require_User();
@@ -22273,7 +22235,7 @@ var require_ReactionUserManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/MessageReaction.js
 var require_MessageReaction = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var ApplicationEmoji = require_ApplicationEmoji();
   var GuildEmoji = require_GuildEmoji();
   var ReactionEmoji = require_ReactionEmoji();
@@ -22395,7 +22357,7 @@ var require_MessageReaction = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/ReactionManager.js
 var require_ReactionManager = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var MessageReaction = require_MessageReaction();
 
@@ -22787,7 +22749,7 @@ var require_SectionComponent = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/SeparatorComponent.js
 var require_SeparatorComponent = __commonJS((exports, module) => {
-  var { SeparatorSpacingSize } = require_v1012();
+  var { SeparatorSpacingSize } = require_v106();
   var Component = require_Component();
 
   class SeparatorComponent extends Component {
@@ -22952,7 +22914,7 @@ var require_UserSelectMenuComponent = __commonJS((exports, module) => {
 // node_modules/discord.js/src/util/Components.js
 var require_Components = __commonJS((exports, module) => {
   var { ComponentBuilder } = require_dist8();
-  var { ComponentType } = require_v1012();
+  var { ComponentType } = require_v106();
   function createComponent(data) {
     return data instanceof Component ? data : new (ComponentTypeToComponent[data.type] ?? Component)(data);
   }
@@ -23042,7 +23004,7 @@ var require_Message = __commonJS((exports) => {
     MessageFlags,
     PermissionFlagsBits,
     MessageReferenceType
-  } = require_v1012();
+  } = require_v106();
   var Attachment = require_Attachment();
   var Base = require_Base();
   var ClientApplication = require_ClientApplication();
@@ -23536,7 +23498,7 @@ var require_Webhook = __commonJS((exports, module) => {
   var { makeURLSearchParams } = require_dist5();
   var { lazy } = require_dist();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes, WebhookType } = require_v1012();
+  var { Routes, WebhookType } = require_v106();
   var MessagePayload = require_MessagePayload();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var { resolveImage } = require_DataResolver();
@@ -23783,7 +23745,7 @@ var require_WebhookClient = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/VoiceState.js
 var require_VoiceState = __commonJS((exports, module) => {
-  var { ChannelType, Routes } = require_v1012();
+  var { ChannelType, Routes } = require_v106();
   var Base = require_Base();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -23920,7 +23882,7 @@ var require_VoiceState = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildMemberRoleManager.js
 var require_GuildMemberRoleManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var DataManager = require_DataManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Role } = require_Role();
@@ -24025,7 +23987,7 @@ var require_GuildMemberRoleManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/GuildMemberFlagsBitField.js
 var require_GuildMemberFlagsBitField = __commonJS((exports) => {
-  var { GuildMemberFlags } = require_v1012();
+  var { GuildMemberFlags } = require_v106();
   var BitField = require_BitField();
 
   class GuildMemberFlagsBitField extends BitField {
@@ -24036,7 +23998,7 @@ var require_GuildMemberFlagsBitField = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/GuildMember.js
 var require_GuildMember = __commonJS((exports) => {
-  var { PermissionFlagsBits } = require_v1012();
+  var { PermissionFlagsBits } = require_v106();
   var Base = require_Base();
   var VoiceState = require_VoiceState();
   var TextBasedChannel = require_TextBasedChannel();
@@ -24262,7 +24224,7 @@ var require_MessageManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Message } = require_Message();
@@ -24421,7 +24383,7 @@ var require_MessagePayload = __commonJS((exports, module) => {
   var { Buffer: Buffer2 } = __require("buffer");
   var { lazy, isJSONEncodable } = require_dist();
   var { DiscordSnowflake } = require_cjs();
-  var { MessageFlags, MessageReferenceType } = require_v1012();
+  var { MessageFlags, MessageReferenceType } = require_v106();
   var { DiscordjsError, DiscordjsRangeError, ErrorCodes } = require_errors();
   var { resolveFile } = require_DataResolver();
   var MessageFlagsBitField = require_MessageFlagsBitField();
@@ -24635,7 +24597,7 @@ var require_GuildMessageManager = __commonJS((exports, module) => {
 var require_TextBasedChannel = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { DiscordSnowflake } = require_cjs();
-  var { InteractionType, Routes } = require_v1012();
+  var { InteractionType, Routes } = require_v106();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var { MaxBulkDeletableMessageAge } = require_Constants();
   var InteractionCollector = require_InteractionCollector();
@@ -24765,7 +24727,7 @@ var require_TextBasedChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/UserFlagsBitField.js
 var require_UserFlagsBitField = __commonJS((exports, module) => {
-  var { UserFlags } = require_v1012();
+  var { UserFlags } = require_v106();
   var BitField = require_BitField();
 
   class UserFlagsBitField extends BitField {
@@ -24964,7 +24926,7 @@ var require_User = __commonJS((exports, module) => {
 var require_PollAnswerVoterManager = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var User = require_User();
 
@@ -25465,7 +25427,7 @@ var require_DMMessageManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/DMChannel.js
 var require_DMChannel = __commonJS((exports, module) => {
   var { userMention } = require_dist7();
-  var { ChannelType } = require_v1012();
+  var { ChannelType } = require_v106();
   var { BaseChannel } = require_BaseChannel();
   var TextBasedChannel = require_TextBasedChannel();
   var DMMessageManager = require_DMMessageManager();
@@ -25528,7 +25490,7 @@ var require_DMChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildForumThreadManager.js
 var require_GuildForumThreadManager = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var ThreadManager = require_ThreadManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var MessagePayload = require_MessagePayload();
@@ -25662,7 +25624,7 @@ var require_ThreadOnlyChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/ThreadMemberFlagsBitField.js
 var require_ThreadMemberFlagsBitField = __commonJS((exports, module) => {
-  var { ThreadMemberFlags } = require_v1012();
+  var { ThreadMemberFlags } = require_v106();
   var BitField = require_BitField();
 
   class ThreadMemberFlagsBitField extends BitField {
@@ -25728,7 +25690,7 @@ var require_ThreadMemberManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var ThreadMember = require_ThreadMember();
@@ -25828,7 +25790,7 @@ var require_ThreadMemberManager = __commonJS((exports, module) => {
 var require_ThreadChannel = __commonJS((exports, module) => {
   var { DiscordAPIError } = require_dist5();
   var { lazy } = require_dist();
-  var { RESTJSONErrorCodes, ChannelFlags, ChannelType, PermissionFlagsBits, Routes } = require_v1012();
+  var { RESTJSONErrorCodes, ChannelFlags, ChannelType, PermissionFlagsBits, Routes } = require_v106();
   var { BaseChannel } = require_BaseChannel();
   var getThreadOnlyChannel = lazy(() => require_ThreadOnlyChannel());
   var TextBasedChannel = require_TextBasedChannel();
@@ -26064,7 +26026,7 @@ var require_ThreadChannel = __commonJS((exports, module) => {
 var require_ThreadManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var ThreadChannel = require_ThreadChannel();
@@ -26150,7 +26112,7 @@ var require_ThreadManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/GuildTextThreadManager.js
 var require_GuildTextThreadManager = __commonJS((exports, module) => {
-  var { ChannelType, Routes } = require_v1012();
+  var { ChannelType, Routes } = require_v106();
   var ThreadManager = require_ThreadManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -26266,7 +26228,7 @@ var require_BaseGuildTextChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/NewsChannel.js
 var require_NewsChannel = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var BaseGuildTextChannel = require_BaseGuildTextChannel();
   var { DiscordjsError, ErrorCodes } = require_errors();
 
@@ -26285,7 +26247,7 @@ var require_NewsChannel = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/BaseGuildVoiceChannel.js
 var require_BaseGuildVoiceChannel = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { PermissionFlagsBits } = require_v1012();
+  var { PermissionFlagsBits } = require_v106();
   var GuildChannel = require_GuildChannel();
   var TextBasedChannel = require_TextBasedChannel();
   var GuildMessageManager = require_GuildMessageManager();
@@ -26428,7 +26390,7 @@ var require_TextChannel = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/VoiceChannel.js
 var require_VoiceChannel = __commonJS((exports, module) => {
-  var { PermissionFlagsBits, Routes } = require_v1012();
+  var { PermissionFlagsBits, Routes } = require_v106();
   var BaseGuildVoiceChannel = require_BaseGuildVoiceChannel();
 
   class VoiceChannel extends BaseGuildVoiceChannel {
@@ -26579,7 +26541,7 @@ var require_MediaChannel = __commonJS((exports, module) => {
 // node_modules/discord.js/src/util/Channels.js
 var require_Channels = __commonJS((exports, module) => {
   var { lazy } = require_dist();
-  var { ChannelType } = require_v1012();
+  var { ChannelType } = require_v106();
   var getCategoryChannel = lazy(() => require_CategoryChannel());
   var getDMChannel = lazy(() => require_DMChannel());
   var getNewsChannel = lazy(() => require_NewsChannel());
@@ -26923,7 +26885,7 @@ var require_GuildOnboardingPrompt = __commonJS((exports) => {
 
 // node_modules/discord.js/src/structures/Integration.js
 var require_Integration = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var Base = require_Base();
   var IntegrationApplication = require_IntegrationApplication();
 
@@ -27085,7 +27047,7 @@ var require_StageInstance = __commonJS((exports) => {
 // node_modules/discord.js/src/structures/GuildAuditLogsEntry.js
 var require_GuildAuditLogsEntry = __commonJS((exports, module) => {
   var { DiscordSnowflake } = require_cjs();
-  var { AuditLogOptionsType, AuditLogEvent } = require_v1012();
+  var { AuditLogOptionsType, AuditLogEvent } = require_v106();
   var AutoModerationRule = require_AutoModerationRule();
   var { GuildOnboardingPrompt } = require_GuildOnboardingPrompt();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
@@ -28037,7 +27999,7 @@ var require_GuildUpdate = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/CommandInteractionOptionResolver.js
 var require_CommandInteractionOptionResolver = __commonJS((exports, module) => {
-  var { ApplicationCommandOptionType } = require_v1012();
+  var { ApplicationCommandOptionType } = require_v106();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
   class CommandInteractionOptionResolver {
@@ -28150,7 +28112,7 @@ var require_CommandInteractionOptionResolver = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/AutocompleteInteraction.js
 var require_AutocompleteInteraction = __commonJS((exports, module) => {
-  var { InteractionResponseType, Routes } = require_v1012();
+  var { InteractionResponseType, Routes } = require_v106();
   var BaseInteraction = require_BaseInteraction();
   var CommandInteractionOptionResolver = require_CommandInteractionOptionResolver();
   var { DiscordjsError, ErrorCodes } = require_errors();
@@ -28252,7 +28214,7 @@ var require_InteractionCallbackResponse = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/InteractionResponse.js
 var require_InteractionResponse = __commonJS((exports, module) => {
   var { DiscordSnowflake } = require_cjs();
-  var { InteractionType } = require_v1012();
+  var { InteractionType } = require_v106();
   var { DiscordjsError, ErrorCodes } = require_errors();
 
   class InteractionResponse {
@@ -28307,7 +28269,7 @@ var require_InteractionResponses = __commonJS((exports, module) => {
   var { deprecate } = __require("util");
   var { makeURLSearchParams } = require_dist5();
   var { isJSONEncodable } = require_dist();
-  var { InteractionResponseType, MessageFlags, Routes, InteractionType } = require_v1012();
+  var { InteractionResponseType, MessageFlags, Routes, InteractionType } = require_v106();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var MessageFlagsBitField = require_MessageFlagsBitField();
   var InteractionCallbackResponse = require_InteractionCallbackResponse();
@@ -28735,7 +28697,7 @@ var require_MentionableSelectMenuInteraction = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/ContextMenuCommandInteraction.js
 var require_ContextMenuCommandInteraction = __commonJS((exports, module) => {
   var { lazy } = require_dist();
-  var { ApplicationCommandOptionType } = require_v1012();
+  var { ApplicationCommandOptionType } = require_v106();
   var CommandInteraction = require_CommandInteraction();
   var CommandInteractionOptionResolver = require_CommandInteractionOptionResolver();
   var { transformResolved } = require_Util();
@@ -28781,7 +28743,7 @@ var require_MessageContextMenuCommandInteraction = __commonJS((exports, module) 
 // node_modules/discord.js/src/structures/ModalSubmitFields.js
 var require_ModalSubmitFields = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { ComponentType } = require_v1012();
+  var { ComponentType } = require_v106();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
   class ModalSubmitFields {
@@ -29074,7 +29036,7 @@ var require_UserSelectMenuInteraction = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/client/actions/InteractionCreate.js
 var require_InteractionCreate = __commonJS((exports, module) => {
-  var { InteractionType, ComponentType, ApplicationCommandType } = require_v1012();
+  var { InteractionType, ComponentType, ApplicationCommandType } = require_v106();
   var Action = require_Action();
   var AutocompleteInteraction = require_AutocompleteInteraction();
   var ButtonInteraction = require_ButtonInteraction();
@@ -30436,2467 +30398,6 @@ var require_dist9 = __commonJS((exports, module) => {
   var version = "2.1.1";
 });
 
-// node_modules/@discordjs/ws/node_modules/discord-api-types/gateway/v10.js
-var require_v1013 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.VoiceChannelEffectSendAnimationType = exports.GatewayDispatchEvents = exports.GatewayIntentBits = exports.GatewayCloseCodes = exports.GatewayOpcodes = exports.GatewayVersion = undefined;
-  exports.GatewayVersion = "10";
-  var GatewayOpcodes;
-  (function(GatewayOpcodes2) {
-    GatewayOpcodes2[GatewayOpcodes2["Dispatch"] = 0] = "Dispatch";
-    GatewayOpcodes2[GatewayOpcodes2["Heartbeat"] = 1] = "Heartbeat";
-    GatewayOpcodes2[GatewayOpcodes2["Identify"] = 2] = "Identify";
-    GatewayOpcodes2[GatewayOpcodes2["PresenceUpdate"] = 3] = "PresenceUpdate";
-    GatewayOpcodes2[GatewayOpcodes2["VoiceStateUpdate"] = 4] = "VoiceStateUpdate";
-    GatewayOpcodes2[GatewayOpcodes2["Resume"] = 6] = "Resume";
-    GatewayOpcodes2[GatewayOpcodes2["Reconnect"] = 7] = "Reconnect";
-    GatewayOpcodes2[GatewayOpcodes2["RequestGuildMembers"] = 8] = "RequestGuildMembers";
-    GatewayOpcodes2[GatewayOpcodes2["InvalidSession"] = 9] = "InvalidSession";
-    GatewayOpcodes2[GatewayOpcodes2["Hello"] = 10] = "Hello";
-    GatewayOpcodes2[GatewayOpcodes2["HeartbeatAck"] = 11] = "HeartbeatAck";
-    GatewayOpcodes2[GatewayOpcodes2["RequestSoundboardSounds"] = 31] = "RequestSoundboardSounds";
-  })(GatewayOpcodes || (exports.GatewayOpcodes = GatewayOpcodes = {}));
-  var GatewayCloseCodes;
-  (function(GatewayCloseCodes2) {
-    GatewayCloseCodes2[GatewayCloseCodes2["UnknownError"] = 4000] = "UnknownError";
-    GatewayCloseCodes2[GatewayCloseCodes2["UnknownOpcode"] = 4001] = "UnknownOpcode";
-    GatewayCloseCodes2[GatewayCloseCodes2["DecodeError"] = 4002] = "DecodeError";
-    GatewayCloseCodes2[GatewayCloseCodes2["NotAuthenticated"] = 4003] = "NotAuthenticated";
-    GatewayCloseCodes2[GatewayCloseCodes2["AuthenticationFailed"] = 4004] = "AuthenticationFailed";
-    GatewayCloseCodes2[GatewayCloseCodes2["AlreadyAuthenticated"] = 4005] = "AlreadyAuthenticated";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidSeq"] = 4007] = "InvalidSeq";
-    GatewayCloseCodes2[GatewayCloseCodes2["RateLimited"] = 4008] = "RateLimited";
-    GatewayCloseCodes2[GatewayCloseCodes2["SessionTimedOut"] = 4009] = "SessionTimedOut";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidShard"] = 4010] = "InvalidShard";
-    GatewayCloseCodes2[GatewayCloseCodes2["ShardingRequired"] = 4011] = "ShardingRequired";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidAPIVersion"] = 4012] = "InvalidAPIVersion";
-    GatewayCloseCodes2[GatewayCloseCodes2["InvalidIntents"] = 4013] = "InvalidIntents";
-    GatewayCloseCodes2[GatewayCloseCodes2["DisallowedIntents"] = 4014] = "DisallowedIntents";
-  })(GatewayCloseCodes || (exports.GatewayCloseCodes = GatewayCloseCodes = {}));
-  var GatewayIntentBits;
-  (function(GatewayIntentBits2) {
-    GatewayIntentBits2[GatewayIntentBits2["Guilds"] = 1] = "Guilds";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMembers"] = 2] = "GuildMembers";
-    GatewayIntentBits2[GatewayIntentBits2["GuildModeration"] = 4] = "GuildModeration";
-    GatewayIntentBits2[GatewayIntentBits2["GuildBans"] = 4] = "GuildBans";
-    GatewayIntentBits2[GatewayIntentBits2["GuildExpressions"] = 8] = "GuildExpressions";
-    GatewayIntentBits2[GatewayIntentBits2["GuildEmojisAndStickers"] = 8] = "GuildEmojisAndStickers";
-    GatewayIntentBits2[GatewayIntentBits2["GuildIntegrations"] = 16] = "GuildIntegrations";
-    GatewayIntentBits2[GatewayIntentBits2["GuildWebhooks"] = 32] = "GuildWebhooks";
-    GatewayIntentBits2[GatewayIntentBits2["GuildInvites"] = 64] = "GuildInvites";
-    GatewayIntentBits2[GatewayIntentBits2["GuildVoiceStates"] = 128] = "GuildVoiceStates";
-    GatewayIntentBits2[GatewayIntentBits2["GuildPresences"] = 256] = "GuildPresences";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessages"] = 512] = "GuildMessages";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessageReactions"] = 1024] = "GuildMessageReactions";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessageTyping"] = 2048] = "GuildMessageTyping";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessages"] = 4096] = "DirectMessages";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessageReactions"] = 8192] = "DirectMessageReactions";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessageTyping"] = 16384] = "DirectMessageTyping";
-    GatewayIntentBits2[GatewayIntentBits2["MessageContent"] = 32768] = "MessageContent";
-    GatewayIntentBits2[GatewayIntentBits2["GuildScheduledEvents"] = 65536] = "GuildScheduledEvents";
-    GatewayIntentBits2[GatewayIntentBits2["AutoModerationConfiguration"] = 1048576] = "AutoModerationConfiguration";
-    GatewayIntentBits2[GatewayIntentBits2["AutoModerationExecution"] = 2097152] = "AutoModerationExecution";
-    GatewayIntentBits2[GatewayIntentBits2["GuildMessagePolls"] = 16777216] = "GuildMessagePolls";
-    GatewayIntentBits2[GatewayIntentBits2["DirectMessagePolls"] = 33554432] = "DirectMessagePolls";
-  })(GatewayIntentBits || (exports.GatewayIntentBits = GatewayIntentBits = {}));
-  var GatewayDispatchEvents;
-  (function(GatewayDispatchEvents2) {
-    GatewayDispatchEvents2["ApplicationCommandPermissionsUpdate"] = "APPLICATION_COMMAND_PERMISSIONS_UPDATE";
-    GatewayDispatchEvents2["AutoModerationActionExecution"] = "AUTO_MODERATION_ACTION_EXECUTION";
-    GatewayDispatchEvents2["AutoModerationRuleCreate"] = "AUTO_MODERATION_RULE_CREATE";
-    GatewayDispatchEvents2["AutoModerationRuleDelete"] = "AUTO_MODERATION_RULE_DELETE";
-    GatewayDispatchEvents2["AutoModerationRuleUpdate"] = "AUTO_MODERATION_RULE_UPDATE";
-    GatewayDispatchEvents2["ChannelCreate"] = "CHANNEL_CREATE";
-    GatewayDispatchEvents2["ChannelDelete"] = "CHANNEL_DELETE";
-    GatewayDispatchEvents2["ChannelPinsUpdate"] = "CHANNEL_PINS_UPDATE";
-    GatewayDispatchEvents2["ChannelUpdate"] = "CHANNEL_UPDATE";
-    GatewayDispatchEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    GatewayDispatchEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
-    GatewayDispatchEvents2["EntitlementUpdate"] = "ENTITLEMENT_UPDATE";
-    GatewayDispatchEvents2["GuildAuditLogEntryCreate"] = "GUILD_AUDIT_LOG_ENTRY_CREATE";
-    GatewayDispatchEvents2["GuildBanAdd"] = "GUILD_BAN_ADD";
-    GatewayDispatchEvents2["GuildBanRemove"] = "GUILD_BAN_REMOVE";
-    GatewayDispatchEvents2["GuildCreate"] = "GUILD_CREATE";
-    GatewayDispatchEvents2["GuildDelete"] = "GUILD_DELETE";
-    GatewayDispatchEvents2["GuildEmojisUpdate"] = "GUILD_EMOJIS_UPDATE";
-    GatewayDispatchEvents2["GuildIntegrationsUpdate"] = "GUILD_INTEGRATIONS_UPDATE";
-    GatewayDispatchEvents2["GuildMemberAdd"] = "GUILD_MEMBER_ADD";
-    GatewayDispatchEvents2["GuildMemberRemove"] = "GUILD_MEMBER_REMOVE";
-    GatewayDispatchEvents2["GuildMembersChunk"] = "GUILD_MEMBERS_CHUNK";
-    GatewayDispatchEvents2["GuildMemberUpdate"] = "GUILD_MEMBER_UPDATE";
-    GatewayDispatchEvents2["GuildRoleCreate"] = "GUILD_ROLE_CREATE";
-    GatewayDispatchEvents2["GuildRoleDelete"] = "GUILD_ROLE_DELETE";
-    GatewayDispatchEvents2["GuildRoleUpdate"] = "GUILD_ROLE_UPDATE";
-    GatewayDispatchEvents2["GuildScheduledEventCreate"] = "GUILD_SCHEDULED_EVENT_CREATE";
-    GatewayDispatchEvents2["GuildScheduledEventDelete"] = "GUILD_SCHEDULED_EVENT_DELETE";
-    GatewayDispatchEvents2["GuildScheduledEventUpdate"] = "GUILD_SCHEDULED_EVENT_UPDATE";
-    GatewayDispatchEvents2["GuildScheduledEventUserAdd"] = "GUILD_SCHEDULED_EVENT_USER_ADD";
-    GatewayDispatchEvents2["GuildScheduledEventUserRemove"] = "GUILD_SCHEDULED_EVENT_USER_REMOVE";
-    GatewayDispatchEvents2["GuildSoundboardSoundCreate"] = "GUILD_SOUNDBOARD_SOUND_CREATE";
-    GatewayDispatchEvents2["GuildSoundboardSoundDelete"] = "GUILD_SOUNDBOARD_SOUND_DELETE";
-    GatewayDispatchEvents2["GuildSoundboardSoundsUpdate"] = "GUILD_SOUNDBOARD_SOUNDS_UPDATE";
-    GatewayDispatchEvents2["GuildSoundboardSoundUpdate"] = "GUILD_SOUNDBOARD_SOUND_UPDATE";
-    GatewayDispatchEvents2["SoundboardSounds"] = "SOUNDBOARD_SOUNDS";
-    GatewayDispatchEvents2["GuildStickersUpdate"] = "GUILD_STICKERS_UPDATE";
-    GatewayDispatchEvents2["GuildUpdate"] = "GUILD_UPDATE";
-    GatewayDispatchEvents2["IntegrationCreate"] = "INTEGRATION_CREATE";
-    GatewayDispatchEvents2["IntegrationDelete"] = "INTEGRATION_DELETE";
-    GatewayDispatchEvents2["IntegrationUpdate"] = "INTEGRATION_UPDATE";
-    GatewayDispatchEvents2["InteractionCreate"] = "INTERACTION_CREATE";
-    GatewayDispatchEvents2["InviteCreate"] = "INVITE_CREATE";
-    GatewayDispatchEvents2["InviteDelete"] = "INVITE_DELETE";
-    GatewayDispatchEvents2["MessageCreate"] = "MESSAGE_CREATE";
-    GatewayDispatchEvents2["MessageDelete"] = "MESSAGE_DELETE";
-    GatewayDispatchEvents2["MessageDeleteBulk"] = "MESSAGE_DELETE_BULK";
-    GatewayDispatchEvents2["MessagePollVoteAdd"] = "MESSAGE_POLL_VOTE_ADD";
-    GatewayDispatchEvents2["MessagePollVoteRemove"] = "MESSAGE_POLL_VOTE_REMOVE";
-    GatewayDispatchEvents2["MessageReactionAdd"] = "MESSAGE_REACTION_ADD";
-    GatewayDispatchEvents2["MessageReactionRemove"] = "MESSAGE_REACTION_REMOVE";
-    GatewayDispatchEvents2["MessageReactionRemoveAll"] = "MESSAGE_REACTION_REMOVE_ALL";
-    GatewayDispatchEvents2["MessageReactionRemoveEmoji"] = "MESSAGE_REACTION_REMOVE_EMOJI";
-    GatewayDispatchEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
-    GatewayDispatchEvents2["PresenceUpdate"] = "PRESENCE_UPDATE";
-    GatewayDispatchEvents2["Ready"] = "READY";
-    GatewayDispatchEvents2["Resumed"] = "RESUMED";
-    GatewayDispatchEvents2["StageInstanceCreate"] = "STAGE_INSTANCE_CREATE";
-    GatewayDispatchEvents2["StageInstanceDelete"] = "STAGE_INSTANCE_DELETE";
-    GatewayDispatchEvents2["StageInstanceUpdate"] = "STAGE_INSTANCE_UPDATE";
-    GatewayDispatchEvents2["SubscriptionCreate"] = "SUBSCRIPTION_CREATE";
-    GatewayDispatchEvents2["SubscriptionDelete"] = "SUBSCRIPTION_DELETE";
-    GatewayDispatchEvents2["SubscriptionUpdate"] = "SUBSCRIPTION_UPDATE";
-    GatewayDispatchEvents2["ThreadCreate"] = "THREAD_CREATE";
-    GatewayDispatchEvents2["ThreadDelete"] = "THREAD_DELETE";
-    GatewayDispatchEvents2["ThreadListSync"] = "THREAD_LIST_SYNC";
-    GatewayDispatchEvents2["ThreadMembersUpdate"] = "THREAD_MEMBERS_UPDATE";
-    GatewayDispatchEvents2["ThreadMemberUpdate"] = "THREAD_MEMBER_UPDATE";
-    GatewayDispatchEvents2["ThreadUpdate"] = "THREAD_UPDATE";
-    GatewayDispatchEvents2["TypingStart"] = "TYPING_START";
-    GatewayDispatchEvents2["UserUpdate"] = "USER_UPDATE";
-    GatewayDispatchEvents2["VoiceChannelEffectSend"] = "VOICE_CHANNEL_EFFECT_SEND";
-    GatewayDispatchEvents2["VoiceServerUpdate"] = "VOICE_SERVER_UPDATE";
-    GatewayDispatchEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
-    GatewayDispatchEvents2["WebhooksUpdate"] = "WEBHOOKS_UPDATE";
-  })(GatewayDispatchEvents || (exports.GatewayDispatchEvents = GatewayDispatchEvents = {}));
-  var VoiceChannelEffectSendAnimationType;
-  (function(VoiceChannelEffectSendAnimationType2) {
-    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Premium"] = 0] = "Premium";
-    VoiceChannelEffectSendAnimationType2[VoiceChannelEffectSendAnimationType2["Basic"] = 1] = "Basic";
-  })(VoiceChannelEffectSendAnimationType || (exports.VoiceChannelEffectSendAnimationType = VoiceChannelEffectSendAnimationType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/globals.js
-var require_globals3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.FormattingPatterns = undefined;
-  exports.FormattingPatterns = {
-    User: /<@(?<id>\d{17,20})>/,
-    UserWithNickname: /<@!(?<id>\d{17,20})>/,
-    UserWithOptionalNickname: /<@!?(?<id>\d{17,20})>/,
-    Channel: /<#(?<id>\d{17,20})>/,
-    Role: /<@&(?<id>\d{17,20})>/,
-    SlashCommand: /<\/(?<fullName>(?<name>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: (?<subcommandOrGroup>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?(?: (?<subcommand>[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32}))?):(?<id>\d{17,20})>/u,
-    Emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    AnimatedEmoji: /<(?<animated>a):(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    StaticEmoji: /<:(?<name>\w{2,32}):(?<id>\d{17,20})>/,
-    Timestamp: /<t:(?<timestamp>-?\d{1,13})(:(?<style>[DFRTdft]))?>/,
-    DefaultStyledTimestamp: /<t:(?<timestamp>-?\d{1,13})>/,
-    StyledTimestamp: /<t:(?<timestamp>-?\d{1,13}):(?<style>[DFRTdft])>/,
-    GuildNavigation: /<id:(?<type>customize|browse|guide|linked-roles)>/,
-    LinkedRole: /<id:linked-roles:(?<id>\d{17,20})>/
-  };
-  Object.freeze(exports.FormattingPatterns);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/common.js
-var require_common7 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.PermissionFlagsBits = undefined;
-  exports.PermissionFlagsBits = {
-    CreateInstantInvite: 1n << 0n,
-    KickMembers: 1n << 1n,
-    BanMembers: 1n << 2n,
-    Administrator: 1n << 3n,
-    ManageChannels: 1n << 4n,
-    ManageGuild: 1n << 5n,
-    AddReactions: 1n << 6n,
-    ViewAuditLog: 1n << 7n,
-    PrioritySpeaker: 1n << 8n,
-    Stream: 1n << 9n,
-    ViewChannel: 1n << 10n,
-    SendMessages: 1n << 11n,
-    SendTTSMessages: 1n << 12n,
-    ManageMessages: 1n << 13n,
-    EmbedLinks: 1n << 14n,
-    AttachFiles: 1n << 15n,
-    ReadMessageHistory: 1n << 16n,
-    MentionEveryone: 1n << 17n,
-    UseExternalEmojis: 1n << 18n,
-    ViewGuildInsights: 1n << 19n,
-    Connect: 1n << 20n,
-    Speak: 1n << 21n,
-    MuteMembers: 1n << 22n,
-    DeafenMembers: 1n << 23n,
-    MoveMembers: 1n << 24n,
-    UseVAD: 1n << 25n,
-    ChangeNickname: 1n << 26n,
-    ManageNicknames: 1n << 27n,
-    ManageRoles: 1n << 28n,
-    ManageWebhooks: 1n << 29n,
-    ManageEmojisAndStickers: 1n << 30n,
-    ManageGuildExpressions: 1n << 30n,
-    UseApplicationCommands: 1n << 31n,
-    RequestToSpeak: 1n << 32n,
-    ManageEvents: 1n << 33n,
-    ManageThreads: 1n << 34n,
-    CreatePublicThreads: 1n << 35n,
-    CreatePrivateThreads: 1n << 36n,
-    UseExternalStickers: 1n << 37n,
-    SendMessagesInThreads: 1n << 38n,
-    UseEmbeddedActivities: 1n << 39n,
-    ModerateMembers: 1n << 40n,
-    ViewCreatorMonetizationAnalytics: 1n << 41n,
-    UseSoundboard: 1n << 42n,
-    CreateGuildExpressions: 1n << 43n,
-    CreateEvents: 1n << 44n,
-    UseExternalSounds: 1n << 45n,
-    SendVoiceMessages: 1n << 46n,
-    SendPolls: 1n << 49n,
-    UseExternalApps: 1n << 50n,
-    PinMessages: 1n << 51n
-  };
-  Object.freeze(exports.PermissionFlagsBits);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/application.js
-var require_application3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ApplicationWebhookEventStatus = exports.ApplicationRoleConnectionMetadataType = exports.ApplicationFlags = undefined;
-  var ApplicationFlags;
-  (function(ApplicationFlags2) {
-    ApplicationFlags2[ApplicationFlags2["EmbeddedReleased"] = 2] = "EmbeddedReleased";
-    ApplicationFlags2[ApplicationFlags2["ManagedEmoji"] = 4] = "ManagedEmoji";
-    ApplicationFlags2[ApplicationFlags2["EmbeddedIAP"] = 8] = "EmbeddedIAP";
-    ApplicationFlags2[ApplicationFlags2["GroupDMCreate"] = 16] = "GroupDMCreate";
-    ApplicationFlags2[ApplicationFlags2["ApplicationAutoModerationRuleCreateBadge"] = 64] = "ApplicationAutoModerationRuleCreateBadge";
-    ApplicationFlags2[ApplicationFlags2["RPCHasConnected"] = 2048] = "RPCHasConnected";
-    ApplicationFlags2[ApplicationFlags2["GatewayPresence"] = 4096] = "GatewayPresence";
-    ApplicationFlags2[ApplicationFlags2["GatewayPresenceLimited"] = 8192] = "GatewayPresenceLimited";
-    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembers"] = 16384] = "GatewayGuildMembers";
-    ApplicationFlags2[ApplicationFlags2["GatewayGuildMembersLimited"] = 32768] = "GatewayGuildMembersLimited";
-    ApplicationFlags2[ApplicationFlags2["VerificationPendingGuildLimit"] = 65536] = "VerificationPendingGuildLimit";
-    ApplicationFlags2[ApplicationFlags2["Embedded"] = 131072] = "Embedded";
-    ApplicationFlags2[ApplicationFlags2["GatewayMessageContent"] = 262144] = "GatewayMessageContent";
-    ApplicationFlags2[ApplicationFlags2["GatewayMessageContentLimited"] = 524288] = "GatewayMessageContentLimited";
-    ApplicationFlags2[ApplicationFlags2["EmbeddedFirstParty"] = 1048576] = "EmbeddedFirstParty";
-    ApplicationFlags2[ApplicationFlags2["ApplicationCommandBadge"] = 8388608] = "ApplicationCommandBadge";
-  })(ApplicationFlags || (exports.ApplicationFlags = ApplicationFlags = {}));
-  var ApplicationRoleConnectionMetadataType;
-  (function(ApplicationRoleConnectionMetadataType2) {
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerLessThanOrEqual"] = 1] = "IntegerLessThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerGreaterThanOrEqual"] = 2] = "IntegerGreaterThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerEqual"] = 3] = "IntegerEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["IntegerNotEqual"] = 4] = "IntegerNotEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeLessThanOrEqual"] = 5] = "DatetimeLessThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["DatetimeGreaterThanOrEqual"] = 6] = "DatetimeGreaterThanOrEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanEqual"] = 7] = "BooleanEqual";
-    ApplicationRoleConnectionMetadataType2[ApplicationRoleConnectionMetadataType2["BooleanNotEqual"] = 8] = "BooleanNotEqual";
-  })(ApplicationRoleConnectionMetadataType || (exports.ApplicationRoleConnectionMetadataType = ApplicationRoleConnectionMetadataType = {}));
-  var ApplicationWebhookEventStatus;
-  (function(ApplicationWebhookEventStatus2) {
-    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Disabled"] = 1] = "Disabled";
-    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["Enabled"] = 2] = "Enabled";
-    ApplicationWebhookEventStatus2[ApplicationWebhookEventStatus2["DisabledByDiscord"] = 3] = "DisabledByDiscord";
-  })(ApplicationWebhookEventStatus || (exports.ApplicationWebhookEventStatus = ApplicationWebhookEventStatus = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/auditLog.js
-var require_auditLog3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.AuditLogOptionsType = exports.AuditLogEvent = undefined;
-  var AuditLogEvent;
-  (function(AuditLogEvent2) {
-    AuditLogEvent2[AuditLogEvent2["GuildUpdate"] = 1] = "GuildUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelCreate"] = 10] = "ChannelCreate";
-    AuditLogEvent2[AuditLogEvent2["ChannelUpdate"] = 11] = "ChannelUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelDelete"] = 12] = "ChannelDelete";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteCreate"] = 13] = "ChannelOverwriteCreate";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteUpdate"] = 14] = "ChannelOverwriteUpdate";
-    AuditLogEvent2[AuditLogEvent2["ChannelOverwriteDelete"] = 15] = "ChannelOverwriteDelete";
-    AuditLogEvent2[AuditLogEvent2["MemberKick"] = 20] = "MemberKick";
-    AuditLogEvent2[AuditLogEvent2["MemberPrune"] = 21] = "MemberPrune";
-    AuditLogEvent2[AuditLogEvent2["MemberBanAdd"] = 22] = "MemberBanAdd";
-    AuditLogEvent2[AuditLogEvent2["MemberBanRemove"] = 23] = "MemberBanRemove";
-    AuditLogEvent2[AuditLogEvent2["MemberUpdate"] = 24] = "MemberUpdate";
-    AuditLogEvent2[AuditLogEvent2["MemberRoleUpdate"] = 25] = "MemberRoleUpdate";
-    AuditLogEvent2[AuditLogEvent2["MemberMove"] = 26] = "MemberMove";
-    AuditLogEvent2[AuditLogEvent2["MemberDisconnect"] = 27] = "MemberDisconnect";
-    AuditLogEvent2[AuditLogEvent2["BotAdd"] = 28] = "BotAdd";
-    AuditLogEvent2[AuditLogEvent2["RoleCreate"] = 30] = "RoleCreate";
-    AuditLogEvent2[AuditLogEvent2["RoleUpdate"] = 31] = "RoleUpdate";
-    AuditLogEvent2[AuditLogEvent2["RoleDelete"] = 32] = "RoleDelete";
-    AuditLogEvent2[AuditLogEvent2["InviteCreate"] = 40] = "InviteCreate";
-    AuditLogEvent2[AuditLogEvent2["InviteUpdate"] = 41] = "InviteUpdate";
-    AuditLogEvent2[AuditLogEvent2["InviteDelete"] = 42] = "InviteDelete";
-    AuditLogEvent2[AuditLogEvent2["WebhookCreate"] = 50] = "WebhookCreate";
-    AuditLogEvent2[AuditLogEvent2["WebhookUpdate"] = 51] = "WebhookUpdate";
-    AuditLogEvent2[AuditLogEvent2["WebhookDelete"] = 52] = "WebhookDelete";
-    AuditLogEvent2[AuditLogEvent2["EmojiCreate"] = 60] = "EmojiCreate";
-    AuditLogEvent2[AuditLogEvent2["EmojiUpdate"] = 61] = "EmojiUpdate";
-    AuditLogEvent2[AuditLogEvent2["EmojiDelete"] = 62] = "EmojiDelete";
-    AuditLogEvent2[AuditLogEvent2["MessageDelete"] = 72] = "MessageDelete";
-    AuditLogEvent2[AuditLogEvent2["MessageBulkDelete"] = 73] = "MessageBulkDelete";
-    AuditLogEvent2[AuditLogEvent2["MessagePin"] = 74] = "MessagePin";
-    AuditLogEvent2[AuditLogEvent2["MessageUnpin"] = 75] = "MessageUnpin";
-    AuditLogEvent2[AuditLogEvent2["IntegrationCreate"] = 80] = "IntegrationCreate";
-    AuditLogEvent2[AuditLogEvent2["IntegrationUpdate"] = 81] = "IntegrationUpdate";
-    AuditLogEvent2[AuditLogEvent2["IntegrationDelete"] = 82] = "IntegrationDelete";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceCreate"] = 83] = "StageInstanceCreate";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceUpdate"] = 84] = "StageInstanceUpdate";
-    AuditLogEvent2[AuditLogEvent2["StageInstanceDelete"] = 85] = "StageInstanceDelete";
-    AuditLogEvent2[AuditLogEvent2["StickerCreate"] = 90] = "StickerCreate";
-    AuditLogEvent2[AuditLogEvent2["StickerUpdate"] = 91] = "StickerUpdate";
-    AuditLogEvent2[AuditLogEvent2["StickerDelete"] = 92] = "StickerDelete";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventCreate"] = 100] = "GuildScheduledEventCreate";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventUpdate"] = 101] = "GuildScheduledEventUpdate";
-    AuditLogEvent2[AuditLogEvent2["GuildScheduledEventDelete"] = 102] = "GuildScheduledEventDelete";
-    AuditLogEvent2[AuditLogEvent2["ThreadCreate"] = 110] = "ThreadCreate";
-    AuditLogEvent2[AuditLogEvent2["ThreadUpdate"] = 111] = "ThreadUpdate";
-    AuditLogEvent2[AuditLogEvent2["ThreadDelete"] = 112] = "ThreadDelete";
-    AuditLogEvent2[AuditLogEvent2["ApplicationCommandPermissionUpdate"] = 121] = "ApplicationCommandPermissionUpdate";
-    AuditLogEvent2[AuditLogEvent2["SoundboardSoundCreate"] = 130] = "SoundboardSoundCreate";
-    AuditLogEvent2[AuditLogEvent2["SoundboardSoundUpdate"] = 131] = "SoundboardSoundUpdate";
-    AuditLogEvent2[AuditLogEvent2["SoundboardSoundDelete"] = 132] = "SoundboardSoundDelete";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleCreate"] = 140] = "AutoModerationRuleCreate";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleUpdate"] = 141] = "AutoModerationRuleUpdate";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationRuleDelete"] = 142] = "AutoModerationRuleDelete";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationBlockMessage"] = 143] = "AutoModerationBlockMessage";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationFlagToChannel"] = 144] = "AutoModerationFlagToChannel";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationUserCommunicationDisabled"] = 145] = "AutoModerationUserCommunicationDisabled";
-    AuditLogEvent2[AuditLogEvent2["AutoModerationQuarantineUser"] = 146] = "AutoModerationQuarantineUser";
-    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationRequestCreated"] = 150] = "CreatorMonetizationRequestCreated";
-    AuditLogEvent2[AuditLogEvent2["CreatorMonetizationTermsAccepted"] = 151] = "CreatorMonetizationTermsAccepted";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptCreate"] = 163] = "OnboardingPromptCreate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptUpdate"] = 164] = "OnboardingPromptUpdate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingPromptDelete"] = 165] = "OnboardingPromptDelete";
-    AuditLogEvent2[AuditLogEvent2["OnboardingCreate"] = 166] = "OnboardingCreate";
-    AuditLogEvent2[AuditLogEvent2["OnboardingUpdate"] = 167] = "OnboardingUpdate";
-    AuditLogEvent2[AuditLogEvent2["HomeSettingsCreate"] = 190] = "HomeSettingsCreate";
-    AuditLogEvent2[AuditLogEvent2["HomeSettingsUpdate"] = 191] = "HomeSettingsUpdate";
-  })(AuditLogEvent || (exports.AuditLogEvent = AuditLogEvent = {}));
-  var AuditLogOptionsType;
-  (function(AuditLogOptionsType2) {
-    AuditLogOptionsType2["Role"] = "0";
-    AuditLogOptionsType2["Member"] = "1";
-  })(AuditLogOptionsType || (exports.AuditLogOptionsType = AuditLogOptionsType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/autoModeration.js
-var require_autoModeration3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.AutoModerationActionType = exports.AutoModerationRuleEventType = exports.AutoModerationRuleKeywordPresetType = exports.AutoModerationRuleTriggerType = undefined;
-  var AutoModerationRuleTriggerType;
-  (function(AutoModerationRuleTriggerType2) {
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Keyword"] = 1] = "Keyword";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["Spam"] = 3] = "Spam";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["KeywordPreset"] = 4] = "KeywordPreset";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MentionSpam"] = 5] = "MentionSpam";
-    AutoModerationRuleTriggerType2[AutoModerationRuleTriggerType2["MemberProfile"] = 6] = "MemberProfile";
-  })(AutoModerationRuleTriggerType || (exports.AutoModerationRuleTriggerType = AutoModerationRuleTriggerType = {}));
-  var AutoModerationRuleKeywordPresetType;
-  (function(AutoModerationRuleKeywordPresetType2) {
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Profanity"] = 1] = "Profanity";
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["SexualContent"] = 2] = "SexualContent";
-    AutoModerationRuleKeywordPresetType2[AutoModerationRuleKeywordPresetType2["Slurs"] = 3] = "Slurs";
-  })(AutoModerationRuleKeywordPresetType || (exports.AutoModerationRuleKeywordPresetType = AutoModerationRuleKeywordPresetType = {}));
-  var AutoModerationRuleEventType;
-  (function(AutoModerationRuleEventType2) {
-    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MessageSend"] = 1] = "MessageSend";
-    AutoModerationRuleEventType2[AutoModerationRuleEventType2["MemberUpdate"] = 2] = "MemberUpdate";
-  })(AutoModerationRuleEventType || (exports.AutoModerationRuleEventType = AutoModerationRuleEventType = {}));
-  var AutoModerationActionType;
-  (function(AutoModerationActionType2) {
-    AutoModerationActionType2[AutoModerationActionType2["BlockMessage"] = 1] = "BlockMessage";
-    AutoModerationActionType2[AutoModerationActionType2["SendAlertMessage"] = 2] = "SendAlertMessage";
-    AutoModerationActionType2[AutoModerationActionType2["Timeout"] = 3] = "Timeout";
-    AutoModerationActionType2[AutoModerationActionType2["BlockMemberInteraction"] = 4] = "BlockMemberInteraction";
-  })(AutoModerationActionType || (exports.AutoModerationActionType = AutoModerationActionType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/channel.js
-var require_channel5 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ChannelFlags = exports.ThreadMemberFlags = exports.ThreadAutoArchiveDuration = exports.OverwriteType = exports.VideoQualityMode = exports.ChannelType = exports.ForumLayoutType = exports.SortOrderType = undefined;
-  var SortOrderType;
-  (function(SortOrderType2) {
-    SortOrderType2[SortOrderType2["LatestActivity"] = 0] = "LatestActivity";
-    SortOrderType2[SortOrderType2["CreationDate"] = 1] = "CreationDate";
-  })(SortOrderType || (exports.SortOrderType = SortOrderType = {}));
-  var ForumLayoutType;
-  (function(ForumLayoutType2) {
-    ForumLayoutType2[ForumLayoutType2["NotSet"] = 0] = "NotSet";
-    ForumLayoutType2[ForumLayoutType2["ListView"] = 1] = "ListView";
-    ForumLayoutType2[ForumLayoutType2["GalleryView"] = 2] = "GalleryView";
-  })(ForumLayoutType || (exports.ForumLayoutType = ForumLayoutType = {}));
-  var ChannelType;
-  (function(ChannelType2) {
-    ChannelType2[ChannelType2["GuildText"] = 0] = "GuildText";
-    ChannelType2[ChannelType2["DM"] = 1] = "DM";
-    ChannelType2[ChannelType2["GuildVoice"] = 2] = "GuildVoice";
-    ChannelType2[ChannelType2["GroupDM"] = 3] = "GroupDM";
-    ChannelType2[ChannelType2["GuildCategory"] = 4] = "GuildCategory";
-    ChannelType2[ChannelType2["GuildAnnouncement"] = 5] = "GuildAnnouncement";
-    ChannelType2[ChannelType2["AnnouncementThread"] = 10] = "AnnouncementThread";
-    ChannelType2[ChannelType2["PublicThread"] = 11] = "PublicThread";
-    ChannelType2[ChannelType2["PrivateThread"] = 12] = "PrivateThread";
-    ChannelType2[ChannelType2["GuildStageVoice"] = 13] = "GuildStageVoice";
-    ChannelType2[ChannelType2["GuildDirectory"] = 14] = "GuildDirectory";
-    ChannelType2[ChannelType2["GuildForum"] = 15] = "GuildForum";
-    ChannelType2[ChannelType2["GuildMedia"] = 16] = "GuildMedia";
-    ChannelType2[ChannelType2["GuildNews"] = 5] = "GuildNews";
-    ChannelType2[ChannelType2["GuildNewsThread"] = 10] = "GuildNewsThread";
-    ChannelType2[ChannelType2["GuildPublicThread"] = 11] = "GuildPublicThread";
-    ChannelType2[ChannelType2["GuildPrivateThread"] = 12] = "GuildPrivateThread";
-  })(ChannelType || (exports.ChannelType = ChannelType = {}));
-  var VideoQualityMode;
-  (function(VideoQualityMode2) {
-    VideoQualityMode2[VideoQualityMode2["Auto"] = 1] = "Auto";
-    VideoQualityMode2[VideoQualityMode2["Full"] = 2] = "Full";
-  })(VideoQualityMode || (exports.VideoQualityMode = VideoQualityMode = {}));
-  var OverwriteType;
-  (function(OverwriteType2) {
-    OverwriteType2[OverwriteType2["Role"] = 0] = "Role";
-    OverwriteType2[OverwriteType2["Member"] = 1] = "Member";
-  })(OverwriteType || (exports.OverwriteType = OverwriteType = {}));
-  var ThreadAutoArchiveDuration;
-  (function(ThreadAutoArchiveDuration2) {
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneHour"] = 60] = "OneHour";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneDay"] = 1440] = "OneDay";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["ThreeDays"] = 4320] = "ThreeDays";
-    ThreadAutoArchiveDuration2[ThreadAutoArchiveDuration2["OneWeek"] = 10080] = "OneWeek";
-  })(ThreadAutoArchiveDuration || (exports.ThreadAutoArchiveDuration = ThreadAutoArchiveDuration = {}));
-  var ThreadMemberFlags;
-  (function(ThreadMemberFlags2) {
-    ThreadMemberFlags2[ThreadMemberFlags2["HasInteracted"] = 1] = "HasInteracted";
-    ThreadMemberFlags2[ThreadMemberFlags2["AllMessages"] = 2] = "AllMessages";
-    ThreadMemberFlags2[ThreadMemberFlags2["OnlyMentions"] = 4] = "OnlyMentions";
-    ThreadMemberFlags2[ThreadMemberFlags2["NoMessages"] = 8] = "NoMessages";
-  })(ThreadMemberFlags || (exports.ThreadMemberFlags = ThreadMemberFlags = {}));
-  var ChannelFlags;
-  (function(ChannelFlags2) {
-    ChannelFlags2[ChannelFlags2["GuildFeedRemoved"] = 1] = "GuildFeedRemoved";
-    ChannelFlags2[ChannelFlags2["Pinned"] = 2] = "Pinned";
-    ChannelFlags2[ChannelFlags2["ActiveChannelsRemoved"] = 4] = "ActiveChannelsRemoved";
-    ChannelFlags2[ChannelFlags2["RequireTag"] = 16] = "RequireTag";
-    ChannelFlags2[ChannelFlags2["IsSpam"] = 32] = "IsSpam";
-    ChannelFlags2[ChannelFlags2["IsGuildResourceChannel"] = 128] = "IsGuildResourceChannel";
-    ChannelFlags2[ChannelFlags2["ClydeAI"] = 256] = "ClydeAI";
-    ChannelFlags2[ChannelFlags2["IsScheduledForDeletion"] = 512] = "IsScheduledForDeletion";
-    ChannelFlags2[ChannelFlags2["HideMediaDownloadOptions"] = 32768] = "HideMediaDownloadOptions";
-  })(ChannelFlags || (exports.ChannelFlags = ChannelFlags = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/gateway.js
-var require_gateway3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ActivityFlags = exports.StatusDisplayType = exports.ActivityType = exports.ActivityPlatform = exports.PresenceUpdateStatus = undefined;
-  var PresenceUpdateStatus;
-  (function(PresenceUpdateStatus2) {
-    PresenceUpdateStatus2["Online"] = "online";
-    PresenceUpdateStatus2["DoNotDisturb"] = "dnd";
-    PresenceUpdateStatus2["Idle"] = "idle";
-    PresenceUpdateStatus2["Invisible"] = "invisible";
-    PresenceUpdateStatus2["Offline"] = "offline";
-  })(PresenceUpdateStatus || (exports.PresenceUpdateStatus = PresenceUpdateStatus = {}));
-  var ActivityPlatform;
-  (function(ActivityPlatform2) {
-    ActivityPlatform2["Desktop"] = "desktop";
-    ActivityPlatform2["Xbox"] = "xbox";
-    ActivityPlatform2["Samsung"] = "samsung";
-    ActivityPlatform2["IOS"] = "ios";
-    ActivityPlatform2["Android"] = "android";
-    ActivityPlatform2["Embedded"] = "embedded";
-    ActivityPlatform2["PS4"] = "ps4";
-    ActivityPlatform2["PS5"] = "ps5";
-  })(ActivityPlatform || (exports.ActivityPlatform = ActivityPlatform = {}));
-  var ActivityType;
-  (function(ActivityType2) {
-    ActivityType2[ActivityType2["Playing"] = 0] = "Playing";
-    ActivityType2[ActivityType2["Streaming"] = 1] = "Streaming";
-    ActivityType2[ActivityType2["Listening"] = 2] = "Listening";
-    ActivityType2[ActivityType2["Watching"] = 3] = "Watching";
-    ActivityType2[ActivityType2["Custom"] = 4] = "Custom";
-    ActivityType2[ActivityType2["Competing"] = 5] = "Competing";
-  })(ActivityType || (exports.ActivityType = ActivityType = {}));
-  var StatusDisplayType;
-  (function(StatusDisplayType2) {
-    StatusDisplayType2[StatusDisplayType2["Name"] = 0] = "Name";
-    StatusDisplayType2[StatusDisplayType2["State"] = 1] = "State";
-    StatusDisplayType2[StatusDisplayType2["Details"] = 2] = "Details";
-  })(StatusDisplayType || (exports.StatusDisplayType = StatusDisplayType = {}));
-  var ActivityFlags;
-  (function(ActivityFlags2) {
-    ActivityFlags2[ActivityFlags2["Instance"] = 1] = "Instance";
-    ActivityFlags2[ActivityFlags2["Join"] = 2] = "Join";
-    ActivityFlags2[ActivityFlags2["Spectate"] = 4] = "Spectate";
-    ActivityFlags2[ActivityFlags2["JoinRequest"] = 8] = "JoinRequest";
-    ActivityFlags2[ActivityFlags2["Sync"] = 16] = "Sync";
-    ActivityFlags2[ActivityFlags2["Play"] = 32] = "Play";
-    ActivityFlags2[ActivityFlags2["PartyPrivacyFriends"] = 64] = "PartyPrivacyFriends";
-    ActivityFlags2[ActivityFlags2["PartyPrivacyVoiceChannel"] = 128] = "PartyPrivacyVoiceChannel";
-    ActivityFlags2[ActivityFlags2["Embedded"] = 256] = "Embedded";
-  })(ActivityFlags || (exports.ActivityFlags = ActivityFlags = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guild.js
-var require_guild3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GuildOnboardingPromptType = exports.GuildOnboardingMode = exports.MembershipScreeningFieldType = exports.GuildWidgetStyle = exports.IntegrationExpireBehavior = exports.GuildMemberFlags = exports.GuildFeature = exports.GuildSystemChannelFlags = exports.GuildHubType = exports.GuildPremiumTier = exports.GuildVerificationLevel = exports.GuildNSFWLevel = exports.GuildMFALevel = exports.GuildExplicitContentFilter = exports.GuildDefaultMessageNotifications = undefined;
-  var GuildDefaultMessageNotifications;
-  (function(GuildDefaultMessageNotifications2) {
-    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["AllMessages"] = 0] = "AllMessages";
-    GuildDefaultMessageNotifications2[GuildDefaultMessageNotifications2["OnlyMentions"] = 1] = "OnlyMentions";
-  })(GuildDefaultMessageNotifications || (exports.GuildDefaultMessageNotifications = GuildDefaultMessageNotifications = {}));
-  var GuildExplicitContentFilter;
-  (function(GuildExplicitContentFilter2) {
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["Disabled"] = 0] = "Disabled";
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["MembersWithoutRoles"] = 1] = "MembersWithoutRoles";
-    GuildExplicitContentFilter2[GuildExplicitContentFilter2["AllMembers"] = 2] = "AllMembers";
-  })(GuildExplicitContentFilter || (exports.GuildExplicitContentFilter = GuildExplicitContentFilter = {}));
-  var GuildMFALevel;
-  (function(GuildMFALevel2) {
-    GuildMFALevel2[GuildMFALevel2["None"] = 0] = "None";
-    GuildMFALevel2[GuildMFALevel2["Elevated"] = 1] = "Elevated";
-  })(GuildMFALevel || (exports.GuildMFALevel = GuildMFALevel = {}));
-  var GuildNSFWLevel;
-  (function(GuildNSFWLevel2) {
-    GuildNSFWLevel2[GuildNSFWLevel2["Default"] = 0] = "Default";
-    GuildNSFWLevel2[GuildNSFWLevel2["Explicit"] = 1] = "Explicit";
-    GuildNSFWLevel2[GuildNSFWLevel2["Safe"] = 2] = "Safe";
-    GuildNSFWLevel2[GuildNSFWLevel2["AgeRestricted"] = 3] = "AgeRestricted";
-  })(GuildNSFWLevel || (exports.GuildNSFWLevel = GuildNSFWLevel = {}));
-  var GuildVerificationLevel;
-  (function(GuildVerificationLevel2) {
-    GuildVerificationLevel2[GuildVerificationLevel2["None"] = 0] = "None";
-    GuildVerificationLevel2[GuildVerificationLevel2["Low"] = 1] = "Low";
-    GuildVerificationLevel2[GuildVerificationLevel2["Medium"] = 2] = "Medium";
-    GuildVerificationLevel2[GuildVerificationLevel2["High"] = 3] = "High";
-    GuildVerificationLevel2[GuildVerificationLevel2["VeryHigh"] = 4] = "VeryHigh";
-  })(GuildVerificationLevel || (exports.GuildVerificationLevel = GuildVerificationLevel = {}));
-  var GuildPremiumTier;
-  (function(GuildPremiumTier2) {
-    GuildPremiumTier2[GuildPremiumTier2["None"] = 0] = "None";
-    GuildPremiumTier2[GuildPremiumTier2["Tier1"] = 1] = "Tier1";
-    GuildPremiumTier2[GuildPremiumTier2["Tier2"] = 2] = "Tier2";
-    GuildPremiumTier2[GuildPremiumTier2["Tier3"] = 3] = "Tier3";
-  })(GuildPremiumTier || (exports.GuildPremiumTier = GuildPremiumTier = {}));
-  var GuildHubType;
-  (function(GuildHubType2) {
-    GuildHubType2[GuildHubType2["Default"] = 0] = "Default";
-    GuildHubType2[GuildHubType2["HighSchool"] = 1] = "HighSchool";
-    GuildHubType2[GuildHubType2["College"] = 2] = "College";
-  })(GuildHubType || (exports.GuildHubType = GuildHubType = {}));
-  var GuildSystemChannelFlags;
-  (function(GuildSystemChannelFlags2) {
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotifications"] = 1] = "SuppressJoinNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressPremiumSubscriptions"] = 2] = "SuppressPremiumSubscriptions";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressGuildReminderNotifications"] = 4] = "SuppressGuildReminderNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressJoinNotificationReplies"] = 8] = "SuppressJoinNotificationReplies";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotifications"] = 16] = "SuppressRoleSubscriptionPurchaseNotifications";
-    GuildSystemChannelFlags2[GuildSystemChannelFlags2["SuppressRoleSubscriptionPurchaseNotificationReplies"] = 32] = "SuppressRoleSubscriptionPurchaseNotificationReplies";
-  })(GuildSystemChannelFlags || (exports.GuildSystemChannelFlags = GuildSystemChannelFlags = {}));
-  var GuildFeature;
-  (function(GuildFeature2) {
-    GuildFeature2["AnimatedBanner"] = "ANIMATED_BANNER";
-    GuildFeature2["AnimatedIcon"] = "ANIMATED_ICON";
-    GuildFeature2["ApplicationCommandPermissionsV2"] = "APPLICATION_COMMAND_PERMISSIONS_V2";
-    GuildFeature2["AutoModeration"] = "AUTO_MODERATION";
-    GuildFeature2["Banner"] = "BANNER";
-    GuildFeature2["Community"] = "COMMUNITY";
-    GuildFeature2["CreatorMonetizableProvisional"] = "CREATOR_MONETIZABLE_PROVISIONAL";
-    GuildFeature2["CreatorStorePage"] = "CREATOR_STORE_PAGE";
-    GuildFeature2["DeveloperSupportServer"] = "DEVELOPER_SUPPORT_SERVER";
-    GuildFeature2["Discoverable"] = "DISCOVERABLE";
-    GuildFeature2["Featurable"] = "FEATURABLE";
-    GuildFeature2["HasDirectoryEntry"] = "HAS_DIRECTORY_ENTRY";
-    GuildFeature2["Hub"] = "HUB";
-    GuildFeature2["InvitesDisabled"] = "INVITES_DISABLED";
-    GuildFeature2["InviteSplash"] = "INVITE_SPLASH";
-    GuildFeature2["LinkedToHub"] = "LINKED_TO_HUB";
-    GuildFeature2["MemberVerificationGateEnabled"] = "MEMBER_VERIFICATION_GATE_ENABLED";
-    GuildFeature2["MoreSoundboard"] = "MORE_SOUNDBOARD";
-    GuildFeature2["MonetizationEnabled"] = "MONETIZATION_ENABLED";
-    GuildFeature2["MoreStickers"] = "MORE_STICKERS";
-    GuildFeature2["News"] = "NEWS";
-    GuildFeature2["Partnered"] = "PARTNERED";
-    GuildFeature2["PreviewEnabled"] = "PREVIEW_ENABLED";
-    GuildFeature2["PrivateThreads"] = "PRIVATE_THREADS";
-    GuildFeature2["RaidAlertsDisabled"] = "RAID_ALERTS_DISABLED";
-    GuildFeature2["RelayEnabled"] = "RELAY_ENABLED";
-    GuildFeature2["RoleIcons"] = "ROLE_ICONS";
-    GuildFeature2["RoleSubscriptionsAvailableForPurchase"] = "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE";
-    GuildFeature2["RoleSubscriptionsEnabled"] = "ROLE_SUBSCRIPTIONS_ENABLED";
-    GuildFeature2["Soundboard"] = "SOUNDBOARD";
-    GuildFeature2["TicketedEventsEnabled"] = "TICKETED_EVENTS_ENABLED";
-    GuildFeature2["VanityURL"] = "VANITY_URL";
-    GuildFeature2["Verified"] = "VERIFIED";
-    GuildFeature2["VIPRegions"] = "VIP_REGIONS";
-    GuildFeature2["WelcomeScreenEnabled"] = "WELCOME_SCREEN_ENABLED";
-    GuildFeature2["GuildTags"] = "GUILD_TAGS";
-    GuildFeature2["EnhancedRoleColors"] = "ENHANCED_ROLE_COLORS";
-    GuildFeature2["GuestsEnabled"] = "GUESTS_ENABLED";
-  })(GuildFeature || (exports.GuildFeature = GuildFeature = {}));
-  var GuildMemberFlags;
-  (function(GuildMemberFlags2) {
-    GuildMemberFlags2[GuildMemberFlags2["DidRejoin"] = 1] = "DidRejoin";
-    GuildMemberFlags2[GuildMemberFlags2["CompletedOnboarding"] = 2] = "CompletedOnboarding";
-    GuildMemberFlags2[GuildMemberFlags2["BypassesVerification"] = 4] = "BypassesVerification";
-    GuildMemberFlags2[GuildMemberFlags2["StartedOnboarding"] = 8] = "StartedOnboarding";
-    GuildMemberFlags2[GuildMemberFlags2["IsGuest"] = 16] = "IsGuest";
-    GuildMemberFlags2[GuildMemberFlags2["StartedHomeActions"] = 32] = "StartedHomeActions";
-    GuildMemberFlags2[GuildMemberFlags2["CompletedHomeActions"] = 64] = "CompletedHomeActions";
-    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedUsernameOrGuildNickname"] = 128] = "AutomodQuarantinedUsernameOrGuildNickname";
-    GuildMemberFlags2[GuildMemberFlags2["AutomodQuarantinedBio"] = 256] = "AutomodQuarantinedBio";
-    GuildMemberFlags2[GuildMemberFlags2["DmSettingsUpsellAcknowledged"] = 512] = "DmSettingsUpsellAcknowledged";
-    GuildMemberFlags2[GuildMemberFlags2["AutoModQuarantinedGuildTag"] = 1024] = "AutoModQuarantinedGuildTag";
-  })(GuildMemberFlags || (exports.GuildMemberFlags = GuildMemberFlags = {}));
-  var IntegrationExpireBehavior;
-  (function(IntegrationExpireBehavior2) {
-    IntegrationExpireBehavior2[IntegrationExpireBehavior2["RemoveRole"] = 0] = "RemoveRole";
-    IntegrationExpireBehavior2[IntegrationExpireBehavior2["Kick"] = 1] = "Kick";
-  })(IntegrationExpireBehavior || (exports.IntegrationExpireBehavior = IntegrationExpireBehavior = {}));
-  var GuildWidgetStyle;
-  (function(GuildWidgetStyle2) {
-    GuildWidgetStyle2["Shield"] = "shield";
-    GuildWidgetStyle2["Banner1"] = "banner1";
-    GuildWidgetStyle2["Banner2"] = "banner2";
-    GuildWidgetStyle2["Banner3"] = "banner3";
-    GuildWidgetStyle2["Banner4"] = "banner4";
-  })(GuildWidgetStyle || (exports.GuildWidgetStyle = GuildWidgetStyle = {}));
-  var MembershipScreeningFieldType;
-  (function(MembershipScreeningFieldType2) {
-    MembershipScreeningFieldType2["Terms"] = "TERMS";
-  })(MembershipScreeningFieldType || (exports.MembershipScreeningFieldType = MembershipScreeningFieldType = {}));
-  var GuildOnboardingMode;
-  (function(GuildOnboardingMode2) {
-    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingDefault"] = 0] = "OnboardingDefault";
-    GuildOnboardingMode2[GuildOnboardingMode2["OnboardingAdvanced"] = 1] = "OnboardingAdvanced";
-  })(GuildOnboardingMode || (exports.GuildOnboardingMode = GuildOnboardingMode = {}));
-  var GuildOnboardingPromptType;
-  (function(GuildOnboardingPromptType2) {
-    GuildOnboardingPromptType2[GuildOnboardingPromptType2["MultipleChoice"] = 0] = "MultipleChoice";
-    GuildOnboardingPromptType2[GuildOnboardingPromptType2["Dropdown"] = 1] = "Dropdown";
-  })(GuildOnboardingPromptType || (exports.GuildOnboardingPromptType = GuildOnboardingPromptType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/guildScheduledEvent.js
-var require_guildScheduledEvent3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.GuildScheduledEventPrivacyLevel = exports.GuildScheduledEventStatus = exports.GuildScheduledEventEntityType = exports.GuildScheduledEventRecurrenceRuleMonth = exports.GuildScheduledEventRecurrenceRuleWeekday = exports.GuildScheduledEventRecurrenceRuleFrequency = undefined;
-  var GuildScheduledEventRecurrenceRuleFrequency;
-  (function(GuildScheduledEventRecurrenceRuleFrequency2) {
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Yearly"] = 0] = "Yearly";
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Monthly"] = 1] = "Monthly";
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Weekly"] = 2] = "Weekly";
-    GuildScheduledEventRecurrenceRuleFrequency2[GuildScheduledEventRecurrenceRuleFrequency2["Daily"] = 3] = "Daily";
-  })(GuildScheduledEventRecurrenceRuleFrequency || (exports.GuildScheduledEventRecurrenceRuleFrequency = GuildScheduledEventRecurrenceRuleFrequency = {}));
-  var GuildScheduledEventRecurrenceRuleWeekday;
-  (function(GuildScheduledEventRecurrenceRuleWeekday2) {
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Monday"] = 0] = "Monday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Tuesday"] = 1] = "Tuesday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Wednesday"] = 2] = "Wednesday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Thursday"] = 3] = "Thursday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Friday"] = 4] = "Friday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Saturday"] = 5] = "Saturday";
-    GuildScheduledEventRecurrenceRuleWeekday2[GuildScheduledEventRecurrenceRuleWeekday2["Sunday"] = 6] = "Sunday";
-  })(GuildScheduledEventRecurrenceRuleWeekday || (exports.GuildScheduledEventRecurrenceRuleWeekday = GuildScheduledEventRecurrenceRuleWeekday = {}));
-  var GuildScheduledEventRecurrenceRuleMonth;
-  (function(GuildScheduledEventRecurrenceRuleMonth2) {
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["January"] = 1] = "January";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["February"] = 2] = "February";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["March"] = 3] = "March";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["April"] = 4] = "April";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["May"] = 5] = "May";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["June"] = 6] = "June";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["July"] = 7] = "July";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["August"] = 8] = "August";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["September"] = 9] = "September";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["October"] = 10] = "October";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["November"] = 11] = "November";
-    GuildScheduledEventRecurrenceRuleMonth2[GuildScheduledEventRecurrenceRuleMonth2["December"] = 12] = "December";
-  })(GuildScheduledEventRecurrenceRuleMonth || (exports.GuildScheduledEventRecurrenceRuleMonth = GuildScheduledEventRecurrenceRuleMonth = {}));
-  var GuildScheduledEventEntityType;
-  (function(GuildScheduledEventEntityType2) {
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["StageInstance"] = 1] = "StageInstance";
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["Voice"] = 2] = "Voice";
-    GuildScheduledEventEntityType2[GuildScheduledEventEntityType2["External"] = 3] = "External";
-  })(GuildScheduledEventEntityType || (exports.GuildScheduledEventEntityType = GuildScheduledEventEntityType = {}));
-  var GuildScheduledEventStatus;
-  (function(GuildScheduledEventStatus2) {
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Scheduled"] = 1] = "Scheduled";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Active"] = 2] = "Active";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Completed"] = 3] = "Completed";
-    GuildScheduledEventStatus2[GuildScheduledEventStatus2["Canceled"] = 4] = "Canceled";
-  })(GuildScheduledEventStatus || (exports.GuildScheduledEventStatus = GuildScheduledEventStatus = {}));
-  var GuildScheduledEventPrivacyLevel;
-  (function(GuildScheduledEventPrivacyLevel2) {
-    GuildScheduledEventPrivacyLevel2[GuildScheduledEventPrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
-  })(GuildScheduledEventPrivacyLevel || (exports.GuildScheduledEventPrivacyLevel = GuildScheduledEventPrivacyLevel = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/shared.js
-var require_shared3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ApplicationCommandOptionType = undefined;
-  var ApplicationCommandOptionType;
-  (function(ApplicationCommandOptionType2) {
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Subcommand"] = 1] = "Subcommand";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["SubcommandGroup"] = 2] = "SubcommandGroup";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["String"] = 3] = "String";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Integer"] = 4] = "Integer";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Boolean"] = 5] = "Boolean";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["User"] = 6] = "User";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Channel"] = 7] = "Channel";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Role"] = 8] = "Role";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Mentionable"] = 9] = "Mentionable";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Number"] = 10] = "Number";
-    ApplicationCommandOptionType2[ApplicationCommandOptionType2["Attachment"] = 11] = "Attachment";
-  })(ApplicationCommandOptionType || (exports.ApplicationCommandOptionType = ApplicationCommandOptionType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/chatInput.js
-var require_chatInput3 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_shared3(), exports);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/_applicationCommands/permissions.js
-var require_permissions5 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.APIApplicationCommandPermissionsConstant = exports.ApplicationCommandPermissionType = undefined;
-  var ApplicationCommandPermissionType;
-  (function(ApplicationCommandPermissionType2) {
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Role"] = 1] = "Role";
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["User"] = 2] = "User";
-    ApplicationCommandPermissionType2[ApplicationCommandPermissionType2["Channel"] = 3] = "Channel";
-  })(ApplicationCommandPermissionType || (exports.ApplicationCommandPermissionType = ApplicationCommandPermissionType = {}));
-  exports.APIApplicationCommandPermissionsConstant = {
-    Everyone: (guildId) => String(guildId),
-    AllChannels: (guildId) => String(BigInt(guildId) - 1n)
-  };
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/applicationCommands.js
-var require_applicationCommands3 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.EntryPointCommandHandlerType = exports.InteractionContextType = exports.ApplicationIntegrationType = exports.ApplicationCommandType = undefined;
-  __exportStar(require_chatInput3(), exports);
-  __exportStar(require_permissions5(), exports);
-  var ApplicationCommandType;
-  (function(ApplicationCommandType2) {
-    ApplicationCommandType2[ApplicationCommandType2["ChatInput"] = 1] = "ChatInput";
-    ApplicationCommandType2[ApplicationCommandType2["User"] = 2] = "User";
-    ApplicationCommandType2[ApplicationCommandType2["Message"] = 3] = "Message";
-    ApplicationCommandType2[ApplicationCommandType2["PrimaryEntryPoint"] = 4] = "PrimaryEntryPoint";
-  })(ApplicationCommandType || (exports.ApplicationCommandType = ApplicationCommandType = {}));
-  var ApplicationIntegrationType;
-  (function(ApplicationIntegrationType2) {
-    ApplicationIntegrationType2[ApplicationIntegrationType2["GuildInstall"] = 0] = "GuildInstall";
-    ApplicationIntegrationType2[ApplicationIntegrationType2["UserInstall"] = 1] = "UserInstall";
-  })(ApplicationIntegrationType || (exports.ApplicationIntegrationType = ApplicationIntegrationType = {}));
-  var InteractionContextType;
-  (function(InteractionContextType2) {
-    InteractionContextType2[InteractionContextType2["Guild"] = 0] = "Guild";
-    InteractionContextType2[InteractionContextType2["BotDM"] = 1] = "BotDM";
-    InteractionContextType2[InteractionContextType2["PrivateChannel"] = 2] = "PrivateChannel";
-  })(InteractionContextType || (exports.InteractionContextType = InteractionContextType = {}));
-  var EntryPointCommandHandlerType;
-  (function(EntryPointCommandHandlerType2) {
-    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["AppHandler"] = 1] = "AppHandler";
-    EntryPointCommandHandlerType2[EntryPointCommandHandlerType2["DiscordLaunchActivity"] = 2] = "DiscordLaunchActivity";
-  })(EntryPointCommandHandlerType || (exports.EntryPointCommandHandlerType = EntryPointCommandHandlerType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/_interactions/responses.js
-var require_responses3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.InteractionResponseType = exports.InteractionType = undefined;
-  var InteractionType;
-  (function(InteractionType2) {
-    InteractionType2[InteractionType2["Ping"] = 1] = "Ping";
-    InteractionType2[InteractionType2["ApplicationCommand"] = 2] = "ApplicationCommand";
-    InteractionType2[InteractionType2["MessageComponent"] = 3] = "MessageComponent";
-    InteractionType2[InteractionType2["ApplicationCommandAutocomplete"] = 4] = "ApplicationCommandAutocomplete";
-    InteractionType2[InteractionType2["ModalSubmit"] = 5] = "ModalSubmit";
-  })(InteractionType || (exports.InteractionType = InteractionType = {}));
-  var InteractionResponseType;
-  (function(InteractionResponseType2) {
-    InteractionResponseType2[InteractionResponseType2["Pong"] = 1] = "Pong";
-    InteractionResponseType2[InteractionResponseType2["ChannelMessageWithSource"] = 4] = "ChannelMessageWithSource";
-    InteractionResponseType2[InteractionResponseType2["DeferredChannelMessageWithSource"] = 5] = "DeferredChannelMessageWithSource";
-    InteractionResponseType2[InteractionResponseType2["DeferredMessageUpdate"] = 6] = "DeferredMessageUpdate";
-    InteractionResponseType2[InteractionResponseType2["UpdateMessage"] = 7] = "UpdateMessage";
-    InteractionResponseType2[InteractionResponseType2["ApplicationCommandAutocompleteResult"] = 8] = "ApplicationCommandAutocompleteResult";
-    InteractionResponseType2[InteractionResponseType2["Modal"] = 9] = "Modal";
-    InteractionResponseType2[InteractionResponseType2["PremiumRequired"] = 10] = "PremiumRequired";
-    InteractionResponseType2[InteractionResponseType2["LaunchActivity"] = 12] = "LaunchActivity";
-  })(InteractionResponseType || (exports.InteractionResponseType = InteractionResponseType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/interactions.js
-var require_interactions3 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_applicationCommands3(), exports);
-  __exportStar(require_responses3(), exports);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/invite.js
-var require_invite3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.InviteTargetType = exports.InviteType = exports.InviteFlags = undefined;
-  var InviteFlags;
-  (function(InviteFlags2) {
-    InviteFlags2[InviteFlags2["IsGuestInvite"] = 1] = "IsGuestInvite";
-  })(InviteFlags || (exports.InviteFlags = InviteFlags = {}));
-  var InviteType;
-  (function(InviteType2) {
-    InviteType2[InviteType2["Guild"] = 0] = "Guild";
-    InviteType2[InviteType2["GroupDM"] = 1] = "GroupDM";
-    InviteType2[InviteType2["Friend"] = 2] = "Friend";
-  })(InviteType || (exports.InviteType = InviteType = {}));
-  var InviteTargetType;
-  (function(InviteTargetType2) {
-    InviteTargetType2[InviteTargetType2["Stream"] = 1] = "Stream";
-    InviteTargetType2[InviteTargetType2["EmbeddedApplication"] = 2] = "EmbeddedApplication";
-  })(InviteTargetType || (exports.InviteTargetType = InviteTargetType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/message.js
-var require_message3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.SeparatorSpacingSize = exports.UnfurledMediaItemLoadingState = exports.SelectMenuDefaultValueType = exports.TextInputStyle = exports.ButtonStyle = exports.ComponentType = exports.AllowedMentionsTypes = exports.AttachmentFlags = exports.EmbedType = exports.MessageFlags = exports.MessageReferenceType = exports.MessageActivityType = exports.MessageType = undefined;
-  var MessageType;
-  (function(MessageType2) {
-    MessageType2[MessageType2["Default"] = 0] = "Default";
-    MessageType2[MessageType2["RecipientAdd"] = 1] = "RecipientAdd";
-    MessageType2[MessageType2["RecipientRemove"] = 2] = "RecipientRemove";
-    MessageType2[MessageType2["Call"] = 3] = "Call";
-    MessageType2[MessageType2["ChannelNameChange"] = 4] = "ChannelNameChange";
-    MessageType2[MessageType2["ChannelIconChange"] = 5] = "ChannelIconChange";
-    MessageType2[MessageType2["ChannelPinnedMessage"] = 6] = "ChannelPinnedMessage";
-    MessageType2[MessageType2["UserJoin"] = 7] = "UserJoin";
-    MessageType2[MessageType2["GuildBoost"] = 8] = "GuildBoost";
-    MessageType2[MessageType2["GuildBoostTier1"] = 9] = "GuildBoostTier1";
-    MessageType2[MessageType2["GuildBoostTier2"] = 10] = "GuildBoostTier2";
-    MessageType2[MessageType2["GuildBoostTier3"] = 11] = "GuildBoostTier3";
-    MessageType2[MessageType2["ChannelFollowAdd"] = 12] = "ChannelFollowAdd";
-    MessageType2[MessageType2["GuildDiscoveryDisqualified"] = 14] = "GuildDiscoveryDisqualified";
-    MessageType2[MessageType2["GuildDiscoveryRequalified"] = 15] = "GuildDiscoveryRequalified";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodInitialWarning"] = 16] = "GuildDiscoveryGracePeriodInitialWarning";
-    MessageType2[MessageType2["GuildDiscoveryGracePeriodFinalWarning"] = 17] = "GuildDiscoveryGracePeriodFinalWarning";
-    MessageType2[MessageType2["ThreadCreated"] = 18] = "ThreadCreated";
-    MessageType2[MessageType2["Reply"] = 19] = "Reply";
-    MessageType2[MessageType2["ChatInputCommand"] = 20] = "ChatInputCommand";
-    MessageType2[MessageType2["ThreadStarterMessage"] = 21] = "ThreadStarterMessage";
-    MessageType2[MessageType2["GuildInviteReminder"] = 22] = "GuildInviteReminder";
-    MessageType2[MessageType2["ContextMenuCommand"] = 23] = "ContextMenuCommand";
-    MessageType2[MessageType2["AutoModerationAction"] = 24] = "AutoModerationAction";
-    MessageType2[MessageType2["RoleSubscriptionPurchase"] = 25] = "RoleSubscriptionPurchase";
-    MessageType2[MessageType2["InteractionPremiumUpsell"] = 26] = "InteractionPremiumUpsell";
-    MessageType2[MessageType2["StageStart"] = 27] = "StageStart";
-    MessageType2[MessageType2["StageEnd"] = 28] = "StageEnd";
-    MessageType2[MessageType2["StageSpeaker"] = 29] = "StageSpeaker";
-    MessageType2[MessageType2["StageRaiseHand"] = 30] = "StageRaiseHand";
-    MessageType2[MessageType2["StageTopic"] = 31] = "StageTopic";
-    MessageType2[MessageType2["GuildApplicationPremiumSubscription"] = 32] = "GuildApplicationPremiumSubscription";
-    MessageType2[MessageType2["GuildIncidentAlertModeEnabled"] = 36] = "GuildIncidentAlertModeEnabled";
-    MessageType2[MessageType2["GuildIncidentAlertModeDisabled"] = 37] = "GuildIncidentAlertModeDisabled";
-    MessageType2[MessageType2["GuildIncidentReportRaid"] = 38] = "GuildIncidentReportRaid";
-    MessageType2[MessageType2["GuildIncidentReportFalseAlarm"] = 39] = "GuildIncidentReportFalseAlarm";
-    MessageType2[MessageType2["PurchaseNotification"] = 44] = "PurchaseNotification";
-    MessageType2[MessageType2["PollResult"] = 46] = "PollResult";
-  })(MessageType || (exports.MessageType = MessageType = {}));
-  var MessageActivityType;
-  (function(MessageActivityType2) {
-    MessageActivityType2[MessageActivityType2["Join"] = 1] = "Join";
-    MessageActivityType2[MessageActivityType2["Spectate"] = 2] = "Spectate";
-    MessageActivityType2[MessageActivityType2["Listen"] = 3] = "Listen";
-    MessageActivityType2[MessageActivityType2["JoinRequest"] = 5] = "JoinRequest";
-  })(MessageActivityType || (exports.MessageActivityType = MessageActivityType = {}));
-  var MessageReferenceType;
-  (function(MessageReferenceType2) {
-    MessageReferenceType2[MessageReferenceType2["Default"] = 0] = "Default";
-    MessageReferenceType2[MessageReferenceType2["Forward"] = 1] = "Forward";
-  })(MessageReferenceType || (exports.MessageReferenceType = MessageReferenceType = {}));
-  var MessageFlags;
-  (function(MessageFlags2) {
-    MessageFlags2[MessageFlags2["Crossposted"] = 1] = "Crossposted";
-    MessageFlags2[MessageFlags2["IsCrosspost"] = 2] = "IsCrosspost";
-    MessageFlags2[MessageFlags2["SuppressEmbeds"] = 4] = "SuppressEmbeds";
-    MessageFlags2[MessageFlags2["SourceMessageDeleted"] = 8] = "SourceMessageDeleted";
-    MessageFlags2[MessageFlags2["Urgent"] = 16] = "Urgent";
-    MessageFlags2[MessageFlags2["HasThread"] = 32] = "HasThread";
-    MessageFlags2[MessageFlags2["Ephemeral"] = 64] = "Ephemeral";
-    MessageFlags2[MessageFlags2["Loading"] = 128] = "Loading";
-    MessageFlags2[MessageFlags2["FailedToMentionSomeRolesInThread"] = 256] = "FailedToMentionSomeRolesInThread";
-    MessageFlags2[MessageFlags2["ShouldShowLinkNotDiscordWarning"] = 1024] = "ShouldShowLinkNotDiscordWarning";
-    MessageFlags2[MessageFlags2["SuppressNotifications"] = 4096] = "SuppressNotifications";
-    MessageFlags2[MessageFlags2["IsVoiceMessage"] = 8192] = "IsVoiceMessage";
-    MessageFlags2[MessageFlags2["HasSnapshot"] = 16384] = "HasSnapshot";
-    MessageFlags2[MessageFlags2["IsComponentsV2"] = 32768] = "IsComponentsV2";
-  })(MessageFlags || (exports.MessageFlags = MessageFlags = {}));
-  var EmbedType;
-  (function(EmbedType2) {
-    EmbedType2["Rich"] = "rich";
-    EmbedType2["Image"] = "image";
-    EmbedType2["Video"] = "video";
-    EmbedType2["GIFV"] = "gifv";
-    EmbedType2["Article"] = "article";
-    EmbedType2["Link"] = "link";
-    EmbedType2["AutoModerationMessage"] = "auto_moderation_message";
-    EmbedType2["PollResult"] = "poll_result";
-  })(EmbedType || (exports.EmbedType = EmbedType = {}));
-  var AttachmentFlags;
-  (function(AttachmentFlags2) {
-    AttachmentFlags2[AttachmentFlags2["IsRemix"] = 4] = "IsRemix";
-  })(AttachmentFlags || (exports.AttachmentFlags = AttachmentFlags = {}));
-  var AllowedMentionsTypes;
-  (function(AllowedMentionsTypes2) {
-    AllowedMentionsTypes2["Everyone"] = "everyone";
-    AllowedMentionsTypes2["Role"] = "roles";
-    AllowedMentionsTypes2["User"] = "users";
-  })(AllowedMentionsTypes || (exports.AllowedMentionsTypes = AllowedMentionsTypes = {}));
-  var ComponentType;
-  (function(ComponentType2) {
-    ComponentType2[ComponentType2["ActionRow"] = 1] = "ActionRow";
-    ComponentType2[ComponentType2["Button"] = 2] = "Button";
-    ComponentType2[ComponentType2["StringSelect"] = 3] = "StringSelect";
-    ComponentType2[ComponentType2["TextInput"] = 4] = "TextInput";
-    ComponentType2[ComponentType2["UserSelect"] = 5] = "UserSelect";
-    ComponentType2[ComponentType2["RoleSelect"] = 6] = "RoleSelect";
-    ComponentType2[ComponentType2["MentionableSelect"] = 7] = "MentionableSelect";
-    ComponentType2[ComponentType2["ChannelSelect"] = 8] = "ChannelSelect";
-    ComponentType2[ComponentType2["Section"] = 9] = "Section";
-    ComponentType2[ComponentType2["TextDisplay"] = 10] = "TextDisplay";
-    ComponentType2[ComponentType2["Thumbnail"] = 11] = "Thumbnail";
-    ComponentType2[ComponentType2["MediaGallery"] = 12] = "MediaGallery";
-    ComponentType2[ComponentType2["File"] = 13] = "File";
-    ComponentType2[ComponentType2["Separator"] = 14] = "Separator";
-    ComponentType2[ComponentType2["ContentInventoryEntry"] = 16] = "ContentInventoryEntry";
-    ComponentType2[ComponentType2["Container"] = 17] = "Container";
-    ComponentType2[ComponentType2["Label"] = 18] = "Label";
-    ComponentType2[ComponentType2["SelectMenu"] = 3] = "SelectMenu";
-  })(ComponentType || (exports.ComponentType = ComponentType = {}));
-  var ButtonStyle;
-  (function(ButtonStyle2) {
-    ButtonStyle2[ButtonStyle2["Primary"] = 1] = "Primary";
-    ButtonStyle2[ButtonStyle2["Secondary"] = 2] = "Secondary";
-    ButtonStyle2[ButtonStyle2["Success"] = 3] = "Success";
-    ButtonStyle2[ButtonStyle2["Danger"] = 4] = "Danger";
-    ButtonStyle2[ButtonStyle2["Link"] = 5] = "Link";
-    ButtonStyle2[ButtonStyle2["Premium"] = 6] = "Premium";
-  })(ButtonStyle || (exports.ButtonStyle = ButtonStyle = {}));
-  var TextInputStyle;
-  (function(TextInputStyle2) {
-    TextInputStyle2[TextInputStyle2["Short"] = 1] = "Short";
-    TextInputStyle2[TextInputStyle2["Paragraph"] = 2] = "Paragraph";
-  })(TextInputStyle || (exports.TextInputStyle = TextInputStyle = {}));
-  var SelectMenuDefaultValueType;
-  (function(SelectMenuDefaultValueType2) {
-    SelectMenuDefaultValueType2["Channel"] = "channel";
-    SelectMenuDefaultValueType2["Role"] = "role";
-    SelectMenuDefaultValueType2["User"] = "user";
-  })(SelectMenuDefaultValueType || (exports.SelectMenuDefaultValueType = SelectMenuDefaultValueType = {}));
-  var UnfurledMediaItemLoadingState;
-  (function(UnfurledMediaItemLoadingState2) {
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Unknown"] = 0] = "Unknown";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["Loading"] = 1] = "Loading";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedSuccess"] = 2] = "LoadedSuccess";
-    UnfurledMediaItemLoadingState2[UnfurledMediaItemLoadingState2["LoadedNotFound"] = 3] = "LoadedNotFound";
-  })(UnfurledMediaItemLoadingState || (exports.UnfurledMediaItemLoadingState = UnfurledMediaItemLoadingState = {}));
-  var SeparatorSpacingSize;
-  (function(SeparatorSpacingSize2) {
-    SeparatorSpacingSize2[SeparatorSpacingSize2["Small"] = 1] = "Small";
-    SeparatorSpacingSize2[SeparatorSpacingSize2["Large"] = 2] = "Large";
-  })(SeparatorSpacingSize || (exports.SeparatorSpacingSize = SeparatorSpacingSize = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/monetization.js
-var require_monetization5 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.SubscriptionStatus = exports.SKUType = exports.SKUFlags = exports.EntitlementType = undefined;
-  var EntitlementType;
-  (function(EntitlementType2) {
-    EntitlementType2[EntitlementType2["Purchase"] = 1] = "Purchase";
-    EntitlementType2[EntitlementType2["PremiumSubscription"] = 2] = "PremiumSubscription";
-    EntitlementType2[EntitlementType2["DeveloperGift"] = 3] = "DeveloperGift";
-    EntitlementType2[EntitlementType2["TestModePurchase"] = 4] = "TestModePurchase";
-    EntitlementType2[EntitlementType2["FreePurchase"] = 5] = "FreePurchase";
-    EntitlementType2[EntitlementType2["UserGift"] = 6] = "UserGift";
-    EntitlementType2[EntitlementType2["PremiumPurchase"] = 7] = "PremiumPurchase";
-    EntitlementType2[EntitlementType2["ApplicationSubscription"] = 8] = "ApplicationSubscription";
-  })(EntitlementType || (exports.EntitlementType = EntitlementType = {}));
-  var SKUFlags;
-  (function(SKUFlags2) {
-    SKUFlags2[SKUFlags2["Available"] = 4] = "Available";
-    SKUFlags2[SKUFlags2["GuildSubscription"] = 128] = "GuildSubscription";
-    SKUFlags2[SKUFlags2["UserSubscription"] = 256] = "UserSubscription";
-  })(SKUFlags || (exports.SKUFlags = SKUFlags = {}));
-  var SKUType;
-  (function(SKUType2) {
-    SKUType2[SKUType2["Durable"] = 2] = "Durable";
-    SKUType2[SKUType2["Consumable"] = 3] = "Consumable";
-    SKUType2[SKUType2["Subscription"] = 5] = "Subscription";
-    SKUType2[SKUType2["SubscriptionGroup"] = 6] = "SubscriptionGroup";
-  })(SKUType || (exports.SKUType = SKUType = {}));
-  var SubscriptionStatus;
-  (function(SubscriptionStatus2) {
-    SubscriptionStatus2[SubscriptionStatus2["Active"] = 0] = "Active";
-    SubscriptionStatus2[SubscriptionStatus2["Ending"] = 1] = "Ending";
-    SubscriptionStatus2[SubscriptionStatus2["Inactive"] = 2] = "Inactive";
-  })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/oauth2.js
-var require_oauth23 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.OAuth2Scopes = undefined;
-  var OAuth2Scopes;
-  (function(OAuth2Scopes2) {
-    OAuth2Scopes2["Bot"] = "bot";
-    OAuth2Scopes2["Connections"] = "connections";
-    OAuth2Scopes2["DMChannelsRead"] = "dm_channels.read";
-    OAuth2Scopes2["Email"] = "email";
-    OAuth2Scopes2["Identify"] = "identify";
-    OAuth2Scopes2["Guilds"] = "guilds";
-    OAuth2Scopes2["GuildsJoin"] = "guilds.join";
-    OAuth2Scopes2["GuildsMembersRead"] = "guilds.members.read";
-    OAuth2Scopes2["GroupDMJoins"] = "gdm.join";
-    OAuth2Scopes2["MessagesRead"] = "messages.read";
-    OAuth2Scopes2["RoleConnectionsWrite"] = "role_connections.write";
-    OAuth2Scopes2["RPC"] = "rpc";
-    OAuth2Scopes2["RPCActivitiesWrite"] = "rpc.activities.write";
-    OAuth2Scopes2["RPCVoiceRead"] = "rpc.voice.read";
-    OAuth2Scopes2["RPCVoiceWrite"] = "rpc.voice.write";
-    OAuth2Scopes2["RPCNotificationsRead"] = "rpc.notifications.read";
-    OAuth2Scopes2["WebhookIncoming"] = "webhook.incoming";
-    OAuth2Scopes2["Voice"] = "voice";
-    OAuth2Scopes2["ApplicationsBuildsUpload"] = "applications.builds.upload";
-    OAuth2Scopes2["ApplicationsBuildsRead"] = "applications.builds.read";
-    OAuth2Scopes2["ApplicationsStoreUpdate"] = "applications.store.update";
-    OAuth2Scopes2["ApplicationsEntitlements"] = "applications.entitlements";
-    OAuth2Scopes2["RelationshipsRead"] = "relationships.read";
-    OAuth2Scopes2["ActivitiesRead"] = "activities.read";
-    OAuth2Scopes2["ActivitiesWrite"] = "activities.write";
-    OAuth2Scopes2["ApplicationsCommands"] = "applications.commands";
-    OAuth2Scopes2["ApplicationsCommandsUpdate"] = "applications.commands.update";
-    OAuth2Scopes2["ApplicationCommandsPermissionsUpdate"] = "applications.commands.permissions.update";
-  })(OAuth2Scopes || (exports.OAuth2Scopes = OAuth2Scopes = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/permissions.js
-var require_permissions6 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RoleFlags = undefined;
-  var RoleFlags;
-  (function(RoleFlags2) {
-    RoleFlags2[RoleFlags2["InPrompt"] = 1] = "InPrompt";
-  })(RoleFlags || (exports.RoleFlags = RoleFlags = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/poll.js
-var require_poll3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.PollLayoutType = undefined;
-  var PollLayoutType;
-  (function(PollLayoutType2) {
-    PollLayoutType2[PollLayoutType2["Default"] = 1] = "Default";
-  })(PollLayoutType || (exports.PollLayoutType = PollLayoutType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/stageInstance.js
-var require_stageInstance3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.StageInstancePrivacyLevel = undefined;
-  var StageInstancePrivacyLevel;
-  (function(StageInstancePrivacyLevel2) {
-    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["Public"] = 1] = "Public";
-    StageInstancePrivacyLevel2[StageInstancePrivacyLevel2["GuildOnly"] = 2] = "GuildOnly";
-  })(StageInstancePrivacyLevel || (exports.StageInstancePrivacyLevel = StageInstancePrivacyLevel = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/sticker.js
-var require_sticker3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.StickerFormatType = exports.StickerType = undefined;
-  var StickerType;
-  (function(StickerType2) {
-    StickerType2[StickerType2["Standard"] = 1] = "Standard";
-    StickerType2[StickerType2["Guild"] = 2] = "Guild";
-  })(StickerType || (exports.StickerType = StickerType = {}));
-  var StickerFormatType;
-  (function(StickerFormatType2) {
-    StickerFormatType2[StickerFormatType2["PNG"] = 1] = "PNG";
-    StickerFormatType2[StickerFormatType2["APNG"] = 2] = "APNG";
-    StickerFormatType2[StickerFormatType2["Lottie"] = 3] = "Lottie";
-    StickerFormatType2[StickerFormatType2["GIF"] = 4] = "GIF";
-  })(StickerFormatType || (exports.StickerFormatType = StickerFormatType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/teams.js
-var require_teams3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.TeamMemberRole = exports.TeamMemberMembershipState = undefined;
-  var TeamMemberMembershipState;
-  (function(TeamMemberMembershipState2) {
-    TeamMemberMembershipState2[TeamMemberMembershipState2["Invited"] = 1] = "Invited";
-    TeamMemberMembershipState2[TeamMemberMembershipState2["Accepted"] = 2] = "Accepted";
-  })(TeamMemberMembershipState || (exports.TeamMemberMembershipState = TeamMemberMembershipState = {}));
-  var TeamMemberRole;
-  (function(TeamMemberRole2) {
-    TeamMemberRole2["Admin"] = "admin";
-    TeamMemberRole2["Developer"] = "developer";
-    TeamMemberRole2["ReadOnly"] = "read_only";
-  })(TeamMemberRole || (exports.TeamMemberRole = TeamMemberRole = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/user.js
-var require_user3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.NameplatePalette = exports.ConnectionVisibility = exports.ConnectionService = exports.UserPremiumType = exports.UserFlags = undefined;
-  var UserFlags;
-  (function(UserFlags2) {
-    UserFlags2[UserFlags2["Staff"] = 1] = "Staff";
-    UserFlags2[UserFlags2["Partner"] = 2] = "Partner";
-    UserFlags2[UserFlags2["Hypesquad"] = 4] = "Hypesquad";
-    UserFlags2[UserFlags2["BugHunterLevel1"] = 8] = "BugHunterLevel1";
-    UserFlags2[UserFlags2["MFASMS"] = 16] = "MFASMS";
-    UserFlags2[UserFlags2["PremiumPromoDismissed"] = 32] = "PremiumPromoDismissed";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse1"] = 64] = "HypeSquadOnlineHouse1";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse2"] = 128] = "HypeSquadOnlineHouse2";
-    UserFlags2[UserFlags2["HypeSquadOnlineHouse3"] = 256] = "HypeSquadOnlineHouse3";
-    UserFlags2[UserFlags2["PremiumEarlySupporter"] = 512] = "PremiumEarlySupporter";
-    UserFlags2[UserFlags2["TeamPseudoUser"] = 1024] = "TeamPseudoUser";
-    UserFlags2[UserFlags2["HasUnreadUrgentMessages"] = 8192] = "HasUnreadUrgentMessages";
-    UserFlags2[UserFlags2["BugHunterLevel2"] = 16384] = "BugHunterLevel2";
-    UserFlags2[UserFlags2["VerifiedBot"] = 65536] = "VerifiedBot";
-    UserFlags2[UserFlags2["VerifiedDeveloper"] = 131072] = "VerifiedDeveloper";
-    UserFlags2[UserFlags2["CertifiedModerator"] = 262144] = "CertifiedModerator";
-    UserFlags2[UserFlags2["BotHTTPInteractions"] = 524288] = "BotHTTPInteractions";
-    UserFlags2[UserFlags2["Spammer"] = 1048576] = "Spammer";
-    UserFlags2[UserFlags2["DisablePremium"] = 2097152] = "DisablePremium";
-    UserFlags2[UserFlags2["ActiveDeveloper"] = 4194304] = "ActiveDeveloper";
-    UserFlags2[UserFlags2["Quarantined"] = 17592186044416] = "Quarantined";
-    UserFlags2[UserFlags2["Collaborator"] = 1125899906842624] = "Collaborator";
-    UserFlags2[UserFlags2["RestrictedCollaborator"] = 2251799813685248] = "RestrictedCollaborator";
-  })(UserFlags || (exports.UserFlags = UserFlags = {}));
-  var UserPremiumType;
-  (function(UserPremiumType2) {
-    UserPremiumType2[UserPremiumType2["None"] = 0] = "None";
-    UserPremiumType2[UserPremiumType2["NitroClassic"] = 1] = "NitroClassic";
-    UserPremiumType2[UserPremiumType2["Nitro"] = 2] = "Nitro";
-    UserPremiumType2[UserPremiumType2["NitroBasic"] = 3] = "NitroBasic";
-  })(UserPremiumType || (exports.UserPremiumType = UserPremiumType = {}));
-  var ConnectionService;
-  (function(ConnectionService2) {
-    ConnectionService2["AmazonMusic"] = "amazon-music";
-    ConnectionService2["BattleNet"] = "battlenet";
-    ConnectionService2["Bluesky"] = "bluesky";
-    ConnectionService2["BungieNet"] = "bungie";
-    ConnectionService2["Crunchyroll"] = "crunchyroll";
-    ConnectionService2["Domain"] = "domain";
-    ConnectionService2["eBay"] = "ebay";
-    ConnectionService2["EpicGames"] = "epicgames";
-    ConnectionService2["Facebook"] = "facebook";
-    ConnectionService2["GitHub"] = "github";
-    ConnectionService2["Instagram"] = "instagram";
-    ConnectionService2["LeagueOfLegends"] = "leagueoflegends";
-    ConnectionService2["Mastodon"] = "mastodon";
-    ConnectionService2["PayPal"] = "paypal";
-    ConnectionService2["PlayStationNetwork"] = "playstation";
-    ConnectionService2["Reddit"] = "reddit";
-    ConnectionService2["RiotGames"] = "riotgames";
-    ConnectionService2["Roblox"] = "roblox";
-    ConnectionService2["Spotify"] = "spotify";
-    ConnectionService2["Skype"] = "skype";
-    ConnectionService2["Steam"] = "steam";
-    ConnectionService2["TikTok"] = "tiktok";
-    ConnectionService2["Twitch"] = "twitch";
-    ConnectionService2["X"] = "twitter";
-    ConnectionService2["Twitter"] = "twitter";
-    ConnectionService2["Xbox"] = "xbox";
-    ConnectionService2["YouTube"] = "youtube";
-  })(ConnectionService || (exports.ConnectionService = ConnectionService = {}));
-  var ConnectionVisibility;
-  (function(ConnectionVisibility2) {
-    ConnectionVisibility2[ConnectionVisibility2["None"] = 0] = "None";
-    ConnectionVisibility2[ConnectionVisibility2["Everyone"] = 1] = "Everyone";
-  })(ConnectionVisibility || (exports.ConnectionVisibility = ConnectionVisibility = {}));
-  var NameplatePalette;
-  (function(NameplatePalette2) {
-    NameplatePalette2["Berry"] = "berry";
-    NameplatePalette2["BubbleGum"] = "bubble_gum";
-    NameplatePalette2["Clover"] = "clover";
-    NameplatePalette2["Cobalt"] = "cobalt";
-    NameplatePalette2["Crimson"] = "crimson";
-    NameplatePalette2["Forest"] = "forest";
-    NameplatePalette2["Lemon"] = "lemon";
-    NameplatePalette2["Sky"] = "sky";
-    NameplatePalette2["Teal"] = "teal";
-    NameplatePalette2["Violet"] = "violet";
-    NameplatePalette2["White"] = "white";
-  })(NameplatePalette || (exports.NameplatePalette = NameplatePalette = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/webhook.js
-var require_webhook3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.WebhookType = exports.ApplicationWebhookEventType = exports.ApplicationWebhookType = undefined;
-  var ApplicationWebhookType;
-  (function(ApplicationWebhookType2) {
-    ApplicationWebhookType2[ApplicationWebhookType2["Ping"] = 0] = "Ping";
-    ApplicationWebhookType2[ApplicationWebhookType2["Event"] = 1] = "Event";
-  })(ApplicationWebhookType || (exports.ApplicationWebhookType = ApplicationWebhookType = {}));
-  var ApplicationWebhookEventType;
-  (function(ApplicationWebhookEventType2) {
-    ApplicationWebhookEventType2["ApplicationAuthorized"] = "APPLICATION_AUTHORIZED";
-    ApplicationWebhookEventType2["ApplicationDeauthorized"] = "APPLICATION_DEAUTHORIZED";
-    ApplicationWebhookEventType2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    ApplicationWebhookEventType2["QuestUserEnrollment"] = "QUEST_USER_ENROLLMENT";
-  })(ApplicationWebhookEventType || (exports.ApplicationWebhookEventType = ApplicationWebhookEventType = {}));
-  var WebhookType;
-  (function(WebhookType2) {
-    WebhookType2[WebhookType2["Incoming"] = 1] = "Incoming";
-    WebhookType2[WebhookType2["ChannelFollower"] = 2] = "ChannelFollower";
-    WebhookType2[WebhookType2["Application"] = 3] = "Application";
-  })(WebhookType || (exports.WebhookType = WebhookType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/payloads/v10/index.js
-var require_v1014 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __exportStar(require_common7(), exports);
-  __exportStar(require_application3(), exports);
-  __exportStar(require_auditLog3(), exports);
-  __exportStar(require_autoModeration3(), exports);
-  __exportStar(require_channel5(), exports);
-  __exportStar(require_gateway3(), exports);
-  __exportStar(require_guild3(), exports);
-  __exportStar(require_guildScheduledEvent3(), exports);
-  __exportStar(require_interactions3(), exports);
-  __exportStar(require_invite3(), exports);
-  __exportStar(require_message3(), exports);
-  __exportStar(require_monetization5(), exports);
-  __exportStar(require_oauth23(), exports);
-  __exportStar(require_permissions6(), exports);
-  __exportStar(require_poll3(), exports);
-  __exportStar(require_stageInstance3(), exports);
-  __exportStar(require_sticker3(), exports);
-  __exportStar(require_teams3(), exports);
-  __exportStar(require_user3(), exports);
-  __exportStar(require_webhook3(), exports);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/utils/internals.js
-var require_internals3 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.urlSafeCharacters = undefined;
-  var pattern = /^[\d%A-Za-z-_]+$/g;
-  exports.urlSafeCharacters = {
-    test(input) {
-      const result = pattern.test(input);
-      pattern.lastIndex = 0;
-      return result;
-    }
-  };
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/common.js
-var require_common8 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.Locale = exports.RESTJSONErrorCodes = undefined;
-  var RESTJSONErrorCodes;
-  (function(RESTJSONErrorCodes2) {
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GeneralError"] = 0] = "GeneralError";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAccount"] = 10001] = "UnknownAccount";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplication"] = 10002] = "UnknownApplication";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownChannel"] = 10003] = "UnknownChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuild"] = 10004] = "UnknownGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownIntegration"] = 10005] = "UnknownIntegration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInvite"] = 10006] = "UnknownInvite";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMember"] = 10007] = "UnknownMember";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownMessage"] = 10008] = "UnknownMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPermissionOverwrite"] = 10009] = "UnknownPermissionOverwrite";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownProvider"] = 10010] = "UnknownProvider";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRole"] = 10011] = "UnknownRole";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownToken"] = 10012] = "UnknownToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownUser"] = 10013] = "UnknownUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEmoji"] = 10014] = "UnknownEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhook"] = 10015] = "UnknownWebhook";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownWebhookService"] = 10016] = "UnknownWebhookService";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSession"] = 10020] = "UnknownSession";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownAsset"] = 10021] = "UnknownAsset";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBan"] = 10026] = "UnknownBan";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSKU"] = 10027] = "UnknownSKU";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreListing"] = 10028] = "UnknownStoreListing";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownEntitlement"] = 10029] = "UnknownEntitlement";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBuild"] = 10030] = "UnknownBuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownLobby"] = 10031] = "UnknownLobby";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownBranch"] = 10032] = "UnknownBranch";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStoreDirectoryLayout"] = 10033] = "UnknownStoreDirectoryLayout";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownRedistributable"] = 10036] = "UnknownRedistributable";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGiftCode"] = 10038] = "UnknownGiftCode";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStream"] = 10049] = "UnknownStream";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownPremiumServerSubscribeCooldown"] = 10050] = "UnknownPremiumServerSubscribeCooldown";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildTemplate"] = 10057] = "UnknownGuildTemplate";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownDiscoverableServerCategory"] = 10059] = "UnknownDiscoverableServerCategory";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSticker"] = 10060] = "UnknownSticker";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStickerPack"] = 10061] = "UnknownStickerPack";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownInteraction"] = 10062] = "UnknownInteraction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommand"] = 10063] = "UnknownApplicationCommand";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownVoiceState"] = 10065] = "UnknownVoiceState";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownApplicationCommandPermissions"] = 10066] = "UnknownApplicationCommandPermissions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownStageInstance"] = 10067] = "UnknownStageInstance";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildMemberVerificationForm"] = 10068] = "UnknownGuildMemberVerificationForm";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildWelcomeScreen"] = 10069] = "UnknownGuildWelcomeScreen";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEvent"] = 10070] = "UnknownGuildScheduledEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownGuildScheduledEventUser"] = 10071] = "UnknownGuildScheduledEventUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownTag"] = 10087] = "UnknownTag";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnknownSound"] = 10097] = "UnknownSound";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BotsCannotUseThisEndpoint"] = 20001] = "BotsCannotUseThisEndpoint";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyBotsCanUseThisEndpoint"] = 20002] = "OnlyBotsCanUseThisEndpoint";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ExplicitContentCannotBeSentToTheDesiredRecipient"] = 20009] = "ExplicitContentCannotBeSentToTheDesiredRecipient";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NotAuthorizedToPerformThisActionOnThisApplication"] = 20012] = "NotAuthorizedToPerformThisActionOnThisApplication";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ActionCannotBePerformedDueToSlowmodeRateLimit"] = 20016] = "ActionCannotBePerformedDueToSlowmodeRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheMazeIsntMeantForYou"] = 20017] = "TheMazeIsntMeantForYou";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyTheOwnerOfThisAccountCanPerformThisAction"] = 20018] = "OnlyTheOwnerOfThisAccountCanPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnnouncementEditLimitExceeded"] = 20022] = "AnnouncementEditLimitExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UnderMinimumAge"] = 20024] = "UnderMinimumAge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelSendRateLimit"] = 20028] = "ChannelSendRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerSendRateLimit"] = 20029] = "ServerSendRateLimit";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords"] = 20031] = "StageTopicServerNameServerDescriptionOrChannelNamesContainDisallowedWords";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildPremiumSubscriptionLevelTooLow"] = 20035] = "GuildPremiumSubscriptionLevelTooLow";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildsReached"] = 30001] = "MaximumNumberOfGuildsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfFriendsReached"] = 30002] = "MaximumNumberOfFriendsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinsReachedForTheChannel"] = 30003] = "MaximumNumberOfPinsReachedForTheChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfRecipientsReached"] = 30004] = "MaximumNumberOfRecipientsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildRolesReached"] = 30005] = "MaximumNumberOfGuildRolesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksReached"] = 30007] = "MaximumNumberOfWebhooksReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEmojisReached"] = 30008] = "MaximumNumberOfEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfReactionsReached"] = 30010] = "MaximumNumberOfReactionsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGroupDMsReached"] = 30011] = "MaximumNumberOfGroupDMsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildChannelsReached"] = 30013] = "MaximumNumberOfGuildChannelsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAttachmentsInAMessageReached"] = 30015] = "MaximumNumberOfAttachmentsInAMessageReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfInvitesReached"] = 30016] = "MaximumNumberOfInvitesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfAnimatedEmojisReached"] = 30018] = "MaximumNumberOfAnimatedEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerMembersReached"] = 30019] = "MaximumNumberOfServerMembersReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfServerCategoriesReached"] = 30030] = "MaximumNumberOfServerCategoriesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildAlreadyHasTemplate"] = 30031] = "GuildAlreadyHasTemplate";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfApplicationCommandsReached"] = 30032] = "MaximumNumberOfApplicationCommandsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumThreadParticipantsReached"] = 30033] = "MaximumThreadParticipantsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumDailyApplicationCommandCreatesReached"] = 30034] = "MaximumDailyApplicationCommandCreatesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfNonGuildMemberBansHasBeenExceeded"] = 30035] = "MaximumNumberOfNonGuildMemberBansHasBeenExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfBanFetchesHasBeenReached"] = 30037] = "MaximumNumberOfBanFetchesHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfUncompletedGuildScheduledEventsReached"] = 30038] = "MaximumNumberOfUncompletedGuildScheduledEventsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfStickersReached"] = 30039] = "MaximumNumberOfStickersReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPruneRequestsHasBeenReached"] = 30040] = "MaximumNumberOfPruneRequestsHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached"] = 30042] = "MaximumNumberOfGuildWidgetSettingsUpdatesHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfSoundboardSoundsReached"] = 30045] = "MaximumNumberOfSoundboardSoundsReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfEditsToMessagesOlderThanOneHourReached"] = 30046] = "MaximumNumberOfEditsToMessagesOlderThanOneHourReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPinnedThreadsInForumHasBeenReached"] = 30047] = "MaximumNumberOfPinnedThreadsInForumHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfTagsInForumHasBeenReached"] = 30048] = "MaximumNumberOfTagsInForumHasBeenReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["BitrateIsTooHighForChannelOfThisType"] = 30052] = "BitrateIsTooHighForChannelOfThisType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfPremiumEmojisReached"] = 30056] = "MaximumNumberOfPremiumEmojisReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfWebhooksPerGuildReached"] = 30058] = "MaximumNumberOfWebhooksPerGuildReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumNumberOfChannelPermissionOverwritesReached"] = 30060] = "MaximumNumberOfChannelPermissionOverwritesReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheChannelsForThisGuildAreTooLarge"] = 30061] = "TheChannelsForThisGuildAreTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["Unauthorized"] = 40001] = "Unauthorized";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VerifyYourAccount"] = 40002] = "VerifyYourAccount";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OpeningDirectMessagesTooFast"] = 40003] = "OpeningDirectMessagesTooFast";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SendMessagesHasBeenTemporarilyDisabled"] = 40004] = "SendMessagesHasBeenTemporarilyDisabled";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestEntityTooLarge"] = 40005] = "RequestEntityTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FeatureTemporarilyDisabledServerSide"] = 40006] = "FeatureTemporarilyDisabledServerSide";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserBannedFromThisGuild"] = 40007] = "UserBannedFromThisGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ConnectionHasBeenRevoked"] = 40012] = "ConnectionHasBeenRevoked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OnlyConsumableSKUsCanBeConsumed"] = 40018] = "OnlyConsumableSKUsCanBeConsumed";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCanOnlyDeleteSandboxEntitlements"] = 40019] = "YouCanOnlyDeleteSandboxEntitlements";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TargetUserIsNotConnectedToVoice"] = 40032] = "TargetUserIsNotConnectedToVoice";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisMessageWasAlreadyCrossposted"] = 40033] = "ThisMessageWasAlreadyCrossposted";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationCommandWithThatNameAlreadyExists"] = 40041] = "ApplicationCommandWithThatNameAlreadyExists";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationInteractionFailedToSend"] = 40043] = "ApplicationInteractionFailedToSend";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAMessageInAForumChannel"] = 40058] = "CannotSendAMessageInAForumChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InteractionHasAlreadyBeenAcknowledged"] = 40060] = "InteractionHasAlreadyBeenAcknowledged";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagNamesMustBeUnique"] = 40061] = "TagNamesMustBeUnique";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServiceResourceIsBeingRateLimited"] = 40062] = "ServiceResourceIsBeingRateLimited";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThereAreNoTagsAvailableThatCanBeSetByNonModerators"] = 40066] = "ThereAreNoTagsAvailableThatCanBeSetByNonModerators";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TagRequiredToCreateAForumPostInThisChannel"] = 40067] = "TagRequiredToCreateAForumPostInThisChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AnEntitlementHasAlreadyBeenGrantedForThisResource"] = 40074] = "AnEntitlementHasAlreadyBeenGrantedForThisResource";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages"] = 40094] = "ThisInteractionHasHitTheMaximumNumberOfFollowUpMessages";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CloudflareIsBlockingYourRequest"] = 40333] = "CloudflareIsBlockingYourRequest";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingAccess"] = 50001] = "MissingAccess";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAccountType"] = 50002] = "InvalidAccountType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnDMChannel"] = 50003] = "CannotExecuteActionOnDMChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["GuildWidgetDisabled"] = 50004] = "GuildWidgetDisabled";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditMessageAuthoredByAnotherUser"] = 50005] = "CannotEditMessageAuthoredByAnotherUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendAnEmptyMessage"] = 50006] = "CannotSendAnEmptyMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesToThisUser"] = 50007] = "CannotSendMessagesToThisUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSendMessagesInNonTextChannel"] = 50008] = "CannotSendMessagesInNonTextChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ChannelVerificationLevelTooHighForYouToGainAccess"] = 50009] = "ChannelVerificationLevelTooHighForYouToGainAccess";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationDoesNotHaveBot"] = 50010] = "OAuth2ApplicationDoesNotHaveBot";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OAuth2ApplicationLimitReached"] = 50011] = "OAuth2ApplicationLimitReached";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2State"] = 50012] = "InvalidOAuth2State";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingPermissions"] = 50013] = "MissingPermissions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidToken"] = 50014] = "InvalidToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoteWasTooLong"] = 50015] = "NoteWasTooLong";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedTooFewOrTooManyMessagesToDelete"] = 50016] = "ProvidedTooFewOrTooManyMessagesToDelete";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMFALevel"] = 50017] = "InvalidMFALevel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageCanOnlyBePinnedInTheChannelItWasSentIn"] = 50019] = "MessageCanOnlyBePinnedInTheChannelItWasSentIn";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteCodeInvalidOrTaken"] = 50020] = "InviteCodeInvalidOrTaken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnSystemMessage"] = 50021] = "CannotExecuteActionOnSystemMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExecuteActionOnThisChannelType"] = 50024] = "CannotExecuteActionOnThisChannelType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidOAuth2AccessToken"] = 50025] = "InvalidOAuth2AccessToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MissingRequiredOAuth2Scope"] = 50026] = "MissingRequiredOAuth2Scope";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidWebhookToken"] = 50027] = "InvalidWebhookToken";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRole"] = 50028] = "InvalidRole";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRecipients"] = 50033] = "InvalidRecipients";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OneOfTheMessagesProvidedWasTooOldForBulkDelete"] = 50034] = "OneOfTheMessagesProvidedWasTooOldForBulkDelete";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFormBodyOrContentType"] = 50035] = "InvalidFormBodyOrContentType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InviteAcceptedToGuildWithoutTheBotBeingIn"] = 50036] = "InviteAcceptedToGuildWithoutTheBotBeingIn";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActivityAction"] = 50039] = "InvalidActivityAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidAPIVersion"] = 50041] = "InvalidAPIVersion";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FileUploadedExceedsMaximumSize"] = 50045] = "FileUploadedExceedsMaximumSize";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidFileUploaded"] = 50046] = "InvalidFileUploaded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotSelfRedeemThisGift"] = 50054] = "CannotSelfRedeemThisGift";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidGuild"] = 50055] = "InvalidGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidSKU"] = 50057] = "InvalidSKU";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidRequestOrigin"] = 50067] = "InvalidRequestOrigin";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidMessageType"] = 50068] = "InvalidMessageType";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PaymentSourceRequiredToRedeemGift"] = 50070] = "PaymentSourceRequiredToRedeemGift";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotModifyASystemWebhook"] = 50073] = "CannotModifyASystemWebhook";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteChannelRequiredForCommunityGuilds"] = 50074] = "CannotDeleteChannelRequiredForCommunityGuilds";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditStickersWithinMessage"] = 50080] = "CannotEditStickersWithinMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidStickerSent"] = 50081] = "InvalidStickerSent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidActionOnArchivedThread"] = 50083] = "InvalidActionOnArchivedThread";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidThreadNotificationSettings"] = 50084] = "InvalidThreadNotificationSettings";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ParameterEarlierThanCreation"] = 50085] = "ParameterEarlierThanCreation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CommunityServerChannelsMustBeTextChannels"] = 50086] = "CommunityServerChannelsMustBeTextChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor"] = 50091] = "TheEntityTypeOfTheEventIsDifferentFromTheEntityYouAreTryingToStartTheEventFor";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNotAvailableInYourLocation"] = 50095] = "ServerNotAvailableInYourLocation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMonetizationEnabledToPerformThisAction"] = 50097] = "ServerNeedsMonetizationEnabledToPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ServerNeedsMoreBoostsToPerformThisAction"] = 50101] = "ServerNeedsMoreBoostsToPerformThisAction";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["RequestBodyContainsInvalidJSON"] = 50109] = "RequestBodyContainsInvalidJSON";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileIsInvalid"] = 50110] = "ProvidedFileIsInvalid";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileTypeIsInvalid"] = 50123] = "ProvidedFileTypeIsInvalid";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDurationExceedsMaximumLength"] = 50124] = "ProvidedFileDurationExceedsMaximumLength";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnerCannotBePendingMember"] = 50131] = "OwnerCannotBePendingMember";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["OwnershipCannotBeMovedToABotUser"] = 50132] = "OwnershipCannotBeMovedToABotUser";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToResizeAssetBelowTheMinimumSize"] = 50138] = "FailedToResizeAssetBelowTheMinimumSize";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji"] = 50144] = "CannotMixSubscriptionAndNonSubscriptionRolesForAnEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotConvertBetweenPremiumEmojiAndNormalEmoji"] = 50145] = "CannotConvertBetweenPremiumEmojiAndNormalEmoji";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedFileNotFound"] = 50146] = "UploadedFileNotFound";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["SpecifiedEmojiIsInvalid"] = 50151] = "SpecifiedEmojiIsInvalid";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesDoNotSupportAdditionalContent"] = 50159] = "VoiceMessagesDoNotSupportAdditionalContent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveASingleAudioAttachment"] = 50160] = "VoiceMessagesMustHaveASingleAudioAttachment";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesMustHaveSupportingMetadata"] = 50161] = "VoiceMessagesMustHaveSupportingMetadata";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["VoiceMessagesCannotBeEdited"] = 50162] = "VoiceMessagesCannotBeEdited";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotDeleteGuildSubscriptionIntegration"] = 50163] = "CannotDeleteGuildSubscriptionIntegration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouCannotSendVoiceMessagesInThisChannel"] = 50173] = "YouCannotSendVoiceMessagesInThisChannel";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheUserAccountMustFirstBeVerified"] = 50178] = "TheUserAccountMustFirstBeVerified";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ProvidedFileDoesNotHaveAValidDuration"] = 50192] = "ProvidedFileDoesNotHaveAValidDuration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["YouDoNotHavePermissionToSendThisSticker"] = 50600] = "YouDoNotHavePermissionToSendThisSticker";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TwoFactorAuthenticationIsRequired"] = 60003] = "TwoFactorAuthenticationIsRequired";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["NoUsersWithDiscordTagExist"] = 80004] = "NoUsersWithDiscordTagExist";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ReactionWasBlocked"] = 90001] = "ReactionWasBlocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UserCannotUseBurstReactions"] = 90002] = "UserCannotUseBurstReactions";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ApplicationNotYetAvailable"] = 110001] = "ApplicationNotYetAvailable";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["APIResourceOverloaded"] = 130000] = "APIResourceOverloaded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TheStageIsAlreadyOpen"] = 150006] = "TheStageIsAlreadyOpen";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotReplyWithoutPermissionToReadMessageHistory"] = 160002] = "CannotReplyWithoutPermissionToReadMessageHistory";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadAlreadyCreatedForMessage"] = 160004] = "ThreadAlreadyCreatedForMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["ThreadLocked"] = 160005] = "ThreadLocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveThreads"] = 160006] = "MaximumActiveThreads";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MaximumActiveAnnouncementThreads"] = 160007] = "MaximumActiveAnnouncementThreads";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidJSONForUploadedLottieFile"] = 170001] = "InvalidJSONForUploadedLottieFile";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["UploadedLottiesCannotContainRasterizedImages"] = 170002] = "UploadedLottiesCannotContainRasterizedImages";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerMaximumFramerateExceeded"] = 170003] = "StickerMaximumFramerateExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFrameCountExceedsMaximumOf1000Frames"] = 170004] = "StickerFrameCountExceedsMaximumOf1000Frames";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["LottieAnimationMaximumDimensionsExceeded"] = 170005] = "LottieAnimationMaximumDimensionsExceeded";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerFramerateIsTooSmallOrTooLarge"] = 170006] = "StickerFramerateIsTooSmallOrTooLarge";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["StickerAnimationDurationExceedsMaximumOf5Seconds"] = 170007] = "StickerAnimationDurationExceedsMaximumOf5Seconds";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateAFinishedEvent"] = 180000] = "CannotUpdateAFinishedEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToCreateStageNeededForStageEvent"] = 180002] = "FailedToCreateStageNeededForStageEvent";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageWasBlockedByAutomaticModeration"] = 200000] = "MessageWasBlockedByAutomaticModeration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["TitleWasBlockedByAutomaticModeration"] = 200001] = "TitleWasBlockedByAutomaticModeration";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId"] = 220001] = "WebhooksPostedToForumChannelsMustHaveAThreadNameOrThreadId";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId"] = 220002] = "WebhooksPostedToForumChannelsCannotHaveBothAThreadNameAndThreadId";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhooksCanOnlyCreateThreadsInForumChannels"] = 220003] = "WebhooksCanOnlyCreateThreadsInForumChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["WebhookServicesCannotBeUsedInForumChannels"] = 220004] = "WebhookServicesCannotBeUsedInForumChannels";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["MessageBlockedByHarmfulLinksFilter"] = 240000] = "MessageBlockedByHarmfulLinksFilter";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEnableOnboardingRequirementsAreNotMet"] = 350000] = "CannotEnableOnboardingRequirementsAreNotMet";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUpdateOnboardingWhileBelowRequirements"] = 350001] = "CannotUpdateOnboardingWhileBelowRequirements";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["AccessToFileUploadsHasBeenLimitedForThisGuild"] = 400001] = "AccessToFileUploadsHasBeenLimitedForThisGuild";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["FailedToBanUsers"] = 500000] = "FailedToBanUsers";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollVotingBlocked"] = 520000] = "PollVotingBlocked";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["PollExpired"] = 520001] = "PollExpired";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["InvalidChannelTypeForPollCreation"] = 520002] = "InvalidChannelTypeForPollCreation";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotEditAPollMessage"] = 520003] = "CannotEditAPollMessage";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotUseAnEmojiIncludedWithThePoll"] = 520004] = "CannotUseAnEmojiIncludedWithThePoll";
-    RESTJSONErrorCodes2[RESTJSONErrorCodes2["CannotExpireANonPollMessage"] = 520006] = "CannotExpireANonPollMessage";
-  })(RESTJSONErrorCodes || (exports.RESTJSONErrorCodes = RESTJSONErrorCodes = {}));
-  var Locale;
-  (function(Locale2) {
-    Locale2["Indonesian"] = "id";
-    Locale2["EnglishUS"] = "en-US";
-    Locale2["EnglishGB"] = "en-GB";
-    Locale2["Bulgarian"] = "bg";
-    Locale2["ChineseCN"] = "zh-CN";
-    Locale2["ChineseTW"] = "zh-TW";
-    Locale2["Croatian"] = "hr";
-    Locale2["Czech"] = "cs";
-    Locale2["Danish"] = "da";
-    Locale2["Dutch"] = "nl";
-    Locale2["Finnish"] = "fi";
-    Locale2["French"] = "fr";
-    Locale2["German"] = "de";
-    Locale2["Greek"] = "el";
-    Locale2["Hindi"] = "hi";
-    Locale2["Hungarian"] = "hu";
-    Locale2["Italian"] = "it";
-    Locale2["Japanese"] = "ja";
-    Locale2["Korean"] = "ko";
-    Locale2["Lithuanian"] = "lt";
-    Locale2["Norwegian"] = "no";
-    Locale2["Polish"] = "pl";
-    Locale2["PortugueseBR"] = "pt-BR";
-    Locale2["Romanian"] = "ro";
-    Locale2["Russian"] = "ru";
-    Locale2["SpanishES"] = "es-ES";
-    Locale2["SpanishLATAM"] = "es-419";
-    Locale2["Swedish"] = "sv-SE";
-    Locale2["Thai"] = "th";
-    Locale2["Turkish"] = "tr";
-    Locale2["Ukrainian"] = "uk";
-    Locale2["Vietnamese"] = "vi";
-  })(Locale || (exports.Locale = Locale = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/channel.js
-var require_channel6 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.ReactionType = undefined;
-  var ReactionType;
-  (function(ReactionType2) {
-    ReactionType2[ReactionType2["Normal"] = 0] = "Normal";
-    ReactionType2[ReactionType2["Super"] = 1] = "Super";
-  })(ReactionType || (exports.ReactionType = ReactionType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/monetization.js
-var require_monetization6 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.EntitlementOwnerType = undefined;
-  var EntitlementOwnerType;
-  (function(EntitlementOwnerType2) {
-    EntitlementOwnerType2[EntitlementOwnerType2["Guild"] = 1] = "Guild";
-    EntitlementOwnerType2[EntitlementOwnerType2["User"] = 2] = "User";
-  })(EntitlementOwnerType || (exports.EntitlementOwnerType = EntitlementOwnerType = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rest/v10/index.js
-var require_v1015 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.OAuth2Routes = exports.RouteBases = exports.CDNRoutes = exports.ImageFormat = exports.StickerPackApplicationId = exports.Routes = exports.APIVersion = undefined;
-  var internals_1 = require_internals3();
-  __exportStar(require_common8(), exports);
-  __exportStar(require_channel6(), exports);
-  __exportStar(require_monetization6(), exports);
-  exports.APIVersion = "10";
-  exports.Routes = {
-    applicationRoleConnectionMetadata(applicationId) {
-      return `/applications/${applicationId}/role-connections/metadata`;
-    },
-    guildAutoModerationRules(guildId) {
-      return `/guilds/${guildId}/auto-moderation/rules`;
-    },
-    guildAutoModerationRule(guildId, ruleId) {
-      return `/guilds/${guildId}/auto-moderation/rules/${ruleId}`;
-    },
-    guildAuditLog(guildId) {
-      return `/guilds/${guildId}/audit-logs`;
-    },
-    channel(channelId) {
-      return `/channels/${channelId}`;
-    },
-    channelMessages(channelId) {
-      return `/channels/${channelId}/messages`;
-    },
-    channelMessage(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}`;
-    },
-    channelMessageCrosspost(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}/crosspost`;
-    },
-    channelMessageOwnReaction(channelId, messageId, emoji) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/@me`;
-    },
-    channelMessageUserReaction(channelId, messageId, emoji, userId) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}/${userId}`;
-    },
-    channelMessageReaction(channelId, messageId, emoji) {
-      return `/channels/${channelId}/messages/${messageId}/reactions/${emoji}`;
-    },
-    channelMessageAllReactions(channelId, messageId) {
-      return `/channels/${channelId}/messages/${messageId}/reactions`;
-    },
-    channelBulkDelete(channelId) {
-      return `/channels/${channelId}/messages/bulk-delete`;
-    },
-    channelPermission(channelId, overwriteId) {
-      return `/channels/${channelId}/permissions/${overwriteId}`;
-    },
-    channelInvites(channelId) {
-      return `/channels/${channelId}/invites`;
-    },
-    channelFollowers(channelId) {
-      return `/channels/${channelId}/followers`;
-    },
-    channelTyping(channelId) {
-      return `/channels/${channelId}/typing`;
-    },
-    channelMessagesPins(channelId) {
-      return `/channels/${channelId}/messages/pins`;
-    },
-    channelMessagesPin(channelId, messageId) {
-      return `/channels/${channelId}/messages/pins/${messageId}`;
-    },
-    channelPins(channelId) {
-      return `/channels/${channelId}/pins`;
-    },
-    channelPin(channelId, messageId) {
-      return `/channels/${channelId}/pins/${messageId}`;
-    },
-    channelRecipient(channelId, userId) {
-      return `/channels/${channelId}/recipients/${userId}`;
-    },
-    guildEmojis(guildId) {
-      return `/guilds/${guildId}/emojis`;
-    },
-    guildEmoji(guildId, emojiId) {
-      return `/guilds/${guildId}/emojis/${emojiId}`;
-    },
-    guilds() {
-      return "/guilds";
-    },
-    guild(guildId) {
-      return `/guilds/${guildId}`;
-    },
-    guildPreview(guildId) {
-      return `/guilds/${guildId}/preview`;
-    },
-    guildChannels(guildId) {
-      return `/guilds/${guildId}/channels`;
-    },
-    guildMember(guildId, userId = "@me") {
-      return `/guilds/${guildId}/members/${userId}`;
-    },
-    guildMembers(guildId) {
-      return `/guilds/${guildId}/members`;
-    },
-    guildMembersSearch(guildId) {
-      return `/guilds/${guildId}/members/search`;
-    },
-    guildCurrentMemberNickname(guildId) {
-      return `/guilds/${guildId}/members/@me/nick`;
-    },
-    guildMemberRole(guildId, memberId, roleId) {
-      return `/guilds/${guildId}/members/${memberId}/roles/${roleId}`;
-    },
-    guildMFA(guildId) {
-      return `/guilds/${guildId}/mfa`;
-    },
-    guildBans(guildId) {
-      return `/guilds/${guildId}/bans`;
-    },
-    guildBan(guildId, userId) {
-      return `/guilds/${guildId}/bans/${userId}`;
-    },
-    guildRoles(guildId) {
-      return `/guilds/${guildId}/roles`;
-    },
-    guildRole(guildId, roleId) {
-      return `/guilds/${guildId}/roles/${roleId}`;
-    },
-    guildPrune(guildId) {
-      return `/guilds/${guildId}/prune`;
-    },
-    guildVoiceRegions(guildId) {
-      return `/guilds/${guildId}/regions`;
-    },
-    guildInvites(guildId) {
-      return `/guilds/${guildId}/invites`;
-    },
-    guildIntegrations(guildId) {
-      return `/guilds/${guildId}/integrations`;
-    },
-    guildIntegration(guildId, integrationId) {
-      return `/guilds/${guildId}/integrations/${integrationId}`;
-    },
-    guildWidgetSettings(guildId) {
-      return `/guilds/${guildId}/widget`;
-    },
-    guildWidgetJSON(guildId) {
-      return `/guilds/${guildId}/widget.json`;
-    },
-    guildVanityUrl(guildId) {
-      return `/guilds/${guildId}/vanity-url`;
-    },
-    guildWidgetImage(guildId) {
-      return `/guilds/${guildId}/widget.png`;
-    },
-    invite(code) {
-      return `/invites/${code}`;
-    },
-    template(code) {
-      return `/guilds/templates/${code}`;
-    },
-    guildTemplates(guildId) {
-      return `/guilds/${guildId}/templates`;
-    },
-    guildTemplate(guildId, code) {
-      return `/guilds/${guildId}/templates/${code}`;
-    },
-    pollAnswerVoters(channelId, messageId, answerId) {
-      return `/channels/${channelId}/polls/${messageId}/answers/${answerId}`;
-    },
-    expirePoll(channelId, messageId) {
-      return `/channels/${channelId}/polls/${messageId}/expire`;
-    },
-    threads(parentId, messageId) {
-      const parts = ["", "channels", parentId];
-      if (messageId)
-        parts.push("messages", messageId);
-      parts.push("threads");
-      return parts.join("/");
-    },
-    guildActiveThreads(guildId) {
-      return `/guilds/${guildId}/threads/active`;
-    },
-    channelThreads(channelId, archivedStatus) {
-      return `/channels/${channelId}/threads/archived/${archivedStatus}`;
-    },
-    channelJoinedArchivedThreads(channelId) {
-      return `/channels/${channelId}/users/@me/threads/archived/private`;
-    },
-    threadMembers(threadId, userId) {
-      const parts = ["", "channels", threadId, "thread-members"];
-      if (userId)
-        parts.push(userId);
-      return parts.join("/");
-    },
-    user(userId = "@me") {
-      return `/users/${userId}`;
-    },
-    userApplicationRoleConnection(applicationId) {
-      return `/users/@me/applications/${applicationId}/role-connection`;
-    },
-    userGuilds() {
-      return `/users/@me/guilds`;
-    },
-    userGuildMember(guildId) {
-      return `/users/@me/guilds/${guildId}/member`;
-    },
-    userGuild(guildId) {
-      return `/users/@me/guilds/${guildId}`;
-    },
-    userChannels() {
-      return `/users/@me/channels`;
-    },
-    userConnections() {
-      return `/users/@me/connections`;
-    },
-    voiceRegions() {
-      return `/voice/regions`;
-    },
-    channelWebhooks(channelId) {
-      return `/channels/${channelId}/webhooks`;
-    },
-    guildWebhooks(guildId) {
-      return `/guilds/${guildId}/webhooks`;
-    },
-    webhook(webhookId, webhookToken) {
-      const parts = ["", "webhooks", webhookId];
-      if (webhookToken)
-        parts.push(webhookToken);
-      return parts.join("/");
-    },
-    webhookMessage(webhookId, webhookToken, messageId = "@original") {
-      return `/webhooks/${webhookId}/${webhookToken}/messages/${messageId}`;
-    },
-    webhookPlatform(webhookId, webhookToken, platform) {
-      return `/webhooks/${webhookId}/${webhookToken}/${platform}`;
-    },
-    gateway() {
-      return `/gateway`;
-    },
-    gatewayBot() {
-      return `/gateway/bot`;
-    },
-    oauth2CurrentApplication() {
-      return `/oauth2/applications/@me`;
-    },
-    oauth2CurrentAuthorization() {
-      return `/oauth2/@me`;
-    },
-    oauth2Authorization() {
-      return `/oauth2/authorize`;
-    },
-    oauth2TokenExchange() {
-      return `/oauth2/token`;
-    },
-    oauth2TokenRevocation() {
-      return `/oauth2/token/revoke`;
-    },
-    applicationCommands(applicationId) {
-      return `/applications/${applicationId}/commands`;
-    },
-    applicationCommand(applicationId, commandId) {
-      return `/applications/${applicationId}/commands/${commandId}`;
-    },
-    applicationGuildCommands(applicationId, guildId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands`;
-    },
-    applicationGuildCommand(applicationId, guildId, commandId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}`;
-    },
-    interactionCallback(interactionId, interactionToken) {
-      return `/interactions/${interactionId}/${interactionToken}/callback`;
-    },
-    guildMemberVerification(guildId) {
-      return `/guilds/${guildId}/member-verification`;
-    },
-    guildVoiceState(guildId, userId = "@me") {
-      return `/guilds/${guildId}/voice-states/${userId}`;
-    },
-    guildApplicationCommandsPermissions(applicationId, guildId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/permissions`;
-    },
-    applicationCommandPermissions(applicationId, guildId, commandId) {
-      return `/applications/${applicationId}/guilds/${guildId}/commands/${commandId}/permissions`;
-    },
-    guildWelcomeScreen(guildId) {
-      return `/guilds/${guildId}/welcome-screen`;
-    },
-    stageInstances() {
-      return `/stage-instances`;
-    },
-    stageInstance(channelId) {
-      return `/stage-instances/${channelId}`;
-    },
-    sticker(stickerId) {
-      return `/stickers/${stickerId}`;
-    },
-    stickerPacks() {
-      return "/sticker-packs";
-    },
-    stickerPack(packId) {
-      return `/sticker-packs/${packId}`;
-    },
-    nitroStickerPacks() {
-      return "/sticker-packs";
-    },
-    guildStickers(guildId) {
-      return `/guilds/${guildId}/stickers`;
-    },
-    guildSticker(guildId, stickerId) {
-      return `/guilds/${guildId}/stickers/${stickerId}`;
-    },
-    guildScheduledEvents(guildId) {
-      return `/guilds/${guildId}/scheduled-events`;
-    },
-    guildScheduledEvent(guildId, guildScheduledEventId) {
-      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}`;
-    },
-    guildScheduledEventUsers(guildId, guildScheduledEventId) {
-      return `/guilds/${guildId}/scheduled-events/${guildScheduledEventId}/users`;
-    },
-    guildOnboarding(guildId) {
-      return `/guilds/${guildId}/onboarding`;
-    },
-    guildIncidentActions(guildId) {
-      return `/guilds/${guildId}/incident-actions`;
-    },
-    currentApplication() {
-      return "/applications/@me";
-    },
-    entitlements(applicationId) {
-      return `/applications/${applicationId}/entitlements`;
-    },
-    entitlement(applicationId, entitlementId) {
-      return `/applications/${applicationId}/entitlements/${entitlementId}`;
-    },
-    skus(applicationId) {
-      return `/applications/${applicationId}/skus`;
-    },
-    guildBulkBan(guildId) {
-      return `/guilds/${guildId}/bulk-ban`;
-    },
-    consumeEntitlement(applicationId, entitlementId) {
-      return `/applications/${applicationId}/entitlements/${entitlementId}/consume`;
-    },
-    applicationEmojis(applicationId) {
-      return `/applications/${applicationId}/emojis`;
-    },
-    applicationEmoji(applicationId, emojiId) {
-      return `/applications/${applicationId}/emojis/${emojiId}`;
-    },
-    skuSubscriptions(skuId) {
-      return `/skus/${skuId}/subscriptions`;
-    },
-    skuSubscription(skuId, subscriptionId) {
-      return `/skus/${skuId}/subscriptions/${subscriptionId}`;
-    },
-    sendSoundboardSound(channelId) {
-      return `/channels/${channelId}/send-soundboard-sound`;
-    },
-    soundboardDefaultSounds() {
-      return "/soundboard-default-sounds";
-    },
-    guildSoundboardSounds(guildId) {
-      return `/guilds/${guildId}/soundboard-sounds`;
-    },
-    guildSoundboardSound(guildId, soundId) {
-      return `/guilds/${guildId}/soundboard-sounds/${soundId}`;
-    }
-  };
-  for (const [key, fn] of Object.entries(exports.Routes)) {
-    exports.Routes[key] = (...args) => {
-      const escaped = args.map((arg) => {
-        if (arg) {
-          if (internals_1.urlSafeCharacters.test(String(arg))) {
-            return arg;
-          }
-          return encodeURIComponent(arg);
-        }
-        return arg;
-      });
-      return fn.call(null, ...escaped);
-    };
-  }
-  Object.freeze(exports.Routes);
-  exports.StickerPackApplicationId = "710982414301790216";
-  var ImageFormat;
-  (function(ImageFormat2) {
-    ImageFormat2["JPEG"] = "jpeg";
-    ImageFormat2["PNG"] = "png";
-    ImageFormat2["WebP"] = "webp";
-    ImageFormat2["GIF"] = "gif";
-    ImageFormat2["Lottie"] = "json";
-  })(ImageFormat || (exports.ImageFormat = ImageFormat = {}));
-  exports.CDNRoutes = {
-    emoji(emojiId, format) {
-      return `/emojis/${emojiId}.${format}`;
-    },
-    guildIcon(guildId, guildIcon, format) {
-      return `/icons/${guildId}/${guildIcon}.${format}`;
-    },
-    guildSplash(guildId, guildSplash, format) {
-      return `/splashes/${guildId}/${guildSplash}.${format}`;
-    },
-    guildDiscoverySplash(guildId, guildDiscoverySplash, format) {
-      return `/discovery-splashes/${guildId}/${guildDiscoverySplash}.${format}`;
-    },
-    guildBanner(guildId, guildBanner, format) {
-      return `/banners/${guildId}/${guildBanner}.${format}`;
-    },
-    userBanner(userId, userBanner, format) {
-      return `/banners/${userId}/${userBanner}.${format}`;
-    },
-    defaultUserAvatar(index) {
-      return `/embed/avatars/${index}.png`;
-    },
-    userAvatar(userId, userAvatar, format) {
-      return `/avatars/${userId}/${userAvatar}.${format}`;
-    },
-    guildMemberAvatar(guildId, userId, memberAvatar, format) {
-      return `/guilds/${guildId}/users/${userId}/avatars/${memberAvatar}.${format}`;
-    },
-    userAvatarDecoration(userId, userAvatarDecoration) {
-      return `/avatar-decorations/${userId}/${userAvatarDecoration}.png`;
-    },
-    avatarDecoration(avatarDecorationDataAsset) {
-      return `/avatar-decoration-presets/${avatarDecorationDataAsset}.png`;
-    },
-    applicationIcon(applicationId, applicationIcon, format) {
-      return `/app-icons/${applicationId}/${applicationIcon}.${format}`;
-    },
-    applicationCover(applicationId, applicationCoverImage, format) {
-      return `/app-icons/${applicationId}/${applicationCoverImage}.${format}`;
-    },
-    applicationAsset(applicationId, applicationAssetId, format) {
-      return `/app-assets/${applicationId}/${applicationAssetId}.${format}`;
-    },
-    achievementIcon(applicationId, achievementId, achievementIconHash, format) {
-      return `/app-assets/${applicationId}/achievements/${achievementId}/icons/${achievementIconHash}.${format}`;
-    },
-    stickerPackBanner(stickerPackBannerAssetId, format) {
-      return `/app-assets/${exports.StickerPackApplicationId}/store/${stickerPackBannerAssetId}.${format}`;
-    },
-    storePageAsset(applicationId, assetId, format = ImageFormat.PNG) {
-      return `/app-assets/${applicationId}/store/${assetId}.${format}`;
-    },
-    teamIcon(teamId, teamIcon, format) {
-      return `/team-icons/${teamId}/${teamIcon}.${format}`;
-    },
-    sticker(stickerId, format) {
-      return `/stickers/${stickerId}.${format}`;
-    },
-    roleIcon(roleId, roleIcon, format) {
-      return `/role-icons/${roleId}/${roleIcon}.${format}`;
-    },
-    guildScheduledEventCover(guildScheduledEventId, guildScheduledEventCoverImage, format) {
-      return `/guild-events/${guildScheduledEventId}/${guildScheduledEventCoverImage}.${format}`;
-    },
-    guildMemberBanner(guildId, userId, guildMemberBanner, format) {
-      return `/guilds/${guildId}/users/${userId}/banners/${guildMemberBanner}.${format}`;
-    },
-    soundboardSound(soundId) {
-      return `/soundboard-sounds/${soundId}`;
-    },
-    guildTagBadge(guildId, guildTagBadge, format) {
-      return `/guild-tag-badges/${guildId}/${guildTagBadge}.${format}`;
-    }
-  };
-  for (const [key, fn] of Object.entries(exports.CDNRoutes)) {
-    exports.CDNRoutes[key] = (...args) => {
-      const escaped = args.map((arg) => {
-        if (arg) {
-          if (internals_1.urlSafeCharacters.test(String(arg))) {
-            return arg;
-          }
-          return encodeURIComponent(arg);
-        }
-        return arg;
-      });
-      return fn.call(null, ...escaped);
-    };
-  }
-  Object.freeze(exports.CDNRoutes);
-  exports.RouteBases = {
-    api: `https://discord.com/api/v${exports.APIVersion}`,
-    cdn: "https://cdn.discordapp.com",
-    media: "https://media.discordapp.net",
-    invite: "https://discord.gg",
-    template: "https://discord.new",
-    gift: "https://discord.gift",
-    scheduledEvent: "https://discord.com/events"
-  };
-  Object.freeze(exports.RouteBases);
-  exports.OAuth2Routes = {
-    authorizationURL: `${exports.RouteBases.api}${exports.Routes.oauth2Authorization()}`,
-    tokenURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenExchange()}`,
-    tokenRevocationURL: `${exports.RouteBases.api}${exports.Routes.oauth2TokenRevocation()}`
-  };
-  Object.freeze(exports.OAuth2Routes);
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/common.js
-var require_common9 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RPCCloseEventCodes = exports.RPCErrorCodes = exports.RelationshipType = exports.VoiceConnectionStates = exports.RPCVoiceShortcutKeyComboKeyType = exports.RPCVoiceSettingsModeType = exports.RPCDeviceType = undefined;
-  var RPCDeviceType;
-  (function(RPCDeviceType2) {
-    RPCDeviceType2["AudioInput"] = "audioinput";
-    RPCDeviceType2["AudioOutput"] = "audiooutput";
-    RPCDeviceType2["VideoInput"] = "videoinput";
-  })(RPCDeviceType || (exports.RPCDeviceType = RPCDeviceType = {}));
-  var RPCVoiceSettingsModeType;
-  (function(RPCVoiceSettingsModeType2) {
-    RPCVoiceSettingsModeType2["PushToTalk"] = "PUSH_TO_TALK";
-    RPCVoiceSettingsModeType2["VoiceActivity"] = "VOICE_ACTIVITY";
-  })(RPCVoiceSettingsModeType || (exports.RPCVoiceSettingsModeType = RPCVoiceSettingsModeType = {}));
-  var RPCVoiceShortcutKeyComboKeyType;
-  (function(RPCVoiceShortcutKeyComboKeyType2) {
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardKey"] = 0] = "KeyboardKey";
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["MouseButton"] = 1] = "MouseButton";
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["KeyboardModifierKey"] = 2] = "KeyboardModifierKey";
-    RPCVoiceShortcutKeyComboKeyType2[RPCVoiceShortcutKeyComboKeyType2["GamepadButton"] = 3] = "GamepadButton";
-  })(RPCVoiceShortcutKeyComboKeyType || (exports.RPCVoiceShortcutKeyComboKeyType = RPCVoiceShortcutKeyComboKeyType = {}));
-  var VoiceConnectionStates;
-  (function(VoiceConnectionStates2) {
-    VoiceConnectionStates2["Disconnected"] = "DISCONNECTED";
-    VoiceConnectionStates2["AwaitingEndpoint"] = "AWAITING_ENDPOINT";
-    VoiceConnectionStates2["Authenticating"] = "AUTHENTICATING";
-    VoiceConnectionStates2["Connecting"] = "CONNECTING";
-    VoiceConnectionStates2["Connected"] = "CONNECTED";
-    VoiceConnectionStates2["VoiceDisconnected"] = "VOICE_DISCONNECTED";
-    VoiceConnectionStates2["VoiceConnecting"] = "VOICE_CONNECTING";
-    VoiceConnectionStates2["VoiceConnected"] = "VOICE_CONNECTED";
-    VoiceConnectionStates2["NoRoute"] = "NO_ROUTE";
-    VoiceConnectionStates2["IceChecking"] = "ICE_CHECKING";
-  })(VoiceConnectionStates || (exports.VoiceConnectionStates = VoiceConnectionStates = {}));
-  var RelationshipType;
-  (function(RelationshipType2) {
-    RelationshipType2[RelationshipType2["None"] = 0] = "None";
-    RelationshipType2[RelationshipType2["Friend"] = 1] = "Friend";
-    RelationshipType2[RelationshipType2["Blocked"] = 2] = "Blocked";
-    RelationshipType2[RelationshipType2["PendingIncoming"] = 3] = "PendingIncoming";
-    RelationshipType2[RelationshipType2["PendingOutgoing"] = 4] = "PendingOutgoing";
-    RelationshipType2[RelationshipType2["Implicit"] = 5] = "Implicit";
-  })(RelationshipType || (exports.RelationshipType = RelationshipType = {}));
-  var RPCErrorCodes;
-  (function(RPCErrorCodes2) {
-    RPCErrorCodes2[RPCErrorCodes2["UnknownError"] = 1000] = "UnknownError";
-    RPCErrorCodes2[RPCErrorCodes2["ServiceUnavailable"] = 1001] = "ServiceUnavailable";
-    RPCErrorCodes2[RPCErrorCodes2["TransactionAborted"] = 1002] = "TransactionAborted";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidPayload"] = 4000] = "InvalidPayload";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidCommand"] = 4002] = "InvalidCommand";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidGuild"] = 4003] = "InvalidGuild";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidEvent"] = 4004] = "InvalidEvent";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidChannel"] = 4005] = "InvalidChannel";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidPermissions"] = 4006] = "InvalidPermissions";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidClientId"] = 4007] = "InvalidClientId";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidOrigin"] = 4008] = "InvalidOrigin";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidToken"] = 4009] = "InvalidToken";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidUser"] = 4010] = "InvalidUser";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidInvite"] = 4011] = "InvalidInvite";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidActivityJoinRequest"] = 4012] = "InvalidActivityJoinRequest";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidEntitlement"] = 4013] = "InvalidEntitlement";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidGiftCode"] = 4014] = "InvalidGiftCode";
-    RPCErrorCodes2[RPCErrorCodes2["OAuth2Error"] = 5000] = "OAuth2Error";
-    RPCErrorCodes2[RPCErrorCodes2["SelectChannelTimedOut"] = 5001] = "SelectChannelTimedOut";
-    RPCErrorCodes2[RPCErrorCodes2["GetGuildTimedOut"] = 5002] = "GetGuildTimedOut";
-    RPCErrorCodes2[RPCErrorCodes2["SelectVoiceForceRequired"] = 5003] = "SelectVoiceForceRequired";
-    RPCErrorCodes2[RPCErrorCodes2["CaptureShortcutAlreadyListening"] = 5004] = "CaptureShortcutAlreadyListening";
-    RPCErrorCodes2[RPCErrorCodes2["InvalidActivitySecret"] = 5005] = "InvalidActivitySecret";
-    RPCErrorCodes2[RPCErrorCodes2["NoEligibleActivity"] = 5006] = "NoEligibleActivity";
-    RPCErrorCodes2[RPCErrorCodes2["PurchaseCanceled"] = 5007] = "PurchaseCanceled";
-    RPCErrorCodes2[RPCErrorCodes2["PurchaseError"] = 5008] = "PurchaseError";
-    RPCErrorCodes2[RPCErrorCodes2["UnauthorizedForAchievement"] = 5009] = "UnauthorizedForAchievement";
-    RPCErrorCodes2[RPCErrorCodes2["RateLimited"] = 5010] = "RateLimited";
-  })(RPCErrorCodes || (exports.RPCErrorCodes = RPCErrorCodes = {}));
-  var RPCCloseEventCodes;
-  (function(RPCCloseEventCodes2) {
-    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseNormal"] = 1000] = "CloseNormal";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseUnsupported"] = 1003] = "CloseUnsupported";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["CloseAbnormal"] = 1006] = "CloseAbnormal";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidClientId"] = 4000] = "InvalidClientId";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidOrigin"] = 4001] = "InvalidOrigin";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["RateLimited"] = 4002] = "RateLimited";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["TokenRevoked"] = 4003] = "TokenRevoked";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidVersion"] = 4004] = "InvalidVersion";
-    RPCCloseEventCodes2[RPCCloseEventCodes2["InvalidEncoding"] = 4005] = "InvalidEncoding";
-  })(RPCCloseEventCodes || (exports.RPCCloseEventCodes = RPCCloseEventCodes = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/rpc/v10.js
-var require_v1016 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.RPCEvents = exports.RPCCommands = exports.RPCVersion = undefined;
-  __exportStar(require_common9(), exports);
-  exports.RPCVersion = "1";
-  var RPCCommands;
-  (function(RPCCommands2) {
-    RPCCommands2["AcceptActivityInvite"] = "ACCEPT_ACTIVITY_INVITE";
-    RPCCommands2["ActivityInviteUser"] = "ACTIVITY_INVITE_USER";
-    RPCCommands2["Authenticate"] = "AUTHENTICATE";
-    RPCCommands2["Authorize"] = "AUTHORIZE";
-    RPCCommands2["BraintreePopupBridgeCallback"] = "BRAINTREE_POPUP_BRIDGE_CALLBACK";
-    RPCCommands2["BrowserHandoff"] = "BROWSER_HANDOFF";
-    RPCCommands2["CloseActivityJoinRequest"] = "CLOSE_ACTIVITY_JOIN_REQUEST";
-    RPCCommands2["ConnectionsCallback"] = "CONNECTIONS_CALLBACK";
-    RPCCommands2["CreateChannelInvite"] = "CREATE_CHANNEL_INVITE";
-    RPCCommands2["DeepLink"] = "DEEP_LINK";
-    RPCCommands2["Dispatch"] = "DISPATCH";
-    RPCCommands2["GetApplicationTicket"] = "GET_APPLICATION_TICKET";
-    RPCCommands2["GetChannel"] = "GET_CHANNEL";
-    RPCCommands2["GetChannels"] = "GET_CHANNELS";
-    RPCCommands2["GetEntitlementTicket"] = "GET_ENTITLEMENT_TICKET";
-    RPCCommands2["GetEntitlements"] = "GET_ENTITLEMENTS";
-    RPCCommands2["GetGuild"] = "GET_GUILD";
-    RPCCommands2["GetGuilds"] = "GET_GUILDS";
-    RPCCommands2["GetImage"] = "GET_IMAGE";
-    RPCCommands2["GetNetworkingConfig"] = "GET_NETWORKING_CONFIG";
-    RPCCommands2["GetRelationships"] = "GET_RELATIONSHIPS";
-    RPCCommands2["GetSelectedVoiceChannel"] = "GET_SELECTED_VOICE_CHANNEL";
-    RPCCommands2["GetSkus"] = "GET_SKUS";
-    RPCCommands2["GetUser"] = "GET_USER";
-    RPCCommands2["GetVoiceSettings"] = "GET_VOICE_SETTINGS";
-    RPCCommands2["GiftCodeBrowser"] = "GIFT_CODE_BROWSER";
-    RPCCommands2["GuildTemplateBrowser"] = "GUILD_TEMPLATE_BROWSER";
-    RPCCommands2["InviteBrowser"] = "INVITE_BROWSER";
-    RPCCommands2["NetworkingCreateToken"] = "NETWORKING_CREATE_TOKEN";
-    RPCCommands2["NetworkingPeerMetrics"] = "NETWORKING_PEER_METRICS";
-    RPCCommands2["NetworkingSystemMetrics"] = "NETWORKING_SYSTEM_METRICS";
-    RPCCommands2["OpenOverlayActivityInvite"] = "OPEN_OVERLAY_ACTIVITY_INVITE";
-    RPCCommands2["OpenOverlayGuildInvite"] = "OPEN_OVERLAY_GUILD_INVITE";
-    RPCCommands2["OpenOverlayVoiceSettings"] = "OPEN_OVERLAY_VOICE_SETTINGS";
-    RPCCommands2["Overlay"] = "OVERLAY";
-    RPCCommands2["SelectTextChannel"] = "SELECT_TEXT_CHANNEL";
-    RPCCommands2["SelectVoiceChannel"] = "SELECT_VOICE_CHANNEL";
-    RPCCommands2["SendActivityJoinInvite"] = "SEND_ACTIVITY_JOIN_INVITE";
-    RPCCommands2["SetActivity"] = "SET_ACTIVITY";
-    RPCCommands2["SetCertifiedDevices"] = "SET_CERTIFIED_DEVICES";
-    RPCCommands2["SetOverlayLocked"] = "SET_OVERLAY_LOCKED";
-    RPCCommands2["SetUserVoiceSettings"] = "SET_USER_VOICE_SETTINGS";
-    RPCCommands2["SetUserVoiceSettings2"] = "SET_USER_VOICE_SETTINGS_2";
-    RPCCommands2["SetVoiceSettings"] = "SET_VOICE_SETTINGS";
-    RPCCommands2["SetVoiceSettings2"] = "SET_VOICE_SETTINGS_2";
-    RPCCommands2["StartPurchase"] = "START_PURCHASE";
-    RPCCommands2["Subscribe"] = "SUBSCRIBE";
-    RPCCommands2["Unsubscribe"] = "UNSUBSCRIBE";
-    RPCCommands2["ValidateApplication"] = "VALIDATE_APPLICATION";
-  })(RPCCommands || (exports.RPCCommands = RPCCommands = {}));
-  var RPCEvents;
-  (function(RPCEvents2) {
-    RPCEvents2["ActivityInvite"] = "ACTIVITY_INVITE";
-    RPCEvents2["ActivityJoin"] = "ACTIVITY_JOIN";
-    RPCEvents2["ActivityJoinRequest"] = "ACTIVITY_JOIN_REQUEST";
-    RPCEvents2["ActivitySpectate"] = "ACTIVITY_SPECTATE";
-    RPCEvents2["ChannelCreate"] = "CHANNEL_CREATE";
-    RPCEvents2["CurrentUserUpdate"] = "CURRENT_USER_UPDATE";
-    RPCEvents2["EntitlementCreate"] = "ENTITLEMENT_CREATE";
-    RPCEvents2["EntitlementDelete"] = "ENTITLEMENT_DELETE";
-    RPCEvents2["Error"] = "ERROR";
-    RPCEvents2["GameJoin"] = "GAME_JOIN";
-    RPCEvents2["GameSpectate"] = "GAME_SPECTATE";
-    RPCEvents2["GuildCreate"] = "GUILD_CREATE";
-    RPCEvents2["GuildStatus"] = "GUILD_STATUS";
-    RPCEvents2["MessageCreate"] = "MESSAGE_CREATE";
-    RPCEvents2["MessageDelete"] = "MESSAGE_DELETE";
-    RPCEvents2["MessageUpdate"] = "MESSAGE_UPDATE";
-    RPCEvents2["NotificationCreate"] = "NOTIFICATION_CREATE";
-    RPCEvents2["Overlay"] = "OVERLAY";
-    RPCEvents2["OverlayUpdate"] = "OVERLAY_UPDATE";
-    RPCEvents2["Ready"] = "READY";
-    RPCEvents2["RelationshipUpdate"] = "RELATIONSHIP_UPDATE";
-    RPCEvents2["SpeakingStart"] = "SPEAKING_START";
-    RPCEvents2["SpeakingStop"] = "SPEAKING_STOP";
-    RPCEvents2["VoiceChannelSelect"] = "VOICE_CHANNEL_SELECT";
-    RPCEvents2["VoiceConnectionStatus"] = "VOICE_CONNECTION_STATUS";
-    RPCEvents2["VoiceSettingsUpdate"] = "VOICE_SETTINGS_UPDATE";
-    RPCEvents2["VoiceSettingsUpdate2"] = "VOICE_SETTINGS_UPDATE_2";
-    RPCEvents2["VoiceStateCreate"] = "VOICE_STATE_CREATE";
-    RPCEvents2["VoiceStateDelete"] = "VOICE_STATE_DELETE";
-    RPCEvents2["VoiceStateUpdate"] = "VOICE_STATE_UPDATE";
-  })(RPCEvents || (exports.RPCEvents = RPCEvents = {}));
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/utils/v10.js
-var require_v1017 = __commonJS((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.isDMInteraction = isDMInteraction;
-  exports.isGuildInteraction = isGuildInteraction;
-  exports.isApplicationCommandDMInteraction = isApplicationCommandDMInteraction;
-  exports.isApplicationCommandGuildInteraction = isApplicationCommandGuildInteraction;
-  exports.isMessageComponentDMInteraction = isMessageComponentDMInteraction;
-  exports.isMessageComponentGuildInteraction = isMessageComponentGuildInteraction;
-  exports.isLinkButton = isLinkButton;
-  exports.isInteractionButton = isInteractionButton;
-  exports.isMessageComponentInteraction = isMessageComponentInteraction;
-  exports.isMessageComponentButtonInteraction = isMessageComponentButtonInteraction;
-  exports.isMessageComponentSelectMenuInteraction = isMessageComponentSelectMenuInteraction;
-  exports.isChatInputApplicationCommandInteraction = isChatInputApplicationCommandInteraction;
-  exports.isContextMenuApplicationCommandInteraction = isContextMenuApplicationCommandInteraction;
-  var index_1 = require_v1014();
-  function isDMInteraction(interaction) {
-    return Reflect.has(interaction, "user");
-  }
-  function isGuildInteraction(interaction) {
-    return Reflect.has(interaction, "guild_id");
-  }
-  function isApplicationCommandDMInteraction(interaction) {
-    return isDMInteraction(interaction);
-  }
-  function isApplicationCommandGuildInteraction(interaction) {
-    return isGuildInteraction(interaction);
-  }
-  function isMessageComponentDMInteraction(interaction) {
-    return isDMInteraction(interaction);
-  }
-  function isMessageComponentGuildInteraction(interaction) {
-    return isGuildInteraction(interaction);
-  }
-  function isLinkButton(component) {
-    return component.style === index_1.ButtonStyle.Link;
-  }
-  function isInteractionButton(component) {
-    return ![index_1.ButtonStyle.Link, index_1.ButtonStyle.Premium].includes(component.style);
-  }
-  function isMessageComponentInteraction(interaction) {
-    return interaction.type === index_1.InteractionType.MessageComponent;
-  }
-  function isMessageComponentButtonInteraction(interaction) {
-    return interaction.data.component_type === index_1.ComponentType.Button;
-  }
-  function isMessageComponentSelectMenuInteraction(interaction) {
-    return [
-      index_1.ComponentType.StringSelect,
-      index_1.ComponentType.UserSelect,
-      index_1.ComponentType.RoleSelect,
-      index_1.ComponentType.MentionableSelect,
-      index_1.ComponentType.ChannelSelect
-    ].includes(interaction.data.component_type);
-  }
-  function isChatInputApplicationCommandInteraction(interaction) {
-    return interaction.data.type === index_1.ApplicationCommandType.ChatInput;
-  }
-  function isContextMenuApplicationCommandInteraction(interaction) {
-    return interaction.data.type === index_1.ApplicationCommandType.Message || interaction.data.type === index_1.ApplicationCommandType.User;
-  }
-});
-
-// node_modules/@discordjs/ws/node_modules/discord-api-types/v10.js
-var require_v1018 = __commonJS((exports) => {
-  var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() {
-        return m[k];
-      } };
-    }
-    Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
-    if (k2 === undefined)
-      k2 = k;
-    o[k2] = m[k];
-  });
-  var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-    for (var p in m)
-      if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-        __createBinding(exports2, m, p);
-  };
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.Utils = undefined;
-  __exportStar(require_v1013(), exports);
-  __exportStar(require_globals3(), exports);
-  __exportStar(require_v1014(), exports);
-  __exportStar(require_v1015(), exports);
-  __exportStar(require_v1016(), exports);
-  __exportStar(require_internals3(), exports);
-  exports.Utils = require_v1017();
-});
-
 // node_modules/@discordjs/ws/dist/index.js
 var require_dist10 = __commonJS((exports, module) => {
   var __dirname = "C:\\Code\\Base\\JavaScript-TypeScript\\Templates\\Discord-Bot\\node_modules\\@discordjs\\ws\\dist";
@@ -33317,12 +30818,12 @@ var require_dist10 = __commonJS((exports, module) => {
   var import_util2 = require_dist();
   var import_async_queue2 = require_cjs2();
   var import_async_event_emitter = require_dist3();
-  var import_v102 = require_v1018();
+  var import_v102 = require_v106();
   var import_ws = __require("ws");
   var import_node_process = __toESM2(__require("process"));
   var import_collection4 = require_dist9();
   var import_util = require_dist();
-  var import_v10 = require_v1018();
+  var import_v10 = require_v106();
   var import_promises = __require("timers/promises");
   var import_collection3 = require_dist9();
   var import_async_queue = require_cjs2();
@@ -34159,7 +31660,7 @@ var require_dist10 = __commonJS((exports, module) => {
   var import_util3 = require_dist();
   var import_util4 = require_dist();
   var import_async_event_emitter2 = require_dist3();
-  var import_v103 = require_v1018();
+  var import_v103 = require_v106();
   (0, import_util4.polyfillDispose)();
   var WebSocketManager = class extends import_async_event_emitter2.AsyncEventEmitter {
     static {
@@ -34262,7 +31763,7 @@ var require_WebSocketShard = __commonJS((exports, module) => {
   var EventEmitter = __require("events");
   var process2 = __require("process");
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
-  var { GatewayIntentBits } = require_v1012();
+  var { GatewayIntentBits } = require_v106();
   var Status = require_Status();
   var WebSocketShardEvents = require_WebSocketShardEvents();
   var deprecationEmittedForImportant = false;
@@ -34776,7 +32277,7 @@ var require_PRESENCE_UPDATE = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ClientUser.js
 var require_ClientUser = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var User = require_User();
   var { resolveImage } = require_DataResolver();
 
@@ -35146,7 +32647,7 @@ var require_WebSocketManager = __commonJS((exports, module) => {
     CompressionMethod,
     CloseCodes
   } = require_dist10();
-  var { GatewayCloseCodes, GatewayDispatchEvents } = require_v1012();
+  var { GatewayCloseCodes, GatewayDispatchEvents } = require_v106();
   var WebSocketShard = require_WebSocketShard();
   var PacketHandlers = require_handlers();
   var { DiscordjsError, ErrorCodes } = require_errors();
@@ -35419,7 +32920,7 @@ var require_BaseGuildEmojiManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/ChannelManager.js
 var require_ChannelManager = __commonJS((exports, module) => {
   var process2 = __require("process");
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { BaseChannel } = require_BaseChannel();
   var { createChannel } = require_Channels();
@@ -35756,7 +33257,7 @@ var require_GuildPreviewEmoji = __commonJS((exports, module) => {
 var require_GuildPreview = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var Base = require_Base();
   var GuildPreviewEmoji = require_GuildPreviewEmoji();
   var { Sticker } = require_Sticker();
@@ -35842,7 +33343,7 @@ var require_GuildPreview = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/AutoModerationRuleManager.js
 var require_AutoModerationRuleManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var AutoModerationRule = require_AutoModerationRule();
 
@@ -35975,7 +33476,7 @@ var require_GuildBanManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var GuildBan = require_GuildBan();
@@ -36074,7 +33575,7 @@ var require_GuildBanManager = __commonJS((exports, module) => {
 var require_GuildChannelManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
-  var { ChannelType, Routes } = require_v1012();
+  var { ChannelType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var GuildTextThreadManager = require_GuildTextThreadManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
@@ -36315,7 +33816,7 @@ var require_GuildChannelManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildEmojiManager.js
 var require_GuildEmojiManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes, PermissionFlagsBits } = require_v1012();
+  var { Routes, PermissionFlagsBits } = require_v106();
   var BaseGuildEmojiManager = require_BaseGuildEmojiManager();
   var { DiscordjsError, DiscordjsTypeError, ErrorCodes } = require_errors();
   var { resolveImage } = require_DataResolver();
@@ -36415,7 +33916,7 @@ var require_GuildEmojiManager = __commonJS((exports, module) => {
 // node_modules/discord.js/src/managers/GuildInviteManager.js
 var require_GuildInviteManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var Invite = require_Invite();
@@ -36507,7 +34008,7 @@ var require_GuildMemberManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
-  var { Routes, GatewayOpcodes } = require_v1012();
+  var { Routes, GatewayOpcodes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, DiscordjsTypeError, DiscordjsRangeError, ErrorCodes } = require_errors();
   var BaseGuildVoiceChannel = require_BaseGuildVoiceChannel();
@@ -36770,7 +34271,7 @@ var require_GuildMemberManager = __commonJS((exports, module) => {
 var require_GuildScheduledEventManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { GuildScheduledEventEntityType, Routes } = require_v1012();
+  var { GuildScheduledEventEntityType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var { GuildScheduledEvent } = require_GuildScheduledEvent();
@@ -37006,7 +34507,7 @@ var require_SoundboardSound = __commonJS((exports) => {
 var require_GuildSoundboardSoundManager = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { lazy } = require_dist();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { SoundboardSound } = require_SoundboardSound();
@@ -37092,7 +34593,7 @@ var require_GuildSoundboardSoundManager = __commonJS((exports) => {
 // node_modules/discord.js/src/managers/GuildStickerManager.js
 var require_GuildStickerManager = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var MessagePayload = require_MessagePayload();
@@ -37169,7 +34670,7 @@ var require_GuildStickerManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/ActivityFlagsBitField.js
 var require_ActivityFlagsBitField = __commonJS((exports, module) => {
-  var { ActivityFlags } = require_v1012();
+  var { ActivityFlags } = require_v106();
   var BitField = require_BitField();
 
   class ActivityFlagsBitField extends BitField {
@@ -37347,7 +34848,7 @@ var require_RoleManager = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { DiscordAPIError } = require_dist5();
-  var { RESTJSONErrorCodes, Routes } = require_v1012();
+  var { RESTJSONErrorCodes, Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
   var { Role } = require_Role();
@@ -37545,7 +35046,7 @@ var require_RoleManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/StageInstanceManager.js
 var require_StageInstanceManager = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsTypeError, DiscordjsError, ErrorCodes } = require_errors();
   var { StageInstance } = require_StageInstance();
@@ -37618,7 +35119,7 @@ var require_StageInstanceManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/VoiceStateManager.js
 var require_VoiceStateManager = __commonJS((exports, module) => {
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var VoiceState = require_VoiceState();
 
@@ -37652,7 +35153,7 @@ var require_VoiceStateManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/SystemChannelFlagsBitField.js
 var require_SystemChannelFlagsBitField = __commonJS((exports, module) => {
-  var { GuildSystemChannelFlags } = require_v1012();
+  var { GuildSystemChannelFlags } = require_v106();
   var BitField = require_BitField();
 
   class SystemChannelFlagsBitField extends BitField {
@@ -37666,7 +35167,7 @@ var require_Guild = __commonJS((exports) => {
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
   var { DiscordSnowflake } = require_cjs();
-  var { ChannelType, GuildPremiumTier, Routes, GuildFeature } = require_v1012();
+  var { ChannelType, GuildPremiumTier, Routes, GuildFeature } = require_v106();
   var AnonymousGuild = require_AnonymousGuild();
   var GuildAuditLogs = require_GuildAuditLogs();
   var { GuildOnboarding } = require_GuildOnboarding();
@@ -38284,7 +35785,7 @@ var require_GuildManager = __commonJS((exports, module) => {
   var { setTimeout: setTimeout2, clearTimeout: clearTimeout2 } = __require("timers");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { GatewayOpcodes, Routes, RouteBases } = require_v1012();
+  var { GatewayOpcodes, Routes, RouteBases } = require_v106();
   var CachedManager = require_CachedManager();
   var { ErrorCodes, DiscordjsError } = require_errors();
   var ShardClientUtil = require_ShardClientUtil();
@@ -38478,7 +35979,7 @@ var require_GuildManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/managers/UserManager.js
 var require_UserManager = __commonJS((exports, module) => {
-  var { ChannelType, Routes } = require_v1012();
+  var { ChannelType, Routes } = require_v106();
   var CachedManager = require_CachedManager();
   var { DiscordjsError, ErrorCodes } = require_errors();
   var { GuildMember } = require_GuildMember();
@@ -38552,7 +36053,7 @@ var require_UserManager = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/structures/ClientPresence.js
 var require_ClientPresence = __commonJS((exports, module) => {
-  var { GatewayOpcodes, ActivityType } = require_v1012();
+  var { GatewayOpcodes, ActivityType } = require_v106();
   var { Presence } = require_Presence();
   var { DiscordjsTypeError, ErrorCodes } = require_errors();
 
@@ -38693,7 +36194,7 @@ var require_WidgetMember = __commonJS((exports, module) => {
 // node_modules/discord.js/src/structures/Widget.js
 var require_Widget = __commonJS((exports, module) => {
   var { Collection } = require_dist6();
-  var { Routes } = require_v1012();
+  var { Routes } = require_v106();
   var Base = require_Base();
   var WidgetMember = require_WidgetMember();
 
@@ -38736,7 +36237,7 @@ var require_Widget = __commonJS((exports, module) => {
 
 // node_modules/discord.js/src/util/IntentsBitField.js
 var require_IntentsBitField = __commonJS((exports, module) => {
-  var { GatewayIntentBits } = require_v1012();
+  var { GatewayIntentBits } = require_v106();
   var BitField = require_BitField();
 
   class IntentsBitField extends BitField {
@@ -39003,7 +36504,7 @@ var require_Client = __commonJS((exports, module) => {
   var process2 = __require("process");
   var { Collection } = require_dist6();
   var { makeURLSearchParams } = require_dist5();
-  var { OAuth2Scopes, Routes } = require_v1012();
+  var { OAuth2Scopes, Routes } = require_v106();
   var BaseClient = require_BaseClient();
   var ActionsManager = require_ActionsManager();
   var ClientVoiceManager = require_ClientVoiceManager();
@@ -40197,7 +37698,7 @@ var require_src = __commonJS((exports) => {
   exports.WidgetMember = require_WidgetMember();
   exports.WelcomeChannel = require_WelcomeChannel();
   exports.WelcomeScreen = require_WelcomeScreen();
-  __exportStar(require_v1012(), exports);
+  __exportStar(require_v106(), exports);
   __exportStar(require_dist8(), exports);
   __exportStar(require_dist7(), exports);
   __exportStar(require_dist5(), exports);
